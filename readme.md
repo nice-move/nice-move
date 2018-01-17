@@ -1,5 +1,7 @@
 # stylelint-config-airkro
 
+[![npm version](https://badge.fury.io/js/stylelint-config-airkro.svg)](https://www.npmjs.com/package/stylelint-config-airkro)
+
 stylelint config for personal use
 
 ## Installation
@@ -9,7 +11,7 @@ npm install stylelint-config-airkro -O
 
 // or
 
-yarn stylelint-config-airkro -O
+yarn add stylelint-config-airkro -O
 ```
 
 ## Usage

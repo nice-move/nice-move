@@ -1,0 +1,52 @@
+{
+  "name": "linter-config",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "description": "Linter config for personal use",
+  "scripts": {
+    "format": "lint-staged",
+    "test": "ava --verbose"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "optionalDependencies": {
+    "ava": "^2.2.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-node": "^9.1.0",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.2.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0"
+  },
+  "engines": {
+    "node": "^10 || ^12"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@nice-move/eslint-config-base",
+      "plugin:node/recommended"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && ava --verbose"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": "@nice-move/prettier-config",
+  "stylelint": {
+    "extends": "@nice-move/stylelint-config"
+  }
+}

@@ -1,0 +1,1 @@
+# @nice-move/prettier-config

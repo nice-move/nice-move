@@ -1,0 +1,26 @@
+{
+  "name": "@nice-move/prettier-config",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "description": "Prettier config for personal use",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airkro/nice-move.git",
+    "directory": "packages/prettier-config"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@nice-move/prettier-plugin-package-json": "^0.0.0",
+    "prettier-plugin-toml": "^0.3.1"
+  },
+  "peerDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@nice-move/eslint-config-react",
+  "version": "0.0.2",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "description": "Eslint config for personal use",
+  "homepage": "https://github.com/Airkro/nice-move/tree/master/packages/eslint-config-react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airkro/nice-move.git",
+    "directory": "packages/eslint-config-react"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@nice-move/eslint-config-base": "^0.0.4",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1"
+  },
+  "peerDependencies": {
+    "eslint": "^5.16.0"
+  },
+  "engines": {
+    "node": ">=8.10.0"
+  }
+}

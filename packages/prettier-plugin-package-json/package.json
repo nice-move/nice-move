@@ -1,0 +1,26 @@
+{
+  "name": "@nice-move/prettier-plugin-package-json",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "A `Prettier` plugin to make `package.json` prettier",
+  "keywords": [
+    "package.json",
+    "plugin",
+    "prettier"
+  ],
+  "homepage": "https://github.com/airkro/prettier-plugin-package-json#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airkro/nice-move.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "prettier-package-json": "^2.1.0"
+  },
+  "peerDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "engines": {
+    "node": "^8.3 || ^10 || ^12"
+  }
+}

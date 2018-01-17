@@ -1,0 +1,1 @@
+# @nice-move/stylelint-config

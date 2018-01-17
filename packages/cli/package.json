@@ -1,0 +1,49 @@
+{
+  "name": "@nice-move/cli",
+  "version": "0.3.1",
+  "description": "Run `lint-staged` with `nice-move` config",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "keywords": [
+    "config",
+    "cwd",
+    "eslint",
+    "format",
+    "formatter",
+    "git",
+    "lint",
+    "lint-staged",
+    "linter",
+    "nice-move",
+    "prettier",
+    "stylelint"
+  ],
+  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airkro/nice-move.git",
+    "directory": "packages/cli"
+  },
+  "bin": {
+    "nice-move": "./index.js"
+  },
+  "scripts": {
+    "postinstall": "node patch.js"
+  },
+  "dependencies": {
+    "@nodegit/is": "^1.0.0",
+    "commander": "^5.0.0",
+    "fs-chain": "^0.0.2",
+    "is-module-installed": "^2.0.5",
+    "kleur": "^3.0.3",
+    "lint-staged": "^10.0.8",
+    "lodash": "^4.17.15",
+    "read-pkg": "^5.2.0"
+  },
+  "engines": {
+    "node": "^10.18 || ^12.14"
+  }
+}

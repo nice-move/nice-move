@@ -1,0 +1,8 @@
+{
+  "watch": [
+    "./packages/*",
+    "./config/*"
+  ],
+  "delay": 5,
+  "quiet": true
+}

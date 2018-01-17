@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "name": "nice-move",
+  "version": "0.0.0",
+  "description": "Eslint/Stylelint/Prettier config for personal use",
+  "license": "UNLICENSED",
+  "files": [],
+  "scripts": {
+    "format": "nice-move lint",
+    "inspect": "nodemon ./config/inspect",
+    "test": "ava --verbose"
+  },
+  "workspaces": [
+    "packages/*",
+    "tools/*"
+  ],
+  "devDependencies": {
+    "ava": "^3.5.2",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.2.1"
+  },
+  "engines": {
+    "node": "^10.18 || ^12.14"
+  },
+  "eslintConfig": {
+    "extends": "@nice-move/eslint-config-base"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "nice-move lint && ava"
+    }
+  },
+  "prettier": "@nice-move/prettier-config",
+  "stylelint": {
+    "extends": "@nice-move/stylelint-config"
+  }
+}

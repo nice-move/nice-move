@@ -18,9 +18,7 @@ Add following settings to your `.stylelintrc`:
 
 ```json
 {
-  "extends": [
-    "stylelint-config-airkro"
-  ]
+  "extends": "stylelint-config-airkro"
 }
 ```
 

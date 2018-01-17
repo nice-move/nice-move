@@ -1,0 +1,6 @@
+{
+  "name": "@nice-move/vscode-config-env",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}

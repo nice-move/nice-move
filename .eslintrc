@@ -1,0 +1,3 @@
+{
+  "extends": "@nice-move/eslint-config-base"
+}

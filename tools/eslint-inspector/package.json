@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "@nice-move/eslint-inspector",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "sortobject": "^4.12.0",
+    "write-json-file": "^4.3.0"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0"
+  }
+}

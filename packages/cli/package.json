@@ -1,0 +1,56 @@
+{
+  "name": "@nice-move/cli",
+  "version": "0.4.4",
+  "description": "Initializer, linter, and formatter for frontend development",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "keywords": [
+    "config",
+    "cwd",
+    "eslint",
+    "format",
+    "formatter",
+    "git",
+    "gitignore",
+    "lint",
+    "lint-staged",
+    "linter",
+    "nice-move",
+    "prettier",
+    "stylelint"
+  ],
+  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/cli",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airkro/nice-move.git",
+    "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/airkro/nice-move/issues"
+  },
+  "bin": {
+    "nice-move": "index.js"
+  },
+  "dependencies": {
+    "centra": "^2.4.2",
+    "chalk": "^4.1.0",
+    "cheetor": "^0.2.1",
+    "deepmerge": "^4.2.2",
+    "fs-chain": "^1.4.1",
+    "git-username": "^1.0.0",
+    "is-module-installed": "^2.0.9",
+    "is-there": "^4.5.1",
+    "lint-staged": "^10.2.13",
+    "lodash": "^4.17.20",
+    "micromustache": "^8.0.3",
+    "ora": "^5.0.0",
+    "os-locale": "^5.0.0",
+    "yarn-deduplicate": "^2.1.1"
+  },
+  "engines": {
+    "node": "^10.18 || ^12.14 || ^14"
+  }
+}

@@ -1,0 +1,26 @@
+name: Sync
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  sync:
+    strategy:
+      matrix:
+        site:
+          - https://cnpmjs.org
+          - https://npm.taobao.org
+        package:
+          - cli
+          - eslint-config-base
+          - eslint-config-react
+          - eslint-config-vue
+          - stylelint-config
+          - prettier-config
+          - prettier-plugin-package-json
+    runs-on: macos-latest
+    steps:
+      - name: request
+        run: curl -X PUT ${{ matrix.site }}/sync/@nice-move/${{ matrix.package }}?sync_upstream=true

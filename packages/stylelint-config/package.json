@@ -1,0 +1,50 @@
+{
+  "name": "@nice-move/stylelint-config",
+  "version": "0.3.0",
+  "description": "A `stylelint` config created by personal preferences",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "keywords": [
+    "config",
+    "css",
+    "nice-move",
+    "order",
+    "prettier",
+    "scss",
+    "standard",
+    "style",
+    "stylelint"
+  ],
+  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/stylelint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airkro/nice-move.git",
+    "directory": "packages/stylelint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/airkro/nice-move/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node ./hook/post-install.js"
+  },
+  "dependencies": {
+    "fs-chain": "^1.4.0",
+    "is-module-installed": "^2.0.9",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^13.6.1"
+  },
+  "engines": {
+    "node": "^10.18 || ^12.14 || ^14"
+  }
+}

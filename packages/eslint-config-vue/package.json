@@ -1,0 +1,42 @@
+{
+  "name": "@nice-move/eslint-config-vue",
+  "version": "0.3.7",
+  "description": "A `eslint` config created by personal preferences",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "keywords": [
+    "config",
+    "eslint",
+    "html",
+    "javascript",
+    "nice-move",
+    "prettier",
+    "standard",
+    "unicorn",
+    "vue"
+  ],
+  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/eslint-config-vue",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airkro/nice-move.git",
+    "directory": "packages/eslint-config-vue"
+  },
+  "bugs": {
+    "url": "https://github.com/airkro/nice-move/issues"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@nice-move/eslint-config-base": "^0.3.9",
+    "babel-eslint": "^10.1.0",
+    "eslint-plugin-vue": "^6.2.2"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "engines": {
+    "node": "^10.18 || ^12.14 || ^14"
+  }
+}

@@ -22,7 +22,7 @@ module.exports = {
     "property-no-vendor-prefix": true,
     "scss/declaration-nested-properties": "never",
     "selector-pseudo-element-colon-notation": "double",
-    "value-keyword-case": "lower",
-    "value-no-vendor-prefix": true
+    "value-no-vendor-prefix": true,
+    "value-list-comma-newline-after": null
   }
 };

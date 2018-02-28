@@ -2,7 +2,7 @@
 
 stylelint config for personal use
 
-[![npm version](https://badge.fury.io/js/stylelint-config-airkro.svg)](https://www.npmjs.com/package/stylelint-config-airkro)
+[![npm version](https://img.shields.io/npm/v/stylelint-config-airkro.svg)](https://www.npmjs.com/package/stylelint-config-airkro)
 
 ## Installation
 

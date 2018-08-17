@@ -22,6 +22,8 @@ module.exports = {
     "color-named": null,
     "declaration-colon-newline-after": null,
     "declaration-property-value-blacklist": null,
+    "max-nesting-depth": 3,
+    "order/properties-alphabetical-order": null,
     "scss/at-import-partial-extension-blacklist": null,
     "scss/declaration-nested-properties": "never",
     "selector-no-qualifying-type": null,

@@ -1,21 +1,5 @@
 {
   "rules": {
-    "order/order": [
-      "custom-properties",
-      "dollar-variables",
-      "declarations",
-      "at-rules",
-      {
-        "type": "at-rule",
-        "name": "include"
-      },
-      {
-        "type": "at-rule",
-        "name": "include",
-        "parameter": "icon"
-      },
-      "rules"
-    ],
     "order/properties-order": [
       {
         "properties": [

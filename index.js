@@ -19,8 +19,12 @@ module.exports = {
         ignoreAtRules: ["if"]
       }
     ],
+    "color-named": null,
     "declaration-colon-newline-after": null,
+    "declaration-property-value-blacklist": null,
+    "scss/at-import-partial-extension-blacklist": null,
     "scss/declaration-nested-properties": "never",
+    "selector-no-qualifying-type": null,
     "value-list-comma-newline-after": null
   }
 };

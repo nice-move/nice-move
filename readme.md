@@ -1,17 +1,15 @@
 # stylelint-config-airkro
 
-stylelint config for personal use
+Stylelint config for personal use.
 
-[![npm version](https://img.shields.io/npm/v/stylelint-config-airkro.svg)](https://www.npmjs.com/package/stylelint-config-airkro)
+[url]: https://www.npmjs.com/package/stylelint-config-airkro
 
-## Installation
+[![npm version](https://img.shields.io/npm/v/stylelint-config-airkro.svg?style=flat-square&logo=npm)](url)
 
-```js
-npm install stylelint-config-airkro -O
+## Install
 
-// or
-
-yarn add stylelint-config-airkro -O
+```bash
+npm install stylelint-config-airkro --save-optional
 ```
 
 ## Usage
@@ -26,6 +24,5 @@ Add following settings to your `.stylelintrc`:
 
 ## Related
 
-* [stylelint-order](https://www.npmjs.com/package/stylelint-order)
-* [stylelint-scss](https://www.npmjs.com/package/stylelint-scss)
-* [stylelint-config-standard](https://www.npmjs.com/package/stylelint-config-standard)
+- [stylelint-order](https://www.npmjs.com/package/stylelint-order)
+- [stylelint-scss](https://www.npmjs.com/package/stylelint-scss)

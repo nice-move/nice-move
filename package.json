@@ -1,21 +1,23 @@
 {
   "name": "stylelint-config-airkro",
-  "version": "1.1.5",
-  "main": "index.js",
-  "author": "Eric Chen",
+  "version": "1.1.6",
   "description": "stylelint config for personal use",
+  "main": "index.js",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/airkro/stylelint-config-airkro"
+  "author": {
+    "name": "Eric Chen"
   },
-  "peerDependencies": {
-    "stylelint": "^9.4.0"
+  "repository": {
+    "url": "https://github.com/airkro/stylelint-config-airkro",
+    "type": "git"
   },
   "dependencies": {
-    "stylelint-config-sass-guidelines": "^5.0.0",
+    "stylelint-scss": "^3.5.1",
+    "stylelint-order": "^2.0.0",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-order": "^1.0.0",
-    "stylelint-scss": "^3.3.0"
+    "stylelint-config-sass-guidelines": "^5.3.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^9.9.0"
   }
 }

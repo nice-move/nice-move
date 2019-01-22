@@ -20,7 +20,14 @@
         ]
       },
       {
-        "properties": ["position", "z-index", "top", "right", "bottom", "left"]
+        "properties": [
+          "position",
+          "z-index",
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ]
       },
       {
         "properties": [

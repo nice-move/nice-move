@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended",
+    "plugin:import/warnings",
+    "airbnb-base"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "comma-dangle": [
+      "warn",
+      "never"
+    ]
+  }
+}

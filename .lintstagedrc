@@ -1,0 +1,12 @@
+{
+  "**/*.js": [
+    "prettier --write",
+    "eslint --fix"
+  ],
+  "**/*.{json,md}": [
+    "prettier --write"
+  ],
+  ".{eslint,prettier,lintstaged}rc": [
+    "prettier --write"
+  ]
+}

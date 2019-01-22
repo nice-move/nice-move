@@ -1,23 +1,21 @@
 {
-  "name": "stylelint-config-airkro",
-  "version": "1.1.6",
-  "description": "stylelint config for personal use",
-  "main": "index.js",
-  "license": "MIT",
-  "author": {
-    "name": "Eric Chen"
+  "name": "linter-config",
+  "version": "0.0.0",
+  "description": "linter config for personal use",
+  "license": "UNLICENSED",
+  "private": true,
+  "workspaces": [
+    "packages/stylelint-config"
+  ],
+  "optionalDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-node": "^8.0.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.16.0"
   },
-  "repository": {
-    "url": "https://github.com/airkro/stylelint-config-airkro",
-    "type": "git"
-  },
-  "dependencies": {
-    "stylelint-scss": "^3.5.1",
-    "stylelint-order": "^2.0.0",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-config-sass-guidelines": "^5.3.0"
-  },
-  "peerDependencies": {
-    "stylelint": "^9.9.0"
+  "scripts": {
+    "format": "lint-staged"
   }
 }

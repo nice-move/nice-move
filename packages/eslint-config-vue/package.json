@@ -1,0 +1,26 @@
+{
+  "name": "@nice-move/eslint-config-vue",
+  "version": "0.0.2",
+  "description": "Eslint config for personal use",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airkro/nice-move.git",
+    "directory": "packages/eslint-config-vue"
+  },
+  "engines": {
+    "node": ">=8.3.0"
+  },
+  "dependencies": {
+    "@nice-move/eslint-config-base": "^0.0.2",
+    "eslint-plugin-vue": "^5.2.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=5.16.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@nice-move/eslint-config-base",
+  "version": "0.0.3",
+  "description": "Eslint config for personal use",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airkro/nice-move.git",
+    "directory": "packages/eslint-config-base"
+  },
+  "engines": {
+    "node": ">=8.3.0"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-promise": "^4.0.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=5.16.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@nice-move/cli",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "nice-move": "index.js"
+  },
+  "dependencies": {
+    "mrm-core": "^3.3.0"
+  }
+}

@@ -7,15 +7,21 @@
   "workspaces": [
     "packages/stylelint-config"
   ],
+  "engines": {
+    "node": "^8.3.0"
+  },
   "optionalDependencies": {
     "eslint": "^5.12.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.15.0",
     "eslint-plugin-node": "^8.0.1",
     "lint-staged": "^8.1.0",
-    "prettier": "^1.16.0"
+    "prettier": "^1.16.1",
+    "stylelint": "^9.10.1",
+    "tape": "^4.9.2"
   },
   "scripts": {
+    "tests": "node tests/index",
     "format": "lint-staged"
   }
 }

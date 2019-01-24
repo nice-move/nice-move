@@ -1,0 +1,21 @@
+{
+  "name": "@nice-move/eslint-config-vue",
+  "version": "0.0.1",
+  "description": "Eslint config for personal use",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "engines": {
+    "node": ">=8.3.0"
+  },
+  "dependencies": {
+    "@nice-move/eslint-config-base": "^0.0.2",
+    "eslint-plugin-vue": "^5.2.2"
+  },
+  "peerDependencies": {
+    "eslint": "^5.15.1"
+  }
+}

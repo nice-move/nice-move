@@ -1,26 +1,3 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:node/recommended",
-    "plugin:import/warnings",
-    "airbnb-base"
-  ],
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
-  },
-  "plugins": [
-    "import"
-  ],
-  "rules": {
-    "comma-dangle": [
-      "warn",
-      "never"
-    ],
-    "arrow-parens": [
-      "warn",
-      "as-needed"
-    ],
-    "no-console": "off"
-  }
+  "extends": "@nice-move/eslint-config-base"
 }

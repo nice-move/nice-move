@@ -11,7 +11,7 @@
     "node": ">=8.3.0"
   },
   "optionalDependencies": {
-    "eslint": "^5.15.3",
+    "eslint": "^5.16.0",
     "eslint-plugin-node": "^8.0.1",
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",

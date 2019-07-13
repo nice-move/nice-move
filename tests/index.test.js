@@ -1,7 +1,7 @@
 'use strict';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-const prettier = require('prettier');
+const { format } = require('prettier');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const test = require('ava');
 
@@ -20,16 +20,11 @@ const expected = `{
 `;
 
 test('Usage', t => {
-  const actual = prettier.format(original, {
-    parser: 'json-stringify',
-    filepath: 'package.json'
-  });
+  const actual = format(original, { filepath: 'package.json' });
   t.is(actual, expected);
 });
 
 test('Skip', t => {
-  const actual = prettier.format(original, {
-    parser: 'json-stringify'
-  });
+  const actual = format(original, { filepath: 'test.json' });
   t.is(actual, original);
 });

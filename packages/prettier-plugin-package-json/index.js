@@ -3,51 +3,18 @@
 const { parsers: Parsers } = require('prettier/parser-babylon');
 const { format } = require('prettier-package-json');
 
-const keyOrder = [
-  'name',
-  'version',
-  'license',
-  'private',
+const keyOrder = require('./key-order');
 
-  'author',
-  'maintainers',
-  'contributors',
-
-  'description',
-  'keywords',
-  'homepage',
-
-  'bugs',
-  'repository',
-
-  'man',
-  'bin',
-  'browser',
-  'module',
-  'main',
-  'files',
-  'directories',
-
-  'scripts',
-  'config',
-
-  'workspaces',
-  'flat',
-
-  'dependencies',
-  'devDependencies',
-  'peerDependencies',
-  'optionalDependencies',
-  'bundleDependencies',
-  'bundledDependencies',
-  'resolutions',
-
-  'engines',
-  'os',
-  'cpu',
-
-  'publishConfig'
-];
+function mergeArray(bundledDependencies, bundleDependencies) {
+  return bundledDependencies || bundleDependencies
+    ? [
+      ...new Set([
+        ...(bundledDependencies || []),
+        ...(bundleDependencies || [])
+      ])
+    ]
+    : undefined;
+}
 
 function formatter(text) {
   const {
@@ -61,10 +28,7 @@ function formatter(text) {
   return format(
     {
       ...data,
-      bundledDependencies:
-        bundledDependencies || bundleDependencies
-          ? { ...bundledDependencies, ...bundleDependencies }
-          : undefined
+      bundledDependencies: mergeArray(bundledDependencies, bundleDependencies)
     },
     {
       expandUsers: true,

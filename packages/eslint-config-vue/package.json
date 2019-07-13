@@ -7,6 +7,11 @@
     "email": "airkro@qq.com"
   },
   "description": "Eslint config for personal use",
+  "keywords": [
+    "eslint",
+    "nice-move"
+  ],
+  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/eslint-config-vue#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/airkro/nice-move.git",
@@ -15,12 +20,13 @@
   "main": "index.js",
   "dependencies": {
     "@nice-move/eslint-config-base": "^0.0.4",
+    "babel-eslint": "^10.0.2",
     "eslint-plugin-vue": "^5.2.3"
   },
   "peerDependencies": {
     "eslint": "^5.16.0"
   },
   "engines": {
-    "node": ">=8.10.0"
+    "node": "^8.3 || ^10 || ^12"
   }
 }

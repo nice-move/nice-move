@@ -7,8 +7,10 @@ module.exports = {
     'eslint:recommended',
     'plugin:promise/recommended',
     'plugin:unicorn/recommended',
-    'airbnb' // already include plugin:import
+    'airbnb', // already include plugin:import
+    'plugin:react-perf/recommended'
   ],
+  parser: 'babel-eslint',
   plugins: ['react-hooks'],
   rules: {
     ...rules,

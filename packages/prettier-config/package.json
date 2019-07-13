@@ -7,6 +7,11 @@
     "email": "airkro@qq.com"
   },
   "description": "Prettier config for personal use",
+  "keywords": [
+    "nice-move",
+    "prettier"
+  ],
+  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/prettier-config#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/airkro/nice-move.git",
@@ -21,6 +26,6 @@
     "prettier": "^1.18.2"
   },
   "engines": {
-    "node": ">=6"
+    "node": "^8.3 || ^10 || ^12"
   }
 }

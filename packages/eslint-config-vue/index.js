@@ -11,5 +11,8 @@ module.exports = {
     'airbnb-base',
     'plugin:vue/essential'
   ],
+  parserOptions: {
+    parser: 'babel-eslint'
+  },
   rules
 };

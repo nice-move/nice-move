@@ -7,6 +7,11 @@
     "email": "airkro@qq.com"
   },
   "description": "Eslint config for personal use",
+  "keywords": [
+    "eslint",
+    "nice-move"
+  ],
+  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/eslint-config-base#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/airkro/nice-move.git",
@@ -17,6 +22,7 @@
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-unicorn": "^9.1.1"
   },
@@ -24,6 +30,6 @@
     "eslint": "^5.16.0"
   },
   "engines": {
-    "node": "^8.1 || ^10 || ^12"
+    "node": "^8.3 || ^10 || ^12"
   }
 }

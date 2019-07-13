@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "scss/at-each-key-value-single-line": true,
+    "scss/at-extend-no-missing-placeholder": true,
+    "scss/at-import-no-partial-leading-underscore": true,
+    "scss/at-import-partial-extension-blacklist": [
+      "scss"
+    ],
+    "scss/at-rule-no-unknown": true,
+    "scss/declaration-nested-properties": "never",
+    "scss/dollar-variable-default": [
+      true,
+      {
+        "ignore": "local"
+      }
+    ],
+    "scss/dollar-variable-no-missing-interpolation": true,
+    "scss/no-duplicate-dollar-variables": true,
+    "scss/selector-nest-combinators": "always",
+    "scss/selector-no-redundant-nesting-selector": true
+  }
+}

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "UNLICENSED",
   "private": true,
-  "description": "Linter config for personal use",
+  "description": "Eslint/Stylelint/Prettier config for personal use",
   "scripts": {
     "format": "lint-staged",
     "test": "ava --verbose"
@@ -38,6 +38,11 @@
     "*.js": [
       "prettier --write",
       "eslint --fix",
+      "git add"
+    ],
+    "*.{css,scss}": [
+      "prettier --write",
+      "stylelint --fix",
       "git add"
     ],
     "*.{json,md}": [

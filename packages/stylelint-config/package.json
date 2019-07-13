@@ -1,12 +1,17 @@
 {
   "name": "@nice-move/stylelint-config",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
     "email": "airkro@qq.com"
   },
   "description": "Stylelint config for personal use",
+  "keywords": [
+    "nice-move",
+    "stylelint"
+  ],
+  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/stylelint-config#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/airkro/nice-move.git",
@@ -25,6 +30,6 @@
     "stylelint": "^10.1.0"
   },
   "engines": {
-    "node": ">=8.10.0"
+    "node": "^8.3 || ^10 || ^12"
   }
 }

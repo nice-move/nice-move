@@ -1,17 +1,18 @@
 {
   "name": "@nice-move/prettier-plugin-package-json",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "A `Prettier` plugin to make `package.json` prettier",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
     "email": "airkro@qq.com"
   },
-  "description": "A `Prettier` plugin to make `package.json` prettier",
   "keywords": [
     "nice-move",
     "package.json",
     "plugin",
-    "prettier"
+    "prettier",
+    "sort"
   ],
   "homepage": "https://github.com/airkro/nice-move/tree/master/packages/prettier-plugin-package-json#readme",
   "repository": {

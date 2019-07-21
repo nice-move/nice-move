@@ -13,9 +13,9 @@ const original = `{
 `;
 
 const expected = `{
+  "private": true,
   "name": "prettier-plugin-package-json",
-  "version": "0.0.0",
-  "private": true
+  "version": "0.0.0"
 }
 `;
 

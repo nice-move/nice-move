@@ -1,13 +1,14 @@
 {
   "name": "@nice-move/prettier-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "description": "Prettier config created by personal preferences",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
     "email": "airkro@qq.com"
   },
-  "description": "Prettier config for personal use",
   "keywords": [
+    "config",
     "nice-move",
     "prettier"
   ],
@@ -19,7 +20,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@nice-move/prettier-plugin-package-json": "^0.0.0",
+    "@nice-move/prettier-plugin-package-json": "^0.0.1",
     "prettier-plugin-toml": "^0.3.1"
   },
   "peerDependencies": {

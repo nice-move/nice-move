@@ -1,9 +1,9 @@
 {
+  "private": true,
   "name": "linter-config",
   "version": "0.0.0",
-  "license": "UNLICENSED",
-  "private": true,
   "description": "Eslint/Stylelint/Prettier config for personal use",
+  "license": "UNLICENSED",
   "scripts": {
     "format": "lint-staged",
     "test": "ava --verbose"
@@ -15,7 +15,7 @@
     "ava": "^2.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-node": "^9.1.0",
-    "husky": "^3.0.0",
+    "husky": "^3.0.1",
     "lint-staged": "^9.2.0",
     "prettier": "^1.18.2",
     "stylelint": "^10.1.0"

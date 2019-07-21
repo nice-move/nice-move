@@ -1,6 +1,6 @@
 'use strict';
 
-const { parsers: Parsers } = require('prettier/parser-babylon');
+const { parsers } = require('prettier/parser-babylon');
 const { format } = require('prettier-package-json');
 
 const keyOrder = require('./key-order');
@@ -39,7 +39,7 @@ function formatter(text) {
 
 function mergeParser(parserName) {
   return {
-    ...Parsers[parserName],
+    ...parsers[parserName],
     preprocess(text, { filepath }) {
       return filepath && /(^|\\|\/)package\.json$/.test(filepath)
         ? formatter(text)

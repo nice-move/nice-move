@@ -1,21 +1,22 @@
 'use strict';
 
 module.exports = [
+  'private',
+
   'name',
   'version',
+  'description',
   'license',
-  'private',
 
   'author',
   'maintainers',
   'contributors',
 
-  'description',
   'keywords',
   'homepage',
 
-  'bugs',
   'repository',
+  'bugs',
 
   'man',
   'bin',

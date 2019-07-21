@@ -12,6 +12,7 @@ Eslint/Stylelint/Prettier config for personal use.
 - [@nice-move/eslint-config-vue](./packages/eslint-config-vue/)
 - [@nice-move/stylelint-config](./packages/stylelint-config/)
 - [@nice-move/prettier-config](./packages/prettier-config/)
+- [@nice-move/prettier-plugin-package-json](./packages/prettier-plugin-package-json/)
 
 [github-badge]: https://img.shields.io/github/license/Airkro/nice-move.svg?logo=github&style=flat-square&colorB=blue
 [github-link]: https://github.com/Airkro/nice-move

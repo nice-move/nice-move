@@ -36,7 +36,6 @@ module.exports = [
   'devDependencies',
   'optionalDependencies',
   'peerDependencies',
-  'bundleDependencies',
   'bundledDependencies',
   'resolutions',
 

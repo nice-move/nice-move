@@ -18,7 +18,7 @@ npm install @nice-move/prettier-config --save-dev
 
 ## Usage
 
-In package.json
+Add to package.json
 
 ```json
 {
@@ -26,15 +26,15 @@ In package.json
 }
 ```
 
-Then
+Then run
 
 ```bash
-npx prettier --write **/*.{js,vue,css,scss,less,md}
+$ prettier --write **/*.{js,vue,css}
 ```
 
 [prettier]: https://prettier.io/
 [npm-url]: https://www.npmjs.com/package/@nice-move/prettier-config
 [npm-badge]: https://img.shields.io/npm/v/@nice-move/prettier-config.svg?style=flat-square&logo=npm
-[github-url]: https://github.com/Airkro/@nice-move/prettier-config
+[github-url]: https://github.com/airkro/nice-move/tree/master/packages/prettier-config#readme
 [node-badge]: https://img.shields.io/node/v/@nice-move/prettier-config.svg?style=flat-square&colorB=green&logo=node.js
 [license-badge]: https://img.shields.io/npm/l/@nice-move/prettier-config.svg?style=flat-square&colorB=blue&logo=github

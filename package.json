@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "linter-config",
+  "name": "nice-move",
   "version": "0.0.0",
   "description": "Eslint/Stylelint/Prettier config for personal use",
   "license": "UNLICENSED",
@@ -15,8 +15,8 @@
     "ava": "^2.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-node": "^9.1.0",
-    "husky": "^3.0.1",
-    "lint-staged": "^9.2.0",
+    "husky": "^3.0.2",
+    "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
     "stylelint": "^10.1.0"
   },

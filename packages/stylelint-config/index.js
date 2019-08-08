@@ -32,7 +32,13 @@ module.exports = {
       true,
       { severity: 'warning' }
     ],
-    'plugin/no-unsupported-browser-features': [true, { severity: 'warning' }],
+    'plugin/no-unsupported-browser-features': [
+      true,
+      {
+        ignore: ['css-resize'],
+        severity: 'warning'
+      }
+    ],
     'property-no-vendor-prefix': true,
     'rule-empty-line-before': [
       'always',

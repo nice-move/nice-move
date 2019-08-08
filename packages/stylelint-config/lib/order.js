@@ -6,40 +6,47 @@ module.exports = {
     'order/properties-alphabetical-order': null,
     'order/properties-order': [
       [
-        'composes',
         'all',
-        // --------------
-        'appearance',
-        'visibility',
-        'mix-blend-mode',
-        'isolation',
+
         // --------------
         'display',
+        'appearance',
+        'visibility',
+
+        // Positioning --------------
+        'clear',
+        'float',
         'position',
-        'z-index',
         'top',
         'right',
         'bottom',
         'left',
-        // --------------
-        'float',
-        'clear',
-        // --------------
+        'z-index',
+
+        // Flexible Box Layout --------------
         'flex',
+        'flex-grow',
+        'flex-shrink',
         'flex-basis',
         'flex-direction',
         'flex-flow',
-        'flex-grow',
-        'flex-shrink',
         'flex-wrap',
-        // --------------
+        'order',
+
+        // Box Alignment --------------
         'align-content',
         'align-items',
         'align-self',
         'justify-content',
         'justify-items',
         'justify-self',
-        'order',
+        'place-content',
+        'place-items',
+        'place-self',
+        'gap',
+        'row-gap',
+        'column-gap',
+
         // --------------
         'grid',
         'grid-area',
@@ -59,6 +66,7 @@ module.exports = {
         'grid-gap',
         'grid-row-gap',
         'grid-column-gap',
+
         // --------------
         'columns',
         'column-gap',
@@ -70,46 +78,47 @@ module.exports = {
         'column-span',
         'column-count',
         'column-width',
+
         // --------------
         'backface-visibility',
         'perspective',
         'perspective-origin',
+
         // --------------
         'margin',
         'margin-top',
         'margin-right',
         'margin-bottom',
         'margin-left',
-        // --------------
-        'outline',
-        'outline-offset',
-        'outline-width',
-        'outline-style',
-        'outline-color',
+
         // --------------
         'border',
         'border-top',
         'border-right',
         'border-bottom',
         'border-left',
+
         // --------------
         'border-width',
         'border-top-width',
         'border-right-width',
         'border-bottom-width',
         'border-left-width',
+
         // --------------
         'border-style',
         'border-top-style',
         'border-right-style',
         'border-bottom-style',
         'border-left-style',
+
         // --------------
         'border-color',
         'border-top-color',
         'border-right-color',
         'border-bottom-color',
         'border-left-color',
+
         // --------------
         'border-image',
         'border-image-source',
@@ -117,16 +126,14 @@ module.exports = {
         'border-image-outset',
         'border-image-repeat',
         'border-image-slice',
+
         // --------------
         'border-radius',
         'border-top-left-radius',
         'border-top-right-radius',
         'border-bottom-left-radius',
         'border-bottom-right-radius',
-        // --------------
-        'filter',
-        'opacity',
-        'box-shadow',
+
         // --------------
         'background',
         'background-attachment',
@@ -134,10 +141,11 @@ module.exports = {
         'background-color',
         'background-image',
         'background-origin',
-        'background-position',
         'background-repeat',
+        'background-position',
         'background-size',
         'background-blend-mode',
+
         // --------------
         'box-sizing',
         'width',
@@ -146,47 +154,60 @@ module.exports = {
         'height',
         'min-height',
         'max-height',
+
         // --------------
         'padding',
         'padding-top',
         'padding-right',
         'padding-bottom',
         'padding-left',
-        // --------------
+
+        // Overflow --------------
         'overflow',
         'overflow-x',
         'overflow-y',
         'resize',
-        // --------------
-        'table-layout',
+
+        // Table --------------
         'border-collapse',
         'border-spacing',
-        'empty-cells',
-        'writing-mode',
         'caption-side',
+        'empty-cells',
+        'table-layout',
+
+        // Outline --------------
+        'outline',
+        'outline-width',
+        'outline-style',
+        'outline-color',
+        'outline-offset',
+
+        // Effects --------------
+        'color',
+        'opacity',
+        'box-shadow',
+        'box-decoration-break',
+        'backdrop-filter',
+        'filter',
+        'background-blend-mode',
+        'mix-blend-mode',
+        'isolation',
+
         // --------------
-        'list-style',
-        'list-style-type',
-        'list-style-position',
-        'list-style-image',
-        // --------------
+        'will-change',
         'transform',
         'transform-origin',
         'transform-style',
+
+        // --------------
         'transition',
-        'transition-delay',
         'transition-duration',
         'transition-property',
         'transition-timing-function',
-        // --------------
-        'transition',
         'transition-delay',
-        'transition-duration',
-        'transition-property',
-        'transition-timing-function',
-        // --------------
+
+        // Animations --------------
         'animation',
-        'animation-name',
         'animation-duration',
         'animation-timing-function',
         'animation-delay',
@@ -194,10 +215,15 @@ module.exports = {
         'animation-direction',
         'animation-fill-mode',
         'animation-play-state',
-        // --------------
+        'animation-name',
+
+        // Writing Modes --------------
         'direction',
-        'hyphens',
+        'unicode-bidi',
+        'writing-mode',
+
         // --------------
+        'hyphens',
         'vertical-align',
         'text-align',
         'text-align-last',
@@ -211,8 +237,8 @@ module.exports = {
         'text-rendering',
         'text-shadow',
         'text-overflow',
+
         // --------------
-        'line-height',
         'word-spacing',
         'letter-spacing',
         'tab-size',
@@ -220,42 +246,54 @@ module.exports = {
         'word-break',
         'word-wrap',
         'overflow-wrap',
-        // --------------
-        'color',
-        // --------------
+
+        // Fonts --------------
         'font',
-        'font-family',
-        'font-kerning',
-        'font-size',
-        'font-size-adjust',
-        'font-stretch',
-        'font-weight',
-        'font-smoothing',
-        'osx-font-smoothing',
-        'font-variant',
         'font-style',
-        // --------------
+        'font-variant',
+        'font-weight',
+        'font-stretch',
+        'font-size',
+        'line-height',
+        'font-family',
+
+        'font-feature-settings',
+        'font-kerning',
+        'font-size-adjust',
+        'font-smoothing',
+        'font-variant-caps',
+        'font-variant-ligatures',
+        'font-variant-numeric',
+        'font-variation-settings',
+
+        // Generated Content --------------
         'content',
         'quotes',
+
+        // Counter Styles --------------
+        'counter-set',
         'counter-reset',
         'counter-increment',
+
+        // Lists --------------
+        'list-style',
+        'list-style-type',
+        'list-style-position',
+        'list-style-image',
+
+        // Fragmentation --------------
+        'break-before',
+        'break-after',
+        'break-inside',
+        'orphans',
+        'widows',
+
         // --------------
-        'page-break-before',
-        'page-break-after',
-        'page-break-inside',
-        // --------------
-        'nav-index',
-        'nav-up',
-        'nav-right',
-        'nav-down',
-        'nav-left',
-        // --------------
+        'scroll-behavior',
         'touch-action',
         'cursor',
         'pointer-events',
-        'user-select',
-        'speak',
-        'will-change'
+        'user-select'
       ],
       {
         unspecified: 'bottomAlphabetical',

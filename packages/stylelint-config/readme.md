@@ -1,3 +1,42 @@
+<a href="https://stylelint.io/">
+  <img alt="stylelint" src="https://raw.githubusercontent.com/npm/logos/master/npm%20square/n-large.png" height="120">
+</a>
+
 # @nice-move/stylelint-config
 
-Stylelint config for personal use.
+[![npm][npm-badge]][npm-url]
+[![license][license-badge]][github-url]
+![node][node-badge]
+
+A [Stylelint] config created by personal preferences.
+
+## Installation
+
+```bash
+npm install @nice-move/stylelint-config --save-dev
+```
+
+## Usage
+
+Add to package.json
+
+```json
+{
+  "stylelint": {
+    "extends": "@nice-move/stylelint-config"
+  }
+}
+```
+
+Then run
+
+```bash
+$ stylelint --fix **/*.{vue,css,scss}
+```
+
+[stylelint]: https://stylelint.io/
+[npm-url]: https://www.npmjs.com/package/@nice-move/stylelint-config
+[npm-badge]: https://img.shields.io/npm/v/@nice-move/stylelint-config.svg?style=flat-square&logo=npm
+[github-url]: https://github.com/airkro/nice-move/tree/master/packages/stylelint-config#readme
+[node-badge]: https://img.shields.io/node/v/@nice-move/stylelint-config.svg?style=flat-square&colorB=green&logo=node.js
+[license-badge]: https://img.shields.io/npm/l/@nice-move/stylelint-config.svg?style=flat-square&colorB=blue&logo=github

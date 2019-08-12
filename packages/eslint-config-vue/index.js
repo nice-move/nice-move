@@ -12,7 +12,8 @@ module.exports = {
     'plugin:vue/essential'
   ],
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    ecmaVersion: 2019
   },
   rules
 };

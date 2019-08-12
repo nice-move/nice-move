@@ -118,3 +118,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/node,windows
+
+# best-shot
+.best-shot/*[build,inspect,stats]/

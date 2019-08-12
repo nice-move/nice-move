@@ -1,0 +1,12 @@
+{
+  "name": "rule-loader",
+  "version": "0.0.0",
+  "main": "./index.js",
+  "dependencies": {
+    "eslint-find-rules": "^3.4.0",
+    "sort-keys": "^3.0.0"
+  },
+  "peerDependencies": {
+    "prettier": "^1.18.2"
+  }
+}

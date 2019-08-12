@@ -10,5 +10,11 @@ module.exports = {
     'plugin:unicorn/recommended',
     'airbnb-base'
   ],
-  rules
+  parserOptions: {
+    ecmaVersion: 2019
+  },
+  rules: {
+    ...rules,
+    strict: ['error', 'safe']
+  }
 };

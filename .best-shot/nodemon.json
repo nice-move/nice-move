@@ -1,0 +1,11 @@
+{
+  "delay": 2,
+  "exec": "best-shot serve",
+  "quiet": true,
+  "watch": [
+    ".best-shot/config.js",
+    ".browserslistrc",
+    "babel.config.js",
+    "loader"
+  ]
+}

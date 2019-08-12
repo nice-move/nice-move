@@ -11,6 +11,9 @@ module.exports = {
     'plugin:react-perf/recommended'
   ],
   parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 2019
+  },
   plugins: ['react-hooks'],
   rules: {
     ...rules,

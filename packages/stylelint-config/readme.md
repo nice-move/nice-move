@@ -13,7 +13,7 @@ A [Stylelint] config created by personal preferences.
 ## Installation
 
 ```bash
-npm install @nice-move/stylelint-config --save-dev
+npm install stylelint @nice-move/stylelint-config --save-dev
 ```
 
 ## Usage

@@ -1,7 +1,7 @@
 {
   "name": "@nice-move/stylelint-config",
-  "version": "0.0.8",
-  "description": "A stylelint config for personal use",
+  "version": "0.0.9",
+  "description": "A `stylelint` config for personal use",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -9,7 +9,11 @@
   },
   "keywords": [
     "config",
+    "css",
     "nice-move",
+    "order",
+    "scss",
+    "style",
     "stylelint"
   ],
   "homepage": "https://github.com/airkro/nice-move/tree/master/packages/stylelint-config#readme",
@@ -24,13 +28,13 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-high-performance-animation": "^1.2.1",
     "stylelint-no-unsupported-browser-features": "^3.0.2",
-    "stylelint-order": "^3.0.1",
-    "stylelint-scss": "^3.9.3"
+    "stylelint-order": "^3.1.0",
+    "stylelint-scss": "^3.10.0"
   },
   "peerDependencies": {
     "stylelint": "^10.1.0"
   },
   "engines": {
-    "node": "^8.3 || ^10 || ^12"
+    "node": "^8.10 || ^10 || ^12"
   }
 }

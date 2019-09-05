@@ -1,0 +1,22 @@
+{
+  "*.vue": [
+    "prettier --write",
+    "eslint --fix",
+    "stylelint --fix",
+    "git add"
+  ],
+  "*.{js,jsx,mjs,cjs}": [
+    "prettier --write",
+    "eslint --fix",
+    "git add"
+  ],
+  "*.{css,scss,less}": [
+    "prettier --write",
+    "stylelint --fix",
+    "git add"
+  ],
+  "*.{html,tpl,svg,json,toml,yml,yaml,md}": [
+    "prettier --write",
+    "git add"
+  ]
+}

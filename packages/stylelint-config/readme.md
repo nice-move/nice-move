@@ -1,5 +1,5 @@
 <a href="https://stylelint.io/">
-  <img alt="stylelint" src="https://raw.githubusercontent.com/npm/logos/master/npm%20square/n-large.png" height="120">
+  <img alt="stylelint" src="./lib/stylelint-logo.svg" height="120">
 </a>
 
 # @nice-move/stylelint-config
@@ -31,7 +31,7 @@ Add to package.json
 Then run
 
 ```bash
-$ stylelint --fix **/*.{vue,css,scss}
+stylelint --fix **/*.{vue,css,less,scss}
 ```
 
 [stylelint]: https://stylelint.io/

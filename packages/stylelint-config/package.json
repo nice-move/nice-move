@@ -1,7 +1,7 @@
 {
   "name": "@nice-move/stylelint-config",
   "version": "0.0.9",
-  "description": "A `stylelint` config for personal use",
+  "description": "A `stylelint` config created by personal preferences",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -29,7 +29,7 @@
     "stylelint-high-performance-animation": "^1.2.1",
     "stylelint-no-unsupported-browser-features": "^3.0.2",
     "stylelint-order": "^3.1.0",
-    "stylelint-scss": "^3.10.0"
+    "stylelint-scss": "^3.10.1"
   },
   "peerDependencies": {
     "stylelint": "^10.1.0"

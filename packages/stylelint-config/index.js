@@ -1,11 +1,11 @@
-console.log(process.env.NODE_ENV);
+const { resolve } = require('path');
 
 module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-prettier',
-    './lib/scss.json',
-    './lib/order.js'
+    resolve(__dirname, './lib/scss.json'),
+    resolve(__dirname, './lib/order.js')
   ],
   plugins: [
     'stylelint-high-performance-animation',

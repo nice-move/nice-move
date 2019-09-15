@@ -70,6 +70,6 @@
   },
   "prettier": "@nice-move/prettier-config",
   "stylelint": {
-    "extends": "@nice-move/stylelint-config"
+    "extends": "@nice-move/stylelint-config/scss"
   }
 }

@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "files": [],
   "scripts": {
-    "format": "lint-staged",
+    "format": "nice-move",
     "inspect": "best-shot inspect",
     "start": "nodemon --config .best-shot/nodemon.json",
     "test": "ava --verbose"
@@ -16,42 +16,44 @@
     "loader"
   ],
   "dependencies": {
-    "core-js": "~3.2.0",
+    "core-js": "~3.2.1",
     "react": "~16.9.0",
     "react-diff-viewer": "~2.0.1",
     "react-dom": "~16.9.0",
-    "react-hot-loader": "~4.12.11",
-    "react-router": "~5.0.1"
+    "react-hot-loader": "~4.12.13",
+    "react-router": "~5.0.1",
+    "react-select": "~3.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@best-shot/cli": "^0.0.16",
-    "@best-shot/inspector": "^0.0.4",
-    "@best-shot/preset-babel": "^0.0.14",
-    "@best-shot/preset-react": "^0.0.8",
-    "@best-shot/preset-style": "^0.0.13",
-    "@best-shot/preset-web": "^0.0.20",
-    "autoprefixer": "^9.6.1",
-    "babel-plugin-import": "^1.12.0",
-    "best-shot-dev-server": "~0.0.32",
-    "nodemon": "^1.19.1",
-    "webpack": "^4.39.1"
+    "@babel/core": "^7.6.0",
+    "@best-shot/cli": "^0.0.17",
+    "@best-shot/dev-server": "npm:best-shot-dev-server",
+    "@best-shot/preset-babel": "^0.0.15",
+    "@best-shot/preset-react": "^0.0.10",
+    "@best-shot/preset-style": "^0.0.15",
+    "@best-shot/preset-web": "^0.0.21",
+    "babel-plugin-import": "^1.12.1",
+    "nodemon": "^1.19.2",
+    "webpack": "^4.40.2"
   },
   "optionalDependencies": {
-    "ava": "^2.2.0",
-    "eslint": "^6.1.0",
-    "husky": "^3.0.3",
+    "ava": "^2.3.0",
+    "eslint": "^6.4.0",
+    "husky": "^3.0.5",
     "prettier": "^1.18.2",
     "stylelint": "^10.1.0"
   },
   "engines": {
-    "node": "^10.16 || ^12"
+    "node": "^8.10 || ^10 || ^12"
   },
   "eslintConfig": {
     "extends": [
       "@nice-move/eslint-config-base",
       "plugin:node/recommended"
     ],
+    "env": {
+      "node": true
+    },
     "rules": {
       "import/no-extraneous-dependencies": [
         "error",
@@ -63,28 +65,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && ava --verbose"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{css,scss}": [
-      "prettier --write",
-      "stylelint --fix",
-      "git add"
-    ],
-    "*.{json,md}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
+      "pre-commit": "nice-move && ava --verbose"
     }
   },
   "prettier": "@nice-move/prettier-config",

@@ -1,13 +1,10 @@
 'use strict';
 
-const { resolve } = require('path');
-
 const loose = {
   severity: 'warning'
 };
 
 module.exports = {
-  extends: resolve(__dirname, './index.js'),
   plugins: 'stylelint-scss',
   rules: {
     'at-rule-blacklist': ['debug', 'extend'],
@@ -19,20 +16,12 @@ module.exports = {
     'scss/at-rule-no-unknown': true,
     'scss/declaration-nested-properties': 'never',
     'scss/dimension-no-non-numeric-values': true,
-    'scss/dollar-variable-default': [
-      true,
-      {
-        ignore: 'local',
-        ...loose
-      }
-    ],
+    'scss/dollar-variable-default': [true, { ignore: 'local' }],
     'scss/function-quote-no-quoted-strings-inside': true,
     'scss/function-unquote-no-unquoted-strings-inside': true,
     'scss/no-duplicate-dollar-variables': [
       true,
-      {
-        ignoreInsideAtRules: ['if', 'else']
-      }
+      { ignoreInsideAtRules: ['if', 'else'] }
     ],
     'scss/media-feature-value-dollar-variable': ['always', loose],
     'scss/selector-nest-combinators': ['always', loose],

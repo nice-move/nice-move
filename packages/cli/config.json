@@ -2,7 +2,7 @@
   "*.vue": [
     "prettier --write",
     "eslint --fix",
-    "stylelint --fix",
+    "stylelint --fix --rd",
     "git add"
   ],
   "*.{js,jsx,mjs,cjs}": [
@@ -12,7 +12,7 @@
   ],
   "*.{css,scss,less}": [
     "prettier --write",
-    "stylelint --fix",
+    "stylelint --fix --rd",
     "git add"
   ],
   "*.{html,tpl,svg,json,toml,yml,yaml,md}": [

@@ -24,6 +24,7 @@ module.exports = {
         ...loose
       }
     ],
+    // TODO: 'unicode-bom': 'never',
     'function-url-quotes': 'always',
     'max-nesting-depth': 5,
     'selector-max-compound-selectors': 5,

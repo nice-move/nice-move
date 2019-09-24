@@ -192,6 +192,8 @@ module.exports = {
         'background-blend-mode',
         'mix-blend-mode',
         'isolation',
+        'object-fit',
+        'object-position',
 
         // --------------
         'will-change',

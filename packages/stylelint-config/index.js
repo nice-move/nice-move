@@ -10,7 +10,7 @@ module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-prettier',
-    resolve(__dirname, './lib/other.js'),
+    // resolve(__dirname, './lib/other.js'),
     resolve(__dirname, './lib/prefix.json'),
     resolve(__dirname, './lib/scss.js'),
     resolve(__dirname, './lib/order.js')
@@ -43,8 +43,7 @@ module.exports = {
     'selector-no-qualifying-type': true,
     'selector-pseudo-element-colon-notation': ['double', loose],
     'shorthand-property-no-redundant-values': [true, loose],
-    'time-min-milliseconds': 250,
-    // TODO: 'unicode-bom': 'never',
-    'value-keyword-case': ['lower', loose]
+    'time-min-milliseconds': 250
+    // TODO: 'unicode-bom': 'never'
   }
 };

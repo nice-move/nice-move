@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 
+'use strict';
+
 process.on('SIGINT', () => {});
 
-const { resolve } = require('path');
 const program = require('commander');
 const lintStaged = require('lint-staged');
+const config = require('./config.json');
 
 program
   .option('-x, --shell', 'Skip parsing of tasks for better shell support')
@@ -12,7 +14,7 @@ program
   .parse(process.argv);
 
 lintStaged({
-  configPath: resolve(__dirname, 'config.json'),
+  config,
   relative: process.cwd(),
   shell: !!program.shell,
   quiet: !!program.quiet,

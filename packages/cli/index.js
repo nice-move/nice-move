@@ -6,6 +6,7 @@ process.on('SIGINT', () => {});
 
 const program = require('commander');
 const lintStaged = require('lint-staged');
+
 const config = require('./config.json');
 
 program

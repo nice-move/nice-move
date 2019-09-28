@@ -28,13 +28,13 @@
     "nice-move": "./index.js"
   },
   "dependencies": {
-    "commander": "^3.0.1",
-    "lint-staged": "^9.3.0"
+    "commander": "^3.0.2",
+    "lint-staged": "^9.4.0"
   },
   "peerDependencies": {
-    "eslint": "^5.16 || ^6.4",
-    "prettier": "^1.18",
-    "stylelint": "^10 || ^11"
+    "eslint": "^5.16.0 || ^6.4.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^11.0.0"
   },
   "engines": {
     "node": "^8.12 || ^10 || ^12"

@@ -17,9 +17,9 @@
   ],
   "dependencies": {
     "core-js": "~3.2.1",
-    "react": "~16.10.0",
+    "react": "~16.10.1",
     "react-diff-viewer": "~2.0.1",
-    "react-dom": "~16.10.0",
+    "react-dom": "~16.10.1",
     "react-hot-loader": "~4.12.14",
     "react-router": "~5.1.1",
     "react-select": "~3.0.5"
@@ -33,12 +33,12 @@
     "@best-shot/preset-style": "^0.0.16",
     "@best-shot/preset-web": "^0.0.24",
     "babel-plugin-import": "^1.12.2",
-    "nodemon": "^1.19.2",
+    "nodemon": "^1.19.3",
     "webpack": "^4.41.0"
   },
   "optionalDependencies": {
     "ava": "^2.4.0",
-    "eslint": "^6.4.0",
+    "eslint": "^6.5.0",
     "husky": "^3.0.7",
     "prettier": "^1.18.2",
     "stylelint": "^11.0.0"

@@ -13,7 +13,7 @@ A [Prettier] config created by personal preferences.
 ## Installation
 
 ```bash
-npm install @nice-move/prettier-config --save-dev
+npm install prettier @nice-move/prettier-config --save-dev
 ```
 
 ## Usage
@@ -29,7 +29,8 @@ Add to package.json
 Then run
 
 ```bash
-$ prettier --write **/*.{js,vue,css}
+prettier --write **/*.{js,jsx,vue,css,scss,md}
+prettier --write **/*.{html,json,toml,yaml,yml}
 ```
 
 [prettier]: https://prettier.io/

@@ -10,7 +10,7 @@ module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-prettier',
-    // resolve(__dirname, './lib/other.js'),
+    'stylelint-config-css-modules',
     resolve(__dirname, './lib/prefix.json'),
     resolve(__dirname, './lib/scss.js'),
     resolve(__dirname, './lib/order.js')
@@ -44,6 +44,7 @@ module.exports = {
     'selector-pseudo-element-colon-notation': ['double', loose],
     'shorthand-property-no-redundant-values': [true, loose],
     'time-min-milliseconds': 250
-    // TODO: 'unicode-bom': 'never'
+    // TODO: enable when vscode support stylelint v11
+    // 'unicode-bom': 'never'
   }
 };

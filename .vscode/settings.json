@@ -4,5 +4,18 @@
     "combinators",
     "csstools",
     "filepath"
-  ]
+  ],
+  "stylelint.configOverrides": {
+    "rules": {
+      "property-no-unknown": [
+        true,
+        {
+          "ignoreProperties": [
+            "composes",
+            "compose-with"
+          ]
+        }
+      ]
+    }
+  }
 }

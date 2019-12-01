@@ -1,8 +1,4 @@
-<a href="https://stylelint.io/">
-  <img alt="stylelint" src="./lib/stylelint-logo.svg" height="120">
-</a>
-
-# @nice-move/stylelint-config
+# @nice-move/stylelint-config [<img src="./lib/stylelint-logo.svg" alt="stylelint" height="80" align="right">][stylelint]
 
 [![npm][npm-badge]][npm-url]
 [![license][license-badge]][github-url]

@@ -2,10 +2,6 @@
 
 const { resolve } = require('path');
 
-const loose = {
-  severity: 'warning'
-};
-
 module.exports = {
   extends: [
     'stylelint-config-standard',
@@ -22,10 +18,10 @@ module.exports = {
         except: ['blockless-after-same-name-blockless', 'first-nested'],
         ignore: ['after-comment'],
         ignoreAtRules: ['else'],
-        ...loose
+        severity: 'warning'
       }
     ],
-    'declaration-block-no-redundant-longhand-properties': [true, loose],
+    'declaration-block-no-redundant-longhand-properties': true,
     'font-family-name-quotes': 'always-where-required',
     'function-url-quotes': 'always',
     'max-nesting-depth': 5,
@@ -35,14 +31,14 @@ module.exports = {
       {
         except: ['first-nested'],
         ignore: ['after-comment'],
-        ...loose
+        severity: 'warning'
       }
     ],
     'selector-max-compound-selectors': 5,
     'selector-max-universal': 1,
     'selector-no-qualifying-type': true,
-    'selector-pseudo-element-colon-notation': ['double', loose],
-    'shorthand-property-no-redundant-values': [true, loose],
+    'selector-pseudo-element-colon-notation': 'double',
+    'shorthand-property-no-redundant-values': true,
     'time-min-milliseconds': 250
     // TODO: enable when vscode support stylelint v11
     // 'unicode-bom': 'never'

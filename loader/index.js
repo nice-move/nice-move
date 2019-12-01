@@ -10,7 +10,7 @@ function sort(data) {
 
 function formatJSON(data) {
   return format(JSON.stringify(sort(data)), {
-    parser: 'json'
+    parser: 'json-stringify'
   });
 }
 

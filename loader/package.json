@@ -4,7 +4,8 @@
   "main": "./index.js",
   "dependencies": {
     "eslint-find-rules": "^3.4.0",
+    "prettier": "^1.19.1",
     "sort-keys": "^4.0.0",
-    "stylelint-find-new-rules": "^1.1.0"
+    "stylelint-find-new-rules": "^1.2.0"
   }
 }

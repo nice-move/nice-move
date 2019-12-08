@@ -23,6 +23,7 @@ module.exports = [
   'browser',
   'module',
   'main',
+  'type',
   'files',
   'directories',
 

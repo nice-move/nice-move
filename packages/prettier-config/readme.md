@@ -1,8 +1,4 @@
-<a href="https://prettier.io/">
-  <img alt="Prettier" src="https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-icon-light.png" height="120">
-</a>
-
-# @nice-move/prettier-config
+# @nice-move/prettier-config [<img src="https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-icon-light.png" alt="prettier" height="80" align="right">][prettier]
 
 [![npm][npm-badge]][npm-url]
 [![license][license-badge]][github-url]

@@ -8,10 +8,10 @@ module.exports = {
   plugins: 'stylelint-scss',
   rules: {
     'at-rule-blacklist': ['debug', 'extend'],
-    'scss/at-if-no-null': [true, loose],
+    'scss/at-if-no-null': true,
     'scss/at-import-partial-extension': ['always', loose],
     'scss/at-mixin-argumentless-call-parentheses': ['never', loose],
-    'scss/at-rule-conditional-no-parentheses': [true, loose],
+    'scss/at-rule-conditional-no-parentheses': true,
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': true,
     'scss/declaration-nested-properties': 'never',
@@ -25,6 +25,6 @@ module.exports = {
     ],
     'scss/media-feature-value-dollar-variable': ['always', loose],
     'scss/selector-nest-combinators': ['always', loose],
-    'scss/selector-no-redundant-nesting-selector': [true, loose]
+    'scss/selector-no-redundant-nesting-selector': true
   }
 };

@@ -40,7 +40,6 @@ module.exports = {
     'selector-pseudo-element-colon-notation': 'double',
     'shorthand-property-no-redundant-values': true,
     'time-min-milliseconds': 250
-    // TODO: enable when vscode support stylelint v11
-    // 'unicode-bom': 'never'
-  }
+  },
+  ignoreFiles: ['.best-shot/build/', '.best-shot/inspect/', '.best-shot/stats/']
 };

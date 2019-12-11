@@ -23,11 +23,17 @@ function formatter(text) {
     engineStrict,
     bundledDependencies,
     bundleDependencies,
+    typings,
+    types = typings,
+    esnext,
+    module: Module = esnext,
     ...data
   } = JSON.parse(text);
   return format(
     {
       ...data,
+      module: Module,
+      types,
       bundledDependencies: mergeArray(bundledDependencies, bundleDependencies)
     },
     {

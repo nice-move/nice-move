@@ -14,6 +14,20 @@ npm install prettier @nice-move/prettier-config --save-dev
 
 ## Usage
 
+Create: .editorconfig
+
+```ini
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+max_line_length = 80
+quote_type = single
+trim_trailing_whitespace = true
+```
+
 Add to package.json
 
 ```json
@@ -26,8 +40,12 @@ Then run
 
 ```bash
 prettier --write **/*.{js,jsx,vue,css,scss,md}
-prettier --write **/*.{html,json,toml,yaml,yml}
 ```
+
+## Tips
+
+This config including [@nice-move/prettier-plugin-package-json
+](https://github.com/airkro/nice-move/tree/master/packages/prettier-plugin-package-json#readme)
 
 [prettier]: https://prettier.io/
 [npm-url]: https://www.npmjs.com/package/@nice-move/prettier-config

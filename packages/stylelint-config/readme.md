@@ -27,7 +27,7 @@ Add to package.json
 Then run
 
 ```bash
-stylelint --fix **/*.{vue,css,less,scss}
+stylelint --fix **/*.{vue,css,less,scss,md,html}
 ```
 
 [stylelint]: https://stylelint.io/

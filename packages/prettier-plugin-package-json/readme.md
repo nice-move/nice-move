@@ -1,12 +1,4 @@
-<a href="https://prettier.io/">
-  <img alt="Prettier" src="https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-icon-light.png" height="120">
-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://docs.npmjs.com/files/package.json.html">
-  <img alt="package.json" src="https://raw.githubusercontent.com/npm/logos/master/npm%20square/n-large.png" height="120">
-</a>
-
-# @nice-move/prettier-plugin-package-json
+# @nice-move/prettier-plugin-package-json [<img src="https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-icon-light.png" alt="prettier" height="80" align="right">][prettier]
 
 [![npm][npm-badge]][npm-url]
 [![license][license-badge]][github-url]
@@ -14,16 +6,18 @@
 
 A [Prettier] plugin using [prettier-package-json] to make package.json prettier.
 
+Read about [npm-package.json](https://docs.npmjs.com/files/package.json.html).
+
 ## Installation
 
 ```bash
-npm install @nice-move/prettier-plugin-package-json --save-dev
+npm install prettier @nice-move/prettier-plugin-package-json --save-dev
 ```
 
 ## Usage
 
 ```bash
-$ prettier --write **/package.json
+prettier --write **/package.json
 ```
 
 ## Feature
@@ -32,6 +26,7 @@ $ prettier --write **/package.json
 - Expand `author` and `contributors` fields into objects
 - Remove deprecated fields like `preferGlobal`, `engineStrict`
 - Merge `bundleDependencies` into `bundledDependencies`
+- Rename `esnext` to `module`, rename `typings` to `types`
 
 [prettier]: https://prettier.io/
 [prettier-package-json]: https://github.com/cameronhunter/prettier-package-json

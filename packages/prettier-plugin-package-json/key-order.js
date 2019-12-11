@@ -6,14 +6,18 @@ module.exports = [
   'name',
   'version',
   'description',
+  'displayName',
+  'categories',
   'license',
 
   'author',
+  'publisher',
   'maintainers',
   'contributors',
 
   'keywords',
   'homepage',
+  'funding',
 
   'repository',
   'bugs',
@@ -23,26 +27,39 @@ module.exports = [
   'browser',
   'module',
   'main',
-  'type',
+  'umd',
+  'types',
+
   'files',
   'directories',
+
+  'type',
+  'sideEffects',
 
   'scripts',
   'config',
 
   'flat',
   'workspaces',
-
   'dependencies',
   'devDependencies',
   'optionalDependencies',
   'peerDependencies',
   'bundledDependencies',
+  'extensionDependencies',
   'resolutions',
 
   'engines',
   'os',
   'cpu',
 
-  'publishConfig'
+  'publishConfig',
+
+  // vscode spec
+  'icon',
+  'galleryBanner',
+  'activationEvents',
+  'contributes',
+  'qna',
+  'extensionPack'
 ];

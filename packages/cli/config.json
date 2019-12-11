@@ -10,12 +10,17 @@
     "eslint --fix",
     "git add"
   ],
-  "*.{css,scss,less,md}": [
+  "*.{css,scss,less,md,html}": [
     "prettier --write",
     "stylelint --fix --rd",
     "git add"
   ],
-  "*.{html,tpl,svg,json,toml,yml,yaml}": [
+  "*.tpl": [
+    "prettier --write",
+    "stylelint --fix --rd -s html",
+    "git add"
+  ],
+  "*.{svg,json,toml,yml,yaml}": [
     "prettier --write",
     "git add"
   ]

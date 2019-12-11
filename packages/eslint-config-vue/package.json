@@ -20,13 +20,13 @@
   "main": "index.js",
   "dependencies": {
     "@nice-move/eslint-config-base": "^0.0.4",
-    "babel-eslint": "^10.0.2",
-    "eslint-plugin-vue": "^5.2.3"
+    "babel-eslint": "^10.0.3",
+    "eslint-plugin-vue": "^6.0.1"
   },
   "peerDependencies": {
-    "eslint": "^6.1.0"
+    "eslint": "^6.7.2"
   },
   "engines": {
-    "node": "^8.3 || ^10 || ^12"
+    "node": "^8.15 || ^10.15 || ^12"
   }
 }

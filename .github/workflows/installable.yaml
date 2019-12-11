@@ -3,14 +3,14 @@ name: Installable
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   build:
     strategy:
       matrix:
         os: [macos-latest, windows-latest, ubuntu-latest]
-        node: [8, 10, 12]
+        node: [8.15.0, 10.15.0, 12.0.0, latest]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -19,5 +19,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
-      - name: Install 
+      - name: Install
         run: yarn

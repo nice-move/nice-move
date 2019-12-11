@@ -5458,6 +5458,15 @@ from2@^2.1.0, from2@^2.1.1:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
+fs-chain@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npm.taobao.org/fs-chain/download/fs-chain-0.0.2.tgz?cache=0&sync_timestamp=1576032867444&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffs-chain%2Fdownload%2Ffs-chain-0.0.2.tgz#3cc946daf87441fae04d710b14c0230a6cd8cf56"
+  integrity sha1-PMlG2vh0QfrgTXELFMAjCmzYz1Y=
+  dependencies:
+    fs-extra "^8.1.0"
+    kleur "^3.0.3"
+    resolve-cwd "^3.0.0"
+
 fs-constants@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/fs-constants/download/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
@@ -7227,6 +7236,11 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.npm.taobao.org/kind-of/download/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha1-ARRrNqYhjmTljzqNZt5df8b20FE=
+
+kleur@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.npm.taobao.org/kleur/download/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
+  integrity sha1-p5yezIbuHOP6YgbRIWxQHxR/wH4=
 
 known-css-properties@^0.17.0:
   version "0.17.0"

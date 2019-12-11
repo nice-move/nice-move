@@ -9,7 +9,8 @@ module.exports = {
     'stylelint-config-css-modules',
     resolve(__dirname, './lib/prefix.json'),
     resolve(__dirname, './lib/scss.js'),
-    resolve(__dirname, './lib/order.js')
+    resolve(__dirname, './lib/order.js'),
+    resolve(__dirname, './lib/ignore.js')
   ],
   rules: {
     'at-rule-empty-line-before': [
@@ -40,6 +41,5 @@ module.exports = {
     'selector-pseudo-element-colon-notation': 'double',
     'shorthand-property-no-redundant-values': true,
     'time-min-milliseconds': 250
-  },
-  ignoreFiles: ['.best-shot/build/', '.best-shot/inspect/', '.best-shot/stats/']
+  }
 };

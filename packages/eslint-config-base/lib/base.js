@@ -1,11 +1,6 @@
-'use strict';
-
 module.exports = {
-  'arrow-parens': ['warn', 'as-needed'],
   camelcase: 'off',
-  'comma-dangle': ['warn', 'never'],
   'no-console': 'off',
-  'no-nested-ternary': 'off',
   'promise/always-return': 'off',
   'promise/avoid-new': 'off',
   'promise/catch-or-return': [
@@ -15,6 +10,18 @@ module.exports = {
     }
   ],
   'template-curly-spacing': 'off',
+  // 'max-lines': 'warn',
+  // 'max-depth': 'warn',
+  // 'max-lines-per-function': 'warn',
+  // 'max-nested-callbacks': 'warn',
+  // 'max-params': 'warn',
+  // 'max-statements': 'warn',
+  // 'max-statements-per-line': 'warn',
+  // complexity: ['warn', 8],
+  // 'no-duplicate-imports': 'warn',
+  // 'require-atomic-updates': 'error',
+  // 'require-unicode-regexp': 'error',
   'unicorn/prefer-query-selector': 'off',
-  'unicorn/prevent-abbreviations': 'off'
+  'unicorn/prevent-abbreviations': 'off',
+  'unicorn/expiring-todo-comments': 'off'
 };

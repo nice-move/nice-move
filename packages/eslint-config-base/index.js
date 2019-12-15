@@ -1,5 +1,3 @@
-'use strict';
-
 const rules = require('./lib/base');
 
 module.exports = {
@@ -8,13 +6,18 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:import/recommended',
     'plugin:unicorn/recommended',
-    'airbnb-base'
+    'airbnb-base',
+    'eslint-config-prettier',
+    'eslint-config-prettier/unicorn'
   ],
-  parserOptions: {
-    ecmaVersion: 2019
+  env: {
+    es2020: true
+    // node: false,
+    // commonjs: true
   },
-  rules: {
-    ...rules,
-    strict: ['error', 'safe']
-  }
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module'
+  },
+  rules
 };

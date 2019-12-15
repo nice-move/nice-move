@@ -1,15 +1,20 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.0.4",
-  "description": "Eslint config for personal use",
+  "version": "0.1.0",
+  "description": "A Eslint config created by personal preferences",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
     "email": "airkro@qq.com"
   },
   "keywords": [
+    "config",
     "eslint",
-    "nice-move"
+    "javascript",
+    "jsx",
+    "nice-move",
+    "prettier",
+    "standard"
   ],
   "homepage": "https://github.com/airkro/nice-move/tree/master/packages/eslint-config-base#readme",
   "repository": {
@@ -20,6 +25,7 @@
   "main": "index.js",
   "dependencies": {
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-node": "^10.0.0",

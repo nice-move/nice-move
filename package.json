@@ -54,18 +54,7 @@
     "extends": [
       "@nice-move/eslint-config-base",
       "plugin:node/recommended"
-    ],
-    "env": {
-      "node": true
-    },
-    "rules": {
-      "import/no-extraneous-dependencies": [
-        "error",
-        {
-          "devDependencies": true
-        }
-      ]
-    }
+    ]
   },
   "husky": {
     "hooks": {

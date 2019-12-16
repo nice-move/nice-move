@@ -1,30 +1,36 @@
-const rules = require('@nice-move/eslint-config-base/lib/base');
+const {
+  extends: Extends,
+  env,
+  ignorePatterns,
+  overrides,
+  parserOptions,
+  rules
+} = require('@nice-move/eslint-config-base');
 
 module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:promise/recommended',
-    'plugin:unicorn/recommended',
-    'airbnb', // already include plugin:import
-    'plugin:react-perf/recommended',
-    'eslint-config-prettier',
-    'eslint-config-prettier/unicorn'
+  extends: Extends,
+  env,
+  parserOptions,
+  rules,
+  overrides: [
+    ...overrides,
+    {
+      files: '**/*.jsx',
+      extends: [
+        'airbnb',
+        'airbnb/hooks',
+        'plugin:react-perf/recommended',
+        'prettier',
+        'prettier/unicorn',
+        'prettier/react'
+      ]
+    },
+    {
+      files: 'src/**',
+      parserOptions: {
+        parser: 'babel-eslint'
+      }
+    }
   ],
-  env: {
-    es2020: true
-    // node: false,
-    // commonjs: true
-  },
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module'
-  },
-  plugins: ['react-hooks'],
-  rules: {
-    ...rules,
-    // Checks rules of Hooks
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn'
-  }
+  ignorePatterns
 };

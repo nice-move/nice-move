@@ -18,3 +18,9 @@ Eslint/Stylelint/Prettier config for personal use.
 [github-link]: https://github.com/Airkro/nice-move
 [npm-badge]: https://img.shields.io/badge/npm-nice--move-orange.svg?style=flat-square&logo=npm
 [npm-link]: https://www.npmjs.com/org/nice-move
+
+```js
+p => {
+  return 1;
+};
+```

@@ -33,7 +33,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "nice-move && ava --verbose"
+      "pre-commit": "nice-move && ava"
     }
   },
   "prettier": "@nice-move/prettier-config",

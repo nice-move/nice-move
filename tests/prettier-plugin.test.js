@@ -1,8 +1,4 @@
-'use strict';
-
-// eslint-disable-next-line import/no-extraneous-dependencies
 const { format } = require('prettier');
-// eslint-disable-next-line import/no-extraneous-dependencies
 const test = require('ava');
 
 const original = `{

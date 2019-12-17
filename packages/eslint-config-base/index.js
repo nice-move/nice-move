@@ -1,4 +1,12 @@
+const scaffold = [
+  '**/*.{test,tests,spec}.*',
+  'test.js',
+  '{test,tests,spec,mock,config}/**'
+];
+
 module.exports = {
+  noInlineConfig: false,
+  reportUnusedDisableDirectives: true,
   extends: [
     'eslint:recommended',
     'plugin:promise/recommended',
@@ -57,14 +65,12 @@ module.exports = {
           'error',
           {
             devDependencies: [
-              '**/*.{test,tests,spec}.*',
               '**/{babel,postcss}.config.*',
               '**/{webpack,rollup}.config.*',
               '.best-shot/**/*.*',
-              'test.js',
-              '{test,tests,spec,mock,config}/**'
+              ...scaffold
             ],
-            optionalDependencies: false
+            optionalDependencies: [...scaffold]
           }
         ]
       }

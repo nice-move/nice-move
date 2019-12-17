@@ -1,21 +1,12 @@
-const {
-  extends: Extends,
-  env,
-  ignorePatterns,
-  overrides,
-  parserOptions,
-  rules
-} = require('@nice-move/eslint-config-base');
+const { rules, overrides, ...all } = require('@nice-move/eslint-config-base');
 
 module.exports = {
-  extends: Extends,
-  env,
-  parserOptions,
+  ...all,
   rules,
   overrides: [
     ...overrides,
     {
-      files: '**/*.vue',
+      files: 'src/**/*.vue',
       extends: [
         'plugin:vue/essential',
         'prettier',
@@ -36,6 +27,5 @@ module.exports = {
         parser: 'babel-eslint'
       }
     }
-  ],
-  ignorePatterns
+  ]
 };

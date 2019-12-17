@@ -9,9 +9,9 @@ module.exports = {
     'prettier/unicorn'
   ],
   env: {
-    es2020: true
-    // node: false,
-    // commonjs: true
+    es2020: true,
+    browser: false,
+    node: true
   },
   parserOptions: {
     ecmaVersion: 2020,

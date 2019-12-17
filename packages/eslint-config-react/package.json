@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Eslint config for personal use",
   "license": "MIT",
   "author": {
@@ -8,8 +8,13 @@
     "email": "airkro@qq.com"
   },
   "keywords": [
+    "config",
     "eslint",
-    "nice-move"
+    "javascript",
+    "nice-move",
+    "prettier",
+    "react",
+    "standard"
   ],
   "homepage": "https://github.com/airkro/nice-move/tree/master/packages/eslint-config-react#readme",
   "repository": {
@@ -19,14 +24,13 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@nice-move/eslint-config-base": "^0.2.2",
+    "@nice-move/eslint-config-base": "^0.2.4",
     "babel-eslint": "^10.0.3",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "eslint-plugin-react-perf": "^3.2.3"
+    "eslint-plugin-react-hooks": "^1.7.0"
   },
   "peerDependencies": {
     "eslint": "^6.7.2"

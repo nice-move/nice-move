@@ -19,17 +19,21 @@ module.exports = {
       extends: [
         'airbnb',
         'airbnb/hooks',
-        'plugin:react-perf/recommended',
         'prettier',
         'prettier/unicorn',
         'prettier/react'
-      ]
+      ],
+      rules
     },
     {
       files: 'src/**',
-      parserOptions: {
-        parser: 'babel-eslint'
-      }
+      env: {
+        es2020: true,
+        browser: true,
+        node: false,
+        commonjs: true
+      },
+      parser: 'babel-eslint'
     }
   ],
   ignorePatterns

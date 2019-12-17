@@ -27,7 +27,7 @@ Add to package.json
 Then run
 
 ```bash
-eslint --fix **/*.{vue,js,jsx,cjs,mjs}
+eslint --fix **/*.{js,cjs,mjs}
 ```
 
 [eslint]: https://eslint.org/

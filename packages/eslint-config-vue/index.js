@@ -21,10 +21,17 @@ module.exports = {
         'prettier',
         'prettier/unicorn',
         'prettier/vue'
-      ]
+      ],
+      rules
     },
     {
       files: 'src/**',
+      env: {
+        es2020: true,
+        browser: true,
+        node: false,
+        commonjs: true
+      },
       parserOptions: {
         parser: 'babel-eslint'
       }

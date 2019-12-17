@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A Eslint config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -11,7 +11,6 @@
     "config",
     "eslint",
     "javascript",
-    "jsx",
     "nice-move",
     "prettier",
     "standard"

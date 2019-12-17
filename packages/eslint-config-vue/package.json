@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-vue",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Eslint config for personal use",
   "license": "MIT",
   "author": {
@@ -8,8 +8,13 @@
     "email": "airkro@qq.com"
   },
   "keywords": [
+    "config",
     "eslint",
-    "nice-move"
+    "javascript",
+    "nice-move",
+    "prettier",
+    "standard",
+    "vue"
   ],
   "homepage": "https://github.com/airkro/nice-move/tree/master/packages/eslint-config-vue#readme",
   "repository": {
@@ -19,7 +24,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@nice-move/eslint-config-base": "^0.2.3",
+    "@nice-move/eslint-config-base": "^0.2.4",
     "babel-eslint": "^10.0.3",
     "eslint-plugin-vue": "^6.0.1"
   },

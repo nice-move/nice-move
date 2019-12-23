@@ -121,3 +121,5 @@ $RECYCLE.BIN/
 
 # best-shot
 .best-shot/*[build,inspect,stats]/
+
+temp/*

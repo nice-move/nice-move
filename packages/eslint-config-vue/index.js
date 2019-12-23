@@ -1,8 +1,14 @@
-const { rules, overrides, ...all } = require('@nice-move/eslint-config-base');
+const {
+  rules,
+  overrides,
+  parserOptions,
+  ...all
+} = require('@nice-move/eslint-config-base');
 
 module.exports = {
   ...all,
   rules,
+  parserOptions,
   overrides: [
     ...overrides,
     {
@@ -24,6 +30,7 @@ module.exports = {
         commonjs: true
       },
       parserOptions: {
+        ...parserOptions,
         parser: 'babel-eslint'
       }
     }

@@ -1,8 +1,22 @@
-const { rules, overrides, ...all } = require('@nice-move/eslint-config-base');
+const {
+  rules,
+  overrides,
+  parserOptions,
+  ...all
+} = require('@nice-move/eslint-config-base');
+
+const settings = {
+  'import/resolver': {
+    node: {
+      extensions: ['.mjs']
+    }
+  }
+};
 
 module.exports = {
   ...all,
   rules,
+  parserOptions,
   overrides: [
     ...overrides,
     {
@@ -14,7 +28,14 @@ module.exports = {
         'prettier/unicorn',
         'prettier/react'
       ],
-      rules
+      parserOptions: {
+        ...parserOptions,
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      rules,
+      settings
     },
     {
       files: 'src/**',

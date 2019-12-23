@@ -7,6 +7,7 @@
   "files": [],
   "scripts": {
     "format": "nice-move",
+    "inspect": "nodemon ./config/inspect",
     "postinstall": "node ./config/hot-fix.js",
     "test": "ava --verbose"
   },
@@ -14,13 +15,14 @@
     "packages/*"
   ],
   "devDependencies": {
-    "eslint-find-rules": "^3.4.0",
     "fs-chain": "^0.0.2",
-    "stylelint-find-new-rules": "^1.2.0"
+    "nodemon": "^2.0.2",
+    "sortobject": "^3.0.0",
+    "write-json-file": "^4.2.1"
   },
   "optionalDependencies": {
     "ava": "^2.4.0",
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
     "husky": "^3.1.0",
     "prettier": "^1.19.1",
     "stylelint": "^12.0.0"

@@ -1,0 +1,8 @@
+{
+  "watch": [
+    "./packages/*",
+    "./tests/inspect"
+  ],
+  "delay": 5,
+  "quiet": true
+}

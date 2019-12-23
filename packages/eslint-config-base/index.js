@@ -17,13 +17,19 @@ module.exports = {
     'prettier/unicorn'
   ],
   env: {
-    es2020: true,
     browser: false,
+    commonjs: true,
+    es2020: true,
     node: true
   },
   parserOptions: {
     ecmaVersion: 2020,
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures: {
+      impliedStrict: true,
+      globalReturn: false,
+      jsx: false
+    }
   },
   rules: {
     camelcase: 'off',
@@ -41,7 +47,6 @@ module.exports = {
       }
     ],
     'promise/no-callback-in-promise': 'off',
-    // 'max-lines': 'warn',
     // 'max-depth': 'warn',
     // 'max-lines-per-function': 'warn',
     // 'max-nested-callbacks': 'warn',
@@ -50,7 +55,6 @@ module.exports = {
     // 'max-statements-per-line': 'warn',
     // complexity: ['warn', 8],
     // 'no-duplicate-imports': 'warn',
-    // 'require-atomic-updates': 'error',
     // 'require-unicode-regexp': 'error',
     'unicorn/prefer-query-selector': 'off',
     'unicorn/prevent-abbreviations': 'off',

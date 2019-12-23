@@ -8,7 +8,7 @@ const {
 const settings = {
   'import/resolver': {
     node: {
-      extensions: ['.mjs']
+      extensions: ['.mjs', '.js', '.jsx', '.json']
     }
   }
 };

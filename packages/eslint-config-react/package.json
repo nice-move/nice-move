@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Eslint config for personal use",
   "license": "MIT",
   "author": {
@@ -36,6 +36,6 @@
     "eslint": "^6.8.0"
   },
   "engines": {
-    "node": "^8.15 || ^10.15 || ^12"
+    "node": "^8.16 || ^10.15 || ^12"
   }
 }

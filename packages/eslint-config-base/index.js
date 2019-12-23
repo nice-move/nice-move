@@ -58,28 +58,20 @@ module.exports = {
     // 'require-unicode-regexp': 'error',
     'unicorn/prefer-query-selector': 'off',
     'unicorn/prevent-abbreviations': 'off',
-    'unicorn/expiring-todo-comments': 'off'
-  },
-  overrides: [
-    {
-      files: '*.*',
-      excludedFiles: 'src/**',
-      rules: {
-        'import/no-extraneous-dependencies': [
-          'error',
-          {
-            devDependencies: [
-              '**/{babel,postcss}.config.*',
-              '**/{webpack,rollup}.config.*',
-              '.best-shot/**/*.*',
-              ...scaffold
-            ],
-            optionalDependencies: [...scaffold]
-          }
-        ]
+    'unicorn/expiring-todo-comments': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/{babel,postcss}.config.*',
+          '**/{webpack,rollup}.config.*',
+          '.best-shot/**/*.*',
+          ...scaffold
+        ],
+        optionalDependencies: [...scaffold]
       }
-    }
-  ],
+    ]
+  },
   ignorePatterns: [
     '!.best-shot/',
     '.best-shot/*[build,inspect,stats]/',

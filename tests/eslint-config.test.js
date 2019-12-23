@@ -29,7 +29,7 @@ test('Src dir', t => {
   const baseConfig = baseEngine.getConfigForFile('sample.js');
   const srcConfig = baseEngine.getConfigForFile('src/sample.js');
 
-  t.notDeepEqual(baseConfig, srcConfig);
+  t.deepEqual(baseConfig, srcConfig);
 });
 
 test('Base type', t => {

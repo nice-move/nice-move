@@ -1,6 +1,5 @@
 const {
   rules,
-  overrides,
   parserOptions,
   ...all
 } = require('@nice-move/eslint-config-base');
@@ -10,7 +9,6 @@ module.exports = {
   rules,
   parserOptions,
   overrides: [
-    ...overrides,
     {
       files: 'src/**/*.vue',
       extends: [

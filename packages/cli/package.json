@@ -1,7 +1,7 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.0.5",
-  "description": "Run lint-staged by use `nice-move` config",
+  "version": "0.0.6",
+  "description": "Run `lint-staged` with `nice-move` config",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -28,6 +28,7 @@
     "nice-move": "./index.js"
   },
   "dependencies": {
+    "@nodegit/is": "^1.0.0",
     "commander": "^4.0.1",
     "kleur": "^3.0.3",
     "lint-staged": "^9.5.0",

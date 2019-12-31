@@ -1,13 +1,26 @@
 #!/usr/bin/env node
 
+const is = require('@nodegit/is');
 const { yellow } = require('kleur');
-
-process.on('SIGINT', () => {});
 
 const program = require('commander');
 const lintStaged = require('lint-staged');
 
-const config = require('./config.js');
+const config = require('./get-config.js');
+
+process.on('SIGINT', () => {});
+
+const notGitRoot = !is.gitRoot();
+
+if (notGitRoot || !config) {
+  console.log(
+    yellow`nice-move:`,
+    notGitRoot
+      ? 'Run `nice-move` in Git Root directory.'
+      : "Can't find `eslint/stylelint/prettier`."
+  );
+  process.exit(1);
+}
 
 program
   .option('-x, --shell', 'Skip parsing of tasks for better shell support')
@@ -18,11 +31,6 @@ program
     true
   )
   .parse(process.argv);
-
-if (!config) {
-  console.log(yellow`nice-move:`, "That's nothing I can do.");
-  process.exit(1);
-}
 
 lintStaged({
   config,

@@ -3,9 +3,16 @@ const pickBy = require('lodash/pickBy');
 const isEmpty = require('lodash/isEmpty');
 const readPkg = require('read-pkg');
 
-const {
-  devDependencies: { prettier, eslint, stylelint } = {}
-} = readPkg.sync();
+function pkg() {
+  try {
+    const { devDependencies = {} } = readPkg.sync();
+    return devDependencies;
+  } catch (error) {
+    return {};
+  }
+}
+
+const { prettier, eslint, stylelint } = pkg();
 
 function parse(obj) {
   const config = pickBy(

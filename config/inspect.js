@@ -18,9 +18,11 @@ const reactEngine = new CLIEngine({
 });
 
 const baseConfig = baseEngine.getConfigForFile('src/sample.js');
+const htmlConfig = baseEngine.getConfigForFile('src/sample.html');
 const vueConfig = vueEngine.getConfigForFile('src/sample.vue');
 const reactConfig = reactEngine.getConfigForFile('src/sample.jsx');
 
 writeJsonFile('temp/base.json', sort(baseConfig));
+writeJsonFile('temp/html.json', sort(htmlConfig));
 writeJsonFile('temp/vue.json', sort(vueConfig));
 writeJsonFile('temp/react.json', sort(reactConfig));

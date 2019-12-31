@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Run `lint-staged` with `nice-move` config",
   "license": "MIT",
   "author": {
@@ -9,10 +9,13 @@
   },
   "keywords": [
     "config",
+    "cwd",
     "eslint",
     "format",
     "formatter",
+    "git",
     "lint",
+    "lint-staged",
     "linter",
     "nice-move",
     "prettier",

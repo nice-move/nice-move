@@ -25,22 +25,23 @@ function parse(obj) {
 }
 
 module.exports = parse({
-  '*.vue': [
+  '*.{vue,html}': [
     prettier && 'prettier --write',
-    eslint && 'eslint --fix',
-    stylelint && 'stylelint --fix --rd'
+    stylelint && 'stylelint --fix --rd',
+    eslint && 'eslint --fix'
   ],
   '*.{js,jsx,mjs,cjs}': [
     prettier && 'prettier --write',
     eslint && 'eslint --fix'
   ],
-  '*.{css,scss,less,md,html}': [
+  '*.{css,scss,less,md}': [
     prettier && 'prettier --write',
     stylelint && 'stylelint --fix --rd'
   ],
   '*.tpl': [
     prettier && 'prettier --write',
-    stylelint && 'stylelint --fix --rd -s html'
+    stylelint && 'stylelint --fix --rd -s html',
+    eslint && 'eslint --fix'
   ],
   '*.{svg,json,toml,yml,yaml}': [prettier && 'prettier --write']
 });

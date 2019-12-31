@@ -1,9 +1,3 @@
-const scaffold = [
-  '**/*.{test,tests,spec}.*',
-  'test.js',
-  '{test,tests,spec,mock,config}/**'
-];
-
 module.exports = {
   noInlineConfig: false,
   reportUnusedDisableDirectives: true,
@@ -63,20 +57,27 @@ module.exports = {
       'error',
       {
         devDependencies: [
-          '**/{babel,postcss}.config.*',
-          '**/{webpack,rollup}.config.*',
-          '.best-shot/**/*.*',
-          ...scaffold
-        ],
-        optionalDependencies: [...scaffold]
+          '**/*.{test,tests,spec}.*',
+          'test.js',
+          '{test,tests,spec,mock,config}/**'
+        ]
       }
     ]
   },
-  ignorePatterns: [
-    '!.best-shot/',
-    '.best-shot/*[build,inspect,stats]/',
-    '**/node_modules',
-    '**/.git',
-    '**/.svn'
-  ]
+  overrides: [
+    {
+      files: '**/*.{html,htm,tpl}',
+      plugins: ['html'],
+      env: {
+        es2020: true,
+        browser: true,
+        node: false,
+        commonjs: true
+      },
+      settings: {
+        'html/html-extensions': ['.html', '.htm', '.tpl']
+      }
+    }
+  ],
+  ignorePatterns: ['**/node_modules', '**/.git', '**/.svn']
 };

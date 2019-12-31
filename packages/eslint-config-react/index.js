@@ -1,20 +1,32 @@
 const {
   rules,
   parserOptions,
+  ignorePatterns,
+  overrides,
   ...all
 } = require('@nice-move/eslint-config-base');
 
-const settings = {
-  'import/resolver': {
-    node: {
-      extensions: ['.mjs', '.js', '.jsx', '.json']
-    }
+const noExtraneousDependencies = [
+  'error',
+  {
+    devDependencies: [
+      '**/{babel,postcss}.config.*',
+      '**/{webpack,rollup}.config.*',
+      '.best-shot/**/*.*',
+
+      '**/*.{test,tests,spec}.*',
+      'test.js',
+      '{test,tests,spec,mock,config}/**'
+    ]
   }
-};
+];
 
 module.exports = {
   ...all,
-  rules,
+  rules: {
+    ...rules,
+    'import/no-extraneous-dependencies': noExtraneousDependencies
+  },
   parserOptions,
   overrides: [
     {
@@ -32,8 +44,17 @@ module.exports = {
           jsx: true
         }
       },
-      rules,
-      settings
+      rules: {
+        ...rules,
+        'import/no-extraneous-dependencies': noExtraneousDependencies
+      },
+      settings: {
+        'import/resolver': {
+          node: {
+            extensions: ['.mjs', '.js', '.jsx', '.json']
+          }
+        }
+      }
     },
     {
       files: 'src/**',
@@ -44,6 +65,12 @@ module.exports = {
         commonjs: true
       },
       parser: 'babel-eslint'
-    }
+    },
+    ...overrides
+  ],
+  ignorePatterns: [
+    ...ignorePatterns,
+    '!.best-shot/',
+    '.best-shot/{build,inspect,stats}/'
   ]
 };

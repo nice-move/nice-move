@@ -44,7 +44,7 @@ git add .
 yarn run nice-move
 ```
 
-## Use with `husky`
+### Use with `husky`
 
 ```bash
 yarn add husky -D

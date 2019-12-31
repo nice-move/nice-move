@@ -21,8 +21,8 @@ test('Pure js', t => {
   const vueConfig = vueEngine.getConfigForFile('sample.js');
   const reactConfig = reactEngine.getConfigForFile('sample.js');
 
-  t.deepEqual(baseConfig, vueConfig);
-  t.deepEqual(baseConfig, reactConfig);
+  t.notDeepEqual(baseConfig, vueConfig);
+  t.notDeepEqual(baseConfig, reactConfig);
 });
 
 test('Src dir', t => {

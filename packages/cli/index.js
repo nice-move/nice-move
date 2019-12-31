@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-'use strict';
+const { yellow } = require('kleur');
 
 process.on('SIGINT', () => {});
 
 const program = require('commander');
 const lintStaged = require('lint-staged');
 
-const config = require('./config.json');
+const config = require('./config.js');
 
 program
   .option('-x, --shell', 'Skip parsing of tasks for better shell support')
@@ -18,6 +18,11 @@ program
     true
   )
   .parse(process.argv);
+
+if (!config) {
+  console.log(yellow`nice-move:`, "That's nothing I can do.");
+  process.exit(1);
+}
 
 lintStaged({
   config,

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Run lint-staged by use `nice-move` config",
   "license": "MIT",
   "author": {
@@ -29,12 +29,10 @@
   },
   "dependencies": {
     "commander": "^4.0.1",
-    "lint-staged": "^9.5.0"
-  },
-  "peerDependencies": {
-    "eslint": "^6.7.2",
-    "prettier": "^1.19.1",
-    "stylelint": "^12.0.0"
+    "kleur": "^3.0.3",
+    "lint-staged": "^9.5.0",
+    "lodash": "^4.17.15",
+    "read-pkg": "^5.2.0"
   },
   "engines": {
     "node": "^10.15 || ^12"

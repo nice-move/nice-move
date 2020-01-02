@@ -5,8 +5,8 @@ const readPkg = require('read-pkg');
 
 function pkg() {
   try {
-    const { devDependencies = {} } = readPkg.sync();
-    return devDependencies;
+    const { dependencies = {}, devDependencies = {} } = readPkg.sync();
+    return { ...dependencies, ...devDependencies };
   } catch (error) {
     return {};
   }

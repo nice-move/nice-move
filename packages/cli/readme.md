@@ -9,13 +9,13 @@ Run [lint-staged] with `nice-move` config.
 ## Installation
 
 ```bash
-yarn add @nice-move/cli -D
+npm install @nice-move/cli --save-dev
 ```
 
 Install eslint / stylelint / prettier if you need to.
 
 ```bash
-yarn add eslint stylelint prettier -D
+npm install eslint stylelint prettier --save-dev
 ```
 
 ## Configuration
@@ -41,13 +41,13 @@ Change a few files, then run:
 
 ```bash
 git add .
-yarn run nice-move
+npx -c nice-move
 ```
 
 ### Use with `husky`
 
 ```bash
-yarn add husky -D
+npm install husky --save-dev
 ```
 
 ```json

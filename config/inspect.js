@@ -1,28 +1,18 @@
-const { CLIEngine } = require('eslint');
-const sort = require('sortobject').default;
+// eslint-disable-next-line import/no-extraneous-dependencies
+const { configInspector } = require('@nice-move/eslint-inspector');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const writeJsonFile = require('write-json-file');
 
-const baseEngine = new CLIEngine({
-  useEslintrc: false,
-  baseConfig: { root: true, extends: '@nice-move/base' }
-});
+const baseInspector = configInspector('@nice-move/base');
+const vueInspector = configInspector('@nice-move/vue');
+const reactInspector = configInspector('@nice-move/react');
 
-const vueEngine = new CLIEngine({
-  useEslintrc: false,
-  baseConfig: { root: true, extends: '@nice-move/vue' }
-});
+const baseConfig = baseInspector('src/sample.js');
+const htmlConfig = baseInspector('src/sample.html');
+const vueConfig = vueInspector('src/sample.vue');
+const reactConfig = reactInspector('src/sample.jsx');
 
-const reactEngine = new CLIEngine({
-  useEslintrc: false,
-  baseConfig: { root: true, extends: '@nice-move/react' }
-});
-
-const baseConfig = baseEngine.getConfigForFile('src/sample.js');
-const htmlConfig = baseEngine.getConfigForFile('src/sample.html');
-const vueConfig = vueEngine.getConfigForFile('src/sample.vue');
-const reactConfig = reactEngine.getConfigForFile('src/sample.jsx');
-
-writeJsonFile('temp/base.json', sort(baseConfig));
-writeJsonFile('temp/html.json', sort(htmlConfig));
-writeJsonFile('temp/vue.json', sort(vueConfig));
-writeJsonFile('temp/react.json', sort(reactConfig));
+writeJsonFile('temp/base.json', baseConfig);
+writeJsonFile('temp/html.json', htmlConfig);
+writeJsonFile('temp/vue.json', vueConfig);
+writeJsonFile('temp/react.json', reactConfig);

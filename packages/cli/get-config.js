@@ -16,10 +16,8 @@ const { prettier, eslint, stylelint } = pkg();
 
 function parse(obj) {
   const config = pickBy(
-    mapValues(obj, arr => {
-      const actions = arr.filter(Boolean);
-      return actions.length > 0 ? actions.concat('git add') : undefined;
-    })
+    mapValues(obj, arr => arr.filter(Boolean)),
+    arr => arr.length > 0
   );
   return isEmpty(config) ? undefined : config;
 }

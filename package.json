@@ -24,7 +24,7 @@
     "stylelint": "^13.0.0"
   },
   "engines": {
-    "node": "^10.15 || ^12"
+    "node": "^10.18 || ^12.14"
   },
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"

@@ -12,7 +12,7 @@ Run [lint-staged] with `nice-move` config.
 npm install @nice-move/cli --save-dev
 ```
 
-Install eslint / stylelint / prettier if you need to.
+Install `eslint` / `stylelint` / `prettier` if you need to.
 
 ```bash
 npm install eslint stylelint prettier --save-dev

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Run `lint-staged` with `nice-move` config",
   "license": "MIT",
   "author": {
@@ -32,9 +32,9 @@
   },
   "dependencies": {
     "@nodegit/is": "^1.0.0",
-    "commander": "^4.0.1",
+    "commander": "^4.1.0",
     "kleur": "^3.0.3",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.0.0",
     "lodash": "^4.17.15",
     "read-pkg": "^5.2.0"
   },

@@ -1,4 +1,4 @@
-'use strict';
+
 
 module.exports = {
   htmlWhitespaceSensitivity: 'ignore',
@@ -13,6 +13,12 @@ module.exports = {
       files: ['*.tpl', '*.xml', '*.svg'],
       options: {
         parser: 'html'
+      }
+    },
+    {
+      files: ['*.cjs'],
+      options: {
+        parser: 'babel'
       }
     }
   ]

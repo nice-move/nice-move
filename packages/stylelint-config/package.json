@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/stylelint-config",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A `stylelint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -26,16 +26,16 @@
   },
   "main": "index.js",
   "dependencies": {
-    "stylelint-config-css-modules": "^2.1.0",
-    "stylelint-config-prettier": "^8.0.0",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^19.0.0",
     "stylelint-order": "^4.0.0",
-    "stylelint-scss": "^3.13.0"
+    "stylelint-scss": "^3.14.2"
   },
   "peerDependencies": {
-    "stylelint": "^12.0.1"
+    "stylelint": "^13.0.0"
   },
   "engines": {
-    "node": "^10.15 || ^12"
+    "node": "^10.18 || ^12.14"
   }
 }

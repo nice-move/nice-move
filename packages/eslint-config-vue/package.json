@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-vue",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Eslint config for personal use",
   "license": "MIT",
   "author": {
@@ -10,6 +10,7 @@
   "keywords": [
     "config",
     "eslint",
+    "html",
     "javascript",
     "nice-move",
     "prettier",
@@ -24,7 +25,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@nice-move/eslint-config-base": "^0.2.9",
+    "@nice-move/eslint-config-base": "^0.2.10",
     "babel-eslint": "^10.0.3",
     "eslint-plugin-vue": "^6.1.2"
   },
@@ -32,6 +33,6 @@
     "eslint": "^6.8.0"
   },
   "engines": {
-    "node": "^10.15 || ^12"
+    "node": "^10.18 || ^12.14"
   }
 }

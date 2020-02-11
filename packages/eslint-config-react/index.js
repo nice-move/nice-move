@@ -46,6 +46,11 @@ module.exports = {
       },
       rules: {
         ...rules,
+        'react/static-property-placement': ['error', 'static public field'],
+        'react/destructuring-assignment': 'off',
+        'react/jsx-boolean-value': ['error', 'always'],
+        'react/state-in-constructor': 'off',
+        'react/jsx-props-no-spreading': 'off',
         'import/no-extraneous-dependencies': noExtraneousDependencies
       },
       settings: {

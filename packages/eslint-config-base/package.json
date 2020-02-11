@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "A Eslint config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -10,8 +10,10 @@
   "keywords": [
     "config",
     "eslint",
+    "html",
     "javascript",
     "nice-move",
+    "node",
     "prettier",
     "standard"
   ],
@@ -24,18 +26,18 @@
   "main": "index.js",
   "dependencies": {
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-unicorn": "^15.0.1"
+    "eslint-plugin-unicorn": "^16.0.0"
   },
   "peerDependencies": {
     "eslint": "^6.8.0"
   },
   "engines": {
-    "node": "^10.15 || ^12"
+    "node": "^10.18 || ^12.14"
   }
 }

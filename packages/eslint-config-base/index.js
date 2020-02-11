@@ -10,6 +10,7 @@ module.exports = {
     'prettier',
     'prettier/unicorn'
   ],
+  plugins: ['html'],
   env: {
     browser: false,
     commonjs: true,
@@ -64,18 +65,16 @@ module.exports = {
       }
     ]
   },
+  settings: {
+    'html/html-extensions': ['.html', '.htm', '.tpl']
+  },
   overrides: [
     {
       files: '**/*.{html,htm,tpl}',
-      plugins: ['html'],
       env: {
-        es2020: true,
         browser: true,
-        node: false,
-        commonjs: true
-      },
-      settings: {
-        'html/html-extensions': ['.html', '.htm', '.tpl']
+        commonjs: false,
+        node: false
       }
     }
   ],

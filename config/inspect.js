@@ -1,6 +1,5 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 const { configInspector } = require('@nice-move/eslint-inspector');
-// eslint-disable-next-line import/no-extraneous-dependencies
+
 const writeJsonFile = require('write-json-file');
 
 const baseInspector = configInspector('@nice-move/base');

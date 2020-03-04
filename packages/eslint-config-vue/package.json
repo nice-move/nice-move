@@ -1,7 +1,7 @@
 {
   "name": "@nice-move/eslint-config-vue",
-  "version": "0.2.9",
-  "description": "Eslint config for personal use",
+  "version": "0.2.10",
+  "description": "A Eslint config created by personal preferences",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -26,8 +26,8 @@
   "main": "index.js",
   "dependencies": {
     "@nice-move/eslint-config-base": "^0.2.10",
-    "babel-eslint": "^10.0.3",
-    "eslint-plugin-vue": "^6.1.2"
+    "babel-eslint": "^10.1.0",
+    "eslint-plugin-vue": "^6.2.1"
   },
   "peerDependencies": {
     "eslint": "^6.8.0"

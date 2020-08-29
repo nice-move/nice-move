@@ -29,6 +29,10 @@ exports.command = 'lint';
 
 exports.describe = 'Lint and format everything';
 
+const yarnConfig = require.resolve('../lib/yarn.js', {
+  paths: [__dirname],
+});
+
 exports.builder = (cli) => {
   cli.options({
     concurrent: {
@@ -69,7 +73,10 @@ exports.handler = ({ concurrent, shell }) => {
     '{*.{json,svg},*.{x,to,y,ya}ml,.{babel,npm,yarn}rc,.editorconfig}': [
       prettier && 'prettier --write',
     ],
-    'yarn.lock': ['yarn-deduplicate'],
+    'yarn.lock': [
+      `replace-in-file --configFile=${yarnConfig}`,
+      'yarn-deduplicate',
+    ],
   });
 
   if (!config) {

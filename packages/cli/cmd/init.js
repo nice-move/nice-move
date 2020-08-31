@@ -25,7 +25,7 @@ function BestShot() {
       git = [],
       // eslint-disable-next-line global-require, import/no-unresolved
     } = require('@best-shot/cli/config/ignore.json');
-    return ['#best-shot', ...git, '#best-shot'].join(EOL);
+    return ['# best-shot', ...git, '# best-shot'].join(EOL);
   } catch {
     return '';
   }
@@ -47,7 +47,7 @@ function convert(newText) {
     return (
       (bestShotText
         ? pure
-            .replace(/#best-shot[\S\s]*#best-shot\s*/, '')
+            .replace(/#\s?best-shot[\S\s]*#\s?best-shot\s*/, '')
             .replace(
               '# End of https://gitignore.io/api/node,windows',
               `# End of https://gitignore.io/api/node,windows${

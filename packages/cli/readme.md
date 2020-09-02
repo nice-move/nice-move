@@ -30,7 +30,7 @@ npx -c nice-move <command>
 
 Initialize your workspaces.
 
-This command will create or overwrite `LICENSE`, `.editorconfig`, `.gitignore`, `.gitattributes`.
+This command will create or overwrite `.npmrc`, `.yarnrc`, `package.json`, `LICENSE`, `.editorconfig`, `.gitignore`, `.gitattributes`.
 
 ### lint
 

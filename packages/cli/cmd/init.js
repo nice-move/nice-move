@@ -23,6 +23,7 @@ function BestShot() {
   try {
     const {
       git = [],
+      // @ts-ignore
       // eslint-disable-next-line global-require, import/no-unresolved
     } = require('@best-shot/cli/config/ignore.json');
     return ['# best-shot', ...git, '# best-shot'].join(EOL);
@@ -77,7 +78,8 @@ exports.handler = () => {
                 ),
               )
               .handle(
-                (text) => `registry = https://registry.npm.taobao.org\r${text}`,
+                (text) =>
+                  `${text}\rregistry = https://registry.npm.taobao.org\r${text}`,
               )
               .output();
           }
@@ -91,7 +93,8 @@ exports.handler = () => {
                 text.match(/registry\s"https:\/\/registry\.npm\.taobao\.org"/),
               )
               .handle(
-                (text) => `registry "https://registry.npm.taobao.org"\r${text}`,
+                (text) =>
+                  `${text}\rregistry "https://registry.npm.taobao.org"\r${text}`,
               )
               .output();
           }
@@ -111,7 +114,7 @@ exports.handler = () => {
         devDependencies: {
           eslint: '^6.8.0',
           prettier: '^2.1.1',
-          stylelint: '^13.6.1',
+          stylelint: '^13.7.0',
         },
         eslintConfig: {
           extends: '@nice-move/eslint-config-base',

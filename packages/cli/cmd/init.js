@@ -15,6 +15,8 @@ const {
   regexp,
 } = require('../lib');
 
+const pkgTpl = require('../template/package.tpl.json');
+
 exports.command = 'init';
 
 exports.describe = 'Initialize your workspaces';
@@ -106,25 +108,7 @@ exports.handler = () => {
   new Json()
     .source('./package.json')
     .config({ pretty: true })
-    .handle((pkg) =>
-      deepmerge(pkg, {
-        scripts: {
-          format: 'nice-move lint',
-        },
-        devDependencies: {
-          eslint: '^6.8.0',
-          prettier: '^2.1.1',
-          stylelint: '^13.7.0',
-        },
-        eslintConfig: {
-          extends: '@nice-move/eslint-config-base',
-        },
-        prettier: '@nice-move/prettier-config',
-        stylelint: {
-          extends: '@nice-move/stylelint-config',
-        },
-      }),
-    )
+    .handle((pkg) => deepmerge(pkg, pkgTpl))
     .output();
 
   new Text()

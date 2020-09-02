@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "format": "nice-move lint"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "prettier": "^2.1.1",
+    "husky": "^4.2.5",
+    "stylelint": "^13.7.0"
+  },
+  "eslintConfig": {
+    "extends": "@nice-move/eslint-config-base"
+  },
+  "prettier": "@nice-move/prettier-config",
+  "stylelint": {
+    "extends": "@nice-move/stylelint-config"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "nice-move lint"
+    }
+  }
+}

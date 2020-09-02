@@ -28,6 +28,7 @@ module.exports = {
     'main',
     'umd',
     'types',
+    'style',
 
     'files',
     'directories',
@@ -41,10 +42,12 @@ module.exports = {
     'flat',
     'workspaces',
     'dependencies',
-    'devDependencies',
-    'optionalDependencies',
-    'peerDependencies',
+    'dependenciesMeta',
     'bundledDependencies',
+    'optionalDependencies',
+    'devDependencies',
+    'peerDependencies',
+    'peerDependenciesMeta',
     'extensionDependencies',
     'resolutions',
 

@@ -1,10 +1,11 @@
 function BestShot() {
   try {
     const {
-      git = [], // @ts-ignore
+      git = [],
+      eslint = git, // @ts-ignore
       // eslint-disable-next-line global-require, import/no-unresolved
     } = require('@best-shot/cli/config/ignore.json');
-    return git;
+    return eslint;
   } catch {
     return [];
   }

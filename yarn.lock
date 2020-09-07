@@ -1511,10 +1511,10 @@ eslint-plugin-es@^3.0.0:
     eslint-utils "^2.0.0"
     regexpp "^3.0.0"
 
-eslint-plugin-html@^6.0.3:
-  version "6.0.3"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-html/download/eslint-plugin-html-6.0.3.tgz#8d9d2c187d1a48ed78d84f45e29820f102425e51"
-  integrity sha1-jZ0sGH0aSO142E9F4pgg8QJCXlE=
+eslint-plugin-html@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.npm.taobao.org/eslint-plugin-html/download/eslint-plugin-html-6.1.0.tgz#0e0d4845d4b3eb6e199652385e272f7b722673db"
+  integrity sha1-Dg1IRdSz624ZllI4Xicve3Imc9s=
   dependencies:
     htmlparser2 "^4.1.0"
 
@@ -4216,10 +4216,10 @@ sort-order@^1.0.1:
   resolved "https://registry.npm.taobao.org/sort-order/download/sort-order-1.0.1.tgz#d822b8cdb90ea6a9df968c4bd45987cf548199e6"
   integrity sha1-2CK4zbkOpqnfloxL1FmHz1SBmeY=
 
-sortobject@^4.12.0:
-  version "4.12.0"
-  resolved "https://registry.npm.taobao.org/sortobject/download/sortobject-4.12.0.tgz#d3677503f39c5e72b5f5dd01c1d3e69059a70443"
-  integrity sha1-02d1A/OcXnK19d0BwdPmkFmnBEM=
+sortobject@^4.13.0:
+  version "4.13.0"
+  resolved "https://registry.npm.taobao.org/sortobject/download/sortobject-4.13.0.tgz#464db290b1c52222736bc819773976a468eda64a"
+  integrity sha1-Rk2ykLHFIiJza8gZdzl2pGjtpko=
 
 source-map-support@^0.5.19:
   version "0.5.19"

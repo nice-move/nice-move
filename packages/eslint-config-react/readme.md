@@ -1,11 +1,12 @@
 # @nice-move/eslint-config-react [<img src="https://cdn.worldvectorlogo.com/logos/eslint-1.svg" alt="eslint" height="80" align="right">][eslint]
 
-A `eslint` config created by personal preferences.
+A [eslint] config created by personal preferences.
 
 [![npm][npm-badge]][npm-url]
 [![github][github-badge]][github-url]
 ![node][node-badge]
 
+[eslint]: https://eslint.org/
 [npm-url]: https://www.npmjs.com/package/@nice-move/eslint-config-react
 [npm-badge]: https://img.shields.io/npm/v/@nice-move/eslint-config-react.svg?style=flat-square&logo=npm
 [github-url]: https://github.com/airkro/nice-move/tree/master/packages/eslint-config-react

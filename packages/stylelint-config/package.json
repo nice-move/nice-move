@@ -32,8 +32,8 @@
     "postinstall": "node ./hook/post-install.js"
   },
   "dependencies": {
-    "fs-chain": "^1.4.0",
-    "is-module-installed": "^2.0.9",
+    "fs-chain": "^1.4.1",
+    "is-module-installed": "^2.0.10",
     "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
@@ -42,7 +42,7 @@
     "stylelint-scss": "^3.18.0"
   },
   "peerDependencies": {
-    "stylelint": "^13.6.1"
+    "stylelint": "^13.7.0"
   },
   "engines": {
     "node": "^10.18 || ^12.14 || ^14"

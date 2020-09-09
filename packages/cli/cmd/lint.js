@@ -4,7 +4,8 @@ const isEmpty = require('lodash/isEmpty');
 const lintStaged = require('lint-staged');
 const { yellow } = require('chalk');
 
-const isInstalled = require('is-module-installed');
+const { isInstalled } = require('../lib/utils');
+const { action } = require('../patch/stylelint');
 
 function parse(obj) {
   const config = pickBy(
@@ -56,6 +57,10 @@ exports.handler = ({ concurrent, shell }) => {
   const eslint = isInstalled('eslint/package.json');
   const stylelint = isInstalled('stylelint/package.json');
 
+  if (stylelint) {
+    action();
+  }
+
   const config = parse({
     '*.{vue,html,md}': [
       prettier && 'prettier --write',
@@ -66,11 +71,11 @@ exports.handler = ({ concurrent, shell }) => {
       prettier && 'prettier --write',
       eslint && 'eslint --fix --ext js,jsx,mjs,cjs',
     ],
-    '*.{css,scss,less}': [
+    '*.{css,scss,less,xml}': [
       prettier && 'prettier --write',
       stylelint && 'stylelint --fix --rd --risd',
     ],
-    '{*.{json,svg},*.{x,to,y,ya}ml,.{babel,npm,yarn}rc,.editorconfig}': [
+    '{*.{json,svg},*.{to,y,ya}ml,.{babel,npm,yarn}rc,.editorconfig}': [
       prettier && 'prettier --write',
     ],
     'yarn.lock': [

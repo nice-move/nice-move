@@ -28,17 +28,17 @@
   "devDependencies": {
     "ava": "^3.12.1",
     "eslint": "^6.8.0",
-    "husky": "^4.2.5",
+    "husky": "^4.3.0",
     "nodemon": "^2.0.4",
     "prettier": "^2.1.1",
-    "stylelint": "^13.6.1",
+    "stylelint": "^13.7.0",
     "x-readme": "^0.0.3"
   },
   "peerDependencies": {
     "@nice-move/eslint-inspector": "^0.0.0"
   },
   "engines": {
-    "node": "^10.18 || ^12.14 || ^14"
+    "node": "^12.18 || ^14"
   },
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"

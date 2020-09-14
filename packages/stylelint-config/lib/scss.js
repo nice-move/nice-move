@@ -5,7 +5,7 @@ const loose = {
 module.exports = {
   plugins: 'stylelint-scss',
   rules: {
-    'at-rule-blacklist': ['debug', 'extend'],
+    'at-rule-disallowed-list': ['debug', 'extend'],
     'scss/at-if-no-null': true,
     'scss/at-import-partial-extension': ['always', loose],
     'scss/at-mixin-argumentless-call-parentheses': ['never', loose],

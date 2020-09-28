@@ -79,7 +79,7 @@ exports.handler = ({ concurrent, shell }) => {
       prettier && 'prettier --write',
     ],
     'yarn.lock': [
-      `replace-in-file --configFile=${yarnConfig}`,
+      `replace-in-file --configFile="${yarnConfig}"`,
       'yarn-deduplicate',
     ],
   });

@@ -30,6 +30,7 @@ module.exports = {
     'promise/no-callback-in-promise': 'off',
     'unicorn/expiring-todo-comments': 'off',
     'unicorn/no-null': 'off',
+    'unicorn/prefer-set-has': 'off',
     'unicorn/prevent-abbreviations': 'off',
   },
 };

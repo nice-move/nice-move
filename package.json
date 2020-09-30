@@ -26,12 +26,12 @@
     "tools/*"
   ],
   "devDependencies": {
-    "ava": "^3.12.1",
+    "ava": "^3.13.0",
     "eslint": "^6.8.0",
     "husky": "^4.3.0",
     "nodemon": "^2.0.4",
-    "prettier": "^2.1.1",
-    "stylelint": "^13.7.0",
+    "prettier": "^2.1.2",
+    "stylelint": "^13.7.2",
     "x-readme": "^0.0.3"
   },
   "peerDependencies": {

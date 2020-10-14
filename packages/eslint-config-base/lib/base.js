@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     camelcase: 'off',
     'no-console': 'off',
+    'no-nested-ternary': 'off',
     'promise/always-return': 'off',
     'promise/avoid-new': 'off',
     'promise/catch-or-return': [

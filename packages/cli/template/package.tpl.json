@@ -3,9 +3,9 @@
     "format": "nice-move lint"
   },
   "devDependencies": {
-    "@nice-move/eslint-config-base": "^0.3.12",
+    "@nice-move/eslint-config-base": "^0.3.14",
     "@nice-move/prettier-config": "^0.3.2",
-    "@nice-move/stylelint-config": "^0.4.1",
+    "@nice-move/stylelint-config": "^0.4.2",
     "eslint": "^6.8.0",
     "prettier": "^2.1.2",
     "husky": "^4.3.0",

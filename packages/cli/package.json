@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Initializer, linter, and formatter for frontend development",
   "license": "MIT",
   "author": {
@@ -42,13 +42,13 @@
     "fs-chain": "^1.4.1",
     "git-username": "^1.0.0",
     "is-there": "^4.5.1",
-    "lint-staged": "^10.4.0",
+    "lint-staged": "^10.4.2",
     "lodash": "^4.17.20",
     "micromustache": "^8.0.3",
     "ora": "^5.1.0",
     "os-locale": "^5.0.0",
     "replace-in-file": "^6.1.0",
-    "yarn-deduplicate": "^3.0.0"
+    "yarn-deduplicate": "^3.1.0"
   },
   "engines": {
     "node": "^12.18 || ^14"

@@ -80,7 +80,7 @@ exports.handler = ({ concurrent, shell }) => {
     ],
     'yarn.lock': [
       `replace-in-file --configFile=${yarnConfig}`,
-      'yarn-deduplicate',
+      'yarn-deduplicate --includePrerelease',
     ],
   });
 

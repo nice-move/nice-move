@@ -11,6 +11,15 @@ function BestShot() {
   }
 }
 
+function Electron() {
+  try {
+    require.resolve('electron/package.json');
+    return ['plugin:import/electron'];
+  } catch {
+    return [];
+  }
+}
+
 module.exports = {
   noInlineConfig: false,
   reportUnusedDisableDirectives: true,
@@ -18,6 +27,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:promise/recommended',
     'plugin:import/recommended',
+    ...Electron(),
     'airbnb-base',
     'plugin:unicorn/recommended',
     'prettier',

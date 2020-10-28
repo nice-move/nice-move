@@ -70,37 +70,29 @@ exports.handler = () => {
   osLocale()
     .then((locale) => {
       if (locale === 'zh-CN') {
-        isThere.file('./.npmrc', (exists) => {
-          if (exists) {
-            new Text()
-              .source('./.npmrc')
-              .cutout((text) =>
-                text.match(
-                  /registry\s?=\s?https:\/\/registry\.npm\.taobao\.org/,
-                ),
-              )
-              .handle(
-                (text) =>
-                  `${text}\rregistry = https://registry.npm.taobao.org\r${text}`,
-              )
-              .output();
-          }
-        });
+        // @ts-ignore
 
-        isThere.file('./.yarnrc', (exists) => {
-          if (exists) {
-            new Text()
-              .source('./.yarnrc')
-              .cutout((text) =>
-                text.match(/registry\s"https:\/\/registry\.npm\.taobao\.org"/),
-              )
-              .handle(
-                (text) =>
-                  `${text}\rregistry "https://registry.npm.taobao.org"\r${text}`,
-              )
-              .output();
-          }
-        });
+        new Text()
+          .source('./.npmrc')
+          .cutout((text) =>
+            text.match(/registry\s?=\s?https:\/\/registry\.npm\.taobao\.org/),
+          )
+          .handle(
+            (text) => `registry = https://registry.npm.taobao.org\r${text}`,
+          )
+          .output();
+
+        if (!isThere.file('./.npmrc')) {
+          new Text()
+            .source('./.yarnrc')
+            .cutout((text) =>
+              text.match(/registry\s"https:\/\/registry\.npm\.taobao\.org"/),
+            )
+            .handle(
+              (text) => `registry "https://registry.npm.taobao.org"\r${text}`,
+            )
+            .output();
+        }
       }
     })
     .catch(() => {});
@@ -113,13 +105,11 @@ exports.handler = () => {
 
   new Text()
     .source('./.editorconfig')
-    .cutout((context) => context.trim() !== '')
     .handle(() => readTemplate('.editorconfig'))
     .output();
 
   new Text()
     .source('./.gitattributes')
-    .cutout((context) => context.trim() !== '')
     .handle(() => readTemplate('.gitattributes'))
     .output();
 

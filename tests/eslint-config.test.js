@@ -1,3 +1,4 @@
+// @ts-nocheck
 const { configGetter } = require('@nice-move/eslint-inspector');
 const test = require('ava');
 
@@ -27,7 +28,7 @@ test('Src dir', (t) => {
   const vueConfig = vueEngine('src/sample.js');
   const reactConfig = reactEngine('src/sample.js');
 
-  t.deepEqual(baseConfig, srcConfig);
+  t.notDeepEqual(baseConfig, srcConfig);
   t.deepEqual(vueConfig, reactConfig);
   t.notDeepEqual(baseConfig, vueConfig);
   t.notDeepEqual(baseConfig, reactConfig);

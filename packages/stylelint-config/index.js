@@ -24,7 +24,7 @@ module.exports = {
     ],
     'color-hex-length': null,
     'declaration-block-no-redundant-longhand-properties': true,
-    'font-family-name-quotes': 'always-where-required',
+    'font-family-name-quotes': 'always-where-recommended',
     'function-url-quotes': 'always',
     'max-nesting-depth': 5,
     'number-max-precision': 4,

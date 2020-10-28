@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-config",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A `prettier` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -32,7 +32,7 @@
     "prettier-plugin-toml": "^0.3.1"
   },
   "peerDependencies": {
-    "prettier": "^2.1.1"
+    "prettier": "^2.1.2"
   },
   "engines": {
     "node": "^10.18 || ^12.14 || ^14"

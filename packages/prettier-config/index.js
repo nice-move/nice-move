@@ -4,7 +4,6 @@ const defaultConfig = {
   singleQuote: true,
   trailingComma: 'all',
   xmlSelfClosingSpace: true,
-  xmlWhitespaceSensitivity: 'ignore',
 };
 
 module.exports = {

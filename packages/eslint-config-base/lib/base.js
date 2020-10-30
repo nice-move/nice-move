@@ -25,6 +25,7 @@ module.exports = {
     camelcase: 'off',
     'no-console': 'off',
     'no-nested-ternary': 'off',
+    'no-template-curly-in-string': 'off',
     'promise/always-return': 'off',
     'promise/avoid-new': 'off',
     'promise/catch-or-return': ['warn', { allowFinally: true }],

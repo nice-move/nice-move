@@ -1,5 +1,5 @@
-const { format } = require('prettier');
-const test = require('ava');
+import prettier from 'prettier';
+import test from 'ava';
 
 const original = `{
   "name": "prettier-plugin-package-json",
@@ -15,7 +15,7 @@ const expected = `{
 }`;
 
 test('Usage', (t) => {
-  const actual = format(original, {
+  const actual = prettier.format(original, {
     parser: 'package-json',
   });
 

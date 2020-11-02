@@ -37,7 +37,7 @@
     "@nice-move/eslint-inspector": "^0.0.0"
   },
   "engines": {
-    "node": "^12.18 || ^14"
+    "node": "^14.15"
   },
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"

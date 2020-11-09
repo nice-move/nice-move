@@ -1,5 +1,4 @@
 # Created by nice-move
-
 root = true
 
 [*]

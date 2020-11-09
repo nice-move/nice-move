@@ -6,7 +6,7 @@ process.on('SIGINT', () => {});
 
 new Cheetor()
   .website('https://www.npmjs.com/org/nice-move')
-  .command('./cmd/init')
+  .command('./cmd/init/index')
   .command('./cmd/lint')
   .effect(({ scriptName }) => {
     process.title = scriptName;

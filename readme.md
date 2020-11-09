@@ -2,9 +2,8 @@
 
 Eslint/Stylelint/Prettier config for personal use.
 
-[![npm version][npm-badge]][npm-link]
-[![license][github-badge]][github-link]
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAirkro%2Fnice-move.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FAirkro%2Fnice-move?ref=badge_shield)
+[![npm org][npm-badge]][npm-link]
+[![github repo][github-badge]][github-link]
 
 ## Packages
 
@@ -16,11 +15,13 @@ Eslint/Stylelint/Prettier config for personal use.
 - [@nice-move/prettier-config](./packages/prettier-config/)
 - [@nice-move/prettier-plugin-package-json](./packages/prettier-plugin-package-json/)
 
-[github-badge]: https://img.shields.io/github/license/Airkro/nice-move.svg?logo=github&style=flat-square&colorB=blue
-[github-link]: https://github.com/Airkro/nice-move
-[npm-badge]: https://img.shields.io/badge/npm-nice--move-orange.svg?style=flat-square&logo=npm
-[npm-link]: https://www.npmjs.com/org/nice-move
-
-
 ## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAirkro%2Fnice-move.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FAirkro%2Fnice-move?ref=badge_large)
+
+[![fossa status][fossa-badge]][fossa-link]
+
+[npm-badge]: https://img.shields.io/badge/npm-nice--move-blue.svg?logo=npm&style=flat-square
+[npm-link]: https://www.npmjs.com/org/nice-move
+[github-badge]: https://img.shields.io/github/license/airkro/nice-move.svg?logo=github&style=flat-square
+[github-link]: https://github.com/airkro/nice-move
+[fossa-badge]: https://app.fossa.com/api/projects/git%2Bgithub.com%2Fairkro%2Fnice-move.svg?type=large
+[fossa-link]: https://app.fossa.com/projects/git%2Bgithub.com%2Fairkro%2Fnice-move?ref=badge_large

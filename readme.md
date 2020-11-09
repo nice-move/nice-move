@@ -4,6 +4,7 @@ Eslint/Stylelint/Prettier config for personal use.
 
 [![npm version][npm-badge]][npm-link]
 [![license][github-badge]][github-link]
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAirkro%2Fnice-move.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FAirkro%2Fnice-move?ref=badge_shield)
 
 ## Packages
 
@@ -19,3 +20,7 @@ Eslint/Stylelint/Prettier config for personal use.
 [github-link]: https://github.com/Airkro/nice-move
 [npm-badge]: https://img.shields.io/badge/npm-nice--move-orange.svg?style=flat-square&logo=npm
 [npm-link]: https://www.npmjs.com/org/nice-move
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAirkro%2Fnice-move.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FAirkro%2Fnice-move?ref=badge_large)

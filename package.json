@@ -26,6 +26,8 @@
     "tools/*"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "ava": "^3.13.0",
     "eslint": "^6.8.0",
     "husky": "^4.3.0",
@@ -39,11 +41,17 @@
   "engines": {
     "node": "^14.15"
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"
   },
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "nice-move lint && ava --verbose"
     }
   },

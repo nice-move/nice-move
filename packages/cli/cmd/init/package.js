@@ -86,13 +86,13 @@ module.exports = function autoPackage() {
         } = {},
       }) => {
         if (
-          husky &&
-          ava &&
-          eslint &&
-          react &&
-          vue &&
-          stylelint &&
-          prettier &&
+          husky ||
+          ava ||
+          eslint ||
+          react ||
+          vue ||
+          stylelint ||
+          prettier ||
           commitlint
         ) {
           new Json()

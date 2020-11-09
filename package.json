@@ -39,7 +39,7 @@
     "@nice-move/eslint-inspector": "^0.0.0"
   },
   "engines": {
-    "node": "^14.15"
+    "node": "^12.14 || ^14.15"
   },
   "commitlint": {
     "extends": [

@@ -40,12 +40,5 @@ module.exports = {
         parser: 'ini',
       },
     },
-    {
-      files: '.yarnrc',
-      options: {
-        parser: 'dot-properties',
-        keySeparator: ' ',
-      },
-    },
   ],
 };

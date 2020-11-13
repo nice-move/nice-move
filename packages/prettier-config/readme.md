@@ -17,10 +17,10 @@ A [prettier] config created by personal preferences.
 
 - .gql .md
 - .css .less .scss
+- .yml .yaml .toml .ini
 - .cjs .mjs .js .jsx .json
 - .htm .html .xml .svg .vue
-- .yml .yaml .toml .ini .properties
-- .npmrc .yarnrc .editorconfig .babelrc
+- .npmrc .editorconfig .babelrc
 
 ## Installation
 

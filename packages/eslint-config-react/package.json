@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.3.11",
+  "version": "0.3.12",
   "description": "A `eslint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -29,9 +29,9 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@nice-move/eslint-config-base": "^0.3.16",
+    "@nice-move/eslint-config-base": "^0.3.17",
     "babel-eslint": "^10.1.0",
-    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.5",

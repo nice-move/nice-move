@@ -16,6 +16,8 @@ module.exports = {
     'react/jsx-boolean-value': ['error', 'always'],
     'react/jsx-no-useless-fragment': 'warn',
     'react/jsx-props-no-spreading': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react/state-in-constructor': 'off',
     'react/static-property-placement': ['error', 'static public field'],
   },

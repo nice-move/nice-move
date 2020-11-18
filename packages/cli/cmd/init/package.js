@@ -17,7 +17,7 @@ module.exports = function autoPackage() {
         extends: `@nice-move/eslint-config-${type}`,
       },
       devDependencies: {
-        [`@nice-move/eslint-config-${type}`]: '^0.3.11',
+        [`@nice-move/eslint-config-${type}`]: '^0.3.12',
         eslint: '^6.8.0',
       },
     };
@@ -101,6 +101,18 @@ module.exports = function autoPackage() {
             .handle((old) => {
               return deepmerge.all(
                 [
+                  {
+                    engines: {
+                      node: '^12.14 || ^14',
+                    },
+                  },
+                  pkg.private
+                    ? undefined
+                    : {
+                        publishConfig: {
+                          registry: 'https://registry.npmjs.org/',
+                        },
+                      },
                   old,
                   husky || commitlint
                     ? {
@@ -172,17 +184,12 @@ module.exports = function autoPackage() {
                   prettier
                     ? {
                         devDependencies: {
-                          '@nice-move/prettier-config': '^0.3.2',
+                          '@nice-move/prettier-config': '^0.3.5',
                           prettier: '^2.1.2',
                         },
                         prettier: '@nice-move/prettier-config',
                       }
                     : undefined,
-                  {
-                    engines: {
-                      node: '^12.14 || ^14',
-                    },
-                  },
                   react
                     ? {
                         dependencies: { react: '~16.14.0' },

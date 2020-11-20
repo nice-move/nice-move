@@ -1102,6 +1102,13 @@ commander@^6.1.0, commander@^6.2.0:
   resolved "https://registry.npm.taobao.org/commander/download/commander-6.2.0.tgz#b990bfb8ac030aedc6d11bc04d1488ffef56db75"
   integrity "sha1-uZC/uKwDCu3G0RvATRSI/+9W23U= sha512-zP4jEKbe8SHzKJYQmq8Y9gYjtO/POJLgIdKgV7B9qNmABVFVc+ctqSX6iXh4mCpJfRBOabiZ2YKPg8ciDw6C+Q=="
 
+commitlint@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.npm.taobao.org/commitlint/download/commitlint-11.0.0.tgz#a60f759b938c97c5d601c881cfe71b1d4051d219"
+  integrity sha1-pg91m5OMl8XWAciBz+cbHUBR0hk=
+  dependencies:
+    "@commitlint/cli" "^11.0.0"
+
 common-path-prefix@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/common-path-prefix/download/common-path-prefix-3.0.0.tgz#7d007a7e07c58c4b4d5f433131a19141b29f11e0"
@@ -1631,7 +1638,7 @@ eslint-config-airbnb-base@^14.2.1:
 eslint-config-airbnb@^18.2.1:
   version "18.2.1"
   resolved "https://registry.npm.taobao.org/eslint-config-airbnb/download/eslint-config-airbnb-18.2.1.tgz#b7fe2b42f9f8173e825b73c8014b592e449c98d9"
-  integrity sha1-t/4rQvn4Fz6CW3PIAUtZLkScmNk=
+  integrity "sha1-t/4rQvn4Fz6CW3PIAUtZLkScmNk= sha512-glZNDEZ36VdlZWoxn/bUR1r/sdFKPd1mHPbqUtkctgNG4yT2DLLtJ3D+yCV+jzZCc2V1nBVkmdknOJBZ5Hc0fg=="
   dependencies:
     eslint-config-airbnb-base "^14.2.1"
     object.assign "^4.1.2"
@@ -1779,7 +1786,7 @@ eslint-plugin-react@^7.21.5:
 eslint-plugin-standard@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npm.taobao.org/eslint-plugin-standard/download/eslint-plugin-standard-4.1.0.tgz#0c3bf3a67e853f8bbbc580fb4945fbf16f41b7c5"
-  integrity sha1-DDvzpn6FP4u7xYD7SUX78W9Bt8U=
+  integrity "sha1-DDvzpn6FP4u7xYD7SUX78W9Bt8U= sha512-ZL7+QRixjTR6/528YNGyDotyffm5OQst/sGxKDwGb9Uqs4In5Egi4+jbobhqJoyoCM6/7v/1A5fhQ7ScMtDjaQ=="
 
 eslint-plugin-unicorn@^19.0.1:
   version "19.0.1"

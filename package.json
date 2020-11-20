@@ -26,9 +26,8 @@
     "tools/*"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
     "ava": "^3.13.0",
+    "commitlint": "^11.0.0",
     "eslint": "^6.8.0",
     "husky": "^4.3.0",
     "nodemon": "^2.0.6",
@@ -42,7 +41,7 @@
     "node": "^12.14 || ^14"
   },
   "commitlint": {
-    "extends": "@commitlint/config-conventional"
+    "extends": "@nice-move/commitlint-config"
   },
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"

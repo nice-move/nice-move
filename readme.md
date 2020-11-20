@@ -8,6 +8,7 @@ Eslint/Stylelint/Prettier config for personal use.
 ## Packages
 
 - [@nice-move/cli](./packages/cli/)
+- [@nice-move/commitlint-config](./packages/commitlint-config/)
 - [@nice-move/eslint-config-base](./packages/eslint-config-base/)
 - [@nice-move/eslint-config-react](./packages/eslint-config-react/)
 - [@nice-move/eslint-config-vue](./packages/eslint-config-vue/)

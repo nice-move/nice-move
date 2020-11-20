@@ -23,6 +23,8 @@ module.exports = function autoPackage() {
     };
   }
 
+  const { devDependencies = {}, dependencies = {} } = pkg;
+
   prompts({
     type: 'multiselect',
     name: 'actions',
@@ -33,42 +35,44 @@ module.exports = function autoPackage() {
       {
         title: 'husky',
         value: 'husky',
-        selected: 'husky' in (pkg.devDependencies || {}),
+        selected: 'husky' in devDependencies,
       },
       {
         title: 'ava',
         value: 'ava',
-        selected: 'ava' in (pkg.devDependencies || {}),
+        selected: 'ava' in devDependencies,
       },
       {
         title: 'commitlint',
         value: 'commitlint',
-        selected: '@commitlint/cli' in (pkg.devDependencies || {}),
+        selected:
+          'commitlint' in devDependencies ||
+          '@commitlint/cli' in devDependencies,
       },
       {
         title: 'eslint',
         value: 'eslint',
-        selected: 'eslint' in (pkg.devDependencies || {}),
+        selected: 'eslint' in devDependencies,
       },
       {
         title: 'stylelint',
         value: 'stylelint',
-        selected: 'stylelint' in (pkg.devDependencies || {}),
+        selected: 'stylelint' in devDependencies,
       },
       {
         title: 'prettier',
         value: 'prettier',
-        selected: 'prettier' in (pkg.devDependencies || {}),
+        selected: 'prettier' in devDependencies,
       },
       {
         title: 'react',
         value: 'react',
-        selected: 'react' in (pkg.dependencies || {}),
+        selected: 'react' in dependencies,
       },
       {
         title: 'vue',
         value: 'vue',
-        selected: 'vue' in (pkg.dependencies || {}),
+        selected: 'vue' in dependencies,
       },
     ],
   })
@@ -124,7 +128,7 @@ module.exports = function autoPackage() {
                   commitlint
                     ? {
                         commitlint: {
-                          extends: '@commitlint/config-conventional',
+                          extends: '@nice-move/commitlint-config',
                         },
                         husky: {
                           hooks: {
@@ -132,8 +136,8 @@ module.exports = function autoPackage() {
                           },
                         },
                         devDependencies: {
-                          '@commitlint/cli': '^11.0.0',
-                          '@commitlint/config-conventional': '^11.0.0',
+                          commitlint: '^11.0.0',
+                          '@nice-move/commitlint-config': '^0.0.0',
                         },
                       }
                     : undefined,
@@ -174,7 +178,7 @@ module.exports = function autoPackage() {
                     ? {
                         devDependencies: {
                           '@nice-move/stylelint-config': '^0.4.2',
-                          stylelint: '^13.7.2',
+                          stylelint: '^13.8.0',
                         },
                         stylelint: {
                           extends: '@nice-move/stylelint-config',

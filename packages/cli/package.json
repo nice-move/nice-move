@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "Initializer, linter, and formatter for frontend development",
   "license": "MIT",
   "author": {
@@ -8,7 +8,9 @@
     "email": "airkro@qq.com"
   },
   "keywords": [
+    "commitlint",
     "config",
+    "conventional",
     "cwd",
     "eslint",
     "format",

@@ -31,8 +31,8 @@
     "eslint": "^6.8.0",
     "husky": "^4.3.0",
     "nodemon": "^2.0.6",
-    "prettier": "^2.1.2",
-    "stylelint": "^13.7.2"
+    "prettier": "^2.2.0",
+    "stylelint": "^13.8.0"
   },
   "peerDependencies": {
     "@nice-move/eslint-inspector": "^0.0.0"

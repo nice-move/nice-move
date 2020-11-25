@@ -114,6 +114,9 @@ module.exports = function autoPackage() {
                     ? undefined
                     : {
                         publishConfig: {
+                          access: pkg.name.startsWith('@')
+                            ? 'public'
+                            : undefined,
                           registry: 'https://registry.npmjs.org/',
                         },
                       },
@@ -189,7 +192,7 @@ module.exports = function autoPackage() {
                     ? {
                         devDependencies: {
                           '@nice-move/prettier-config': '^0.3.5',
-                          prettier: '^2.1.2',
+                          prettier: '^2.2.0',
                         },
                         prettier: '@nice-move/prettier-config',
                       }
@@ -197,7 +200,7 @@ module.exports = function autoPackage() {
                   react
                     ? {
                         dependencies: { react: '~16.14.0' },
-                        devDependencies: { '@types/react': '^16.9.55' },
+                        devDependencies: { '@types/react': '^16.14.2' },
                       }
                     : undefined,
                   vue ? { dependencies: { vue: '~2.6.12' } } : undefined,

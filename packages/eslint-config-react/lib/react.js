@@ -20,5 +20,19 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/state-in-constructor': 'off',
     'react/static-property-placement': ['error', 'static public field'],
+    'react/prop-types': [
+      'warn',
+      {
+        ignore: [
+          'children',
+          'className',
+          'location',
+          'match',
+          'history',
+          'style',
+          'meta',
+        ],
+      },
+    ],
   },
 };

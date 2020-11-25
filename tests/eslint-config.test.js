@@ -28,7 +28,7 @@ test('Src dir', (t) => {
   const vueConfig = vueEngine('src/sample.js');
   const reactConfig = reactEngine('src/sample.js');
 
-  t.notDeepEqual(baseConfig, srcConfig);
+  t.deepEqual(baseConfig, srcConfig);
   t.deepEqual(vueConfig, reactConfig);
   t.notDeepEqual(baseConfig, vueConfig);
   t.notDeepEqual(baseConfig, reactConfig);

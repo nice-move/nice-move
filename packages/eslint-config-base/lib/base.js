@@ -1,5 +1,27 @@
 const { target, env } = require('./target');
 
+function BestShot() {
+  try {
+    require.resolve('@best-shot/preset-env/package.json');
+    // @ts-ignore
+    // eslint-disable-next-line global-require, import/no-unresolved
+    return require('@best-shot/preset-env/eslint.js').globals;
+    // eslint-disable-next-line no-empty
+  } catch {}
+}
+
+// eslint-disable-next-line consistent-return
+function webpack() {
+  try {
+    require.resolve('webpack/package.json');
+    return {
+      __webpack_public_path__: 'readonly',
+      __resourceQuery: 'readonly',
+    };
+    // eslint-disable-next-line no-empty
+  } catch {}
+}
+
 module.exports = {
   parserOptions: {
     ecmaVersion: target,
@@ -39,7 +61,8 @@ module.exports = {
     {
       files: 'src/**',
       globals: {
-        __webpack_public_path__: 'readonly',
+        ...webpack(),
+        ...BestShot(),
       },
     },
   ],

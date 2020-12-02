@@ -75,7 +75,7 @@ exports.handler = ({ concurrent, shell }) => {
       prettier && 'prettier --write',
       stylelint && 'stylelint --fix --rd --risd',
     ],
-    '{*.{json,svg},*.{to,y,ya}ml,.{babel,npm,yarn}rc,.editorconfig}': [
+    '{*.{json,svg},*.{to,y,ya}ml,.{babel,npm}rc,.editorconfig}': [
       prettier && 'prettier --write',
     ],
     'yarn.lock': [

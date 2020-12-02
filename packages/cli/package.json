@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "Initializer, linter, and formatter for frontend development",
   "license": "MIT",
   "author": {

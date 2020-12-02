@@ -17,7 +17,7 @@ module.exports = function autoPackage() {
         extends: `@nice-move/eslint-config-${type}`,
       },
       devDependencies: {
-        [`@nice-move/eslint-config-${type}`]: '^0.3.12',
+        [`@nice-move/eslint-config-${type}`]: '^0.4.0',
         eslint: '^6.8.0',
       },
     };
@@ -89,126 +89,113 @@ module.exports = function autoPackage() {
           commitlint,
         } = {},
       }) => {
-        if (
-          husky ||
-          ava ||
-          eslint ||
-          react ||
-          vue ||
-          stylelint ||
-          prettier ||
-          commitlint
-        ) {
-          new Json()
-            .source('./package.json')
-            .config({ pretty: true })
-            .handle((old) => {
-              return deepmerge.all(
-                [
-                  {
-                    engines: {
-                      node: '^12.14 || ^14',
-                    },
+        new Json()
+          .source('./package.json')
+          .config({ pretty: true })
+          .handle((old) => {
+            return deepmerge.all(
+              [
+                {
+                  engines: {
+                    node: '^12.14 || ^14',
                   },
-                  pkg.private
-                    ? undefined
-                    : {
-                        publishConfig: {
-                          access: pkg.name.startsWith('@')
-                            ? 'public'
-                            : undefined,
-                          registry: 'https://registry.npmjs.org/',
+                },
+                pkg.private
+                  ? undefined
+                  : {
+                      publishConfig: {
+                        access: pkg.name.startsWith('@') ? 'public' : undefined,
+                        registry: 'https://registry.npmjs.org/',
+                      },
+                    },
+                old,
+                husky || commitlint
+                  ? {
+                      devDependencies: {
+                        husky: '^4.3.0',
+                      },
+                    }
+                  : undefined,
+                commitlint
+                  ? {
+                      commitlint: {
+                        extends: '@nice-move/commitlint-config',
+                      },
+                      husky: {
+                        hooks: {
+                          'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
                         },
                       },
-                  old,
-                  husky || commitlint
-                    ? {
-                        devDependencies: {
-                          husky: '^4.3.0',
-                        },
-                      }
-                    : undefined,
-                  commitlint
-                    ? {
-                        commitlint: {
-                          extends: '@nice-move/commitlint-config',
-                        },
-                        husky: {
-                          hooks: {
-                            'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
-                          },
-                        },
-                        devDependencies: {
-                          commitlint: '^11.0.0',
-                          '@nice-move/commitlint-config': '^0.0.0',
-                        },
-                      }
-                    : undefined,
-                  eslint || stylelint || prettier
-                    ? {
-                        scripts: {
-                          format: 'nice-move lint',
-                        },
-                        husky: husky
-                          ? {
-                              hooks: {
-                                'pre-commit': 'nice-move lint',
-                              },
-                            }
-                          : undefined,
-                      }
-                    : undefined,
-                  ava
-                    ? {
-                        devDependencies: { ava: '^3.13.0' },
-                        scripts: {
-                          test: 'ava --verbose',
-                        },
-                        husky: husky
-                          ? {
-                              hooks: {
-                                'pre-commit':
-                                  eslint || stylelint || prettier
-                                    ? 'nice-move lint && ava --verbose'
-                                    : 'ava --verbose',
-                              },
-                            }
-                          : undefined,
-                      }
-                    : undefined,
-                  eslint ? checkEslint({ react, vue }) : undefined,
-                  stylelint
-                    ? {
-                        devDependencies: {
-                          '@nice-move/stylelint-config': '^0.4.2',
-                          stylelint: '^13.8.0',
-                        },
-                        stylelint: {
-                          extends: '@nice-move/stylelint-config',
-                        },
-                      }
-                    : undefined,
-                  prettier
-                    ? {
-                        devDependencies: {
-                          '@nice-move/prettier-config': '^0.3.5',
-                          prettier: '^2.2.0',
-                        },
-                        prettier: '@nice-move/prettier-config',
-                      }
-                    : undefined,
-                  react
-                    ? {
-                        dependencies: { react: '~16.14.0' },
-                        devDependencies: { '@types/react': '^16.14.2' },
-                      }
-                    : undefined,
-                  vue ? { dependencies: { vue: '~2.6.12' } } : undefined,
-                ].filter(Boolean),
-              );
-            })
-            .output();
-        }
+                      devDependencies: {
+                        commitlint: '^11.0.0',
+                        '@nice-move/commitlint-config': '^0.0.0',
+                      },
+                    }
+                  : undefined,
+                eslint || stylelint || prettier
+                  ? {
+                      scripts: {
+                        format: 'nice-move lint',
+                      },
+                      husky: husky
+                        ? {
+                            hooks: {
+                              'pre-commit': 'nice-move lint',
+                            },
+                          }
+                        : undefined,
+                    }
+                  : undefined,
+                ava
+                  ? {
+                      devDependencies: { ava: '^3.13.0' },
+                      scripts: {
+                        test: 'ava --verbose',
+                      },
+                      husky: husky
+                        ? {
+                            hooks: {
+                              'pre-commit':
+                                eslint || stylelint || prettier
+                                  ? 'nice-move lint && ava --verbose'
+                                  : 'ava --verbose',
+                            },
+                          }
+                        : undefined,
+                    }
+                  : undefined,
+                eslint ? checkEslint({ react, vue }) : undefined,
+                stylelint
+                  ? {
+                      devDependencies: {
+                        '@nice-move/stylelint-config': '^0.4.2',
+                        stylelint: '^13.8.0',
+                      },
+                      stylelint: {
+                        extends: '@nice-move/stylelint-config',
+                      },
+                    }
+                  : undefined,
+                prettier
+                  ? {
+                      devDependencies: {
+                        '@nice-move/prettier-config': '^0.3.5',
+                        prettier: '^2.2.1',
+                      },
+                      prettier: '@nice-move/prettier-config',
+                    }
+                  : undefined,
+                react
+                  ? {
+                      dependencies: { react: '~16.14.0' },
+                      devDependencies: { '@types/react': '^16.14.2' },
+                    }
+                  : undefined,
+                vue ? { dependencies: { vue: '~2.6.12' } } : undefined,
+              ].filter(Boolean),
+            );
+          })
+          .output();
       },
     )
     .catch(console.error);

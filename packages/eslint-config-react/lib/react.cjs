@@ -1,8 +1,4 @@
-const { env, parser } = require('./babel.cjs');
-
 module.exports = {
-  env,
-  parser,
   parserOptions: {
     ecmaFeatures: {
       jsx: true,

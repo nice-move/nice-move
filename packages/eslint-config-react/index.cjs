@@ -1,7 +1,5 @@
-const all = require('@nice-move/eslint-config-base');
-
 module.exports = {
-  ...all,
+  extends: ['@nice-move/eslint-config-base'],
   overrides: [
     {
       files: '*.jsx',
@@ -14,10 +12,6 @@ module.exports = {
         '@nice-move/eslint-config-base/lib/base.cjs',
         'prettier',
       ],
-    },
-    {
-      files: '{src,packages/*}/**/*.{,m,c}js',
-      extends: require.resolve('./lib/babel.cjs'),
     },
   ],
 };

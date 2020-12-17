@@ -55,9 +55,9 @@
   },
   "nodemonConfig": {
     "watch": [
-      "./packages/*",
-      "./config/*",
-      "./tools/*"
+      "packages/**/*",
+      "config/**/*",
+      "tools/**/*"
     ],
     "exec": "eslint-inspect",
     "delay": 5

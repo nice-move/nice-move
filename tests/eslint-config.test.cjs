@@ -21,18 +21,6 @@ test('Html support', async (t) => {
   t.deepEqual(baseConfig, htmlConfig);
 });
 
-test('Src dir', async (t) => {
-  const baseConfig = await baseEngine('sample.js');
-  const srcConfig = await baseEngine('src/sample.js');
-  const vueConfig = await vueEngine('src/sample.js');
-  const reactConfig = await reactEngine('src/sample.js');
-
-  t.deepEqual(baseConfig, srcConfig);
-  t.deepEqual(vueConfig, reactConfig);
-  t.notDeepEqual(baseConfig, vueConfig);
-  t.notDeepEqual(baseConfig, reactConfig);
-});
-
 test('Base type', async (t) => {
   const baseConfig = await baseEngine('src/sample.js');
   const vueConfig = await vueEngine('src/sample.vue');

@@ -19,11 +19,7 @@ module.exports = {
   overrides: [
     {
       files: '*.vue',
-      extends: [
-        'plugin:vue/recommended',
-        'prettier/vue',
-        require.resolve('./lib/vue.cjs'),
-      ],
+      extends: ['plugin:vue/recommended', 'prettier/vue'],
       rules: {
         'vue/attributes-order': 'off',
         'vue/component-name-in-template-casing': ['warn', 'PascalCase'],
@@ -52,10 +48,6 @@ module.exports = {
           ? { 'vue/no-unsupported-features': ['error', { version }] }
           : undefined),
       },
-    },
-    {
-      files: '{src,packages/*}/**/*.{,m,c}js',
-      extends: require.resolve('./lib/babel.cjs'),
     },
   ],
 };

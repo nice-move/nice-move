@@ -18,7 +18,7 @@ test('Html support', async (t) => {
   const baseConfig = await baseEngine('sample.js');
   const htmlConfig = await baseEngine('sample.html');
 
-  t.notDeepEqual(baseConfig, htmlConfig);
+  t.deepEqual(baseConfig, htmlConfig);
 });
 
 test('Src dir', async (t) => {

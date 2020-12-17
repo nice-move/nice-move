@@ -17,11 +17,11 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'airbnb-base',
-    require.resolve('./lib/import'),
-    require.resolve('./lib/unicorn'),
-    require.resolve('./lib/base'),
-    require.resolve('./lib/html'),
-    require.resolve('./lib/markdown'),
+    require.resolve('./lib/import.cjs'),
+    require.resolve('./lib/unicorn.cjs'),
+    require.resolve('./lib/base.cjs'),
+    require.resolve('./lib/html.cjs'),
+    require.resolve('./lib/markdown.cjs'),
     'prettier',
   ],
   ignorePatterns: [

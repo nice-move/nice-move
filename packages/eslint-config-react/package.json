@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/airkro/nice-move/issues"
   },
-  "main": "index.js",
+  "main": "index.cjs",
   "dependencies": {
     "@nice-move/eslint-config-base": "^0.5.0",
     "babel-eslint": "^10.1.0",
@@ -41,6 +41,6 @@
     "eslint": "^7.15.0"
   },
   "engines": {
-    "node": "^10.18 || ^12.14 || ^14"
+    "node": "^12.15 || ^14"
   }
 }

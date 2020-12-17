@@ -22,7 +22,7 @@ module.exports = {
       extends: [
         'plugin:vue/recommended',
         'prettier/vue',
-        require.resolve('./lib/vue.js'),
+        require.resolve('./lib/vue.cjs'),
       ],
       rules: {
         'vue/attributes-order': 'off',
@@ -55,7 +55,7 @@ module.exports = {
     },
     {
       files: '{src,packages/*}/**/*.{,m,c}js',
-      extends: [require.resolve('./lib/babel.js')],
+      extends: require.resolve('./lib/babel.cjs'),
     },
   ],
 };

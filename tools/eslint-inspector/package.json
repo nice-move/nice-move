@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "license": "UNLICENSED",
   "bin": {
-    "eslint-inspect": "index.js"
+    "eslint-inspect": "index.cjs"
   },
-  "main": "index.js",
+  "main": "index.cjs",
   "dependencies": {
     "sortobject": "^4.14.0",
     "write-json-file": "^4.3.0"

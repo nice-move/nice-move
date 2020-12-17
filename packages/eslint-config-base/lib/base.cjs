@@ -1,4 +1,4 @@
-const { target, env } = require('./target');
+const { target, env } = require('./target.cjs');
 
 function BestShot() {
   try {
@@ -33,10 +33,11 @@ module.exports = {
     },
   },
   env: {
-    browser: false,
-    commonjs: true,
+    browser: true,
     [env]: true,
-    node: true,
+    // not node.js
+    commonjs: false,
+    node: false,
   },
   globals: {
     process: 'readonly',
@@ -59,6 +60,24 @@ module.exports = {
       globals: {
         ...webpack(),
         ...BestShot(),
+      },
+    },
+    {
+      // for node.js
+      files: '*.cjs',
+      env: {
+        browser: false,
+        node: true,
+        commonjs: true,
+      },
+    },
+    {
+      // for node.js
+      files: '*.mjs',
+      env: {
+        browser: false,
+        node: true,
+        commonjs: false,
       },
     },
   ],

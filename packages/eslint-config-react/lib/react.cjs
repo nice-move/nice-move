@@ -1,4 +1,4 @@
-const { env, parser } = require('./babel');
+const { env, parser } = require('./babel.cjs');
 
 module.exports = {
   env,

@@ -1,6 +1,16 @@
 const extensions = ['.mjs', '.cjs', '.js', '.json'];
 
+function Electron() {
+  try {
+    require.resolve('electron/package.json');
+    return ['plugin:import/recommended', 'plugin:import/electron'];
+  } catch {
+    return ['plugin:import/recommended'];
+  }
+}
+
 module.exports = {
+  extends: Electron(),
   rules: {
     'import/first': 'off',
     'import/order': 'off',

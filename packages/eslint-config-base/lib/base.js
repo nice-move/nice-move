@@ -44,18 +44,14 @@ module.exports = {
     __filename: 'readonly',
   },
   rules: {
-    camelcase: 'off',
+    'array-callback-return': [
+      'error',
+      { allowImplicit: true, checkForEach: true },
+    ],
     'no-console': 'off',
     'no-nested-ternary': 'off',
     'no-template-curly-in-string': 'off',
-    'promise/always-return': 'off',
-    'promise/avoid-new': 'off',
-    'promise/catch-or-return': ['warn', { allowFinally: true }],
-    'promise/no-callback-in-promise': 'off',
-    'unicorn/expiring-todo-comments': 'off',
-    'unicorn/no-null': 'off',
-    'unicorn/prefer-set-has': 'off',
-    'unicorn/prevent-abbreviations': 'off',
+    camelcase: 'off',
   },
   overrides: [
     {

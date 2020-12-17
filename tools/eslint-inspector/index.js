@@ -1,9 +1,17 @@
-const { CLIEngine } = require('eslint');
+const { ESLint } = require('eslint');
 const sortObject = require('sortobject').default;
 const writeJsonFile = require('write-json-file');
 
-function configGetter(configName) {
-  const engine = new CLIEngine({
+function save(outputName, data) {
+  return writeJsonFile(outputName, data, { indent: 2 }).catch(console.error);
+}
+
+module.exports = function configInspector(
+  configName,
+  filename,
+  outputName = '',
+) {
+  const engine = new ESLint({
     useEslintrc: false,
     baseConfig: {
       root: true,
@@ -11,23 +19,13 @@ function configGetter(configName) {
     },
   });
 
-  return (filename) => {
-    return engine.getConfigForFile(filename);
-  };
-}
-
-function configInspector(configName) {
-  const getter = configGetter(configName);
-
-  return (filename) => {
-    return sortObject(getter(filename));
-  };
-}
-
-module.exports = {
-  writeJson(name, data) {
-    return writeJsonFile(name, data, { indent: 2 });
-  },
-  configGetter,
-  configInspector,
+  return engine
+    .calculateConfigForFile(filename)
+    .then(sortObject)
+    .then((data) => {
+      if (outputName) {
+        return save(outputName, data);
+      }
+      return data;
+    });
 };

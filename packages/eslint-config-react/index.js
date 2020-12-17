@@ -8,12 +8,11 @@ module.exports = {
       extends: [
         'airbnb',
         'airbnb/hooks',
-        'prettier',
-        'prettier/unicorn',
         'prettier/react',
-        '@nice-move/eslint-config-base/lib/base',
         '@nice-move/eslint-config-base/lib/import',
         require.resolve('./lib/react'),
+        '@nice-move/eslint-config-base/lib/base',
+        'prettier',
       ],
     },
     {

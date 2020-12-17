@@ -1,5 +1,6 @@
 const { resolve } = require('path');
 
+// eslint-disable-next-line consistent-return
 function getVersion() {
   try {
     const {
@@ -7,9 +8,8 @@ function getVersion() {
       // eslint-disable-next-line global-require,import/no-dynamic-require
     } = require(resolve(process.cwd(), 'package.json'));
     return vue;
-  } catch {
-    return undefined;
-  }
+    // eslint-disable-next-line no-empty
+  } catch {}
 }
 
 const version = getVersion();

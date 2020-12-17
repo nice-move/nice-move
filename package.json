@@ -26,16 +26,17 @@
     "tools/*"
   ],
   "devDependencies": {
-    "ava": "^3.13.0",
+    "@old-version/eslint-6": "npm:eslint@6.8.0",
+    "ava": "^3.14.0",
     "commitlint": "^11.0.0",
-    "eslint": "^6.8.0",
-    "husky": "^4.3.0",
+    "eslint": "^7.15.0",
+    "husky": "^4.3.6",
     "nodemon": "^2.0.6",
-    "prettier": "^2.2.0",
+    "prettier": "^2.2.1",
     "stylelint": "^13.8.0"
   },
   "peerDependencies": {
-    "@nice-move/eslint-inspector": "^0.0.0"
+    "@nice-move/eslint-inspector": "latest"
   },
   "engines": {
     "node": "^12.14 || ^14"

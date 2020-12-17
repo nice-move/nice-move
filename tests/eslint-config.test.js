@@ -1,32 +1,32 @@
 // @ts-nocheck
-const { configGetter } = require('@nice-move/eslint-inspector');
+const configInspector = require('@nice-move/eslint-inspector');
 const test = require('ava');
 
-const baseEngine = configGetter('@nice-move/base');
-const vueEngine = configGetter('@nice-move/vue');
-const reactEngine = configGetter('@nice-move/react');
+const baseEngine = (filename) => configInspector('@nice-move/base', filename);
+const vueEngine = (filename) => configInspector('@nice-move/vue', filename);
+const reactEngine = (filename) => configInspector('@nice-move/react', filename);
 
-test('Pure js', (t) => {
-  const baseConfig = baseEngine('sample.js');
-  const vueConfig = vueEngine('sample.js');
-  const reactConfig = reactEngine('sample.js');
+test('Pure js', async (t) => {
+  const baseConfig = await baseEngine('sample.js');
+  const vueConfig = await vueEngine('sample.js');
+  const reactConfig = await reactEngine('sample.js');
 
   t.deepEqual(baseConfig, vueConfig);
   t.deepEqual(baseConfig, reactConfig);
 });
 
-test('Html support', (t) => {
-  const baseConfig = baseEngine('sample.js');
-  const htmlConfig = baseEngine('sample.html');
+test('Html support', async (t) => {
+  const baseConfig = await baseEngine('sample.js');
+  const htmlConfig = await baseEngine('sample.html');
 
   t.notDeepEqual(baseConfig, htmlConfig);
 });
 
-test('Src dir', (t) => {
-  const baseConfig = baseEngine('sample.js');
-  const srcConfig = baseEngine('src/sample.js');
-  const vueConfig = vueEngine('src/sample.js');
-  const reactConfig = reactEngine('src/sample.js');
+test('Src dir', async (t) => {
+  const baseConfig = await baseEngine('sample.js');
+  const srcConfig = await baseEngine('src/sample.js');
+  const vueConfig = await vueEngine('src/sample.js');
+  const reactConfig = await reactEngine('src/sample.js');
 
   t.deepEqual(baseConfig, srcConfig);
   t.deepEqual(vueConfig, reactConfig);
@@ -34,10 +34,10 @@ test('Src dir', (t) => {
   t.notDeepEqual(baseConfig, reactConfig);
 });
 
-test('Base type', (t) => {
-  const baseConfig = baseEngine('src/sample.js');
-  const vueConfig = vueEngine('src/sample.vue');
-  const reactConfig = reactEngine('src/sample.jsx');
+test('Base type', async (t) => {
+  const baseConfig = await baseEngine('src/sample.js');
+  const vueConfig = await vueEngine('src/sample.vue');
+  const reactConfig = await reactEngine('src/sample.jsx');
 
   t.notDeepEqual(baseConfig, vueConfig);
   t.notDeepEqual(baseConfig, reactConfig);

@@ -18,7 +18,7 @@ module.exports = {
   extends: ['@nice-move/eslint-config-base'],
   overrides: [
     {
-      files: '{src,packages/*}/**/*.vue',
+      files: '*.vue',
       extends: [
         'plugin:vue/recommended',
         'prettier/vue',

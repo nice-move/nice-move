@@ -4,7 +4,7 @@ module.exports = {
   ...all,
   overrides: [
     {
-      files: '{src,packages/*}/**/*.jsx',
+      files: '*.jsx',
       extends: [
         'airbnb',
         'airbnb/hooks',

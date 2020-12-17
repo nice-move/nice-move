@@ -1,10 +1,9 @@
-// @ts-nocheck
-const configInspector = require('@nice-move/eslint-inspector');
-const test = require('ava');
+const eslintInspector = require('@nice-move/eslint-inspector');
+const test = require('ava').default;
 
-const baseEngine = (filename) => configInspector('@nice-move/base', filename);
-const vueEngine = (filename) => configInspector('@nice-move/vue', filename);
-const reactEngine = (filename) => configInspector('@nice-move/react', filename);
+const baseEngine = (filename) => eslintInspector('@nice-move/base', filename);
+const vueEngine = (filename) => eslintInspector('@nice-move/vue', filename);
+const reactEngine = (filename) => eslintInspector('@nice-move/react', filename);
 
 test('Pure js', async (t) => {
   const baseConfig = await baseEngine('sample.js');

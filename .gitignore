@@ -139,6 +139,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://gitignore.io/api/node,windows
-
-temp
-bk

@@ -18,7 +18,7 @@
   },
   "scripts": {
     "format": "nice-move lint",
-    "inspect": "nodemon ./config/inspect",
+    "inspect": "nodemon",
     "test": "ava --verbose"
   },
   "workspaces": [
@@ -36,7 +36,7 @@
     "stylelint": "^13.8.0"
   },
   "peerDependencies": {
-    "@nice-move/eslint-inspector": "latest"
+    "@nice-move/eslint-inspector": "0.0.0"
   },
   "engines": {
     "node": "^12.14 || ^14"
@@ -52,6 +52,15 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "nice-move lint && ava --verbose"
     }
+  },
+  "nodemonConfig": {
+    "watch": [
+      "./packages/*",
+      "./config/*",
+      "./tools/*"
+    ],
+    "exec": "eslint-inspect",
+    "delay": 5
   },
   "prettier": "@nice-move/prettier-config",
   "stylelint": {

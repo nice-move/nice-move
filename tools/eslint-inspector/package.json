@@ -3,6 +3,10 @@
   "name": "@nice-move/eslint-inspector",
   "version": "0.0.0",
   "license": "UNLICENSED",
+  "bin": {
+    "eslint-inspect": "index.js"
+  },
+  "main": "index.js",
   "dependencies": {
     "sortobject": "^4.14.0",
     "write-json-file": "^4.3.0"

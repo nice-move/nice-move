@@ -55,12 +55,11 @@
   },
   "nodemonConfig": {
     "watch": [
-      "packages/**/*",
-      "config/**/*",
-      "tools/**/*"
+      "{tools,packages}/**/*.{js,mjs,cjs,json}"
     ],
     "exec": "eslint-inspect",
-    "delay": 5
+    "delay": 5,
+    "quiet": true
   },
   "prettier": "@nice-move/prettier-config",
   "stylelint": {

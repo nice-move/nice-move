@@ -36,7 +36,7 @@
     "eslint-plugin-markdown": "^2.0.0-rc.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-unicorn": "^23.0.0"
+    "eslint-plugin-unicorn": "^24.0.0"
   },
   "peerDependencies": {
     "eslint": "^7.15.0"

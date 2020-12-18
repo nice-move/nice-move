@@ -21,6 +21,16 @@ test('Html support', async (t) => {
   t.deepEqual(baseConfig, htmlConfig);
 });
 
+test('Environment', async (t) => {
+  const jsConfig = await baseEngine('sample.js');
+  const cjsConfig = await baseEngine('sample.cjs');
+  const mjsConfig = await baseEngine('sample.mjs');
+
+  t.notDeepEqual(jsConfig, cjsConfig);
+  t.notDeepEqual(jsConfig, mjsConfig);
+  t.notDeepEqual(cjsConfig, mjsConfig);
+});
+
 test('Base type', async (t) => {
   const baseConfig = await baseEngine('src/sample.js');
   const vueConfig = await vueEngine('src/sample.vue');

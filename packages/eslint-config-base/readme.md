@@ -36,3 +36,18 @@ Then run
 ```bash
 eslint --fix **/*.{js,cjs,mjs,md,html}
 ```
+
+## Tips
+
+### EcmaScript version
+
+Defaults to use `compilerOptions.target` in `jsconfig.json` or `es2020`
+
+### Environment settings
+
+| Environment | Extensions    |
+| :---------- | :------------ |
+| browser     | `.js`         |
+| node.js     | `.mjs` `.cjs` |
+| commonjs    | `.cjs`        |
+| es modules  | `.mjs`        |

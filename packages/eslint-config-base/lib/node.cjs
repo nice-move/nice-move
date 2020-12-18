@@ -15,5 +15,6 @@ module.exports = {
     'no-process-exit': 'off',
     'node/no-new-require': 'error',
     'node/no-unpublished-require': 'off',
+    'node/no-unpublished-import': 'off',
   },
 };

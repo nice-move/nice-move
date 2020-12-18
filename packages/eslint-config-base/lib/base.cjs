@@ -2,10 +2,9 @@ const { target, env } = require('./target.cjs');
 
 function BestShot() {
   try {
-    // eslint-disable-next-line node/no-missing-require
     require.resolve('@best-shot/preset-env/package.json');
     // @ts-ignore
-    // eslint-disable-next-line import/no-unresolved, node/no-missing-require
+    // eslint-disable-next-line import/no-unresolved
     return require('@best-shot/preset-env/eslint.js').globals;
     // eslint-disable-next-line no-empty
   } catch {}
@@ -14,7 +13,6 @@ function BestShot() {
 // eslint-disable-next-line consistent-return
 function webpack() {
   try {
-    // eslint-disable-next-line node/no-missing-require
     require.resolve('webpack/package.json');
     return {
       __webpack_public_path__: 'readonly',

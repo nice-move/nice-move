@@ -3,7 +3,7 @@ function BestShot() {
     const {
       git = [],
       eslint = git, // @ts-ignore
-      // eslint-disable-next-line import/no-unresolved, node/no-missing-require
+      // eslint-disable-next-line import/no-unresolved
     } = require('@best-shot/cli/config/ignore.json');
     return eslint;
   } catch {

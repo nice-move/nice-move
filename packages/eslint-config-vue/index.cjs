@@ -20,6 +20,9 @@ module.exports = {
     {
       files: '*.vue',
       extends: ['plugin:vue/recommended', 'prettier/vue'],
+      env: {
+        commonjs: true,
+      },
       rules: {
         'vue/attributes-order': 'off',
         'vue/component-name-in-template-casing': ['warn', 'PascalCase'],

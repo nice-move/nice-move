@@ -12,9 +12,22 @@ module.exports = {
     {
       files: '*.md',
       processor: 'markdown/markdown',
+      env: {
+        browser: false,
+        commonjs: false,
+        node: false,
+      },
     },
     {
-      files: '**/*.md/*.{js,javascript,jsx,vue,html}',
+      files: '**/*.md/*.node',
+      env: {
+        browser: false,
+        commonjs: true,
+        node: true,
+      },
+    },
+    {
+      files: '**/*.md/*.{js,mjs,cjs,javascript,node,jsx,vue,html}',
       rules: {
         ...rules,
         'import/no-extraneous-dependencies': 'off',

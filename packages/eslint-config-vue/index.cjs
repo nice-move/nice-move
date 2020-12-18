@@ -5,7 +5,7 @@ function getVersion() {
   try {
     const {
       dependencies: { vue },
-      // eslint-disable-next-line global-require,import/no-dynamic-require
+      // eslint-disable-next-line import/no-dynamic-require
     } = require(resolve(process.cwd(), 'package.json'));
     return vue;
     // eslint-disable-next-line no-empty
@@ -24,6 +24,7 @@ module.exports = {
         commonjs: true,
       },
       rules: {
+        'global-require': 'warn',
         'vue/attributes-order': 'off',
         'vue/component-name-in-template-casing': ['warn', 'PascalCase'],
         'vue/no-duplicate-attr-inheritance': 'warn',

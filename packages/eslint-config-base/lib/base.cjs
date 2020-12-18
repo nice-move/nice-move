@@ -5,7 +5,7 @@ function BestShot() {
     // eslint-disable-next-line node/no-missing-require
     require.resolve('@best-shot/preset-env/package.json');
     // @ts-ignore
-    // eslint-disable-next-line global-require, import/no-unresolved, node/no-missing-require
+    // eslint-disable-next-line import/no-unresolved, node/no-missing-require
     return require('@best-shot/preset-env/eslint.js').globals;
     // eslint-disable-next-line no-empty
   } catch {}
@@ -48,6 +48,7 @@ module.exports = {
       'error',
       { allowImplicit: true, checkForEach: true },
     ],
+    'global-require': 'off',
     'no-console': 'off',
     'no-nested-ternary': 'off',
     'no-template-curly-in-string': 'off',
@@ -72,6 +73,13 @@ module.exports = {
       extends: require.resolve('./node.cjs'),
       env: {
         commonjs: false,
+      },
+      globals: {
+        __dirname: 'off',
+        __filename: 'off',
+        exports: 'off',
+        module: 'off',
+        require: 'off',
       },
       rules: {
         'node/no-unsupported-features/es-syntax': [

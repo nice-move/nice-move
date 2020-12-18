@@ -4,7 +4,7 @@ function getTarget() {
   try {
     const {
       compilerOptions: { target = 'es2020' } = {},
-      // eslint-disable-next-line global-require,import/no-dynamic-require
+      // eslint-disable-next-line import/no-dynamic-require
     } = require(resolve(process.cwd(), 'jsconfig.json'));
     return /es20(1{5,9}|2{0,1})/.test(target) ? target : 'es2020';
   } catch {

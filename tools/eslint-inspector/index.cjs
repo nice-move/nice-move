@@ -34,11 +34,16 @@ module.exports = eslintInspector;
 
 if (require.main.filename === __filename) {
   eslintInspector('@nice-move/base', 'sample.js', 'js.json');
+  eslintInspector('@nice-move/base', 'sample.html', 'html.json');
   eslintInspector('@nice-move/base', 'sample.cjs', 'cjs.json');
   eslintInspector('@nice-move/base', 'sample.mjs', 'mjs.json');
-  eslintInspector('@nice-move/base', 'sample.html', 'html.json');
-  eslintInspector('@nice-move/base', 'sample.md', 'md.json');
 
   eslintInspector('@nice-move/vue', 'sample.vue', 'vue.json');
   eslintInspector('@nice-move/react', 'sample.jsx', 'jsx.json');
+
+  eslintInspector('@nice-move/base', 'sample.md', 'md.json');
+  eslintInspector('@nice-move/base', 'sample.md/o.js', 'md/js.json');
+  eslintInspector('@nice-move/base', 'sample.md/o.cjs', 'md/cjs.json');
+  eslintInspector('@nice-move/base', 'sample.md/o.node', 'md/node.json');
+  eslintInspector('@nice-move/base', 'sample.md/o.mjs', 'md/mjs.json');
 }

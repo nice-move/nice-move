@@ -20,11 +20,7 @@ module.exports = {
     },
     {
       files: '**/*.md/*.node',
-      env: {
-        browser: false,
-        commonjs: true,
-        node: true,
-      },
+      extends: require.resolve('./node.cjs'),
     },
     {
       files: '**/*.md/*.{js,mjs,cjs,javascript,node,jsx,vue,html}',

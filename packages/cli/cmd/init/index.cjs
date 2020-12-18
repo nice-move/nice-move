@@ -1,9 +1,9 @@
 const { Text } = require('fs-chain');
 
-const autoPackage = require('./package');
+const autoPackage = require('./package.cjs');
 const autoGitignore = require('./gitignore');
 const autoLicense = require('./license');
-const autoRegistry = require('./registry');
+const autoRegistry = require('./registry.cjs');
 
 const { readTemplate } = require('../../lib');
 

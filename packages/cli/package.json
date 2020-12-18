@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.5.9",
+  "version": "0.5.10",
   "description": "Initializer, linter, and formatter for frontend development",
   "license": "MIT",
   "author": {
@@ -34,17 +34,17 @@
     "url": "https://github.com/airkro/nice-move/issues"
   },
   "bin": {
-    "nice-move": "index.js"
+    "nice-move": "index.cjs"
   },
   "dependencies": {
     "centra": "^2.4.2",
     "chalk": "^4.1.0",
-    "cheetor": "^0.2.2",
+    "cheetor": "^0.3.2",
     "deepmerge": "^4.2.2",
     "fs-chain": "^1.4.1",
     "git-username": "^1.0.0",
     "is-there": "^4.5.1",
-    "lint-staged": "^10.5.2",
+    "lint-staged": "^10.5.3",
     "lodash": "^4.17.20",
     "micromustache": "^8.0.3",
     "ora": "^5.1.0",

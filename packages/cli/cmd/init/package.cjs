@@ -17,8 +17,8 @@ module.exports = function autoPackage() {
         extends: `@nice-move/eslint-config-${type}`,
       },
       devDependencies: {
-        [`@nice-move/eslint-config-${type}`]: '^0.4.0',
-        eslint: '^6.8.0',
+        [`@nice-move/eslint-config-${type}`]: '^0.5.0',
+        eslint: '^7.15.0',
       },
     };
   }
@@ -35,44 +35,45 @@ module.exports = function autoPackage() {
       {
         title: 'husky',
         value: 'husky',
-        selected: 'husky' in devDependencies,
+        selected: !('husky' in devDependencies),
       },
       {
         title: 'ava',
         value: 'ava',
-        selected: 'ava' in devDependencies,
+        selected: !('ava' in devDependencies),
       },
       {
         title: 'commitlint',
         value: 'commitlint',
-        selected:
+        selected: !(
           'commitlint' in devDependencies ||
-          '@commitlint/cli' in devDependencies,
+          '@commitlint/cli' in devDependencies
+        ),
       },
       {
         title: 'eslint',
         value: 'eslint',
-        selected: 'eslint' in devDependencies,
+        selected: !('eslint' in devDependencies),
       },
       {
         title: 'stylelint',
         value: 'stylelint',
-        selected: 'stylelint' in devDependencies,
+        selected: !('stylelint' in devDependencies),
       },
       {
         title: 'prettier',
         value: 'prettier',
-        selected: 'prettier' in devDependencies,
+        selected: !('prettier' in devDependencies),
       },
       {
         title: 'react',
         value: 'react',
-        selected: 'react' in dependencies,
+        selected: !('react' in dependencies),
       },
       {
         title: 'vue',
         value: 'vue',
-        selected: 'vue' in dependencies,
+        selected: !('vue' in dependencies),
       },
     ],
   })
@@ -92,12 +93,12 @@ module.exports = function autoPackage() {
         new Json()
           .source('./package.json')
           .config({ pretty: true })
-          .handle((old) => {
-            return deepmerge.all(
+          .handle((old) =>
+            deepmerge.all(
               [
                 {
                   engines: {
-                    node: '^12.14 || ^14',
+                    node: '^12.18 || ^14',
                   },
                 },
                 pkg.private
@@ -112,7 +113,7 @@ module.exports = function autoPackage() {
                 husky || commitlint
                   ? {
                       devDependencies: {
-                        husky: '^4.3.0',
+                        husky: '^4.3.6',
                       },
                     }
                   : undefined,
@@ -148,7 +149,7 @@ module.exports = function autoPackage() {
                   : undefined,
                 ava
                   ? {
-                      devDependencies: { ava: '^3.13.0' },
+                      devDependencies: { ava: '^3.14.0' },
                       scripts: {
                         test: 'ava --verbose',
                       },
@@ -193,8 +194,8 @@ module.exports = function autoPackage() {
                   : undefined,
                 vue ? { dependencies: { vue: '~2.6.12' } } : undefined,
               ].filter(Boolean),
-            );
-          })
+            ),
+          )
           .output();
       },
     )

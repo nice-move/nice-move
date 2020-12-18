@@ -977,13 +977,13 @@ chardet@^0.7.0:
   resolved "https://mirrors.cloud.tencent.com/npm/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity "sha1-kAlISfCTfy7twkJdDSip5fDLrZ4= sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA=="
 
-cheetor@^0.2.2:
-  version "0.2.2"
-  resolved "https://mirrors.cloud.tencent.com/npm/cheetor/-/cheetor-0.2.2.tgz#8ba77aef17fd8701006ebc22f0b9a1fe7f6dd006"
-  integrity "sha1-i6d67xf9hwEAbrwi8Lmh/n9t0AY= sha512-enT3waZuucYgdR2WZ5N4XWNCkcRsiwRVDcnG7q2kM384fKwONOmgTcdM3YeOONWoyFzgUonbw9MXHEwK+6ZwHg=="
+cheetor@^0.3.2:
+  version "0.3.2"
+  resolved "https://mirrors.cloud.tencent.com/npm/cheetor/-/cheetor-0.3.2.tgz#157fe808614c9e7c2afc5c5587ca66118a71f329"
+  integrity sha512-sPdlyfPUaFHz7bcf9zfRggbP3TeGxNRbxgkepBJewWgusGXtV5qnCrRHTS1ZH42ZDVnfiNjvnGI7iSBGgp6C2Q==
   dependencies:
     chalk "^4.1.0"
-    yargs "^15.4.1"
+    yargs "^16.2.0"
 
 chevrotain@4.1.1:
   version "4.1.1"
@@ -3088,10 +3088,10 @@ lines-and-columns@^1.1.6:
   resolved "https://mirrors.cloud.tencent.com/npm/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity "sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA= sha512-8ZmlJFVK9iCmtLz19HpSsR8HaAMWBT284VMNednLwlIMDP2hJDCIhUp0IZ2xUcZ+Ob6BM0VvCSJwzASDM45NLQ=="
 
-lint-staged@^10.5.2:
+lint-staged@^10.5.3:
   version "10.5.3"
   resolved "https://mirrors.cloud.tencent.com/npm/lint-staged/-/lint-staged-10.5.3.tgz#c682838b3eadd4c864d1022da05daa0912fb1da5"
-  integrity "sha1-xoKDiz6t1Mhk0QItoF2qCRL7HaU= sha512-TanwFfuqUBLufxCc3RUtFEkFraSPNR3WzWcGF39R3f2J7S9+iF9W0KTVLfSy09lYGmZS5NDCxjNvhGMSJyFCWg=="
+  integrity sha512-TanwFfuqUBLufxCc3RUtFEkFraSPNR3WzWcGF39R3f2J7S9+iF9W0KTVLfSy09lYGmZS5NDCxjNvhGMSJyFCWg==
   dependencies:
     chalk "^4.1.0"
     cli-truncate "^2.1.0"
@@ -5591,7 +5591,7 @@ yargs-parser@^20.2.2, yargs-parser@^20.2.3:
   resolved "https://mirrors.cloud.tencent.com/npm/yargs-parser/-/yargs-parser-20.2.4.tgz#b42890f14566796f85ae8e3a25290d205f154a54"
   integrity "sha1-tCiQ8UVmeW+Fro46JSkNIF8VSlQ= sha512-WOkpgNhPTlE73h4VFAFsOnomJVaovO8VqLDzy5saChRBFQFBoMYirowyW+Q9HB4HFF4Z7VZTiG3iSzJJA29yRA=="
 
-yargs@^15.1.0, yargs@^15.3.1, yargs@^15.4.1:
+yargs@^15.1.0, yargs@^15.3.1:
   version "15.4.1"
   resolved "https://mirrors.cloud.tencent.com/npm/yargs/-/yargs-15.4.1.tgz#0d87a16de01aee9d8bec2bfbf74f67851730f4f8"
   integrity "sha1-DYehbeAa7p2L7Cv7909nhRcw9Pg= sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A=="

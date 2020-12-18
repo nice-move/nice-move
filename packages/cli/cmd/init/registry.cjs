@@ -20,7 +20,8 @@ module.exports = function autoRegistry() {
               ),
           )
           .handle(
-            (text) => `registry = https://registry.npm.taobao.org\r${text}`,
+            (text) =>
+              `registry = https://mirrors.cloud.tencent.com/npm/\r${text}`,
           )
           .output();
 
@@ -38,7 +39,8 @@ module.exports = function autoRegistry() {
                 ),
             )
             .handle(
-              (text) => `registry "https://registry.npm.taobao.org"\r${text}`,
+              (text) =>
+                `registry "https://mirrors.cloud.tencent.com/npm/"\r${text}`,
             )
             .output();
         }

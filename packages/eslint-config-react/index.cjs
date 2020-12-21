@@ -12,9 +12,6 @@ module.exports = {
         require.resolve('./lib/react.cjs'),
         'prettier',
       ],
-      env: {
-        commonjs: true,
-      },
     },
   ],
 };

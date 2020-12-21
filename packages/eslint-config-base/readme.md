@@ -34,7 +34,7 @@ Add to package.json
 Then run
 
 ```bash
-eslint --fix **/*.{js,cjs,mjs,md,html}
+eslint --fix
 ```
 
 ## Tips
@@ -45,9 +45,9 @@ Defaults to use `compilerOptions.target` in `jsconfig.json` or `es2020`
 
 ### Environment settings
 
-| Environment | Extensions    |
-| :---------- | :------------ |
-| browser     | `.js`         |
-| node.js     | `.mjs` `.cjs` |
-| commonjs    | `.cjs`        |
-| es modules  | `.mjs`        |
+| Environment | pattern                        |
+| :---------- | :----------------------------- |
+| browser     | `.js` `.html`                  |
+| node.js     | `.mjs` `.cjs` `.node` in `.md` |
+| es modules  | `.mjs` `.js` `.html`           |
+| commonjs    | `.cjs`                         |

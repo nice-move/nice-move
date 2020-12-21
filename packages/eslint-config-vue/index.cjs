@@ -29,9 +29,6 @@ module.exports = {
     {
       files: '*.vue',
       extends: ['plugin:vue/recommended', 'prettier/vue'],
-      env: {
-        commonjs: true,
-      },
       rules: {
         'global-require': 'warn',
         'vue/attributes-order': 'off',

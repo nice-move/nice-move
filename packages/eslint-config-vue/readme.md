@@ -34,5 +34,20 @@ Add to package.json
 Then run
 
 ```bash
-eslint --fix **/*.{vue,js,cjs,mjs,md,html}
+eslint --fix
 ```
+
+## Tips
+
+### EcmaScript version
+
+Defaults to use `compilerOptions.target` in `jsconfig.json` or `es2020`
+
+### Environment settings
+
+| Environment | pattern                        |
+| :---------- | :----------------------------- |
+| browser     | `.js` `.vue` `.html`           |
+| node.js     | `.mjs` `.cjs` `.node` in `.md` |
+| es modules  | `.mjs` `.js` `.vue` `.html`    |
+| commonjs    | `.cjs`                         |

@@ -34,5 +34,20 @@ Add to package.json
 Then run
 
 ```bash
-eslint --fix **/*.{js,jsx,cjs,mjs,md,html}
+eslint --fix
 ```
+
+## Tips
+
+### EcmaScript version
+
+Defaults to use `compilerOptions.target` in `jsconfig.json` or `es2020`
+
+### Environment settings
+
+| Environment | pattern                        |
+| :---------- | :----------------------------- |
+| browser     | `.js` `.jsx` `.html`           |
+| node.js     | `.mjs` `.cjs` `.node` in `.md` |
+| es modules  | `.mjs` `.js` `.jsx` `.html`    |
+| commonjs    | `.cjs`                         |

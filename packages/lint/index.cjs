@@ -27,9 +27,7 @@ function getMaxArgLength() {
   }
 }
 
-const yarnConfig = require.resolve('./lib/yarn.cjs', {
-  paths: [__dirname],
-});
+const yarnConfig = require.resolve('./lib/yarn.cjs');
 
 module.exports = function lint({ shell }) {
   const prettier = isInstalled('prettier/package.json');

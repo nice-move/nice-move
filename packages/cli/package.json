@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@nice-move/init": "^0.0.0",
-    "@nice-move/lint": "^0.0.0",
+    "@nice-move/lint": "^0.0.1",
     "cheetor": "^0.3.2"
   },
   "engines": {

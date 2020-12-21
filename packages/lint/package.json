@@ -1,7 +1,7 @@
 {
-  "name": "@nice-move/cli",
-  "version": "0.5.11",
-  "description": "Initializer, linter, and formatter for frontend development",
+  "name": "@nice-move/lint",
+  "version": "0.0.0",
+  "description": "Lint and format everything",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -9,31 +9,39 @@
   },
   "keywords": [
     "commitlint",
+    "config",
+    "cwd",
     "eslint",
     "format",
     "formatter",
     "lint",
+    "lint-staged",
     "linter",
     "nice-move",
     "prettier",
     "stylelint"
   ],
-  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/cli",
+  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/lint",
   "repository": {
     "type": "git",
     "url": "https://github.com/airkro/nice-move.git",
-    "directory": "packages/cli"
+    "directory": "packages/lint"
   },
   "bugs": {
     "url": "https://github.com/airkro/nice-move/issues"
   },
   "bin": {
-    "nice-move": "index.cjs"
+    "nice-move-lint": "bin/index.cjs"
   },
+  "main": "index.cjs",
   "dependencies": {
-    "@nice-move/init": "^0.0.0",
-    "@nice-move/lint": "^0.0.0",
-    "cheetor": "^0.3.2"
+    "chalk": "^4.1.0",
+    "eslint-formatter-pretty": "^4.0.0",
+    "fs-chain": "^1.4.1",
+    "lint-staged": "^10.5.3",
+    "lodash": "^4.17.20",
+    "replace-in-file": "^6.1.0",
+    "yarn-deduplicate": "^3.1.0"
   },
   "engines": {
     "node": "^12.18 || ^14"

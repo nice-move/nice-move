@@ -1,5 +1,4 @@
 const handler = require('@nice-move/init');
-
 const { description } = require('@nice-move/init/package.json');
 
 exports.command = 'init';

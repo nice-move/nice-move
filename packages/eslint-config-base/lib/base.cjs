@@ -1,27 +1,38 @@
 const { target, env } = require('./target.cjs');
 
-function BestShot() {
-  try {
-    require.resolve('@best-shot/preset-env/package.json');
-    // @ts-ignore
-    // eslint-disable-next-line import/no-unresolved
-    return require('@best-shot/preset-env/eslint.js').globals;
-    // eslint-disable-next-line no-empty
-  } catch {}
+function isSafeError(error) {
+  return (
+    error.code === 'MODULE_NOT_FOUND' && error.requireStack[0] === __filename
+  );
 }
 
 // eslint-disable-next-line consistent-return
-function webpack() {
+function existThenReturn(checker, getResult) {
   try {
-    require.resolve('webpack/package.json');
-    return {
-      __webpack_public_path__: 'readonly',
-      __resourceQuery: 'readonly',
-      __dirname: 'readonly',
-      __filename: 'readonly',
-    };
-    // eslint-disable-next-line no-empty
-  } catch {}
+    require.resolve(checker);
+    return getResult();
+  } catch (error) {
+    if (!isSafeError(error)) {
+      throw error;
+    }
+  }
+}
+
+function BestShot() {
+  return existThenReturn(
+    '@best-shot/preset-env/package.json',
+    // eslint-disable-next-line import/no-unresolved
+    () => require('@best-shot/preset-env/eslint.js').globals,
+  );
+}
+
+function webpack() {
+  return existThenReturn('webpack/package.json', () => ({
+    __webpack_public_path__: 'readonly',
+    __resourceQuery: 'readonly',
+    __dirname: 'readonly',
+    __filename: 'readonly',
+  }));
 }
 
 module.exports = {

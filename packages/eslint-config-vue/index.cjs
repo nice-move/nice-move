@@ -1,15 +1,24 @@
 const { resolve } = require('path');
 
+function isSafeError(error) {
+  return (
+    error.code === 'MODULE_NOT_FOUND' && error.requireStack[0] === __filename
+  );
+}
+
 // eslint-disable-next-line consistent-return
 function getVersion() {
   try {
-    const {
-      dependencies: { vue },
-      // eslint-disable-next-line import/no-dynamic-require
-    } = require(resolve(process.cwd(), 'package.json'));
+    const { dependencies: { vue } = {} } = require(resolve(
+      process.cwd(),
+      'package.json',
+    ));
     return vue;
-    // eslint-disable-next-line no-empty
-  } catch {}
+  } catch (error) {
+    if (!isSafeError(error)) {
+      throw error;
+    }
+  }
 }
 
 const version = getVersion();

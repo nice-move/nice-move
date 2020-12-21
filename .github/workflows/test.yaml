@@ -27,4 +27,4 @@ jobs:
       - name: Install
         run: yarn
       - name: Test
-        run: yarn ava
+        run: yarn test

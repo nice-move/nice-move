@@ -1,17 +1,12 @@
 const { Text } = require('fs-chain');
 
-const autoPackage = require('./package.cjs');
-const autoGitignore = require('./gitignore');
-const autoLicense = require('./license');
-const autoRegistry = require('./registry.cjs');
+const { readTemplate } = require('./lib/utils.cjs');
+const autoPackage = require('./lib/package.cjs');
+const autoGitignore = require('./lib/gitignore.cjs');
+const autoLicense = require('./lib/license.cjs');
+const autoRegistry = require('./lib/registry.cjs');
 
-const { readTemplate } = require('../../lib');
-
-exports.command = 'init';
-
-exports.describe = 'Initialize your workspaces';
-
-exports.handler = () => {
+module.exports = function init() {
   new Text()
     .source('./.editorconfig')
     .handle(() => readTemplate('.editorconfig'))

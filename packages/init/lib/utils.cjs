@@ -6,7 +6,6 @@ const regexp = /# Created by https?:\/\/(www\.)?(toptal\.com\/developers\/gitign
 
 function pkgCwd() {
   try {
-    // eslint-disable-next-line global-require, import/no-dynamic-require
     return require(resolve(process.cwd(), 'package.json'));
   } catch {
     return {};

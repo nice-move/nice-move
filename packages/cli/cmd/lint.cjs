@@ -65,11 +65,11 @@ exports.handler = ({ concurrent, shell }) => {
     '*.{vue,html,md}': [
       prettier && 'prettier --write',
       stylelint && 'stylelint --fix --rd --risd',
-      eslint && 'eslint --fix --ext vue,html,md,jsx,javascript,js',
+      eslint && 'eslint --fix --format=pretty',
     ],
     '*.{js,jsx,mjs,cjs}': [
       prettier && 'prettier --write',
-      eslint && 'eslint --fix --ext js,jsx,mjs,cjs',
+      eslint && 'eslint --fix --format=pretty',
     ],
     '*.{css,scss,less,xml}': [
       prettier && 'prettier --write',

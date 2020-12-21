@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.5.10",
+  "version": "0.5.11",
   "description": "Initializer, linter, and formatter for frontend development",
   "license": "MIT",
   "author": {
@@ -9,14 +9,10 @@
   },
   "keywords": [
     "commitlint",
-    "config",
-    "conventional",
     "cwd",
     "eslint",
     "format",
     "formatter",
-    "git",
-    "gitignore",
     "lint",
     "lint-staged",
     "linter",
@@ -37,19 +33,13 @@
     "nice-move": "index.cjs"
   },
   "dependencies": {
-    "centra": "^2.4.2",
+    "@nice-move/init": "^0.0.0",
     "chalk": "^4.1.0",
     "cheetor": "^0.3.2",
-    "deepmerge": "^4.2.2",
+    "eslint-formatter-pretty": "^4.0.0",
     "fs-chain": "^1.4.1",
-    "git-username": "^1.0.0",
-    "is-there": "^4.5.1",
     "lint-staged": "^10.5.3",
     "lodash": "^4.17.20",
-    "micromustache": "^8.0.3",
-    "ora": "^5.1.0",
-    "os-locale": "^5.0.0",
-    "prompts": "^2.4.0",
     "replace-in-file": "^6.1.0",
     "yarn-deduplicate": "^3.1.0"
   },

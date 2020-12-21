@@ -2,7 +2,7 @@ const { Json } = require('fs-chain');
 const deepmerge = require('deepmerge');
 const prompts = require('prompts');
 
-const { pkgCwd } = require('../../lib');
+const { pkgCwd } = require('./utils.cjs');
 
 module.exports = function autoPackage() {
   const pkg = pkgCwd();
@@ -17,8 +17,8 @@ module.exports = function autoPackage() {
         extends: `@nice-move/eslint-config-${type}`,
       },
       devDependencies: {
-        [`@nice-move/eslint-config-${type}`]: '^0.5.0',
-        eslint: '^7.15.0',
+        [`@nice-move/eslint-config-${type}`]: '^0.5.1',
+        eslint: '^7.16.0',
       },
     };
   }
@@ -99,6 +99,9 @@ module.exports = function autoPackage() {
                 {
                   engines: {
                     node: '^12.18 || ^14',
+                  },
+                  devDependencies: {
+                    '@nice-move/cli': '^0.5.11',
                   },
                 },
                 pkg.private

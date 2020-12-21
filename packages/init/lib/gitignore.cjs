@@ -5,7 +5,7 @@ const { readFileSync } = require('fs');
 const { resolve } = require('path');
 const { Text } = require('fs-chain');
 
-const { regexp } = require('../../lib');
+const { regexp } = require('./utils.cjs');
 
 const Types = {
   Windows_NT: 'windows',
@@ -52,7 +52,7 @@ function BestShot() {
     const {
       git = [],
       // @ts-ignore
-      // eslint-disable-next-line global-require, import/no-unresolved
+      // eslint-disable-next-line import/no-unresolved
     } = require('@best-shot/cli/config/ignore.json');
     return ['# best-shot', ...git, '# best-shot'].join(EOL);
   } catch {

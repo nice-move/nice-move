@@ -1,7 +1,7 @@
 const username = require('git-username');
 const { Text } = require('fs-chain');
 
-const { pkgCwd, readTemplate } = require('../../lib');
+const { pkgCwd, readTemplate } = require('./utils.cjs');
 
 module.exports = function autoLicense() {
   const { license, private: isPrivate, author = '' } = pkgCwd();

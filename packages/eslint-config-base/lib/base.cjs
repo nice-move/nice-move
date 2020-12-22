@@ -19,20 +19,33 @@ function existThenReturn(checker, getResult) {
 }
 
 function BestShot() {
-  return existThenReturn(
-    '@best-shot/preset-env/package.json',
-    // eslint-disable-next-line import/no-unresolved
-    () => require('@best-shot/preset-env/eslint.js').globals,
-  );
+  return existThenReturn('@best-shot/preset-env/package.json', () => [
+    {
+      files: 'src/**', // eslint-disable-next-line import/no-unresolved
+      globals: require('@best-shot/preset-env/eslint.js').globals,
+    },
+  ]);
 }
 
 function webpack() {
-  return existThenReturn('webpack/package.json', () => ({
-    __webpack_public_path__: 'readonly',
-    __resourceQuery: 'readonly',
-    __dirname: 'readonly',
-    __filename: 'readonly',
-  }));
+  return existThenReturn('webpack/package.json', () => [
+    {
+      files: '**/*',
+      excludedFiles: ['**/*.mjs', '**/*.cjs'],
+      env: {
+        commonjs: true,
+      },
+      globals: {
+        __webpack_public_path__: 'readonly',
+        __resourceQuery: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+      },
+      rules: {
+        'import/no-commonjs': 'warn',
+      },
+    },
+  ]);
 }
 
 module.exports = {
@@ -65,10 +78,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: 'src/**',
-      globals: {
-        ...webpack(),
-        ...BestShot(),
+      files: '**/*',
+      excludedFiles: ['**/*.mjs', '**/*.cjs'],
+      rules: {
+        'import/no-commonjs': 'error',
       },
     },
     {
@@ -97,5 +110,7 @@ module.exports = {
         ],
       },
     },
+    ...(webpack() || []),
+    ...(BestShot() || []),
   ],
 };

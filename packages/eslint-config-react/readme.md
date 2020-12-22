@@ -45,9 +45,11 @@ Defaults to use `compilerOptions.target` in `jsconfig.json` or `es2020`
 
 ### Environment settings
 
-| Environment | pattern                        |
-| :---------- | :----------------------------- |
-| browser     | `.js` `.jsx` `.html`           |
-| node.js     | `.mjs` `.cjs` `.node` in `.md` |
-| es modules  | `.mjs` `.js` `.jsx` `.html`    |
-| commonjs    | `.cjs`                         |
+| Environment | pattern                                  |
+| :---------- | :--------------------------------------- |
+| browser     | `.js`,`.jsx`, `.html`                    |
+| node.js     | `.mjs`, `.cjs`, `.node` in `.md`         |
+| es modules  | `.mjs`, `.js`,`.jsx`, `.html`            |
+| commonjs    | `.cjs`, not `cjs/mjs` in webpack project |
+| webpack     | not `cjs/mjs` in webpack project         |
+| best-shot   | `src/**`                                 |

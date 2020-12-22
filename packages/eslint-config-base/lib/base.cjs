@@ -30,8 +30,8 @@ function BestShot() {
 function webpack() {
   return existThenReturn('webpack/package.json', () => [
     {
-      files: '**/*',
-      excludedFiles: ['**/*.mjs', '**/*.cjs'],
+      files: '{src,packages}/**/*',
+      excludedFiles: ['*.mjs', '*.cjs'],
       env: {
         commonjs: true,
       },
@@ -78,16 +78,13 @@ module.exports = {
   },
   overrides: [
     {
-      files: '**/*',
-      excludedFiles: ['**/*.mjs', '**/*.cjs'],
-      rules: {
-        'import/no-commonjs': 'error',
-      },
-    },
-    {
       // for node.js
       files: '*.cjs',
       extends: require.resolve('./node.cjs'),
+      plugins: ['node-cjs-extension'],
+      rules: {
+        'node-cjs-extension/require-cjs-extension': 'error',
+      },
     },
     {
       // for node.js
@@ -104,6 +101,7 @@ module.exports = {
         require: 'off',
       },
       rules: {
+        'import/no-commonjs': 'error',
         'node/no-unsupported-features/es-syntax': [
           'error',
           { ignores: ['modules'] },

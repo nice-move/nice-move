@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "A `eslint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -36,6 +36,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-markdown": "^2.0.0-rc.1",
     "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-node-cjs-extension": "^0.0.1",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-unicorn": "^24.0.0"
   },

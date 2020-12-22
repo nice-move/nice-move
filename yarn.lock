@@ -1742,6 +1742,11 @@ eslint-plugin-markdown@^2.0.0-rc.1:
     remark-parse "^5.0.0"
     unified "^6.1.2"
 
+eslint-plugin-node-cjs-extension@^0.0.1:
+  version "0.0.1"
+  resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-node-cjs-extension/-/eslint-plugin-node-cjs-extension-0.0.1.tgz#95990dbdb4335e04ebd003b4f011098f99ce6519"
+  integrity sha512-LOg/MiYdz7qqx3OA8gIJUoJKWm2/HHk756AepRANu0j0BkKZ+usA10HB+kvSriYDSMhfPnA9kIp/5KMHGMonBw==
+
 eslint-plugin-node@^11.1.0:
   version "11.1.0"
   resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-node/-/eslint-plugin-node-11.1.0.tgz#c95544416ee4ada26740a30474eefc5402dc671d"

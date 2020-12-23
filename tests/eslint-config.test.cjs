@@ -40,3 +40,31 @@ test('Base type', async (t) => {
   t.notDeepEqual(baseConfig, reactConfig);
   t.notDeepEqual(vueConfig, reactConfig);
 });
+
+test('Dir depth', async (t) => {
+  t.deepEqual(
+    //-
+    await baseEngine('sample.js'),
+    await baseEngine('src/sample.js'),
+  );
+
+  t.deepEqual(
+    await baseEngine('src/sample.js'),
+    await baseEngine('src/abc/sample.js'),
+  );
+
+  t.deepEqual(
+    await baseEngine('src/abc/sample.js'),
+    await baseEngine('src/abc/efg/sample.js'),
+  );
+
+  t.deepEqual(
+    await vueEngine('src/sample.vue'),
+    await vueEngine('src/abc/sample.vue'),
+  );
+
+  t.deepEqual(
+    await reactEngine('src/sample.jsx'),
+    await reactEngine('src/abc/sample.jsx'),
+  );
+});

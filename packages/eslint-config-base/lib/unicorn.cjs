@@ -9,4 +9,12 @@ module.exports = {
     'unicorn/prefer-set-has': 'off',
     'unicorn/prevent-abbreviations': 'off',
   },
+  overrides: [
+    {
+      files: '*.cjs',
+      rules: {
+        'unicorn/import-index': 'warn',
+      },
+    },
+  ],
 };

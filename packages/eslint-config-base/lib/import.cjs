@@ -57,7 +57,7 @@ module.exports = {
   globals: electron.globals,
   overrides: [
     {
-      files: '**/*.cjs',
+      files: '*.cjs',
       rules: {
         'import/extensions': 'off',
       },
@@ -72,7 +72,7 @@ module.exports = {
     },
     {
       // for node.js
-      files: '**/*.mjs',
+      files: '*.mjs',
       rules: {
         'import/no-commonjs': 'error',
       },

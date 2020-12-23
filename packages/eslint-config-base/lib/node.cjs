@@ -6,6 +6,7 @@ module.exports = {
     'node/file-extension-in-import': 'error',
     'node/global-require': 'off',
     'node/shebang': 'error',
+    'node/no-process-env': 'error',
   },
   settings: {
     node: {
@@ -14,7 +15,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.{m,c}js', '**/*.md/*.node'],
+      files: ['*.{m,c}js', '*.md/*.node'],
       env: {
         browser: false,
         node: true,
@@ -42,7 +43,7 @@ module.exports = {
     },
     {
       // for node.js
-      files: '**/*.mjs',
+      files: '*.mjs',
       env: {
         commonjs: false,
       },
@@ -66,10 +67,9 @@ module.exports = {
       },
     },
     {
-      files: '**/',
-      excludedFiles: '*.{m,c}js',
+      files: ['*.{m,c}js', '*.node'],
       rules: {
-        'node/no-process-env': 'error',
+        'node/no-process-env': 'off',
       },
     },
   ],

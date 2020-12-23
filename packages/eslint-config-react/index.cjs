@@ -2,7 +2,7 @@ module.exports = {
   extends: ['@nice-move/eslint-config-base'],
   overrides: [
     {
-      files: '**/*.jsx',
+      files: '*.jsx',
       extends: [
         'airbnb',
         'airbnb/hooks',

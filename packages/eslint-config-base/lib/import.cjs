@@ -1,13 +1,24 @@
 const existThenReturn = require('./utils.cjs');
 
-function Electron() {
-  return existThenReturn('electron/package.json', () => [
-    require.resolve('./electron.cjs'),
-  ]);
-}
+const electron =
+  existThenReturn('electron/package.json', () => ({
+    rules: {
+      'import/no-nodejs-modules': 'off',
+    },
+    settings: {
+      'import/core-modules': ['electron'],
+    },
+    globals: {
+      Buffer: 'readonly',
+      clearImmediate: 'readonly',
+      global: 'readonly',
+      process: 'readonly',
+      setImmediate: 'readonly',
+    },
+  })) || {};
 
 module.exports = {
-  extends: ['plugin:import/recommended', ...(Electron() || [])],
+  extends: ['plugin:import/recommended'],
   rules: {
     'import/extensions': [
       'error',
@@ -34,6 +45,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
   },
   settings: {
+    ...electron.settings,
     'import/ignore': false,
     'import/extensions': ['.mjs', '.cjs', '.js'],
     'import/resolver': {
@@ -42,9 +54,10 @@ module.exports = {
       },
     },
   },
+  globals: electron.globals,
   overrides: [
     {
-      files: '*.cjs',
+      files: '**/*.cjs',
       rules: {
         'import/extensions': 'off',
       },
@@ -59,16 +72,17 @@ module.exports = {
     },
     {
       // for node.js
-      files: '*.mjs',
+      files: '**/*.mjs',
       rules: {
         'import/no-commonjs': 'error',
       },
     },
     {
-      files: '*.*',
+      files: '**/',
       excludedFiles: '*.{m,c}js',
       rules: {
         'import/no-nodejs-modules': 'error',
+        ...electron.rules,
       },
     },
   ],

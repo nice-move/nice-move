@@ -10,7 +10,7 @@ module.exports = {
   plugins: ['markdown'],
   overrides: [
     {
-      files: '*.md',
+      files: '**/*.md',
       processor: 'markdown/markdown',
       env: {
         browser: false,

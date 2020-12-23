@@ -14,7 +14,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.{m,c}js', '**/*.md/*.node'],
+      files: ['**/*.{m,c}js', '**/*.md/*.node'],
       env: {
         browser: false,
         node: true,
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       // for node.js
-      files: '*.mjs',
+      files: '**/*.mjs',
       env: {
         commonjs: false,
       },
@@ -66,7 +66,7 @@ module.exports = {
       },
     },
     {
-      files: '*.*',
+      files: '**/',
       excludedFiles: '*.{m,c}js',
       rules: {
         'node/no-process-env': 'error',

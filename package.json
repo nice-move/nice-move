@@ -17,7 +17,7 @@
     "url": "https://github.com/airkro/nice-move/issues"
   },
   "scripts": {
-    "format": "nice-move lint",
+    "format": "nice-move lint --color",
     "inspect": "nodemon",
     "test": "ava --verbose"
   },

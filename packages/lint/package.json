@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/lint",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Lint and format everything",
   "license": "MIT",
   "author": {

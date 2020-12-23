@@ -34,55 +34,54 @@ module.exports = function lint({ shell }) {
   const eslint = isInstalled('eslint/package.json');
   const stylelint = isInstalled('stylelint/package.json');
 
-  if (stylelint) {
-    action();
-  }
-
   const config = parse({
     '*.{vue,html,md}': [
-      prettier && 'prettier --write',
-      stylelint && 'stylelint --fix --rd --risd',
-      eslint && 'eslint --fix --format=pretty',
+      prettier && 'prettier --write --color',
+      stylelint && 'stylelint --fix --rd --risd --color',
+      eslint && 'eslint --fix --format=pretty --color',
     ],
     '*.{js,jsx,mjs,cjs}': [
-      prettier && 'prettier --write',
-      eslint && 'eslint --fix --format=pretty',
+      prettier && 'prettier --write --color',
+      eslint && 'eslint --fix --format=pretty --color',
     ],
     '*.{css,scss,less,xml}': [
-      prettier && 'prettier --write',
-      stylelint && 'stylelint --fix --rd --risd',
+      prettier && 'prettier --write --color',
+      stylelint && 'stylelint --fix --rd --risd --color',
     ],
     '{*.{json,svg},*.{to,y,ya}ml,.{babel,npm}rc,.editorconfig}': [
-      prettier && 'prettier --write',
+      prettier && 'prettier --write --color',
     ],
     'yarn.lock': [
-      `replace-in-file --configFile="${yarnConfig}"`,
+      `replace-in-file --configFile="${yarnConfig}" --color`,
       'yarn-deduplicate',
     ],
   });
 
   if (!config) {
     console.log(yellow`nice-move:`, "Can't find `eslint/stylelint/prettier`.");
-    // eslint-disable-next-line unicorn/no-process-exit
-    process.exit(1);
-  }
+    process.exitCode = 1;
+  } else {
+    if (stylelint) {
+      action();
+    }
 
-  lintStaged({
-    allowEmpty: true,
-    concurrent: true,
-    config,
-    cwd: process.cwd(),
-    debug: false,
-    maxArgLength: getMaxArgLength() / 2,
-    quiet: false,
-    relative: false, // process.cwd(),
-    shell: !!shell,
-    stash: true,
-  })
-    .then((passed) => {
-      process.exitCode = passed ? 0 : 1;
+    lintStaged({
+      allowEmpty: true,
+      concurrent: true,
+      config,
+      cwd: process.cwd(),
+      debug: false,
+      maxArgLength: getMaxArgLength() / 2,
+      quiet: false,
+      relative: false,
+      shell: !!shell,
+      stash: true,
     })
-    .catch(() => {
-      process.exitCode = 1;
-    });
+      .then((passed) => {
+        process.exitCode = passed ? 0 : 1;
+      })
+      .catch(() => {
+        process.exitCode = 1;
+      });
+  }
 };

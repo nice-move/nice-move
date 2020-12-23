@@ -20,6 +20,47 @@ npm install @nice-move/lint --save-dev
 
 ## Usage
 
+Install `eslint` / `stylelint` / `prettier` if you need to.
+
 ```bash
+npm install eslint stylelint prettier --save-dev
+```
+
+Add configurations in the way you are used to doing.
+
+```json
+// example: package.json
+{
+  "eslintConfig": {},
+  "prettier": {},
+  "stylelint": {}
+}
+```
+
+Change a few files, then run:
+
+```bash
+git add .
 npx -c nice-move-lint
 ```
+
+### Use with `husky`
+
+```bash
+npm install husky --save-dev
+```
+
+```json
+// example: package.json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "nice-move-lint"
+    }
+  }
+}
+```
+
+## Tips
+
+if you install [@nice-move/cli](https://github.com/airkro/nice-move/tree/master/packages/cli), then run `nice-move lint` command, cli will run `nice-move-lint` internally.

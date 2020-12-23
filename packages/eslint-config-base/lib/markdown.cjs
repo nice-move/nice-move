@@ -19,11 +19,7 @@ module.exports = {
       },
     },
     {
-      files: '**/*.md/*.node',
-      extends: require.resolve('./node.cjs'),
-    },
-    {
-      files: '**/*.md/*.{js,mjs,cjs,javascript,node,jsx,vue,html}',
+      files: '**/*.md/*.{js,mjs,cjs,node,jsx,vue,html}',
       rules: {
         ...rules,
         'import/no-extraneous-dependencies': 'off',

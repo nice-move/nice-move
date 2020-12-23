@@ -1,22 +1,21 @@
-const extensions = ['.mjs', '.cjs', '.js', '.json'];
+const existThenReturn = require('./utils.cjs');
 
 function Electron() {
-  try {
-    require.resolve('electron/package.json');
-    return ['plugin:import/recommended', 'plugin:import/electron'];
-  } catch {
-    return ['plugin:import/recommended'];
-  }
+  return existThenReturn('electron/package.json', () => [
+    'plugin:import/electron',
+  ]);
 }
 
 module.exports = {
-  extends: Electron(),
+  extends: ['plugin:import/recommended', ...(Electron() || [])],
   rules: {
-    'import/first': 'off',
-    'import/order': 'off',
-    'import/extensions': 'off',
-    'import/prefer-default-export': 'off',
-    'import/no-dynamic-require': 'off',
+    'import/extensions': [
+      'error',
+      'always',
+      {
+        ignorePackages: true,
+      },
+    ],
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -30,11 +29,40 @@ module.exports = {
         ],
       },
     ],
+    'import/no-dynamic-require': 'off',
+    'import/order': 'off',
+    'import/prefer-default-export': 'off',
   },
   settings: {
-    'import/extensions': extensions,
+    'import/ignore': false,
+    'import/extensions': ['.mjs', '.cjs', '.js'],
     'import/resolver': {
-      node: { extensions },
+      node: {
+        extensions: ['.mjs', '.cjs', '.js'],
+      },
     },
   },
+  overrides: [
+    {
+      files: '*.cjs',
+      rules: {
+        'import/extensions': 'off',
+      },
+      settings: {
+        'import/extensions': false,
+        'import/resolver': {
+          node: {
+            extensions: false,
+          },
+        },
+      },
+    },
+    {
+      // for node.js
+      files: '*.mjs',
+      rules: {
+        'import/no-commonjs': 'error',
+      },
+    },
+  ],
 };

@@ -30,7 +30,6 @@ module.exports = {
       files: '*.vue',
       extends: ['plugin:vue/recommended', 'prettier/vue'],
       rules: {
-        'global-require': 'warn',
         'vue/attributes-order': 'off',
         'vue/component-name-in-template-casing': ['warn', 'PascalCase'],
         'vue/no-duplicate-attr-inheritance': 'warn',
@@ -57,6 +56,11 @@ module.exports = {
         ...(version
           ? { 'vue/no-unsupported-features': ['error', { version }] }
           : undefined),
+      },
+      settings: {
+        node: {
+          tryExtensions: ['.vue', '.js', '.json'],
+        },
       },
     },
   ],

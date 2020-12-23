@@ -22,11 +22,11 @@ module.exports = {
     require.resolve('./lib/html.cjs'),
     require.resolve('./lib/import.cjs'),
     require.resolve('./lib/base.cjs'),
+    require.resolve('./lib/node.cjs'),
     require.resolve('./lib/markdown.cjs'),
     'prettier',
   ],
   ignorePatterns: [
-    '!.*',
     '.cache/',
     '.git/',
     '.svn/',

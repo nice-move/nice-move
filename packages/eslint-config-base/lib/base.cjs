@@ -1,22 +1,5 @@
 const { target, env } = require('./target.cjs');
-
-function isSafeError(error) {
-  return (
-    error.code === 'MODULE_NOT_FOUND' && error.requireStack[0] === __filename
-  );
-}
-
-// eslint-disable-next-line consistent-return
-function existThenReturn(checker, getResult) {
-  try {
-    require.resolve(checker);
-    return getResult();
-  } catch (error) {
-    if (!isSafeError(error)) {
-      throw error;
-    }
-  }
-}
+const existThenReturn = require('./utils.cjs');
 
 function BestShot() {
   return existThenReturn('@best-shot/preset-env/package.json', () => [
@@ -30,7 +13,7 @@ function BestShot() {
 function webpack() {
   return existThenReturn('webpack/package.json', () => [
     {
-      files: '{src,packages}/**/*',
+      files: 'src/**/*',
       excludedFiles: ['*.mjs', '*.cjs'],
       env: {
         commonjs: true,
@@ -76,39 +59,5 @@ module.exports = {
     'no-template-curly-in-string': 'off',
     camelcase: 'off',
   },
-  overrides: [
-    {
-      // for node.js
-      files: '*.cjs',
-      extends: require.resolve('./node.cjs'),
-      plugins: ['node-cjs-extension'],
-      rules: {
-        'node-cjs-extension/require-cjs-extension': 'error',
-      },
-    },
-    {
-      // for node.js
-      files: '*.mjs',
-      extends: require.resolve('./node.cjs'),
-      env: {
-        commonjs: false,
-      },
-      globals: {
-        __dirname: 'off',
-        __filename: 'off',
-        exports: 'off',
-        module: 'off',
-        require: 'off',
-      },
-      rules: {
-        'import/no-commonjs': 'error',
-        'node/no-unsupported-features/es-syntax': [
-          'error',
-          { ignores: ['modules'] },
-        ],
-      },
-    },
-    ...(webpack() || []),
-    ...(BestShot() || []),
-  ],
+  overrides: [...(webpack() || []), ...(BestShot() || [])],
 };

@@ -2,7 +2,7 @@ const existThenReturn = require('./utils.cjs');
 
 function Electron() {
   return existThenReturn('electron/package.json', () => [
-    'plugin:import/electron',
+    require.resolve('./electron.cjs'),
   ]);
 }
 

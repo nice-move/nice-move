@@ -27,6 +27,7 @@ module.exports = {
     'prettier',
   ],
   ignorePatterns: [
+    '!.*',
     '.cache/',
     '.git/',
     '.svn/',

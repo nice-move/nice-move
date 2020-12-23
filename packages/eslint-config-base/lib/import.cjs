@@ -64,5 +64,12 @@ module.exports = {
         'import/no-commonjs': 'error',
       },
     },
+    {
+      files: '*.*',
+      excludedFiles: '*.{m,c}js',
+      rules: {
+        'import/no-nodejs-modules': 'error',
+      },
+    },
   ],
 };

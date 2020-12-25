@@ -1,14 +1,11 @@
-const { resolve } = require('path');
-
 module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-prettier',
     'stylelint-config-css-modules',
-    resolve(__dirname, './lib/prefix.json'),
-    resolve(__dirname, './lib/scss.js'),
-    resolve(__dirname, './lib/order.js'),
-    resolve(__dirname, './lib/ignore.js'),
+    require.resolve('./lib/prefix.json'),
+    require.resolve('./lib/scss.cjs'),
+    require.resolve('./lib/ignore.cjs'),
   ],
   plugins: ['stylelint-declaration-block-no-ignored-properties'],
   rules: {

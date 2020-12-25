@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/stylelint-config",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "A `stylelint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -11,7 +11,6 @@
     "config",
     "css",
     "nice-move",
-    "order",
     "prettier",
     "scss",
     "standard",
@@ -27,18 +26,16 @@
   "bugs": {
     "url": "https://github.com/airkro/nice-move/issues"
   },
-  "main": "index.js",
+  "main": "index.cjs",
   "dependencies": {
-    "fs-chain": "^1.4.1",
     "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
-    "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0"
   },
   "peerDependencies": {
-    "stylelint": "^13.7.2"
+    "stylelint": "^13.8.0"
   },
   "engines": {
     "node": "^12.14 || ^14"

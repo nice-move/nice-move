@@ -108,7 +108,9 @@ module.exports = function autoPackage() {
                   ? undefined
                   : {
                       publishConfig: {
-                        access: pkg.name.startsWith('@') ? 'public' : undefined,
+                        access: (pkg.name || '').startsWith('@')
+                          ? 'public'
+                          : undefined,
                         registry: 'https://registry.npmjs.org/',
                       },
                     },

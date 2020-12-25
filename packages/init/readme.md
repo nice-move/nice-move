@@ -12,14 +12,11 @@ Initialize your workspaces.
 [github-badge]: https://img.shields.io/npm/l/@nice-move/init.svg?style=flat-square&colorB=blue&logo=github
 [node-badge]: https://img.shields.io/node/v/@nice-move/init.svg?style=flat-square&colorB=green&logo=node.js
 
-## Installation
-
-```bash
-npm install @nice-move/init --save-dev
-```
-
 ## Usage
 
 ```bash
-npx -c nice-move-init
+npm init # or yarn init
+npx @nice-move/init
 ```
+
+The command will create or overwrite `.npmrc`, `.yarnrc`, `package.json`, `LICENSE`, `.editorconfig`, `.gitignore`, `.gitattributes`.

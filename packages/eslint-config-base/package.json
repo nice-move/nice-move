@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.5.9",
+  "version": "0.5.10",
   "description": "A `eslint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -32,6 +32,7 @@
   "dependencies": {
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-markdown": "^2.0.0-rc.1",

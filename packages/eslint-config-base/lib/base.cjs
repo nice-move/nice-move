@@ -48,6 +48,7 @@ module.exports = {
     commonjs: false,
     node: false,
   },
+  plugins: ['eslint-comments'],
   rules: {
     'array-callback-return': [
       'error',
@@ -58,6 +59,8 @@ module.exports = {
     'no-nested-ternary': 'off',
     'no-template-curly-in-string': 'off',
     camelcase: 'off',
+    'eslint-comments/no-unused-disable': 'warn',
+    'eslint-comments/no-unused-enable': 'warn',
   },
   overrides: [...(webpack() || []), ...(BestShot() || [])],
 };

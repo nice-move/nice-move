@@ -8,10 +8,11 @@
   },
   "main": "index.cjs",
   "dependencies": {
+    "lodash": "^4.17.20",
     "sortobject": "^4.14.0",
     "write-json-file": "^4.3.0"
   },
   "peerDependencies": {
-    "eslint": "^7.15.0"
+    "eslint": "^7.16.0"
   }
 }

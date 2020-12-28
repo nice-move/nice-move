@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const { ESLint } = require('eslint');
+const pickBy = require('lodash/pickBy');
 const sortObject = require('sortobject').default;
 const writeJsonFile = require('write-json-file');
 
@@ -21,7 +22,11 @@ function eslintInspector(configName, filename, outputName = '') {
 
   return engine
     .calculateConfigForFile(filename)
-    .then(sortObject)
+    .then((data) => {
+      // eslint-disable-next-line no-param-reassign
+      data.rules = pickBy(data.rules, (item) => item[0] !== 'off');
+      return sortObject(data);
+    })
     .then((data) => {
       if (outputName) {
         return save(outputName, data);

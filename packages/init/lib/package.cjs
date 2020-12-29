@@ -38,6 +38,11 @@ module.exports = function autoPackage() {
         selected: !('husky' in devDependencies),
       },
       {
+        title: 'garou',
+        value: 'garou',
+        selected: !('garou' in devDependencies),
+      },
+      {
         title: 'ava',
         value: 'ava',
         selected: !('ava' in devDependencies),
@@ -80,14 +85,15 @@ module.exports = function autoPackage() {
     .then(
       ({
         actions: {
-          husky,
           ava,
-          eslint,
-          react,
-          vue,
-          stylelint,
-          prettier,
           commitlint,
+          eslint,
+          garou,
+          husky,
+          prettier,
+          react,
+          stylelint,
+          vue,
         } = {},
       }) => {
         new Json()
@@ -119,6 +125,13 @@ module.exports = function autoPackage() {
                   ? {
                       devDependencies: {
                         husky: '^4.3.6',
+                      },
+                    }
+                  : undefined,
+                garou
+                  ? {
+                      devDependencies: {
+                        garou: '^0.1.0',
                       },
                     }
                   : undefined,

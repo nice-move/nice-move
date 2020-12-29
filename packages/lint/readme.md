@@ -20,10 +20,10 @@ npm install @nice-move/lint --save-dev
 
 ## Usage
 
-Install `eslint` / `stylelint` / `prettier` if you need to.
+Install `eslint` / `stylelint` / `prettier` / `garou` if you need to.
 
 ```bash
-npm install eslint stylelint prettier --save-dev
+npm install eslint stylelint prettier garou --save-dev
 ```
 
 Add configurations in the way you are used to doing.

@@ -33,18 +33,22 @@ module.exports = function lint({ shell }) {
   const prettier = isInstalled('prettier/package.json');
   const eslint = isInstalled('eslint/package.json');
   const stylelint = isInstalled('stylelint/package.json');
+  const garou = isInstalled('garou/package.json');
 
   const config = parse({
     '*.{vue,html,md}': [
+      garou && 'garou',
       prettier && 'prettier --write --color',
       stylelint && 'stylelint --fix --rd --risd --color',
       eslint && 'eslint --fix --format=pretty --color',
     ],
     '*.{js,jsx,mjs,cjs}': [
+      garou && 'garou',
       prettier && 'prettier --write --color',
       eslint && 'eslint --fix --format=pretty --color',
     ],
     '*.{css,scss,less,xml}': [
+      garou && 'garou',
       prettier && 'prettier --write --color',
       stylelint && 'stylelint --fix --rd --risd --color',
     ],

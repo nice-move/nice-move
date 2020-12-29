@@ -36,10 +36,10 @@ This command will create or overwrite `.npmrc`, `.yarnrc`, `package.json`, `LICE
 
 Lint and format everything.
 
-Install `eslint` / `stylelint` / `prettier` if you need to.
+Install `eslint` / `stylelint` / `prettier` / `garou` if you need to.
 
 ```bash
-npm install eslint stylelint prettier --save-dev
+npm install eslint stylelint prettier garou --save-dev
 ```
 
 Add configurations in the way you are used to doing.
@@ -47,9 +47,9 @@ Add configurations in the way you are used to doing.
 ```json
 // example: package.json
 {
-  "eslintConfig": ...,
-  "prettier": ...,
-  "stylelint": ...
+  "eslintConfig": {},
+  "prettier": {},
+  "stylelint": {}
 }
 ```
 

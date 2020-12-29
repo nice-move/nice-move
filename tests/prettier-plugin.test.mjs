@@ -1,5 +1,5 @@
-import prettier from 'prettier';
 import test from 'ava';
+import prettier from 'prettier';
 
 const original = `{
   "name": "prettier-plugin-package-json",

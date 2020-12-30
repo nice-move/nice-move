@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-vue",
-  "version": "0.5.11",
+  "version": "0.5.12",
   "description": "A `eslint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -29,7 +29,7 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "@nice-move/eslint-config-base": "^0.5.11",
+    "@nice-move/eslint-config-base": "^0.5.12",
     "eslint-plugin-vue": "^7.4.0"
   },
   "peerDependencies": {

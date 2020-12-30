@@ -54,6 +54,7 @@ module.exports = {
       'error',
       { allowImplicit: true, checkForEach: true },
     ],
+    'consistent-return': 'warn',
     'eslint-comments/no-unused-disable': 'warn',
     'eslint-comments/no-unused-enable': 'warn',
     'global-require': 'off',

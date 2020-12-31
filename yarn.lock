@@ -1782,10 +1782,10 @@ eslint-plugin-react-hooks@^4.2.0:
   resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.0.tgz#8c229c268d468956334c943bb45fc860280f5556"
   integrity "sha1-jCKcJo1GiVYzTJQ7tF/IYCgPVVY= sha512-623WEiZJqxR7VdxFCKLI6d6LLpwJkGPYKODnkH3D7WpOG5KM8yWueBd8TLsNAetEJNF5iJmolaAKO3F8yzyVBQ=="
 
-eslint-plugin-react@^7.21.5:
-  version "7.21.5"
-  resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-react/-/eslint-plugin-react-7.21.5.tgz#50b21a412b9574bfe05b21db176e8b7b3b15bff3"
-  integrity "sha1-ULIaQSuVdL/gWyHbF26LezsVv/M= sha512-8MaEggC2et0wSF6bUeywF7qQ46ER81irOdWS4QWxnnlAEsnzeBevk1sWh7fhpCghPpXb+8Ks7hvaft6L/xsR6g=="
+eslint-plugin-react@^7.22.0:
+  version "7.22.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-react/-/eslint-plugin-react-7.22.0.tgz#3d1c542d1d3169c45421c1215d9470e341707269"
+  integrity sha512-p30tuX3VS+NWv9nQot9xIGAHBXR0+xJVaZriEsHoJrASGCJZDJ8JLNM0YqKqI0AKm6Uxaa1VUHoNEibxRCMQHA==
   dependencies:
     array-includes "^3.1.1"
     array.prototype.flatmap "^1.2.3"
@@ -2174,15 +2174,16 @@ functional-red-black-tree@^1.0.1:
   resolved "https://mirrors.cloud.tencent.com/npm/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity "sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc= sha512-dsKNQNdj6xA3T+QlADDA7mOSlX0qiMINjn0cgr+eGHGsbSHzTabcIogz2+p/iqP1Xs6EP/sS2SbqH+brGTbq0g=="
 
-garou@^0.1.2:
-  version "0.1.2"
-  resolved "https://mirrors.cloud.tencent.com/npm/garou/-/garou-0.1.2.tgz#bffea48ea037e71c11adcb705bac66cb86c543f0"
-  integrity sha512-gFEuFf2Qux/LYMkS42mBgW7hOWKRydOoFKBM6+pVoEXcgglKRrfI0aPWNd5MkghsU7Qz1jHT5gL2vt+5wEKdUA==
+garou@^0.1.4:
+  version "0.1.4"
+  resolved "https://mirrors.cloud.tencent.com/npm/garou/-/garou-0.1.4.tgz#9124e9355008b9bed4cae875783562d0d52d4623"
+  integrity sha512-DIjGtQaJMExcsRsVkMBvucVwooiWhW2ZCRjBILrwlHB5QdUPMsZRJ4qsamaOxUZKPLRzdFUIC/b9PPiZtsLpeg==
   dependencies:
     cheetor "^0.3.2"
     eslint "^7.16.0"
     eslint-plugin-html "^6.1.1"
-    eslint-plugin-react "^7.21.5"
+    eslint-plugin-import "^2.22.1"
+    eslint-plugin-react "^7.22.0"
     eslint-plugin-simple-import-sort "^7.0.0"
     eslint-plugin-sort-class-members "^1.9.0"
     globby "^11.0.1"

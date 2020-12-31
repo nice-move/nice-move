@@ -40,6 +40,7 @@ module.exports = {
         ],
       },
     ],
+    'import/newline-after-import': 'off',
     'import/no-dynamic-require': 'off',
     'import/order': 'off',
     'import/prefer-default-export': 'off',

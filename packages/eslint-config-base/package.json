@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.5.13",
+  "version": "0.5.14",
   "description": "A `eslint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -41,7 +41,7 @@
     "eslint-plugin-unicorn": "^24.0.0"
   },
   "peerDependencies": {
-    "eslint": "^7.16.0"
+    "eslint": "^7.17.0"
   },
   "engines": {
     "node": "^12.18 || ^14"

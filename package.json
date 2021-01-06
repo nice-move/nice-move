@@ -26,10 +26,10 @@
     "tools/*"
   ],
   "devDependencies": {
-    "ava": "^3.14.0",
+    "ava": "^3.15.0",
     "commitlint": "^11.0.0",
-    "eslint": "^7.16.0",
-    "garou": "^0.1.4",
+    "eslint": "^7.17.0",
+    "garou": "^0.1.7",
     "husky": "^4.3.6",
     "nodemon": "^2.0.6",
     "prettier": "^2.2.1",

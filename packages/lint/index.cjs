@@ -1,11 +1,11 @@
 const mapValues = require('lodash/mapValues');
 const pickBy = require('lodash/pickBy');
 const isEmpty = require('lodash/isEmpty');
+const { resolve } = require('path');
 
 const lintStaged = require('lint-staged');
 const { yellow } = require('chalk');
 
-const { isInstalled } = require('./lib/utils.cjs');
 const { action } = require('./patch/stylelint.cjs');
 
 function parse(obj) {
@@ -29,11 +29,21 @@ function getMaxArgLength() {
 
 const yarnConfig = require.resolve('./lib/yarn.cjs');
 
+function getDependencies() {
+  try {
+    return require(resolve(process.cwd(), 'package.json')).devDependencies;
+  } catch {
+    return {};
+  }
+}
+
 module.exports = function lint({ shell }) {
-  const prettier = isInstalled('prettier/package.json');
-  const eslint = isInstalled('eslint/package.json');
-  const stylelint = isInstalled('stylelint/package.json');
-  const garou = isInstalled('garou/package.json');
+  const dependencies = getDependencies();
+
+  const prettier = 'prettier' in dependencies;
+  const eslint = 'eslint' in dependencies;
+  const stylelint = 'stylelint' in dependencies;
+  const garou = 'garou' in dependencies;
 
   const config = parse({
     '*.{vue,html,md}': [

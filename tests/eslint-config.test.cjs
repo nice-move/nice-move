@@ -1,4 +1,4 @@
-const eslintInspector = require('@nice-move/eslint-inspector');
+const { eslintInspector } = require('@nice-move/inspector');
 const test = require('ava').default;
 
 const baseEngine = (filename) => eslintInspector('@nice-move/base', filename);

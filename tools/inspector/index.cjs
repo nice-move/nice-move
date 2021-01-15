@@ -2,8 +2,9 @@
 
 const { ESLint } = require('eslint');
 const pickBy = require('lodash/pickBy');
-const sortObject = require('sortobject').default;
+const sortKeys = require('sort-keys');
 const writeJsonFile = require('write-json-file');
+const printConfig = require('stylelint/lib/printConfig.js');
 
 function save(outputName, data) {
   return writeJsonFile(`.cache/${outputName}`, data, { indent: 2 }).catch(
@@ -25,7 +26,7 @@ function eslintInspector(configName, filename, outputName = '') {
     .then((data) => {
       // eslint-disable-next-line no-param-reassign
       data.rules = pickBy(data.rules, (item) => item[0] !== 'off');
-      return sortObject(data);
+      return sortKeys(data, { deep: true });
     })
     .then((data) => {
       if (outputName) {
@@ -35,7 +36,27 @@ function eslintInspector(configName, filename, outputName = '') {
     });
 }
 
-module.exports = eslintInspector;
+function stylelintInspector(outputName) {
+  printConfig({
+    extends: '@nice-move/stylelint-config',
+    files: ['abc.css'],
+  })
+    .then((data) => {
+      // eslint-disable-next-line no-param-reassign
+      data.rules = pickBy(data.rules, (item) => item !== null);
+      const io = sortKeys(data, { deep: true });
+      if (outputName) {
+        return save(outputName, io);
+      }
+      return io;
+    })
+    .catch(console.error);
+}
+
+module.exports = {
+  eslintInspector,
+  stylelintInspector,
+};
 
 if (require.main.filename === __filename) {
   eslintInspector('@nice-move/base', 'sample.js', 'js.json');
@@ -54,4 +75,6 @@ if (require.main.filename === __filename) {
 
   eslintInspector('@nice-move/react', 'sample.md/o.jsx', 'md/jsx.json');
   eslintInspector('@nice-move/base', 'sample.md/o.vue', 'md/vue.json');
+
+  stylelintInspector('css.json');
 }

@@ -1,18 +1,19 @@
 {
   "private": true,
-  "name": "@nice-move/eslint-inspector",
+  "name": "@nice-move/inspector",
   "version": "0.0.0",
   "license": "UNLICENSED",
   "bin": {
-    "eslint-inspect": "index.cjs"
+    "inspect": "index.cjs"
   },
   "main": "index.cjs",
   "dependencies": {
     "lodash": "^4.17.20",
-    "sortobject": "^4.14.0",
+    "sort-keys": "^4.2.0",
     "write-json-file": "^4.3.0"
   },
   "peerDependencies": {
-    "eslint": "^7.16.0"
+    "eslint": "^7.17.0",
+    "stylelint": "^13.8.0"
   }
 }

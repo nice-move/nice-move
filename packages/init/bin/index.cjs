@@ -2,4 +2,7 @@
 
 const init = require('../index.cjs');
 
-init();
+init().catch?.((error) => {
+  console.warn(error);
+  process.exitCode = 1;
+});

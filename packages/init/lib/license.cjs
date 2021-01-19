@@ -1,21 +1,23 @@
 const username = require('git-username');
 const { Text } = require('fs-chain');
+const { render } = require('micromustache');
 
-const { pkgCwd, readTemplate } = require('./utils.cjs');
+const { pkgCwd } = require('./utils.cjs');
 
 module.exports = function autoLicense() {
-  const { license, private: isPrivate, author = '' } = pkgCwd();
+  const { license, author = '' } = pkgCwd();
 
   if (license === 'MIT') {
-    new Text()
-      .handle(() =>
-        readTemplate('mit', {
-          year: new Date().getFullYear(),
-          holder: author.name || username(),
-        }),
-      )
-      .output('./LICENSE');
-  } else if (license === 'UNLICENSE' && !isPrivate) {
-    new Text().handle(() => readTemplate('unlicense')).output('./LICENSE');
+    // eslint-disable-next-line no-inner-declarations
+    function merge(text) {
+      return render(text, {
+        year: new Date().getFullYear(),
+        holder: author.name || author || username() || 'Unknown',
+      });
+    }
+
+    new Text().source('./template/mit.tpl').handle(merge).output('~LICENSE');
+  } else if (license === 'UNLICENSE') {
+    new Text().source('./template/unlicense.tpl').output('~LICENSE');
   }
 };

@@ -1,28 +1,20 @@
 const { Text } = require('fs-chain');
 
-const { readTemplate } = require('./lib/utils.cjs');
 const autoPackage = require('./lib/package.cjs');
 const autoGitignore = require('./lib/gitignore.cjs');
 const autoLicense = require('./lib/license.cjs');
 const autoRegistry = require('./lib/registry.cjs');
 
-module.exports = function init() {
-  new Text()
-    .source('./.editorconfig')
-    .handle(() => readTemplate('.editorconfig'))
-    .output();
+module.exports = async function init() {
+  new Text().source('./template/.editorconfig.tpl').output('~.editorconfig');
 
-  new Text()
-    .source('./.gitattributes')
-    .handle(() => readTemplate('.gitattributes'))
-    .output();
+  new Text().source('./template/.gitattributes.tpl').output('~.gitattributes');
 
   autoRegistry();
+
   autoLicense();
 
-  autoGitignore()
-    .catch(console.error)
-    .finally(() => {
-      autoPackage();
-    });
+  await autoGitignore();
+
+  await autoPackage();
 };

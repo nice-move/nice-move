@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/init",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Initialize your workspaces",
   "license": "MIT",
   "author": {
@@ -34,11 +34,10 @@
   "dependencies": {
     "centra": "^2.4.2",
     "deepmerge": "^4.2.2",
-    "fs-chain": "^1.4.1",
+    "fs-chain": "^3.2.2",
     "git-username": "^1.0.0",
-    "is-there": "^4.5.1",
     "micromustache": "^8.0.3",
-    "ora": "^5.1.0",
+    "ora": "^5.2.0",
     "os-locale": "^5.0.0",
     "prompts": "^2.4.0"
   },

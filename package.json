@@ -17,8 +17,8 @@
     "url": "https://github.com/airkro/nice-move/issues"
   },
   "scripts": {
-    "format": "nice-move lint",
     "inspect": "nodemon",
+    "lint": "nice-move lint",
     "test": "ava --verbose"
   },
   "workspaces": [
@@ -28,9 +28,9 @@
   "devDependencies": {
     "ava": "^3.15.0",
     "commitlint": "^11.0.0",
-    "eslint": "^7.17.0",
+    "eslint": "^7.18.0",
     "garou": "^0.1.10",
-    "husky": "^4.3.7",
+    "husky": "^4.3.8",
     "nodemon": "^2.0.7",
     "prettier": "^2.2.1",
     "stylelint": "^13.8.0"

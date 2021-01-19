@@ -963,6 +963,14 @@ character-reference-invalid@^1.0.0:
   resolved "https://mirrors.cloud.tencent.com/npm/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity "sha1-CDMpzaDq4nKrPbvzfpo4LBOvFWA= sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg=="
 
+cheetor@^0.3.2:
+  version "0.3.2"
+  resolved "https://mirrors.cloud.tencent.com/npm/cheetor/-/cheetor-0.3.2.tgz#157fe808614c9e7c2afc5c5587ca66118a71f329"
+  integrity sha512-sPdlyfPUaFHz7bcf9zfRggbP3TeGxNRbxgkepBJewWgusGXtV5qnCrRHTS1ZH42ZDVnfiNjvnGI7iSBGgp6C2Q==
+  dependencies:
+    chalk "^4.1.0"
+    yargs "^16.2.0"
+
 cheetor@^0.4.1:
   version "0.4.1"
   resolved "https://mirrors.cloud.tencent.com/npm/cheetor/-/cheetor-0.4.1.tgz#63fcb1bf018da5efd6f005767856291784fb50e3"
@@ -1688,7 +1696,7 @@ eslint-config-airbnb@^18.2.1:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-prettier@^7.1.0:
+eslint-config-prettier@^7.2.0:
   version "7.2.0"
   resolved "https://mirrors.cloud.tencent.com/npm/eslint-config-prettier/-/eslint-config-prettier-7.2.0.tgz#f4a4bd2832e810e8cc7c1411ec85b3e85c0c53f9"
   integrity sha512-rV4Qu0C3nfJKPOAhFujFxB7RMP+URFyQqqOZW9DMRD7ZDTFyjaIlETU3xzHELt++4ugC0+Jm084HQYkkJe+Ivg==
@@ -1853,17 +1861,17 @@ eslint-plugin-sort-class-members@^1.9.0:
   resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-sort-class-members/-/eslint-plugin-sort-class-members-1.9.0.tgz#f837e1699cce61d9d2665f63d0692f6c1abdd409"
   integrity sha512-y01nzXHO78jBFaGSLEOqK2bKlA8Bi7xzDrxjhCj+GhGFyf2sgwLOj6QdTCHFU5Jt6nHM8l61syMGtfJTl/67Dw==
 
-eslint-plugin-unicorn@^24.0.0:
-  version "24.0.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-unicorn/-/eslint-plugin-unicorn-24.0.0.tgz#08017ccd7ac704777d459cff6e13a35f54cbcab1"
-  integrity sha512-NfLjIZas/ZUwc3S+pUtbTRqgCkODxPEkJBJ5ZR8wIu90BmX4jmXp10hoOZMScR2CR1NYTtrx0OX4BQvBnbzZzA==
+eslint-plugin-unicorn@^26.0.1:
+  version "26.0.1"
+  resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-unicorn/-/eslint-plugin-unicorn-26.0.1.tgz#65f476bb7624beb417066259dc14c7ebb21eb6fc"
+  integrity sha512-SWgF9sIVY74zqkkSN2dclSCqRfocWSUGD0haC0NX2oRfmdp9p8dQvJYkYSQePaCyssPUE/pqpsIEEZNTh8crUA==
   dependencies:
     ci-info "^2.0.0"
     clean-regexp "^1.0.0"
     eslint-ast-utils "^1.1.0"
-    eslint-template-visitor "^2.2.1"
+    eslint-template-visitor "^2.2.2"
     eslint-utils "^2.1.0"
-    import-modules "^2.0.0"
+    import-modules "^2.1.0"
     lodash "^4.17.20"
     pluralize "^8.0.0"
     read-pkg-up "^7.0.1"
@@ -1895,7 +1903,7 @@ eslint-scope@^5.0.0, eslint-scope@^5.1.1:
     esrecurse "^4.3.0"
     estraverse "^4.1.1"
 
-eslint-template-visitor@^2.2.1:
+eslint-template-visitor@^2.2.2:
   version "2.2.2"
   resolved "https://mirrors.cloud.tencent.com/npm/eslint-template-visitor/-/eslint-template-visitor-2.2.2.tgz#46cd2b06eca5c1d97369aadd96e131df88fdd59c"
   integrity sha512-SkcLjzKw3JjKTWHacRDeLBa2gxb600zbCKTkXj/V97QnZ9yxkknoPL8vc8PFueqbFXP7mYNTQzjCjcMpTRdRaA==
@@ -1922,7 +1930,7 @@ eslint-visitor-keys@^2.0.0:
   resolved "https://mirrors.cloud.tencent.com/npm/eslint-visitor-keys/-/eslint-visitor-keys-2.0.0.tgz#21fdc8fbcd9c795cc0321f0563702095751511a8"
   integrity "sha1-If3I+82ceVzAMh8FY3AglXUVEag= sha512-QudtT6av5WXels9WjIM7qz1XD1cWGvX4gGXvp/zBn9nXG02D0utdU3Em2m/QjTnrsk6bBjmCygl3rmj118msQQ=="
 
-eslint@^7.17.0:
+eslint@^7.17.0, eslint@^7.18.0:
   version "7.18.0"
   resolved "https://mirrors.cloud.tencent.com/npm/eslint/-/eslint-7.18.0.tgz#7fdcd2f3715a41fe6295a16234bd69aed2c75e67"
   integrity sha512-fbgTiE8BfUJZuBeq2Yi7J3RB3WGUQ9PNuNbmgi6jt9Iv8qrkxfy19Ds3OpL1Pm7zg3BtTVhvcUZbIRQ0wmSjAQ==
@@ -2574,7 +2582,7 @@ human-signals@^1.1.1:
   resolved "https://mirrors.cloud.tencent.com/npm/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
   integrity "sha1-xbHNFPUK6uCatsWf5jujOV/k36M= sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw=="
 
-husky@^4.3.7:
+husky@^4.3.8:
   version "4.3.8"
   resolved "https://mirrors.cloud.tencent.com/npm/husky/-/husky-4.3.8.tgz#31144060be963fd6850e5cc8f019a1dfe194296d"
   integrity sha512-LCqqsB0PzJQ/AlCgfrfzRe3e3+NvmefAdKQhRYpxS4u6clblBoDdzzvHi8fmxKRzvMxPY/1WZWzomPZww0Anow==
@@ -2641,7 +2649,7 @@ import-local@^3.0.2:
     pkg-dir "^4.2.0"
     resolve-cwd "^3.0.0"
 
-import-modules@^2.0.0:
+import-modules@^2.1.0:
   version "2.1.0"
   resolved "https://mirrors.cloud.tencent.com/npm/import-modules/-/import-modules-2.1.0.tgz#abe7df297cb6c1f19b57246eb8b8bd9664b6d8c2"
   integrity sha512-8HEWcnkbGpovH9yInoisxaSoIg9Brbul+Ju3Kqe2UsYDUBJD/iQjSgEj0zPcTDPKfPp2fs5xlv1i+JSye/m1/A==

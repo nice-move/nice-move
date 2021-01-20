@@ -1,8 +1,6 @@
 const centra = require('centra');
 const ora = require('ora');
 const { EOL, type } = require('os');
-const { readFileSync } = require('fs');
-const { resolve } = require('path');
 const { Text } = require('fs-chain');
 
 const { regexp } = require('./utils.cjs');
@@ -12,8 +10,6 @@ const Types = {
   Linux: 'linux',
   Darwin: 'macos',
 };
-
-const ignorePath = resolve(process.cwd(), '.gitignore');
 
 function get(url) {
   return centra(url)
@@ -27,10 +23,9 @@ function get(url) {
     });
 }
 
-function getPlatform() {
+function getPlatform(context = '') {
   try {
-    const context = readFileSync(ignorePath, 'utf8');
-    if (context.match(regexp)) {
+    if (regexp.test(context)) {
       return [
         ...new Set(
           context
@@ -115,7 +110,7 @@ module.exports = function gitignore() {
   return download(platform)
     .then(convert)
     .then((handler) => {
-      new Text().source(ignorePath).handle(handler).output();
+      new Text().source('~.gitignore').handle(handler).output();
       spinner.succeed('Created `.gitignore` by `gitignore.io`');
     })
     .catch((error) => {

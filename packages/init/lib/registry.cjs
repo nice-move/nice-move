@@ -6,12 +6,12 @@ module.exports = async function autoRegistry() {
 
   if (InChina) {
     new Text()
-      .exists('~.npmrc')
-      .source()
+      .source('~.npmrc')
+      .exists((exists) => exists)
       .handle((text) => {
         if (
-          text.match(
-            /registry\s*=\s*https:\/\/mirrors\.cloud\.tencent\.com\/npm\//,
+          /registry\s*=\s*https:\/\/mirrors\.cloud\.tencent\.com\/npm\//.test(
+            text,
           )
         ) {
           throw new Error('skip');
@@ -22,12 +22,12 @@ module.exports = async function autoRegistry() {
       .catch(console.warn);
 
     new Text()
-      .exists('~.yarnrc')
-      .source()
+      .source('~.yarnrc')
+      .exists((exists) => exists)
       .handle((text) => {
         if (
-          text.match(
-            /registry\s+"https:\/\/mirrors\.cloud\.tencent\.com\/npm\/"/,
+          /registry\s+"https:\/\/mirrors\.cloud\.tencent\.com\/npm\/"/.test(
+            text,
           )
         ) {
           throw new Error('skip');

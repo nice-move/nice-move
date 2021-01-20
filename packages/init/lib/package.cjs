@@ -1,7 +1,7 @@
 const { Json } = require('fs-chain');
 const deepmerge = require('deepmerge');
-const prompt = require('./prompt.cjs');
 
+const prompt = require('./prompt.cjs');
 const { pkgCwd } = require('./utils.cjs');
 
 function format(data) {
@@ -31,7 +31,7 @@ function checkEslint({
       extends: `@nice-move/eslint-config-${type}`,
     },
     devDependencies: {
-      [`@nice-move/eslint-config-${type}`]: '^0.5.14',
+      [`@nice-move/eslint-config-${type}`]: '^0.5.15',
       eslint: '^7.18.0',
     },
   };
@@ -105,7 +105,17 @@ module.exports = async function autoPackage() {
       stylelint,
       vue,
     }) {
-      new Json()
+      const useLint = eslint || stylelint || prettier || garou;
+
+      const prepublishOnly =
+        [
+          useLint ? 'nice-move lint' : undefined,
+          ava ? 'ava --fail-fast' : undefined,
+        ]
+          .filter(Boolean)
+          .join(' && ') || undefined;
+
+      return new Json()
         .source('~package.json')
         .config({ pretty: true })
         .handle((old) =>
@@ -123,11 +133,14 @@ module.exports = async function autoPackage() {
                       access: 'public',
                       registry: 'https://registry.npmjs.org/',
                     },
+                    scripts: {
+                      prepublishOnly,
+                    },
                   },
               old,
               {
                 devDependencies: {
-                  '@nice-move/cli': '^0.5',
+                  '@nice-move/cli': '^0.5.14',
                 },
               },
               husky || commitlint
@@ -160,7 +173,7 @@ module.exports = async function autoPackage() {
                     },
                   }
                 : undefined,
-              eslint || stylelint || prettier || garou
+              useLint
                 ? {
                     scripts: {
                       lint: 'nice-move lint',
@@ -183,10 +196,7 @@ module.exports = async function autoPackage() {
                     husky: husky
                       ? {
                           hooks: {
-                            'pre-commit':
-                              eslint || stylelint || prettier
-                                ? 'nice-move lint && ava --verbose'
-                                : 'ava --verbose',
+                            'pre-commit': prepublishOnly,
                           },
                         }
                       : undefined,
@@ -197,7 +207,7 @@ module.exports = async function autoPackage() {
                 ? {
                     devDependencies: {
                       '@nice-move/stylelint-config': '^0.5.2',
-                      stylelint: '^13.8.0',
+                      stylelint: '^13.9.0',
                     },
                     stylelint: {
                       extends: '@nice-move/stylelint-config',

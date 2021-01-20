@@ -26,4 +26,4 @@ npx @nice-move/init
 - Run `git init` when current workspace is not a git project
 - Create or overwrite `.gitignore`, `.gitattributes`
 - Create or overwrite `package.json`, `LICENSE`, `.editorconfig`,
-- Create or overwrite `.npmrc`, `.yarnrc`
+- Using China registry mirror

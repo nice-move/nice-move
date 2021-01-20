@@ -15,8 +15,15 @@ Initialize your workspaces.
 ## Usage
 
 ```bash
+mkdir sample
+cd sample
 npm init # or yarn init
 npx @nice-move/init
 ```
 
-The command will create or overwrite `.npmrc`, `.yarnrc`, `package.json`, `LICENSE`, `.editorconfig`, `.gitignore`, `.gitattributes`.
+## Features
+
+- Run `git init` when current workspace is not a git project
+- Create or overwrite `.gitignore`, `.gitattributes`
+- Create or overwrite `package.json`, `LICENSE`, `.editorconfig`,
+- Create or overwrite `.npmrc`, `.yarnrc`

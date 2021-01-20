@@ -4,7 +4,7 @@ const { render } = require('micromustache');
 
 const { pkgCwd } = require('./utils.cjs');
 
-module.exports = function autoLicense() {
+module.exports = async function autoLicense() {
   const { license, author = '' } = pkgCwd();
 
   if (license === 'MIT') {
@@ -16,8 +16,15 @@ module.exports = function autoLicense() {
       });
     }
 
-    new Text().source('./template/mit.tpl').handle(merge).output('~LICENSE');
+    await new Text()
+      .source('./template/mit.tpl')
+      .handle(merge)
+      .output('~LICENSE')
+      .logger('Create/Overwrite `LICENSE`');
   } else if (license === 'UNLICENSE') {
-    new Text().source('./template/unlicense.tpl').output('~LICENSE');
+    await new Text()
+      .source('./template/unlicense.tpl')
+      .output('~LICENSE')
+      .logger('Create/Overwrite `LICENSE`');
   }
 };

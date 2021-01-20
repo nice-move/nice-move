@@ -37,12 +37,12 @@ function checkEslint({
   };
 }
 
-module.exports = function autoPackage() {
+module.exports = async function autoPackage() {
   const pkg = pkgCwd();
 
   const { devDependencies = {}, dependencies = {} } = pkg;
 
-  prompt({
+  await prompt({
     message: 'Pick your project keywords',
     choices: [
       {

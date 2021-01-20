@@ -1,7 +1,7 @@
 const { Json } = require('fs-chain');
 const deepmerge = require('deepmerge');
 
-const prompt = require('./prompt.cjs');
+const { Checkbox } = require('./prompt.cjs');
 const { pkgCwd } = require('./utils.cjs');
 
 function format(data) {
@@ -42,7 +42,7 @@ module.exports = async function autoPackage() {
 
   const { devDependencies = {}, dependencies = {} } = pkg;
 
-  await prompt({
+  await Checkbox({
     message: 'Pick your project keywords',
     choices: [
       {

@@ -1575,6 +1575,11 @@ emoji-regex@^9.0.0:
   resolved "https://mirrors.cloud.tencent.com/npm/emoji-regex/-/emoji-regex-9.2.0.tgz#a26da8e832b16a9753309f25e35e3c0efb9a066a"
   integrity "sha1-om2o6DKxapdTMJ8l4148DvuaBmo= sha512-DNc3KFPK18bPdElMJnf/Pkv5TXhxFU3YFDEuGLDRtPmV4rkmCjBkCSEp22u6rBHdSN9Vlp/GK7k98prmE1Jgug=="
 
+empty-dir@^2.0.0:
+  version "2.0.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/empty-dir/-/empty-dir-2.0.0.tgz#c59b4e73b9909d3c4bd49c1fbdaea52031fe22ac"
+  integrity sha512-XAedXlNAQZxMmbllXY9cxuESlNVjZ8xd67bSIUZwbS7VoLyhlNehVN3Iy35yDTGFHKR1opBRgORkp3am0so+WQ==
+
 end-of-stream@^1.1.0:
   version "1.4.4"
   resolved "https://mirrors.cloud.tencent.com/npm/end-of-stream/-/end-of-stream-1.4.4.tgz#5ae64a5f45057baf3626ec14da0ca5e4b2431eb0"

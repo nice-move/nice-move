@@ -1,15 +1,27 @@
 const { Text } = require('fs-chain');
 const emptyDir = require('empty-dir');
+const execa = require('execa');
+const isGitDirty = require('is-git-dirty');
 
 const autoPackage = require('./lib/package.cjs');
 const git = require('./lib/git.cjs');
 const autoLicense = require('./lib/license.cjs');
 const autoRegistry = require('./lib/registry.cjs');
-
 const { Confirm } = require('./lib/prompt.cjs');
 
-async function action() {
-  await git();
+async function gitSupport() {
+  try {
+    const { stdout } = await execa('git', ['--version']);
+    return !!stdout;
+  } catch {
+    return false;
+  }
+}
+
+async function action(gitSupported) {
+  if (gitSupported) {
+    await git();
+  }
 
   await autoLicense();
 
@@ -26,12 +38,18 @@ async function action() {
 module.exports = async function init() {
   const isEmpty = await emptyDir(process.cwd());
 
-  if (isEmpty) {
-    action();
+  const gitSupported = await gitSupport();
+
+  const isDirty = gitSupported ? !!isGitDirty() : false;
+
+  if (!isDirty || isEmpty) {
+    action(gitSupported);
   } else {
     Confirm({
-      message: 'Workspace is not empty',
-      callback: action,
+      message: isDirty ? 'Repository is not clean' : 'Workspace is not empty',
+      callback() {
+        action(gitSupported);
+      },
     });
   }
 };

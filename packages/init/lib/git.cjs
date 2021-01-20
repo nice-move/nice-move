@@ -52,20 +52,7 @@ function getPlatform(context = '') {
   }
 }
 
-async function gitSupport() {
-  try {
-    const { stdout } = await execa('git', ['--version']);
-    return !!stdout;
-  } catch {
-    return false;
-  }
-}
-
 module.exports = async function git() {
-  if (!(await gitSupport())) {
-    return;
-  }
-
   if (!isGit()) {
     const message = 'Initialized empty repository';
     await execa('git', ['init']).then(

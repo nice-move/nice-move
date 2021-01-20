@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/init",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Initialize your workspaces",
   "license": "MIT",
   "author": {
@@ -39,6 +39,7 @@
     "execa": "^5.0.0",
     "fs-chain": "^5.1.0",
     "git-username": "^1.0.0",
+    "is-git-dirty": "^2.0.1",
     "is-git-repository": "^2.0.0",
     "micromustache": "^8.0.3",
     "ora": "^5.2.0",

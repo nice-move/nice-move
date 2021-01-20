@@ -13,7 +13,7 @@
     "write-json-file": "^4.3.0"
   },
   "peerDependencies": {
-    "eslint": "^7.17.0",
-    "stylelint": "^13.8.0"
+    "eslint": "^7.18.0",
+    "stylelint": "^13.9.0"
   }
 }

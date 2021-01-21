@@ -23,19 +23,26 @@ module.exports = async function Confirm() {
     pkg,
   };
 
-  return prompts([
+  return prompts(
+    [
+      {
+        active: 'do it',
+        inactive: 'cancel',
+        message:
+          isDirty === true ? 'Repository not clean' : 'Workspace not empty',
+        name: 'okay',
+        type: () => (isEmpty || isDirty === false ? null : 'toggle'),
+      },
+      GitInit.prompt(options),
+      Dependencies.prompt(options),
+      Install.prompt(options),
+    ],
     {
-      active: 'do it',
-      inactive: 'cancel',
-      message:
-        isDirty === true ? 'Repository not clean' : 'Workspace not empty',
-      name: 'okay',
-      type: () => (isEmpty || isDirty === false ? null : 'toggle'),
+      onCancel() {
+        throw new Error('cancel');
+      },
     },
-    GitInit.prompt(options),
-    Dependencies.prompt(options),
-    Install.prompt(options),
-  ]).then(({ okay, ...rest }) => {
+  ).then(({ okay, ...rest }) => {
     if (okay === false) {
       throw new Error('cancel');
     }

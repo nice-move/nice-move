@@ -36,7 +36,7 @@ function checkEslint({
 
 const message = 'Add project dependencies';
 
-async function Dependencies(
+function Dependencies(
   pkg,
   {
     ava,
@@ -85,11 +85,6 @@ async function Dependencies(
                 },
               },
           old,
-          {
-            devDependencies: {
-              '@nice-move/cli': '^0.5.14',
-            },
-          },
           husky || commitlint
             ? {
                 devDependencies: {
@@ -122,6 +117,9 @@ async function Dependencies(
             : undefined,
           useLint
             ? {
+                devDependencies: {
+                  '@nice-move/cli': '^0.5.14',
+                },
                 scripts: {
                   lint: 'nice-move lint',
                 },
@@ -190,6 +188,7 @@ exports.prompt = ({
   pkg: { devDependencies = {}, dependencies = {} } = {},
 } = {}) => ({
   instructions: false,
+  optionsPerPage: 20,
   message,
   name: 'Dependencies',
   type: (first) => (first === false ? null : 'multiselect'),

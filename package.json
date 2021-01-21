@@ -2,7 +2,7 @@
   "private": true,
   "name": "nice-move",
   "version": "0.0.0",
-  "description": "Eslint/Stylelint/Prettier config for personal use",
+  "description": "Frontend develop helper for personal use",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",

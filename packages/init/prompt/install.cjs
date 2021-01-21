@@ -13,7 +13,8 @@ exports.prompt = () => ({
   format(value) {
     if (value === true) {
       return () => {
-        install({ showCommand: false });
+        console.log('-'.repeat(32));
+        install();
       };
     }
   },

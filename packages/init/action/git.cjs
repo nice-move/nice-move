@@ -6,7 +6,7 @@ const isGit = require('is-git-repository');
 const execa = require('execa');
 const { green, red } = require('chalk');
 
-const { regexp } = require('./utils.cjs');
+const regexp = /# Created by https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+[\S\s]+# End of https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+/;
 
 function download(url) {
   return centra(url)
@@ -69,7 +69,7 @@ module.exports = async function git() {
 
   if (isGit()) {
     await new Text()
-      .source('./template/.gitattributes.tpl')
+      .source('../template/.gitattributes.tpl')
       .output('~.gitattributes')
       .logger('Create/Overwrite `.gitattributes`');
 

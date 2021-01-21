@@ -1,52 +1,39 @@
-const { Text } = require('fs-chain');
-const emptyDir = require('empty-dir');
-const execa = require('execa');
 const isGitDirty = require('is-git-dirty');
 
-const autoPackage = require('./lib/package.cjs');
-const git = require('./lib/git.cjs');
-const autoLicense = require('./lib/license.cjs');
-const autoRegistry = require('./lib/registry.cjs');
-const { Confirm } = require('./lib/prompt.cjs');
+const autoPackage = require('./action/package.cjs');
+const EditorConfig = require('./action/editorconfig.cjs');
+const Git = require('./action/git.cjs');
+const License = require('./action/license.cjs');
+const Registry = require('./action/registry.cjs');
 
-async function gitSupport() {
-  try {
-    const { stdout } = await execa('git', ['--version']);
-    return !!stdout;
-  } catch {
-    return false;
-  }
-}
+const { Confirm } = require('./lib/prompt.cjs');
+const { gitSupport, emptyDir } = require('./lib/utils.cjs');
 
 async function action(gitSupported) {
   if (gitSupported) {
-    await git();
+    await Git();
   }
 
-  await autoLicense();
-
-  await new Text()
-    .source('./template/.editorconfig.tpl')
-    .output('~.editorconfig')
-    .logger('Create/Overwrite `.editorconfig`');
-
-  await autoRegistry();
+  await EditorConfig();
 
   await autoPackage();
+
+  Registry();
+  License();
 }
 
 module.exports = async function init() {
-  const isEmpty = await emptyDir(process.cwd());
+  const isEmpty = emptyDir();
 
   const gitSupported = await gitSupport();
 
   const isDirty = gitSupported ? !!isGitDirty() : false;
 
-  if (!isDirty || isEmpty) {
+  if (isEmpty || !isDirty) {
     action(gitSupported);
   } else {
     Confirm({
-      message: isDirty ? 'Repository is not clean' : 'Workspace is not empty',
+      message: isDirty ? 'Repository not clean' : 'Workspace not empty',
       callback() {
         action(gitSupported);
       },

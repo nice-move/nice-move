@@ -2,9 +2,9 @@ const username = require('git-username');
 const { Text } = require('fs-chain');
 const { render } = require('micromustache');
 
-const { pkgCwd } = require('./utils.cjs');
+const { pkgCwd } = require('../lib/utils.cjs');
 
-module.exports = async function autoLicense() {
+module.exports = async function License() {
   const { license, author = '' } = pkgCwd();
 
   if (license === 'MIT') {
@@ -17,13 +17,13 @@ module.exports = async function autoLicense() {
     }
 
     await new Text()
-      .source('./template/mit.tpl')
+      .source('../template/mit.tpl')
       .handle(merge)
       .output('~LICENSE')
       .logger('Create/Overwrite `LICENSE`');
   } else if (license === 'UNLICENSE') {
     await new Text()
-      .source('./template/unlicense.tpl')
+      .source('../template/unlicense.tpl')
       .output('~LICENSE')
       .logger('Create/Overwrite `LICENSE`');
   }

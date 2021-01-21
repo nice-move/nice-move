@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.5.14",
+  "version": "0.5.15",
   "description": "Initializer, linter, and formatter for frontend development",
   "license": "MIT",
   "author": {
@@ -31,9 +31,9 @@
     "nice-move": "index.cjs"
   },
   "dependencies": {
-    "@nice-move/init": "^0.1.1",
+    "@nice-move/init": "^0.1.8",
     "@nice-move/lint": "^0.1.2",
-    "cheetor": "^0.3.2"
+    "cheetor": "^0.4.1"
   },
   "engines": {
     "node": "^12.18 || ^14"

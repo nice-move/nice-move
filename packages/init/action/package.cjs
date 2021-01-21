@@ -1,8 +1,8 @@
 const { Json } = require('fs-chain');
 const deepmerge = require('deepmerge');
 
-const { Checkbox } = require('./prompt.cjs');
-const { pkgCwd } = require('./utils.cjs');
+const { Checkbox } = require('../lib/prompt.cjs');
+const { pkgCwd } = require('../lib/utils.cjs');
 
 function format(data) {
   try {
@@ -48,50 +48,49 @@ module.exports = async function autoPackage() {
       {
         title: 'husky',
         value: 'husky',
-        selected: !('husky' in devDependencies),
+        selected: 'husky' in devDependencies,
       },
       {
         title: 'garou',
         value: 'garou',
-        selected: !('garou' in devDependencies),
+        selected: 'garou' in devDependencies,
       },
       {
         title: 'ava',
         value: 'ava',
-        selected: !('ava' in devDependencies),
+        selected: 'ava' in devDependencies,
       },
       {
         title: 'commitlint',
         value: 'commitlint',
-        selected: !(
+        selected:
           'commitlint' in devDependencies ||
-          '@commitlint/cli' in devDependencies
-        ),
+          '@commitlint/cli' in devDependencies,
       },
       {
         title: 'eslint',
         value: 'eslint',
-        selected: !('eslint' in devDependencies),
+        selected: 'eslint' in devDependencies,
       },
       {
         title: 'stylelint',
         value: 'stylelint',
-        selected: !('stylelint' in devDependencies),
+        selected: 'stylelint' in devDependencies,
       },
       {
         title: 'prettier',
         value: 'prettier',
-        selected: !('prettier' in devDependencies),
+        selected: 'prettier' in devDependencies,
       },
       {
         title: 'react',
         value: 'react',
-        selected: !('react' in dependencies),
+        selected: 'react' in dependencies,
       },
       {
         title: 'vue',
         value: 'vue',
-        selected: !('vue' in dependencies),
+        selected: 'vue' in dependencies,
       },
     ],
     callback({

@@ -23,7 +23,8 @@ npx @nice-move/init
 
 ## Features
 
-- Run `git init` when current workspace is not a git project
-- Create or overwrite `.gitignore`, `.gitattributes`
-- Create or overwrite `package.json`, `LICENSE`, `.editorconfig`,
+- Confirm when workspace not empty or repository not clean
+- Run `git init` when workspace not a git project
+- Create or overwrite `.gitignore` / `.gitattributes`
+- Create or overwrite `package.json` / `LICENSE` / `.editorconfig`
 - Using China registry mirror

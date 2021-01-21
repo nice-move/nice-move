@@ -973,14 +973,6 @@ character-reference-invalid@^1.0.0:
   resolved "https://mirrors.cloud.tencent.com/npm/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity "sha1-CDMpzaDq4nKrPbvzfpo4LBOvFWA= sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg=="
 
-cheetor@^0.3.2:
-  version "0.3.2"
-  resolved "https://mirrors.cloud.tencent.com/npm/cheetor/-/cheetor-0.3.2.tgz#157fe808614c9e7c2afc5c5587ca66118a71f329"
-  integrity sha512-sPdlyfPUaFHz7bcf9zfRggbP3TeGxNRbxgkepBJewWgusGXtV5qnCrRHTS1ZH42ZDVnfiNjvnGI7iSBGgp6C2Q==
-  dependencies:
-    chalk "^4.1.0"
-    yargs "^16.2.0"
-
 cheetor@^0.4.1:
   version "0.4.1"
   resolved "https://mirrors.cloud.tencent.com/npm/cheetor/-/cheetor-0.4.1.tgz#63fcb1bf018da5efd6f005767856291784fb50e3"
@@ -1574,11 +1566,6 @@ emoji-regex@^9.0.0:
   version "9.2.0"
   resolved "https://mirrors.cloud.tencent.com/npm/emoji-regex/-/emoji-regex-9.2.0.tgz#a26da8e832b16a9753309f25e35e3c0efb9a066a"
   integrity "sha1-om2o6DKxapdTMJ8l4148DvuaBmo= sha512-DNc3KFPK18bPdElMJnf/Pkv5TXhxFU3YFDEuGLDRtPmV4rkmCjBkCSEp22u6rBHdSN9Vlp/GK7k98prmE1Jgug=="
-
-empty-dir@^2.0.0:
-  version "2.0.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/empty-dir/-/empty-dir-2.0.0.tgz#c59b4e73b9909d3c4bd49c1fbdaea52031fe22ac"
-  integrity sha512-XAedXlNAQZxMmbllXY9cxuESlNVjZ8xd67bSIUZwbS7VoLyhlNehVN3Iy35yDTGFHKR1opBRgORkp3am0so+WQ==
 
 end-of-stream@^1.1.0:
   version "1.4.4"
@@ -3764,10 +3751,10 @@ optionator@^0.9.1:
     type-check "^0.4.0"
     word-wrap "^1.2.3"
 
-ora@^5.2.0:
-  version "5.2.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/ora/-/ora-5.2.0.tgz#de10bfd2d15514384af45f3fa9d9b1aaf344fda1"
-  integrity sha512-+wG2v8TUU8EgzPHun1k/n45pXquQ9fHnbXVetl9rRgO6kjZszGGbraF3XPTIdgeA+s1lbRjSEftAnyT0w8ZMvQ==
+ora@^5.2.0, ora@^5.3.0:
+  version "5.3.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/ora/-/ora-5.3.0.tgz#fb832899d3a1372fe71c8b2c534bbfe74961bb6f"
+  integrity sha512-zAKMgGXUim0Jyd6CXK9lraBnD3H5yPGBPPOkC23a2BG6hsm4Zu6OQSjQuEtV0BHDf4aKHcUFvJiGRrFuW3MG8g==
   dependencies:
     bl "^4.0.3"
     chalk "^4.1.0"

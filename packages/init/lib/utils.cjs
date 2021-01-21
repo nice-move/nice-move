@@ -1,6 +1,6 @@
 const { resolve } = require('path');
-
-const regexp = /# Created by https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+[\S\s]+# End of https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+/;
+const execa = require('execa');
+const { readdirSync } = require('fs');
 
 function pkgCwd() {
   try {
@@ -12,5 +12,15 @@ function pkgCwd() {
 
 module.exports = {
   pkgCwd,
-  regexp,
+  async gitSupport() {
+    try {
+      const { stdout } = await execa('git', ['--version']);
+      return !!stdout;
+    } catch {
+      return false;
+    }
+  },
+  emptyDir() {
+    return readdirSync(process.cwd()).length === 0;
+  },
 };

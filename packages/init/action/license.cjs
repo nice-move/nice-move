@@ -1,11 +1,14 @@
 const username = require('git-username');
 const { Text } = require('fs-chain');
 const { render } = require('micromustache');
+const { cyan } = require('chalk');
 
 const { pkgCwd } = require('../lib/utils.cjs');
 
-module.exports = async function License() {
+module.exports = function License() {
   const { license, author = '' } = pkgCwd();
+
+  const Chain = new Text();
 
   if (license === 'MIT') {
     // eslint-disable-next-line no-inner-declarations
@@ -16,15 +19,10 @@ module.exports = async function License() {
       });
     }
 
-    await new Text()
-      .source('../template/mit.tpl')
-      .handle(merge)
-      .output('~LICENSE')
-      .logger('Create/Overwrite `LICENSE`');
+    Chain.source('../template/mit.tpl').handle(merge);
   } else if (license === 'UNLICENSE') {
-    await new Text()
-      .source('../template/unlicense.tpl')
-      .output('~LICENSE')
-      .logger('Create/Overwrite `LICENSE`');
+    Chain.source('../template/unlicense.tpl');
   }
+
+  return Chain.output('~LICENSE').logger('Create/Overwrite', cyan('LICENSE'));
 };

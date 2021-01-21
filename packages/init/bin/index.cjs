@@ -3,6 +3,7 @@
 const init = require('../index.cjs');
 
 init().catch?.((error) => {
-  console.warn(error);
-  process.exitCode = 1;
+  if (error.message !== 'cancel') {
+    throw error;
+  }
 });

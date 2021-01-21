@@ -1,7 +1,7 @@
 {
   "name": "@nice-move/init",
-  "version": "0.1.9",
-  "description": "Initialize your workspaces",
+  "version": "0.1.10",
+  "description": "Initialize your frontend workspaces",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -11,12 +11,18 @@
     "commitlint",
     "config",
     "cwd",
+    "editorconfig",
     "eslint",
     "git",
     "gitignore",
+    "init",
+    "license",
     "nice-move",
     "prettier",
-    "stylelint"
+    "registry",
+    "repository",
+    "stylelint",
+    "workspace"
   ],
   "homepage": "https://github.com/airkro/nice-move/tree/master/packages/init",
   "repository": {
@@ -36,14 +42,15 @@
     "chalk": "^4.1.0",
     "deepmerge": "^4.2.2",
     "execa": "^5.0.0",
-    "fs-chain": "^5.1.0",
+    "fs-chain": "^5.2.0",
     "git-username": "^1.0.0",
     "is-git-dirty": "^2.0.1",
     "is-git-repository": "^2.0.0",
     "micromustache": "^8.0.3",
     "ora": "^5.3.0",
     "os-locale": "^5.0.0",
-    "prompts": "^2.4.0"
+    "prompts": "^2.4.0",
+    "yarn-install": "^1.0.0"
   },
   "engines": {
     "node": "^12.18 || ^14"

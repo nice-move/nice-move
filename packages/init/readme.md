@@ -1,6 +1,6 @@
 # @nice-move/init
 
-Initialize your workspaces.
+Initialize your frontend workspaces.
 
 [![npm][npm-badge]][npm-url]
 [![github][github-badge]][github-url]

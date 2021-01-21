@@ -1,42 +1,39 @@
-const isGitDirty = require('is-git-dirty');
+const { EOL } = require('os');
 
-const autoPackage = require('./action/package.cjs');
 const EditorConfig = require('./action/editorconfig.cjs');
-const Git = require('./action/git.cjs');
+const GitFile = require('./action/git-file.cjs');
 const License = require('./action/license.cjs');
 const Registry = require('./action/registry.cjs');
 
-const { Confirm } = require('./lib/prompt.cjs');
-const { gitSupport, emptyDir } = require('./lib/utils.cjs');
-
-async function action(gitSupported) {
-  if (gitSupported) {
-    await Git();
-  }
-
-  await EditorConfig();
-
-  await autoPackage();
-
-  Registry();
-  License();
-}
+const Prompt = require('./prompt/index.cjs');
 
 module.exports = async function init() {
-  const isEmpty = emptyDir();
+  const {
+    Dependencies,
+    GitInit,
+    Install,
+    options: { isGit } = {},
+  } = await Prompt();
 
-  const gitSupported = await gitSupport();
+  console.log(EOL, '-'.repeat(20), EOL);
 
-  const isDirty = gitSupported ? !!isGitDirty() : false;
+  const actions = [
+    GitInit,
+    License,
+    EditorConfig,
+    async () => {
+      if (GitInit || isGit) {
+        await GitFile();
+      }
+    },
+    Registry,
+    Dependencies,
+    Install,
+  ].filter((func) => func);
 
-  if (isEmpty || !isDirty) {
-    action(gitSupported);
-  } else {
-    Confirm({
-      message: isDirty ? 'Repository not clean' : 'Workspace not empty',
-      callback() {
-        action(gitSupported);
-      },
-    });
+  // eslint-disable-next-line no-restricted-syntax
+  for (const action of actions) {
+    // eslint-disable-next-line no-await-in-loop
+    await action();
   }
 };

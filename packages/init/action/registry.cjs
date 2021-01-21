@@ -1,11 +1,12 @@
 const osLocale = require('os-locale');
 const { Text } = require('fs-chain');
+const { cyan } = require('chalk');
 
-module.exports = async function autoRegistry() {
+module.exports = async function Registry() {
   const InChina = (await osLocale()) === 'zh-CN';
 
   if (InChina) {
-    await new Text()
+    return new Text()
       .source('~.npmrc')
       .exists((exists) => exists)
       .handle((text) => {
@@ -19,7 +20,7 @@ module.exports = async function autoRegistry() {
         return `registry = https://mirrors.cloud.tencent.com/npm/\r${text}`;
       })
       .output()
-      .logger('Using China registry mirror')
+      .logger('Set registry to China mirror in', cyan('.npmrc'))
       .source('~.yarnrc')
       .exists((exists) => exists)
       .handle((text) => {
@@ -33,7 +34,7 @@ module.exports = async function autoRegistry() {
         return `registry "https://mirrors.cloud.tencent.com/npm/"\r${text}`;
       })
       .output()
-      .logger('Using China registry mirror')
+      .logger('Set registry to China mirror in', cyan('.yarnrc'))
       .catch(console.warn);
   }
 };

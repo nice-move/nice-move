@@ -8,8 +8,12 @@ module.exports = function Readme() {
 
   return new Text()
     .source('~README.md')
-    .exists((exists) => !exists)
-    .handle(() => `# ${name}\n${description ? `${description}.\n` : ''}`)
+    .handle((text) => {
+      if (text.trim()) {
+        throw new Error('skip');
+      }
+      return `# ${name}\n\n${description ? `${description}.\n` : ''}`;
+    })
     .output()
     .logger('Create', cyan('README.md'));
 };

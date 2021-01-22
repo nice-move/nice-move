@@ -24,11 +24,11 @@ module.exports = async function init() {
     Readme,
     License,
     EditorConfig,
-    () => (GitInit || isGit ? GitFile : null),
+    () => (GitInit || isGit ? GitFile() : null),
     Registry,
     Dependencies,
     Install,
-  ].filter((func) => func);
+  ].filter((func) => typeof func === 'function');
 
   // eslint-disable-next-line no-restricted-syntax
   for (const action of actions) {

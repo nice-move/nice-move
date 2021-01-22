@@ -1,6 +1,6 @@
 # @nice-move/eslint-config-base [<img src="https://cdn.worldvectorlogo.com/logos/eslint-1.svg" alt="eslint" height="80" align="right">][eslint]
 
-A [eslint] config created by personal preferences.
+A [eslint] config created by best practice.
 
 [![npm][npm-badge]][npm-url]
 [![github][github-badge]][github-url]

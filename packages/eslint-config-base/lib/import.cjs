@@ -79,8 +79,8 @@ module.exports = {
       },
     },
     {
-      files: '**/',
-      excludedFiles: '*.{m,c}js',
+      files: '**/*',
+      excludedFiles: ['*.{m,c}js', '*.node'],
       rules: {
         'import/no-nodejs-modules': 'error',
         ...electron.rules,

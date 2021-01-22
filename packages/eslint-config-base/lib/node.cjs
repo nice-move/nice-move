@@ -15,14 +15,11 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.{m,c}js', '*.md/*.node'],
+      files: ['*.{m,c}js', '*.node'],
       env: {
         browser: false,
         node: true,
         commonjs: true,
-      },
-      globals: {
-        exports: 'writable',
       },
       rules: {
         ...commonRules,

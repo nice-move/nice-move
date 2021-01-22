@@ -1,5 +1,6 @@
 const validate = require('validate-npm-package-name');
 const semverRegex = require('semver-regex');
+const parse = require('parse-author');
 
 const { getAuthor, trim, dirname } = require('../lib/utils.cjs');
 
@@ -46,7 +47,7 @@ exports.prompt = ({
       (typeof author === 'string' ? author : author && author.name)
         ? null
         : 'text',
-    format: trim,
+    format: parse,
     initial: getAuthor(author),
     message: 'package.json » author',
     name: 'author',

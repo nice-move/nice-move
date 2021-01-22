@@ -157,7 +157,8 @@ function Dependencies(wanted = {}) {
     })
     .handle(format)
     .output()
-    .logger(message);
+    .logger(message)
+    .catch(console.warn);
 }
 
 exports.prompt = () => ({

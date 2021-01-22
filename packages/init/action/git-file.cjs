@@ -73,7 +73,8 @@ module.exports = async function gitFile() {
     .then(() => {
       spinner.succeed(message);
     })
-    .catch(() => {
+    .catch((error) => {
       spinner.fail(message);
+      console.warn(error);
     });
 };

@@ -22,6 +22,8 @@ module.exports = function License() {
       Chain.source('../template/unlicense.tpl');
     }
 
-    return Chain.output('~LICENSE').logger('Create/Overwrite', cyan('LICENSE'));
+    return Chain.output('~LICENSE')
+      .logger('Create/Overwrite', cyan('LICENSE'))
+      .catch(console.warn);
   }
 };

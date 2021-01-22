@@ -17,5 +17,6 @@ module.exports = function Readme() {
         .join('\n\n');
     })
     .output()
-    .logger('Create', cyan('README.md'));
+    .logger('Create', cyan('README.md'))
+    .catch(console.warn);
 };

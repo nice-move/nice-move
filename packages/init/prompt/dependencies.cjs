@@ -16,7 +16,7 @@ function format(data) {
 }
 
 function checkEslint({
-  dependencies = {},
+  old: { dependencies = {} } = {},
   vue = 'vue' in dependencies,
   react = 'react' in dependencies,
 }) {
@@ -34,24 +34,19 @@ function checkEslint({
   };
 }
 
-const message = 'Add project dependencies';
+const message = 'Add/Reset project dependencies';
 
-function Dependencies(
-  pkg,
-  {
-    ava,
-    commitlint,
-    eslint,
-    garou,
-    husky,
-    prettier,
-    react,
-    stylelint,
-    vue,
-  } = {},
-) {
-  const { dependencies = {} } = pkg;
-
+function Dependencies({
+  ava,
+  commitlint,
+  eslint,
+  garou,
+  husky,
+  prettier,
+  react,
+  stylelint,
+  vue,
+} = {}) {
   const useLint = eslint || stylelint || prettier || garou;
 
   const prepublishOnly =
@@ -68,22 +63,6 @@ function Dependencies(
     .handle((old) =>
       deepmerge.all(
         [
-          {
-            engines: {
-              node: '^12.18 || ^14',
-            },
-          },
-          pkg.private
-            ? undefined
-            : {
-                publishConfig: {
-                  access: 'public',
-                  registry: 'https://registry.npmjs.org/',
-                },
-                scripts: {
-                  prepublishOnly,
-                },
-              },
           old,
           husky || commitlint
             ? {
@@ -136,6 +115,7 @@ function Dependencies(
             ? {
                 devDependencies: { ava: '^3.15.0' },
                 scripts: {
+                  prepublishOnly: old.private ? undefined : prepublishOnly,
                   test: 'ava --verbose',
                 },
                 husky: husky
@@ -147,7 +127,7 @@ function Dependencies(
                   : undefined,
               }
             : undefined,
-          eslint ? checkEslint({ react, vue, dependencies }) : undefined,
+          eslint ? checkEslint({ react, vue, old }) : undefined,
           stylelint
             ? {
                 devDependencies: {
@@ -184,7 +164,6 @@ function Dependencies(
 }
 
 exports.prompt = ({
-  pkg,
   pkg: { devDependencies = {}, dependencies = {} } = {},
 } = {}) => ({
   instructions: false,
@@ -243,8 +222,8 @@ exports.prompt = ({
   // eslint-disable-next-line consistent-return
   format: (keywords) => {
     if (keywords.length > 0) {
-      const io = Object.fromEntries(keywords.map((item) => [item, true]));
-      return () => Dependencies(pkg, io);
+      return () =>
+        Dependencies(Object.fromEntries(keywords.map((item) => [item, true])));
     }
   },
 });

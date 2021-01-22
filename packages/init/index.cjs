@@ -3,6 +3,7 @@ const GitFile = require('./action/git-file.cjs');
 const License = require('./action/license.cjs');
 const Registry = require('./action/registry.cjs');
 const Readme = require('./action/readme.cjs');
+const Package = require('./action/package.cjs');
 
 const Prompt = require('./prompt/index.cjs');
 
@@ -11,27 +12,19 @@ module.exports = async function init() {
     Dependencies,
     GitInit,
     Install,
-    options: { isGit, pkg } = {},
+    info,
+    options: { isGit, pkg = {} } = {},
   } = await Prompt();
 
   console.log('-'.repeat(32));
 
   const actions = [
     GitInit,
-    // eslint-disable-next-line consistent-return
-    () => {
-      if (pkg.name) {
-        return Readme(pkg.name);
-      }
-    },
+    () => Package(info),
+    () => (pkg.name ? Readme(pkg) : null),
     License,
     EditorConfig,
-    // eslint-disable-next-line consistent-return
-    () => {
-      if (GitInit || isGit) {
-        return GitFile();
-      }
-    },
+    () => (GitInit || isGit ? GitFile() : null),
     Registry,
     Dependencies,
     Install,

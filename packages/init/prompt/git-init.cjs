@@ -17,12 +17,10 @@ function init() {
 }
 
 exports.prompt = ({ gitSupported, isGit }) => ({
-  active: 'yes',
-  inactive: 'no',
   message,
   name: 'gitInit',
   type: (first) =>
-    first === false || !gitSupported || isGit ? null : 'toggle',
+    first === false || !gitSupported || isGit ? null : 'confirm',
   // eslint-disable-next-line consistent-return
   format(value) {
     if (value === true) {

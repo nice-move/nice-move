@@ -1,11 +1,11 @@
 const { Text } = require('fs-chain');
 const { cyan } = require('chalk');
 
-module.exports = function Readme(name) {
+module.exports = function Readme({ name, description }) {
   return new Text()
-    .source('~readme.md')
+    .source('~README.md')
     .exists((exists) => !exists)
-    .handle(() => `# ${name}\n`)
+    .handle(() => `# ${name}\n${description ? `${description}.\n` : ''}`)
     .output()
-    .logger('Create', cyan('readme.md'));
+    .logger('Create', cyan('README.md'));
 };

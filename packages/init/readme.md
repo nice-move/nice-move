@@ -15,9 +15,10 @@ Initialize your frontend workspaces.
 ## Usage
 
 ```bash
-mkdir sample
+mkdir sample # when needed
+
 cd sample
-npm init # or yarn init
+
 npx @nice-move/init
 ```
 
@@ -25,6 +26,10 @@ npx @nice-move/init
 
 - Confirm when workspace not empty or repository not clean
 - Run `git init` when workspace not a git project
+- Run a better `npm init` / `yarn init` command when needed
 - Create or overwrite `.gitignore` / `.gitattributes`
-- Create or overwrite `package.json` / `LICENSE` / `.editorconfig`
-- Using China registry mirror
+- Create or overwrite `LICENSE` / `.editorconfig`
+- Create `README.md` when it not exists
+- Set registry to China mirror in `.npmrc` / `.yarnrc`
+- Add or reset project dependencies by interactive
+- Run `npm` / `yarn` install command

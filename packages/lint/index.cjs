@@ -49,7 +49,8 @@ module.exports = function lint({ shell }) {
     '*.{vue,html,md}': [
       garou && 'garou',
       prettier && 'prettier --write --color',
-      stylelint && 'stylelint --fix --rd --risd --color',
+      stylelint &&
+        'stylelint --fix --rd --risd --color --custom-formatter=node_modules/stylelint-formatter-pretty',
       eslint && 'eslint --fix --format=pretty --color',
     ],
     '*.{js,jsx,mjs,cjs}': [
@@ -60,7 +61,8 @@ module.exports = function lint({ shell }) {
     '*.{css,scss,less,xml}': [
       garou && 'garou',
       prettier && 'prettier --write --color',
-      stylelint && 'stylelint --fix --rd --risd --color',
+      stylelint &&
+        'stylelint --fix --rd --risd --color --custom-formatter=node_modules/stylelint-formatter-pretty',
     ],
     '{*.{json,svg},*.{to,y,ya}ml,.{babel,npm}rc,.editorconfig}': [
       prettier && 'prettier --write --color',

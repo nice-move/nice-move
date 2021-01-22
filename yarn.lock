@@ -550,7 +550,7 @@ ansi-colors@^4.1.1:
   resolved "https://mirrors.cloud.tencent.com/npm/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
   integrity "sha1-y7muJWv3UK8eqzRPIpqif+lLo0g= sha512-JoX0apGbHaUJBNl6yF+p6JAFYZ666/hhCGKN5t9QFjbJQKUU/g8MNbFDbvfrgKXvI1QpZplPOnwIo99lX/AAmA=="
 
-ansi-escapes@^4.2.1, ansi-escapes@^4.3.0:
+ansi-escapes@^4.2.1, ansi-escapes@^4.3.0, ansi-escapes@^4.3.1:
   version "4.3.1"
   resolved "https://mirrors.cloud.tencent.com/npm/ansi-escapes/-/ansi-escapes-4.3.1.tgz#a5c47cc43181f1f38ffd7076837700d395522a61"
   integrity "sha1-pcR8xDGB8fOP/XB2g3cA05VSKmE= sha512-JWF7ocqNrp8u9oqpgV+wH5ftbt+cfvv+PTjOvKLT3AdYly/LmORARfEVT1iyjwN+4MqE5UmVKoAdIBqeoCHgLA=="
@@ -1942,15 +1942,15 @@ eslint-plugin-unicorn@^26.0.1:
     safe-regex "^2.1.1"
     semver "^7.3.4"
 
-eslint-plugin-vue@^7.4.1:
-  version "7.4.1"
-  resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-vue/-/eslint-plugin-vue-7.4.1.tgz#2526ef0c010c218824a89423dbe6ddbe76f04fd6"
-  integrity sha512-W/xPNHYIkGJphLUM2UIYYGKbRw3BcDoMIPY9lu1TTa2YLiZoxurddfnmOP+UOVywxb5vi438ejzwvKdZqydtIw==
+eslint-plugin-vue@^7.5.0:
+  version "7.5.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-vue/-/eslint-plugin-vue-7.5.0.tgz#cc6d983eb22781fa2440a7573cf39af439bb5725"
+  integrity sha512-QnMMTcyV8PLxBz7QQNAwISSEs6LYk2LJvGlxalXvpCtfKnqo7qcY0aZTIxPe8QOnHd7WCwiMZLOJzg6A03T0Gw==
   dependencies:
     eslint-utils "^2.1.0"
     natural-compare "^1.4.0"
     semver "^7.3.2"
-    vue-eslint-parser "^7.3.0"
+    vue-eslint-parser "^7.4.1"
 
 eslint-rule-docs@^1.1.5:
   version "1.1.217"
@@ -5082,6 +5082,17 @@ stylelint-declaration-block-no-ignored-properties@^2.3.0:
   dependencies:
     postcss "^7.0.27"
 
+stylelint-formatter-pretty@^2.1.1:
+  version "2.1.1"
+  resolved "https://mirrors.cloud.tencent.com/npm/stylelint-formatter-pretty/-/stylelint-formatter-pretty-2.1.1.tgz#dc8af8736d5ad29ff891233e0950b417d261917f"
+  integrity sha512-u5CPkOfGS4lsV0NrHQ/2Uulu19GdBsuQYVhkUBxtx7j3+oicgOfKSBVv/nJgV/g1noK4eh0zB4eDb28UQs2dvg==
+  dependencies:
+    ansi-escapes "^4.3.1"
+    chalk "^4.1.0"
+    log-symbols "^4.0.0"
+    plur "^4.0.0"
+    string-width "^4.2.0"
+
 stylelint-order@^4.1.0:
   version "4.1.0"
   resolved "https://mirrors.cloud.tencent.com/npm/stylelint-order/-/stylelint-order-4.1.0.tgz#692d05b7d0c235ac66fcf5ea1d9e5f08a76747f6"
@@ -5644,10 +5655,10 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
-vue-eslint-parser@^7.3.0:
-  version "7.3.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/vue-eslint-parser/-/vue-eslint-parser-7.3.0.tgz#894085839d99d81296fa081d19643733f23d7559"
-  integrity "sha1-iUCFg52Z2BKW+ggdGWQ3M/I9dVk= sha512-n5PJKZbyspD0+8LnaZgpEvNCrjQx1DyDHw8JdWwoxhhC+yRip4TAvSDpXGf9SWX6b0umeB5aR61gwUo6NVvFxw=="
+vue-eslint-parser@^7.3.0, vue-eslint-parser@^7.4.1:
+  version "7.4.1"
+  resolved "https://mirrors.cloud.tencent.com/npm/vue-eslint-parser/-/vue-eslint-parser-7.4.1.tgz#e4adcf7876a7379758d9056a72235af18a587f92"
+  integrity sha512-AFvhdxpFvliYq1xt/biNBslTHE/zbEvSnr1qfHA/KxRIpErmEDrQZlQnvEexednRHmLfDNOMuDYwZL5xkLzIXQ==
   dependencies:
     debug "^4.1.1"
     eslint-scope "^5.0.0"

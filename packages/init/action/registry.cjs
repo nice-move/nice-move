@@ -8,7 +8,6 @@ module.exports = async function Registry() {
   if (InChina) {
     return new Text()
       .source('~.npmrc')
-      .exists((exists) => exists)
       .handle((text) => {
         if (
           /registry\s*=\s*https:\/\/mirrors\.cloud\.tencent\.com\/npm\//.test(

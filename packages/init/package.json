@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/init",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Initialize your frontend workspaces",
   "license": "MIT",
   "author": {
@@ -44,7 +44,7 @@
     "deepmerge": "^4.2.2",
     "execa": "^5.0.0",
     "fs-chain": "^5.2.0",
-    "git-username": "^1.0.0",
+    "git-user-email": "^0.2.2",
     "is-git-dirty": "^2.0.1",
     "is-git-repository": "^2.0.0",
     "micromustache": "^8.0.3",

@@ -26,12 +26,13 @@ module.exports = function Package(info) {
           engines: {
             node: '^12.18 || ^14',
           },
-          publishConfig: info.private
-            ? undefined
-            : {
-                access: 'public',
-                registry: 'https://registry.npmjs.org/',
-              },
+          publishConfig:
+            info.private || old.private
+              ? undefined
+              : {
+                  access: 'public',
+                  registry: 'https://registry.npmjs.org/',
+                },
         },
         old || {},
         info,

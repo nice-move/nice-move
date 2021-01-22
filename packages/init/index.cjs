@@ -33,7 +33,7 @@ module.exports = async function init() {
   // eslint-disable-next-line no-restricted-syntax
   for (const action of actions) {
     // eslint-disable-next-line no-await-in-loop
-    await action()?.catch((error) => {
+    await action()?.catch?.((error) => {
       console.warn(error.message);
     });
   }

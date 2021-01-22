@@ -44,7 +44,7 @@ module.exports = async function gitFile() {
 
   const message = `Create/Overwrite ${cyan('.gitignore')}`;
 
-  await new Text()
+  return new Text()
     .source('~.gitignore')
     .handle((oldText) => {
       const platform = getPlatform(oldText);

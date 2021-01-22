@@ -2127,7 +2127,7 @@ execall@^2.0.0:
 extend-shallow@^2.0.1:
   version "2.0.1"
   resolved "https://mirrors.cloud.tencent.com/npm/extend-shallow/-/extend-shallow-2.0.1.tgz#51af7d614ad9a9f610ea1bafbb989d6b1c56890f"
-  integrity "sha1-Ua99YUrZqfYQ6huvu5idaxxWiQ8= sha512-zCnTtlxNoAiDc3gqY2aYAWFx7XWWiasuF2K8Me5WbN8otHKTUKBwjPtNpRs/rbUZm7KxWAaNj7P1a/p52GbVug=="
+  integrity sha1-Ua99YUrZqfYQ6huvu5idaxxWiQ8=
   dependencies:
     is-extendable "^0.1.0"
 
@@ -2278,7 +2278,7 @@ fs-chain@^5.2.0:
 fs-exists-sync@^0.1.0:
   version "0.1.0"
   resolved "https://mirrors.cloud.tencent.com/npm/fs-exists-sync/-/fs-exists-sync-0.1.0.tgz#982d6893af918e72d08dec9e8673ff2b5a8d6add"
-  integrity "sha1-mC1ok6+RjnLQjeyehnP/K1qNat0= sha512-cR/vflFyPZtrN6b38ZyWxpWdhlXrzZEBawlpBQMq7033xVY7/kg0GDMBK5jg8lDYQckdJ5x/YC88lM3C7VMsLg=="
+  integrity sha1-mC1ok6+RjnLQjeyehnP/K1qNat0=
 
 fs-extra@^8.1.0:
   version "8.1.0"
@@ -2393,7 +2393,7 @@ get-stream@^6.0.0:
 git-config-path@^1.0.1:
   version "1.0.1"
   resolved "https://mirrors.cloud.tencent.com/npm/git-config-path/-/git-config-path-1.0.1.tgz#6d33f7ed63db0d0e118131503bab3aca47d54664"
-  integrity "sha1-bTP37WPbDQ4RgTFQO6s6ykfVRmQ= sha512-KcJ2dlrrP5DbBnYIZ2nlikALfRhKzNSX0stvv3ImJ+fvC4hXKoV+U+74SV0upg+jlQZbrtQzc0bu6/Zh+7aQbg=="
+  integrity sha1-bTP37WPbDQ4RgTFQO6s6ykfVRmQ=
   dependencies:
     extend-shallow "^2.0.1"
     fs-exists-sync "^0.1.0"
@@ -2410,13 +2410,14 @@ git-raw-commits@^2.0.0:
     split2 "^2.0.0"
     through2 "^4.0.0"
 
-git-username@^1.0.0:
-  version "1.0.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/git-username/-/git-username-1.0.0.tgz#5e31ef29efe15c184cfaa5ed23212c89b0fcf123"
-  integrity "sha1-XjHvKe/hXBhM+qXtIyEsibD88SM= sha512-xm45KwBR6Eu1jO4umx/o2M84v9TC7tdOBuzLx8ayhdR9H1FBiiG9azz31uC0esDvaWVBTDINpJ5USomk+ja8OQ=="
+git-user-email@^0.2.2:
+  version "0.2.2"
+  resolved "https://mirrors.cloud.tencent.com/npm/git-user-email/-/git-user-email-0.2.2.tgz#47d42c7b89ccca942d650ebf2555f87a88277754"
+  integrity sha1-R9Qse4nMypQtZQ6/JVX4eognd1Q=
   dependencies:
-    parse-github-url "^1.0.2"
-    remote-origin-url "^1.0.0"
+    extend-shallow "^2.0.1"
+    git-config-path "^1.0.1"
+    parse-git-config "^1.0.2"
 
 glob-parent@^5.0.0, glob-parent@^5.1.0, glob-parent@~5.1.0:
   version "5.1.1"
@@ -2621,7 +2622,7 @@ hastscript@^6.0.0:
 homedir-polyfill@^1.0.0:
   version "1.0.3"
   resolved "https://mirrors.cloud.tencent.com/npm/homedir-polyfill/-/homedir-polyfill-1.0.3.tgz#743298cef4e5af3e194161fbadcc2151d3a058e8"
-  integrity "sha1-dDKYzvTlrz4ZQWH7rcwhUdOgWOg= sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA=="
+  integrity sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==
   dependencies:
     parse-passwd "^1.0.0"
 
@@ -2898,7 +2899,7 @@ is-error@^2.2.2:
 is-extendable@^0.1.0:
   version "0.1.1"
   resolved "https://mirrors.cloud.tencent.com/npm/is-extendable/-/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
-  integrity "sha1-YrEQ4omkcUGOPsNqYX1HLjAd/Ik= sha512-5BMULNob1vgFX6EjQw5izWDxrecWK9AM72rugNr0TFldMOi0fj6Jk+zeKIt0xGj4cEfQIJth4w3OKWOJ4f+AFw=="
+  integrity sha1-YrEQ4omkcUGOPsNqYX1HLjAd/Ik=
 
 is-extglob@^2.1.1:
   version "2.1.1"
@@ -4026,20 +4027,15 @@ parse-entities@^2.0.0:
     is-decimal "^1.0.0"
     is-hexadecimal "^1.0.0"
 
-parse-git-config@^1.1.1:
+parse-git-config@^1.0.2:
   version "1.1.1"
   resolved "https://mirrors.cloud.tencent.com/npm/parse-git-config/-/parse-git-config-1.1.1.tgz#d3a9984317132f57398712bba438e129590ddf8c"
-  integrity "sha1-06mYQxcTL1c5hxK7pDjhKVkN34w= sha512-S3LGXJZVSy/hswvbSkfdbKBRVsnqKrVu6j8fcvdtJ4TxosSELyQDsJPuGPXuZ+EyuYuJd3O4uAF8gcISR0OFrQ=="
+  integrity sha1-06mYQxcTL1c5hxK7pDjhKVkN34w=
   dependencies:
     extend-shallow "^2.0.1"
     fs-exists-sync "^0.1.0"
     git-config-path "^1.0.1"
     ini "^1.3.4"
-
-parse-github-url@^1.0.2:
-  version "1.0.2"
-  resolved "https://mirrors.cloud.tencent.com/npm/parse-github-url/-/parse-github-url-1.0.2.tgz#242d3b65cbcdda14bb50439e3242acf6971db395"
-  integrity "sha1-JC07ZcvN2hS7UEOeMkKs9pcds5U= sha512-kgBf6avCbO3Cn6+RnzRGLkUsv4ZVqv/VfAYkRsyBcgkshNvVBkRn1FEZcW0Jb+npXQWm2vHPnnOqFteZxRRGNw=="
 
 parse-json@^2.2.0:
   version "2.2.0"
@@ -4074,7 +4070,7 @@ parse-ms@^2.1.0:
 parse-passwd@^1.0.0:
   version "1.0.0"
   resolved "https://mirrors.cloud.tencent.com/npm/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
-  integrity "sha1-bVuTSkVpk7I9N/QKOC1vFmao5cY= sha512-1Y1A//QUXEZK7YKz+rD9WydcE1+EuPr6ZBgKecAB8tmoW6UFv0NREVJe1p+jRxtThkcbbKkfwIbWJe/IeE6m2Q=="
+  integrity sha1-bVuTSkVpk7I9N/QKOC1vFmao5cY=
 
 parse5@^6.0.0:
   version "6.0.1"
@@ -4638,13 +4634,6 @@ remark@^13.0.0:
     remark-parse "^9.0.0"
     remark-stringify "^9.0.0"
     unified "^9.1.0"
-
-remote-origin-url@^1.0.0:
-  version "1.0.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/remote-origin-url/-/remote-origin-url-1.0.0.tgz#add020aa5f1a0b37372858e02b323dc28d4cd030"
-  integrity "sha1-rdAgql8aCzc3KFjgKzI9wo1M0DA= sha512-xHDM6IBqivpiQ1e4WOuFpM/T6rbzA/WBsu+3WLtgPOhHyjA0nYlijV3NprlTb4FcXlQ5+Q+z174sQ1NnUF5FwA=="
-  dependencies:
-    parse-git-config "^1.1.1"
 
 repeat-string@^1.0.0, repeat-string@^1.5.4:
   version "1.6.1"

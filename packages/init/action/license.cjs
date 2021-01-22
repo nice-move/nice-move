@@ -1,4 +1,4 @@
-const username = require('git-username');
+const username = require('git-user-email');
 const { Text } = require('fs-chain');
 const { render } = require('micromustache');
 const { cyan } = require('chalk');

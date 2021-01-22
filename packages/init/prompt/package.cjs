@@ -1,7 +1,7 @@
 const validate = require('validate-npm-package-name');
 const semverRegex = require('semver-regex');
-const username = require('git-username');
 const { sep } = require('path');
+const username = require('git-user-email');
 
 const semver = semverRegex();
 

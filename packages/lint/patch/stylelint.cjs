@@ -6,11 +6,11 @@ module.exports = {
       .source('stylelint/lib/augmentConfig')
       .handle((data) => {
         if (data.includes('ignoreFiles, ...')) {
-          data.replace('ignoreFiles, ...', '...');
-        } else {
-          throw new Error('skip');
+          return data.replace('ignoreFiles, ...', '...');
         }
+        throw new Error('skip');
       })
-      .output();
+      .output()
+      .catch(console.warn);
   },
 };

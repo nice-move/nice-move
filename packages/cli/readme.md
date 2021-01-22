@@ -1,6 +1,6 @@
 # @nice-move/cli
 
-Initializer, linter, and formatter for frontend development.
+Frontend develop helper for frontend development.
 
 [![npm][npm-badge]][npm-url]
 [![github][github-badge]][github-url]
@@ -28,21 +28,29 @@ npx -c nice-move <command>
 
 ### init
 
-Initialize your workspaces.
+Initialize your frontend workspaces.
 
-This command will create or overwrite `.npmrc`, `.yarnrc`, `package.json`, `LICENSE`, `.editorconfig`, `.gitignore`, `.gitattributes`.
+- Confirm when workspace not empty or repository not clean
+- Run `git init` when workspace not a git project
+- Run a better `npm init` / `yarn init` command when needed
+- Create or overwrite `.gitignore` / `.gitattributes`
+- Create or overwrite `LICENSE` / `.editorconfig`
+- Create `README.md` when it not exists
+- Set registry to China mirror in `.npmrc` / `.yarnrc`
+- Add or reset project dependencies by interactive
+- Run `npm` / `yarn` install command
 
 ### lint
 
 Lint and format everything.
 
-Install `eslint` / `stylelint` / `prettier` / `garou` if you need to.
+Install `eslint` / `stylelint` / `prettier` / `garou` when needed:
 
 ```bash
 npm install eslint stylelint prettier garou --save-dev
 ```
 
-Add configurations in the way you are used to doing.
+Add configurations:
 
 ```json
 // example: package.json

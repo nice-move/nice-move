@@ -15,11 +15,7 @@ function format(data) {
   }
 }
 
-function checkEslint({
-  old: { dependencies = {} } = {},
-  vue = 'vue' in dependencies,
-  react = 'react' in dependencies,
-}) {
+function checkEslint({ vue, react }) {
   const type =
     (react && vue) || (!react && !vue) ? 'base' : react ? 'react' : 'vue';
 
@@ -36,32 +32,33 @@ function checkEslint({
 
 const message = 'Add/Reset project dependencies';
 
-function Dependencies({
-  ava,
-  commitlint,
-  eslint,
-  garou,
-  husky,
-  prettier,
-  react,
-  stylelint,
-  vue,
-} = {}) {
-  const useLint = eslint || stylelint || prettier || garou;
-
-  const prepublishOnly =
-    [
-      useLint ? 'nice-move lint' : undefined,
-      ava ? 'ava --fail-fast' : undefined,
-    ]
-      .filter(Boolean)
-      .join(' && ') || undefined;
-
+function Dependencies(wanted = {}) {
   return new Json()
     .source('~package.json')
     .config({ pretty: true })
-    .handle((old) =>
-      deepmerge.all(
+    .handle((old) => {
+      const {
+        ava = 'ava' in old.devDependencies,
+        commitlint = 'commitlint' in old.devDependencies,
+        eslint = 'eslint' in old.devDependencies,
+        garou = 'garou' in old.devDependencies,
+        husky = 'husky' in old.devDependencies,
+        prettier = 'prettier' in old.devDependencies,
+        react = 'react' in old.dependencies,
+        stylelint = 'stylelint' in old.devDependencies,
+        vue = 'vue' in old.dependencies,
+      } = wanted;
+
+      const useLint = eslint || stylelint || prettier || garou;
+
+      const prepublishOnly =
+        [
+          useLint ? 'nice-move lint' : undefined,
+          ava ? 'ava --fail-fast' : undefined,
+        ]
+          .filter(Boolean)
+          .join(' && ') || undefined;
+      return deepmerge.all(
         [
           old,
           husky || commitlint
@@ -127,7 +124,7 @@ function Dependencies({
                   : undefined,
               }
             : undefined,
-          eslint ? checkEslint({ react, vue, old }) : undefined,
+          eslint ? checkEslint({ react, vue }) : undefined,
           stylelint
             ? {
                 devDependencies: {
@@ -156,16 +153,14 @@ function Dependencies({
             : undefined,
           vue ? { dependencies: { vue: '~2.6.12' } } : undefined,
         ].filter(Boolean),
-      ),
-    )
+      );
+    })
     .handle(format)
     .output()
     .logger(message);
 }
 
-exports.prompt = ({
-  pkg: { devDependencies = {}, dependencies = {} } = {},
-} = {}) => ({
+exports.prompt = () => ({
   instructions: false,
   optionsPerPage: 20,
   message,
@@ -175,48 +170,38 @@ exports.prompt = ({
     {
       title: 'husky',
       value: 'husky',
-      selected: 'husky' in devDependencies,
     },
     {
       title: 'garou',
       value: 'garou',
-      selected: 'garou' in devDependencies,
     },
     {
       title: 'ava',
       value: 'ava',
-      selected: 'ava' in devDependencies,
     },
     {
       title: 'commitlint',
       value: 'commitlint',
-      selected:
-        'commitlint' in devDependencies || '@commitlint/cli' in devDependencies,
     },
     {
       title: 'eslint',
       value: 'eslint',
-      selected: 'eslint' in devDependencies,
     },
     {
       title: 'stylelint',
       value: 'stylelint',
-      selected: 'stylelint' in devDependencies,
     },
     {
       title: 'prettier',
       value: 'prettier',
-      selected: 'prettier' in devDependencies,
     },
     {
       title: 'react',
       value: 'react',
-      selected: 'react' in dependencies,
     },
     {
       title: 'vue',
       value: 'vue',
-      selected: 'vue' in dependencies,
     },
   ],
   // eslint-disable-next-line consistent-return

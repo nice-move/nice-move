@@ -18,7 +18,7 @@ function init() {
 
 exports.prompt = ({ gitSupported, isGit }) => ({
   message,
-  name: 'gitInit',
+  name: 'GitInit',
   initial: true,
   type: (first) =>
     first === false || !gitSupported || isGit ? null : 'confirm',

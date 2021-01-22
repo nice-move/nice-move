@@ -12,7 +12,9 @@ module.exports = function Readme() {
       if (text.trim()) {
         throw new Error('skip');
       }
-      return `# ${name}\n\n${description ? `${description}.\n` : ''}`;
+      return [`# ${name}`, description ? `${description}.\n` : '']
+        .filter(Boolean)
+        .json('\n\n');
     })
     .output()
     .logger('Create', cyan('README.md'));

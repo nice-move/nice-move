@@ -1,3 +1,4 @@
+const { cyan } = require('chalk');
 const { Json } = require('fs-chain');
 const deepmerge = require('deepmerge');
 
@@ -15,9 +16,9 @@ function format(data) {
   }
 }
 
-const message = 'Add/Reset project dependencies';
-
 module.exports = function Package(info) {
+  console.log(info);
+
   return new Json()
     .source('~package.json')
     .config({ pretty: true })
@@ -34,11 +35,12 @@ module.exports = function Package(info) {
                 registry: 'https://registry.npmjs.org/',
               },
         },
-        old,
+        old || {},
         info,
       ]),
     )
     .handle(format)
     .output()
-    .logger(message);
+    .logger('Add project info to', cyan('package.json'))
+    .catch(console.warn);
 };

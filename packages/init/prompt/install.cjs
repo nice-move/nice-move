@@ -4,11 +4,9 @@ const { cyan } = require('chalk');
 const message = `Run ${cyan('npm')} / ${cyan('yarn')} install command`;
 
 exports.prompt = () => ({
-  active: 'yes',
-  inactive: 'no',
   message,
   name: 'Install',
-  type: (first) => (first === false ? null : 'toggle'),
+  type: (first) => (first === false ? null : 'confirm'),
   // eslint-disable-next-line consistent-return
   format(value) {
     if (value === true) {

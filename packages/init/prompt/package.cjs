@@ -36,30 +36,32 @@ exports.prompt = ({
     type: (first) => (first === false || description ? null : 'text'),
   },
   {
-    type: (first) => (first === false || license ? null : 'toggle'),
-    name: 'license',
+    active: 'MIT',
+    format: (value) => (value ? 'MIT' : 'UNLICENSE'),
+    inactive: 'UNLICENSE',
+    initial: true,
     message: 'package.json » license',
-    initial: false,
-    inactive: 'MIT',
-    active: 'UNLICENSE',
-    format: (value) => (value ? 'UNLICENSE' : 'MIT'),
+    name: 'license',
+    type: (first) => (first === false || license ? null : 'toggle'),
   },
   {
-    format: trim,
     type: (first) =>
       first === false ||
       (typeof author === 'string' ? author : author && author.name)
         ? null
         : 'text',
-    name: 'author',
-    message: 'package.json » author',
+    format: trim,
     initial: username(),
+    message: 'package.json » author',
+    name: 'author',
   },
   {
+    active: 'true',
+    inactive: 'false',
     initial: true,
     message: 'package.json » private',
     name: 'private',
     type: (first) =>
-      first === false || isPrivate !== undefined ? null : 'confirm',
+      first === false || isPrivate !== undefined ? null : 'toggle',
   },
 ];

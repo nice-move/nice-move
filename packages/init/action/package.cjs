@@ -17,8 +17,6 @@ function format(data) {
 }
 
 module.exports = function Package(info) {
-  console.log(info);
-
   return new Json()
     .source('~package.json')
     .config({ pretty: true })

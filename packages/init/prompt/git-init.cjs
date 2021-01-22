@@ -19,6 +19,7 @@ function init() {
 exports.prompt = ({ gitSupported, isGit }) => ({
   message,
   name: 'gitInit',
+  initial: true,
   type: (first) =>
     first === false || !gitSupported || isGit ? null : 'confirm',
   // eslint-disable-next-line consistent-return

@@ -13,7 +13,7 @@ module.exports = async function init() {
     GitInit,
     Install,
     info,
-    options: { isGit, pkg = {} } = {},
+    options: { isGit } = {},
   } = await Prompt();
 
   console.log('-'.repeat(32));
@@ -21,10 +21,10 @@ module.exports = async function init() {
   const actions = [
     GitInit,
     () => Package(info),
-    () => (pkg.name ? Readme(pkg) : null),
+    Readme,
     License,
     EditorConfig,
-    () => (GitInit || isGit ? GitFile() : null),
+    () => (GitInit || isGit ? GitFile : null),
     Registry,
     Dependencies,
     Install,

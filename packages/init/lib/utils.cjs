@@ -2,6 +2,8 @@ const { resolve } = require('path');
 const execa = require('execa');
 const { readdirSync } = require('fs');
 const centra = require('centra');
+const stringify = require('stringify-author');
+const { sep } = require('path');
 
 function download(url) {
   return centra(url)
@@ -41,5 +43,28 @@ module.exports = {
   },
   emptyDir() {
     return readdirSync(process.cwd()).length === 0;
+  },
+  getAuthor(author = {}) {
+    const meta = require('user-meta');
+
+    const io = meta.name ? stringify(meta) : undefined;
+
+    if (typeof author === 'string') {
+      return author || io || 'Unknown';
+    }
+
+    return (author.name ? stringify(author) : io) || 'Unknown';
+  },
+  getAuthorName(author = {}) {
+    const { name } = require('user-meta');
+    return (typeof author === 'string' ? author : author.name)
+      ? name
+      : 'Unknown';
+  },
+  trim(value) {
+    return value ? value.trim() : undefined;
+  },
+  dirname(path) {
+    return path.split(sep).slice(-1)[0].trim();
   },
 };

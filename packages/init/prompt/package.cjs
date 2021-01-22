@@ -1,13 +1,9 @@
 const validate = require('validate-npm-package-name');
 const semverRegex = require('semver-regex');
-const { sep } = require('path');
-const username = require('git-user-email');
+
+const { getAuthor, trim, dirname } = require('../lib/utils.cjs');
 
 const semver = semverRegex();
-
-function trim(value) {
-  return value ? value.trim() : undefined;
-}
 
 exports.prompt = ({
   cwd,
@@ -15,7 +11,7 @@ exports.prompt = ({
 }) => [
   {
     format: trim,
-    initial: cwd.split(sep).slice(-1)[0].trim(),
+    initial: dirname(cwd),
     message: 'package.json » name',
     name: 'name',
     type: (first) => (first === false || name ? null : 'text'),
@@ -51,7 +47,7 @@ exports.prompt = ({
         ? null
         : 'text',
     format: trim,
-    initial: username(),
+    initial: getAuthor(author),
     message: 'package.json » author',
     name: 'author',
   },

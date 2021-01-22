@@ -14,7 +14,7 @@ module.exports = function Readme() {
       }
       return [`# ${name}`, description ? `${description}.\n` : '']
         .filter(Boolean)
-        .json('\n\n');
+        .join('\n\n');
     })
     .output()
     .logger('Create', cyan('README.md'));

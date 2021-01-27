@@ -8,7 +8,15 @@ const semver = semverRegex();
 
 exports.prompt = ({
   cwd,
-  pkg: { name, version, description, license, private: isPrivate, author } = {},
+  pkg: {
+    author,
+    description,
+    license,
+    name,
+    private: isPrivate,
+    version,
+    workspaces,
+  } = {},
 }) => [
   {
     format: trim,
@@ -58,7 +66,23 @@ exports.prompt = ({
     initial: true,
     message: 'package.json » private',
     name: 'private',
+    format: (value) => (value === false ? undefined : value),
     type: (first) =>
       first === false || isPrivate !== undefined ? null : 'toggle',
+  },
+  {
+    active: 'recommend',
+    inactive: 'false',
+    initial: false,
+    message: 'package.json » workspaces',
+    name: 'workspaces',
+    format: (value) => (value ? ['packages/*', 'tools/*'] : undefined),
+    type: (first, feedback) =>
+      first === false ||
+      (workspaces && workspaces.length > 0) ||
+      isPrivate === false ||
+      feedback.private === false
+        ? null
+        : 'toggle',
   },
 ];

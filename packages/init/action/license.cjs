@@ -1,5 +1,4 @@
 const { Text } = require('fs-chain');
-const { render } = require('micromustache');
 const { cyan } = require('chalk');
 
 const { pkgCwd, getAuthorName } = require('../lib/utils.cjs');
@@ -11,13 +10,11 @@ module.exports = function License() {
     const Chain = new Text();
 
     if (license === 'MIT') {
-      const merge = (text) =>
-        render(text, {
-          year: new Date().getFullYear(),
-          holder: getAuthorName(author),
-        });
-
-      Chain.source('../template/mit.tpl').handle(merge);
+      Chain.source('../template/mit.tpl').handle((text) =>
+        text
+          .replace('{{year}}', new Date().getFullYear())
+          .replace('{{holder}}', getAuthorName(author)),
+      );
     } else {
       Chain.source('../template/unlicense.tpl');
     }

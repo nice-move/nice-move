@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/init",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "description": "Initialize your frontend workspaces",
   "license": "MIT",
   "author": {
@@ -23,6 +23,7 @@
     "registry",
     "repository",
     "stylelint",
+    "template",
     "workspace"
   ],
   "homepage": "https://github.com/airkro/nice-move/tree/master/packages/init",
@@ -46,7 +47,6 @@
     "fs-chain": "^5.2.0",
     "is-git-dirty": "^2.0.1",
     "is-git-repository": "^2.0.0",
-    "micromustache": "^8.0.3",
     "ora": "^5.3.0",
     "os-locale": "^5.0.0",
     "parse-author": "^2.0.0",

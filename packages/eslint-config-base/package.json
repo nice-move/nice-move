@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.5.16",
+  "version": "0.5.17",
   "description": "A `eslint` config created by best practice",
   "license": "MIT",
   "author": {
@@ -38,12 +38,16 @@
     "eslint-plugin-markdown": "^2.0.0-rc.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-unicorn": "^26.0.1"
+    "eslint-plugin-unicorn": "^27.0.0"
   },
   "peerDependencies": {
     "eslint": "^7.18.0"
   },
   "engines": {
     "node": "^12.18 || ^14"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

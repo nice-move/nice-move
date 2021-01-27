@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-vue",
-  "version": "0.5.16",
+  "version": "0.5.17",
   "description": "A `eslint` config created by best practice",
   "license": "MIT",
   "author": {
@@ -29,7 +29,7 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "@nice-move/eslint-config-base": "^0.5.16",
+    "@nice-move/eslint-config-base": "^0.5.17",
     "eslint-plugin-vue": "^7.5.0"
   },
   "peerDependencies": {
@@ -37,5 +37,9 @@
   },
   "engines": {
     "node": "^12.18 || ^14"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

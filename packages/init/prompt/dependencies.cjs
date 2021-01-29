@@ -24,7 +24,7 @@ function checkEslint({ vue, react }) {
       extends: `@nice-move/eslint-config-${type}`,
     },
     devDependencies: {
-      [`@nice-move/eslint-config-${type}`]: '^0.5.15',
+      [`@nice-move/eslint-config-${type}`]: '^0.5.17',
       eslint: '^7.18.0',
     },
   };
@@ -37,16 +37,17 @@ function Dependencies(wanted = {}) {
     .source('~package.json')
     .config({ pretty: true })
     .handle((old) => {
+      const { devDependencies = {}, dependencies = {} } = old;
       const {
-        ava = 'ava' in old.devDependencies,
-        commitlint = 'commitlint' in old.devDependencies,
-        eslint = 'eslint' in old.devDependencies,
-        garou = 'garou' in old.devDependencies,
-        husky = 'husky' in old.devDependencies,
-        prettier = 'prettier' in old.devDependencies,
-        react = 'react' in old.dependencies,
-        stylelint = 'stylelint' in old.devDependencies,
-        vue = 'vue' in old.dependencies,
+        ava = 'ava' in devDependencies,
+        commitlint = 'commitlint' in devDependencies,
+        eslint = 'eslint' in devDependencies,
+        garou = 'garou' in devDependencies,
+        husky = 'husky' in devDependencies,
+        prettier = 'prettier' in devDependencies,
+        react = 'react' in dependencies,
+        stylelint = 'stylelint' in devDependencies,
+        vue = 'vue' in dependencies,
       } = wanted;
 
       const useLint = eslint || stylelint || prettier || garou;
@@ -94,7 +95,7 @@ function Dependencies(wanted = {}) {
           useLint
             ? {
                 devDependencies: {
-                  '@nice-move/cli': '^0.5.14',
+                  '@nice-move/cli': '^0.5.15',
                 },
                 scripts: {
                   lint: 'nice-move lint',

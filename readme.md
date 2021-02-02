@@ -1,6 +1,6 @@
 # nice-move
 
-Eslint/Stylelint/Prettier config for personal use.
+Frontend develop helper for frontend development.
 
 [![npm org][npm-badge]][npm-link]
 [![github repo][github-badge]][github-link]
@@ -17,6 +17,10 @@ Eslint/Stylelint/Prettier config for personal use.
 - [@nice-move/stylelint-config](./packages/stylelint-config/)
 - [@nice-move/prettier-config](./packages/prettier-config/)
 - [@nice-move/prettier-plugin-package-json](./packages/prettier-plugin-package-json/)
+
+## Related
+
+Get to know [garou](https://github.com/nice-move/garou)
 
 ## License
 

@@ -22,7 +22,7 @@ function safeGet(name) {
 function BestShot() {
   return existThenReturn('@best-shot/preset-env/package.json', () => [
     {
-      files: 'src/**',
+      files: '{src,packages/*}/**',
       ...(safeGet('@best-shot/preset-env/eslint.cjs') ||
         safeGet('@best-shot/preset-env/eslint.js')),
     },

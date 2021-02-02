@@ -1,7 +1,7 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.5.17",
-  "description": "A `eslint` config created by best practice",
+  "version": "0.5.18",
+  "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -35,13 +35,13 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-markdown": "^2.0.0-rc.1",
+    "eslint-plugin-markdown": "^2.0.0-rc.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-unicorn": "^27.0.0"
   },
   "peerDependencies": {
-    "eslint": "^7.18.0"
+    "eslint": "^7.19.0"
   },
   "engines": {
     "node": "^12.18 || ^14"

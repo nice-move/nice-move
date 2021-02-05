@@ -81,6 +81,7 @@ module.exports = {
     'lines-between-class-members': 'off',
     'no-console': 'off',
     'no-nested-ternary': 'off',
+    'no-param-reassign': 'warn',
     'no-plusplus': 'warn',
     'no-template-curly-in-string': 'off',
     camelcase: 'off',

@@ -1,21 +1,9 @@
-const existThenReturn = require('./utils.cjs');
+const { pkgHas } = require('./utils.cjs');
 
-const electron =
-  existThenReturn('electron/package.json', () => ({
-    rules: {
-      'import/no-nodejs-modules': 'off',
-    },
-    settings: {
-      'import/core-modules': ['electron'],
-    },
-    globals: {
-      Buffer: 'readonly',
-      clearImmediate: 'readonly',
-      global: 'readonly',
-      process: 'readonly',
-      setImmediate: 'readonly',
-    },
-  })) || {};
+const Vscode = pkgHas(
+  ({ engines: { vscode } = {} }) => vscode,
+  () => ({ 'import/core-modules': ['vscode'] }),
+);
 
 module.exports = {
   extends: ['plugin:import/recommended'],
@@ -46,7 +34,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
   },
   settings: {
-    ...electron.settings,
+    ...Vscode,
     'import/ignore': false,
     'import/extensions': ['.mjs', '.cjs', '.js'],
     'import/resolver': {
@@ -55,7 +43,6 @@ module.exports = {
       },
     },
   },
-  globals: electron.globals,
   overrides: [
     {
       files: '*.cjs',
@@ -83,7 +70,6 @@ module.exports = {
       excludedFiles: ['*.{m,c}js', '*.node'],
       rules: {
         'import/no-nodejs-modules': 'error',
-        ...electron.rules,
       },
     },
   ],

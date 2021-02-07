@@ -45,30 +45,32 @@ module.exports = function lint({ shell }) {
   const stylelint = 'stylelint' in dependencies;
   const garou = 'garou' in dependencies;
 
+  const useColor = process.stdin.isTTY ? ' --color' : '';
+
   const config = parse({
     '*.{vue,html,md}': [
       garou && 'garou',
-      prettier && 'prettier --write --color',
+      prettier && `prettier --write${useColor}`,
       stylelint &&
-        'stylelint --fix --rd --risd --color --custom-formatter=node_modules/stylelint-formatter-pretty',
-      eslint && 'eslint --fix --format=pretty --color',
+        `stylelint --fix --rd --risd --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
+      eslint && `eslint --fix --format=pretty${useColor}`,
     ],
     '*.{js,jsx,mjs,cjs}': [
       garou && 'garou',
-      prettier && 'prettier --write --color',
-      eslint && 'eslint --fix --format=pretty --color',
+      prettier && `prettier --write${useColor}`,
+      eslint && `eslint --fix --format=pretty${useColor}`,
     ],
     '*.{css,scss,less,xml}': [
       garou && 'garou',
-      prettier && 'prettier --write --color',
+      prettier && `prettier --write${useColor}`,
       stylelint &&
-        'stylelint --fix --rd --risd --color --custom-formatter=node_modules/stylelint-formatter-pretty',
+        `stylelint --fix --rd --risd --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
     ],
     '{*.{json,svg},*.{to,y,ya}ml,.{babel,npm}rc,.editorconfig}': [
-      prettier && 'prettier --write --color',
+      prettier && `prettier --write${useColor}`,
     ],
     'yarn.lock': [
-      `replace-in-file --configFile="${yarnConfig}" --color`,
+      `replace-in-file --configFile="${yarnConfig}"${useColor}`,
       'yarn-deduplicate',
     ],
   });

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/lint",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Lint and format everything",
   "license": "MIT",
   "author": {
@@ -40,9 +40,9 @@
     "chalk": "^4.1.0",
     "eslint-formatter-pretty": "^4.0.0",
     "fs-chain": "^5.2.0",
-    "lint-staged": "^10.5.3",
+    "lint-staged": "^10.5.4",
     "lodash": "^4.17.20",
-    "replace-in-file": "^6.1.0",
+    "replace-in-file": "^6.2.0",
     "stylelint-formatter-pretty": "^2.1.1",
     "yarn-deduplicate": "^3.1.0"
   },

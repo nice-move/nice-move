@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-config",
-  "version": "0.3.5",
+  "version": "0.4.0",
   "description": "A `prettier` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -23,17 +23,17 @@
   "bugs": {
     "url": "https://github.com/airkro/nice-move/issues"
   },
-  "main": "index.js",
+  "main": "index.cjs",
   "dependencies": {
-    "@nice-move/prettier-plugin-package-json": "^0.3.2",
-    "@prettier/plugin-xml": "^0.12.0",
+    "@nice-move/prettier-plugin-package-json": "^0.4.0",
+    "@prettier/plugin-xml": "^0.13.0",
     "prettier-plugin-ini": "^0.3.1",
     "prettier-plugin-toml": "^0.3.1"
   },
   "peerDependencies": {
-    "prettier": "^2.1.2"
+    "prettier": "^2.2.1"
   },
   "engines": {
-    "node": "^10.18 || ^12.14 || ^14"
+    "node": "^12.18 || ^14"
   }
 }

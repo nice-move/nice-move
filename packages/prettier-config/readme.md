@@ -56,7 +56,7 @@ Add to package.json
 Then run
 
 ```bash
-prettier --write **/*.{js,jsx,vue,css,scss,md}
+prettier --write **/*
 ```
 
 ## Tips

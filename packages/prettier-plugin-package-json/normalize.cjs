@@ -1,7 +1,7 @@
 const normalizeData = require('normalize-package-data');
 const normalizeBin = require('npm-normalize-package-bin');
 const { format } = require('prettier-package-json');
-const { keyOrder } = require('./key-order');
+const { keyOrder } = require('./key-order.cjs');
 
 function mergeArray(bundledDependencies, bundleDependencies) {
   return bundledDependencies || bundleDependencies
@@ -61,15 +61,16 @@ function normalize(text) {
     );
   }
 
-  if (!io.homepage || io.homepage.startsWith('https://github.com/')) {
-    if (haveGit(io)) {
-      io.homepage = [
-        io.repository.url.replace(/.git$/, ''),
-        io.repository.directory,
-      ]
-        .filter(Boolean)
-        .join('/tree/master/');
-    }
+  if (
+    (!io.homepage || io.homepage.startsWith('https://github.com/')) &&
+    haveGit(io)
+  ) {
+    io.homepage = [
+      io.repository.url.replace(/.git$/, ''),
+      io.repository.directory,
+    ]
+      .filter(Boolean)
+      .join('/tree/master/');
   }
 
   if (io.homepage && io.homepage.endsWith('#readme')) {
@@ -78,17 +79,13 @@ function normalize(text) {
 
   if (io.engines && io.engines.node) {
     io.engines.node = io.engines.node
-      .split(/\s*\|\|\s*/)
+      .split('||')
+      .map((item) => item.trim())
       .join(' || ')
-      .replace(/(>=|>|<=|<)\s*/, '$1');
+      .replace(/\s+/g, ' ');
   }
 
-  return format(io, {
-    expandUsers: true,
-    keyOrder,
-  });
+  return format(io, { expandUsers: true, keyOrder });
 }
 
-module.exports = {
-  normalize,
-};
+module.exports = { normalize };

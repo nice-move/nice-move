@@ -1,5 +1,5 @@
 const { parsers } = require('prettier/parser-babel');
-const { normalize } = require('./normalize');
+const { normalize } = require('./normalize.cjs');
 
 module.exports = {
   name: 'prettier-plugin-package-json',

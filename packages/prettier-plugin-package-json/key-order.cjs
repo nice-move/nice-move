@@ -23,10 +23,12 @@ module.exports = {
 
     'man',
     'bin',
+
     'browser',
     'module',
     'main',
     'umd',
+    'unpkg',
     'types',
     'style',
 
@@ -41,6 +43,7 @@ module.exports = {
 
     'flat',
     'workspaces',
+
     'dependencies',
     'dependenciesMeta',
     'bundledDependencies',
@@ -48,7 +51,12 @@ module.exports = {
     'devDependencies',
     'peerDependencies',
     'peerDependenciesMeta',
+    'acceptDependencies',
     'extensionDependencies',
+
+    'exports',
+    'imports',
+    'overrides',
     'resolutions',
 
     'engines',
@@ -58,11 +66,9 @@ module.exports = {
     'publishConfig',
 
     // vscode spec
-    'icon',
-    'galleryBanner',
-    'activationEvents',
     'contributes',
-    'qna',
     'extensionPack',
+    'icon',
+    'qna',
   ],
 };

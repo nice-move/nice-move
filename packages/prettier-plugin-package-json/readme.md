@@ -13,9 +13,7 @@ A [prettier] plugin to make `package.json` prettier.
 [github-badge]: https://img.shields.io/npm/l/@nice-move/prettier-plugin-package-json.svg?style=flat-square&colorB=blue&logo=github
 [node-badge]: https://img.shields.io/node/v/@nice-move/prettier-plugin-package-json.svg?style=flat-square&colorB=green&logo=node.js
 
-A [prettier] plugin to make package.json prettier.
-
-Read about [npm-package.json](https://docs.npmjs.com/files/package.json.html).
+Read about [npm-package.json](https://docs.npmjs.com/cli/v6/configuring-npm/package-json).
 
 ## Installation
 
@@ -25,7 +23,7 @@ npm install prettier @nice-move/prettier-plugin-package-json --save-dev
 
 ## Usage
 
-```json
+```jsonc
 // .prettierrc
 {
   "overrides": [
@@ -53,4 +51,4 @@ prettier --write **/package.json
 - Expand `author` and `contributors` fields into objects
 - Remove deprecated fields like `preferGlobal`, `engineStrict`
 - Merge `bundleDependencies` into `bundledDependencies`
-- Rename `esnext` to `module`, rename `typings` to `types`
+- Rename `esnext` / `jsnext` to `module`, rename `typings` to `types`

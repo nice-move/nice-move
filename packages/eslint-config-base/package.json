@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.5.21",
+  "version": "0.5.22",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -8,14 +8,18 @@
     "email": "airkro@qq.com"
   },
   "keywords": [
+    "airbnb",
     "config",
     "environment",
     "eslint",
     "html",
+    "import",
     "javascript",
+    "markdown",
     "nice-move",
     "node",
     "prettier",
+    "promise",
     "standard",
     "unicorn"
   ],

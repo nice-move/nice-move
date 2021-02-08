@@ -1,7 +1,8 @@
 const {
   configs: {
     recommended: {
-      overrides: [{ rules }],
+      // eslint-disable-next-line no-unused-vars
+      overrides: [_, { rules }],
     },
   },
 } = require('eslint-plugin-markdown/lib/index');

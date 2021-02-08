@@ -73,8 +73,8 @@ if (require.main.filename === __filename) {
   eslintInspector('@nice-move/base', 'sample.md/o.node', 'md/node.json');
   eslintInspector('@nice-move/base', 'sample.md/o.mjs', 'md/mjs.json');
 
+  eslintInspector('@nice-move/vue', 'sample.md/o.vue', 'md/vue.json');
   eslintInspector('@nice-move/react', 'sample.md/o.jsx', 'md/jsx.json');
-  eslintInspector('@nice-move/base', 'sample.md/o.vue', 'md/vue.json');
 
   stylelintInspector('css.json');
 }

@@ -8,6 +8,7 @@ module.exports = {
         'airbnb/hooks',
         '@nice-move/eslint-config-base/lib/import.cjs',
         '@nice-move/eslint-config-base/lib/base.cjs',
+        '@nice-move/eslint-config-base/lib/markdown.cjs',
         require.resolve('./lib/react.cjs'),
         'prettier/react',
         'prettier',

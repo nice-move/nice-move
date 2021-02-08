@@ -9,7 +9,7 @@ const defaultConfig = {
 
 module.exports = {
   ...defaultConfig,
-  plugins: ['@nice-move/prettier-plugin-package-json'],
+  plugins: [require.resolve('@nice-move/prettier-plugin-package-json')],
   overrides: [
     {
       files: ['.babelrc', '*.json'],

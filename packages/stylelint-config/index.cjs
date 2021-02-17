@@ -1,4 +1,6 @@
 module.exports = {
+  reportNeedlessDisables: true,
+  reportInvalidScopeDisables: true,
   extends: [
     'stylelint-config-standard',
     'stylelint-config-prettier',

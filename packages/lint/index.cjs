@@ -52,7 +52,7 @@ module.exports = function lint({ shell }) {
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
       stylelint &&
-        `stylelint --fix --rd --risd --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
+        `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
       eslint && `eslint --fix --format=pretty${useColor}`,
     ],
     '*.{js,jsx,mjs,cjs}': [
@@ -64,7 +64,7 @@ module.exports = function lint({ shell }) {
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
       stylelint &&
-        `stylelint --fix --rd --risd --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
+        `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
     ],
     '{*.{json,svg},*.{to,y,ya}ml,.{babel,npm}rc,.editorconfig}': [
       prettier && `prettier --write${useColor}`,

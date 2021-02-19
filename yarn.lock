@@ -3166,11 +3166,6 @@ kleur@^3.0.3:
   resolved "https://mirrors.cloud.tencent.com/npm/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity "sha1-p5yezIbuHOP6YgbRIWxQHxR/wH4= sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w=="
 
-known-css-properties@^0.20.0:
-  version "0.20.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/known-css-properties/-/known-css-properties-0.20.0.tgz#0570831661b47dd835293218381166090ff60e96"
-  integrity "sha1-BXCDFmG0fdg1KTIYOBFmCQ/2DpY= sha512-URvsjaA9ypfreqJ2/ylDr5MUERhJZ+DhguoWRr2xgS5C7aGCalXo+ewL+GixgKBfhT2vuL02nbIgNGqVWgTOYw=="
-
 known-css-properties@^0.21.0:
   version "0.21.0"
   resolved "https://mirrors.cloud.tencent.com/npm/known-css-properties/-/known-css-properties-0.21.0.tgz#15fbd0bbb83447f3ce09d8af247ed47c68ede80d"

@@ -25,7 +25,7 @@ function eslintInspector(configName, filename, outputName = '') {
     .calculateConfigForFile(filename)
     .then((data) => {
       // eslint-disable-next-line no-param-reassign
-      data.rules = pickBy(data.rules, (item) => item[0] !== 'off');
+      data.rules = pickBy(data.rules, (item) => !['off', 0].includes(item[0]));
       return sortKeys(data, { deep: true });
     })
     .then((data) => {

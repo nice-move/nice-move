@@ -8,12 +8,12 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "sort-keys": "^4.2.0",
     "write-json-file": "^4.3.0"
   },
   "peerDependencies": {
-    "eslint": "^7.18.0",
-    "stylelint": "^13.9.0"
+    "eslint": "^7.20.0",
+    "stylelint": "^13.11.0"
   }
 }

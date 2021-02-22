@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['plugin:unicorn/recommended', 'prettier/unicorn'],
+  extends: ['plugin:unicorn/recommended'],
   rules: {
     'unicorn/consistent-destructuring': 'warn',
     'unicorn/expiring-todo-comments': 'off',

@@ -34,6 +34,7 @@ module.exports = {
     'no-param-reassign': 'warn',
     'no-plusplus': 'warn',
     'no-template-curly-in-string': 'off',
+    'prefer-arrow-callback': 'warn',
     camelcase: 'off',
   },
 };

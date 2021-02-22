@@ -23,6 +23,10 @@ module.exports = {
     'selector-no-qualifying-type': true,
     'shorthand-property-no-redundant-values': true,
     'time-min-milliseconds': 250,
+    'selector-pseudo-element-colon-notation': [
+      'double',
+      { severity: 'warning' },
+    ],
 
     // ---- handle by prettier -------------
     'at-rule-name-space-after': null,

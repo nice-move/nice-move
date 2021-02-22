@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/stylelint-config",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "A `stylelint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -35,7 +35,7 @@
     "stylelint-scss": "^3.19.0"
   },
   "peerDependencies": {
-    "stylelint": "^13.10.0"
+    "stylelint": "^13.11.0"
   },
   "engines": {
     "node": "^12.18 || ^14"

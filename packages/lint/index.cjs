@@ -1,19 +1,16 @@
-const mapValues = require('lodash/mapValues');
-const pickBy = require('lodash/pickBy');
-const isEmpty = require('lodash/isEmpty');
 const { resolve } = require('path');
 
 const lintStaged = require('lint-staged');
-const { yellow } = require('chalk');
 
 const { action } = require('./patch/stylelint.cjs');
 
 function parse(obj) {
-  const config = pickBy(
-    mapValues(obj, (arr) => arr.filter(Boolean)),
-    (arr) => arr.length > 0,
-  );
-  return isEmpty(config) ? undefined : config;
+  const io = Object.entries(obj)
+    .map(([key, value]) => [key, value.filter(Boolean)])
+    // eslint-disable-next-line no-unused-vars
+    .filter(([key, value]) => value.length);
+
+  return io.length > 0 ? Object.fromEntries(io) : undefined;
 }
 
 function getMaxArgLength() {
@@ -75,31 +72,26 @@ module.exports = function lint({ shell }) {
     ],
   });
 
-  if (!config) {
-    console.log(yellow`nice-move:`, "Can't find `eslint/stylelint/prettier`.");
-    process.exitCode = 1;
-  } else {
-    if (stylelint) {
-      action();
-    }
-
-    lintStaged({
-      allowEmpty: true,
-      concurrent: true,
-      config,
-      cwd: process.cwd(),
-      debug: false,
-      maxArgLength: getMaxArgLength() / 2,
-      quiet: false,
-      relative: false,
-      shell: !!shell,
-      stash: true,
-    })
-      .then((passed) => {
-        process.exitCode = passed ? 0 : 1;
-      })
-      .catch(() => {
-        process.exitCode = 1;
-      });
+  if (stylelint) {
+    action();
   }
+
+  lintStaged({
+    allowEmpty: true,
+    concurrent: true,
+    config,
+    cwd: process.cwd(),
+    debug: false,
+    maxArgLength: getMaxArgLength() / 2,
+    quiet: false,
+    relative: false,
+    shell: !!shell,
+    stash: true,
+  })
+    .then((passed) => {
+      process.exitCode = passed ? 0 : 1;
+    })
+    .catch(() => {
+      process.exitCode = 1;
+    });
 };

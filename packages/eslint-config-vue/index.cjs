@@ -32,7 +32,6 @@ module.exports = {
       rules: {
         'vue/attributes-order': 'off',
         'vue/component-name-in-template-casing': ['warn', 'PascalCase'],
-        'vue/html-self-closing': 'warn',
         'vue/no-duplicate-attr-inheritance': 'warn',
         'vue/no-empty-component-block': 'error',
         'vue/no-template-target-blank': ['error', { allowReferrer: true }],

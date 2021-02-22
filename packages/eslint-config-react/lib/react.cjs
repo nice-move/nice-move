@@ -17,9 +17,6 @@ module.exports = {
     'react/jsx-no-useless-fragment': 'warn',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/require-default-props': 'warn',
-    'react/sort-comp': 'off',
     'react/prop-types': [
       'warn',
       {
@@ -34,6 +31,10 @@ module.exports = {
         ],
       },
     ],
+    'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'warn',
+    'react/self-closing-comp': 'off',
+    'react/sort-comp': 'off',
   },
   settings: {
     node: {

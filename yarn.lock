@@ -2291,10 +2291,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://mirrors.cloud.tencent.com/npm/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity "sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc= sha512-dsKNQNdj6xA3T+QlADDA7mOSlX0qiMINjn0cgr+eGHGsbSHzTabcIogz2+p/iqP1Xs6EP/sS2SbqH+brGTbq0g=="
 
-garou@^0.1.13:
-  version "0.1.13"
-  resolved "https://mirrors.cloud.tencent.com/npm/garou/-/garou-0.1.13.tgz#e491f5e6e965aa87c58da9240a368d25201e5c6c"
-  integrity sha512-sWpMQk34FvM684r56EiJW9zRZxm7h0YzERovaMWccYsvUZUKKIejGecQLyrTE58YNoOgRi0Vze6UxpkdDuxSpg==
+garou@^0.1.14:
+  version "0.1.14"
+  resolved "https://mirrors.cloud.tencent.com/npm/garou/-/garou-0.1.14.tgz#3336c90fba7e5e1539549b2472952ad0b3645235"
+  integrity sha512-scIaQMXaYhZ41q/Sg1RdUtZW4zW+gvI/fQwS4ts9Obn2TUih0keWaNwApk/AZ0w4F7ARIPYN1F04DCTg75QTDA==
   dependencies:
     cheetor "^0.4.1"
     eslint "^7.20.0"
@@ -2303,16 +2303,16 @@ garou@^0.1.13:
     eslint-plugin-react "^7.22.0"
     eslint-plugin-simple-import-sort "^7.0.0"
     eslint-plugin-sort-class-members "^1.9.0"
+    eslint-plugin-vue "^7.6.0"
     fs-chain "^5.2.0"
     globby "^11.0.2"
     rehype-parse "^7.0.1"
     rehype-sort-attributes "^3.0.2"
     rehype-stringify "^8.0.0"
     slash "^3.0.0"
-    stylelint "^13.10.0"
+    stylelint "^13.11.0"
     stylelint-order "^4.1.0"
     unified "^9.2.0"
-    vue-eslint-parser "^7.5.0"
 
 gensync@^1.0.0-beta.1:
   version "1.0.0-beta.2"
@@ -5077,7 +5077,7 @@ stylelint-scss@^3.19.0:
     postcss-selector-parser "^6.0.2"
     postcss-value-parser "^4.1.0"
 
-stylelint@^13.10.0, stylelint@^13.11.0:
+stylelint@^13.11.0:
   version "13.11.0"
   resolved "https://mirrors.cloud.tencent.com/npm/stylelint/-/stylelint-13.11.0.tgz#591981fbdd68c9d3d3e6147a0cd6a07539fc216d"
   integrity sha512-DhrKSWDWGZkCiQMtU+VroXM6LWJVC8hSK24nrUngTSQvXGK75yZUq4yNpynqrxD3a/fzKMED09V+XxO4z4lTbw==

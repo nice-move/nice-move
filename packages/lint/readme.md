@@ -20,7 +20,7 @@ npm install @nice-move/lint --save-dev
 
 ## Usage
 
-Install `eslint` / `stylelint` / `prettier` / `garou` when needed:
+Install `eslint` / `stylelint` / `prettier` / `garou` / `rustywind` when needed:
 
 ```bash
 npm install eslint stylelint prettier garou --save-dev
@@ -28,7 +28,7 @@ npm install eslint stylelint prettier garou --save-dev
 
 Add configurations:
 
-```json
+```jsonc
 // example: package.json
 {
   "eslintConfig": {},
@@ -50,7 +50,7 @@ npx -c nice-move-lint
 npm install husky --save-dev
 ```
 
-```json
+```jsonc
 // example: package.json
 {
   "husky": {

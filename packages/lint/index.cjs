@@ -47,7 +47,7 @@ module.exports = function lint({ shell }) {
 
   const config = parse({
     '*.{vue,html,md}': [
-      rustywind && 'rustywind --write',
+      rustywind && ((files) => `rustywind --write ${files.join(',')}`),
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
       stylelint &&
@@ -55,7 +55,7 @@ module.exports = function lint({ shell }) {
       eslint && `eslint --fix --format=pretty${useColor}`,
     ],
     '*.{js,jsx,mjs,cjs}': [
-      rustywind && 'rustywind --write',
+      rustywind && ((files) => `rustywind --write ${files.join(',')}`),
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
       eslint && `eslint --fix --format=pretty${useColor}`,

@@ -41,11 +41,13 @@ module.exports = function lint({ shell }) {
   const eslint = 'eslint' in dependencies;
   const stylelint = 'stylelint' in dependencies;
   const garou = 'garou' in dependencies;
+  const rustywind = 'rustywind' in dependencies;
 
   const useColor = process.stdin.isTTY ? ' --color' : '';
 
   const config = parse({
     '*.{vue,html,md}': [
+      rustywind && 'rustywind --write',
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
       stylelint &&
@@ -53,6 +55,7 @@ module.exports = function lint({ shell }) {
       eslint && `eslint --fix --format=pretty${useColor}`,
     ],
     '*.{js,jsx,mjs,cjs}': [
+      rustywind && 'rustywind --write',
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
       eslint && `eslint --fix --format=pretty${useColor}`,

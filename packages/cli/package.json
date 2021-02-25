@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.5.16",
+  "version": "0.5.17",
   "description": "Frontend develop helper for frontend development",
   "license": "MIT",
   "author": {
@@ -12,10 +12,14 @@
     "eslint",
     "format",
     "formatter",
+    "garou",
     "lint",
     "linter",
     "nice-move",
     "prettier",
+    "quality",
+    "sort",
+    "styleguide",
     "stylelint"
   ],
   "homepage": "https://github.com/airkro/nice-move/tree/master/packages/cli",
@@ -32,7 +36,7 @@
   },
   "dependencies": {
     "@nice-move/init": "^0.1.23",
-    "@nice-move/lint": "^0.1.6",
+    "@nice-move/lint": "^0.1.8",
     "cheetor": "^0.4.1"
   },
   "engines": {

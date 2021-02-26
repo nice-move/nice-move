@@ -23,6 +23,18 @@ module.exports = {
     'selector-no-qualifying-type': true,
     'shorthand-property-no-redundant-values': true,
     'time-min-milliseconds': 250,
+    'font-family-no-missing-generic-family-keyword': [
+      true,
+      {
+        ignoreFontFamilies: [
+          /^icon-/,
+          /^iconfont-/,
+          /^icon-font-/,
+          /^fonticon-/,
+          /^font-icon-/,
+        ],
+      },
+    ],
     'selector-pseudo-element-colon-notation': [
       'double',
       { severity: 'warning' },

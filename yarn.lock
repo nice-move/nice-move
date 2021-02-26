@@ -1033,6 +1033,14 @@ cheetor@^0.4.1:
     chalk "^4.1.0"
     yargs "^16.2.0"
 
+cheetor@^0.5.0:
+  version "0.5.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/cheetor/-/cheetor-0.5.0.tgz#13b5e78f7760d88762ef3f1569fc991d0b65d5cb"
+  integrity sha512-us+BthCv+NWfVrXdswQOGS3Hz4rmt+HGNKXzEnnIa6MuVKdjb2t6bD4QM3S2Eh/+o0Mfr+PAlXy7nmnmsRAZTA==
+  dependencies:
+    chalk "^4.1.0"
+    yargs "^16.2.0"
+
 chevrotain@4.1.1:
   version "4.1.1"
   resolved "https://mirrors.cloud.tencent.com/npm/chevrotain/-/chevrotain-4.1.1.tgz#e1e601bf099e96e6a3377671b7d5a40c631cf8ce"

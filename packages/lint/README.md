@@ -44,7 +44,7 @@ git add .
 npx -c nice-move-lint
 ```
 
-### Use with `husky`
+### Use with `husky` v4
 
 ```bash
 npm install husky --save-dev
@@ -56,6 +56,19 @@ npm install husky --save-dev
   "husky": {
     "hooks": {
       "pre-commit": "nice-move-lint"
+    }
+  }
+}
+```
+
+### Custom linter
+
+```jsonc
+// example: package.json
+{
+  "nice-move": {
+    "lint": {
+      "*.md": "remark"
     }
   }
 }

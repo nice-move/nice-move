@@ -26,12 +26,22 @@ function getMaxArgLength() {
 
 const yarnConfig = require.resolve('./lib/yarn.cjs');
 
-function getDependencies() {
+function pkg() {
   try {
-    return require(resolve(process.cwd(), 'package.json')).devDependencies;
+    return require(resolve(process.cwd(), 'package.json'));
   } catch {
     return {};
   }
+}
+
+function getDependencies() {
+  const { devDependencies = {} } = pkg();
+  return devDependencies;
+}
+
+function readConfig() {
+  const { 'nice-move': { lint: config = {} } = {} } = pkg();
+  return config;
 }
 
 module.exports = function lint({ shell }) {
@@ -73,6 +83,7 @@ module.exports = function lint({ shell }) {
       `replace-in-file --configFile="${yarnConfig}"${useColor}`,
       'yarn-deduplicate',
     ],
+    ...readConfig(),
   });
 
   if (stylelint) {

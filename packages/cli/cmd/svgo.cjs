@@ -21,19 +21,20 @@ module.exports = function svgoCaller() {
   ) {
     return {
       command: 'svgo',
-      describe: 'Run `svgo`',
-      handler() {
+      describe: 'Run `svgo` to optimize `*.svg`',
+      // eslint-disable-next-line no-unused-vars
+      handler({ _: [_, path = './'] }) {
         const execa = require('execa');
         execa('svgo', [
           '-r',
           '-q',
           '--pretty',
-          '-f',
-          './',
           '--indent',
           '2',
           '--config',
           'node_modules/svgo-config/config.json',
+          '-f',
+          path,
         ])
           .then(() => {
             console.log('Done: calling svgo');

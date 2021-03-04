@@ -4,22 +4,25 @@ const { cyan } = require('chalk');
 const { pkgCwd, getAuthorName } = require('../lib/utils.cjs');
 
 module.exports = function License() {
-  const { license, author = '' } = pkgCwd();
+  const { license, author = '', private: isPrivate } = pkgCwd();
 
-  if (license === 'MIT' || license === 'UNLICENSE') {
-    const Chain = new Text();
-
-    if (license === 'MIT') {
-      Chain.source('../template/mit.tpl').handle((text) =>
+  if (license === 'MIT') {
+    return new Text()
+      .source('../template/mit.tpl')
+      .handle((text) =>
         text
           .replace('{{year}}', new Date().getFullYear())
           .replace('{{holder}}', getAuthorName(author)),
-      );
-    } else {
-      Chain.source('../template/unlicense.tpl');
-    }
+      )
+      .output('~LICENSE')
+      .logger('Create/Overwrite', cyan('LICENSE'))
+      .catch(console.warn);
+  }
 
-    return Chain.output('~LICENSE')
+  if (license === 'UNLICENSE' && !isPrivate) {
+    return new Text()
+      .source('../template/unlicense.tpl')
+      .output('~LICENSE')
       .logger('Create/Overwrite', cyan('LICENSE'))
       .catch(console.warn);
   }

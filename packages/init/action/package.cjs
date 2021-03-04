@@ -35,6 +35,13 @@ module.exports = function Package(info) {
                 },
         },
         old || {},
+        {
+          license: ['UNLICENSED', 'unlicense', 'unlicensed'].includes(
+            old.license,
+          )
+            ? 'UNLICENSE'
+            : old.license,
+        },
         info,
       ]),
     )

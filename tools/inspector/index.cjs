@@ -76,5 +76,8 @@ if (require.main.filename === __filename) {
   eslintInspector('@nice-move/vue', 'sample.md/o.vue', 'md/vue.json');
   eslintInspector('@nice-move/react', 'sample.md/o.jsx', 'md/jsx.json');
 
+  eslintInspector('@nice-move/base', 'test/sample.js', 'test.json');
+  eslintInspector('@nice-move/base', 'spec/sample.js', 'spec.json');
+
   stylelintInspector('css.json');
 }

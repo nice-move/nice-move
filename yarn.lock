@@ -881,6 +881,11 @@ browserslist@^4.12.0:
     escalade "^3.1.1"
     node-releases "^1.1.67"
 
+buf-compare@^1.0.0:
+  version "1.0.1"
+  resolved "https://mirrors.cloud.tencent.com/npm/buf-compare/-/buf-compare-1.0.1.tgz#fef28da8b8113a0a0db4430b0b6467b69730b34a"
+  integrity sha1-/vKNqLgROgoNtEMLC2Rntpcws0o=
+
 buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://mirrors.cloud.tencent.com/npm/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
@@ -1328,6 +1333,14 @@ convert-to-spaces@^1.0.1:
   resolved "https://mirrors.cloud.tencent.com/npm/convert-to-spaces/-/convert-to-spaces-1.0.2.tgz#7e3e48bbe6d997b1417ddca2868204b4d3d85715"
   integrity "sha1-fj5Iu+bZl7FBfdyihoIEtNPYVxU= sha512-cj09EBuObp9gZNQCzc7hByQyrs6jVGE+o9kSJmeUoj+GiPiJvi5LYqEH/Hmme4+MTLHM+Ejtq+FChpjjEnsPdQ=="
 
+core-assert@^0.2.0:
+  version "0.2.1"
+  resolved "https://mirrors.cloud.tencent.com/npm/core-assert/-/core-assert-0.2.1.tgz#f85e2cf9bfed28f773cc8b3fa5c5b69bdc02fe3f"
+  integrity sha1-+F4s+b/tKPdzzIs/pcW2m9wC/j8=
+  dependencies:
+    buf-compare "^1.0.0"
+    is-error "^2.2.0"
+
 core-js-pure@^3.0.0:
   version "3.8.1"
   resolved "https://mirrors.cloud.tencent.com/npm/core-js-pure/-/core-js-pure-3.8.1.tgz#23f84048f366fdfcf52d3fd1c68fec349177d119"
@@ -1491,6 +1504,13 @@ deep-is@^0.1.3:
   version "0.1.3"
   resolved "https://mirrors.cloud.tencent.com/npm/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
   integrity "sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ= sha512-GtxAN4HvBachZzm4OnWqc45ESpUCMwkYcsjnsPs23FwJbsO+k4t0k9bQCgOmzIlpHO28+WPK/KRbRk0DDHuuDw=="
+
+deep-strict-equal@^0.2.0:
+  version "0.2.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/deep-strict-equal/-/deep-strict-equal-0.2.0.tgz#4a078147a8ab57f6a0d4f5547243cd22f44eb4e4"
+  integrity sha1-SgeBR6irV/ag1PVUckPNIvROtOQ=
+  dependencies:
+    core-assert "^0.2.0"
 
 deepmerge@^4.2.2:
   version "4.2.2"
@@ -1673,6 +1693,13 @@ end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
+enhance-visitors@^1.0.0:
+  version "1.0.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/enhance-visitors/-/enhance-visitors-1.0.0.tgz#aa945d05da465672a1ebd38fee2ed3da8518e95a"
+  integrity sha1-qpRdBdpGVnKh69OP7i7T2oUY6Vo=
+  dependencies:
+    lodash "^4.13.1"
+
 enquirer@^2.3.5, enquirer@^2.3.6:
   version "2.3.6"
   resolved "https://mirrors.cloud.tencent.com/npm/enquirer/-/enquirer-2.3.6.tgz#2a7fe5dd634a1e4125a975ec994ff5456dc3734d"
@@ -1789,10 +1816,10 @@ eslint-config-airbnb@^18.2.1:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-prettier@^8.0.0:
-  version "8.0.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/eslint-config-prettier/-/eslint-config-prettier-8.0.0.tgz#024d661444319686c588c8849c8da33815dbdb1c"
-  integrity sha512-5EaAVPsIHu+grmm5WKjxUia4yHgRrbkd8I0ffqUSwixCPMVBrbS97UnzlEY/Q7OWo584vgixefM0kJnUfo/VjA==
+eslint-config-prettier@^8.1.0:
+  version "8.1.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/eslint-config-prettier/-/eslint-config-prettier-8.1.0.tgz#4ef1eaf97afe5176e6a75ddfb57c335121abc5a6"
+  integrity sha512-oKMhGv3ihGbCIimCAjqkdzx2Q+jthoqnXSP+d86M9tptwugycmTFdVR4IpLgq2c4SHifbwO90z2fQ8/Aio73yw==
 
 eslint-config-standard-jsx@^10.0.0:
   version "10.0.0"
@@ -1837,6 +1864,21 @@ eslint-module-utils@^2.6.0:
   dependencies:
     debug "^2.6.9"
     pkg-dir "^2.0.0"
+
+eslint-plugin-ava@^11.0.0:
+  version "11.0.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-ava/-/eslint-plugin-ava-11.0.0.tgz#92d98694b4af6d6f2353613af06301d44d6b13a6"
+  integrity sha512-UMGedfl/gIKx1tzjGtAsTSJgowyAEZU2VWmpoWXYcuuV4B2H4Cu90yuMgMPEVt1mQlIZ21L7YM2CSpHUFJo/LQ==
+  dependencies:
+    deep-strict-equal "^0.2.0"
+    enhance-visitors "^1.0.0"
+    eslint-utils "^2.1.0"
+    espree "^7.2.0"
+    espurify "^2.0.1"
+    import-modules "^2.0.0"
+    micro-spelling-correcter "^1.1.1"
+    pkg-dir "^4.2.0"
+    resolve-from "^5.0.0"
 
 eslint-plugin-es@^3.0.0:
   version "3.0.1"
@@ -1973,15 +2015,15 @@ eslint-plugin-unicorn@^28.0.2:
     safe-regex "^2.1.1"
     semver "^7.3.4"
 
-eslint-plugin-vue@^7.6.0:
-  version "7.6.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-vue/-/eslint-plugin-vue-7.6.0.tgz#ea616e6dfd45d545adb16cba628c5a992cc31f0b"
-  integrity sha512-qYpKwAvpcQXyUXVcG8Zd+fxHDx9iSgTQuO7dql7Ug/2BCvNNDr6s3I9p8MoUo23JJdO7ZAjW3vSwY/EBf4uBcw==
+eslint-plugin-vue@^7.6.0, eslint-plugin-vue@^7.7.0:
+  version "7.7.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/eslint-plugin-vue/-/eslint-plugin-vue-7.7.0.tgz#a90df4595e670821bf243bd2750ededdb74948b8"
+  integrity sha512-mYz4bpLGv5jx6YG/GvKkqbGSfV7uma2u1P3mLA41Q5vQl8W1MeuTneB8tfsLq6xxxesFubcrOC0BZBJ5R+eaCQ==
   dependencies:
     eslint-utils "^2.1.0"
     natural-compare "^1.4.0"
     semver "^7.3.2"
-    vue-eslint-parser "^7.5.0"
+    vue-eslint-parser "^7.6.0"
 
 eslint-rule-docs@^1.1.5:
   version "1.1.217"
@@ -2075,7 +2117,7 @@ espree@^6.2.1:
     acorn-jsx "^5.2.0"
     eslint-visitor-keys "^1.1.0"
 
-espree@^7.3.0, espree@^7.3.1:
+espree@^7.2.0, espree@^7.3.0, espree@^7.3.1:
   version "7.3.1"
   resolved "https://mirrors.cloud.tencent.com/npm/espree/-/espree-7.3.1.tgz#f2df330b752c6f55019f8bd89b7660039c1bbbb6"
   integrity "sha1-8t8zC3Usb1UBn4vYm3ZgA5wbu7Y= sha512-v3JCNCE64umkFpmkFGqzVKsOT0tN1Zr+ueqLZfpV1Ob8e+CEgPWa+OxCoGH3tnhimMKIaBm4m/vaRpJ/krRz2g=="
@@ -2088,6 +2130,11 @@ esprima@^4.0.0:
   version "4.0.1"
   resolved "https://mirrors.cloud.tencent.com/npm/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
   integrity "sha1-E7BM2z5sXRnfkatph6hpVhmwqnE= sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A=="
+
+espurify@^2.0.1:
+  version "2.0.1"
+  resolved "https://mirrors.cloud.tencent.com/npm/espurify/-/espurify-2.0.1.tgz#c25b3bb613863daa142edcca052370a1a459f41d"
+  integrity sha512-7w/dUrReI/QbJFHRwfomTlkQOXaB1NuCrBRn5Y26HXn5gvh18/19AgLbayVrNxXQfkckvgrJloWyvZDuJ7dhEA==
 
 esquery@^1.3.1, esquery@^1.4.0:
   version "1.4.0"
@@ -2736,7 +2783,7 @@ import-local@^3.0.2:
     pkg-dir "^4.2.0"
     resolve-cwd "^3.0.0"
 
-import-modules@^2.1.0:
+import-modules@^2.0.0, import-modules@^2.1.0:
   version "2.1.0"
   resolved "https://mirrors.cloud.tencent.com/npm/import-modules/-/import-modules-2.1.0.tgz#abe7df297cb6c1f19b57246eb8b8bd9664b6d8c2"
   integrity sha512-8HEWcnkbGpovH9yInoisxaSoIg9Brbul+Ju3Kqe2UsYDUBJD/iQjSgEj0zPcTDPKfPp2fs5xlv1i+JSye/m1/A==
@@ -2875,7 +2922,7 @@ is-decimal@^1.0.0:
   resolved "https://mirrors.cloud.tencent.com/npm/is-decimal/-/is-decimal-1.0.4.tgz#65a3a5958a1c5b63a706e1b333d7cd9f630d3fa5"
   integrity "sha1-ZaOllYocW2OnBuGzM9fNn2MNP6U= sha512-RGdriMmQQvZ2aqaQq3awNA6dCGtKpiDFcOzrTWrDAT2MiWrKQVPmxLGHl7Y2nNu6led0kEyoX0enY0qXYsv9zw=="
 
-is-error@^2.2.2:
+is-error@^2.2.0, is-error@^2.2.2:
   version "2.2.2"
   resolved "https://mirrors.cloud.tencent.com/npm/is-error/-/is-error-2.2.2.tgz#c10ade187b3c93510c5470a5567833ee25649843"
   integrity "sha1-wQreGHs8k1EMVHClVngz7iVkmEM= sha512-IOQqts/aHWbiisY5DuPJQ0gcbvaLFCa7fBa9xoLfxBZvQ+ZI/Zh9xoI7Gk+G64N0FdK4AbibytHht2tWgpJWLg=="
@@ -3365,7 +3412,7 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "^3.0.0"
 
-lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21:
+lodash@^4.13.1, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://mirrors.cloud.tencent.com/npm/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -3566,6 +3613,11 @@ merge2@^1.3.0:
   version "1.4.1"
   resolved "https://mirrors.cloud.tencent.com/npm/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity "sha1-Q2iJL4hekHRVpv19xVwMnUBJkK4= sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg=="
+
+micro-spelling-correcter@^1.1.1:
+  version "1.1.1"
+  resolved "https://mirrors.cloud.tencent.com/npm/micro-spelling-correcter/-/micro-spelling-correcter-1.1.1.tgz#805a06a26ccfcad8f3e5c6a1ac5ff29d4530166e"
+  integrity sha512-lkJ3Rj/mtjlRcHk6YyCbvZhyWTOzdBvTHsxMmZSk5jxN1YyVSQ+JETAom55mdzfcyDrY/49Z7UCW760BK30crg==
 
 micromark@~2.11.0:
   version "2.11.2"
@@ -5686,10 +5738,10 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
-vue-eslint-parser@^7.5.0:
-  version "7.5.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/vue-eslint-parser/-/vue-eslint-parser-7.5.0.tgz#b68221c55fee061899afcfb4441ec74c1495285e"
-  integrity sha512-6EHzl00hIpy4yWZo3qSbtvtVw1A1cTKOv1w95QSuAqGgk4113XtRjvNIiEGo49r0YWOPYsrmI4Dl64axL5Agrw==
+vue-eslint-parser@^7.6.0:
+  version "7.6.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/vue-eslint-parser/-/vue-eslint-parser-7.6.0.tgz#01ea1a2932f581ff244336565d712801f8f72561"
+  integrity sha512-QXxqH8ZevBrtiZMZK0LpwaMfevQi9UL7lY6Kcp+ogWHC88AuwUPwwCIzkOUc1LR4XsYAt/F9yHXAB/QoD17QXA==
   dependencies:
     debug "^4.1.1"
     eslint-scope "^5.0.0"

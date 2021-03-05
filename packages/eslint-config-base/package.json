@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.5.24",
+  "version": "0.5.25",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -35,7 +35,7 @@
   "main": "index.cjs",
   "dependencies": {
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.0.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
@@ -45,7 +45,7 @@
     "eslint-plugin-unicorn": "^28.0.2"
   },
   "peerDependencies": {
-    "eslint": "^7.20.0"
+    "eslint": "^7.21.0"
   },
   "engines": {
     "node": "^12.18 || ^14"

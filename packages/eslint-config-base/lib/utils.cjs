@@ -28,15 +28,9 @@ function safeGet(name) {
 }
 
 function pkgHas(checker, getResult) {
-  try {
-    const pkg = require(resolve(process.cwd(), 'package.json'));
-    if (checker(pkg)) {
-      return getResult();
-    }
-  } catch (error) {
-    if (!isSafeError(error)) {
-      throw error;
-    }
+  const pkg = safeGet(resolve(process.cwd(), 'package.json'));
+  if (checker(pkg)) {
+    return getResult();
   }
 }
 

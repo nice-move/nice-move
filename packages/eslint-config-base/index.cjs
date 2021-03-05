@@ -26,6 +26,7 @@ module.exports = {
     require.resolve('./lib/electron.cjs'),
     require.resolve('./lib/node.cjs'),
     require.resolve('./lib/markdown.cjs'),
+    require.resolve('./lib/test.cjs'),
     'prettier',
   ],
   ignorePatterns: [

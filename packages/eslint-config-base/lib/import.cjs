@@ -19,8 +19,8 @@ module.exports = {
       'error',
       {
         devDependencies: [
-          '**/*.{test,tests,spec}.{m,c,}js',
-          '{test,tests}.{m,c,}js',
+          '**/*.{test,spec}.{m,c,}js',
+          '{test,tests,try}.{m,c,}js',
           '{test,tests,config}/**/*.{m,c,}js',
           '**/.*rc.{m,c,}js',
           '**/*.config.{m,c,}js',

@@ -11,5 +11,5 @@ module.exports = {
       // eslint-disable-next-line import/no-extraneous-dependencies
       rules: require('eslint-plugin-ava/index.js').configs.recommended.rules,
     })),
-  ],
+  ].filter(Boolean),
 };

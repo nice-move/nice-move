@@ -36,6 +36,14 @@ module.exports = {
     'no-plusplus': 'warn',
     'no-template-curly-in-string': 'off',
     'prefer-arrow-callback': 'warn',
+    'no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '_+',
+        ignoreRestSiblings: true,
+        varsIgnorePattern: '_+',
+      },
+    ],
     camelcase: 'off',
   },
 };

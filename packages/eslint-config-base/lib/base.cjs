@@ -39,9 +39,9 @@ module.exports = {
     'no-unused-vars': [
       'error',
       {
-        argsIgnorePattern: '_+',
+        argsIgnorePattern: '^_+$',
         ignoreRestSiblings: true,
-        varsIgnorePattern: '_+',
+        varsIgnorePattern: '^_+$',
       },
     ],
     camelcase: 'off',

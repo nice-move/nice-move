@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-plugin-package-json",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A `prettier` plugin to make `package.json` prettier",
   "license": "MIT",
   "author": {
@@ -25,7 +25,7 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "normalize-package-data": "^3.0.0",
+    "normalize-package-data": "^3.0.2",
     "npm-normalize-package-bin": "^1.0.1",
     "prettier-package-json": "^2.1.3"
   },

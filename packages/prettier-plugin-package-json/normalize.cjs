@@ -40,7 +40,11 @@ function handle(json) {
 }
 
 function haveGit(io) {
-  return io.repository && io.repository.type === 'git' && io.repository.url;
+  return (
+    io.repository &&
+    io.repository.url &&
+    (io.repository.type === 'git' || io.repository.url.startsWith('git+'))
+  );
 }
 
 function normalize(text) {
@@ -51,6 +55,7 @@ function normalize(text) {
   delete io.readme;
 
   if (haveGit(io)) {
+    io.repository.type = 'git';
     io.repository.url = io.repository.url.replace(/^git\+/, '');
   }
 

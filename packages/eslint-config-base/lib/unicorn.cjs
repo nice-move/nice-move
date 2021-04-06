@@ -1,7 +1,7 @@
 module.exports = {
   extends: ['plugin:unicorn/recommended'],
   rules: {
-    'unicorn/consistent-destructuring': 'warn',
+    'unicorn/consistent-destructuring': 'off',
     'unicorn/expiring-todo-comments': 'off',
     'unicorn/import-index': ['warn', { ignoreImports: true }],
     'unicorn/import-style': 'off',

@@ -39,11 +39,6 @@ function getDependencies() {
   return devDependencies;
 }
 
-function readConfig() {
-  const { 'nice-move': { lint: config = {} } = {} } = pkg();
-  return config;
-}
-
 module.exports = function lint({ shell }) {
   const dependencies = getDependencies();
 
@@ -83,7 +78,6 @@ module.exports = function lint({ shell }) {
       `replace-in-file --configFile="${yarnConfig}"${useColor}`,
       'yarn-deduplicate',
     ],
-    ...readConfig(),
   });
 
   if (stylelint) {

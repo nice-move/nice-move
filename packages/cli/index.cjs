@@ -8,8 +8,8 @@ process.on('SIGINT', () => {});
 
 new Cheetor()
   .website('https://www.npmjs.com/org/nice-move')
-  .command('./cmd/init.cjs')
-  .command('./cmd/lint.cjs')
+  .commandFrom('./cmd/init.cjs')
+  .commandFrom('./cmd/lint.cjs')
   .commandSmart(svgoCaller)
   .effect(({ scriptName }) => {
     process.title = scriptName;

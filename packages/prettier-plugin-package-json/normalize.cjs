@@ -71,7 +71,7 @@ function normalize(text) {
     haveGit(io)
   ) {
     io.homepage = [
-      io.repository.url.replace(/.git$/, ''),
+      io.repository.url.replace(/\.git$/, ''),
       io.repository.directory,
     ]
       .filter(Boolean)

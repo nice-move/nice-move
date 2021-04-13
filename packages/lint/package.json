@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/lint",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "description": "Lint and format everything",
   "license": "MIT",
   "author": {
@@ -45,7 +45,7 @@
     "yarn-deduplicate": "^3.1.0"
   },
   "engines": {
-    "node": "^12.18 || ^14"
+    "node": "^12.15.0 || ^14.15.3"
   },
   "publishConfig": {
     "access": "public",

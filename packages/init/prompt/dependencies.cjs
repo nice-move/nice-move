@@ -24,8 +24,8 @@ function checkEslint({ vue, react }) {
       extends: `@nice-move/eslint-config-${type}`,
     },
     devDependencies: {
-      [`@nice-move/eslint-config-${type}`]: '^0.5.22',
-      eslint: '^7.20.0',
+      [`@nice-move/eslint-config-${type}`]: '^0.5.30',
+      eslint: '^7.24.0',
     },
   };
 }
@@ -72,7 +72,7 @@ function Dependencies(wanted = {}) {
           garou
             ? {
                 devDependencies: {
-                  garou: '^0.1.12',
+                  garou: '^0.1.21',
                 },
               }
             : undefined,
@@ -87,15 +87,15 @@ function Dependencies(wanted = {}) {
                   },
                 },
                 devDependencies: {
-                  commitlint: '^11.0.0',
-                  '@nice-move/commitlint-config': '^0.0.0',
+                  commitlint: '^12.1.1',
+                  '@nice-move/commitlint-config': '^0.1.2',
                 },
               }
             : undefined,
           useLint
             ? {
                 devDependencies: {
-                  '@nice-move/cli': '^0.5.15',
+                  '@nice-move/cli': '^0.5.21',
                 },
                 scripts: {
                   lint: 'nice-move lint',
@@ -111,7 +111,14 @@ function Dependencies(wanted = {}) {
             : undefined,
           ava
             ? {
-                devDependencies: { ava: '^3.15.0' },
+                devDependencies: {
+                  ava: '^3.15.0',
+                  ...(eslint
+                    ? {
+                        'eslint-plugin-ava': '^12.0.0',
+                      }
+                    : undefined),
+                },
                 scripts: {
                   prepublishOnly: old.private ? undefined : prepublishOnly,
                   test: 'ava --verbose',
@@ -129,8 +136,8 @@ function Dependencies(wanted = {}) {
           stylelint
             ? {
                 devDependencies: {
-                  '@nice-move/stylelint-config': '^0.5.3',
-                  stylelint: '^13.10.0',
+                  '@nice-move/stylelint-config': '^0.5.7',
+                  stylelint: '^13.12.0',
                 },
                 stylelint: {
                   extends: '@nice-move/stylelint-config',
@@ -140,7 +147,7 @@ function Dependencies(wanted = {}) {
           prettier
             ? {
                 devDependencies: {
-                  '@nice-move/prettier-config': '^0.4.1',
+                  '@nice-move/prettier-config': '^0.4.3',
                   prettier: '^2.2.1',
                 },
                 prettier: '@nice-move/prettier-config',
@@ -149,7 +156,7 @@ function Dependencies(wanted = {}) {
           react
             ? {
                 dependencies: { react: '~16.14.0' },
-                devDependencies: { '@types/react': '^16.14.4' },
+                devDependencies: { '@types/react': '^16.14.5' },
               }
             : undefined,
           vue ? { dependencies: { vue: '~2.6.12' } } : undefined,

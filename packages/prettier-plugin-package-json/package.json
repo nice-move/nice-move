@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-plugin-package-json",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A `prettier` plugin to make `package.json` prettier",
   "license": "MIT",
   "author": {
@@ -33,6 +33,6 @@
     "prettier": "^2.2.1"
   },
   "engines": {
-    "node": "^12.14 || ^14"
+    "node": "^12.15.0 || ^14.15.3"
   }
 }

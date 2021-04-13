@@ -61,19 +61,6 @@ npm install husky --save-dev
 }
 ```
 
-### Custom linter
-
-```jsonc
-// example: package.json
-{
-  "nice-move": {
-    "lint": {
-      "*.md": "remark"
-    }
-  }
-}
-```
-
 ## Tips
 
 if you install [@nice-move/cli](https://github.com/airkro/nice-move/tree/master/packages/cli), then run `nice-move lint` command, cli will run `nice-move-lint` internally.

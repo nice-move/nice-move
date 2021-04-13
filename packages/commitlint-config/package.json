@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/commitlint-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A `commitlint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -38,7 +38,7 @@
     "commitlint": "^12.1.1"
   },
   "engines": {
-    "node": "^12.15.3 || ^14.15.3"
+    "node": "^12.15.0 || ^14.15.3"
   },
   "publishConfig": {
     "access": "public",

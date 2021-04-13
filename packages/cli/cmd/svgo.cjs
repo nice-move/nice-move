@@ -14,6 +14,7 @@ function isModuleInstall(moduleId) {
   }
 }
 
+// eslint-disable-next-line consistent-return
 module.exports = function svgoCaller() {
   if (
     isModuleInstall('svgo/package.json') &&
@@ -22,7 +23,6 @@ module.exports = function svgoCaller() {
     return {
       command: 'svgo',
       describe: 'Run `svgo` to optimize `*.svg`',
-      // eslint-disable-next-line no-unused-vars
       handler({ _: [_, path = './'] }) {
         const execa = require('execa');
         execa('svgo', [

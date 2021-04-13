@@ -24,7 +24,7 @@ module.exports = function Package(info) {
       deepmerge.all([
         {
           engines: {
-            node: '^12.18 || ^14',
+            node: '^12.15.0 || ^14.15.3',
           },
           publishConfig:
             info.private || old.private

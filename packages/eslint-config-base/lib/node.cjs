@@ -53,13 +53,13 @@ module.exports = {
       },
       settings: {
         node: {
-          tryExtensions: ['.mjs', '.js', '.json'],
+          tryExtensions: ['.mjs', '.cjs', '.js', '.json'],
         },
       },
       rules: {
         'node/no-unsupported-features/es-syntax': [
           'error',
-          { ignores: ['modules'] },
+          { ignores: ['modules', 'dynamicImport'] },
         ],
       },
     },

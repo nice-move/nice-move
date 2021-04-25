@@ -31,12 +31,18 @@ module.exports = {
     'lines-between-class-members': 'off',
     'max-classes-per-file': 'warn',
     'no-console': 'off',
+    'no-implicit-coercion': [
+      'warn',
+      {
+        disallowTemplateShorthand: true,
+      },
+    ],
     'no-nested-ternary': 'off',
     'no-param-reassign': 'warn',
     'no-plusplus': 'warn',
     'no-template-curly-in-string': 'off',
+    'no-underscore-dangle': 'off',
     'prefer-arrow-callback': 'warn',
-    'no-implicit-coercion': 'warn',
     'no-unused-vars': [
       'error',
       {

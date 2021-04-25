@@ -3,13 +3,15 @@
 const { ESLint } = require('eslint');
 const pickBy = require('lodash/pickBy');
 const sortKeys = require('sort-keys');
-const writeJsonFile = require('write-json-file');
+const { Json } = require('fs-chain');
 const printConfig = require('stylelint/lib/printConfig.js');
 
 function save(outputName, data) {
-  return writeJsonFile(`.cache/${outputName}`, data, { indent: 2 }).catch(
-    console.error,
-  );
+  return new Json()
+    .config({ pretty: true })
+    .handle(() => data)
+    .output(`~.cache/${outputName}`)
+    .catch(console.error);
 }
 
 function eslintInspector(configName, filename, outputName = '') {

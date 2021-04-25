@@ -36,6 +36,7 @@ module.exports = {
     'no-plusplus': 'warn',
     'no-template-curly-in-string': 'off',
     'prefer-arrow-callback': 'warn',
+    'no-implicit-coercion': 'warn',
     'no-unused-vars': [
       'error',
       {

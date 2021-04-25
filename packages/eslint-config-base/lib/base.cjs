@@ -41,6 +41,7 @@ module.exports = {
     'no-param-reassign': 'warn',
     'no-plusplus': 'warn',
     'no-template-curly-in-string': 'off',
+    'no-undef-init': 'off',
     'no-underscore-dangle': 'off',
     'prefer-arrow-callback': 'warn',
     'no-unused-vars': [

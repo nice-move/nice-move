@@ -40,6 +40,19 @@ module.exports = {
     'no-nested-ternary': 'off',
     'no-param-reassign': 'warn',
     'no-plusplus': 'warn',
+    'no-restricted-syntax': [
+      'error',
+      {
+        message:
+          'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
+        selector: 'ForInStatement',
+      },
+      {
+        message:
+          'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+        selector: 'LabeledStatement',
+      },
+    ],
     'no-template-curly-in-string': 'off',
     'no-undef-init': 'off',
     'no-underscore-dangle': 'off',

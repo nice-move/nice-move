@@ -16,20 +16,28 @@ A [commitlint] config created by personal preferences.
 ## Installation
 
 ```bash
-npm install husky commitlint @nice-move/commitlint-config --save-dev
+npm install commitlint @nice-move/commitlint-config --save-dev
 ```
 
 ## Usage
 
 Add to package.json
 
+```sh
+git config core.hooksPath .hooks
+```
+
+```sh
+#!/bin/sh
+
+npx -c commitlint -e
+
+# save this to: .hooks/commit-msg
+```
+
 ```json
+// package.json
 {
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "commitlint": {
     "extends": "@nice-move/commitlint-config"
   }

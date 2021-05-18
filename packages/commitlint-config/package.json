@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/commitlint-config",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A `commitlint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -15,10 +15,10 @@
     "conventional",
     "conventional-changelog",
     "git",
+    "hooks",
     "lint",
     "linter",
-    "nice-move",
-    "pre-commit"
+    "nice-move"
   ],
   "homepage": "https://github.com/airkro/nice-move/tree/master/packages/commitlint-config",
   "repository": {
@@ -31,10 +31,10 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "@commitlint/config-conventional": "^12.1.1"
+    "@commitlint/config-conventional": "^12.1.4"
   },
   "peerDependencies": {
-    "commitlint": "^12.1.1"
+    "commitlint": "^12.1.4"
   },
   "engines": {
     "node": "^12.15.0 || ^14.15.3"

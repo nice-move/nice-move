@@ -43,7 +43,6 @@ function Dependencies(wanted = {}) {
         commitlint = 'commitlint' in devDependencies,
         eslint = 'eslint' in devDependencies,
         garou = 'garou' in devDependencies,
-        husky = 'husky' in devDependencies,
         prettier = 'prettier' in devDependencies,
         react = 'react' in dependencies,
         stylelint = 'stylelint' in devDependencies,
@@ -62,13 +61,6 @@ function Dependencies(wanted = {}) {
       return deepmerge.all(
         [
           old,
-          husky || commitlint
-            ? {
-                devDependencies: {
-                  husky: '^4.3.8',
-                },
-              }
-            : undefined,
           garou
             ? {
                 devDependencies: {
@@ -80,11 +72,6 @@ function Dependencies(wanted = {}) {
             ? {
                 commitlint: {
                   extends: '@nice-move/commitlint-config',
-                },
-                husky: {
-                  hooks: {
-                    'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
-                  },
                 },
                 devDependencies: {
                   commitlint: '^12.1.1',
@@ -100,13 +87,6 @@ function Dependencies(wanted = {}) {
                 scripts: {
                   lint: 'nice-move lint',
                 },
-                husky: husky
-                  ? {
-                      hooks: {
-                        'pre-commit': 'nice-move lint',
-                      },
-                    }
-                  : undefined,
               }
             : undefined,
           ava
@@ -123,13 +103,6 @@ function Dependencies(wanted = {}) {
                   prepublishOnly: old.private ? undefined : prepublishOnly,
                   test: 'ava --verbose',
                 },
-                husky: husky
-                  ? {
-                      hooks: {
-                        'pre-commit': prepublishOnly,
-                      },
-                    }
-                  : undefined,
               }
             : undefined,
           eslint ? checkEslint({ react, vue }) : undefined,
@@ -176,10 +149,6 @@ exports.prompt = () => ({
   name: 'Dependencies',
   type: (first) => (first === false ? null : 'multiselect'),
   choices: [
-    {
-      title: 'husky',
-      value: 'husky',
-    },
     {
       title: 'garou',
       value: 'garou',

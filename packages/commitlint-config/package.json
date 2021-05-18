@@ -15,7 +15,6 @@
     "conventional",
     "conventional-changelog",
     "git",
-    "husky",
     "lint",
     "linter",
     "nice-move",

@@ -44,23 +44,6 @@ git add .
 npx -c nice-move-lint
 ```
 
-### Use with `husky` v4
-
-```bash
-npm install husky --save-dev
-```
-
-```jsonc
-// example: package.json
-{
-  "husky": {
-    "hooks": {
-      "pre-commit": "nice-move-lint"
-    }
-  }
-}
-```
-
 ## Tips
 
 if you install [@nice-move/cli](https://github.com/airkro/nice-move/tree/master/packages/cli), then run `nice-move lint` command, cli will run `nice-move-lint` internally.

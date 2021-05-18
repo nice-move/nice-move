@@ -67,20 +67,3 @@ Change a few files, then run:
 git add .
 npx -c nice-move lint
 ```
-
-#### Use with `husky`
-
-```bash
-npm install husky --save-dev
-```
-
-```json
-// example: package.json
-{
-  "husky": {
-    "hooks": {
-      "pre-commit": "nice-move lint"
-    }
-  }
-}
-```

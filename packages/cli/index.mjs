@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-const Cheetor = require('cheetor');
+import { Cheetor } from 'cheetor';
 
-const svgoCaller = require('./cmd/svgo.cjs');
+import svgoCaller from './cmd/svgo.cjs';
 
 process.on('SIGINT', () => {});
 
-new Cheetor()
+new Cheetor('../package.json', import.meta.url)
   .website('https://www.npmjs.com/org/nice-move')
-  .commandFrom('./cmd/init.cjs')
-  .commandFrom('./cmd/lint.cjs')
+  .commandFrom('../cmd/init.cjs')
+  .commandFrom('../cmd/lint.cjs')
   .commandSmart(svgoCaller)
   .effect(({ scriptName }) => {
     process.title = scriptName;

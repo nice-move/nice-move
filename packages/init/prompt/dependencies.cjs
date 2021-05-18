@@ -24,8 +24,8 @@ function checkEslint({ vue, react }) {
       extends: `@nice-move/eslint-config-${type}`,
     },
     devDependencies: {
-      [`@nice-move/eslint-config-${type}`]: '^0.5.30',
-      eslint: '^7.24.0',
+      [`@nice-move/eslint-config-${type}`]: '^0.5.35',
+      eslint: '^7.26.0',
     },
   };
 }
@@ -64,7 +64,7 @@ function Dependencies(wanted = {}) {
           garou
             ? {
                 devDependencies: {
-                  garou: '^0.1.21',
+                  garou: '^0.1.28',
                 },
               }
             : undefined,
@@ -74,15 +74,15 @@ function Dependencies(wanted = {}) {
                   extends: '@nice-move/commitlint-config',
                 },
                 devDependencies: {
-                  commitlint: '^12.1.1',
-                  '@nice-move/commitlint-config': '^0.1.2',
+                  commitlint: '^12.1.4',
+                  '@nice-move/commitlint-config': '^0.1.3',
                 },
               }
             : undefined,
           useLint
             ? {
                 devDependencies: {
-                  '@nice-move/cli': '^0.5.21',
+                  '@nice-move/cli': '^0.5.22',
                 },
                 scripts: {
                   lint: 'nice-move lint',
@@ -109,8 +109,8 @@ function Dependencies(wanted = {}) {
           stylelint
             ? {
                 devDependencies: {
-                  '@nice-move/stylelint-config': '^0.5.7',
-                  stylelint: '^13.12.0',
+                  '@nice-move/stylelint-config': '^0.5.8',
+                  stylelint: '^13.13.1',
                 },
                 stylelint: {
                   extends: '@nice-move/stylelint-config',
@@ -121,7 +121,7 @@ function Dependencies(wanted = {}) {
             ? {
                 devDependencies: {
                   '@nice-move/prettier-config': '^0.4.3',
-                  prettier: '^2.2.1',
+                  prettier: '^2.3.0',
                 },
                 prettier: '@nice-move/prettier-config',
               }

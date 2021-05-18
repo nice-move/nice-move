@@ -8,12 +8,12 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "fs-chain": "^5.2.1",
+    "fs-chain": "^7.1.0",
     "lodash": "^4.17.21",
     "sort-keys": "^4.2.0"
   },
   "peerDependencies": {
-    "eslint": "^7.25.0",
-    "stylelint": "^13.13.0"
+    "eslint": "^7.26.0",
+    "stylelint": "^13.13.1"
   }
 }

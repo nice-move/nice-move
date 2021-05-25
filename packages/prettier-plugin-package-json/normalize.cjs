@@ -50,9 +50,13 @@ function haveGit(io) {
 function normalize(text) {
   const io = normalizeBin(handle(JSON.parse(text)));
   normalizeData(io, true);
-  // eslint-disable-next-line no-underscore-dangle
+
   delete io._id;
   delete io.readme;
+
+  if (io.license && /^unlicensed?$/i.test(io.license)) {
+    io.license = io.private ? 'UNLICENSED' : 'Unlicense';
+  }
 
   if (haveGit(io)) {
     io.repository.type = 'git';

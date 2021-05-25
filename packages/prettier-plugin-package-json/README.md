@@ -23,8 +23,8 @@ npm install prettier @nice-move/prettier-plugin-package-json --save-dev
 
 ## Usage
 
-```jsonc
-// .prettierrc
+```json
+// .prettierrc.json
 {
   "overrides": [
     {
@@ -52,3 +52,4 @@ prettier --write **/package.json
 - Remove deprecated fields like `preferGlobal`, `engineStrict`
 - Merge `bundleDependencies` into `bundledDependencies`
 - Rename `esnext` / `jsnext` to `module`, rename `typings` to `types`
+- Differentiate `UNLICENSED` and `Unlicense` license by `private`

@@ -10,7 +10,7 @@ function save(outputName, data) {
   return new Json()
     .config({ pretty: true })
     .handle(() => data)
-    .output(`~.cache/${outputName}`)
+    .output(`.cache/${outputName}`)
     .catch(console.error);
 }
 

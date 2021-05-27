@@ -29,7 +29,8 @@ module.exports = {
     'eslint-comments/no-unused-enable': 'warn',
     'global-require': 'off',
     'lines-between-class-members': 'off',
-    'max-classes-per-file': 'warn',
+    'max-classes-per-file': 'off',
+    'class-methods-use-this': 'warn',
     'no-console': 'off',
     'no-implicit-coercion': [
       'warn',

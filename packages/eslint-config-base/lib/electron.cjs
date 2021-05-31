@@ -17,7 +17,7 @@ module.exports =
       overrides: [
         {
           files: '**/*',
-          excludedFiles: ['*.{m,c}js', '*.node'],
+          excludedFiles: '*.{m,c}js',
           rules: {
             'import/no-nodejs-modules': 'off',
           },

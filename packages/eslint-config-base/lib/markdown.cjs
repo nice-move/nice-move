@@ -1,7 +1,6 @@
 const {
   configs: {
     recommended: {
-      // eslint-disable-next-line no-unused-vars
       overrides: [_, { rules }],
     },
   },

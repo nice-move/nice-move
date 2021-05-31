@@ -10,12 +10,12 @@ module.exports = {
   },
   settings: {
     node: {
-      tryExtensions: ['.js', '.json'],
+      tryExtensions: ['.js'],
     },
   },
   overrides: [
     {
-      files: ['*.{m,c}js', '*.node'],
+      files: '*.{m,c}js',
       env: {
         browser: false,
         node: true,
@@ -53,7 +53,7 @@ module.exports = {
       },
       settings: {
         node: {
-          tryExtensions: ['.mjs', '.cjs', '.js', '.json'],
+          tryExtensions: ['.mjs', '.cjs', '.js'],
         },
       },
       rules: {
@@ -64,7 +64,7 @@ module.exports = {
       },
     },
     {
-      files: ['*.{m,c}js', '*.node'],
+      files: '*.{m,c}js',
       rules: {
         'node/no-process-env': 'off',
       },

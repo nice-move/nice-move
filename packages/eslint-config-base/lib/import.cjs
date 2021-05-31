@@ -36,40 +36,56 @@ module.exports = {
   settings: {
     ...Vscode,
     'import/ignore': false,
-    'import/extensions': ['.mjs', '.cjs', '.js'],
+    'import/extensions': false,
     'import/resolver': {
       node: {
-        extensions: ['.mjs', '.cjs', '.js'],
+        extensions: false,
       },
     },
   },
   overrides: [
     {
       files: '*.cjs',
-      rules: {
-        'import/extensions': 'off',
-      },
       settings: {
-        'import/extensions': false,
+        'import/extensions': ['.cjs', '.js', '.json'],
         'import/resolver': {
           node: {
-            extensions: false,
+            extensions: ['.cjs', '.js', '.json'],
           },
         },
       },
     },
     {
-      // for node.js
       files: '*.mjs',
+      settings: {
+        'import/extensions': ['.mjs', '.cjs', '.js'],
+        'import/resolver': {
+          node: {
+            extensions: ['.mjs', '.cjs', '.js'],
+          },
+        },
+      },
+    },
+    {
+      files: '**/*',
+      excludedFiles: ['*.cjs'],
       rules: {
         'import/no-commonjs': 'error',
       },
     },
     {
       files: '**/*',
-      excludedFiles: ['*.{m,c}js', '*.node'],
+      excludedFiles: '*.{m,c}js',
       rules: {
         'import/no-nodejs-modules': 'error',
+      },
+      settings: {
+        'import/extensions': ['.js', null, null],
+        'import/resolver': {
+          node: {
+            extensions: ['.js', null, null],
+          },
+        },
       },
     },
   ],

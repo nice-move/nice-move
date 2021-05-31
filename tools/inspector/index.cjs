@@ -72,7 +72,6 @@ if (require.main.filename === __filename) {
   eslintInspector('@nice-move/base', 'sample.md', 'md.json');
   eslintInspector('@nice-move/base', 'sample.md/o.js', 'md/js.json');
   eslintInspector('@nice-move/base', 'sample.md/o.cjs', 'md/cjs.json');
-  eslintInspector('@nice-move/base', 'sample.md/o.node', 'md/node.json');
   eslintInspector('@nice-move/base', 'sample.md/o.mjs', 'md/mjs.json');
 
   eslintInspector('@nice-move/vue', 'sample.md/o.vue', 'md/vue.json');

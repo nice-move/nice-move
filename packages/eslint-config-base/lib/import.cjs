@@ -36,12 +36,6 @@ module.exports = {
   settings: {
     ...Vscode,
     'import/ignore': false,
-    'import/extensions': false,
-    'import/resolver': {
-      node: {
-        extensions: false,
-      },
-    },
   },
   overrides: [
     {
@@ -80,10 +74,10 @@ module.exports = {
         'import/no-nodejs-modules': 'error',
       },
       settings: {
-        'import/extensions': ['.js', null, null],
+        'import/extensions': ['.js', '.js', '.js'],
         'import/resolver': {
           node: {
-            extensions: ['.js', null, null],
+            extensions: ['.js', '.js', '.js'],
           },
         },
       },

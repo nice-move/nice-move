@@ -2316,10 +2316,10 @@ fs-chain@5.2.1:
     chalk "^4.1.0"
     fs-extra "^9.1.0"
 
-fs-chain@^7.1.0, fs-chain@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-7.2.0.tgz#2d378bf1d153b2c8331beede7a6f1cdc1723bf29"
-  integrity sha512-nUzhJWgID3QlD3G15yXfHkOFGD8rIRN2jgKM2GrQ/AahN0wd5TMylwZrtvKxXbMSJnPTSS9vXO2oHcBmzEZ3tw==
+fs-chain@^7.1.0, fs-chain@^7.2.1:
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-7.2.1.tgz#9641e73e4ee57aa57ac3fd746b13a83f5549a69b"
+  integrity sha512-fYXLtNH37tTKc+QHkN+1IGoH5iwMJ6gOBW1sTgEf0qusYWxmBwolpYFUKug/X/LvCSnJpg8h+2nK+2BzSHmS7A==
   dependencies:
     chalk "^4.1.1"
     fs-extra "^10.0.0"

@@ -58,14 +58,14 @@ module.exports = {
           : undefined),
       },
       settings: {
-        'import/extensions': ['.vue', '.js', null],
+        'import/extensions': ['.vue', '.js', '.js'],
         'import/resolver': {
           node: {
-            extensions: ['.vue', '.js', null],
+            extensions: ['.vue', '.js', '.js'],
           },
         },
         node: {
-          tryExtensions: ['.vue', '.js', null],
+          tryExtensions: ['.vue', '.js'],
         },
       },
     },

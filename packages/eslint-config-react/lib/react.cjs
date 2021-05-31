@@ -37,14 +37,14 @@ module.exports = {
     'react/sort-comp': 'off',
   },
   settings: {
-    'import/extensions': ['.jsx', '.js', null],
+    'import/extensions': ['.jsx', '.js', '.js'],
     'import/resolver': {
       node: {
-        extensions: ['.jsx', '.js', null],
+        extensions: ['.jsx', '.js', '.js'],
       },
     },
     node: {
-      tryExtensions: ['.jsx', '.js', null],
+      tryExtensions: ['.jsx', '.js'],
     },
   },
 };

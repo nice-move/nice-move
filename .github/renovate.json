@@ -1,18 +1,18 @@
 {
   "extends": [
     "config:base",
-    "schedule:daily",
     ":unpublishSafe",
     ":prNotPending",
     ":rebaseStalePrs",
     ":maintainLockFilesWeekly",
-    ":automergePatch"
+    ":automergePatch",
+    ":disableMajorUpdates"
   ],
   "rangeStrategy": "bump",
   "minor": {
     "enabled": false
   },
-  "major": {
-    "enabled": false
-  }
+  "schedule": [
+    "after 1am"
+  ]
 }

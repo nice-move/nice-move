@@ -38,7 +38,7 @@
   "main": "index.cjs",
   "dependencies": {
     "eslint-formatter-pretty": "^4.0.0",
-    "fs-chain": "^7.1.0",
+    "fs-chain": "^7.2.1",
     "lint-staged": "^11.0.0",
     "replace-in-file": "^6.2.0",
     "stylelint-formatter-pretty": "^2.1.1",

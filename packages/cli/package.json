@@ -37,7 +37,7 @@
     "@nice-move/init": "^0.2.0",
     "@nice-move/lint": "^0.2.1",
     "cheetor": "^0.9.0",
-    "execa": "^5.0.0"
+    "execa": "^5.0.1"
   },
   "engines": {
     "node": "^12.15.0 || ^14.15.3"

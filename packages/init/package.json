@@ -43,7 +43,7 @@
     "centra": "^2.4.2",
     "chalk": "^4.1.1",
     "deepmerge": "^4.2.2",
-    "execa": "^5.0.0",
+    "execa": "^5.0.1",
     "fs-chain": "5.2.1",
     "is-git-dirty": "^2.0.1",
     "is-git-repository": "^2.0.0",

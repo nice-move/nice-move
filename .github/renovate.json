@@ -1,18 +1,5 @@
 {
   "extends": [
-    "config:base",
-    ":unpublishSafe",
-    ":prNotPending",
-    ":rebaseStalePrs",
-    ":maintainLockFilesWeekly",
-    ":automergePatch",
-    ":disableMajorUpdates"
-  ],
-  "rangeStrategy": "bump",
-  "minor": {
-    "enabled": false
-  },
-  "schedule": [
-    "after 1am"
+    "github>airkro/renovate-config"
   ]
 }

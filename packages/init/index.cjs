@@ -20,17 +20,16 @@ module.exports = async function init() {
 
   const actions = [
     GitInit,
+    Registry,
     () => Package(info),
     Readme,
     License,
     EditorConfig,
     () => (GitInit || isGit ? GitFile() : null),
-    Registry,
     Dependencies,
     Install,
   ].filter((func) => typeof func === 'function');
 
-  // eslint-disable-next-line no-restricted-syntax
   for (const action of actions) {
     // eslint-disable-next-line no-await-in-loop
     await action()?.catch?.((error) => {

@@ -18,7 +18,7 @@ function format(data) {
 
 module.exports = function Package(info) {
   return new Json()
-    .source('~package.json')
+    .source('package.json')
     .config({ pretty: true })
     .handle((old) =>
       deepmerge.all([
@@ -35,13 +35,6 @@ module.exports = function Package(info) {
                 },
         },
         old || {},
-        {
-          license: ['UNLICENSED', 'unlicense', 'unlicensed'].includes(
-            old.license,
-          )
-            ? 'UNLICENSE'
-            : old.license,
-        },
         info,
       ]),
     )

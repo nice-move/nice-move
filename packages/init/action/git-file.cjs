@@ -5,7 +5,8 @@ const { cyan } = require('chalk');
 
 const { download } = require('../lib/utils.cjs');
 
-const regexp = /# Created by https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+[\S\s]+# End of https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+/;
+const regexp =
+  /# Created by https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+[\S\s]+# End of https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+/;
 
 const Types = {
   Windows_NT: 'windows',
@@ -17,13 +18,13 @@ function getPlatform(context = '') {
   try {
     if (regexp.test(context)) {
       return [
-        ...new Set(
-          context
+        ...new Set([
+          ...context
             .match(/gitignore\.io\/api\/(\S+)/)[1]
             .split(',')
-            .filter((item) => item !== 'node')
-            .concat(Types[type()]),
-        ),
+            .filter((item) => item !== 'node'),
+          Types[type()],
+        ]),
       ].sort();
     }
     throw new Error('fail');
@@ -34,8 +35,8 @@ function getPlatform(context = '') {
 
 module.exports = async function gitFile() {
   await new Text()
-    .source('../template/.gitattributes.tpl')
-    .output('~.gitattributes')
+    .source('../template/.gitattributes.tpl', __dirname)
+    .output('.gitattributes')
     .logger('Create/Overwrite', cyan('.gitattributes'));
 
   const spinner = ora({
@@ -45,7 +46,7 @@ module.exports = async function gitFile() {
   const message = `Create/Overwrite ${cyan('.gitignore')}`;
 
   return new Text()
-    .source('~.gitignore')
+    .source('.gitignore')
     .handle((oldText) => {
       const platform = getPlatform(oldText);
       return download(`http://gitignore.io/api/node,${platform}`).then(
@@ -74,7 +75,6 @@ module.exports = async function gitFile() {
       spinner.succeed(message);
     })
     .catch((error) => {
-      spinner.fail(message);
-      console.warn(error);
+      spinner.fail(`${message} - ${error.message}`);
     });
 };

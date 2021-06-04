@@ -2172,7 +2172,7 @@ execa@^4.0.0, execa@^4.0.3:
     signal-exit "^3.0.2"
     strip-final-newline "^2.0.0"
 
-execa@^5.0.0, execa@^5.0.1:
+execa@^5.0.0, execa@^5.0.1, execa@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/execa/-/execa-5.1.0.tgz#3ea50ee863d226bfa323528cce1684e7481dfe46"
   integrity sha512-CkdUB7s2y6S+d4y+OM/+ZtQcJCiKUCth4cNImGMqrt2zEVtW2rfHGspQBE1GDo6LjeNIQmTPKXqTCKjqFKyu3A==
@@ -2315,15 +2315,7 @@ flatted@^3.1.0:
   resolved "https://mirrors.cloud.tencent.com/npm/flatted/-/flatted-3.1.0.tgz#a5d06b4a8b01e3a63771daa5cb7a1903e2e57067"
   integrity "sha1-pdBrSosB46Y3cdqly3oZA+LlcGc= sha512-tW+UkmtNg/jv9CSofAKvgVcO7c2URjhTdW1ZTkcAritblu8tajiYy7YisnIflEwtKssCtOxpnBRoCB7iap0/TA=="
 
-fs-chain@5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-5.2.1.tgz#5a76fd4555e8a3eb463464d387299a726c223898"
-  integrity sha512-nmY79K20wL4aHxVIg37pQQ+ZfkTPJfHvkBB2wZl8xfb2OuEE8zB/VdTxlnXVsEh5LXsxNIgrOzKmYEN9RIOsVQ==
-  dependencies:
-    chalk "^4.1.0"
-    fs-extra "^9.1.0"
-
-fs-chain@^7.1.0, fs-chain@^7.2.1:
+fs-chain@7.2.1, fs-chain@^7.1.0, fs-chain@^7.2.1:
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-7.2.1.tgz#9641e73e4ee57aa57ac3fd746b13a83f5549a69b"
   integrity sha512-fYXLtNH37tTKc+QHkN+1IGoH5iwMJ6gOBW1sTgEf0qusYWxmBwolpYFUKug/X/LvCSnJpg8h+2nK+2BzSHmS7A==
@@ -2340,7 +2332,7 @@ fs-extra@^10.0.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
-fs-extra@^9.0.0, fs-extra@^9.1.0:
+fs-extra@^9.0.0:
   version "9.1.0"
   resolved "https://mirrors.cloud.tencent.com/npm/fs-extra/-/fs-extra-9.1.0.tgz#5954460c764a8da2094ba3554bf839e6b9a7c86d"
   integrity sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==

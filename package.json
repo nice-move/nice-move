@@ -46,9 +46,7 @@
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base",
     "settings": {
-      "import/internal-regex": [
-        "^@nice-move/inspector$"
-      ]
+      "import/internal-regex": "^@nice-move/inspector$"
     }
   },
   "nodemonConfig": {

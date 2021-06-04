@@ -42,8 +42,8 @@ exports.prompt = ({
   },
   {
     active: 'MIT',
-    format: (value) => (value ? 'MIT' : 'UNLICENSE'),
-    inactive: 'UNLICENSE',
+    format: (value) => (value ? 'MIT' : 'UNLICENSED'),
+    inactive: 'UNLICENSED',
     initial: true,
     message: 'package.json » license',
     name: 'license',
@@ -63,7 +63,7 @@ exports.prompt = ({
   {
     active: 'true',
     inactive: 'false',
-    initial: true,
+    initial: false,
     message: 'package.json » private',
     name: 'private',
     format: (value) => (value === false ? undefined : value),

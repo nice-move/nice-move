@@ -6,34 +6,27 @@ module.exports = async function Registry() {
   const InChina = (await osLocale()) === 'zh-CN';
 
   if (InChina) {
-    return new Text()
-      .source('~.npmrc')
-      .handle((text) => {
-        if (
-          /registry\s*=\s*https:\/\/mirrors\.cloud\.tencent\.com\/npm\//.test(
-            text,
-          )
-        ) {
-          throw new Error('skip');
-        }
-        return `registry = https://mirrors.cloud.tencent.com/npm/\r${text}`;
-      })
-      .output()
-      .logger('Set registry to China mirror in', cyan('.npmrc'))
-      .source('~.yarnrc')
-      .exists((exists) => exists)
-      .handle((text) => {
-        if (
-          /registry\s+"https:\/\/mirrors\.cloud\.tencent\.com\/npm\/"/.test(
-            text,
-          )
-        ) {
-          throw new Error('skip');
-        }
-        return `registry "https://mirrors.cloud.tencent.com/npm/"\r${text}`;
-      })
-      .output()
-      .logger('Set registry to China mirror in', cyan('.yarnrc'))
-      .catch(console.warn);
+    const chain = new Text().source('.npmrc');
+
+    const io = await chain.then(
+      () =>
+        chain
+          .handle((text) => {
+            if (
+              /registry\s*=\s*["']?https:\/\/mirrors\.cloud\.tencent\.com\/npm\/["']?/i.test(
+                text,
+              )
+            ) {
+              throw new Error('skip');
+            }
+            return `registry = https://mirrors.cloud.tencent.com/npm/\r${text}`;
+          })
+          .output(),
+      () => chain,
+    );
+
+    io.logger('Set registry to China mirror in', cyan('.npmrc')).catch(
+      console.warn,
+    );
   }
 };

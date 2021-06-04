@@ -1,8 +1,6 @@
-const { target, env } = require('./target.cjs');
-
 module.exports = {
   parserOptions: {
-    ecmaVersion: target,
+    ecmaVersion: 2021,
     sourceType: 'module',
     ecmaFeatures: {
       impliedStrict: true,
@@ -12,7 +10,7 @@ module.exports = {
   },
   env: {
     browser: true,
-    [env]: true,
+    es2021: true,
     // not node.js
     commonjs: false,
     node: false,

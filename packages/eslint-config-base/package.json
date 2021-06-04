@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.5.38",
+  "version": "0.5.39",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -42,7 +42,7 @@
     "eslint-plugin-markdown": "^2.2.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-unicorn": "^32.0.1"
+    "eslint-plugin-unicorn": "^33.0.1"
   },
   "peerDependencies": {
     "eslint": "^7.27.0"

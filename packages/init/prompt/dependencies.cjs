@@ -36,7 +36,7 @@ function Dependencies(wanted = {}) {
   return new Json()
     .source('~package.json')
     .config({ pretty: true })
-    .handle((old) => {
+    .onDone((old) => {
       const { devDependencies = {}, dependencies = {} } = old;
       const {
         ava = 'ava' in devDependencies,
@@ -136,7 +136,7 @@ function Dependencies(wanted = {}) {
         ].filter(Boolean),
       );
     })
-    .handle(format)
+    .onDone(format)
     .output()
     .logger(message)
     .catch(console.warn);

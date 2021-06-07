@@ -18,9 +18,10 @@ function format(data) {
 
 module.exports = function Package(info) {
   return new Json()
-    .source('package.json')
     .config({ pretty: true })
-    .handle((old) =>
+    .source('package.json')
+    .onFail()
+    .onDone((old = {}) =>
       deepmerge.all([
         {
           engines: {
@@ -34,11 +35,11 @@ module.exports = function Package(info) {
                   registry: 'https://registry.npmjs.org/',
                 },
         },
-        old || {},
+        old,
         info,
       ]),
     )
-    .handle(format)
+    .onDone(format)
     .output()
     .logger('Add project info to', cyan('package.json'))
     .catch(console.warn);

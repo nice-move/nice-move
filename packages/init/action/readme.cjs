@@ -10,7 +10,7 @@ module.exports = async function Readme() {
 
   if (!(await chain.action)) {
     chain
-      .handle(() =>
+      .onDone(() =>
         [`# ${name}`, description ? `${description}.\n` : '']
           .filter(Boolean)
           .join('\n\n'),

@@ -6,27 +6,22 @@ module.exports = async function Registry() {
   const InChina = (await osLocale()) === 'zh-CN';
 
   if (InChina) {
-    const chain = new Text().source('.npmrc');
-
-    const io = await chain.then(
-      () =>
-        chain
-          .handle((text) => {
-            if (
-              /registry\s*=\s*["']?https:\/\/mirrors\.cloud\.tencent\.com\/npm\/["']?/i.test(
-                text,
-              )
-            ) {
-              throw new Error('skip');
-            }
-            return `registry = https://mirrors.cloud.tencent.com/npm/\r${text}`;
-          })
-          .output(),
-      () => chain,
-    );
-
-    io.logger('Set registry to China mirror in', cyan('.npmrc')).catch(
-      console.warn,
-    );
+    new Text()
+      .source('.npmrc')
+      .onFail()
+      .onDone((text = '') => {
+        if (
+          text.trim() &&
+          /registry\s*=\s*["']?https:\/\/mirrors\.cloud\.tencent\.com\/npm\/["']?/i.test(
+            text,
+          )
+        ) {
+          return text;
+        }
+        return `registry = https://mirrors.cloud.tencent.com/npm/\r${text}`;
+      })
+      .output()
+      .logger('Set registry to China mirror in', cyan('.npmrc'))
+      .catch(console.warn);
   }
 };

@@ -47,7 +47,7 @@ module.exports = async function gitFile() {
 
   return new Text()
     .source('.gitignore')
-    .handle((oldText) => {
+    .onDone((oldText) => {
       const platform = getPlatform(oldText);
       return download(`http://gitignore.io/api/node,${platform}`).then(
         (newText) => {

@@ -14,7 +14,7 @@ module.exports = function License() {
         isMIT ? '../template/mit.tpl' : '../template/unlicense.tpl',
         __dirname,
       )
-      .handle((text) =>
+      .onDone((text) =>
         isMIT
           ? text
               .replace('{{year}}', new Date().getFullYear())

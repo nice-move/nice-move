@@ -1,20 +1,6 @@
 const { Json } = require('fs-chain');
 const deepmerge = require('deepmerge');
 
-function format(data) {
-  try {
-    // eslint-disable-next-line import/no-extraneous-dependencies
-    const prettier = require('prettier');
-
-    return prettier
-      .resolveConfig('./package.json')
-      .then((options) => prettier.format(JSON.stringify(data), options))
-      .then(JSON.parse);
-  } catch {
-    return data;
-  }
-}
-
 function checkEslint({ vue, react }) {
   const type =
     (react && vue) || (!react && !vue) ? 'base' : react ? 'react' : 'vue';
@@ -24,19 +10,20 @@ function checkEslint({ vue, react }) {
       extends: `@nice-move/eslint-config-${type}`,
     },
     devDependencies: {
-      [`@nice-move/eslint-config-${type}`]: '^0.5.35',
-      eslint: '^7.26.0',
+      [`@nice-move/eslint-config-${type}`]: '^0.5.39',
+      eslint: '^7.28.0',
     },
   };
 }
 
 const message = 'Add/Reset project dependencies';
 
-function Dependencies(wanted = {}) {
+function Dependencies(isGit, wanted = {}) {
   return new Json()
-    .source('~package.json')
     .config({ pretty: true })
-    .onDone((old) => {
+    .source('package.json')
+    .onFail()
+    .onDone((old = {}) => {
       const { devDependencies = {}, dependencies = {} } = old;
       const {
         ava = 'ava' in devDependencies,
@@ -52,15 +39,19 @@ function Dependencies(wanted = {}) {
       const useLint = eslint || stylelint || prettier || garou;
 
       const prepublishOnly =
-        [
-          useLint ? 'nice-move lint' : undefined,
-          ava ? 'ava --fail-fast' : undefined,
-        ]
+        [useLint ? 'npm run lint' : undefined, ava ? 'npm test' : undefined]
           .filter(Boolean)
           .join(' && ') || undefined;
       return deepmerge.all(
         [
           old,
+          isGit && (useLint || ava || commitlint)
+            ? {
+                scripts: {
+                  prepare: 'git config core.hooksPath .hooks',
+                },
+              }
+            : undefined,
           garou
             ? {
                 devDependencies: {
@@ -101,7 +92,7 @@ function Dependencies(wanted = {}) {
                 },
                 scripts: {
                   prepublishOnly: old.private ? undefined : prepublishOnly,
-                  test: 'ava --verbose',
+                  test: 'ava --fail-fast',
                 },
               }
             : undefined,
@@ -120,8 +111,8 @@ function Dependencies(wanted = {}) {
           prettier
             ? {
                 devDependencies: {
-                  '@nice-move/prettier-config': '^0.4.3',
-                  prettier: '^2.3.0',
+                  '@nice-move/prettier-config': '^0.4.4',
+                  prettier: '^2.3.1',
                 },
                 prettier: '@nice-move/prettier-config',
               }
@@ -136,7 +127,6 @@ function Dependencies(wanted = {}) {
         ].filter(Boolean),
       );
     })
-    .onDone(format)
     .output()
     .logger(message)
     .catch(console.warn);
@@ -150,16 +140,16 @@ exports.prompt = () => ({
   type: (first) => (first === false ? null : 'multiselect'),
   choices: [
     {
-      title: 'garou',
-      value: 'garou',
-    },
-    {
       title: 'ava',
       value: 'ava',
     },
     {
       title: 'commitlint',
       value: 'commitlint',
+    },
+    {
+      title: 'garou',
+      value: 'garou',
     },
     {
       title: 'eslint',
@@ -185,8 +175,11 @@ exports.prompt = () => ({
   // eslint-disable-next-line consistent-return
   format: (keywords) => {
     if (keywords.length > 0) {
-      return () =>
-        Dependencies(Object.fromEntries(keywords.map((item) => [item, true])));
+      return (isGit) =>
+        Dependencies(
+          isGit,
+          Object.fromEntries(keywords.map((item) => [item, true])),
+        );
     }
   },
 });

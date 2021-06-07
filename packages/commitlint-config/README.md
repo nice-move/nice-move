@@ -30,7 +30,7 @@ git config core.hooksPath .hooks
 ```sh
 #!/bin/sh
 
-npx -c commitlint -e
+npx --no-install commitlint -e
 
 # save this to: .hooks/commit-msg
 ```

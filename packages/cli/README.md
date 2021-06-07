@@ -21,7 +21,7 @@ npm install @nice-move/cli --save-dev
 ## Usage
 
 ```bash
-npx -c nice-move <command>
+npx --no-install nice-move <command>
 ```
 
 ## Commands
@@ -65,5 +65,5 @@ Change a few files, then run:
 
 ```bash
 git add .
-npx -c nice-move lint
+npx --no-install nice-move lint
 ```

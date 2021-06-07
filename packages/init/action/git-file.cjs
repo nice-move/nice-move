@@ -1,7 +1,7 @@
 const ora = require('ora');
 const { EOL, type } = require('os');
 const { Text } = require('fs-chain');
-const { cyan } = require('chalk');
+const { cyan, green, red } = require('chalk');
 
 const { download } = require('../lib/utils.cjs');
 
@@ -14,7 +14,7 @@ const Types = {
   Darwin: 'macos',
 };
 
-function getPlatform(context = '') {
+function getPlatform(context) {
   try {
     if (regexp.test(context)) {
       return [
@@ -47,9 +47,10 @@ module.exports = async function gitFile() {
 
   return new Text()
     .source('.gitignore')
-    .onDone((oldText) => {
+    .onFail()
+    .onDone((oldText = '') => {
       const platform = getPlatform(oldText);
-      return download(`http://gitignore.io/api/node,${platform}`).then(
+      return download(`https://gitignore.io/api/node,${platform}`).then(
         (newText) => {
           const [match] = oldText.match(regexp) || [];
 
@@ -72,9 +73,15 @@ module.exports = async function gitFile() {
     })
     .output()
     .then(() => {
-      spinner.succeed(message);
+      spinner.stopAndPersist({
+        symbol: green('√'),
+        text: message,
+      });
     })
     .catch((error) => {
-      spinner.fail(`${message} - ${error.message}`);
+      spinner.stopAndPersist({
+        symbol: red('×'),
+        text: `${message} - ${error.message}`,
+      });
     });
 };

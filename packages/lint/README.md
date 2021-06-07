@@ -41,7 +41,7 @@ Change a few files, then run:
 
 ```bash
 git add .
-npx -c nice-move-lint
+npx --no-install nice-move-lint
 ```
 
 ## Tips

@@ -25,15 +25,18 @@ module.exports = async function init() {
     Readme,
     License,
     EditorConfig,
-    () => (GitInit || isGit ? GitFile() : null),
-    Dependencies,
+    () => (GitInit || isGit ? GitFile() : undefined),
+    () => (Dependencies ? Dependencies(GitInit || isGit) : undefined),
     Install,
   ].filter((func) => typeof func === 'function');
 
   for (const action of actions) {
     // eslint-disable-next-line no-await-in-loop
-    await action()?.catch?.((error) => {
-      console.warn(error.message);
-    });
+    const io = await action();
+    if (io && io.catch) {
+      io.catch((error) => {
+        console.warn(error.message);
+      });
+    }
   }
 };

@@ -9,7 +9,12 @@ function format(data) {
 
     return prettier
       .resolveConfig('./package.json')
-      .then((options) => prettier.format(JSON.stringify(data), options))
+      .then((options) =>
+        prettier.format(JSON.stringify(data), {
+          ...options,
+          filepath: 'package.json',
+        }),
+      )
       .then(JSON.parse);
   } catch {
     return data;

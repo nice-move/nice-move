@@ -9,7 +9,7 @@ const printConfig = require('stylelint/lib/printConfig.js');
 function save(outputName, data) {
   return new Json()
     .config({ pretty: true })
-    .handle(() => data)
+    .onDone(() => data)
     .output(`.cache/${outputName}`)
     .catch(console.error);
 }

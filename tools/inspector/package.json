@@ -8,7 +8,7 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "fs-chain": "^7.2.1",
+    "fs-chain": "^8.0.1",
     "lodash": "^4.17.21",
     "sort-keys": "^4.2.0"
   },

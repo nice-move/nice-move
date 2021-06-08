@@ -73,7 +73,7 @@ function Dependencies(isGit, wanted = {}) {
           useLint
             ? {
                 devDependencies: {
-                  '@nice-move/cli': '^0.5.22',
+                  '@nice-move/cli': '^0.5.23',
                 },
                 scripts: {
                   lint: 'nice-move lint',

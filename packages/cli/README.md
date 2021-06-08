@@ -57,7 +57,8 @@ Add configurations:
 {
   "eslintConfig": {},
   "prettier": {},
-  "stylelint": {}
+  "stylelint": {},
+  "garou": {}
 }
 ```
 

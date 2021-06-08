@@ -2077,7 +2077,7 @@ eslint-visitor-keys@^2.0.0, eslint-visitor-keys@^2.1.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-2.1.0.tgz#f65328259305927392c938ed44eb0a5c9b2bd303"
   integrity sha512-0rSmRBzXgDzIsD6mGdJgevzgezI534Cer5L/vyMX0kHzT/jiB43jRhd9YUlMGYLQy2zprNmoT8qasCGtY+QaKw==
 
-eslint@^7.26.0, eslint@^7.27.0:
+eslint@^7.26.0, eslint@^7.28.0:
   version "7.28.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.28.0.tgz#435aa17a0b82c13bb2be9d51408b617e49c1e820"
   integrity sha512-UMfH0VSjP0G4p3EWirscJEQ/cHqnT/iuH6oNZOB94nBjWbMnhGEPxsZm1eyIW0C/9jLI0Fow4W5DXLjEI7mn1g==
@@ -2345,7 +2345,7 @@ fs-chain@8.0.1, fs-chain@^8.0.1:
     chalk "^4.1.1"
     fs-extra "^10.0.0"
 
-fs-chain@^7.1.0:
+fs-chain@^7.1.0, fs-chain@^7.2.1:
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-7.2.1.tgz#9641e73e4ee57aa57ac3fd746b13a83f5549a69b"
   integrity sha512-fYXLtNH37tTKc+QHkN+1IGoH5iwMJ6gOBW1sTgEf0qusYWxmBwolpYFUKug/X/LvCSnJpg8h+2nK+2BzSHmS7A==

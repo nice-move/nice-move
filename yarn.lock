@@ -1817,7 +1817,7 @@ eslint-config-standard@^16.0.3:
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-16.0.3.tgz#6c8761e544e96c531ff92642eeb87842b8488516"
   integrity sha512-x4fmJL5hGqNJKGHSjnLdgA6U6h1YW/G2dW9fA+cyVur4SK6lyue8+UgNKWlZtUDTXvgKDD/Oa3GQjmB5kjtVvg==
 
-eslint-formatter-pretty@^4.0.0:
+eslint-formatter-pretty@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/eslint-formatter-pretty/-/eslint-formatter-pretty-4.1.0.tgz#7a6877c14ffe2672066c853587d89603e97c7708"
   integrity sha512-IsUTtGxF1hrH6lMWiSl1WbGaiP01eT6kzywdY1U+zLc0MP+nwEnUiS9UI8IaOTUhTeQJLlCEWIbXINBH4YJbBQ==
@@ -2337,7 +2337,7 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.1.1.tgz#c4b489e80096d9df1dfc97c79871aea7c617c469"
   integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
 
-fs-chain@8.0.1:
+fs-chain@8.0.1, fs-chain@^8.0.1:
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-8.0.1.tgz#b88f7dd239d391d166dbe61d8f00fe88b90d78e1"
   integrity sha512-n+qQTxQNkoVCetlGCNAfM54Rku27mURDwOCFnxKY1gJJUYcPQTGrQfAWEnA4KC0rAPw6XUcHualNuhD9IKUEAA==
@@ -2345,7 +2345,7 @@ fs-chain@8.0.1:
     chalk "^4.1.1"
     fs-extra "^10.0.0"
 
-fs-chain@^7.1.0, fs-chain@^7.2.1:
+fs-chain@^7.1.0:
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-7.2.1.tgz#9641e73e4ee57aa57ac3fd746b13a83f5549a69b"
   integrity sha512-fYXLtNH37tTKc+QHkN+1IGoH5iwMJ6gOBW1sTgEf0qusYWxmBwolpYFUKug/X/LvCSnJpg8h+2nK+2BzSHmS7A==

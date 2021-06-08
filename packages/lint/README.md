@@ -33,7 +33,8 @@ Add configurations:
 {
   "eslintConfig": {},
   "prettier": {},
-  "stylelint": {}
+  "stylelint": {},
+  "garou": {}
 }
 ```
 
@@ -46,4 +47,4 @@ npx --no-install nice-move-lint
 
 ## Tips
 
-if you install [@nice-move/cli](https://github.com/airkro/nice-move/tree/master/packages/cli), then run `nice-move lint` command, cli will run `nice-move-lint` internally.
+If [@nice-move/cli](https://github.com/airkro/nice-move/tree/master/packages/cli) is installed, you can run `nice-move lint` command, cli will run `nice-move-lint` internally.

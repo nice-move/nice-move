@@ -7,8 +7,7 @@ const { action } = require('./patch/stylelint.cjs');
 function parse(obj) {
   const io = Object.entries(obj)
     .map(([key, value]) => [key, value.filter(Boolean)])
-    // eslint-disable-next-line no-unused-vars
-    .filter(([key, value]) => value.length);
+    .filter(([_, value]) => value.length);
 
   return io.length > 0 ? Object.fromEntries(io) : undefined;
 }
@@ -65,7 +64,7 @@ module.exports = function lint({ shell }) {
       prettier && `prettier --write${useColor}`,
       eslint && `eslint --fix --format=pretty${useColor}`,
     ],
-    '*.{css,scss,less,xml}': [
+    '*.{css,scss,less,wxss,xml}': [
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
       stylelint &&
@@ -93,7 +92,7 @@ module.exports = function lint({ shell }) {
     maxArgLength: getMaxArgLength() / 2,
     quiet: false,
     relative: false,
-    shell: !!shell,
+    shell: Boolean(shell),
     stash: true,
   })
     .then((passed) => {

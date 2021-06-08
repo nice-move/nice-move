@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/lint",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Lint and format everything",
   "license": "MIT",
   "author": {
@@ -37,8 +37,8 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "eslint-formatter-pretty": "^4.0.0",
-    "fs-chain": "^7.2.1",
+    "eslint-formatter-pretty": "^4.1.0",
+    "fs-chain": "^8.0.1",
     "lint-staged": "^11.0.0",
     "replace-in-file": "^6.2.0",
     "stylelint-formatter-pretty": "^2.1.1",

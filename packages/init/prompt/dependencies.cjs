@@ -1,4 +1,4 @@
-const { Json } = require('fs-chain');
+const { Json, Text } = require('fs-chain');
 const deepmerge = require('deepmerge');
 
 function checkEslint({ vue, react }) {
@@ -23,7 +23,7 @@ function Dependencies(isGit, wanted = {}) {
     .config({ pretty: true })
     .source('package.json')
     .onFail()
-    .onDone((old = {}) => {
+    .onDone(async (old = {}) => {
       const { devDependencies = {}, dependencies = {} } = old;
       const {
         ava = 'ava' in devDependencies,
@@ -38,10 +38,25 @@ function Dependencies(isGit, wanted = {}) {
 
       const useLint = eslint || stylelint || prettier || garou;
 
-      const prepublishOnly =
-        [useLint ? 'npm run lint' : undefined, ava ? 'npm test' : undefined]
-          .filter(Boolean)
-          .join(' && ') || undefined;
+      const prepublishOnly = [
+        useLint ? 'npm run lint' : undefined,
+        ava ? 'npm test' : undefined,
+      ].filter(Boolean);
+
+      if (prepublishOnly.length > 0) {
+        await new Text()
+          .onDone(() => ['#!/bin/sh', '', ...prepublishOnly, ''].join('\n'))
+          .output('.hooks/pre-commit');
+      }
+
+      if (commitlint) {
+        await new Text()
+          .onDone(() =>
+            ['#!/bin/sh', '', 'npx --no-install commitlint -e', ''].join('\n'),
+          )
+          .output('.hooks/commit-msg');
+      }
+
       return deepmerge.all(
         [
           old,
@@ -73,7 +88,7 @@ function Dependencies(isGit, wanted = {}) {
           useLint
             ? {
                 devDependencies: {
-                  '@nice-move/cli': '^0.5.23',
+                  '@nice-move/cli': '^0.5.24',
                 },
                 scripts: {
                   lint: 'nice-move lint',
@@ -91,7 +106,9 @@ function Dependencies(isGit, wanted = {}) {
                     : undefined),
                 },
                 scripts: {
-                  prepublishOnly: old.private ? undefined : prepublishOnly,
+                  prepublishOnly: old.private
+                    ? undefined
+                    : prepublishOnly.join(' && ') || undefined,
                   test: 'ava --fail-fast',
                 },
               }

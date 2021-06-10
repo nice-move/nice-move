@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.5.23",
+  "version": "0.5.24",
   "description": "Frontend develop helper for frontend development",
   "license": "MIT",
   "author": {
@@ -34,8 +34,8 @@
     "nice-move": "index.mjs"
   },
   "dependencies": {
-    "@nice-move/init": "^0.2.3",
-    "@nice-move/lint": "^0.2.2",
+    "@nice-move/init": "^0.2.4",
+    "@nice-move/lint": "^0.2.3",
     "cheetor": "^0.9.1",
     "execa": "^5.1.1"
   },

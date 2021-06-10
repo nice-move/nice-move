@@ -9,17 +9,17 @@ A [prettier] config created by personal preferences.
 [prettier]: https://prettier.io/
 [npm-url]: https://www.npmjs.com/package/@nice-move/prettier-config
 [npm-badge]: https://img.shields.io/npm/v/@nice-move/prettier-config.svg?style=flat-square&logo=npm
-[github-url]: https://github.com/airkro/nice-move/tree/master/packages/prettier-config
+[github-url]: https://github.com/nice-move/nice-move/tree/master/packages/prettier-config
 [github-badge]: https://img.shields.io/npm/l/@nice-move/prettier-config.svg?style=flat-square&colorB=blue&logo=github
 [node-badge]: https://img.shields.io/node/v/@nice-move/prettier-config.svg?style=flat-square&colorB=green&logo=node.js
 
 ## Extname support
 
 - .gql .md
-- .css .less .scss
 - .yml .yaml .toml .ini
-- .cjs .mjs .js .jsx .json
+- .css .less .scss .wxss
 - .htm .html .xml .svg .vue
+- .cjs .mjs .js .jsx .wxs .json
 - .npmrc .editorconfig .babelrc
 
 ## Installation
@@ -62,4 +62,4 @@ prettier --write .
 ## Tips
 
 This config including [@nice-move/prettier-plugin-package-json
-](https://github.com/airkro/nice-move/tree/master/packages/prettier-plugin-package-json#readme)
+](https://github.com/nice-move/nice-move/tree/master/packages/prettier-plugin-package-json#readme)

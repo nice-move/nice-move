@@ -1,15 +1,16 @@
-const defaultConfig = {
+module.exports = {
   htmlWhitespaceSensitivity: 'ignore',
   iniSpaceAroundEquals: true,
   singleQuote: true,
   trailingComma: 'all',
   xmlSelfClosingSpace: true,
   xmlWhitespaceSensitivity: 'ignore',
-};
-
-module.exports = {
-  ...defaultConfig,
-  plugins: [require.resolve('@nice-move/prettier-plugin-package-json')],
+  plugins: [
+    require.resolve('@nice-move/prettier-plugin-package-json'),
+    require.resolve('prettier-plugin-toml'),
+    require.resolve('prettier-plugin-ini'),
+    require.resolve('@prettier/plugin-xml'),
+  ],
   overrides: [
     {
       files: ['.babelrc', '*.json'],
@@ -39,6 +40,18 @@ module.exports = {
       files: ['.npmrc', '.editorconfig'],
       options: {
         parser: 'ini',
+      },
+    },
+    {
+      files: ['*.wxss'],
+      options: {
+        parser: 'css',
+      },
+    },
+    {
+      files: ['*.wxs'],
+      options: {
+        parser: 'babel',
       },
     },
   ],

@@ -4742,10 +4742,10 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-rustywind@^0.9.1:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/rustywind/-/rustywind-0.9.1.tgz#9f035a9c837a4b5aa1b0985024086b6b0f0a6176"
-  integrity sha512-F6kseIot1MGgP6HYcIPEGJe1Gs+m71rBNVwYooTl+ExUOJ0hNAZdyepK99dznx5sa28s0PMoaI1JjzWNIMEHiw==
+rustywind@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/rustywind/-/rustywind-0.10.0.tgz#c4a60c3ac4f7da039c6dd84ecab9c4123b6c8cd6"
+  integrity sha512-mOTGssbrinZpwLRpodvh5F6z7nSE67v2UXaAggvCROJKdmsGBPVAcp44MwZkD2HhsJs1F5DwAjQGBJU20rGIoA==
   dependencies:
     https-proxy-agent "^4.0.0"
     proxy-from-env "^1.1.0"
@@ -5326,6 +5326,11 @@ time-zone@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/time-zone/-/time-zone-1.0.0.tgz#99c5bf55958966af6d06d83bdf3800dc82faec5d"
   integrity sha1-mcW/VZWJZq9tBtg73zgA3IL67F0=
+
+tiny-version-compare@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/tiny-version-compare/-/tiny-version-compare-3.0.1.tgz#b1d2da60595d905ac86eeedaab52f2157e5d91a0"
+  integrity sha512-xatSPA/CQtM2fPxuhhookcVlxoLPpb3q4VXYkI85owwvAnTGvD3ItKZp4wn4o5Apc8YxM1GjQ0QqjAXqE4ZJoQ==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"

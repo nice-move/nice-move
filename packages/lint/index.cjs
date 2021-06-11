@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 
 const lintStaged = require('lint-staged');
+const compareVersions = require('tiny-version-compare');
 
 const { action } = require('./patch/stylelint.cjs');
 
@@ -50,7 +51,9 @@ module.exports = function lint({ shell }) {
   const useColor = process.stdin.isTTY ? ' --color' : '';
 
   const rustywindFunc = rustywind
-    ? (files) => files.map((file) => `rustywind --write ${file}`)
+    ? compareVersions('0.10.0', rustywind) === 1
+      ? (files) => files.map((file) => `rustywind --write ${file}`)
+      : 'rustywind --write'
     : undefined;
 
   const config = parse({
@@ -78,8 +81,8 @@ module.exports = function lint({ shell }) {
       prettier && `prettier --write${useColor}`,
     ],
     'yarn.lock': [
-      `replace-in-file --configFile="${yarnConfig}"${useColor}`,
       'yarn-deduplicate',
+      `replace-in-file --configFile="${yarnConfig}"${useColor}`,
     ],
   });
 

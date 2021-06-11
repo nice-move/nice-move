@@ -45,10 +45,10 @@
     "extends": "@nice-move/commitlint-config"
   },
   "eslintConfig": {
-    "extends": "@nice-move/eslint-config-base",
-    "settings": {
-      "import/internal-regex": "^@nice-move/inspector$"
-    }
+    "extends": "@nice-move/eslint-config-base"
+  },
+  "nice-move": {
+    "internal-regex": "^@nice-move/inspector$"
   },
   "nodemonConfig": {
     "watch": [

@@ -62,6 +62,12 @@ module.exports = {
 
 if (require.main.filename === __filename) {
   eslintInspector('@nice-move/base', 'sample.js', 'js.json');
+  eslintInspector(
+    '@nice-move/base',
+    'packages/mock/sample.js',
+    'in-workspace.json',
+  );
+
   eslintInspector('@nice-move/base', 'sample.html', 'html.json');
   eslintInspector('@nice-move/base', 'sample.cjs', 'cjs.json');
   eslintInspector('@nice-move/base', 'sample.mjs', 'mjs.json');

@@ -1,3 +1,5 @@
+const { join } = require('path');
+
 const { pkgHas } = require('./utils.cjs');
 
 const Vscode = pkgHas(
@@ -36,8 +38,25 @@ module.exports = {
   settings: {
     ...Vscode,
     'import/ignore': false,
+    ...pkgHas(
+      ({ 'nice-move': { 'internal-regex': internalRegex } = {} }) =>
+        internalRegex,
+      (internalRegex) => ({ 'import/internal-regex': internalRegex }),
+    ),
   },
   overrides: [
+    pkgHas(
+      ({ workspaces }) => workspaces && workspaces.length > 0,
+      (_, { workspaces }) => ({
+        files: workspaces.map((item) => join(item, '*')),
+        rules: {
+          'import/no-relative-packages': 'warn',
+        },
+        settings: {
+          'import/internal-regex': false,
+        },
+      }),
+    ),
     {
       files: '*.cjs',
       settings: {
@@ -82,5 +101,5 @@ module.exports = {
         },
       },
     },
-  ],
+  ].filter(Boolean),
 };

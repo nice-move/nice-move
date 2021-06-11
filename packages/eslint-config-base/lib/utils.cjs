@@ -21,16 +21,19 @@ function safeGet(name) {
   try {
     return require(name);
   } catch (error) {
-    if (!isSafeError(error)) {
-      throw error;
+    if (isSafeError(error)) {
+      return {};
     }
+    throw error;
   }
 }
 
+const pkg = safeGet(resolve(process.cwd(), 'package.json'));
+
 function pkgHas(checker, getResult) {
-  const pkg = safeGet(resolve(process.cwd(), 'package.json'));
-  if (checker(pkg)) {
-    return getResult();
+  const io = checker(pkg);
+  if (io) {
+    return getResult(io, pkg);
   }
 }
 

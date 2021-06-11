@@ -16,11 +16,11 @@ Frontend develop helper for frontend development.
 - [@nice-move/eslint-config-vue](./packages/eslint-config-vue/)
 - [@nice-move/stylelint-config](./packages/stylelint-config/)
 - [@nice-move/prettier-config](./packages/prettier-config/)
-- [@nice-move/prettier-plugin-package-json](./packages/prettier-plugin-package-json/)
 
 ## Related
 
-Get to know [garou](https://github.com/nice-move/garou)
+- [garou](https://github.com/nice-move/garou)
+- [best-shot](https://github.com/best-shot/best-shot)
 
 ## License
 

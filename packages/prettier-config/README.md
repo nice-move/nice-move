@@ -61,5 +61,4 @@ prettier --write .
 
 ## Tips
 
-This config including [@nice-move/prettier-plugin-package-json
-](https://github.com/nice-move/nice-move/tree/master/packages/prettier-plugin-package-json#readme)
+This config including [@nice-move/prettier-plugin-package-json](https://github.com/nice-move/prettier-plugin-package-json#readme)

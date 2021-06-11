@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/init",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Initialize your frontend workspaces",
   "license": "MIT",
   "author": {
@@ -47,11 +47,11 @@
     "fs-chain": "8.0.1",
     "is-git-dirty": "^2.0.1",
     "is-git-repository": "^2.0.0",
-    "ora": "^5.4.0",
+    "ora": "^5.4.1",
     "os-locale": "^5.0.0",
     "parse-author": "^2.0.0",
     "prompts": "^2.4.1",
-    "semver-regex": "3.1.2",
+    "semver-regex": "^3.1.2",
     "stringify-author": "^0.1.3",
     "user-meta": "^1.0.0",
     "validate-npm-package-name": "^3.0.0",

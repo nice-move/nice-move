@@ -1,5 +1,5 @@
 const ora = require('ora');
-const { EOL, type } = require('os');
+const { type } = require('os');
 const { Text } = require('fs-chain');
 const { cyan, green, red } = require('chalk');
 
@@ -50,26 +50,24 @@ module.exports = async function gitFile() {
     .onFail()
     .onDone((oldText = '') => {
       const platform = getPlatform(oldText);
-      return download(`https://gitignore.io/api/node,${platform}`).then(
-        (newText) => {
+      return download(`https://gitignore.io/api/node,${platform}`)
+        .then((newText) => {
           const [match] = oldText.match(regexp) || [];
 
-          return (
-            (match
-              ? oldText.replace(regexp, newText)
-              : oldText.trim() + EOL + EOL + newText
+          return `${(match
+            ? oldText.replace(regexp, newText)
+            : `${oldText.trim()}\n\n${newText}`
+          )
+            .replace(
+              /(www\.)?toptal\.com\/developers\/gitignore/g,
+              'gitignore.io',
             )
-              .replace(
-                /(www\.)?toptal\.com\/developers\/gitignore/g,
-                'gitignore.io',
-              )
-              .trim()
-              .split(new RegExp(`${EOL + EOL}+`, 'g'))
-              .filter((item) => item.trim())
-              .join(EOL + EOL) + EOL
-          );
-        },
-      );
+            .trim()
+            .split(/\n\n\+/g)
+            .filter((item) => item.trim())
+            .join('\n\n')}\n`;
+        })
+        .catch(() => oldText || 'node_modules\n');
     })
     .output()
     .then(() => {

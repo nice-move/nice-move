@@ -10,7 +10,7 @@ function checkEslint({ vue, react }) {
       extends: `@nice-move/eslint-config-${type}`,
     },
     devDependencies: {
-      [`@nice-move/eslint-config-${type}`]: '^0.5.39',
+      [`@nice-move/eslint-config-${type}`]: '^0.5.40',
       eslint: '^7.28.0',
     },
   };
@@ -33,6 +33,7 @@ function Dependencies(isGit, wanted = {}) {
         prettier = 'prettier' in devDependencies,
         react = 'react' in dependencies,
         stylelint = 'stylelint' in devDependencies,
+        typescript = 'typescript' in devDependencies,
         vue = 'vue' in dependencies,
       } = wanted;
 
@@ -74,6 +75,13 @@ function Dependencies(isGit, wanted = {}) {
                 },
               }
             : undefined,
+          typescript
+            ? {
+                devDependencies: {
+                  typescript: '^4.3.2',
+                },
+              }
+            : undefined,
           commitlint
             ? {
                 commitlint: {
@@ -88,7 +96,7 @@ function Dependencies(isGit, wanted = {}) {
           useLint
             ? {
                 devDependencies: {
-                  '@nice-move/cli': '^0.5.24',
+                  '@nice-move/cli': '^0.5.25',
                 },
                 scripts: {
                   lint: 'nice-move lint',
@@ -128,7 +136,7 @@ function Dependencies(isGit, wanted = {}) {
           prettier
             ? {
                 devDependencies: {
-                  '@nice-move/prettier-config': '^0.4.4',
+                  '@nice-move/prettier-config': '^0.4.6',
                   prettier: '^2.3.1',
                 },
                 prettier: '@nice-move/prettier-config',
@@ -136,11 +144,11 @@ function Dependencies(isGit, wanted = {}) {
             : undefined,
           react
             ? {
-                dependencies: { react: '~16.14.0' },
-                devDependencies: { '@types/react': '^16.14.5' },
+                dependencies: { react: '~16.14.0', 'react-dom': '~16.14.0' },
+                devDependencies: { '@types/react': '^16.14.8' },
               }
             : undefined,
-          vue ? { dependencies: { vue: '~2.6.12' } } : undefined,
+          vue ? { dependencies: { vue: '~2.6.14' } } : undefined,
         ].filter(Boolean),
       );
     })
@@ -156,39 +164,16 @@ exports.prompt = () => ({
   name: 'Dependencies',
   type: (first) => (first === false ? null : 'multiselect'),
   choices: [
-    {
-      title: 'ava',
-      value: 'ava',
-    },
-    {
-      title: 'commitlint',
-      value: 'commitlint',
-    },
-    {
-      title: 'garou',
-      value: 'garou',
-    },
-    {
-      title: 'eslint',
-      value: 'eslint',
-    },
-    {
-      title: 'stylelint',
-      value: 'stylelint',
-    },
-    {
-      title: 'prettier',
-      value: 'prettier',
-    },
-    {
-      title: 'react',
-      value: 'react',
-    },
-    {
-      title: 'vue',
-      value: 'vue',
-    },
-  ],
+    'ava',
+    'commitlint',
+    'garou',
+    'eslint',
+    'stylelint',
+    'prettier',
+    'typescript',
+    'react',
+    'vue',
+  ].map((item) => ({ title: item, value: item })),
   // eslint-disable-next-line consistent-return
   format: (keywords) => {
     if (keywords.length > 0) {

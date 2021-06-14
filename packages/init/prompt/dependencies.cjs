@@ -1,3 +1,5 @@
+'use strict';
+
 const { Json, Text } = require('fs-chain');
 const deepmerge = require('deepmerge');
 
@@ -10,7 +12,7 @@ function checkEslint({ vue, react }) {
       extends: `@nice-move/eslint-config-${type}`,
     },
     devDependencies: {
-      [`@nice-move/eslint-config-${type}`]: '^0.5.41',
+      [`@nice-move/eslint-config-${type}`]: '^0.5.42',
       eslint: '^7.28.0',
     },
   };

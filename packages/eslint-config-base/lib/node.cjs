@@ -1,3 +1,5 @@
+'use strict';
+
 const { commonRules } = require('eslint-plugin-node/lib/configs/_commons');
 
 module.exports = {
@@ -67,6 +69,18 @@ module.exports = {
       files: '*.{m,c}js',
       rules: {
         'node/no-process-env': 'off',
+      },
+    },
+    {
+      files: '*.cjs',
+      parserOptions: {
+        ecmaFeatures: {
+          impliedStrict: false,
+        },
+        sourceType: 'script',
+      },
+      rules: {
+        strict: ['error', 'global'],
       },
     },
   ],

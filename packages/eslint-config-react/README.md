@@ -47,7 +47,7 @@ eslint --fix
 | Environment | pattern                                                                                      |
 | :---------- | :------------------------------------------------------------------------------------------- |
 | browser     | `.js`, `.jsx`, `.html`                                                                       |
-| node.js     | `.mjs`, `.cjs`, `node` in `.md`                                                              |
+| node.js     | `.mjs`, `.cjs`                                                                               |
 | es modules  | `.mjs`, `.js`, `.jsx`, `.html`                                                               |
 | commonjs    | `.cjs`, source code in webpack project                                                       |
 | [webpack]   | `src/**`                                                                                     |

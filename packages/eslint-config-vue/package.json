@@ -24,14 +24,14 @@
     "unicorn",
     "vue"
   ],
-  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/eslint-config-vue",
+  "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/eslint-config-vue",
   "repository": {
     "type": "git",
-    "url": "https://github.com/airkro/nice-move.git",
+    "url": "https://github.com/nice-move/nice-move.git",
     "directory": "packages/eslint-config-vue"
   },
   "bugs": {
-    "url": "https://github.com/airkro/nice-move/issues"
+    "url": "https://github.com/nice-move/nice-move/issues"
   },
   "main": "index.cjs",
   "dependencies": {

@@ -26,14 +26,14 @@
     "template",
     "workspace"
   ],
-  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/init",
+  "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/init",
   "repository": {
     "type": "git",
-    "url": "https://github.com/airkro/nice-move.git",
+    "url": "https://github.com/nice-move/nice-move.git",
     "directory": "packages/init"
   },
   "bugs": {
-    "url": "https://github.com/airkro/nice-move/issues"
+    "url": "https://github.com/nice-move/nice-move/issues"
   },
   "bin": {
     "nice-move-init": "bin/index.cjs"

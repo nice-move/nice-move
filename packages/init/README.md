@@ -8,7 +8,7 @@ Initialize your frontend workspaces.
 
 [npm-url]: https://www.npmjs.com/package/@nice-move/init
 [npm-badge]: https://img.shields.io/npm/v/@nice-move/init.svg?style=flat-square&logo=npm
-[github-url]: https://github.com/airkro/nice-move/tree/master/packages/init
+[github-url]: https://github.com/nice-move/nice-move/tree/master/packages/init
 [github-badge]: https://img.shields.io/npm/l/@nice-move/init.svg?style=flat-square&colorB=blue&logo=github
 [node-badge]: https://img.shields.io/node/v/@nice-move/init.svg?style=flat-square&colorB=green&logo=node.js
 

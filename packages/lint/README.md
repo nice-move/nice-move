@@ -8,7 +8,7 @@ Lint and format everything.
 
 [npm-url]: https://www.npmjs.com/package/@nice-move/lint
 [npm-badge]: https://img.shields.io/npm/v/@nice-move/lint.svg?style=flat-square&logo=npm
-[github-url]: https://github.com/airkro/nice-move/tree/master/packages/lint
+[github-url]: https://github.com/nice-move/nice-move/tree/master/packages/lint
 [github-badge]: https://img.shields.io/npm/l/@nice-move/lint.svg?style=flat-square&colorB=blue&logo=github
 [node-badge]: https://img.shields.io/node/v/@nice-move/lint.svg?style=flat-square&colorB=green&logo=node.js
 
@@ -47,4 +47,4 @@ npx --no-install nice-move-lint
 
 ## Tips
 
-If [@nice-move/cli](https://github.com/airkro/nice-move/tree/master/packages/cli) is installed, you can run `nice-move lint` command, cli will run `nice-move-lint` internally.
+If [@nice-move/cli](https://github.com/nice-move/nice-move/tree/master/packages/cli) is installed, you can run `nice-move lint` command, cli will run `nice-move-lint` internally.

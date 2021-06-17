@@ -9,7 +9,7 @@ A [stylelint] config created by personal preferences.
 [stylelint]: https://stylelint.io/
 [npm-url]: https://www.npmjs.com/package/@nice-move/stylelint-config
 [npm-badge]: https://img.shields.io/npm/v/@nice-move/stylelint-config.svg?style=flat-square&logo=npm
-[github-url]: https://github.com/airkro/nice-move/tree/master/packages/stylelint-config
+[github-url]: https://github.com/nice-move/nice-move/tree/master/packages/stylelint-config
 [github-badge]: https://img.shields.io/npm/l/@nice-move/stylelint-config.svg?style=flat-square&colorB=blue&logo=github
 [node-badge]: https://img.shields.io/node/v/@nice-move/stylelint-config.svg?style=flat-square&colorB=green&logo=node.js
 

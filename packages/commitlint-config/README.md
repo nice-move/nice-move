@@ -9,7 +9,7 @@ A [commitlint] config created by personal preferences.
 [commitlint]: https://commitlint.js.org/
 [npm-url]: https://www.npmjs.com/package/@nice-move/commitlint-config
 [npm-badge]: https://img.shields.io/npm/v/@nice-move/commitlint-config.svg?style=flat-square&logo=npm
-[github-url]: https://github.com/airkro/nice-move/tree/master/packages/commitlint-config
+[github-url]: https://github.com/nice-move/nice-move/tree/master/packages/commitlint-config
 [github-badge]: https://img.shields.io/npm/l/@nice-move/commitlint-config.svg?style=flat-square&colorB=blue&logo=github
 [node-badge]: https://img.shields.io/node/v/@nice-move/commitlint-config.svg?style=flat-square&colorB=green&logo=node.js
 

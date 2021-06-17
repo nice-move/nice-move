@@ -8,7 +8,7 @@ Frontend develop helper for frontend development.
 
 [npm-url]: https://www.npmjs.com/package/@nice-move/cli
 [npm-badge]: https://img.shields.io/npm/v/@nice-move/cli.svg?style=flat-square&logo=npm
-[github-url]: https://github.com/airkro/nice-move/tree/master/packages/cli
+[github-url]: https://github.com/nice-move/nice-move/tree/master/packages/cli
 [github-badge]: https://img.shields.io/npm/l/@nice-move/cli.svg?style=flat-square&colorB=blue&logo=github
 [node-badge]: https://img.shields.io/node/v/@nice-move/cli.svg?style=flat-square&colorB=green&logo=node.js
 

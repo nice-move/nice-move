@@ -17,14 +17,14 @@
     "style",
     "stylelint"
   ],
-  "homepage": "https://github.com/airkro/nice-move/tree/master/packages/stylelint-config",
+  "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/stylelint-config",
   "repository": {
     "type": "git",
-    "url": "https://github.com/airkro/nice-move.git",
+    "url": "https://github.com/nice-move/nice-move.git",
     "directory": "packages/stylelint-config"
   },
   "bugs": {
-    "url": "https://github.com/airkro/nice-move/issues"
+    "url": "https://github.com/nice-move/nice-move/issues"
   },
   "main": "index.cjs",
   "dependencies": {

@@ -8,13 +8,13 @@
     "name": "Eric Chen",
     "email": "airkro@qq.com"
   },
-  "homepage": "https://github.com/airkro/nice-move",
+  "homepage": "https://github.com/nice-move/nice-move",
   "repository": {
     "type": "git",
-    "url": "https://github.com/airkro/nice-move.git"
+    "url": "https://github.com/nice-move/nice-move.git"
   },
   "bugs": {
-    "url": "https://github.com/airkro/nice-move/issues"
+    "url": "https://github.com/nice-move/nice-move/issues"
   },
   "scripts": {
     "inspect": "nodemon",

@@ -31,7 +31,8 @@
     "url": "https://github.com/nice-move/nice-move/issues"
   },
   "bin": {
-    "nice-move": "index.mjs"
+    "nice-move": "index.mjs",
+    "nice-move-git-hooks": "cmd/set-hooks.sh"
   },
   "dependencies": {
     "@nice-move/init": "^0.2.5",

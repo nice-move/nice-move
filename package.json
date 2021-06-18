@@ -19,7 +19,7 @@
   "scripts": {
     "inspect": "nodemon",
     "lint": "nice-move lint",
-    "prepare": "nice-move-git-hooks",
+    "prepare": "git config core.hooksPath .hooks",
     "test": "ava --fail-fast"
   },
   "workspaces": [

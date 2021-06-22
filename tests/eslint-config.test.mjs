@@ -1,5 +1,5 @@
-const { eslintInspector } = require('@nice-move/inspector');
-const test = require('ava').default;
+import { eslintInspector } from '@nice-move/inspector';
+import test from 'ava';
 
 const baseEngine = (filename) => eslintInspector('@nice-move/base', filename);
 const vueEngine = (filename) => eslintInspector('@nice-move/vue', filename);

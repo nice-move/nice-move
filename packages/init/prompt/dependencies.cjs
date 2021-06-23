@@ -12,8 +12,8 @@ function checkEslint({ vue, react }) {
       extends: `@nice-move/eslint-config-${type}`,
     },
     devDependencies: {
-      [`@nice-move/eslint-config-${type}`]: '^0.5.42',
-      eslint: '^7.28.0',
+      [`@nice-move/eslint-config-${type}`]: '^0.5.43',
+      eslint: '^7.29.0',
     },
   };
 }

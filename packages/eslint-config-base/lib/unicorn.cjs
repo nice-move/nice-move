@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   extends: ['plugin:unicorn/recommended'],
   rules: {
@@ -9,10 +11,21 @@ module.exports = {
     'unicorn/no-array-reduce': 'off',
     'unicorn/no-null': 'off',
     'unicorn/no-useless-undefined': 'off',
-    'unicorn/numeric-separators-style': 'off',
-    'unicorn/prefer-module': 'off',
+    'unicorn/numeric-separators-style': [
+      'warn',
+      { onlyIfContainsSeparator: true },
+    ],
     'unicorn/prefer-node-protocol': 'off',
+    'unicorn/prefer-prototype-methods': 'off',
     'unicorn/prefer-set-has': 'off',
     'unicorn/prevent-abbreviations': 'off',
   },
+  overrides: [
+    {
+      files: '*.cjs',
+      rules: {
+        'unicorn/prefer-module': 'off',
+      },
+    },
+  ],
 };

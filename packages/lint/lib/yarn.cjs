@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   quiet: true,
   files: 'yarn.lock',

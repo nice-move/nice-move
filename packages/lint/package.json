@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/lint",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Lint and format everything",
   "license": "MIT",
   "author": {
@@ -33,9 +33,13 @@
     "url": "https://github.com/nice-move/nice-move/issues"
   },
   "bin": {
-    "nice-move-lint": "bin/index.cjs"
+    "nice-move-lint": "bin/index.mjs"
   },
-  "main": "index.cjs",
+  "main": "./index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./*": "./*"
+  },
   "dependencies": {
     "eslint-formatter-pretty": "^4.1.0",
     "fs-chain": "^8.0.1",

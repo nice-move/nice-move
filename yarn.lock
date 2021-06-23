@@ -1115,6 +1115,14 @@ character-reference-invalid@^1.0.0:
   resolved "https://registry.yarnpkg.com/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
 
+cheetor@^0.10.2:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/cheetor/-/cheetor-0.10.2.tgz#fac54f3d1be56f9cdba1dd01adde4df59a8ccd66"
+  integrity sha512-JdjGTBSOzqU8w6yMyuWml0/gI34iTO2Uy7ioua5SlEvW0MiV0XFj+HblbEYM2aI1kqk2D4A8F6FHqtY/ymFnCA==
+  dependencies:
+    chalk "^4.1.1"
+    yargs "^17.0.1"
+
 cheetor@^0.9.1:
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/cheetor/-/cheetor-0.9.1.tgz#4485fcb64471f82653cbf50b7f13fa64b503bd80"

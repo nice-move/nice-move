@@ -1,9 +1,10 @@
-const { resolve } = require('path');
+import lintStaged from 'lint-staged';
+import { createRequire } from 'module';
+import { resolve } from 'path';
+import compareVersions from 'tiny-version-compare';
+import { fileURLToPath } from 'url';
 
-const lintStaged = require('lint-staged');
-const compareVersions = require('tiny-version-compare');
-
-const { action } = require('./patch/stylelint.cjs');
+import { action } from './patch/stylelint.mjs';
 
 function parse(obj) {
   const io = Object.entries(obj)
@@ -24,29 +25,33 @@ function getMaxArgLength() {
   }
 }
 
-const yarnConfig = require.resolve('./lib/yarn.cjs');
+const yarnConfig = resolve(fileURLToPath(import.meta.url), '../lib/yarn.cjs');
 
-function pkg() {
+const requireJson = createRequire(`${process.cwd()}/`);
+
+function readJson() {
   try {
-    return require(resolve(process.cwd(), 'package.json'));
-  } catch {
+    return requireJson('./package.json');
+  } catch (error) {
+    console.error(error);
     return {};
   }
 }
 
 function getDependencies() {
-  const { devDependencies = {} } = pkg();
-  return devDependencies;
+  const { devDependencies = {} } = readJson();
+
+  const prettier = 'prettier' in devDependencies;
+  const eslint = 'eslint' in devDependencies;
+  const stylelint = 'stylelint' in devDependencies;
+  const garou = 'garou' in devDependencies;
+  const rustywind = 'rustywind' in devDependencies;
+
+  return { rustywind, garou, stylelint, eslint, prettier };
 }
 
-module.exports = function lint({ shell }) {
-  const dependencies = getDependencies();
-
-  const prettier = 'prettier' in dependencies;
-  const eslint = 'eslint' in dependencies;
-  const stylelint = 'stylelint' in dependencies;
-  const garou = 'garou' in dependencies;
-  const rustywind = 'rustywind' in dependencies;
+export function lint({ shell }) {
+  const { rustywind, garou, stylelint, eslint, prettier } = getDependencies();
 
   const useColor = process.stdin.isTTY ? ' --color' : '';
 
@@ -65,13 +70,14 @@ module.exports = function lint({ shell }) {
         `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
       eslint && `eslint --fix --format=pretty${useColor}`,
     ],
-    '*.{js,jsx,mjs,cjs}': [
+    '*.{ts,tsx}': [prettier && `prettier --write${useColor}`],
+    '*.{js,jsx,mjs,cjs,wxs,qs}': [
       rustywindFunc,
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
       eslint && `eslint --fix --format=pretty${useColor}`,
     ],
-    '*.{css,scss,less,wxss,xml}': [
+    '*.{css,scss,less,wxss,qss,xml}': [
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
       stylelint &&
@@ -82,7 +88,7 @@ module.exports = function lint({ shell }) {
     ],
     'yarn.lock': [
       'yarn-deduplicate',
-      `replace-in-file --configFile="${yarnConfig}"${useColor}`,
+      `replace-in-file --configFile="${yarnConfig}"`,
     ],
   });
 
@@ -108,4 +114,4 @@ module.exports = function lint({ shell }) {
     .catch(() => {
       process.exitCode = 1;
     });
-};
+}

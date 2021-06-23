@@ -16,10 +16,10 @@ A [prettier] config created by personal preferences.
 ## Extname support
 
 - .gql .md
-- .yml .yaml .toml .ini
-- .css .less .scss .wxss
 - .htm .html .xml .svg .vue
-- .cjs .mjs .js .jsx .wxs .json
+- .css .less .scss .wxss .qss
+- .cjs .mjs .js .jsx .wxs .qs
+- .yml .yaml .toml .ini .json
 - .npmrc .editorconfig .babelrc
 
 ## Installation

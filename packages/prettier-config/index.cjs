@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   htmlWhitespaceSensitivity: 'ignore',
   iniSpaceAroundEquals: true,
@@ -31,7 +33,7 @@ module.exports = {
       },
     },
     {
-      files: '*.html',
+      files: ['*.html', '*.htm'],
       options: {
         trailingComma: 'es5',
       },
@@ -43,13 +45,13 @@ module.exports = {
       },
     },
     {
-      files: ['*.wxss'],
+      files: ['*.wxss', '*.qss'],
       options: {
         parser: 'css',
       },
     },
     {
-      files: ['*.wxs'],
+      files: ['*.wxs', '*.qs'],
       options: {
         parser: 'babel',
       },

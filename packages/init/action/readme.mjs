@@ -1,9 +1,9 @@
-const { Text } = require('fs-chain');
-const { cyan } = require('chalk');
+import { cyan } from 'chalk';
+import { Text } from 'fs-chain';
 
-const { pkgCwd } = require('../lib/utils.cjs');
+import { pkgCwd } from '../lib/utils.mjs';
 
-module.exports = async function Readme() {
+export async function Readme() {
   const { name, description } = pkgCwd();
 
   new Text()
@@ -19,4 +19,4 @@ module.exports = async function Readme() {
     .output()
     .logger('Create', cyan('README.md'))
     .catch(console.warn);
-};
+}

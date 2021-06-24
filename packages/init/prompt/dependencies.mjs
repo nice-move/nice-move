@@ -1,7 +1,7 @@
-'use strict';
+import deepmerge from 'deepmerge';
+import { Json, Text } from 'fs-chain';
 
-const { Json, Text } = require('fs-chain');
-const deepmerge = require('deepmerge');
+import latest from '../lib/latest.mjs';
 
 function checkEslint({ vue, react }) {
   const type =
@@ -12,15 +12,15 @@ function checkEslint({ vue, react }) {
       extends: `@nice-move/eslint-config-${type}`,
     },
     devDependencies: {
-      [`@nice-move/eslint-config-${type}`]: '^0.5.43',
-      eslint: '^7.29.0',
+      [`@nice-move/eslint-config-${type}`]: latest['eslint-config-base'],
+      eslint: latest.eslint,
     },
   };
 }
 
 const message = 'Add/Reset project dependencies';
 
-function Dependencies(isGit, wanted = {}) {
+function action(isGit, wanted = {}) {
   return new Json()
     .config({ pretty: true })
     .source('package.json')
@@ -73,14 +73,14 @@ function Dependencies(isGit, wanted = {}) {
           garou
             ? {
                 devDependencies: {
-                  garou: '^0.1.28',
+                  garou: latest.garou,
                 },
               }
             : undefined,
           typescript
             ? {
                 devDependencies: {
-                  typescript: '^4.3.2',
+                  typescript: latest.typescript,
                 },
               }
             : undefined,
@@ -90,15 +90,15 @@ function Dependencies(isGit, wanted = {}) {
                   extends: '@nice-move/commitlint-config',
                 },
                 devDependencies: {
-                  commitlint: '^12.1.4',
-                  '@nice-move/commitlint-config': '^0.1.3',
+                  commitlint: latest.commitlint,
+                  '@nice-move/commitlint-config': latest['commitlint-config'],
                 },
               }
             : undefined,
           useLint
             ? {
                 devDependencies: {
-                  '@nice-move/cli': '^0.5.25',
+                  '@nice-move/cli': latest.cli,
                 },
                 scripts: {
                   lint: 'nice-move lint',
@@ -108,10 +108,10 @@ function Dependencies(isGit, wanted = {}) {
           ava
             ? {
                 devDependencies: {
-                  ava: '^3.15.0',
+                  ava: latest.ava,
                   ...(eslint
                     ? {
-                        'eslint-plugin-ava': '^12.0.0',
+                        'eslint-plugin-ava': latest['eslint-plugin-ava'],
                       }
                     : undefined),
                 },
@@ -127,8 +127,8 @@ function Dependencies(isGit, wanted = {}) {
           stylelint
             ? {
                 devDependencies: {
-                  '@nice-move/stylelint-config': '^0.5.8',
-                  stylelint: '^13.13.1',
+                  '@nice-move/stylelint-config': latest['stylelint-config'],
+                  stylelint: latest.stylelint,
                 },
                 stylelint: {
                   extends: '@nice-move/stylelint-config',
@@ -138,19 +138,22 @@ function Dependencies(isGit, wanted = {}) {
           prettier
             ? {
                 devDependencies: {
-                  '@nice-move/prettier-config': '^0.4.6',
-                  prettier: '^2.3.1',
+                  '@nice-move/prettier-config': latest['prettier-config'],
+                  prettier: latest.prettier,
                 },
                 prettier: '@nice-move/prettier-config',
               }
             : undefined,
           react
             ? {
-                dependencies: { react: '~16.14.0', 'react-dom': '~16.14.0' },
-                devDependencies: { '@types/react': '^16.14.8' },
+                dependencies: {
+                  react: latest.react,
+                  'react-dom': latest['react-dom'],
+                },
+                devDependencies: { '@types/react': latest['@types/react'] },
               }
             : undefined,
-          vue ? { dependencies: { vue: '~2.6.14' } } : undefined,
+          vue ? { dependencies: { vue: latest.vue } } : undefined,
         ].filter(Boolean),
       );
     })
@@ -159,31 +162,33 @@ function Dependencies(isGit, wanted = {}) {
     .catch(console.warn);
 }
 
-exports.prompt = () => ({
-  instructions: false,
-  optionsPerPage: 20,
-  message,
-  name: 'Dependencies',
-  type: (first) => (first === false ? null : 'multiselect'),
-  choices: [
-    'ava',
-    'commitlint',
-    'garou',
-    'eslint',
-    'stylelint',
-    'prettier',
-    'typescript',
-    'react',
-    'vue',
-  ].map((item) => ({ title: item, value: item })),
-  // eslint-disable-next-line consistent-return
-  format: (keywords) => {
-    if (keywords.length > 0) {
-      return (isGit) =>
-        Dependencies(
-          isGit,
-          Object.fromEntries(keywords.map((item) => [item, true])),
-        );
-    }
-  },
-});
+export function Dependencies() {
+  return {
+    instructions: false,
+    optionsPerPage: 20,
+    message,
+    name: 'Dependencies',
+    type: (first) => (first === false ? null : 'multiselect'),
+    choices: [
+      'ava',
+      'commitlint',
+      'garou',
+      'eslint',
+      'stylelint',
+      'prettier',
+      'typescript',
+      'react',
+      'vue',
+    ].map((item) => ({ title: item, value: item })),
+    // eslint-disable-next-line consistent-return
+    format: (keywords) => {
+      if (keywords.length > 0) {
+        return (isGit) =>
+          action(
+            isGit,
+            Object.fromEntries(keywords.map((item) => [item, true])),
+          );
+      }
+    },
+  };
+}

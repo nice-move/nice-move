@@ -1,4 +1,6 @@
 #!/bin/sh
 
+npx --no-install pin-latest
+git add ./packages/init/lib/latest.mjs
 npm run lint
 npm test

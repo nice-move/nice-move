@@ -1,9 +1,9 @@
-const ora = require('ora');
-const { type } = require('os');
-const { Text } = require('fs-chain');
-const { cyan, green, red } = require('chalk');
+import { cyan, green, red } from 'chalk';
+import { Text } from 'fs-chain';
+import ora from 'ora';
+import { type } from 'os';
 
-const { download } = require('../lib/utils.cjs');
+import { download } from '../lib/utils.mjs';
 
 const regexp =
   /# Created by https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+[\S\s]+# End of https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+/;
@@ -33,9 +33,9 @@ function getPlatform(context) {
   }
 }
 
-module.exports = async function gitFile() {
+export async function GitFile() {
   await new Text()
-    .source('../template/.gitattributes.tpl', __dirname)
+    .source('../../template/.gitattributes.tpl', import.meta.url)
     .output('.gitattributes')
     .logger('Create/Overwrite', cyan('.gitattributes'));
 
@@ -82,4 +82,4 @@ module.exports = async function gitFile() {
         text: `${message} - ${error.message}`,
       });
     });
-};
+}

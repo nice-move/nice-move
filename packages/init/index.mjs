@@ -1,13 +1,12 @@
-const EditorConfig = require('./action/editorconfig.cjs');
-const GitFile = require('./action/git-file.cjs');
-const License = require('./action/license.cjs');
-const Registry = require('./action/registry.cjs');
-const Readme = require('./action/readme.cjs');
-const Package = require('./action/package.cjs');
+import { EditorConfig } from './action/editorconfig.mjs';
+import { GitFile } from './action/git-file.mjs';
+import { License } from './action/license.mjs';
+import { Package } from './action/package.mjs';
+import { Readme } from './action/readme.mjs';
+import { Registry } from './action/registry.mjs';
+import { Prompt } from './prompt/index.mjs';
 
-const Prompt = require('./prompt/index.cjs');
-
-module.exports = async function init() {
+export async function init() {
   const {
     Dependencies,
     GitInit,
@@ -39,4 +38,4 @@ module.exports = async function init() {
       });
     }
   }
-};
+}

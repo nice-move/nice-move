@@ -1,27 +1,24 @@
-const { cyan } = require('chalk');
-const { Json } = require('fs-chain');
-const deepmerge = require('deepmerge');
+import { cyan } from 'chalk';
+import deepmerge from 'deepmerge';
+import { Json } from 'fs-chain';
 
-function format(data) {
-  try {
-    // eslint-disable-next-line import/no-extraneous-dependencies
-    const prettier = require('prettier');
+async function format(data) {
+  // eslint-disable-next-line import/no-extraneous-dependencies
+  const { default: prettier } = await import('prettier');
 
-    return prettier
-      .resolveConfig('./package.json')
-      .then((options) =>
-        prettier.format(JSON.stringify(data), {
-          ...options,
-          filepath: 'package.json',
-        }),
-      )
-      .then(JSON.parse);
-  } catch {
-    return data;
-  }
+  return prettier
+    .resolveConfig('package.json')
+    .then((options) =>
+      prettier.format(JSON.stringify(data), {
+        ...options,
+        filepath: 'package.json',
+      }),
+    )
+    .then(JSON.parse)
+    .catch(() => data);
 }
 
-module.exports = function Package(info) {
+export function Package(info) {
   return new Json()
     .config({ pretty: true })
     .source('package.json')
@@ -48,4 +45,4 @@ module.exports = function Package(info) {
     .output()
     .logger('Add project info to', cyan('package.json'))
     .catch(console.warn);
-};
+}

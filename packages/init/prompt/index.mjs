@@ -1,15 +1,15 @@
-const prompts = require('prompts');
-const isGitRepo = require('is-git-repository');
-const isGitDirty = require('is-git-dirty');
+import isGitDirty from 'is-git-dirty';
+import isGitRepo from 'is-git-repository';
+import prompts from 'prompts';
 
-const GitInit = require('./git-init.cjs');
-const Install = require('./install.cjs');
-const Dependencies = require('./dependencies.cjs');
-const Package = require('./package.cjs');
+import { emptyDir, gitSupport, pkgCwd } from '../lib/utils.mjs';
 
-const { gitSupport, emptyDir, pkgCwd } = require('../lib/utils.cjs');
+import { Dependencies } from './dependencies.mjs';
+import { GitInit } from './git-init.mjs';
+import { Install } from './install.mjs';
+import { Package } from './package.mjs';
 
-module.exports = async function Confirm() {
+export async function Prompt() {
   const gitSupported = await gitSupport();
   const isGit = gitSupported && isGitRepo();
   const isDirty = isGit ? isGitDirty() : false;
@@ -68,4 +68,4 @@ module.exports = async function Confirm() {
 
       return { ...rest, info, options };
     });
-};
+}

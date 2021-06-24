@@ -1,9 +1,9 @@
-const { Text } = require('fs-chain');
-const { cyan } = require('chalk');
+import { cyan } from 'chalk';
+import { Text } from 'fs-chain';
 
-const { pkgCwd, getAuthorName } = require('../lib/utils.cjs');
+import { getAuthorName, pkgCwd } from '../lib/utils.mjs';
 
-module.exports = function License() {
+export function License() {
   const { license, author = '' } = pkgCwd();
 
   const isMIT = license === 'MIT';
@@ -11,8 +11,8 @@ module.exports = function License() {
   if (isMIT || license === 'Unlicense') {
     return new Text()
       .source(
-        isMIT ? '../template/mit.tpl' : '../template/unlicense.tpl',
-        __dirname,
+        isMIT ? '../../template/mit.tpl' : '../../template/unlicense.tpl',
+        import.meta.url,
       )
       .onDone((text) =>
         isMIT
@@ -25,4 +25,4 @@ module.exports = function License() {
       .logger('Create/Overwrite', cyan('LICENSE'))
       .catch(console.warn);
   }
-};
+}

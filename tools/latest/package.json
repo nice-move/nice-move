@@ -1,0 +1,33 @@
+{
+  "name": "@nice-move/latest",
+  "version": "0.0.0",
+  "bin": {
+    "pin-latest": "index.cjs"
+  },
+  "dependencies": {
+    "fs-chain": "^8.0.1"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.14.8",
+    "react": "~16.14.0",
+    "react-dom": "~16.14.0",
+    "vue": "~2.6.14"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.15.3"
+  }
+}

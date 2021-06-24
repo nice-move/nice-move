@@ -2,6 +2,7 @@ import deepmerge from 'deepmerge';
 import { Json, Text } from 'fs-chain';
 
 import latest from '../lib/latest.mjs';
+import { pkgCwd } from '../lib/utils.mjs';
 
 function checkEslint({ vue, react }) {
   const type =
@@ -163,23 +164,31 @@ function action(isGit, wanted = {}) {
 }
 
 export function Dependencies() {
+  const list = [
+    'ava',
+    'commitlint',
+    'garou',
+    'eslint',
+    'stylelint',
+    'prettier',
+    'typescript',
+    'react',
+    'vue',
+  ];
+
+  const { dependencies = {}, devDependencies = {} } = pkgCwd();
+
   return {
     instructions: false,
     optionsPerPage: 20,
     message,
     name: 'Dependencies',
     type: (first) => (first === false ? null : 'multiselect'),
-    choices: [
-      'ava',
-      'commitlint',
-      'garou',
-      'eslint',
-      'stylelint',
-      'prettier',
-      'typescript',
-      'react',
-      'vue',
-    ].map((item) => ({ title: item, value: item })),
+    choices: list.map((item) => ({
+      title: item,
+      value: item,
+      selected: item in dependencies || item in devDependencies,
+    })),
     // eslint-disable-next-line consistent-return
     format: (keywords) => {
       if (keywords.length > 0) {

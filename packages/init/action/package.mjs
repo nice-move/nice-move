@@ -2,6 +2,7 @@ import deepmerge from 'deepmerge';
 import { Json } from 'fs-chain';
 
 import { cyan } from '../lib/color.mjs';
+import latest from '../lib/latest.mjs';
 
 async function format(data) {
   // eslint-disable-next-line import/no-extraneous-dependencies
@@ -28,7 +29,7 @@ export function Package(info) {
       deepmerge.all([
         {
           engines: {
-            node: '^12.20.0 || ^14.15.3',
+            node: latest.lts,
           },
           publishConfig:
             info.private || old.private

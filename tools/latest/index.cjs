@@ -20,13 +20,13 @@ new JsonToText()
     ...require('./package.json').peerDependencies,
     ...getLocalVersion(
       'eslint-config-base',
-      'eslint-config-react',
-      'eslint-config-vue',
       'stylelint-config',
       'prettier-config',
       'commitlint-config',
       'cli',
     ),
+    // eslint-disable-next-line import/no-extraneous-dependencies
+    lts: require('@nice-move/init/package.json').engines.node,
   }))
   .onDone((data) => `export default ${JSON.stringify(data)}`)
   .output('~@nice-move/init/lib/latest.mjs');

@@ -1,8 +1,8 @@
-import { cyan, green, red } from 'chalk';
 import { Text } from 'fs-chain';
 import ora from 'ora';
 import { type } from 'os';
 
+import { cyan, green, red } from '../lib/color.mjs';
 import { download } from '../lib/utils.mjs';
 
 const regexp =

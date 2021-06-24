@@ -1,7 +1,6 @@
-import chalk from 'chalk';
 import execa from 'execa';
 
-const { green, red } = chalk;
+import { green, red } from '../lib/color.mjs';
 
 const message = 'Initialize as git repository';
 

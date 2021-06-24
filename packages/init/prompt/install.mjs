@@ -1,5 +1,6 @@
-import { cyan } from 'chalk';
 import install from 'yarn-install';
+
+import { cyan } from '../lib/color.mjs';
 
 const message = `Run ${cyan('npm')} / ${cyan('yarn')} install command`;
 

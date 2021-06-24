@@ -1,6 +1,7 @@
-import { cyan } from 'chalk';
 import deepmerge from 'deepmerge';
 import { Json } from 'fs-chain';
+
+import { cyan } from '../lib/color.mjs';
 
 async function format(data) {
   // eslint-disable-next-line import/no-extraneous-dependencies

@@ -1,6 +1,6 @@
-import { cyan } from 'chalk';
 import { Text } from 'fs-chain';
 
+import { cyan } from '../lib/color.mjs';
 import { pkgCwd } from '../lib/utils.mjs';
 
 export async function Readme() {

@@ -26,7 +26,7 @@ export async function Prompt() {
     cwd,
   };
 
-  const PackagePrompts = Package.prompt(options);
+  const PackagePrompts = Package(options);
 
   return prompts(
     [
@@ -38,10 +38,10 @@ export async function Prompt() {
         name: 'okay',
         type: () => (isEmpty || isDirty === false ? null : 'toggle'),
       },
-      GitInit.prompt(options),
+      GitInit(options),
       ...PackagePrompts,
-      Dependencies.prompt(options),
-      Install.prompt(options),
+      Dependencies(options),
+      Install(options),
     ],
     {
       onCancel() {

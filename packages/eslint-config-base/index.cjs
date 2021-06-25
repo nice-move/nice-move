@@ -1,3 +1,5 @@
+'use strict';
+
 function BestShot() {
   try {
     const {
@@ -22,6 +24,7 @@ module.exports = {
     require.resolve('./lib/html.cjs'),
     require.resolve('./lib/import.cjs'),
     require.resolve('./lib/base.cjs'),
+    require.resolve('./lib/typescript.cjs'),
     require.resolve('./lib/bundler.cjs'),
     require.resolve('./lib/electron.cjs'),
     require.resolve('./lib/node.cjs'),

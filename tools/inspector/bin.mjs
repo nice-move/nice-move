@@ -9,6 +9,7 @@ eslintInspector(
   'in-workspace.json',
 );
 
+eslintInspector('@nice-move/base', 'sample.ts', 'ts.json');
 eslintInspector('@nice-move/base', 'sample.html', 'html.json');
 eslintInspector('@nice-move/base', 'sample.cjs', 'cjs.json');
 eslintInspector('@nice-move/base', 'sample.mjs', 'mjs.json');

@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   parserOptions: {
     ecmaVersion: 2021,
@@ -19,16 +21,20 @@ module.exports = {
   rules: {
     'array-callback-return': [
       'error',
-      { allowImplicit: true, checkForEach: true },
+      {
+        allowImplicit: true,
+        checkForEach: true,
+      },
     ],
     'arrow-body-style': 'off',
+    camelcase: 'off',
+    'class-methods-use-this': 'warn',
     'consistent-return': 'warn',
     'eslint-comments/no-unused-disable': 'warn',
     'eslint-comments/no-unused-enable': 'warn',
     'global-require': 'off',
     'lines-between-class-members': 'off',
     'max-classes-per-file': 'off',
-    'class-methods-use-this': 'warn',
     'no-console': 'off',
     'no-implicit-coercion': [
       'warn',
@@ -55,7 +61,6 @@ module.exports = {
     'no-template-curly-in-string': 'off',
     'no-undef-init': 'off',
     'no-underscore-dangle': 'off',
-    'prefer-arrow-callback': 'warn',
     'no-unused-vars': [
       'error',
       {
@@ -64,6 +69,6 @@ module.exports = {
         varsIgnorePattern: '^_+$',
       },
     ],
-    camelcase: 'off',
+    'prefer-arrow-callback': 'warn',
   },
 };

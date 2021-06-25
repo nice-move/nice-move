@@ -7,14 +7,16 @@ const {
   rules,
 } = require('@typescript-eslint/eslint-plugin/dist/configs/recommended.js');
 
-function filter(object, filter) {
-  return Object.fromEntries(Object.entries(object).filter(filter));
+function filterObject(object, filter) {
+  return Object.fromEntries(
+    Object.entries(object).filter(([key, value]) => filter(key, value)),
+  );
 }
 
 module.exports = {
   overrides: [
     {
-      files: '*.ts',
+      files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint'],
       // parserOptions: {
@@ -26,7 +28,7 @@ module.exports = {
       //   'airbnb-typescript',
       // ],
       rules: {
-        ...filter(base, ([_, value]) => value !== 'off' && value !== 0),
+        ...filterObject(base, (_key, value) => value !== 'off' && value !== 0),
         ...rules,
         '@typescript-eslint/no-unused-vars': [
           'warn',
@@ -36,6 +38,12 @@ module.exports = {
             varsIgnorePattern: '^_+$',
           },
         ],
+      },
+      settings: {
+        // https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
+        'import/parsers': {
+          '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+        },
       },
     },
   ],

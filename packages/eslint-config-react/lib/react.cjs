@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   parserOptions: {
     ecmaFeatures: {
@@ -14,6 +16,7 @@ module.exports = {
       'error',
       { props: 'ignore', children: 'never' },
     ],
+    'react/jsx-filename-extension': 'off',
     'react/jsx-no-useless-fragment': 'warn',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-uses-react': 'off',
@@ -37,14 +40,14 @@ module.exports = {
     'react/sort-comp': 'off',
   },
   settings: {
-    'import/extensions': ['.jsx', '.js', '.js'],
+    'import/extensions': ['.tsx', '.jsx', '.js'],
     'import/resolver': {
       node: {
-        extensions: ['.jsx', '.js', '.js'],
+        extensions: ['.tsx', '.jsx', '.js'],
       },
     },
     node: {
-      tryExtensions: ['.jsx', '.js'],
+      tryExtensions: ['.tsx', '.jsx', '.js'],
     },
   },
 };

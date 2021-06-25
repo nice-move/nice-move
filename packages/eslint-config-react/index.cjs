@@ -1,8 +1,10 @@
+'use strict';
+
 module.exports = {
   extends: ['@nice-move/eslint-config-base'],
   overrides: [
     {
-      files: '*.jsx',
+      files: ['*.tsx', '*.jsx'],
       extends: [
         'airbnb',
         'airbnb/hooks',

@@ -71,4 +71,14 @@ module.exports = {
     ],
     'prefer-arrow-callback': 'warn',
   },
+  overrides: [
+    {
+      files: '*.jsx',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+  ],
 };

@@ -60,6 +60,7 @@ eslint --fix
 
 Rules can handle by [prettier](https://prettier.io/) and [garou](https://github.com/nice-move/garou) is disabled by default.
 
-### EcmaScript version
+### TODO
 
-Defaults to use `compilerOptions.target` in `jsconfig.json` or `es2020`
+- [ ] JSX for `vue`
+- [ ] typescript in `vue` SFC

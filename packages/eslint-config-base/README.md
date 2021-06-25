@@ -58,7 +58,3 @@ eslint --fix
 ### Noiseless reporting
 
 Rules can handle by [prettier](https://prettier.io/) and [garou](https://github.com/nice-move/garou) is disabled by default.
-
-### EcmaScript version
-
-Defaults to use `compilerOptions.target` in `jsconfig.json` or `es2020`

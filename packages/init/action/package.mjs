@@ -4,26 +4,23 @@ import { Json } from 'fs-chain';
 import { cyan } from '../lib/color.mjs';
 import latest from '../lib/latest.mjs';
 
-async function format(data) {
-  // eslint-disable-next-line import/no-extraneous-dependencies
-  const { default: prettier } = await import('prettier');
+const pkg = 'package.json';
 
-  return prettier
-    .resolveConfig('package.json')
-    .then((options) =>
-      prettier.format(JSON.stringify(data), {
-        ...options,
-        filepath: 'package.json',
-      }),
-    )
-    .then(JSON.parse)
+function formatter(data) {
+  // eslint-disable-next-line import/no-extraneous-dependencies
+  return import('prettier')
+    .then(({ default: { format, resolveConfig } }) => ({
+      options: resolveConfig(pkg),
+      format,
+    }))
+    .then(({ options, format }) => format(data, { ...options, filepath: pkg }))
     .catch(() => data);
 }
 
 export function Package(info) {
   return new Json()
     .config({ pretty: true })
-    .source('package.json')
+    .source(pkg)
     .onFail()
     .onDone((old = {}) =>
       deepmerge.all([
@@ -43,8 +40,10 @@ export function Package(info) {
         info,
       ]),
     )
-    .onDone(format)
+    .onDone(JSON.stringify)
+    .onDone(formatter)
+    .onDone(JSON.parse)
     .output()
-    .logger('Add project info to', cyan('package.json'))
+    .logger('Add project info to', cyan(pkg))
     .catch(console.warn);
 }

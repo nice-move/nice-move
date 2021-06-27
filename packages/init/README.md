@@ -33,3 +33,8 @@ npx @nice-move/init
 - Set registry to China mirror in `.npmrc` / `.yarnrc`
 - Add or reset project dependencies by interactive
 - Run `npm` / `yarn` install command
+
+## Related
+
+- [@nice-move/cli](../cli)
+- [@nice-move/lint](../lint)

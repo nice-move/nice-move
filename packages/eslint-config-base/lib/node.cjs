@@ -33,6 +33,7 @@ module.exports = {
         'node/no-new-require': 'error',
         'node/no-unpublished-import': 'off',
         'node/no-unpublished-require': 'off',
+        'node/no-unpublished-bin': 'off',
       },
       settings: {
         node: {

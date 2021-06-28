@@ -48,3 +48,8 @@ npx --no-install nice-move-lint
 ## Tips
 
 If [@nice-move/cli](https://github.com/nice-move/nice-move/tree/master/packages/cli) is installed, you can run `nice-move lint` command, cli will run `nice-move-lint` internally.
+
+## Related
+
+- [@nice-move/cli](../cli)
+- [@nice-move/init](../init)

@@ -34,8 +34,9 @@ function getDependencies() {
   const stylelint = 'stylelint' in devDependencies;
   const garou = 'garou' in devDependencies;
   const rustywind = 'rustywind' in devDependencies;
+  const typescript = 'typescript' in devDependencies;
 
-  return { rustywind, garou, stylelint, eslint, prettier };
+  return { rustywind, garou, stylelint, eslint, prettier, typescript };
 }
 
 export function lint({ shell }) {

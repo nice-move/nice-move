@@ -68,3 +68,8 @@ Change a few files, then run:
 git add .
 npx --no-install nice-move lint
 ```
+
+## Related
+
+- [@nice-move/init](../init)
+- [@nice-move/lint](../lint)

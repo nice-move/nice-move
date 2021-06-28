@@ -9,7 +9,14 @@ function parse(obj) {
   return io.length > 0 ? Object.fromEntries(io) : undefined;
 }
 
-export function getConfig({ rustywind, garou, stylelint, eslint, prettier }) {
+export function getConfig({
+  rustywind,
+  garou,
+  stylelint,
+  eslint,
+  prettier,
+  typescript,
+}) {
   const useColor = process.stdin.isTTY ? ' --color' : '';
 
   const yarnConfig = resolve(fileURLToPath(import.meta.url), '../yarn.cjs');
@@ -24,6 +31,7 @@ export function getConfig({ rustywind, garou, stylelint, eslint, prettier }) {
       eslint && `eslint --fix --format=pretty${useColor}`,
     ],
     '*.{ts,tsx}': [
+      typescript && garou && 'garou',
       rustywind && 'rustywind --write',
       prettier && `prettier --write${useColor}`,
     ],

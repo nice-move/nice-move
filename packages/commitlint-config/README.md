@@ -15,17 +15,26 @@ A [commitlint] config created by personal preferences.
 
 ## Installation
 
-```bash
+```sh
 npm install commitlint @nice-move/commitlint-config --save-dev
 ```
 
 ## Usage
 
-Add to package.json
+```json
+// package.json
+{
+  "commitlint": {
+    "extends": "@nice-move/commitlint-config"
+  }
+}
+```
 
 ```sh
-git config core.hooksPath .hooks
+echo "foo" | commitlint
 ```
+
+### Using by git hooks
 
 ```sh
 #!/bin/sh
@@ -35,13 +44,9 @@ npx --no-install commitlint -e
 # save this to: .hooks/commit-msg
 ```
 
-```json
-// package.json
-{
-  "commitlint": {
-    "extends": "@nice-move/commitlint-config"
-  }
-}
+```sh
+git config core.hooksPath .hooks
+git commit -m "foo"
 ```
 
 ## Tips

@@ -33,7 +33,7 @@
     "prettier-plugin-toml": "^0.3.1"
   },
   "peerDependencies": {
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.2"
   },
   "engines": {
     "node": "^12.22.0 || ^14.17.0"

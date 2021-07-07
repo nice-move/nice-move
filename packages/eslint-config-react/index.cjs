@@ -1,18 +1,24 @@
 'use strict';
 
+const { extends: roots } = require('@nice-move/eslint-config-base');
+
 module.exports = {
   extends: ['@nice-move/eslint-config-base'],
   overrides: [
     {
       files: ['*.tsx', '*.jsx'],
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
       extends: [
         'airbnb',
         'airbnb/hooks',
-        '@nice-move/eslint-config-base/lib/import.cjs',
-        '@nice-move/eslint-config-base/lib/base.cjs',
-        '@nice-move/eslint-config-base/lib/markdown.cjs',
+        ...roots.filter(
+          (item) => !['eslint:recommended', 'airbnb-base'].includes(item),
+        ),
         require.resolve('./lib/react.cjs'),
-        'prettier',
       ],
     },
   ],

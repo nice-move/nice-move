@@ -1,3 +1,5 @@
+'use strict';
+
 const { existThenReturn } = require('./utils.cjs');
 
 module.exports = {

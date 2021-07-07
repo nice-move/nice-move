@@ -15,19 +15,24 @@ function BestShot() {
 function webpack() {
   return existThenReturn('webpack/package.json', () => [
     {
-      files: 'src/**',
+      files: '{src,packages/*}/**',
       excludedFiles: ['*.mjs', '*.cjs'],
       env: {
         commonjs: true,
       },
       globals: {
-        __webpack_public_path__: 'readonly',
-        __resourceQuery: 'readonly',
         __dirname: 'readonly',
         __filename: 'readonly',
       },
       rules: {
         'import/no-commonjs': 'warn',
+      },
+    },
+    {
+      files: 'src/**',
+      globals: {
+        __resourceQuery: 'readonly',
+        __webpack_public_path__: 'readonly',
       },
     },
   ]);

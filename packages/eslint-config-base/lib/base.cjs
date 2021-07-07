@@ -13,7 +13,6 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    // not node.js
     commonjs: false,
     node: false,
   },

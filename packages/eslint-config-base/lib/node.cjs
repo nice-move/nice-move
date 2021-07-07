@@ -1,14 +1,10 @@
 'use strict';
 
-const { commonRules } = require('eslint-plugin-node/lib/configs/_commons');
-
 module.exports = {
   plugins: ['node'],
   rules: {
     'node/file-extension-in-import': 'error',
-    'node/global-require': 'off',
     'node/shebang': 'error',
-    'node/no-process-env': 'error',
   },
   settings: {
     node: {
@@ -24,16 +20,16 @@ module.exports = {
         commonjs: true,
       },
       rules: {
-        ...commonRules,
-        'no-process-exit': 'off',
-        'node/no-extraneous-require': 'off',
-        'node/no-extraneous-import': 'off',
-        'node/no-missing-import': 'off',
-        'node/no-missing-require': 'off',
-        'node/no-new-require': 'error',
-        'node/no-unpublished-import': 'off',
-        'node/no-unpublished-require': 'off',
-        'node/no-unpublished-bin': 'off',
+        'node/no-deprecated-api': 'error',
+        'node/prefer-global/url': 'warn',
+        'node/prefer-global/console': 'warn',
+        'node/prefer-global/process': 'warn',
+        'node/prefer-global/buffer': 'warn',
+        'node/prefer-global/url-search-params': 'warn',
+        'node/no-unsupported-features/es-builtins': 'error',
+        'node/no-unsupported-features/es-syntax': 'error',
+        'node/no-unsupported-features/node-builtins': 'error',
+        'node/process-exit-as-throw': 'error',
       },
       settings: {
         node: {
@@ -67,12 +63,6 @@ module.exports = {
       },
     },
     {
-      files: '*.{m,c}js',
-      rules: {
-        'node/no-process-env': 'off',
-      },
-    },
-    {
       files: '*.cjs',
       parserOptions: {
         ecmaFeatures: {
@@ -82,6 +72,8 @@ module.exports = {
       },
       rules: {
         strict: ['error', 'global'],
+        'node/no-exports-assign': 'error',
+        'node/no-new-require': 'error',
       },
     },
   ],

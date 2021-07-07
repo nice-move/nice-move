@@ -3,6 +3,7 @@
 import { eslintInspector, stylelintInspector } from './index.mjs';
 
 eslintInspector('@nice-move/base', 'sample.js', 'js.json');
+eslintInspector('@nice-move/base', 'src/sample.js', 'src.json');
 eslintInspector(
   '@nice-move/base',
   'packages/mock/sample.js',

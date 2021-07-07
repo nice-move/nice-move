@@ -1,3 +1,5 @@
+'use strict';
+
 const { existThenReturn, safeGet } = require('./utils.cjs');
 
 function BestShot() {

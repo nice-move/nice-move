@@ -28,7 +28,7 @@ module.exports = {
           '{test,tests,config}/**/*.{m,c,}js',
           '**/.*rc.{m,c,}js',
           '**/*.config.{m,c,}js',
-          '.best-shot/**/*.*',
+          '.best-shot/**',
         ],
       },
     ],
@@ -82,14 +82,14 @@ module.exports = {
       },
     },
     {
-      files: '**/*',
+      files: '**/*.*',
       excludedFiles: ['*.cjs'],
       rules: {
         'import/no-commonjs': 'error',
       },
     },
     {
-      files: '**/*',
+      files: '**/*.*',
       excludedFiles: '*.{m,c}js',
       rules: {
         'import/no-nodejs-modules': 'error',

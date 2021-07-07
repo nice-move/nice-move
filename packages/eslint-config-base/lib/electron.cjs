@@ -1,3 +1,5 @@
+'use strict';
+
 const { pkgHas } = require('./utils.cjs');
 
 module.exports =
@@ -16,8 +18,7 @@ module.exports =
       },
       overrides: [
         {
-          files: '**/*',
-          excludedFiles: '*.{m,c}js',
+          files: 'src/**',
           rules: {
             'import/no-nodejs-modules': 'off',
           },

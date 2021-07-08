@@ -35,6 +35,12 @@ module.exports = {
     'lines-between-class-members': 'off',
     'max-classes-per-file': 'off',
     'no-console': 'off',
+    'no-empty': [
+      'error',
+      {
+        allowEmptyCatch: true,
+      },
+    ],
     'no-implicit-coercion': [
       'warn',
       {
@@ -42,7 +48,10 @@ module.exports = {
       },
     ],
     'no-nested-ternary': 'off',
-    'no-param-reassign': 'warn',
+    'no-param-reassign': [
+      'warn',
+      { props: true, ignorePropertyModificationsFor: [] },
+    ],
     'no-plusplus': 'warn',
     'no-restricted-syntax': [
       'error',
@@ -69,6 +78,7 @@ module.exports = {
       },
     ],
     'prefer-arrow-callback': 'warn',
+    'spaced-comment': 'off',
   },
   overrides: [
     {

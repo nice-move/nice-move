@@ -15,5 +15,8 @@
   "peerDependencies": {
     "eslint": "^7.30.0",
     "stylelint": "^13.13.1"
+  },
+  "engines": {
+    "node": "^12.22.0 || ^14.17.0"
   }
 }

@@ -23,11 +23,11 @@ export function eslintInspector(configName, filename, outputName = '') {
 
   return engine
     .calculateConfigForFile(filename)
-    .then((data) => {
-      // eslint-disable-next-line no-param-reassign
-      data.rules = pickBy(data.rules, (item) => !['off', 0].includes(item[0]));
-      return sortKeys(data, { deep: true });
-    })
+    .then(({ rules, ...rest }) => ({
+      rules: pickBy(rules, (item) => !['off', 0].includes(item[0])),
+      ...rest,
+    }))
+    .then((data) => sortKeys(data, { deep: true }))
     .then((data) => {
       if (outputName) {
         return save(outputName, data);
@@ -41,9 +41,11 @@ export function stylelintInspector(outputName) {
     extends: '@nice-move/stylelint-config',
     files: ['abc.css'],
   })
+    .then(({ rules, ...rest }) => ({
+      rules: pickBy(rules, (item) => item !== null),
+      ...rest,
+    }))
     .then((data) => {
-      // eslint-disable-next-line no-param-reassign
-      data.rules = pickBy(data.rules, (item) => item !== null);
       const io = sortKeys(data, { deep: true });
       if (outputName) {
         return save(outputName, io);

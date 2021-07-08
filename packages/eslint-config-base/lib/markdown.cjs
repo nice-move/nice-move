@@ -21,7 +21,7 @@ module.exports = {
       },
     },
     {
-      files: '**/*.md/**',
+      files: '**/*.md/*',
       rules: {
         ...rules,
         'import/no-extraneous-dependencies': 'off',

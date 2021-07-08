@@ -8,7 +8,7 @@ eslintInspector('@nice-move/base', 'src/sample.js', 'src/js.json');
 eslintInspector(
   '@nice-move/base',
   'packages/mock/sample.js',
-  'in-workspace.json',
+  'packages/mock/js.json',
 );
 
 eslintInspector('@nice-move/base', 'sample.ts', 'ts.json');

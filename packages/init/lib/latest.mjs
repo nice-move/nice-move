@@ -11,7 +11,7 @@ export default {
   react: '~16.14.0',
   'react-dom': '~16.14.0',
   vue: '~2.6.14',
-  'eslint-config-base': '^0.5.49',
+  'eslint-config-base': '^0.5.50',
   'stylelint-config': '^0.5.8',
   'prettier-config': '^0.4.7',
   'commitlint-config': '^0.1.4',

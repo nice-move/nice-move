@@ -48,9 +48,12 @@ module.exports = {
   },
   overrides: [
     pkgHas(
-      ({ workspaces }) => workspaces && workspaces.length > 0,
+      ({ workspaces }) =>
+        workspaces && (workspaces.packages || workspaces).length > 0,
       (_, { workspaces }) => ({
-        files: workspaces.map((item) => join(item, '*')),
+        files: (workspaces.packages || workspaces).map((item) =>
+          join(item, '*'),
+        ),
         rules: {
           'import/no-relative-packages': 'warn',
         },
@@ -82,7 +85,7 @@ module.exports = {
       },
     },
     {
-      files: '**/*.*',
+      files: '**/*',
       excludedFiles: ['*.cjs'],
       rules: {
         'import/no-commonjs': 'error',

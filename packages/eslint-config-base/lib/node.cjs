@@ -3,13 +3,7 @@
 module.exports = {
   plugins: ['node'],
   rules: {
-    'node/file-extension-in-import': 'error',
     'node/shebang': 'error',
-  },
-  settings: {
-    node: {
-      tryExtensions: ['.js'],
-    },
   },
   overrides: [
     {
@@ -30,11 +24,6 @@ module.exports = {
         'node/no-unsupported-features/es-syntax': 'error',
         'node/no-unsupported-features/node-builtins': 'error',
         'node/process-exit-as-throw': 'error',
-      },
-      settings: {
-        node: {
-          tryExtensions: ['.cjs', '.js', '.json'],
-        },
       },
     },
     {
@@ -74,6 +63,18 @@ module.exports = {
         strict: ['error', 'global'],
         'node/no-exports-assign': 'error',
         'node/no-new-require': 'error',
+      },
+    },
+    {
+      files: '*.{js,ts,jsx,tsx,vue,html,htm}',
+      excludedFiles: ['**/*.md/*'],
+      rules: {
+        'node/file-extension-in-import': 'error',
+      },
+      settings: {
+        node: {
+          tryExtensions: ['.vue', '.tsx', '.jsx', '.ts', '.js', '.json'],
+        },
       },
     },
   ],

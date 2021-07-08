@@ -16,13 +16,15 @@ function webpack() {
   return existThenReturn('webpack/package.json', () => [
     {
       files: '{src,packages/*}/**',
-      excludedFiles: ['*.mjs', '*.cjs'],
-      env: {
-        commonjs: true,
-      },
+      excludedFiles: ['*.mjs', '*.cjs', '*.html', '*.htm'],
       globals: {
         __dirname: 'readonly',
         __filename: 'readonly',
+        __resourceQuery: 'readonly',
+        __non_webpack_require__: 'readonly',
+        __webpack_require__: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
       },
       rules: {
         'import/no-commonjs': 'warn',
@@ -31,8 +33,9 @@ function webpack() {
     {
       files: 'src/**',
       globals: {
-        __resourceQuery: 'readonly',
-        __webpack_public_path__: 'readonly',
+        __webpack_runtime_id__: 'readonly',
+        __webpack_public_path__: true,
+        __webpack_base_uri__: true,
       },
     },
   ]);

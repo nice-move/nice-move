@@ -35,14 +35,11 @@ module.exports = {
     'react/sort-comp': 'off',
   },
   settings: {
-    'import/extensions': ['.tsx', '.jsx', '.js'],
+    'import/extensions': ['.tsx', '.jsx', '.ts', '.js'],
     'import/resolver': {
       node: {
-        extensions: ['.tsx', '.jsx', '.js'],
+        extensions: ['.tsx', '.jsx', '.ts', '.js'],
       },
-    },
-    node: {
-      tryExtensions: ['.tsx', '.jsx', '.js'],
     },
   },
 };

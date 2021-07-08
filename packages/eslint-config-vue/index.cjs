@@ -1,3 +1,5 @@
+'use strict';
+
 const { resolve } = require('path');
 
 function isSafeError(error) {
@@ -29,6 +31,9 @@ module.exports = {
     {
       files: '*.vue',
       extends: ['plugin:vue/recommended', 'prettier'],
+      parserOptions: {
+        ecmaVersion: 2021,
+      },
       rules: {
         'vue/attributes-order': 'off',
         'vue/component-name-in-template-casing': ['warn', 'PascalCase'],
@@ -58,14 +63,11 @@ module.exports = {
           : undefined),
       },
       settings: {
-        'import/extensions': ['.vue', '.js', '.js'],
+        'import/extensions': ['.vue', '.ts', '.js'],
         'import/resolver': {
           node: {
-            extensions: ['.vue', '.js', '.js'],
+            extensions: ['.vue', '.ts', '.js'],
           },
-        },
-        node: {
-          tryExtensions: ['.vue', '.js'],
         },
       },
     },

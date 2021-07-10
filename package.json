@@ -31,7 +31,7 @@
     "commitlint": "^12.1.4",
     "eslint": "^7.30.0",
     "eslint-plugin-ava": "^12.0.0",
-    "garou": "^0.1.33",
+    "garou": "^0.1.35",
     "nodemon": "^2.0.9",
     "prettier": "^2.3.2",
     "stylelint": "^13.13.1",

@@ -1206,7 +1206,7 @@ cheetor@^0.10.2:
     chalk "^4.1.1"
     yargs "^17.0.1"
 
-cheetor@^0.12.0:
+cheetor@^0.12.1:
   version "0.12.1"
   resolved "https://registry.yarnpkg.com/cheetor/-/cheetor-0.12.1.tgz#c603d09fa40aa983c8bcb83bff209053aa1f7223"
   integrity sha512-AAFPEtwOfOTu9nYpzyPasQbKyhs8wsztc57xQCE6Fs0jjENT6SPn/x6iN2V2Wa7hbNgsMu9IvLT3oWU+xAtQEQ==
@@ -2097,7 +2097,7 @@ eslint-plugin-unicorn@^34.0.1:
     safe-regex "^2.1.1"
     semver "^7.3.5"
 
-eslint-plugin-vue@^7.12.1, eslint-plugin-vue@^7.13.0:
+eslint-plugin-vue@^7.13.0:
   version "7.13.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.13.0.tgz#6f3d232bf1fcd0428353b0d581ebaca1c5dbc17a"
   integrity sha512-u0+jL8h2MshRuMTCLslktxRsPTjlENNcNufhgHu01N982DmHVdeFniyMPoVLLRjACQOwdz3FdlsgYGBMBG+AKg==
@@ -2463,13 +2463,13 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-garou@^0.1.33:
-  version "0.1.33"
-  resolved "https://registry.yarnpkg.com/garou/-/garou-0.1.33.tgz#5d08080b348912b9bcf6f03a7bae77b3f751d0c4"
-  integrity sha512-TtNZl5+M3w1M27H1lC1MDnYuH9u/AsS9KJ2YFWgvyK4Kkgstr0h6XjwTcVyRZaICsbqU9d7WdiVhN+xJyW2dUg==
+garou@^0.1.35:
+  version "0.1.35"
+  resolved "https://registry.yarnpkg.com/garou/-/garou-0.1.35.tgz#f94df0284e12ec9b7d89cbd4fce0ffc15184bb8f"
+  integrity sha512-p8ML3pNpWsyk5dDvBxvSHKUgN3p6Bk0YFCt4UJ4qWHskqTn6Wr9HspAEqcMAiLq6gOwkgh63Cxs3LUdaxh9gWA==
   dependencies:
     "@typescript-eslint/parser" "^4.28.2"
-    cheetor "^0.12.0"
+    cheetor "^0.12.1"
     eslint "^7.30.0"
     eslint-plugin-html "^6.1.2"
     eslint-plugin-import "^2.23.4"
@@ -2477,7 +2477,7 @@ garou@^0.1.33:
     eslint-plugin-simple-import-sort "^7.0.0"
     eslint-plugin-sort-class-members "^1.11.0"
     eslint-plugin-unicorn "^34.0.1"
-    eslint-plugin-vue "^7.12.1"
+    eslint-plugin-vue "^7.13.0"
     fs-chain "^8.0.1"
     globby "^11.0.4"
     rehype "^11.0.0"

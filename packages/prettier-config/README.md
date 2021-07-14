@@ -16,11 +16,19 @@ A [prettier] config created by personal preferences.
 ## Extname support
 
 - .gql .md
+- .css .less .scss
+- .cjs .mjs .js .jsx
 - .htm .html .xml .svg .vue
-- .css .less .scss .wxss .qss
-- .cjs .mjs .js .jsx .wxs .qs
 - .yml .yaml .toml .ini .json
 - .npmrc .editorconfig .babelrc
+
+### Mini progarm
+
+- .acss
+- .jxss
+- .qss .qs
+- .ttss
+- .wxss .wxs
 
 ## Installation
 
@@ -62,3 +70,7 @@ prettier --write .
 ## Tips
 
 This config including [@nice-move/prettier-plugin-package-json](https://github.com/nice-move/prettier-plugin-package-json#readme)
+
+## Related
+
+- [garou](https://github.com/nice-move/garou)

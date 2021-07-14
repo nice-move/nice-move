@@ -45,7 +45,7 @@ module.exports = {
       },
     },
     {
-      files: ['*.wxss', '*.qss'],
+      files: ['*.ttss', '*jxss', '*.acss', '*.wxss', '*.qss'],
       options: {
         parser: 'css',
       },

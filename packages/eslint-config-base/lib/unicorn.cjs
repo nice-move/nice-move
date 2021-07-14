@@ -19,6 +19,7 @@ module.exports = {
     'unicorn/prefer-prototype-methods': 'off',
     'unicorn/prefer-set-has': 'off',
     'unicorn/prevent-abbreviations': 'off',
+    'unicorn/require-post-message-target-origin': 'off',
   },
   overrides: [
     {

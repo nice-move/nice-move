@@ -78,6 +78,7 @@ module.exports = {
       },
     ],
     'prefer-arrow-callback': 'warn',
+    'prefer-template': 'warn',
     'spaced-comment': 'off',
   },
   overrides: [

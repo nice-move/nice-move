@@ -5,14 +5,17 @@ module.exports = {
   iniSpaceAroundEquals: true,
   singleQuote: true,
   trailingComma: 'all',
-  xmlSelfClosingSpace: true,
   xmlWhitespaceSensitivity: 'ignore',
-  plugins: [
-    require.resolve('@nice-move/prettier-plugin-package-json'),
-    require.resolve('prettier-plugin-toml'),
-    require.resolve('prettier-plugin-ini'),
-    require.resolve('@prettier/plugin-xml'),
-  ],
+  ...(process.versions.pnp
+    ? {
+        plugins: [
+          require.resolve('@nice-move/prettier-plugin-package-json'),
+          require.resolve('@prettier/plugin-xml'),
+          require.resolve('prettier-plugin-ini'),
+          require.resolve('prettier-plugin-toml'),
+        ],
+      }
+    : undefined),
   overrides: [
     {
       files: ['.babelrc', '*.json'],

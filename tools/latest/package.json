@@ -5,7 +5,7 @@
     "pin-latest": "index.cjs"
   },
   "dependencies": {
-    "fs-chain": "^8.0.1"
+    "fs-chain": "^8.1.0"
   },
   "peerDependencies": {
     "@types/react": "^16.14.11",

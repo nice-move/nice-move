@@ -435,10 +435,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@prettier/plugin-xml@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-xml/-/plugin-xml-1.0.1.tgz#e7d5d1fbbfa83788ed28d983f99e72af28fd21f7"
-  integrity sha512-zDsZMooB65KhCAJPpt88jhbxLGSYIP9xkUB63BEgv8RAhAxjDdboXTCE2kjHWI9YAA2AJzZFclW6FhXb3pFakg==
+"@prettier/plugin-xml@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-xml/-/plugin-xml-1.0.2.tgz#d1c4dc5f13398cd17d1de313c2f49338b07e0c90"
+  integrity sha512-QNqKaa56/7trSqVuGDUzS9xw6Hx0qOklAwA7A2Mn89FPnPywyrK/GNCO71XK0AfoRNrmY0vETVpR2pWpBwfzow==
   dependencies:
     "@xml-tools/parser" "^1.0.11"
     prettier ">=2.3"
@@ -4405,6 +4405,13 @@ prettier-plugin-ini@^0.3.1:
   dependencies:
     prettier ">=2.0"
 
+prettier-plugin-ssh-config@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-ssh-config/-/prettier-plugin-ssh-config-0.0.0.tgz#7c330ea7b23feb57b616f4f64ecf808b75864d7a"
+  integrity sha512-zLpoRjAX6kEuE0CsP53gPcVn/4bp5p5Dr5ePIEZZcr1NJNU5MmNdr0vABEXQsVHq6gU5ZNStQAbTw10Gx101vw==
+  dependencies:
+    ssh-config "^4.0.6"
+
 prettier-plugin-toml@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/prettier-plugin-toml/-/prettier-plugin-toml-0.3.1.tgz#71b5291ef9c2a20865d2dfe1dbc24435bcb596b5"
@@ -5006,6 +5013,11 @@ sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
+
+ssh-config@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/ssh-config/-/ssh-config-4.0.6.tgz#5cf104157d08702b47a112ae18075e433a6c5e86"
+  integrity sha512-GEtKJJ/R4XTImmBIGAfyw520rY7pS1MLjCPBcrPxp+431xSwMIU5iyCv98ua0nSXoR1B4qvOYJdTc7UvERzu8w==
 
 stack-utils@^2.0.3:
   version "2.0.3"

@@ -16,11 +16,17 @@ A [prettier] config created by personal preferences.
 ## Extname support
 
 - .gql .md
+- .editorconfig
 - .css .less .scss
 - .cjs .mjs .js .jsx
 - .htm .html .xml .svg .vue
 - .yml .yaml .toml .ini .json
-- .npmrc .editorconfig .babelrc
+
+## Filename support
+
+- .npmrc
+- .babelrc
+- .ssh/config ssh_config
 
 ### Mini progarm
 
@@ -69,7 +75,10 @@ prettier --write .
 
 ## Tips
 
-This config including [@nice-move/prettier-plugin-package-json](https://github.com/nice-move/prettier-plugin-package-json#readme)
+This config including special plugins:
+
+- [@nice-move/prettier-plugin-package-json](https://github.com/nice-move/prettier-plugin-package-json)
+- [prettier-plugin-ssh-config](https://github.com/nice-move/prettier-plugin-ssh-config)
 
 ## Related
 

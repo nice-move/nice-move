@@ -13,6 +13,7 @@ module.exports = {
           require.resolve('@prettier/plugin-xml'),
           require.resolve('prettier-plugin-ini'),
           require.resolve('prettier-plugin-toml'),
+          require.resolve('prettier-plugin-ssh-config'),
         ],
       }
     : undefined),
@@ -42,7 +43,7 @@ module.exports = {
       },
     },
     {
-      files: ['.npmrc', '.editorconfig'],
+      files: ['.npmrc', '*.editorconfig'],
       options: {
         parser: 'ini',
       },
@@ -57,6 +58,12 @@ module.exports = {
       files: ['*.wxs', '*.qs'],
       options: {
         parser: 'babel',
+      },
+    },
+    {
+      files: '.ssh/config',
+      options: {
+        parser: 'ssh-config',
       },
     },
   ],

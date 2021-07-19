@@ -572,7 +572,7 @@
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
 
-"@typescript-eslint/parser@^4.28.2", "@typescript-eslint/parser@^4.28.3":
+"@typescript-eslint/parser@^4.28.3":
   version "4.28.3"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-4.28.3.tgz#95f1d475c08268edffdcb2779993c488b6434b44"
   integrity sha512-ZyWEn34bJexn/JNYvLQab0Mo5e+qqQNhknxmc8azgNd4XqspVYR5oHq9O11fLwdZMRcj4by15ghSlIEq+H5ltQ==
@@ -2424,7 +2424,7 @@ fs-chain@8.0.1:
     chalk "^4.1.1"
     fs-extra "^10.0.0"
 
-fs-chain@^8.0.1, fs-chain@^8.1.0:
+fs-chain@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-8.1.0.tgz#32c377f4c97cbf7b2cc38c32884aaabe786781b8"
   integrity sha512-pfXpVFmBB3h6zYdJL2ah4UpJTMF9x3i5TwrVdBfT60PW5sTXMWOUPxU/W0/jPOE0+0afrFc4EteWroD2o8Ye+g==
@@ -2471,12 +2471,12 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-garou@^0.1.35:
-  version "0.1.35"
-  resolved "https://registry.yarnpkg.com/garou/-/garou-0.1.35.tgz#f94df0284e12ec9b7d89cbd4fce0ffc15184bb8f"
-  integrity sha512-p8ML3pNpWsyk5dDvBxvSHKUgN3p6Bk0YFCt4UJ4qWHskqTn6Wr9HspAEqcMAiLq6gOwkgh63Cxs3LUdaxh9gWA==
+garou@^0.1.37:
+  version "0.1.37"
+  resolved "https://registry.yarnpkg.com/garou/-/garou-0.1.37.tgz#4a0cc007ee7943c04a37f4fcf8a701cfa95d93b9"
+  integrity sha512-iMXg8IrvVAIeoIQTlbqfde04gjGWQ2vYvn1u9EQWmDj3hr1viF0NarMQx9OFl6/giTnhsENLpVrXYO3ZELCD+A==
   dependencies:
-    "@typescript-eslint/parser" "^4.28.2"
+    "@typescript-eslint/parser" "^4.28.3"
     cheetor "^0.12.1"
     eslint "^7.30.0"
     eslint-plugin-html "^6.1.2"
@@ -2486,7 +2486,7 @@ garou@^0.1.35:
     eslint-plugin-sort-class-members "^1.11.0"
     eslint-plugin-unicorn "^34.0.1"
     eslint-plugin-vue "^7.13.0"
-    fs-chain "^8.0.1"
+    fs-chain "^8.1.0"
     globby "^11.0.4"
     rehype "^11.0.0"
     rehype-sort-attributes "^3.0.2"

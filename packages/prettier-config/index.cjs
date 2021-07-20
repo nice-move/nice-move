@@ -19,9 +19,9 @@ module.exports = {
     : undefined),
   overrides: [
     {
-      files: ['.babelrc', '*.json'],
+      files: ['.*rc'],
       options: {
-        parser: 'json-stringify',
+        parser: 'json',
       },
     },
     {

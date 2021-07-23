@@ -19,7 +19,13 @@ module.exports = {
     : undefined),
   overrides: [
     {
-      files: ['.*rc'],
+      files: ['*.json'],
+      options: {
+        parser: 'json-stringify',
+      },
+    },
+    {
+      files: ['.*rc', '.*rc.json', '{t,j}sconfig.json', '.vscode/*.json'],
       options: {
         parser: 'json',
       },

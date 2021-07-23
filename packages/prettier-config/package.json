@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-config",
-  "version": "0.4.10",
+  "version": "0.4.11",
   "description": "A `prettier` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -18,16 +18,16 @@
   ],
   "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/prettier-config",
   "repository": {
+    "directory": "packages/prettier-config",
     "type": "git",
-    "url": "https://github.com/nice-move/nice-move.git",
-    "directory": "packages/prettier-config"
+    "url": "https://github.com/nice-move/nice-move.git"
   },
   "bugs": {
     "url": "https://github.com/nice-move/nice-move/issues"
   },
   "main": "index.cjs",
   "dependencies": {
-    "@nice-move/prettier-plugin-package-json": "^0.4.6",
+    "@nice-move/prettier-plugin-package-json": "^0.4.7",
     "@prettier/plugin-xml": "^1.0.2",
     "prettier-plugin-ini": "^0.3.1",
     "prettier-plugin-ssh-config": "^0.0.0",

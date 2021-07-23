@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/stylelint-config",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "A `stylelint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -31,8 +31,9 @@
     "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
-    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
-    "stylelint-scss": "^3.19.0"
+    "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
+    "stylelint-scss": "^3.20.1",
+    "stylelint-selector-no-empty": "^1.0.8"
   },
   "peerDependencies": {
     "stylelint": "^13.13.1"

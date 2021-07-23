@@ -1,15 +1,22 @@
+'use strict';
+
+const { hasConfig } = require('./lib/utils.cjs');
+
 module.exports = {
   reportNeedlessDisables: true,
   reportInvalidScopeDisables: true,
   extends: [
-    'stylelint-config-standard',
-    'stylelint-config-prettier',
-    'stylelint-config-css-modules',
+    require.resolve('stylelint-config-standard'),
+    require.resolve('stylelint-config-prettier'),
+    require.resolve('stylelint-config-css-modules'),
     require.resolve('./lib/prefix.json'),
     require.resolve('./lib/scss.cjs'),
     require.resolve('./lib/ignore.cjs'),
   ],
-  plugins: ['stylelint-declaration-block-no-ignored-properties'],
+  plugins: [
+    'stylelint-declaration-block-no-ignored-properties',
+    'stylelint-selector-no-empty',
+  ],
   rules: {
     'color-hex-length': null,
     'declaration-block-no-redundant-longhand-properties': true,
@@ -18,6 +25,7 @@ module.exports = {
     'max-nesting-depth': 5,
     'number-max-precision': 4,
     'plugin/declaration-block-no-ignored-properties': true,
+    'plugin/stylelint-selector-no-empty': true,
     'selector-max-compound-selectors': 5,
     'selector-max-universal': 1,
     'selector-no-qualifying-type': true,
@@ -39,7 +47,11 @@ module.exports = {
       'double',
       { severity: 'warning' },
     ],
-
+    'selector-type-no-unknown': true,
+    ...hasConfig({
+      'selector-type-no-unknown': [true, { ignoreTypes: ['page'] }],
+      'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
+    }),
     // ---- handle by prettier -------------
     'at-rule-name-space-after': null,
     'at-rule-semicolon-space-before': null,

@@ -1,3 +1,5 @@
+'use strict';
+
 const { resolve } = require('path');
 
 function isSafeError(error) {
@@ -6,6 +8,7 @@ function isSafeError(error) {
   );
 }
 
+// eslint-disable-next-line consistent-return
 function existThenReturn(checker, getResult) {
   try {
     require.resolve(checker);
@@ -30,6 +33,7 @@ function safeGet(name) {
 
 const pkg = safeGet(resolve(process.cwd(), 'package.json'));
 
+// eslint-disable-next-line consistent-return
 function pkgHas(checker, getResult) {
   const io = checker(pkg);
   if (io) {
@@ -37,4 +41,14 @@ function pkgHas(checker, getResult) {
   }
 }
 
-module.exports = { pkgHas, safeGet, existThenReturn };
+// eslint-disable-next-line consistent-return
+function configHas(checker, getResult) {
+  return pkgHas(({ 'nice-move': config = {} }) => checker(config), getResult);
+}
+
+module.exports = {
+  configHas,
+  pkgHas,
+  safeGet,
+  existThenReturn,
+};

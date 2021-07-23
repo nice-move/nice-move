@@ -36,10 +36,10 @@
   "main": "index.cjs",
   "dependencies": {
     "@nice-move/eslint-config-base": "^0.5.51",
-    "eslint-plugin-vue": "^7.13.0"
+    "eslint-plugin-vue": "^7.14.0"
   },
   "peerDependencies": {
-    "eslint": "^7.30.0"
+    "eslint": "^7.31.0"
   },
   "engines": {
     "node": "^12.22.0 || ^14.17.0"

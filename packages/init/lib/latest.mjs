@@ -1,7 +1,7 @@
 export default {
   ava: '^3.15.0',
   commitlint: '^12.1.4',
-  eslint: '^7.30.0',
+  eslint: '^7.31.0',
   'eslint-plugin-ava': '^12.0.0',
   garou: '^0.1.37',
   prettier: '^2.3.2',

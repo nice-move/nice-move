@@ -1,5 +1,7 @@
 'use strict';
 
+const { configHas } = require('./lib/utils.cjs');
+
 function BestShot() {
   try {
     const {
@@ -32,6 +34,17 @@ module.exports = {
     require.resolve('./lib/test.cjs'),
     'prettier',
   ],
+  ...configHas(
+    ({ globals }) => globals,
+    (globals) => ({
+      overrides: [
+        {
+          files: '{src,packages/*}/**',
+          globals,
+        },
+      ],
+    }),
+  ),
   ignorePatterns: [
     '!.*',
     '.cache/',

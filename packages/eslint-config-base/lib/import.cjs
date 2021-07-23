@@ -2,7 +2,7 @@
 
 const { join } = require('path');
 
-const { pkgHas } = require('./utils.cjs');
+const { pkgHas, configHas } = require('./utils.cjs');
 
 const Vscode = pkgHas(
   ({ engines: { vscode } = {} }) => vscode,
@@ -40,9 +40,8 @@ module.exports = {
   settings: {
     ...Vscode,
     'import/ignore': false,
-    ...pkgHas(
-      ({ 'nice-move': { 'internal-regex': internalRegex } = {} }) =>
-        internalRegex,
+    ...configHas(
+      ({ 'internal-regex': internalRegex }) => internalRegex,
       (internalRegex) => ({ 'import/internal-regex': internalRegex }),
     ),
   },

@@ -4,6 +4,7 @@ module.exports = {
   rules: {
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/media-has-caption': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
     'react/destructuring-assignment': 'off',
     'react/jsx-boolean-value': 'off',

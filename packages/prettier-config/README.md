@@ -32,8 +32,8 @@ A [prettier] config created by personal preferences.
 
 - .acss
 - .jxss
-- .qss .qs
 - .ttss
+- .qss .qs
 - .wxss .wxs
 
 ## Installation
@@ -43,21 +43,6 @@ npm install prettier @nice-move/prettier-config --save-dev
 ```
 
 ## Usage
-
-Create: .editorconfig
-
-```ini
-[*]
-charset = utf-8
-end_of_line = lf
-indent_size = 2
-indent_style = space
-insert_final_newline = true
-max_line_length = 80
-quote_type = single
-tab_width = 2
-trim_trailing_whitespace = true
-```
 
 Add to package.json
 
@@ -79,6 +64,23 @@ This config including special plugins:
 
 - [@nice-move/prettier-plugin-package-json](https://github.com/nice-move/prettier-plugin-package-json)
 - [prettier-plugin-ssh-config](https://github.com/nice-move/prettier-plugin-ssh-config)
+
+### Editorconfig support
+
+Create: .editorconfig
+
+```ini
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+max_line_length = 80
+quote_type = single
+tab_width = 2
+trim_trailing_whitespace = true
+```
 
 ## Related
 

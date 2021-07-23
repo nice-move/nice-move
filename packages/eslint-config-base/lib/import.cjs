@@ -39,10 +39,7 @@ module.exports = {
   },
   settings: {
     ...Vscode,
-    'import/extensions': ['.vue', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.cjs'],
-    'import/resolver': {
-      node: ['.jsx', '.js', '.mjs', '.cjs'],
-    },
+    'import/extensions': ['.vue', '.ts', '.js', '.mjs', '.cjs'],
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
       'vue-eslint-parser': ['.vue'],

@@ -9,16 +9,7 @@ const Vscode = pkgHas(
   () => ({ 'import/core-modules': ['vscode'] }),
 );
 
-const extensions = [
-  '.vue',
-  '.tsx',
-  '.ts',
-  '.jsx',
-  '.js',
-  '.mjs',
-  '.cjs',
-  '.json',
-];
+const extensions = ['.vue', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.cjs'];
 
 module.exports = {
   extends: ['plugin:import/recommended'],

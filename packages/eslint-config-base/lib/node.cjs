@@ -73,7 +73,7 @@ module.exports = {
       },
       settings: {
         node: {
-          tryExtensions: ['.vue', '.tsx', '.jsx', '.ts', '.js', '.json'],
+          tryExtensions: ['.vue', '.tsx', '.jsx', '.ts', '.js'],
         },
       },
     },

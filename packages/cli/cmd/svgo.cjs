@@ -1,3 +1,5 @@
+'use strict';
+
 function isModuleInstall(moduleId) {
   try {
     require.resolve(moduleId);

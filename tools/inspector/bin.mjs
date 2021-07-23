@@ -23,11 +23,6 @@ eslintInspector('@nice-move/react', 'src/sample.jsx', 'src/jsx.json');
 
 eslintInspector('@nice-move/base', 'sample.md', 'md.json');
 eslintInspector('@nice-move/base', 'sample.md/o.js', 'md/js.json');
-eslintInspector('@nice-move/base', 'sample.md/o.cjs', 'md/cjs.json');
-eslintInspector('@nice-move/base', 'sample.md/o.mjs', 'md/mjs.json');
-
-eslintInspector('@nice-move/vue', 'sample.md/o.vue', 'md/vue.json');
-eslintInspector('@nice-move/react', 'sample.md/o.jsx', 'md/jsx.json');
 
 eslintInspector('@nice-move/base', 'test/sample.js', 'test.json');
 eslintInspector('@nice-move/base', 'spec/sample.js', 'spec.json');

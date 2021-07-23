@@ -83,7 +83,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: '*.jsx',
+      files: ['*.jsx', '*.tsx'],
       parserOptions: {
         ecmaFeatures: {
           jsx: true,

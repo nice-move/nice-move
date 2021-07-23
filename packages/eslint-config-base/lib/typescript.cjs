@@ -14,12 +14,6 @@ function filterObject(object, filter) {
 }
 
 module.exports = {
-  settings: {
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
-    },
-  },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],

@@ -9,8 +9,6 @@ const Vscode = pkgHas(
   () => ({ 'import/core-modules': ['vscode'] }),
 );
 
-const extensions = ['.vue', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.cjs'];
-
 module.exports = {
   extends: ['plugin:import/recommended'],
   rules: {
@@ -41,8 +39,14 @@ module.exports = {
   },
   settings: {
     ...Vscode,
-    'import/extensions': extensions,
-    'import/resolver': { node: { extensions } },
+    'import/extensions': ['.vue', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.cjs'],
+    'import/resolver': {
+      node: ['.jsx', '.js', '.mjs', '.cjs'],
+    },
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      'vue-eslint-parser': ['.vue'],
+    },
     'import/ignore': false,
     ...configHas(
       ({ 'internal-regex': internalRegex }) => internalRegex,

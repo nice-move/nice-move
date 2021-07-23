@@ -7,11 +7,6 @@ module.exports = {
   overrides: [
     {
       files: ['*.tsx', '*.jsx'],
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
       extends: [
         'airbnb',
         'airbnb/hooks',

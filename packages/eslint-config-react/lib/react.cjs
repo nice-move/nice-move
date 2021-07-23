@@ -35,12 +35,4 @@ module.exports = {
     'react/self-closing-comp': 'off',
     'react/sort-comp': 'off',
   },
-  settings: {
-    'import/extensions': ['.tsx', '.jsx', '.ts', '.js'],
-    'import/resolver': {
-      node: {
-        extensions: ['.tsx', '.jsx', '.ts', '.js'],
-      },
-    },
-  },
 };

@@ -14,6 +14,12 @@ function filterObject(object, filter) {
 }
 
 module.exports = {
+  settings: {
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+    },
+  },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -38,18 +44,6 @@ module.exports = {
             varsIgnorePattern: '^_+$',
           },
         ],
-      },
-      settings: {
-        // https://github.com/benmosher/eslint-plugin-import/blob/master/config/typescript.js
-        'import/parsers': {
-          '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
-        },
-        'import/extensions': ['.ts', '.js', '.js'],
-        'import/resolver': {
-          node: {
-            extensions: ['.ts', '.js', '.js'],
-          },
-        },
       },
     },
   ],

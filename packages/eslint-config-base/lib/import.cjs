@@ -9,6 +9,17 @@ const Vscode = pkgHas(
   () => ({ 'import/core-modules': ['vscode'] }),
 );
 
+const extensions = [
+  '.vue',
+  '.tsx',
+  '.ts',
+  '.jsx',
+  '.js',
+  '.mjs',
+  '.cjs',
+  '.json',
+];
+
 module.exports = {
   extends: ['plugin:import/recommended'],
   rules: {
@@ -39,6 +50,8 @@ module.exports = {
   },
   settings: {
     ...Vscode,
+    'import/extensions': extensions,
+    'import/resolver': { node: { extensions } },
     'import/ignore': false,
     ...configHas(
       ({ 'internal-regex': internalRegex }) => internalRegex,
@@ -62,28 +75,6 @@ module.exports = {
       }),
     ),
     {
-      files: '*.cjs',
-      settings: {
-        'import/extensions': ['.cjs', '.js', '.json'],
-        'import/resolver': {
-          node: {
-            extensions: ['.cjs', '.js', '.json'],
-          },
-        },
-      },
-    },
-    {
-      files: '*.mjs',
-      settings: {
-        'import/extensions': ['.mjs', '.cjs', '.js'],
-        'import/resolver': {
-          node: {
-            extensions: ['.mjs', '.cjs', '.js'],
-          },
-        },
-      },
-    },
-    {
       files: '**/*',
       excludedFiles: ['*.cjs'],
       rules: {
@@ -95,14 +86,6 @@ module.exports = {
       excludedFiles: '*.{m,c}js',
       rules: {
         'import/no-nodejs-modules': 'error',
-      },
-      settings: {
-        'import/extensions': ['.js', '.js', '.js'],
-        'import/resolver': {
-          node: {
-            extensions: ['.js', '.js', '.js'],
-          },
-        },
       },
     },
   ].filter(Boolean),

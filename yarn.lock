@@ -405,10 +405,10 @@
   resolved "https://mirrors.cloud.tencent.com/npm/@humanwhocodes%2fobject-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
-"@nice-move/prettier-plugin-package-json@^0.4.7":
-  version "0.4.7"
-  resolved "https://registry.yarnpkg.com/@nice-move/prettier-plugin-package-json/-/prettier-plugin-package-json-0.4.7.tgz#800dfdb19672102095d25c68708cdc180130db1d"
-  integrity sha512-L9ucexuefkaGbSzlpJxfLtB2oisnlc3oCjbwO2+8pKVgzlIRqEKJZu62u6xu/yqt+vgfbr7VlSrK9ql0XToUOw==
+"@nice-move/prettier-plugin-package-json@^0.4.8":
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/@nice-move/prettier-plugin-package-json/-/prettier-plugin-package-json-0.4.8.tgz#ed0677f942418c09e4139b0d385d9b095a016c42"
+  integrity sha512-dqxRWaSg3qpk/T/uAjK2gNS3NvjmzijmcyGdjGeC8D3JSRbY4+PmQur/BRf/MqaHQFgVbmULH9FKVT0g7YapPw==
   dependencies:
     normalize-package-data "^3.0.2"
     npm-normalize-package-bin "^1.0.1"

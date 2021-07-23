@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.5.51",
+  "version": "0.5.52",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -25,9 +25,9 @@
   ],
   "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/eslint-config-base",
   "repository": {
+    "directory": "packages/eslint-config-base",
     "type": "git",
-    "url": "https://github.com/nice-move/nice-move.git",
-    "directory": "packages/eslint-config-base"
+    "url": "https://github.com/nice-move/nice-move.git"
   },
   "bugs": {
     "url": "https://github.com/nice-move/nice-move/issues"

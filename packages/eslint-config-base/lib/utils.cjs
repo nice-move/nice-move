@@ -41,7 +41,6 @@ function pkgHas(checker, getResult) {
   }
 }
 
-// eslint-disable-next-line consistent-return
 function configHas(checker, getResult) {
   return pkgHas(({ 'nice-move': config = {} }) => checker(config), getResult);
 }

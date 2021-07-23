@@ -62,14 +62,6 @@ module.exports = {
           ? { 'vue/no-unsupported-features': ['error', { version }] }
           : undefined),
       },
-      settings: {
-        'import/extensions': ['.vue', '.ts', '.js'],
-        'import/resolver': {
-          node: {
-            extensions: ['.vue', '.ts', '.js'],
-          },
-        },
-      },
     },
   ],
 };

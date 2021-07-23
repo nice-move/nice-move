@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.5.51",
+  "version": "0.5.52",
   "description": "A `eslint` config for `react` project best practice",
   "license": "MIT",
   "author": {
@@ -27,16 +27,16 @@
   ],
   "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/eslint-config-react",
   "repository": {
+    "directory": "packages/eslint-config-react",
     "type": "git",
-    "url": "https://github.com/nice-move/nice-move.git",
-    "directory": "packages/eslint-config-react"
+    "url": "https://github.com/nice-move/nice-move.git"
   },
   "bugs": {
     "url": "https://github.com/nice-move/nice-move/issues"
   },
   "main": "index.cjs",
   "dependencies": {
-    "@nice-move/eslint-config-base": "^0.5.51",
+    "@nice-move/eslint-config-base": "^0.5.52",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",

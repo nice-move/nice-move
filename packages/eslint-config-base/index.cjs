@@ -1,6 +1,9 @@
 'use strict';
 
-const { configHas } = require('./lib/utils.cjs');
+const {
+  configHas,
+  matches: { sourceAndPackages },
+} = require('./lib/utils.cjs');
 
 function BestShot() {
   try {
@@ -39,7 +42,7 @@ module.exports = {
     (globals) => ({
       overrides: [
         {
-          files: '{src,packages/*}/**',
+          files: sourceAndPackages,
           globals,
         },
       ],

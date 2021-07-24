@@ -1,11 +1,15 @@
 'use strict';
 
-const { existThenReturn, safeGet } = require('./utils.cjs');
+const {
+  existThenReturn,
+  safeGet,
+  matches: { source, sourceAndPackages },
+} = require('./utils.cjs');
 
 function BestShot() {
   return existThenReturn('@best-shot/preset-env/package.json', () => [
     {
-      files: '{src,packages/*}/**',
+      files: sourceAndPackages,
       ...(safeGet('@best-shot/preset-env/eslint.cjs') ||
         safeGet('@best-shot/preset-env/eslint.js')),
     },
@@ -15,14 +19,11 @@ function BestShot() {
 function webpack() {
   return existThenReturn('webpack/package.json', () => [
     {
-      files: '{src,packages/*}/**',
+      files: sourceAndPackages,
       excludedFiles: ['*.mjs', '*.cjs', '*.html', '*.htm'],
       globals: {
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        __resourceQuery: 'readonly',
+        __resourceAndPackagesQuery: 'readonly',
         __non_webpack_require__: 'readonly',
-        __webpack_require__: 'readonly',
         module: 'readonly',
         require: 'readonly',
       },
@@ -31,9 +32,17 @@ function webpack() {
       },
     },
     {
-      files: 'src/**',
+      files: sourceAndPackages,
+      excludedFiles: ['*.html', '*.htm'],
       globals: {
-        __webpack_runtime_id__: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+      },
+    },
+    {
+      files: source,
+      excludedFiles: ['*.html', '*.htm'],
+      globals: {
         __webpack_public_path__: true,
         __webpack_base_uri__: true,
       },

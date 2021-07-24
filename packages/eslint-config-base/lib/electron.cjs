@@ -1,6 +1,9 @@
 'use strict';
 
-const { pkgHas } = require('./utils.cjs');
+const {
+  pkgHas,
+  matches: { source },
+} = require('./utils.cjs');
 
 module.exports =
   pkgHas(
@@ -8,7 +11,7 @@ module.exports =
     () => ({
       overrides: [
         {
-          files: 'src/**',
+          files: source,
           settings: {
             'import/core-modules': ['electron'],
           },

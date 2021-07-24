@@ -2,7 +2,7 @@
 
 const { join } = require('path');
 
-const { pkgHas, configHas } = require('./utils.cjs');
+const { pkgHas, configHas, existThenReturn } = require('./utils.cjs');
 
 const Vscode = pkgHas(
   ({ engines: { vscode } = {} }) => vscode,
@@ -39,10 +39,19 @@ module.exports = {
   },
   settings: {
     ...Vscode,
-    'import/extensions': ['.vue', '.ts', '.js', '.mjs', '.cjs'],
+    'import/extensions': [
+      ...(existThenReturn('vue-eslint-parser/package.json', () => ['.vue']) ||
+        []),
+      '.jsx',
+      '.ts',
+      '.js',
+      '.mjs',
+      '.cjs',
+    ],
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
       'vue-eslint-parser': ['.vue'],
+      [require.resolve('./jsx-parser.cjs')]: ['.jsx'],
     },
     'import/ignore': false,
     ...configHas(

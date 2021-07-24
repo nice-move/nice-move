@@ -50,4 +50,8 @@ module.exports = {
   pkgHas,
   safeGet,
   existThenReturn,
+  matches: {
+    sourceAndPackages: '{src,packages/*}/**',
+    source: 'src/**',
+  },
 };

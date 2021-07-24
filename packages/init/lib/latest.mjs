@@ -1,6 +1,6 @@
 export default {
   ava: '^3.15.0',
-  commitlint: '^12.1.4',
+  commitlint: '^13.1.0',
   eslint: '^7.31.0',
   'eslint-plugin-ava': '^12.0.0',
   garou: '^0.1.37',
@@ -13,7 +13,7 @@ export default {
   vue: '~2.6.14',
   'eslint-config-base': '^0.5.53',
   'stylelint-config': '^0.5.9',
-  'prettier-config': '^0.4.12',
+  'prettier-config': '^0.4.13',
   'commitlint-config': '^0.1.4',
   cli: '^0.5.27',
   lts: '^12.22.0 || ^14.17.0',

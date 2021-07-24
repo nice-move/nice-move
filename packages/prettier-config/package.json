@@ -18,9 +18,9 @@
   ],
   "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/prettier-config",
   "repository": {
-    "directory": "packages/prettier-config",
     "type": "git",
-    "url": "https://github.com/nice-move/nice-move.git"
+    "url": "https://github.com/nice-move/nice-move.git",
+    "directory": "packages/prettier-config"
   },
   "bugs": {
     "url": "https://github.com/nice-move/nice-move/issues"

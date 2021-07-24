@@ -2,7 +2,6 @@
 
 module.exports = {
   htmlWhitespaceSensitivity: 'ignore',
-  iniSpaceAroundEquals: true,
   singleQuote: true,
   trailingComma: 'all',
   xmlWhitespaceSensitivity: 'ignore',
@@ -52,6 +51,7 @@ module.exports = {
       files: ['.npmrc', '*.editorconfig'],
       options: {
         parser: 'ini',
+        iniSpaceAroundEquals: true,
       },
     },
     {
@@ -61,9 +61,16 @@ module.exports = {
       },
     },
     {
+      files: ['*.ttml', '*.wxml', '*.qml', '*.axml', '*.jxml'],
+      options: {
+        parser: 'xml',
+      },
+    },
+    {
       files: ['*.wxs', '*.qs'],
       options: {
         parser: 'babel',
+        trailingComma: 'es5',
       },
     },
     {

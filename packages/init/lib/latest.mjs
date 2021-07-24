@@ -14,7 +14,7 @@ export default {
   'eslint-config-base': '^0.5.53',
   'stylelint-config': '^0.5.9',
   'prettier-config': '^0.4.13',
-  'commitlint-config': '^0.1.4',
+  'commitlint-config': '^0.2.0',
   cli: '^0.5.27',
   lts: '^12.22.0 || ^14.17.0',
 };

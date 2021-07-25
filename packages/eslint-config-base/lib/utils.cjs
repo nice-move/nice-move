@@ -31,7 +31,9 @@ function safeGet(name) {
   }
 }
 
-const pkg = safeGet(resolve(process.cwd(), 'package.json'));
+const cwd = process.cwd();
+
+const pkg = safeGet(resolve(cwd, 'package.json'));
 
 // eslint-disable-next-line consistent-return
 function pkgHas(checker, getResult) {
@@ -45,11 +47,20 @@ function configHas(checker, getResult) {
   return pkgHas(({ 'nice-move': config = {} }) => checker(config), getResult);
 }
 
+// eslint-disable-next-line consistent-return
+function projectHasConfig(getResult) {
+  const config = safeGet(resolve(cwd, 'project.config.json'));
+  if (config.appid) {
+    return getResult(config);
+  }
+}
+
 module.exports = {
   configHas,
   pkgHas,
   safeGet,
   existThenReturn,
+  projectHasConfig,
   matches: {
     sourceAndPackages: '{src,packages/*}/**',
     source: 'src/**',

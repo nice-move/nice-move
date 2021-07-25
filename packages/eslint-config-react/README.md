@@ -35,7 +35,7 @@ Add to package.json
 Then run
 
 ```bash
-eslint --fix
+eslint --fix .
 ```
 
 ## Specification
@@ -50,8 +50,7 @@ eslint --fix
 | node.js     | `.mjs`, `.cjs`                                                                               |
 | es modules  | `.mjs`, `.js`, `.jsx`, `.html`                                                               |
 | commonjs    | `.cjs`, source code in webpack project                                                       |
-| [webpack]   | `src/**`                                                                                     |
-| [best-shot] | `src/**`, `packages/*/**`                                                                    |
+| [webpack]   | `src/**`, `packages/*/**`                                                                    |
 | [ava]       | `{test,tests,spec,specs}/**`, `**/*.{test,spec}.*` <br /> when `eslint-plugin-ava` installed |
 
 ## Tips

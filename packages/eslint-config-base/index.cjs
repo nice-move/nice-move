@@ -35,6 +35,7 @@ module.exports = {
     require.resolve('./lib/typescript.cjs'),
     require.resolve('./lib/markdown.cjs'),
     require.resolve('./lib/test.cjs'),
+    require.resolve('./lib/mini.cjs'),
     'prettier',
   ],
   ...configHas(

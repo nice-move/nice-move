@@ -4,6 +4,8 @@ module.exports = {
   plugins: ['node'],
   rules: {
     'node/shebang': 'error',
+    'node/no-process-env': 'error',
+    'node/no-path-concat': 'error',
   },
   overrides: [
     {
@@ -14,6 +16,7 @@ module.exports = {
         commonjs: true,
       },
       rules: {
+        'node/no-process-env': 'off',
         'node/no-deprecated-api': 'error',
         'node/prefer-global/url': 'warn',
         'node/prefer-global/console': 'warn',

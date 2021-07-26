@@ -40,10 +40,11 @@ module.exports = {
   settings: {
     ...Vscode,
     'import/extensions': [
+      '.tsx',
+      '.ts',
       ...(existThenReturn('vue-eslint-parser/package.json', () => ['.vue']) ||
         []),
       '.jsx',
-      '.ts',
       '.js',
       '.mjs',
       '.cjs',

@@ -23,6 +23,10 @@ module.exports = {
       .map((item) => relativeToCWD(item));
     const excludedFiles = ['*.wxs', '*.qs'];
 
+    const cloudMatcher = cloudfunctionRoot
+      ? matcher([relativeToCWD(cloudfunctionRoot)], '**')
+      : undefined;
+
     return {
       overrides: [
         {
@@ -57,19 +61,33 @@ module.exports = {
             App: 'readonly',
           },
         },
-        cloudfunctionRoot
+        {
+          files: [cloudMatcher, ...excludedFiles].filter(Boolean),
+          globals: {
+            require: 'readonly',
+          },
+          rules: {
+            'import/no-commonjs': 'off',
+            'unicorn/prefer-module': 'off',
+          },
+        },
+        cloudMatcher
           ? {
-              files: matcher([relativeToCWD(cloudfunctionRoot)], '**'),
+              files: [cloudMatcher],
               globals: {
-                require: 'readonly',
                 exports: 'readonly',
-              },
-              rules: {
-                'import/no-commonjs': 'off',
-                'unicorn/prefer-module': 'off',
               },
             }
           : undefined,
+        {
+          files: excludedFiles,
+          globals: {
+            module: 'readonly',
+          },
+          rules: {
+            'no-var': 'off',
+          },
+        },
       ].filter(Boolean),
     };
   }),

@@ -25,6 +25,8 @@ module.exports = {
         checkForEach: true,
       },
     ],
+    'no-useless-rename': 'off',
+    'object-shorthand': 'off',
     'arrow-body-style': 'off',
     camelcase: 'off',
     'class-methods-use-this': 'warn',

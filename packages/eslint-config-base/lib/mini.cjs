@@ -86,6 +86,7 @@ module.exports = {
           },
           rules: {
             'no-var': 'off',
+            'object-shorthand': ['error', 'never'],
           },
         },
       ].filter(Boolean),

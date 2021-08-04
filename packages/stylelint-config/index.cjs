@@ -16,8 +16,12 @@ module.exports = {
   plugins: [
     'stylelint-declaration-block-no-ignored-properties',
     'stylelint-selector-no-empty',
+    'stylelint-suitcss',
   ],
   rules: {
+    'suitcss/custom-property-no-outside-root': true,
+    'suitcss/root-no-standard-properties': true,
+    'suitcss/selector-root-no-composition': true,
     'color-hex-length': null,
     'declaration-block-no-redundant-longhand-properties': true,
     'font-family-name-quotes': 'always-where-recommended',

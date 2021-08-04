@@ -26,7 +26,7 @@ export async function Prompt() {
     cwd,
   };
 
-  const PackagePrompts = Package(options);
+  const PackagePrompts = await Package(options);
 
   return prompts(
     [

@@ -15,6 +15,6 @@ export default {
   'stylelint-config': '^0.5.10',
   'prettier-config': '^0.4.13',
   'commitlint-config': '^0.2.0',
-  cli: '^0.5.27',
+  cli: '^0.5.28',
   lts: '^12.22.0 || ^14.17.0',
 };

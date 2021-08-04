@@ -1,5 +1,5 @@
 import { Text } from 'fs-chain';
-import osLocale from 'os-locale';
+import { osLocale } from 'os-locale';
 
 import { cyan } from '../lib/color.mjs';
 

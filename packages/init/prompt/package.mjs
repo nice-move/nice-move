@@ -1,12 +1,14 @@
+import { dirname } from 'path';
+
 import parse from 'parse-author';
 import semverRegex from 'semver-regex';
 import validate from 'validate-npm-package-name';
 
-import { dirname, getAuthor, trim } from '../lib/utils.mjs';
+import { getAuthor, trim } from '../lib/utils.mjs';
 
 const semver = semverRegex();
 
-export function Package({
+export async function Package({
   cwd,
   pkg: {
     author,
@@ -57,7 +59,7 @@ export function Package({
           ? null
           : 'text',
       format: parse,
-      initial: getAuthor(author),
+      initial: await getAuthor(author),
       message: 'package.json » author',
       name: 'author',
     },

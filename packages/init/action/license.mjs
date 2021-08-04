@@ -3,12 +3,14 @@ import { Text } from 'fs-chain';
 import { cyan } from '../lib/color.mjs';
 import { getAuthorName, pkgCwd } from '../lib/utils.mjs';
 
-export function License() {
+export async function License() {
   const { license, author = '' } = pkgCwd();
 
   const isMIT = license === 'MIT';
 
   if (isMIT || license === 'Unlicense') {
+    const holder = await getAuthorName(author);
+
     return new Text()
       .source(
         isMIT ? '../../template/mit.tpl' : '../../template/unlicense.tpl',
@@ -18,7 +20,7 @@ export function License() {
         isMIT
           ? text
               .replace('{{year}}', new Date().getFullYear())
-              .replace('{{holder}}', getAuthorName(author))
+              .replace('{{holder}}', holder)
           : text,
       )
       .output('LICENSE')

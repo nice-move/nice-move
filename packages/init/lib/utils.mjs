@@ -1,10 +1,9 @@
-import centra from 'centra';
-import execa from 'execa';
 import { readdirSync } from 'fs';
 import { createRequire } from 'module';
-import { sep } from 'path';
+
+import centra from 'centra';
+import execa from 'execa';
 import stringify from 'stringify-author';
-import meta from 'user-meta';
 
 export function download(url) {
   return centra(url)
@@ -50,22 +49,22 @@ export function trim(value) {
   return value ? value.trim() : undefined;
 }
 
-export function getAuthorName(author = {}) {
-  return (typeof author === 'string' ? author : author.name)
-    ? meta.name
-    : 'Unknown';
+function getUser() {
+  return import('user-meta')
+    .then(({ default: meta }) => meta)
+    .catch(() => ({}));
 }
 
-export function dirname(path) {
-  return path.split(sep).slice(-1)[0].trim();
-}
-
-export function getAuthor(author = {}) {
-  const io = meta.name ? stringify(meta) : undefined;
-
-  if (typeof author === 'string') {
-    return author || io || 'Unknown';
+export async function getAuthor(author) {
+  if (author) {
+    return author;
   }
 
-  return (author.name ? stringify(author) : io) || 'Unknown';
+  const meta = await getUser();
+
+  return meta.name ? stringify(meta) : 'Unknown';
+}
+
+export async function getAuthorName(author) {
+  return (await getAuthor(author)).name || 'Unknown';
 }

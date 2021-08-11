@@ -23,7 +23,10 @@ module.exports = {
     'suitcss/root-no-standard-properties': true,
     'suitcss/selector-root-no-composition': true,
     'color-hex-length': null,
-    'declaration-block-no-redundant-longhand-properties': true,
+    'declaration-block-no-redundant-longhand-properties': [
+      true,
+      { severity: 'warning' },
+    ],
     'font-family-name-quotes': 'always-where-recommended',
     'function-url-quotes': 'always',
     'max-nesting-depth': 5,
@@ -56,6 +59,7 @@ module.exports = {
       'selector-type-no-unknown': [true, { ignoreTypes: ['page'] }],
       'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
     }),
+    'no-duplicate-selectors': [true, { severity: 'warning' }],
     // ---- handle by prettier -------------
     'at-rule-name-space-after': null,
     'at-rule-semicolon-space-before': null,

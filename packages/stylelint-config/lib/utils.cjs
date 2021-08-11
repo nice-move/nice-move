@@ -8,9 +8,9 @@ function isSafeError(error) {
   );
 }
 
-function has() {
+function has(path) {
   try {
-    require.resolve(resolve(process.cwd(), 'project.config.json'));
+    require.resolve(path);
     return true;
   } catch (error) {
     if (isSafeError(error)) {
@@ -22,11 +22,19 @@ function has() {
 
 // eslint-disable-next-line consistent-return
 function hasConfig(value) {
-  if (has()) {
+  if (has(resolve(process.cwd(), 'project.config.json'))) {
+    return value;
+  }
+}
+
+// eslint-disable-next-line consistent-return
+function hasInstall(moduleId, value) {
+  if (has(moduleId)) {
     return value;
   }
 }
 
 module.exports = {
   hasConfig,
+  hasInstall,
 };

@@ -1,5 +1,7 @@
 'use strict';
 
+const { hasInstall } = require('./utils.cjs');
+
 const loose = {
   severity: 'warning',
 };
@@ -13,7 +15,10 @@ module.exports = {
     'scss/at-mixin-argumentless-call-parentheses': ['never', loose],
     'scss/at-rule-conditional-no-parentheses': true,
     'at-rule-no-unknown': null,
-    'scss/at-rule-no-unknown': true,
+    'scss/at-rule-no-unknown': [
+      true,
+      hasInstall('tailwindcss/package.json', { ignoreAtRules: ['tailwind', 'layer'] }),
+    ].filter(Boolean),
     'scss/declaration-nested-properties': 'never',
     'scss/dimension-no-non-numeric-values': true,
     'scss/dollar-variable-default': [true, { ignore: 'local' }],

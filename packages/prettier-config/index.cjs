@@ -55,15 +55,9 @@ module.exports = {
       },
     },
     {
-      files: ['*.ttss', '*jxss', '*.acss', '*.wxss', '*.qss'],
+      files: ['*.ttss', '*.jxss', '*.acss', '*.wxss', '*.qss'],
       options: {
         parser: 'css',
-      },
-    },
-    {
-      files: ['*.ttml', '*.wxml', '*.qml', '*.axml', '*.jxml'],
-      options: {
-        parser: 'xml',
       },
     },
     {

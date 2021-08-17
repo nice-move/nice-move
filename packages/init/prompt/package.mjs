@@ -1,4 +1,4 @@
-import { dirname } from 'path';
+import { parse as parsePath } from 'path';
 
 import parse from 'parse-author';
 import semverRegex from 'semver-regex';
@@ -23,7 +23,7 @@ export async function Package({
   return [
     {
       format: trim,
-      initial: dirname(cwd),
+      initial: parsePath(cwd).base,
       message: 'package.json » name',
       name: 'name',
       type: (first) => (first === false || name ? null : 'text'),

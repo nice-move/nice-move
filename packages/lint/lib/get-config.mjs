@@ -22,6 +22,8 @@ export function getConfig({
   const yarnConfig = resolve(fileURLToPath(import.meta.url), '../yarn.cjs');
 
   return parse({
+    '*.{{wx,tt,q,ax,jx,ks}ml,swan}': [rustywind && 'rustywind --write'],
+    '{ts,js,project.,project.private.}config.json': [garou && 'garou'],
     '*.{vue,html,htm,md}': [
       rustywind && 'rustywind --write',
       garou && 'garou',
@@ -41,7 +43,7 @@ export function getConfig({
       prettier && `prettier --write${useColor}`,
       eslint && `eslint --fix --format=pretty${useColor}`,
     ],
-    '*.{css,scss,less,wxss,qss,xml}': [
+    '*.{c,sc,le,wx,q,tt,jx,ac}ss': [
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
       stylelint &&

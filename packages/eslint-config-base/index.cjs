@@ -56,6 +56,7 @@ module.exports = {
     '.svn/',
     '*.min.*',
     '/dist/',
+    '**/miniprogram_npm/**',
     'node_modules/',
     ...BestShot(),
   ],

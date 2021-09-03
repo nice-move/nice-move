@@ -17,18 +17,19 @@ module.exports = {
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': [
       true,
-      hasInstall('tailwindcss/package.json', { ignoreAtRules: ['tailwind', 'layer'] }),
+      hasInstall('tailwindcss/package.json', {
+        ignoreAtRules: ['tailwind', 'layer'],
+      }),
     ].filter(Boolean),
     'scss/declaration-nested-properties': 'never',
     'scss/dimension-no-non-numeric-values': true,
-    'scss/dollar-variable-default': [true, { ignore: 'local' }],
+    'scss/dollar-variable-default': [true, { ...loose, ignore: 'local' }],
     'scss/function-quote-no-quoted-strings-inside': true,
     'scss/function-unquote-no-unquoted-strings-inside': true,
     'scss/no-duplicate-dollar-variables': [
       true,
       { ignoreInsideAtRules: ['if', 'else'] },
     ],
-    'scss/media-feature-value-dollar-variable': ['always', loose],
     'scss/selector-no-redundant-nesting-selector': true,
   },
 };

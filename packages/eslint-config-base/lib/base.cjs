@@ -17,7 +17,11 @@ module.exports = {
     node: false,
   },
   plugins: ['eslint-comments'],
+  extends: ['plugin:sonarjs/recommended'],
   rules: {
+    'sonarjs/cognitive-complexity': 'off',
+    'sonarjs/no-duplicate-string': 'off',
+    'sonarjs/no-identical-functions': 'off',
     'array-callback-return': [
       'error',
       {

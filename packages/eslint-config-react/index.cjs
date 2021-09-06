@@ -10,6 +10,7 @@ module.exports = {
       extends: [
         'airbnb',
         'airbnb/hooks',
+        'plugin:react/jsx-runtime',
         ...roots.filter(
           (item) => !['eslint:recommended', 'airbnb-base'].includes(item),
         ),

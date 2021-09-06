@@ -7,7 +7,6 @@ module.exports = {
     'jsx-a11y/media-has-caption': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
     'react/destructuring-assignment': 'off',
-    'react/jsx-boolean-value': 'off',
     'react/jsx-curly-brace-presence': [
       'error',
       { props: 'ignore', children: 'never' },
@@ -15,7 +14,6 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'react/jsx-no-useless-fragment': 'warn',
     'react/jsx-props-no-spreading': 'off',
-    'react/jsx-uses-react': 'off',
     'react/prop-types': [
       'warn',
       {
@@ -30,8 +28,10 @@ module.exports = {
         ],
       },
     ],
-    'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'warn',
+
+    // handing by garou
+    'react/jsx-boolean-value': 'off',
     'react/self-closing-comp': 'off',
     'react/sort-comp': 'off',
   },

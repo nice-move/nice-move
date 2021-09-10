@@ -21,18 +21,31 @@ module.exports = {
     const paths = [miniprogramRoot, pluginRoot]
       .filter(Boolean)
       .map((item) => relativeToCWD(item));
+
     const excludedFiles = ['*.wxs', '*.qs'];
 
     const cloudMatcher = cloudfunctionRoot
       ? matcher([relativeToCWD(cloudfunctionRoot)], '**')
       : undefined;
 
+    const globals = {
+      clearInterval: 'readonly',
+      clearTimeout: 'readonly',
+      console: 'readonly',
+      setInterval: 'readonly',
+      setTimeout: 'readonly',
+    };
+
     return {
       overrides: [
         {
           files: matcher(paths, '**'),
           excludedFiles,
+          env: {
+            browser: false,
+          },
           globals: {
+            ...globals,
             wx: 'readonly',
             getApp: 'readonly',
             getCurrentPages: 'readonly',
@@ -61,32 +74,37 @@ module.exports = {
             App: 'readonly',
           },
         },
-        {
-          files: [cloudMatcher, ...excludedFiles].filter(Boolean),
-          globals: {
-            require: 'readonly',
-          },
-          rules: {
-            'import/no-commonjs': 'off',
-            'unicorn/prefer-module': 'off',
-          },
-        },
         cloudMatcher
           ? {
               files: [cloudMatcher],
+              env: {
+                browser: false,
+              },
               globals: {
+                ...globals,
+                require: 'readonly',
                 exports: 'readonly',
+              },
+              rules: {
+                'import/no-commonjs': 'off',
+                'unicorn/prefer-module': 'off',
               },
             }
           : undefined,
         {
           files: excludedFiles,
+          env: {
+            browser: false,
+          },
           globals: {
+            require: 'readonly',
             module: 'readonly',
           },
           rules: {
             'no-var': 'off',
             'object-shorthand': ['error', 'never'],
+            'import/no-commonjs': 'off',
+            'unicorn/prefer-module': 'off',
           },
         },
       ].filter(Boolean),

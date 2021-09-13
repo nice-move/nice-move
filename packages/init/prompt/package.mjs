@@ -82,9 +82,9 @@ export async function Package({
       format: (value) => (value ? ['packages/*', 'tools/*'] : undefined),
       type: (first, feedback) =>
         first === false ||
-        (workspaces && workspaces.length > 0) ||
         isPrivate === false ||
-        feedback.private === false
+        feedback.private === false ||
+        ((workspaces.packages || workspaces)?.length ?? 0) > 0
           ? null
           : 'toggle',
     },

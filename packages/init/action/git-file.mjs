@@ -1,6 +1,7 @@
+import { type } from 'os';
+
 import { Text } from 'fs-chain';
 import ora from 'ora';
-import { type } from 'os';
 
 import { cyan, green, red } from '../lib/color.mjs';
 import { download } from '../lib/utils.mjs';
@@ -54,9 +55,10 @@ export async function GitFile() {
         .then((newText) => {
           const [match] = oldText.match(regexp) || [];
 
-          return `${(match
-            ? oldText.replace(regexp, newText)
-            : `${oldText.trim()}\n\n${newText}`
+          const io = (
+            match
+              ? oldText.replace(regexp, newText)
+              : `${oldText.trim()}\n\n${newText}`
           )
             .replace(
               /(www\.)?toptal\.com\/developers\/gitignore/g,
@@ -65,7 +67,9 @@ export async function GitFile() {
             .trim()
             .split(/\n\n\+/g)
             .filter((item) => item.trim())
-            .join('\n\n')}\n`;
+            .join('\n\n');
+
+          return `${io}\n`;
         })
         .catch(() => oldText || 'node_modules\n');
     })

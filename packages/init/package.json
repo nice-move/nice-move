@@ -47,7 +47,7 @@
     "fs-chain": "8.1.0",
     "is-git-dirty": "^2.0.1",
     "is-git-repository": "^2.0.0",
-    "ora": "^6.0.0",
+    "ora": "^6.0.1",
     "os-locale": "^6.0.0",
     "parse-author": "^2.0.0",
     "prompts": "^2.4.1",

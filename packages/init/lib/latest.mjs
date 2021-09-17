@@ -6,7 +6,7 @@ export default {
   garou: '^0.1.40',
   prettier: '^2.3.2',
   stylelint: '^13.13.1',
-  typescript: '^4.4.2',
+  typescript: '^4.4.3',
   '@types/react': '^16.14.11',
   react: '~16.14.0',
   'react-dom': '~16.14.0',

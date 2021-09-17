@@ -8,6 +8,10 @@ import { getAuthor, trim } from '../lib/utils.mjs';
 
 const semver = semverRegex();
 
+function arrayLength(data) {
+  return Array.isArray(data) && data.length > 0;
+}
+
 export async function Package({
   cwd,
   pkg: {
@@ -84,7 +88,7 @@ export async function Package({
         first === false ||
         isPrivate === false ||
         feedback.private === false ||
-        ((workspaces.packages || workspaces)?.length ?? 0) > 0
+        arrayLength(workspaces ? workspaces.packages : workspaces)
           ? null
           : 'toggle',
     },

@@ -4948,10 +4948,10 @@ semver-diff@^3.1.1:
   dependencies:
     semver "^6.3.0"
 
-semver-regex@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/semver-regex/-/semver-regex-4.0.1.tgz#b13d2ea2f7f2328f838edd99542796304a8e2dc6"
-  integrity sha512-cByCq+HYEpHMMx5oys/YqkUnUfVf4HHnG3a65rXZQgSVpnUSE68dD3FFowDL7q2KqUjxBTc3iDEJ7/qPsRXe1Q==
+semver-regex@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/semver-regex/-/semver-regex-3.1.3.tgz#b2bcc6f97f63269f286994e297e229b6245d0dc3"
+  integrity sha512-Aqi54Mk9uYTjVexLnR67rTyBusmwd04cLkHy9hNvk3+G3nT2Oyg7E0l4XVbOaNwIvQ3hHeYxGcyEy+mKreyBFQ==
 
 "semver@2 || 3 || 4 || 5", semver@^5.7.1:
   version "5.7.1"

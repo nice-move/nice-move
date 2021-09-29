@@ -121,6 +121,10 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+### Node Patch ###
+# Serverless Webpack directories
+.webpack/
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db

@@ -88,7 +88,9 @@ export async function Package({
         first === false ||
         isPrivate === false ||
         feedback.private === false ||
-        arrayLength(workspaces ? workspaces.packages : workspaces)
+        arrayLength(
+          workspaces && workspaces.packages ? workspaces.packages : workspaces,
+        )
           ? null
           : 'toggle',
     },

@@ -63,3 +63,8 @@ Rules can handle by [prettier](https://prettier.io/) and [garou](https://github.
 
 - [ ] JSX for `vue`
 - [ ] typescript in `vue` SFC
+
+## Related
+
+- [@nice-move/eslint-config-base](../eslint-config-base/)
+- [@nice-move/eslint-config-react](../eslint-config-react/)

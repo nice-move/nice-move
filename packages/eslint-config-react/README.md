@@ -58,3 +58,8 @@ eslint --fix .
 ### Noiseless reporting
 
 Rules can handle by [prettier](https://prettier.io/) and [garou](https://github.com/nice-move/garou) is disabled by default.
+
+## Related
+
+- [@nice-move/eslint-config-base](../eslint-config-base/)
+- [@nice-move/eslint-config-vue](../eslint-config-vue/)

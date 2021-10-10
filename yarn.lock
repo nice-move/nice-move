@@ -4107,10 +4107,10 @@ ora@^6.0.1:
     strip-ansi "^7.0.1"
     wcwidth "^1.0.1"
 
-os-locale@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/os-locale/-/os-locale-6.0.0.tgz#0ce9b441b032ad8859dfea6b436f78428263f7e2"
-  integrity sha512-PaxPAnJukftPBWjx2p8p4GZ3YGgCDAS1mjPzrVLPu8gffOinKrBdet59kit6CVY6JkkRxZn7lYpY6Z7SmPVLCg==
+os-locale@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/os-locale/-/os-locale-6.0.1.tgz#c94918b1335379b10604fdc4fdd4b3312c106916"
+  integrity sha512-dwmyNGl5dgD33Of/sPvdnRmZoR5LXM9t9w20b4sbsU1gu+lJHe083SVik6eeamK4mn4zFRfF9JJ3Sq0Rmyq/3Q==
   dependencies:
     lcid "^3.1.1"
 

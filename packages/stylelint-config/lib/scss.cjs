@@ -13,7 +13,7 @@ module.exports = {
     'scss/at-if-no-null': true,
     'scss/at-import-partial-extension': ['always', loose],
     'scss/at-mixin-argumentless-call-parentheses': ['never', loose],
-    'scss/at-rule-conditional-no-parentheses': true,
+    'scss/at-rule-conditional-no-parentheses': ['never', loose],
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': [
       true,

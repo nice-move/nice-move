@@ -36,3 +36,7 @@ Then run
 ```bash
 stylelint --fix **/*.{vue,css,less,scss,md,html}
 ```
+
+## Tips
+
+Some rules that covering by [garou](https://github.com/nice-move/garou) are disabled.

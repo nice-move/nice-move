@@ -24,7 +24,12 @@ module.exports = {
     'suitcss/selector-root-no-composition': true,
 
     'plugin/declaration-block-no-ignored-properties': true,
-    'selector-disallowed-list': [/,\s*?,/, /^\s*,\s*/],
+    'selector-disallowed-list': [
+      /,\s*?,/,
+      /^\s*,\s*/,
+      // /,\s*:root/,
+      // /:root\s*,/,
+    ],
 
     ...hasConfig({
       'selector-type-no-unknown': [true, { ignoreTypes: ['page'] }],

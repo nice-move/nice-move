@@ -12,8 +12,6 @@ module.exports = {
     'at-rule-disallowed-list': ['debug', 'extend'],
     'scss/at-if-no-null': true,
     'scss/at-import-partial-extension': ['always', loose],
-    'scss/at-mixin-argumentless-call-parentheses': ['never', loose],
-    'scss/at-rule-conditional-no-parentheses': ['never', loose],
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': [
       true,
@@ -28,8 +26,12 @@ module.exports = {
     'scss/function-unquote-no-unquoted-strings-inside': true,
     'scss/no-duplicate-dollar-variables': [
       true,
-      { ignoreInsideAtRules: ['if', 'else'] },
+      {
+        ignoreInside: ['at-rule', 'nested-at-rule'],
+        ignoreDefaults: true,
+      },
     ],
+    'scss/no-global-function-names': true,
     'scss/selector-no-redundant-nesting-selector': true,
   },
 };

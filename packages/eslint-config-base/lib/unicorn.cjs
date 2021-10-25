@@ -20,6 +20,7 @@ module.exports = {
     'unicorn/prefer-set-has': 'off',
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/require-post-message-target-origin': 'off',
+    'unicorn/template-indent': 'off',
   },
   overrides: [
     {

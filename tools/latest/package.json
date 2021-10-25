@@ -1,6 +1,7 @@
 {
   "name": "@nice-move/latest",
   "version": "0.0.0",
+  "keywords": [],
   "bin": {
     "pin-latest": "index.cjs"
   },
@@ -8,7 +9,7 @@
     "fs-chain": "^8.1.0"
   },
   "peerDependencies": {
-    "@types/react": "^16.14.11",
+    "@types/react": "^16.14.19",
     "react": "~16.14.0",
     "react-dom": "~16.14.0",
     "vue": "~2.6.14"

@@ -1,14 +1,15 @@
 {
   "name": "@test/test",
   "version": "0.0.0",
+  "keywords": [],
   "dependencies": {
     "eslint-config-standard": "^16.0.3",
     "eslint-config-standard-jsx": "^10.0.0",
     "eslint-config-standard-react": "^11.0.1",
-    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-react": "^7.25.1"
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-react": "^7.26.1"
   },
   "peerDependencies": {
     "eslint": "^7.32.0"

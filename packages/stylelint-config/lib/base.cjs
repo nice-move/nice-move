@@ -2,6 +2,7 @@
 
 module.exports = {
   rules: {
+    'alpha-value-notation': null,
     'declaration-block-no-redundant-longhand-properties': [
       true,
       { severity: 'warning' },
@@ -29,10 +30,18 @@ module.exports = {
     'selector-type-no-unknown': true,
     'time-min-milliseconds': 250,
 
-    // ---- handle by prettier -------------
+    // ---- off --------------------
+    'color-function-notation': null,
+    'custom-media-pattern': null,
+    'custom-property-pattern': null,
+    'keyframes-name-pattern': null,
+    'selector-class-pattern': null,
+    'selector-id-pattern': null,
+
+    // ---- handle by prettier -----
     'function-whitespace-after': null,
 
-    // ---- handle by garou -------------
+    // ---- handle by garou --------
     'at-rule-empty-line-before': null,
     'color-hex-length': null,
     'comment-empty-line-before': null,
@@ -43,6 +52,6 @@ module.exports = {
     'media-feature-range-operator-space-before': null,
     'rule-empty-line-before': null,
     'selector-pseudo-element-colon-notation': null,
-    // 'shorthand-property-no-redundant-values': null,
+    'shorthand-property-no-redundant-values': null,
   },
 };

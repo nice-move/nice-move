@@ -28,10 +28,21 @@ module.exports = {
       true,
       {
         ignoreInside: ['at-rule', 'nested-at-rule'],
-        ignoreDefaults: true,
       },
     ],
     'scss/no-global-function-names': true,
+    'scss/at-mixin-argumentless-call-parentheses': [
+      'never',
+      {
+        severity: 'warning',
+      },
+    ],
+    'scss/at-rule-conditional-no-parentheses': [
+      true,
+      {
+        severity: 'warning',
+      },
+    ],
     'scss/selector-no-redundant-nesting-selector': true,
   },
 };

@@ -29,18 +29,16 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "stylelint-config-css-modules": "^2.2.0",
-    "stylelint-config-prettier": "^9.0.2",
-    "stylelint-config-standard": "^22.0.0",
-    "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
-    "stylelint-scss": "^3.21.0",
-    "stylelint-suitcss": "^4.0.0"
+    "stylelint-config-css-modules": "^2.3.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-scss": "^4.0.0"
   },
   "peerDependencies": {
-    "stylelint": "^13.13.1"
+    "stylelint": "^14.0.1"
   },
   "engines": {
-    "node": "^12.22.0 || ^14.17.0"
+    "node": "^12.22.0 || ^14.17.0 || ^16.12.0"
   },
   "publishConfig": {
     "access": "public",

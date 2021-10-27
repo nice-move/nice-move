@@ -39,7 +39,7 @@
     "typescript": "^4.4.4"
   },
   "engines": {
-    "node": "^12.22.0 || ^14.17.0"
+    "node": "^12.22.0 || ^14.17.0 || ^16.13.0"
   },
   "commitlint": {
     "extends": "@nice-move/commitlint-config"

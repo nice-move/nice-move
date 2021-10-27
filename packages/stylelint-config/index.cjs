@@ -7,11 +7,9 @@ module.exports = {
   reportInvalidScopeDisables: true,
   extends: [
     require.resolve('stylelint-config-standard'),
-    require.resolve('stylelint-config-css-modules'),
-    require.resolve('./lib/prefix.json'),
-    require.resolve('./lib/scss.cjs'),
     require.resolve('./lib/ignore.cjs'),
     require.resolve('./lib/base.cjs'),
+    require.resolve('stylelint-config-css-modules'),
     require.resolve('stylelint-config-prettier'),
   ],
   // plugins: [
@@ -24,11 +22,14 @@ module.exports = {
     // 'suitcss/selector-root-no-composition': true,
 
     // 'plugin/declaration-block-no-ignored-properties': true,
+
     'selector-disallowed-list': [
       /,\s*?,/,
       /^\s*,\s*/,
-      // /,\s*:root/,
-      // /:root\s*,/,
+
+      // root-no-standard-properties
+      /,\s*:root/,
+      /:root\s*,/,
     ],
 
     ...hasConfig({
@@ -36,4 +37,15 @@ module.exports = {
       'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
     }),
   },
+  overrides: [
+    {
+      files: ['**/*.scss'],
+      extends: [
+        require.resolve('stylelint-config-standard-scss'),
+        require.resolve('./lib/scss.cjs'),
+        require.resolve('stylelint-config-css-modules'),
+        require.resolve('stylelint-config-prettier'),
+      ],
+    },
+  ],
 };

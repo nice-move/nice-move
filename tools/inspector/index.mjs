@@ -36,10 +36,10 @@ export function eslintInspector(configName, filename, outputName = '') {
     });
 }
 
-export function stylelintInspector(outputName) {
+export function stylelintInspector(inputName, outputName) {
   printConfig({
     extends: '@nice-move/stylelint-config',
-    files: ['abc.css'],
+    files: [inputName],
   })
     .then(({ rules, ...rest }) => ({
       rules: pickBy(rules, (item) => item !== null),

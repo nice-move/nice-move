@@ -27,4 +27,6 @@ eslintInspector('@nice-move/base', 'sample.md/o.js', 'md/js.json');
 eslintInspector('@nice-move/base', 'test/sample.js', 'test.json');
 eslintInspector('@nice-move/base', 'spec/sample.js', 'spec.json');
 
-stylelintInspector('css.json');
+stylelintInspector('test.css', 'css.json');
+stylelintInspector('test.less', 'less.json');
+stylelintInspector('test.scss', 'scss.json');

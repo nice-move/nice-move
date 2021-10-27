@@ -1,8 +1,8 @@
-import lintStaged from 'lint-staged';
 import { createRequire } from 'module';
 
+import lintStaged from 'lint-staged';
+
 import { getConfig } from './lib/get-config.mjs';
-import { action } from './patch/stylelint.mjs';
 
 function getMaxArgLength() {
   switch (process.platform) {
@@ -43,10 +43,6 @@ export function lint({ shell }) {
   const dependencies = getDependencies();
 
   const config = getConfig(dependencies);
-
-  if (dependencies.stylelint) {
-    action();
-  }
 
   lintStaged({
     allowEmpty: true,

@@ -24,7 +24,7 @@ export function getConfig({
   return parse({
     '*.{{wx,tt,q,ax,jx,ks}ml,swan}': [rustywind && 'rustywind --write'],
     '{ts,js,project.,project.private.}config.json': [garou && 'garou'],
-    '*.{vue,html,htm,md}': [
+    '*.{vue,html,htm}': [
       rustywind && 'rustywind --write',
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
@@ -37,7 +37,7 @@ export function getConfig({
       rustywind && 'rustywind --write',
       prettier && `prettier --write${useColor}`,
     ],
-    '*.{js,jsx,mjs,cjs,wxs,qs}': [
+    '*.{js,jsx,mjs,cjs,wxs,qs,md}': [
       rustywind && 'rustywind --write',
       garou && 'garou',
       prettier && `prettier --write${useColor}`,

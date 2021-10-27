@@ -6,10 +6,10 @@ const { JsonToText } = require('fs-chain');
 
 function getLocalVersion(...names) {
   return Object.fromEntries(
-    names.map((name) => [
-      name,
-      `^${require(`@nice-move/${name}/package.json`).version}`,
-    ]),
+    names.map((name) => {
+      const pkg = require(`@nice-move/${name}/package.json`);
+      return [name, `^${pkg.version}`];
+    }),
   );
 }
 

@@ -49,7 +49,11 @@ export function getConfig({
       stylelint &&
         `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
     ],
-    '{*.{json,svg},*.{to,y,ya}ml,.{babel,npm}rc,.editorconfig}': [
+    '{*.{json,svg},*.{y,ya}ml,.{babel,npm}rc,.editorconfig}': [
+      prettier && `prettier --write${useColor}`,
+    ],
+    '*.svg': [
+      prettier && `prettier --parser html --write${useColor}`,
       prettier && `prettier --write${useColor}`,
     ],
     'yarn.lock': [

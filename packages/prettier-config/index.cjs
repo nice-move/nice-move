@@ -5,13 +5,13 @@ module.exports = {
   singleQuote: true,
   trailingComma: 'all',
   xmlWhitespaceSensitivity: 'ignore',
+  iniSpaceAroundEquals: true,
   ...(process.versions.pnp
     ? {
         plugins: [
           require.resolve('@nice-move/prettier-plugin-package-json'),
           require.resolve('@prettier/plugin-xml'),
           require.resolve('prettier-plugin-ini'),
-          require.resolve('prettier-plugin-toml'),
           require.resolve('prettier-plugin-ssh-config'),
         ],
       }
@@ -48,10 +48,9 @@ module.exports = {
       },
     },
     {
-      files: ['.npmrc', '*.editorconfig'],
+      files: ['.npmrc', '*.editorconfig', '*.ini'],
       options: {
         parser: 'ini',
-        iniSpaceAroundEquals: true,
       },
     },
     {

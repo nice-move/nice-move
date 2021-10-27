@@ -19,8 +19,8 @@ A [prettier] config created by personal preferences.
 - .editorconfig
 - .css .less .scss
 - .cjs .mjs .js .jsx
+- .yml .yaml .ini .json
 - .htm .html .xml .svg .vue
-- .yml .yaml .toml .ini .json
 
 ## Filename support
 

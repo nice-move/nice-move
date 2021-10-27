@@ -23,7 +23,8 @@ npm install stylelint @nice-move/stylelint-config --save-dev
 
 Add to package.json
 
-```json
+```jsonc
+// example: package.json
 {
   "stylelint": {
     "extends": "@nice-move/stylelint-config"

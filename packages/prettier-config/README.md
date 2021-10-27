@@ -46,7 +46,8 @@ npm install prettier @nice-move/prettier-config --save-dev
 
 Add to package.json
 
-```json
+```jsonc
+// example: package.json
 {
   "prettier": "@nice-move/prettier-config"
 }

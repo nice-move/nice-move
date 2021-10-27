@@ -21,8 +21,8 @@ npm install commitlint @nice-move/commitlint-config --save-dev
 
 ## Usage
 
-```json
-// package.json
+```jsonc
+// example: package.json
 {
   "commitlint": {
     "extends": "@nice-move/commitlint-config"

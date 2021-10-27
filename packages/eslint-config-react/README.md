@@ -24,7 +24,8 @@ npm install eslint @nice-move/eslint-config-react --save-dev
 
 Add to package.json
 
-```json
+```jsonc
+// example: package.json
 {
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-react"

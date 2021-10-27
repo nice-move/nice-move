@@ -23,7 +23,8 @@ npm install eslint @nice-move/eslint-config-base --save-dev
 
 Add to package.json
 
-```json
+```jsonc
+// example: package.json
 {
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"

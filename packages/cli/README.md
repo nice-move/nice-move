@@ -52,7 +52,7 @@ npm install eslint stylelint prettier garou --save-dev
 
 Add configurations:
 
-```json
+```jsonc
 // example: package.json
 {
   "eslintConfig": {},

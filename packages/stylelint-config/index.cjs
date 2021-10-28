@@ -47,5 +47,13 @@ module.exports = {
         require.resolve('stylelint-config-prettier'),
       ],
     },
+    {
+      files: ['**/*.less'],
+      customSyntax: 'postcss-less',
+    },
+    {
+      files: ['**/*.html', '**/*.vue', '**/*.svg'],
+      customSyntax: 'postcss-html',
+    },
   ],
 };

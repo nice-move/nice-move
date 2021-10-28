@@ -36,7 +36,7 @@
   "dependencies": {
     "@nice-move/init": "^0.3.8",
     "@nice-move/lint": "^0.3.3",
-    "cheetor": "^0.12.1",
+    "cheetor": "^0.12.2",
     "execa": "^5.1.1"
   },
   "engines": {

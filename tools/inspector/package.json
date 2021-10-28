@@ -9,7 +9,7 @@
   },
   "main": "index.mjs",
   "dependencies": {
-    "fs-chain": "^8.1.0",
+    "fs-chain": "^8.1.1",
     "lodash": "^4.17.21",
     "sort-keys": "^5.0.0"
   },

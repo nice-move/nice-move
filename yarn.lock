@@ -418,10 +418,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
-"@nice-move/prettier-plugin-package-json@^0.4.10":
-  version "0.4.10"
-  resolved "https://registry.yarnpkg.com/@nice-move/prettier-plugin-package-json/-/prettier-plugin-package-json-0.4.10.tgz#88fd4aa828bb047848555ec8952809423bf30af4"
-  integrity sha512-kSBob11Yf+77czhCPqVtRG9hFtSF4LaOb8tDgZWwvaZ2+cawBmavTg6kBON8QJk6YLpOIK5CKiZCE+ik8Ny8YQ==
+"@nice-move/prettier-plugin-package-json@^0.4.11":
+  version "0.4.11"
+  resolved "https://registry.yarnpkg.com/@nice-move/prettier-plugin-package-json/-/prettier-plugin-package-json-0.4.11.tgz#5b3997b5dfe3c3a46257d3c337ff4cdcf9b926f1"
+  integrity sha512-HfbCCTcDGlCYb1h+uDtp7jTrp1OfmHliv+fy+fmpL+ILkwYDyXQs4YIepA5AjDT/7jUG9N7sbAwxEj86GRZRPg==
   dependencies:
     normalize-package-data "^3.0.3"
     npm-normalize-package-bin "^1.0.1"
@@ -1136,7 +1136,7 @@ chalk@^2.0.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.1, chalk@^4.1.2:
+chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
@@ -1169,12 +1169,12 @@ character-reference-invalid@^1.0.0:
   resolved "https://registry.yarnpkg.com/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
 
-cheetor@^0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/cheetor/-/cheetor-0.12.1.tgz#c603d09fa40aa983c8bcb83bff209053aa1f7223"
-  integrity sha512-AAFPEtwOfOTu9nYpzyPasQbKyhs8wsztc57xQCE6Fs0jjENT6SPn/x6iN2V2Wa7hbNgsMu9IvLT3oWU+xAtQEQ==
+cheetor@^0.12.1, cheetor@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/cheetor/-/cheetor-0.12.2.tgz#e9d6ad0673e7ddb6f0e495997314e0b73f825441"
+  integrity sha512-r1hE9koplr4p3Gld8zewgxK2uE5pwPGgFKfoBcyUU51WEqAmBmqBZwlyU8WkxXmjNaOzHSzC44Z89u2lp367oQ==
   dependencies:
-    yargs "^17.0.1"
+    yargs "^17.2.1"
 
 chevrotain@7.1.1:
   version "7.1.1"
@@ -2369,12 +2369,12 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.2.tgz#64bfed5cb68fe3ca78b3eb214ad97b63bedce561"
   integrity sha512-JaTY/wtrcSyvXJl4IMFHPKyFur1sE9AUqc0QnhOaJ0CxHtAoIV8pYDzeEfAaNEtGkOfq4gr3LBFmdXW5mOQFnA==
 
-fs-chain@8.1.0, fs-chain@^8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-8.1.0.tgz#32c377f4c97cbf7b2cc38c32884aaabe786781b8"
-  integrity sha512-pfXpVFmBB3h6zYdJL2ah4UpJTMF9x3i5TwrVdBfT60PW5sTXMWOUPxU/W0/jPOE0+0afrFc4EteWroD2o8Ye+g==
+fs-chain@8.1.1, fs-chain@^8.1.0, fs-chain@^8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-8.1.1.tgz#5aa21afe71cb30e3b497d46033883502311dd2e5"
+  integrity sha512-x7zUpPp3WtLGowpnF/wpoK45VMLpiTLQTtJwSCZQsVKmo9Gmhz7E5UMiQr4g6WpgVZQSq2BcrGO/6O/q2qW2Yg==
   dependencies:
-    chalk "^4.1.1"
+    chalk "^4.1.2"
     fs-extra "^10.0.0"
 
 fs-extra@^10.0.0:
@@ -4335,12 +4335,12 @@ prettier-plugin-ini@^0.3.1:
   dependencies:
     prettier ">=2.0"
 
-prettier-plugin-ssh-config@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-ssh-config/-/prettier-plugin-ssh-config-0.0.0.tgz#7c330ea7b23feb57b616f4f64ecf808b75864d7a"
-  integrity sha512-zLpoRjAX6kEuE0CsP53gPcVn/4bp5p5Dr5ePIEZZcr1NJNU5MmNdr0vABEXQsVHq6gU5ZNStQAbTw10Gx101vw==
+prettier-plugin-ssh-config@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-ssh-config/-/prettier-plugin-ssh-config-0.1.0.tgz#9483c94c54ebb6a55ec3551956230aee4c7b8d05"
+  integrity sha512-1yU77ZuobHEd/jGRhZ8BYT0UvT4ME0Gd7KJPfWNWgmQN5zE5M2CW7BXGv2IhsZxPxDdO7W6SIpuYYReo155b5A==
   dependencies:
-    ssh-config "^4.0.6"
+    ssh-config "^4.1.1"
 
 prettier@>=2.0, prettier@>=2.3, prettier@^2.4.1:
   version "2.4.1"
@@ -4901,10 +4901,10 @@ sprintf-js@~1.0.2:
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
-ssh-config@^4.0.6:
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/ssh-config/-/ssh-config-4.0.6.tgz#5cf104157d08702b47a112ae18075e433a6c5e86"
-  integrity sha512-GEtKJJ/R4XTImmBIGAfyw520rY7pS1MLjCPBcrPxp+431xSwMIU5iyCv98ua0nSXoR1B4qvOYJdTc7UvERzu8w==
+ssh-config@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/ssh-config/-/ssh-config-4.1.1.tgz#de8ab080c97234873291488b36090cdc2d075b06"
+  integrity sha512-p9t6ZX2yg3vzrUh81arLOOh73arUdm8aZ8YG1Rxve0T+1PVv6v7DhXQ/uPQ0lJaubEvGXJz7eGj7Z850443Ohg==
 
 stack-utils@^2.0.3:
   version "2.0.5"
@@ -5708,7 +5708,7 @@ yargs@^16.2.0:
     y18n "^5.0.5"
     yargs-parser "^20.2.2"
 
-yargs@^17.0.0, yargs@^17.0.1, yargs@^17.2.1:
+yargs@^17.0.0, yargs@^17.2.1:
   version "17.2.1"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.2.1.tgz#e2c95b9796a0e1f7f3bf4427863b42e0418191ea"
   integrity sha512-XfR8du6ua4K6uLGm5S6fA+FIJom/MdJcFNVY8geLlp2v8GYbOXD4EB1tPNZsRn4vBzKGMgb5DRZMeWuFc2GO8Q==

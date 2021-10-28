@@ -9,10 +9,10 @@ const {
 } = require('eslint-plugin-markdown/lib/index');
 
 module.exports = {
-  plugins: ['markdown'],
   overrides: [
     {
       files: '*.md',
+      plugins: ['markdown'],
       processor: 'markdown/markdown',
       env: {
         browser: false,

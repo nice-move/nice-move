@@ -52,8 +52,12 @@ module.exports = {
       customSyntax: 'postcss-less',
     },
     {
-      files: ['**/*.html', '**/*.vue', '**/*.svg'],
+      files: ['**/*.{html,htm,svg,vue}'],
       customSyntax: 'postcss-html',
+    },
+    {
+      files: ['**/*.md'],
+      customSyntax: 'postcss-markdown',
     },
   ],
 };

@@ -35,7 +35,7 @@ Add to package.json
 Then run
 
 ```bash
-stylelint --fix **/*.{vue,css,less,scss,html}
+stylelint --fix **/*.{vue,css,less,scss,html,htm,svg,md}
 ```
 
 ## Tips

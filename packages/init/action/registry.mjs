@@ -13,13 +13,13 @@ export async function Registry() {
       .onDone((text = '') => {
         if (
           text.trim() &&
-          /registry\s*=\s*["']?https:\/\/mirrors\.cloud\.tencent\.com\/npm\/["']?/i.test(
+          /registry\s*=\s*["']?https:\/\/mirrors\.tencent\.com\/npm\/["']?/i.test(
             text,
           )
         ) {
           return text;
         }
-        return `registry = https://mirrors.cloud.tencent.com/npm/\r${text}`;
+        return `registry = https://mirrors.tencent.com/npm/\r${text}`;
       })
       .output()
       .logger('Set registry to China mirror in', cyan('.npmrc'))

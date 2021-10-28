@@ -38,6 +38,12 @@ function action(isGit, wanted = {}) {
         stylelint = 'stylelint' in devDependencies,
         typescript = 'typescript' in devDependencies,
         vue = 'vue' in dependencies,
+        tailwindcss = 'tailwindcss' in dependencies ||
+          'tailwindcss' in devDependencies,
+        rustywind = 'rustywind' in devDependencies,
+        postcss = 'postcss' in devDependencies,
+        playwright = '@playwright/test' in devDependencies,
+        'bring-it': bringIt = '@bring-it/cli' in devDependencies,
       } = wanted;
 
       const useLint = eslint || stylelint || prettier || garou;
@@ -155,6 +161,29 @@ function action(isGit, wanted = {}) {
               }
             : undefined,
           vue ? { dependencies: { vue: latest.vue } } : undefined,
+          tailwindcss
+            ? { dependencies: { tailwindcss: latest.tailwindcss } }
+            : undefined,
+          rustywind
+            ? { devDependencies: { tailwindcss: latest.rustywind } }
+            : undefined,
+          postcss
+            ? { devDependencies: { tailwindcss: latest.postcss } }
+            : undefined,
+          playwright
+            ? {
+                devDependencies: {
+                  '@playwright/test': latest['@playwright/test'],
+                },
+              }
+            : undefined,
+          bringIt
+            ? {
+                devDependencies: {
+                  '@bring-it/cli': latest['@bring-it/cli'],
+                },
+              }
+            : undefined,
         ].filter(Boolean),
       );
     })
@@ -165,15 +194,20 @@ function action(isGit, wanted = {}) {
 
 export function Dependencies() {
   const list = [
-    'ava',
+    'react',
+    'vue',
+    'typescript',
     'commitlint',
-    'garou',
     'eslint',
     'stylelint',
     'prettier',
-    'typescript',
-    'react',
-    'vue',
+    'garou',
+    'rustywind',
+    'ava',
+    'playwright',
+    'bring-it',
+    'postcss',
+    'tailwindcss',
   ];
 
   const { dependencies = {}, devDependencies = {} } = pkgCwd();

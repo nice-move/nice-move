@@ -1169,7 +1169,7 @@ character-reference-invalid@^1.0.0:
   resolved "https://registry.yarnpkg.com/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
 
-cheetor@^0.12.1, cheetor@^0.12.2:
+cheetor@^0.12.2:
   version "0.12.2"
   resolved "https://registry.yarnpkg.com/cheetor/-/cheetor-0.12.2.tgz#e9d6ad0673e7ddb6f0e495997314e0b73f825441"
   integrity sha512-r1hE9koplr4p3Gld8zewgxK2uE5pwPGgFKfoBcyUU51WEqAmBmqBZwlyU8WkxXmjNaOzHSzC44Z89u2lp367oQ==
@@ -2369,7 +2369,7 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.2.tgz#64bfed5cb68fe3ca78b3eb214ad97b63bedce561"
   integrity sha512-JaTY/wtrcSyvXJl4IMFHPKyFur1sE9AUqc0QnhOaJ0CxHtAoIV8pYDzeEfAaNEtGkOfq4gr3LBFmdXW5mOQFnA==
 
-fs-chain@8.1.1, fs-chain@^8.1.0, fs-chain@^8.1.1:
+fs-chain@8.1.1, fs-chain@^8.1.1:
   version "8.1.1"
   resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-8.1.1.tgz#5aa21afe71cb30e3b497d46033883502311dd2e5"
   integrity sha512-x7zUpPp3WtLGowpnF/wpoK45VMLpiTLQTtJwSCZQsVKmo9Gmhz7E5UMiQr4g6WpgVZQSq2BcrGO/6O/q2qW2Yg==
@@ -2406,13 +2406,13 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-garou@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/garou/-/garou-0.2.1.tgz#0129c03d486b597a2c03de5ebf5b341c3746cb95"
-  integrity sha512-Xi3yrzOIqUy5ODqrcjV2jnmbIWani5pEpnxRm+uKnpFro63USzJambPTnNjJd1ykYrzGg3ZnRtcdznKdIFfy0A==
+garou@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/garou/-/garou-0.2.3.tgz#17fac95acce86f7d96f8f010d28694c9ca7972b5"
+  integrity sha512-0ntHeXSIGKRAVq+pcCqC4h2xr7VCISuxh1FhJVFuJ8WXq9IzdqwTWa4gaLxQS9acs12YXIPUKMQIPospNJ807g==
   dependencies:
     "@typescript-eslint/parser" "^5.2.0"
-    cheetor "^0.12.1"
+    cheetor "^0.12.2"
     eslint "^7.32.0"
     eslint-plugin-html "^6.2.0"
     eslint-plugin-import "^2.25.2"
@@ -2423,8 +2423,9 @@ garou@^0.2.1:
     eslint-plugin-sort-class-members "^1.12.0"
     eslint-plugin-unicorn "^37.0.1"
     eslint-plugin-vue "^7.20.0"
-    fs-chain "^8.1.0"
+    fs-chain "^8.1.1"
     globby "^12.0.2"
+    postcss "^8.3.11"
     postcss-html "^1.1.1"
     postcss-less "^5.0.0"
     postcss-scss "^4.0.1"

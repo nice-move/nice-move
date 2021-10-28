@@ -24,7 +24,7 @@ export function getConfig({
   return parse({
     '*.{{wx,tt,q,ax,jx,ks}ml,swan}': [rustywind && 'rustywind --write'],
     '{ts,js,project.,project.private.}config.json': [garou && 'garou'],
-    '*.{vue,html,htm}': [
+    '*.{vue,html,htm,md}': [
       rustywind && 'rustywind --write',
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
@@ -33,11 +33,13 @@ export function getConfig({
       eslint && `eslint --fix --format=pretty${useColor}`,
     ],
     '*.{ts,tsx}': [
-      typescript && garou && 'garou',
       rustywind && 'rustywind --write',
+      garou && 'garou',
       prettier && `prettier --write${useColor}`,
+      eslint && `eslint --fix --format=pretty${useColor}`,
+      typescript && 'tsc --noEmit',
     ],
-    '*.{js,jsx,mjs,cjs,wxs,qs,md}': [
+    '*.{js,jsx,mjs,cjs,wxs,qs}': [
       rustywind && 'rustywind --write',
       garou && 'garou',
       prettier && `prettier --write${useColor}`,
@@ -49,12 +51,16 @@ export function getConfig({
       stylelint &&
         `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
     ],
-    '{*.{json,svg},*.{y,ya}ml,.{babel,npm}rc,.editorconfig}': [
+    '{*.{json,editorconfig,yml,yaml},.{babel,npm}rc}': [
       prettier && `prettier --write${useColor}`,
     ],
     '*.svg': [
+      garou && 'garou',
       prettier && `prettier --parser html --write${useColor}`,
       prettier && `prettier --write${useColor}`,
+      stylelint &&
+        `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
+      eslint && `eslint --fix --format=pretty${useColor}`,
     ],
     'yarn.lock': [
       'yarn-deduplicate',

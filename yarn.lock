@@ -2381,7 +2381,7 @@ format@^0.2.0:
   resolved "https://registry.yarnpkg.com/format/-/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
   integrity sha1-1hcBB+nv3E7TDJ3DkBbflCtctYs=
 
-fs-chain@8.1.1, fs-chain@^8.1.1:
+fs-chain@^8.1.1:
   version "8.1.1"
   resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-8.1.1.tgz#5aa21afe71cb30e3b497d46033883502311dd2e5"
   integrity sha512-x7zUpPp3WtLGowpnF/wpoK45VMLpiTLQTtJwSCZQsVKmo9Gmhz7E5UMiQr4g6WpgVZQSq2BcrGO/6O/q2qW2Yg==

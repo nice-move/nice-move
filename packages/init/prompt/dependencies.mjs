@@ -50,7 +50,7 @@ function action(isGit, wanted = {}) {
       if (prepublishOnly.length > 0) {
         await new Text()
           .onDone(() => ['#!/bin/sh', '', ...prepublishOnly, ''].join('\n'))
-          .output('.hooks/pre-commit');
+          .output('.githooks/pre-commit');
       }
 
       if (commitlint) {
@@ -58,7 +58,7 @@ function action(isGit, wanted = {}) {
           .onDone(() =>
             ['#!/bin/sh', '', 'npx --no-install commitlint -e', ''].join('\n'),
           )
-          .output('.hooks/commit-msg');
+          .output('.githooks/commit-msg');
       }
 
       return deepmerge.all(
@@ -67,7 +67,7 @@ function action(isGit, wanted = {}) {
           isGit && (useLint || ava || commitlint)
             ? {
                 scripts: {
-                  prepare: 'git config core.hooksPath .hooks',
+                  prepare: 'git config core.hooksPath .githooks',
                 },
               }
             : undefined,

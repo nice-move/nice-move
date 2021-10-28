@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/commitlint-config",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A `commitlint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -15,6 +15,7 @@
     "conventional",
     "conventional-changelog",
     "git",
+    "githooks",
     "hooks",
     "lint",
     "linter",

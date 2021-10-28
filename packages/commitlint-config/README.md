@@ -41,14 +41,14 @@ echo "foo" | commitlint
 
 npx --no-install commitlint -e
 
-# save this to: .hooks/commit-msg
+# save this to: .githooks/commit-msg
 ```
 
 ```sh
-git config core.hooksPath .hooks
+git config core.hooksPath .githooks
 git commit -m "foo"
 ```
 
 ## Tips
 
-This config including [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional)
+This config includes [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional), but case checking is disabled.

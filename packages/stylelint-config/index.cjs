@@ -14,23 +14,11 @@ module.exports = {
   ],
   // plugins: [
   //   'stylelint-declaration-block-no-ignored-properties',
-  //   'stylelint-suitcss',
   // ],
   rules: {
-    // 'suitcss/custom-property-no-outside-root': true,
-    // 'suitcss/root-no-standard-properties': true,
-    // 'suitcss/selector-root-no-composition': true,
-
     // 'plugin/declaration-block-no-ignored-properties': true,
 
-    'selector-disallowed-list': [
-      /,\s*?,/,
-      /^\s*,\s*/,
-
-      // root-no-standard-properties
-      /,\s*:root/,
-      /:root\s*,/,
-    ],
+    'selector-disallowed-list': [/,\s*?,/, /^\s*,\s*/],
 
     ...hasConfig({
       'selector-type-no-unknown': [true, { ignoreTypes: ['page'] }],

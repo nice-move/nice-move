@@ -30,3 +30,4 @@ eslintInspector('@nice-move/base', 'spec/sample.js', 'spec.json');
 stylelintInspector('test.css', 'css.json');
 stylelintInspector('test.less', 'less.json');
 stylelintInspector('test.scss', 'scss.json');
+stylelintInspector('css.module.css', 'css.module.json');

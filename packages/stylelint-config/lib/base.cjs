@@ -4,6 +4,7 @@ const { AT_RULE_NO_UNKNOWN } = require('./utils.cjs');
 
 module.exports = {
   rules: {
+    'selector-disallowed-list': [/,\s*?,/, /^\s*,\s*/],
     'at-rule-no-unknown': AT_RULE_NO_UNKNOWN,
     'declaration-block-no-redundant-longhand-properties': [
       true,

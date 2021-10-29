@@ -1,6 +1,6 @@
 'use strict';
 
-const { hasConfig } = require('./lib/utils.cjs');
+const { isMiniApp } = require('./lib/utils.cjs');
 
 module.exports = {
   reportNeedlessDisables: true,
@@ -9,7 +9,6 @@ module.exports = {
     require.resolve('stylelint-config-standard'),
     require.resolve('./lib/ignore.cjs'),
     require.resolve('./lib/base.cjs'),
-    require.resolve('stylelint-config-css-modules'),
     require.resolve('stylelint-config-prettier'),
   ],
   // plugins: [
@@ -18,9 +17,7 @@ module.exports = {
   rules: {
     // 'plugin/declaration-block-no-ignored-properties': true,
 
-    'selector-disallowed-list': [/,\s*?,/, /^\s*,\s*/],
-
-    ...hasConfig({
+    ...isMiniApp({
       'selector-type-no-unknown': [true, { ignoreTypes: ['page'] }],
       'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
     }),
@@ -31,7 +28,6 @@ module.exports = {
       extends: [
         require.resolve('stylelint-config-standard-scss'),
         require.resolve('./lib/scss.cjs'),
-        require.resolve('stylelint-config-css-modules'),
         require.resolve('stylelint-config-prettier'),
       ],
     },
@@ -46,6 +42,16 @@ module.exports = {
     {
       files: ['**/*.md'],
       customSyntax: 'postcss-markdown',
+    },
+    {
+      files: ['**/*.vue', '**/*.module.*'],
+      rules: {
+        'property-no-unknown': [true, { ignoreSelectors: [':export'] }],
+        'selector-pseudo-class-no-unknown': [
+          true,
+          { ignorePseudoClasses: ['export', 'global', 'local'] },
+        ],
+      },
     },
   ],
 };

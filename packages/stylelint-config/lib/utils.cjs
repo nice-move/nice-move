@@ -27,14 +27,19 @@ function hasConfig(value) {
   }
 }
 
-// eslint-disable-next-line consistent-return
 function hasInstall(moduleId, value) {
   if (has(moduleId)) {
     return value;
   }
+  return true;
 }
+
+const AT_RULE_NO_UNKNOWN = hasInstall('tailwindcss/package.json', [
+  true,
+  { ignoreAtRules: ['tailwind', 'layer', 'apply'] },
+]);
 
 module.exports = {
   hasConfig,
-  hasInstall,
+  AT_RULE_NO_UNKNOWN,
 };

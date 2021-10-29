@@ -1,7 +1,10 @@
 'use strict';
 
+const { AT_RULE_NO_UNKNOWN } = require('./utils.cjs');
+
 module.exports = {
   rules: {
+    'at-rule-no-unknown': AT_RULE_NO_UNKNOWN,
     'declaration-block-no-redundant-longhand-properties': [
       true,
       { severity: 'warning' },

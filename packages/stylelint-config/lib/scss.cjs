@@ -1,6 +1,6 @@
 'use strict';
 
-const { hasInstall } = require('./utils.cjs');
+const { AT_RULE_NO_UNKNOWN } = require('./utils.cjs');
 
 const loose = {
   severity: 'warning',
@@ -10,12 +10,7 @@ module.exports = {
   rules: {
     'scss/at-import-no-partial-leading-underscore': null,
     'scss/at-import-partial-extension': 'always',
-    'scss/at-rule-no-unknown': [
-      true,
-      hasInstall('tailwindcss/package.json', {
-        ignoreAtRules: ['tailwind', 'layer', 'apply'],
-      }),
-    ].filter(Boolean),
+    'scss/at-rule-no-unknown': AT_RULE_NO_UNKNOWN,
     'scss/declaration-nested-properties': 'never',
     'scss/dimension-no-non-numeric-values': true,
     'scss/dollar-variable-default': [true, { ...loose, ignore: 'local' }],

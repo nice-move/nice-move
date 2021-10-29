@@ -1,26 +1,10 @@
 'use strict';
 
-const { resolve } = require('path');
+const { reaching } = require('settingz');
 
-function isSafeError(error) {
-  return (
-    error.code === 'MODULE_NOT_FOUND' && error.requireStack[0] === __filename
-  );
-}
-
-// eslint-disable-next-line consistent-return
 function getVersion() {
-  try {
-    const { dependencies: { vue } = {} } = require(resolve(
-      process.cwd(),
-      'package.json',
-    ));
-    return vue;
-  } catch (error) {
-    if (!isSafeError(error)) {
-      throw error;
-    }
-  }
+  const { dependencies: { vue } = {} } = reaching('./package.json');
+  return vue;
 }
 
 const version = getVersion();

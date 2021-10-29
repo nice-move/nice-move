@@ -2,7 +2,9 @@
 
 const { join } = require('path');
 
-const { pkgHas, configHas, existThenReturn } = require('./utils.cjs');
+const { isReachable } = require('settingz');
+
+const { pkgHas, configHas } = require('./utils.cjs');
 
 const Vscode = pkgHas(
   ({ engines: { vscode } = {} }) => vscode,
@@ -43,8 +45,7 @@ module.exports = {
     'import/extensions': [
       '.tsx',
       '.ts',
-      ...(existThenReturn('vue-eslint-parser/package.json', () => ['.vue']) ||
-        []),
+      ...(isReachable('vue-eslint-parser/package.json') ? ['.vue'] : []),
       '.jsx',
       '.js',
       '.mjs',

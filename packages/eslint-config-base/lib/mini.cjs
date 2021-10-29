@@ -2,7 +2,7 @@
 
 const { relative } = require('path');
 
-const { projectHasConfig } = require('./utils.cjs');
+const { reaching } = require('settingz');
 
 const cwd = process.cwd();
 
@@ -16,98 +16,100 @@ function matcher(paths, globs) {
     : `{${paths.join(',')}}/${globs}`;
 }
 
-module.exports = {
-  ...projectHasConfig(({ miniprogramRoot, pluginRoot, cloudfunctionRoot }) => {
-    const paths = [miniprogramRoot, pluginRoot]
-      .filter(Boolean)
-      .map((item) => relativeToCWD(item));
+const config = reaching('./project.config.json');
 
-    const excludedFiles = ['*.wxs', '*.qs'];
+function generate({ miniprogramRoot, pluginRoot, cloudfunctionRoot }) {
+  const paths = [miniprogramRoot, pluginRoot]
+    .filter(Boolean)
+    .map((item) => relativeToCWD(item));
 
-    const cloudMatcher = cloudfunctionRoot
-      ? matcher([relativeToCWD(cloudfunctionRoot)], '**')
-      : undefined;
+  const excludedFiles = ['*.wxs', '*.qs'];
 
-    const globals = {
-      clearInterval: 'readonly',
-      clearTimeout: 'readonly',
-      console: 'readonly',
-      setInterval: 'readonly',
-      setTimeout: 'readonly',
-    };
+  const cloudMatcher = cloudfunctionRoot
+    ? matcher([relativeToCWD(cloudfunctionRoot)], '**')
+    : undefined;
 
-    return {
-      overrides: [
-        {
-          files: matcher(paths, '**'),
-          excludedFiles,
+  const globals = {
+    clearInterval: 'readonly',
+    clearTimeout: 'readonly',
+    console: 'readonly',
+    setInterval: 'readonly',
+    setTimeout: 'readonly',
+  };
+
+  return [
+    {
+      files: matcher(paths, '**'),
+      excludedFiles,
+      env: {
+        browser: false,
+      },
+      globals: {
+        ...globals,
+        wx: 'readonly',
+        getApp: 'readonly',
+        getCurrentPages: 'readonly',
+        requirePlugin: 'readonly',
+        requireMiniProgram: 'readonly',
+      },
+    },
+    {
+      files: matcher(paths, 'component{,s}/**'),
+      excludedFiles,
+      globals: {
+        Component: 'readonly',
+        Behavior: 'readonly',
+      },
+    },
+    {
+      files: matcher(paths, 'page{,s}/**'),
+      excludedFiles,
+      globals: {
+        Page: 'readonly',
+      },
+    },
+    {
+      files: matcher(paths, 'app.js'),
+      globals: {
+        App: 'readonly',
+      },
+    },
+    cloudMatcher
+      ? {
+          files: [cloudMatcher],
           env: {
             browser: false,
           },
           globals: {
             ...globals,
-            wx: 'readonly',
-            getApp: 'readonly',
-            getCurrentPages: 'readonly',
-            requirePlugin: 'readonly',
-            requireMiniProgram: 'readonly',
-          },
-        },
-        {
-          files: matcher(paths, 'component{,s}/**'),
-          excludedFiles,
-          globals: {
-            Component: 'readonly',
-            Behavior: 'readonly',
-          },
-        },
-        {
-          files: matcher(paths, 'page{,s}/**'),
-          excludedFiles,
-          globals: {
-            Page: 'readonly',
-          },
-        },
-        {
-          files: matcher(paths, 'app.js'),
-          globals: {
-            App: 'readonly',
-          },
-        },
-        cloudMatcher
-          ? {
-              files: [cloudMatcher],
-              env: {
-                browser: false,
-              },
-              globals: {
-                ...globals,
-                require: 'readonly',
-                exports: 'readonly',
-              },
-              rules: {
-                'import/no-commonjs': 'off',
-                'unicorn/prefer-module': 'off',
-              },
-            }
-          : undefined,
-        {
-          files: excludedFiles,
-          env: {
-            browser: false,
-          },
-          globals: {
             require: 'readonly',
-            module: 'readonly',
+            exports: 'readonly',
           },
           rules: {
-            'no-var': 'off',
-            'object-shorthand': ['error', 'never'],
             'import/no-commonjs': 'off',
             'unicorn/prefer-module': 'off',
           },
-        },
-      ].filter(Boolean),
-    };
-  }),
+        }
+      : undefined,
+    {
+      files: excludedFiles,
+      env: {
+        browser: false,
+      },
+      globals: {
+        require: 'readonly',
+        module: 'readonly',
+      },
+      rules: {
+        'no-var': 'off',
+        'object-shorthand': ['error', 'never'],
+        'import/no-commonjs': 'off',
+        'unicorn/prefer-module': 'off',
+      },
+    },
+  ].filter(Boolean);
+}
+
+module.exports = {
+  overrides: config.appid ? generate(config) : [],
 };

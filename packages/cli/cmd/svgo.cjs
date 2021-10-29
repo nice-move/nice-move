@@ -1,26 +1,12 @@
 'use strict';
 
-function isModuleInstall(moduleId) {
-  try {
-    require.resolve(moduleId);
-    return true;
-  } catch (error) {
-    if (
-      error.code === 'MODULE_NOT_FOUND' &&
-      error.requireStack &&
-      error.requireStack[0] === __filename
-    ) {
-      return false;
-    }
-    throw error;
-  }
-}
+const { isReachable } = require('settingz');
 
 // eslint-disable-next-line consistent-return
 module.exports = function svgoCaller() {
   if (
-    isModuleInstall('svgo/package.json') &&
-    isModuleInstall('svgo-config/package.json')
+    isReachable('svgo/package.json') &&
+    isReachable('svgo-config/package.json')
   ) {
     return {
       command: 'svgo',

@@ -23,11 +23,12 @@ module.exports = {
       'error',
       {
         devDependencies: [
-          '**/*.{test,spec}.{m,c,}js',
-          '{test,tests,try}.{m,c,}js',
-          '{test,tests,config}/**/*.{m,c,}js',
-          '**/.*rc.{m,c,}js',
-          '**/*.config.{m,c,}js',
+          '**/*.{test,spec}.{m,c,}{t,j}s',
+          '{test,tests,try}.{m,c,}{t,j}s',
+          '{test,tests,config}/**/*.{m,c,}{t,j}s',
+          '**/.*rc.{m,c,}{t,j}s',
+          '**/*.config.{m,c,}{t,j}s',
+          '**/config.{m,c,}{t,j}s',
           '.best-shot/**',
         ],
       },

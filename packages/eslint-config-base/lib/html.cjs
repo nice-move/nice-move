@@ -1,8 +1,13 @@
 'use strict';
 
 module.exports = {
-  plugins: ['html'],
-  settings: {
-    'html/html-extensions': ['.html', '.htm'],
-  },
+  overrides: [
+    {
+      files: ['.html', '.htm'],
+      plugins: ['html'],
+      settings: {
+        'html/html-extensions': ['.html', '.htm'],
+      },
+    },
+  ],
 };

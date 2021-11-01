@@ -1,6 +1,6 @@
 export default {
   ava: '^3.15.0',
-  commitlint: '^13.2.1',
+  commitlint: '^14.1.0',
   eslint: '^7.32.0',
   'eslint-plugin-ava': '^13.1.0',
   garou: '^0.2.4',
@@ -19,7 +19,7 @@ export default {
   'eslint-config-base': '^0.5.67',
   'stylelint-config': '^0.6.4',
   'prettier-config': '^0.5.1',
-  'commitlint-config': '^0.2.2',
+  'commitlint-config': '^0.3.0',
   cli: '^0.5.32',
   lts: '^12.22.0 || ^14.17.0 || >=16.13.0',
 };

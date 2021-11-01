@@ -3,10 +3,10 @@
 module.exports = {
   overrides: [
     {
-      files: ['.html', '.htm'],
+      files: ['*.html', '*.htm', '*.svg'],
       plugins: ['html'],
       settings: {
-        'html/html-extensions': ['.html', '.htm'],
+        'html/html-extensions': ['.html', '.htm', '.svg'],
       },
     },
   ],

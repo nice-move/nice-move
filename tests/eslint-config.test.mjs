@@ -18,7 +18,7 @@ test('Html support', async (t) => {
   const baseConfig = await baseEngine('sample.js');
   const htmlConfig = await baseEngine('sample.html');
 
-  t.deepEqual(baseConfig, htmlConfig);
+  t.notDeepEqual(baseConfig, htmlConfig);
 });
 
 test('Environment', async (t) => {

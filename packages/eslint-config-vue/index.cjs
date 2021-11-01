@@ -16,7 +16,7 @@ module.exports = {
       files: '*.vue',
       extends: ['plugin:vue/recommended', 'prettier'],
       parserOptions: {
-        ecmaVersion: 'latest',
+        ecmaVersion: 2022,
       },
       rules: {
         'vue/attributes-order': 'off',

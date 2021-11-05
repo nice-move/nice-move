@@ -38,6 +38,9 @@ module.exports = {
     {
       files: ['**/*.{html,htm,svg,vue}'],
       customSyntax: 'postcss-html',
+      rules: {
+        'at-rule-no-unknown': null,
+      },
     },
     {
       files: ['**/*.md'],

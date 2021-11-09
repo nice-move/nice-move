@@ -17,15 +17,7 @@ module.exports = {
     'react/prop-types': [
       'warn',
       {
-        ignore: [
-          'children',
-          'className',
-          'location',
-          'match',
-          'history',
-          'style',
-          'meta',
-        ],
+        ignore: ['children', 'className', 'style', 'meta'],
       },
     ],
     'react/require-default-props': 'warn',

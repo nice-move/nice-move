@@ -18,8 +18,8 @@ function BestShot() {
 module.exports = {
   ignoreFiles: [
     '**/*.min.*',
-    '**/dist/*',
-    '**/.(cache|svn|git)/*',
+    '**/dist/**',
+    '**/.(cache|svn|git)/**',
     ...BestShot(),
   ].map((item) => join(process.cwd(), item)),
 };

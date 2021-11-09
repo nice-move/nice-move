@@ -10,6 +10,7 @@ module.exports = {
   rules: {
     'scss/at-import-no-partial-leading-underscore': null,
     'scss/at-import-partial-extension': 'always',
+    'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': AT_RULE_NO_UNKNOWN,
     'scss/declaration-nested-properties': 'never',
     'scss/dimension-no-non-numeric-values': true,

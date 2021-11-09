@@ -1,8 +1,9 @@
 import isGitDirty from 'is-git-dirty';
 import isGitRepo from 'is-git-repository';
 import prompts from 'prompts';
+import { getPkg } from 'settingz';
 
-import { emptyDir, gitSupport, pkgCwd } from '../lib/utils.mjs';
+import { emptyDir, gitSupport } from '../lib/utils.mjs';
 
 import { Dependencies } from './dependencies.mjs';
 import { GitInit } from './git-init.mjs';
@@ -14,7 +15,7 @@ export async function Prompt() {
   const isGit = gitSupported && isGitRepo();
   const isDirty = isGit ? isGitDirty() : false;
   const isEmpty = emptyDir();
-  const pkg = pkgCwd();
+  const pkg = getPkg();
   const cwd = process.cwd();
 
   const options = {

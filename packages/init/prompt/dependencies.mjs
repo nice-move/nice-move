@@ -1,8 +1,8 @@
 import deepmerge from 'deepmerge';
 import { Json, Text } from 'fs-chain';
+import { getPkg } from 'settingz';
 
 import latest from '../lib/latest.mjs';
-import { pkgCwd } from '../lib/utils.mjs';
 
 function checkEslint({ vue, react }) {
   const type =
@@ -168,7 +168,7 @@ function action(isGit, wanted = {}) {
             ? { devDependencies: { tailwindcss: latest.rustywind } }
             : undefined,
           postcss
-            ? { devDependencies: { tailwindcss: latest.postcss } }
+            ? { devDependencies: { postcss: latest.postcss } }
             : undefined,
           playwright
             ? {
@@ -210,7 +210,7 @@ export function Dependencies() {
     'tailwindcss',
   ];
 
-  const { dependencies = {}, devDependencies = {} } = pkgCwd();
+  const { dependencies = {}, devDependencies = {} } = getPkg();
 
   return {
     instructions: false,

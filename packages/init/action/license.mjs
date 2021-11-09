@@ -1,10 +1,11 @@
 import { Text } from 'fs-chain';
+import { getPkg } from 'settingz';
 
 import { cyan } from '../lib/color.mjs';
-import { getAuthorName, pkgCwd } from '../lib/utils.mjs';
+import { getAuthorName } from '../lib/utils.mjs';
 
 export async function License() {
-  const { license, author = '' } = pkgCwd();
+  const { license, author = '' } = getPkg();
 
   const isMIT = license === 'MIT';
 

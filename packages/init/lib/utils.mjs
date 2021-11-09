@@ -1,5 +1,4 @@
 import { readdirSync } from 'fs';
-import { createRequire } from 'module';
 
 import centra from 'centra';
 import execa from 'execa';
@@ -30,14 +29,6 @@ export async function gitSupport() {
     return Boolean(stdout);
   } catch {
     return false;
-  }
-}
-
-export function pkgCwd() {
-  try {
-    return createRequire(`${process.cwd()}/`)('./package.json');
-  } catch {
-    return {};
   }
 }
 

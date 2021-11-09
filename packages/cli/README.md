@@ -26,20 +26,6 @@ npx --no-install nice-move <command>
 
 ## Commands
 
-### init
-
-Initialize your frontend workspaces.
-
-- Confirm when workspace not empty or repository not clean
-- Run `git init` when workspace not a git project
-- Run a better `npm init` / `yarn init` command when needed
-- Create or overwrite `.gitignore` / `.gitattributes`
-- Create or overwrite `LICENSE` / `.editorconfig`
-- Create `README.md` when it not exists
-- Set registry to China mirror in `.npmrc` / `.yarnrc`
-- Add or reset project dependencies by interactive
-- Run `npm` / `yarn` install command
-
 ### lint
 
 Lint and format everything.

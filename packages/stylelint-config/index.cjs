@@ -30,6 +30,9 @@ module.exports = {
         require.resolve('./lib/scss.cjs'),
         require.resolve('stylelint-config-prettier'),
       ],
+      rules: {
+        'at-rule-no-unknown': null,
+      },
     },
     {
       files: ['**/*.less'],

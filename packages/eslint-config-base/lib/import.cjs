@@ -2,8 +2,6 @@
 
 const { join } = require('path');
 
-const { isReachable } = require('settingz');
-
 const { pkgHas, configHas } = require('./utils.cjs');
 
 const Vscode = pkgHas(
@@ -35,22 +33,15 @@ module.exports = {
         ],
       },
     ],
-    'import/newline-after-import': 'off',
-    'import/no-dynamic-require': 'off',
-    'import/order': 'off',
-    'import/prefer-default-export': 'off',
+    'import/newline-after-import': 0,
+    'import/no-dynamic-require': 0,
+    'import/order': 0,
+    'import/prefer-default-export': 0,
+    'import/no-relative-packages': 0,
   },
   settings: {
     ...Vscode,
-    'import/extensions': [
-      '.tsx',
-      '.ts',
-      ...(isReachable('vue-eslint-parser/package.json') ? ['.vue'] : []),
-      '.jsx',
-      '.js',
-      '.mjs',
-      '.cjs',
-    ],
+    'import/extensions': ['.tsx', '.ts', '.vue', '.jsx', '.js', '.mjs', '.cjs'],
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
       'vue-eslint-parser': ['.vue'],

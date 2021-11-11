@@ -3,7 +3,6 @@
   "name": "@nice-move/inspector",
   "version": "0.0.0",
   "license": "UNLICENSED",
-  "keywords": [],
   "bin": {
     "inspect": "bin.mjs"
   },
@@ -14,7 +13,7 @@
     "sort-keys": "^5.0.0"
   },
   "peerDependencies": {
-    "eslint": "^7.30.0",
+    "eslint": "^7.32.0",
     "stylelint": "^14.0.1"
   },
   "engines": {

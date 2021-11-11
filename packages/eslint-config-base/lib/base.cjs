@@ -19,9 +19,9 @@ module.exports = {
   plugins: ['eslint-comments'],
   extends: ['plugin:sonarjs/recommended'],
   rules: {
-    'sonarjs/cognitive-complexity': 'off',
-    'sonarjs/no-duplicate-string': 'off',
-    'sonarjs/no-identical-functions': 'off',
+    'sonarjs/cognitive-complexity': 0,
+    'sonarjs/no-duplicate-string': 0,
+    'sonarjs/no-identical-functions': 0,
     'array-callback-return': [
       'error',
       {
@@ -29,18 +29,22 @@ module.exports = {
         checkForEach: true,
       },
     ],
-    'no-useless-rename': 'off',
-    'object-shorthand': 'off',
-    'arrow-body-style': 'off',
-    camelcase: 'off',
+    'no-useless-rename': 0,
+    'object-shorthand': 0,
+    'arrow-body-style': 0,
+    camelcase: 0,
     'class-methods-use-this': 'warn',
     'consistent-return': 'warn',
     'eslint-comments/no-unused-disable': 'warn',
     'eslint-comments/no-unused-enable': 'warn',
-    'global-require': 'off',
-    'lines-between-class-members': 'off',
-    'max-classes-per-file': 'off',
-    'no-console': 'off',
+    'global-require': 0,
+    'no-unreachable-loop': 0,
+    'grouped-accessor-pairs': 0,
+    'no-constructor-return': 0,
+    'lines-between-class-members': 0,
+    'max-classes-per-file': 0,
+    'no-console': 0,
+    'prefer-exponentiation-operator': 0,
     'no-empty': [
       'error',
       {
@@ -53,7 +57,7 @@ module.exports = {
         disallowTemplateShorthand: true,
       },
     ],
-    'no-nested-ternary': 'off',
+    'no-nested-ternary': 0,
     'no-param-reassign': [
       'warn',
       { props: true, ignorePropertyModificationsFor: [] },
@@ -72,9 +76,9 @@ module.exports = {
         selector: 'LabeledStatement',
       },
     ],
-    'no-template-curly-in-string': 'off',
-    'no-undef-init': 'off',
-    'no-underscore-dangle': 'off',
+    'no-template-curly-in-string': 0,
+    'no-undef-init': 0,
+    'no-underscore-dangle': 0,
     'no-unused-vars': [
       'error',
       {
@@ -85,7 +89,7 @@ module.exports = {
     ],
     'prefer-arrow-callback': 'warn',
     'prefer-template': 'warn',
-    'spaced-comment': 'off',
+    'spaced-comment': 0,
   },
   overrides: [
     {

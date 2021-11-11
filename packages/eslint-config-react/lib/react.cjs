@@ -14,6 +14,7 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'react/jsx-no-useless-fragment': 'warn',
     'react/jsx-props-no-spreading': 'off',
+    'react/prefer-exact-props': 0,
     'react/prop-types': [
       'warn',
       {

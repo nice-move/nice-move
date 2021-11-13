@@ -11,12 +11,9 @@ module.exports = {
     require.resolve('./lib/base.cjs'),
     require.resolve('stylelint-config-prettier'),
   ],
-  // plugins: [
-  //   'stylelint-declaration-block-no-ignored-properties',
-  // ],
+  plugins: ['stylelint-declaration-block-no-ignored-properties'],
   rules: {
-    // 'plugin/declaration-block-no-ignored-properties': true,
-
+    'plugin/declaration-block-no-ignored-properties': true,
     ...isMiniApp({
       'selector-type-no-unknown': [true, { ignoreTypes: ['page'] }],
       'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],

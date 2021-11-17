@@ -23,8 +23,10 @@ module.exports = {
     {
       files: ['**/*.scss'],
       extends: [
-        require.resolve('stylelint-config-standard-scss'),
+        require.resolve('stylelint-config-recommended-scss'),
+        require.resolve('./lib/ignore.cjs'),
         require.resolve('./lib/scss.cjs'),
+        require.resolve('./lib/base.cjs'),
         require.resolve('stylelint-config-prettier'),
       ],
       rules: {

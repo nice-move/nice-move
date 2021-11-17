@@ -36,8 +36,10 @@ module.exports = {
     // ---- off --------------------
     'custom-media-pattern': null,
     'custom-property-pattern': null,
+    'declaration-block-single-line-max-declarations': null,
     'keyframes-name-pattern': null,
     'selector-class-pattern': null,
+    'comment-no-empty': null,
     'selector-id-pattern': null,
 
     // ---- handle by prettier -----

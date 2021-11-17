@@ -26,7 +26,7 @@ module.exports = {
         'vue/no-empty-component-block': 'error',
         'vue/no-template-target-blank': ['error', { allowReferrer: true }],
         'vue/order-in-components': 0,
-        'vue/padding-line-between-blocks': 'warn',
+        'vue/padding-line-between-blocks': 0,
         'vue/require-name-property': 'warn',
         'vue/v-on-function-call': ['warn', 'never'],
         'vue/no-useless-mustaches': [

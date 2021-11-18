@@ -1,12 +1,12 @@
 export default {
   ava: '^3.15.0',
-  commitlint: '^14.1.0',
+  commitlint: '^15.0.0',
   eslint: '^7.32.0',
   'eslint-plugin-ava': '^13.1.0',
   garou: '^0.2.7',
   prettier: '^2.4.1',
   stylelint: '^14.1.0',
-  typescript: '^4.4.4',
+  typescript: '^4.5.2',
   '@bring-it/cli': '^0.5.6',
   '@playwright/test': '^1.16.3',
   '@types/react': '^16.14.21',
@@ -19,7 +19,7 @@ export default {
   'eslint-config-base': '^0.5.69',
   'stylelint-config': '^0.6.10',
   'prettier-config': '^0.5.1',
-  'commitlint-config': '^0.3.0',
+  'commitlint-config': '^0.4.0',
   cli: '^0.6.0',
   lts: '^12.22.0 || ^14.17.0 || >=16.13.0',
 };

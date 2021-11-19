@@ -1,4 +1,4 @@
-import execa from 'execa';
+import { execa } from 'execa';
 
 import { green, red } from '../lib/color.mjs';
 

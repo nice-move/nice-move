@@ -1,7 +1,7 @@
 import { readdirSync } from 'fs';
 
 import centra from 'centra';
-import execa from 'execa';
+import { execa } from 'execa';
 import stringify from 'stringify-author';
 
 export function download(url) {

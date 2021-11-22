@@ -95,16 +95,26 @@ function generate({ miniprogramRoot, pluginRoot, cloudfunctionRoot }) {
       files: excludedFiles,
       env: {
         browser: false,
+        es2021: false,
+        es2020: false,
+        es2017: false,
+        es6: false,
+      },
+      parserOptions: {
+        ecmaVersion: 5,
       },
       globals: {
         require: 'readonly',
         module: 'readonly',
       },
       rules: {
-        'no-var': 'off',
+        'import/no-commonjs': 0,
+        'no-var': 0,
         'object-shorthand': ['error', 'never'],
-        'import/no-commonjs': 'off',
-        'unicorn/prefer-module': 'off',
+        'prefer-spread': 0,
+        'prefer-template': 0,
+        'unicorn/prefer-includes': 0,
+        'unicorn/prefer-module': 0,
       },
     },
   ].filter(Boolean);

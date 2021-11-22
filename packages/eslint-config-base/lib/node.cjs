@@ -69,8 +69,8 @@ module.exports = {
       },
     },
     {
-      files: '*.{js,ts,jsx,tsx,vue,html,htm}',
-      excludedFiles: ['**/*.md/*'],
+      files: '*.*',
+      excludedFiles: ['**/*.md/*', '*.mjs', '*.cjs', '*.md'],
       rules: {
         'node/file-extension-in-import': 'error',
       },

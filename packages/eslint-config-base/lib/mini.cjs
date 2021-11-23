@@ -102,6 +102,7 @@ function generate({ miniprogramRoot, pluginRoot, cloudfunctionRoot }) {
       },
       parserOptions: {
         ecmaVersion: 5,
+        sourceType: 'script',
       },
       globals: {
         require: 'readonly',
@@ -114,6 +115,7 @@ function generate({ miniprogramRoot, pluginRoot, cloudfunctionRoot }) {
         'prefer-spread': 0,
         'prefer-template': 0,
         'unicorn/prefer-includes': 0,
+        'unicorn/prefer-export-from': 0,
         'unicorn/prefer-module': 0,
       },
     },

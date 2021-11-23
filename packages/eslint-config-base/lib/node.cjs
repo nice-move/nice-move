@@ -44,7 +44,7 @@ module.exports = {
       },
       settings: {
         node: {
-          tryExtensions: ['.mjs', '.cjs', '.js'],
+          tryExtensions: ['.mjs', '.cjs', '.ts', '.js'],
         },
       },
       rules: {
@@ -66,11 +66,15 @@ module.exports = {
         strict: ['error', 'global'],
         'node/no-exports-assign': 'error',
         'node/no-new-require': 'error',
+        'node/no-unsupported-features/es-syntax': [
+          'error',
+          { ignores: ['dynamicImport'] },
+        ],
       },
     },
     {
       files: '*.*',
-      excludedFiles: ['**/*.md/*', '*.mjs', '*.cjs', '*.md'],
+      excludedFiles: ['**/*.md/*', '*.cjs', '*.md'],
       rules: {
         'node/file-extension-in-import': 'error',
       },

@@ -47,7 +47,8 @@
     "extends": "@nice-move/eslint-config-base"
   },
   "nice-move": {
-    "internal-regex": "^@nice-move/inspector$"
+    "internal-regex": "^@nice-move/inspector$",
+    "jsx-runtime": false
   },
   "nodemonConfig": {
     "delay": 5,

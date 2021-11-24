@@ -2,6 +2,13 @@
 
 const { extends: roots } = require('@nice-move/eslint-config-base');
 
+const { getPkg } = require('settingz');
+
+function getConfig() {
+  const { 'jsx-runtime': runtime = true } = getPkg('nice-move');
+  return runtime;
+}
+
 module.exports = {
   extends: ['@nice-move/eslint-config-base'],
   overrides: [
@@ -10,7 +17,7 @@ module.exports = {
       extends: [
         'airbnb',
         'airbnb/hooks',
-        'plugin:react/jsx-runtime',
+        ...(getConfig() ? ['plugin:react/jsx-runtime'] : []),
         ...roots.filter(
           (item) => !['eslint:recommended', 'airbnb-base'].includes(item),
         ),

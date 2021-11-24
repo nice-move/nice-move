@@ -30,6 +30,18 @@ module.exports = {
       },
     },
     {
+      files: '*.*',
+      excludedFiles: ['**/*.md/*', '*.cjs', '*.md'],
+      rules: {
+        'node/file-extension-in-import': 'error',
+      },
+      settings: {
+        node: {
+          tryExtensions: ['.vue', '.tsx', '.jsx', '.ts', '.js'],
+        },
+      },
+    },
+    {
       // for node.js
       files: '*.mjs',
       env: {
@@ -44,7 +56,7 @@ module.exports = {
       },
       settings: {
         node: {
-          tryExtensions: ['.mjs', '.cjs', '.ts', '.js'],
+          tryExtensions: ['.mjs', '.cjs', '.js', '.ts'],
         },
       },
       rules: {
@@ -70,18 +82,6 @@ module.exports = {
           'error',
           { ignores: ['dynamicImport'] },
         ],
-      },
-    },
-    {
-      files: '*.*',
-      excludedFiles: ['**/*.md/*', '*.cjs', '*.md'],
-      rules: {
-        'node/file-extension-in-import': 'error',
-      },
-      settings: {
-        node: {
-          tryExtensions: ['.vue', '.tsx', '.jsx', '.ts', '.js'],
-        },
       },
     },
   ],

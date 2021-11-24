@@ -1,9 +1,9 @@
 'use strict';
 
-const { reaching } = require('settingz');
+const { getPkg } = require('settingz');
 
 function getVersion() {
-  const { dependencies: { vue } = {} } = reaching('./package.json');
+  const { vue } = getPkg('dependencies');
   return vue;
 }
 

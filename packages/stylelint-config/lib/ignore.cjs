@@ -2,17 +2,19 @@
 
 const { join } = require('path');
 
+const { readJson, getPkg } = require('settingz');
+
+function ignoreList() {
+  const { ignore: { all = [], stylelint = [] } = {} } = getPkg('nice-move');
+
+  return [...all, ...stylelint];
+}
+
 function BestShot() {
-  try {
-    const {
-      git = [],
-      stylelint = git,
-      // eslint-disable-next-line import/no-unresolved
-    } = require('@best-shot/cli/config/ignore.json');
-    return stylelint;
-  } catch {
-    return [];
-  }
+  const { git = [], stylelint = git } = readJson(
+    '@best-shot/cli/config/ignore.json',
+  );
+  return stylelint;
 }
 
 module.exports = {
@@ -20,6 +22,8 @@ module.exports = {
     '**/*.min.*',
     '**/dist/**',
     '**/.(cache|svn|git)/**',
+    '**/miniprogram_npm/**',
     ...BestShot(),
+    ...ignoreList(),
   ].map((item) => join(process.cwd(), item)),
 };

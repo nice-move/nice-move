@@ -5,17 +5,19 @@ const {
   matches: { sourceAndPackages },
 } = require('./lib/utils.cjs');
 
+const { readJson, getPkg } = require('settingz');
+
+function ignoreList() {
+  const { ignore: { all = [], eslint = [] } = {} } = getPkg('nice-move');
+
+  return [...all, ...eslint];
+}
+
 function BestShot() {
-  try {
-    const {
-      git = [],
-      eslint = git, // @ts-ignore
-      // eslint-disable-next-line import/no-unresolved
-    } = require('@best-shot/cli/config/ignore.json');
-    return eslint;
-  } catch {
-    return [];
-  }
+  const { git = [], eslint = git } = readJson(
+    '@best-shot/cli/config/ignore.json',
+  );
+  return eslint;
 }
 
 module.exports = {
@@ -59,5 +61,6 @@ module.exports = {
     '**/miniprogram_npm/**',
     'node_modules/',
     ...BestShot(),
+    ...ignoreList(),
   ],
 };

@@ -7,6 +7,7 @@ module.exports = {
     'jsx-a11y/media-has-caption': 0,
     'jsx-a11y/no-static-element-interactions': 0,
     'react/destructuring-assignment': 0,
+    'react/function-component-definition': 0,
     'react/jsx-curly-brace-presence': [
       'error',
       { props: 'ignore', children: 'never' },

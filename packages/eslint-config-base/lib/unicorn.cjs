@@ -10,7 +10,6 @@ module.exports = {
     'unicorn/no-array-for-each': 'off',
     'unicorn/no-array-reduce': 'off',
     'unicorn/no-null': 'off',
-    'unicorn/no-useless-undefined': 'off',
     'unicorn/numeric-separators-style': [
       'warn',
       { onlyIfContainsSeparator: true },

@@ -65,6 +65,7 @@ module.exports = {
       { props: true, ignorePropertyModificationsFor: [] },
     ],
     'no-plusplus': 'warn',
+    'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
     'no-restricted-syntax': [
       'error',
       {

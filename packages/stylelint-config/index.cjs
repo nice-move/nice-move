@@ -47,6 +47,10 @@ module.exports = {
     {
       files: ['**/*.md'],
       customSyntax: 'postcss-markdown',
+      rules: {
+        'at-rule-no-unknown': null,
+        'no-empty-source': null,
+      },
     },
     {
       files: ['**/*.vue', '**/*.module.*'],

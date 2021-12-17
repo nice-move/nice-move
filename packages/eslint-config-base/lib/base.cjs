@@ -64,7 +64,7 @@ module.exports = {
       'warn',
       { props: true, ignorePropertyModificationsFor: [] },
     ],
-    'no-plusplus': 'warn',
+    'no-await-in-loop': 0,
     'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
     'no-restricted-syntax': [
       'error',

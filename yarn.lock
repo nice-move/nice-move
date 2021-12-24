@@ -4599,7 +4599,7 @@ serialize-error@^7.0.1:
   dependencies:
     type-fest "^0.13.1"
 
-settingz@^0.1.2, settingz@^0.1.3:
+settingz@^0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/settingz/-/settingz-0.1.3.tgz#f8563c0a8344f8a17827a081a48aee6c9498de1b"
   integrity sha512-GUFVb/YDBgAPZJVhXTPnf5hH1cGvMMy+trJ6nqxgdc13THm22cdaO+yLMJJVSm+7PHH4+PkZ3b1nmUwfk1sDxg==

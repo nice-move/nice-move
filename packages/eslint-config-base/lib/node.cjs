@@ -1,11 +1,11 @@
 'use strict';
 
 module.exports = {
-  plugins: ['node'],
+  plugins: ['n'],
   rules: {
-    'node/shebang': 'error',
-    'node/no-process-env': 'error',
-    'node/no-path-concat': 'error',
+    'n/shebang': 'error',
+    'n/no-process-env': 'error',
+    'n/no-path-concat': 'error',
   },
   overrides: [
     {
@@ -16,24 +16,25 @@ module.exports = {
         commonjs: true,
       },
       rules: {
-        'node/no-process-env': 'off',
-        'node/no-deprecated-api': 'error',
-        'node/prefer-global/url': 'warn',
-        'node/prefer-global/console': 'warn',
-        'node/prefer-global/process': 'warn',
-        'node/prefer-global/buffer': 'warn',
-        'node/prefer-global/url-search-params': 'warn',
-        'node/no-unsupported-features/es-builtins': 'error',
-        'node/no-unsupported-features/es-syntax': 'error',
-        'node/no-unsupported-features/node-builtins': 'error',
-        'node/process-exit-as-throw': 'error',
+        'n/no-deprecated-api': 'error',
+        'n/no-process-env': 'off',
+        'n/no-process-exit': 'warn',
+        'n/no-unsupported-features/es-builtins': 'error',
+        'n/no-unsupported-features/es-syntax': 'error',
+        'n/no-unsupported-features/node-builtins': 'error',
+        'n/prefer-global/buffer': 'warn',
+        'n/prefer-global/console': 'warn',
+        'n/prefer-global/process': 'warn',
+        'n/prefer-global/url-search-params': 'warn',
+        'n/prefer-global/url': 'warn',
+        'n/process-exit-as-throw': 'error',
       },
     },
     {
       files: '*.*',
       excludedFiles: ['**/*.md/*', '*.cjs', '*.md'],
       rules: {
-        'node/file-extension-in-import': 'error',
+        'n/file-extension-in-import': 'error',
       },
       settings: {
         node: {
@@ -60,7 +61,7 @@ module.exports = {
         },
       },
       rules: {
-        'node/no-unsupported-features/es-syntax': [
+        'n/no-unsupported-features/es-syntax': [
           'error',
           { ignores: ['modules', 'dynamicImport'] },
         ],
@@ -76,9 +77,9 @@ module.exports = {
       },
       rules: {
         strict: ['error', 'global'],
-        'node/no-exports-assign': 'error',
-        'node/no-new-require': 'error',
-        'node/no-unsupported-features/es-syntax': [
+        'n/no-exports-assign': 'error',
+        'n/no-new-require': 'error',
+        'n/no-unsupported-features/es-syntax': [
           'error',
           { ignores: ['dynamicImport'] },
         ],

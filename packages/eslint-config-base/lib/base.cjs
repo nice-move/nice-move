@@ -1,29 +1,36 @@
 'use strict';
 
 module.exports = {
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    ecmaFeatures: {
-      impliedStrict: true,
-      globalReturn: false,
-      jsx: false,
-    },
-  },
   env: {
     browser: true,
-    es2021: true,
-    es2020: true,
-    es2017: true,
     commonjs: false,
+    es2017: true,
+    es2020: true,
+    es2021: true,
     node: false,
   },
-  plugins: ['eslint-comments'],
   extends: ['plugin:sonarjs/recommended'],
+  overrides: [
+    {
+      files: ['*.jsx', '*.tsx'],
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+  ],
+  parserOptions: {
+    ecmaFeatures: {
+      globalReturn: false,
+      impliedStrict: true,
+      jsx: false,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['eslint-comments'],
   rules: {
-    'sonarjs/cognitive-complexity': 0,
-    'sonarjs/no-duplicate-string': 0,
-    'sonarjs/no-identical-functions': 0,
     'array-callback-return': [
       'error',
       {
@@ -31,8 +38,6 @@ module.exports = {
         checkForEach: true,
       },
     ],
-    'no-useless-rename': 0,
-    'object-shorthand': 0,
     'arrow-body-style': 0,
     camelcase: 0,
     'class-methods-use-this': 'warn',
@@ -40,13 +45,12 @@ module.exports = {
     'eslint-comments/no-unused-disable': 'warn',
     'eslint-comments/no-unused-enable': 'warn',
     'global-require': 0,
-    'no-unreachable-loop': 0,
     'grouped-accessor-pairs': 0,
-    'no-constructor-return': 0,
     'lines-between-class-members': 0,
     'max-classes-per-file': 0,
+    'no-await-in-loop': 0,
     'no-console': 0,
-    'prefer-exponentiation-operator': 0,
+    'no-constructor-return': 0,
     'no-empty': [
       'error',
       {
@@ -62,10 +66,11 @@ module.exports = {
     'no-nested-ternary': 0,
     'no-param-reassign': [
       'warn',
-      { props: true, ignorePropertyModificationsFor: [] },
+      {
+        ignorePropertyModificationsFor: [],
+        props: true,
+      },
     ],
-    'no-await-in-loop': 0,
-    'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
     'no-restricted-syntax': [
       'error',
       {
@@ -79,9 +84,17 @@ module.exports = {
         selector: 'LabeledStatement',
       },
     ],
+    'no-plusplus': 0,
     'no-template-curly-in-string': 0,
     'no-undef-init': 0,
     'no-underscore-dangle': 0,
+    'no-unreachable-loop': 0,
+    'no-unused-expressions': [
+      'error',
+      {
+        allowTaggedTemplates: true,
+      },
+    ],
     'no-unused-vars': [
       'error',
       {
@@ -90,18 +103,14 @@ module.exports = {
         varsIgnorePattern: '^_+$',
       },
     ],
+    'no-useless-rename': 0,
+    'object-shorthand': 0,
     'prefer-arrow-callback': 'warn',
+    'prefer-exponentiation-operator': 0,
     'prefer-template': 'warn',
+    'sonarjs/cognitive-complexity': 0,
+    'sonarjs/no-duplicate-string': 0,
+    'sonarjs/no-identical-functions': 0,
     'spaced-comment': 0,
   },
-  overrides: [
-    {
-      files: ['*.jsx', '*.tsx'],
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-  ],
 };

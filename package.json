@@ -28,7 +28,7 @@
   ],
   "devDependencies": {
     "ava": "^3.15.0",
-    "commitlint": "^15.0.0",
+    "commitlint": "^16.0.1",
     "eslint": "^7.32.0",
     "eslint-plugin-ava": "^13.1.0",
     "garou": "^0.3.6",

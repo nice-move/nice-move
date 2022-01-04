@@ -19,6 +19,7 @@ export async function Registry() {
         ) {
           return text;
         }
+
         return `registry = https://mirrors.tencent.com/npm/\r${text}`;
       })
       .output()

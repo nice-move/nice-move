@@ -54,6 +54,7 @@ export async function Prompt() {
       if (okay === false) {
         throw new Error('cancel');
       }
+
       return Object.entries(rest);
     })
     .then((sets) => {

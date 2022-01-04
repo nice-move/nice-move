@@ -13,7 +13,7 @@
     "sort-keys": "^5.0.0"
   },
   "peerDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "^8.6.0",
     "stylelint": "^14.0.1"
   },
   "engines": {

@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "checkJs": true,
     "module": "commonjs",
     "strict": true,
     "target": "es2021"

@@ -28,6 +28,7 @@ function getPlatform(context) {
         ]),
       ].sort();
     }
+
     throw new Error('fail');
   } catch {
     return Types[type()];
@@ -51,6 +52,7 @@ export async function GitFile() {
     .onFail()
     .onDone((oldText = '') => {
       const platform = getPlatform(oldText);
+
       return download(`https://gitignore.io/api/node,${platform}`)
         .then((newText) => {
           const [match] = oldText.match(regexp) || [];

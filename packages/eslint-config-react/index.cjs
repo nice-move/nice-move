@@ -1,11 +1,11 @@
 'use strict';
 
 const { extends: roots } = require('@nice-move/eslint-config-base');
-
 const { getPkg } = require('settingz');
 
 function getConfig() {
   const { 'jsx-runtime': runtime = true } = getPkg('nice-move');
+
   return runtime;
 }
 

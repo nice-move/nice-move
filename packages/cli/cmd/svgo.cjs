@@ -13,6 +13,7 @@ module.exports = function svgoCaller() {
       describe: 'Run `svgo` to optimize `*.svg`',
       handler({ _: [_, path = './'] }) {
         const execa = require('execa');
+
         execa('svgo', [
           '-r',
           '-q',

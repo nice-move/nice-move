@@ -1,7 +1,6 @@
 'use strict';
 
 const { join } = require('path');
-
 const { readJson, getPkg } = require('settingz');
 
 function ignoreList() {
@@ -14,6 +13,7 @@ function BestShot() {
   const { git = [], stylelint = git } = readJson(
     '@best-shot/cli/config/ignore.json',
   );
+
   return stylelint;
 }
 

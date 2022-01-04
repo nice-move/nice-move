@@ -27,11 +27,11 @@
     "tools/*"
   ],
   "devDependencies": {
-    "ava": "^3.15.0",
+    "ava": "^4.0.0",
     "commitlint": "^16.0.1",
-    "eslint": "^7.32.0",
+    "eslint": "^8.6.0",
     "eslint-plugin-ava": "^13.1.0",
-    "garou": "^0.3.6",
+    "garou": "^0.3.7",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "stylelint": "^14.1.0",

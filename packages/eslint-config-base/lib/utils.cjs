@@ -7,6 +7,7 @@ function pkgHas(checker, getResult) {
   const pkg = getPkg();
 
   const io = checker(pkg);
+
   if (io) {
     return getResult(io, pkg);
   }
@@ -17,6 +18,7 @@ function configHas(checker, getResult) {
   const pkg = getPkg('nice-move');
 
   const io = checker(pkg);
+
   if (io) {
     return getResult(io, pkg);
   }

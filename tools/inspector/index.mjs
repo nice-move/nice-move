@@ -32,6 +32,7 @@ export function eslintInspector(configName, filename, outputName = '') {
       if (outputName) {
         return save(outputName, data);
       }
+
       return data;
     });
 }
@@ -47,9 +48,11 @@ export function stylelintInspector(inputName, outputName) {
     }))
     .then((data) => {
       const io = sortKeys(data, { deep: true });
+
       if (outputName) {
         return save(outputName, io);
       }
+
       return io;
     })
     .catch(console.error);

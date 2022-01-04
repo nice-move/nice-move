@@ -12,13 +12,16 @@ export function download(url) {
       if (response.statusCode === 301) {
         return download(response.headers.location);
       }
+
       return response.text();
     })
     .then((response) => {
       const data = response.trim();
+
       if (data) {
         return data;
       }
+
       throw new Error('template download fail');
     });
 }
@@ -26,6 +29,7 @@ export function download(url) {
 export async function gitSupport() {
   try {
     const { stdout } = await execa('git', ['--version']);
+
     return Boolean(stdout);
   } catch {
     return false;
@@ -57,5 +61,7 @@ export async function getAuthor(author) {
 }
 
 export async function getAuthorName(author) {
-  return (await getAuthor(author)).name || 'Unknown';
+  const info = await getAuthor(author);
+
+  return info.name || 'Unknown';
 }

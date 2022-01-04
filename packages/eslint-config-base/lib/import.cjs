@@ -1,7 +1,6 @@
 'use strict';
 
 const { join } = require('path');
-
 const { pkgHas, configHas } = require('./utils.cjs');
 
 const Vscode = pkgHas(

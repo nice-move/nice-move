@@ -4,7 +4,6 @@ const {
   configHas,
   matches: { sourceAndPackages },
 } = require('./lib/utils.cjs');
-
 const { readJson, getPkg } = require('settingz');
 
 function ignoreList() {
@@ -17,6 +16,7 @@ function BestShot() {
   const { git = [], eslint = git } = readJson(
     '@best-shot/cli/config/ignore.json',
   );
+
   return eslint;
 }
 

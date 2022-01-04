@@ -4,6 +4,7 @@ const { getPkg } = require('settingz');
 
 function getVersion() {
   const { vue } = getPkg('dependencies');
+
   return vue;
 }
 

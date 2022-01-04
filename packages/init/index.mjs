@@ -30,8 +30,8 @@ export async function init() {
   ].filter((func) => typeof func === 'function');
 
   for (const action of actions) {
-    // eslint-disable-next-line no-await-in-loop
     const io = await action();
+
     if (io && io.catch) {
       io.catch((error) => {
         console.warn(error.message);

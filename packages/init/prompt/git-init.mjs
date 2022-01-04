@@ -8,6 +8,7 @@ function init() {
   return execa('git', ['init']).then(
     (io) => {
       console.log(green('√'), message);
+
       return io;
     },
     (error) => {

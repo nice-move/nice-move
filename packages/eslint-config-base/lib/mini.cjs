@@ -1,7 +1,6 @@
 'use strict';
 
 const { relative } = require('path');
-
 const { reaching } = require('settingz');
 
 const cwd = process.cwd();

@@ -22,6 +22,7 @@ function readJson() {
     return requireJson('./package.json');
   } catch (error) {
     console.error(error);
+
     return {};
   }
 }

@@ -3,18 +3,7 @@
 const {
   matches: { source, sourceAndPackages },
 } = require('./utils.cjs');
-const { reaching, isReachable } = require('settingz');
-
-function BestShot() {
-  return isReachable('@best-shot/preset-env/package.json')
-    ? [
-        {
-          files: sourceAndPackages,
-          ...reaching('@best-shot/preset-env/eslint.cjs'),
-        },
-      ]
-    : [];
-}
+const { isReachable } = require('settingz');
 
 function webpack() {
   return isReachable('webpack/package.json')
@@ -53,5 +42,5 @@ function webpack() {
 }
 
 module.exports = {
-  overrides: [...webpack(), ...BestShot()],
+  overrides: webpack(),
 };

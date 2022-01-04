@@ -4382,10 +4382,10 @@ serialize-error@^7.0.1:
   dependencies:
     type-fest "^0.13.1"
 
-settingz@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/settingz/-/settingz-0.1.3.tgz#f8563c0a8344f8a17827a081a48aee6c9498de1b"
-  integrity sha512-GUFVb/YDBgAPZJVhXTPnf5hH1cGvMMy+trJ6nqxgdc13THm22cdaO+yLMJJVSm+7PHH4+PkZ3b1nmUwfk1sDxg==
+settingz@^0.1.3, settingz@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/settingz/-/settingz-0.1.4.tgz#a4029a208038c18961943fe8066f8ef322e9e96e"
+  integrity sha512-/HUz5zcRbEAhtdR2bBR+9C2GTCndGq0ysAXqRL190mEyVO6e/dR/3xApJAPyArvSDZjw1lZ74mOykPCTrunIyA==
 
 shebang-command@^2.0.0:
   version "2.0.0"

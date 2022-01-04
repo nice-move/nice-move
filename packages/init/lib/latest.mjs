@@ -16,7 +16,7 @@ export default {
   rustywind: '^0.12.2',
   tailwindcss: '~3.0.9',
   vue: '~2.6.14',
-  'eslint-config-base': '^0.5.79',
+  'eslint-config-base': '^0.6.0',
   'stylelint-config': '^0.6.12',
   'prettier-config': '^0.5.1',
   'commitlint-config': '^0.5.0',

@@ -40,7 +40,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install
-        run: yarn
+        run: yarn remove garou
 
       - name: Test
         run: yarn test

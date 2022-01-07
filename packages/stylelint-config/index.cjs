@@ -17,6 +17,7 @@ module.exports = {
     ...isMiniApp({
       'selector-type-no-unknown': [true, { ignoreTypes: ['page'] }],
       'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
+      'selector-disallowed-list': ['*', /^(?!page)[A-Za-z]+$/, /[/:\\]/],
     }),
   },
   overrides: [
@@ -42,6 +43,7 @@ module.exports = {
       customSyntax: 'postcss-html',
       rules: {
         'at-rule-no-unknown': null,
+        'no-empty-source': null,
       },
     },
     {

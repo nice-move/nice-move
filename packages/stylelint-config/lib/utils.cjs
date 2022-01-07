@@ -1,6 +1,6 @@
 'use strict';
 
-const { isReachable } = require('settingz');
+const { isReachable, haveLocalDependencies } = require('settingz');
 
 // eslint-disable-next-line consistent-return
 function isMiniApp(value) {
@@ -13,8 +13,20 @@ function isMiniApp(value) {
   }
 }
 
-const AT_RULE_NO_UNKNOWN = isReachable('tailwindcss/package.json')
-  ? [true, { ignoreAtRules: ['tailwind', 'layer', 'apply'] }]
+const AT_RULE_NO_UNKNOWN = haveLocalDependencies('tailwindcss')
+  ? [
+      true,
+      {
+        ignoreAtRules: [
+          'tailwind',
+          'apply',
+          'layer',
+          'variants',
+          'responsive',
+          'screen',
+        ],
+      },
+    ]
   : true;
 
 module.exports = {

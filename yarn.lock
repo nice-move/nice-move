@@ -3624,7 +3624,7 @@ ora@^6.0.1:
     strip-ansi "^7.0.1"
     wcwidth "^1.0.1"
 
-os-locale@^6.0.1:
+os-locale@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/os-locale/-/os-locale-6.0.2.tgz#2e5122600f48cd9b846524c07f898db1c596bf20"
   integrity sha512-qIb8bzRqaN/vVqEYZ7lTAg6PonskO7xOmM7OClD28F6eFa4s5XGe4bGpHUHMoCHbNNuR0pDYFeSLiW5bnjWXIA==

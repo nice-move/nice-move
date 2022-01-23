@@ -29,6 +29,7 @@ module.exports = {
         require.resolve('./lib/scss.cjs'),
         require.resolve('./lib/base.cjs'),
         require.resolve('stylelint-config-prettier'),
+        require.resolve('stylelint-config-prettier-scss'),
       ],
       rules: {
         'at-rule-no-unknown': null,

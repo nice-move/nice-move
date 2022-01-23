@@ -12,9 +12,12 @@
     "lodash": "^4.17.21",
     "sort-keys": "^5.0.0"
   },
+  "devDependencies": {
+    "@types/eslint": "^8.4.1"
+  },
   "peerDependencies": {
-    "eslint": "^8.6.0",
-    "stylelint": "^14.0.1"
+    "eslint": "^8.7.0",
+    "stylelint": "^14.2.0"
   },
   "engines": {
     "node": "^12.22.0 || ^14.17.0 || >=16.13.0"

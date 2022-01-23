@@ -27,7 +27,7 @@ export function getConfig({
     '*.{vue,html,htm,md}': [
       rustywind && 'rustywind --write',
       garou && 'garou',
-      prettier && `prettier --write${useColor}`,
+      prettier && `prettier --write --ignore-unknown${useColor}`,
       stylelint &&
         `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
       eslint && `eslint --fix --format=pretty${useColor}`,
@@ -35,29 +35,29 @@ export function getConfig({
     '*.{ts,tsx}': [
       rustywind && 'rustywind --write',
       garou && 'garou',
-      prettier && `prettier --write${useColor}`,
+      prettier && `prettier --write --ignore-unknown${useColor}`,
       eslint && `eslint --fix --format=pretty${useColor}`,
-      typescript && 'tsc --noEmit',
+      typescript && (() => 'tsc --noEmit'),
     ],
     '*.{js,jsx,mjs,cjs,wxs,qs}': [
       rustywind && 'rustywind --write',
       garou && 'garou',
-      prettier && `prettier --write${useColor}`,
+      prettier && `prettier --write --ignore-unknown${useColor}`,
       eslint && `eslint --fix --format=pretty${useColor}`,
     ],
     '*.{c,sc,le,wx,q,tt,jx,ac}ss': [
       garou && 'garou',
-      prettier && `prettier --write${useColor}`,
+      prettier && `prettier --write --ignore-unknown${useColor}`,
       stylelint &&
         `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
     ],
     '{*.{json,editorconfig,yml,yaml},.{babel,npm}rc}': [
-      prettier && `prettier --write${useColor}`,
+      prettier && `prettier --write --ignore-unknown${useColor}`,
     ],
     '*.svg': [
       garou && 'garou',
-      prettier && `prettier --parser html --write${useColor}`,
-      prettier && `prettier --write${useColor}`,
+      prettier && `prettier --parser html --write --ignore-unknown${useColor}`,
+      prettier && `prettier --write --ignore-unknown${useColor}`,
       stylelint &&
         `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
       eslint && `eslint --fix --format=pretty${useColor}`,

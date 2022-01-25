@@ -59,18 +59,11 @@ Then run
 prettier --write .
 ```
 
-## Tips
-
-This config including special plugins:
-
-- [@nice-move/prettier-plugin-package-json](https://github.com/nice-move/prettier-plugin-package-json)
-- [prettier-plugin-ssh-config](https://github.com/nice-move/prettier-plugin-ssh-config)
-
 ### Editorconfig support
 
-Create: .editorconfig
-
 ```ini
+# .editorconfig
+
 [*]
 charset = utf-8
 end_of_line = lf
@@ -82,6 +75,13 @@ quote_type = single
 tab_width = 2
 trim_trailing_whitespace = true
 ```
+
+## Tips
+
+This config including:
+
+- [@nice-move/prettier-plugin-package-json](https://github.com/nice-move/prettier-plugin-package-json)
+- [prettier-plugin-ssh-config](https://github.com/nice-move/prettier-plugin-ssh-config)
 
 ## Related
 

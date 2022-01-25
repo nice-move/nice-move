@@ -18,7 +18,7 @@ export default {
   vue: '~2.6.14',
   'eslint-config-base': '^0.6.0',
   'stylelint-config': '^0.6.14',
-  'prettier-config': '^0.5.1',
+  'prettier-config': '^0.5.2',
   'commitlint-config': '^0.5.0',
   cli: '^0.6.1',
   lts: '^12.22.0 || ^14.17.0 || >=16.13.0',

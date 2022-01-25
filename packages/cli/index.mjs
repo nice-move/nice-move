@@ -2,7 +2,7 @@
 
 import { Cheetor } from 'cheetor';
 
-import svgoCaller from './cmd/svgo.cjs';
+import { svgoCaller } from './cmd/svgo.mjs';
 
 process.on('SIGINT', () => {});
 

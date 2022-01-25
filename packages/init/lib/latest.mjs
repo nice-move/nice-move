@@ -3,7 +3,7 @@ export default {
   commitlint: '^16.1.0',
   eslint: '^8.7.0',
   'eslint-plugin-ava': '^13.2.0',
-  garou: '^0.3.9',
+  garou: '^0.3.10',
   prettier: '^2.5.1',
   stylelint: '^14.2.0',
   typescript: '^4.5.5',
@@ -20,6 +20,6 @@ export default {
   'stylelint-config': '^0.6.14',
   'prettier-config': '^0.5.1',
   'commitlint-config': '^0.5.0',
-  cli: '^0.6.0',
+  cli: '^0.6.1',
   lts: '^12.22.0 || ^14.17.0 || >=16.13.0',
 };

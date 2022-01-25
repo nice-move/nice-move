@@ -1,9 +1,10 @@
-'use strict';
+import { createRequire } from 'module';
 
-const { isReachable } = require('settingz');
+import { execa } from 'execa';
+import { isReachable } from 'settingz';
 
 // eslint-disable-next-line consistent-return
-module.exports = function svgoCaller() {
+export function svgoCaller() {
   if (
     isReachable('svgo/package.json') &&
     isReachable('svgo-config/package.json')
@@ -12,7 +13,7 @@ module.exports = function svgoCaller() {
       command: 'svgo',
       describe: 'Run `svgo` to optimize `*.svg`',
       handler({ _: [_, path = './'] }) {
-        const execa = require('execa');
+        const require = createRequire(import.meta.url);
 
         execa('svgo', [
           '-r',
@@ -21,7 +22,7 @@ module.exports = function svgoCaller() {
           '--indent',
           '2',
           '--config',
-          'node_modules/svgo-config/config.json',
+          require.resolve('svgo-config'),
           '-f',
           path,
         ])
@@ -35,4 +36,4 @@ module.exports = function svgoCaller() {
       },
     };
   }
-};
+}

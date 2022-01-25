@@ -32,7 +32,7 @@ module.exports = {
     },
     {
       files: '*.*',
-      excludedFiles: ['**/*.md/*', '*.cjs', '*.md'],
+      excludedFiles: ['**/*.md/*', '*.cjs', '*.ts', '*.cts', '*.mts', '*.md'],
       rules: {
         'n/file-extension-in-import': 'error',
       },

@@ -16,7 +16,7 @@ function filterObject(object, filter) {
 module.exports = {
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint'],
       // parserOptions: {
@@ -30,6 +30,7 @@ module.exports = {
       rules: {
         ...filterObject(base, (_key, value) => value !== 'off' && value !== 0),
         ...rules,
+        '@typescript-eslint/ban-ts-comment': 0,
         '@typescript-eslint/no-unused-vars': [
           'warn',
           {

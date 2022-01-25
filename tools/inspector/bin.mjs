@@ -12,7 +12,11 @@ eslintInspector(
 );
 
 eslintInspector('@nice-move/base', 'sample.ts', 'ts.json');
+eslintInspector('@nice-move/base', 'sample.cts', 'cts.json');
+eslintInspector('@nice-move/base', 'sample.mts', 'mts.json');
+
 eslintInspector('@nice-move/base', 'sample.html', 'html.json');
+
 eslintInspector('@nice-move/base', 'sample.cjs', 'cjs.json');
 eslintInspector('@nice-move/base', 'sample.mjs', 'mjs.json');
 eslintInspector('@nice-move/base', 'sample.wxs', 'wxs.json');

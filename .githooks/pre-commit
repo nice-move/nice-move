@@ -1,6 +1,6 @@
 #!/bin/sh
 
-npx --no-install pin-latest
+npm exec pin-latest
 git add ./packages/init/lib/latest.mjs
-npm run lint
+npm exec nice-move lint staged
 npm test

@@ -4,7 +4,7 @@ import pickBy from 'lodash/pickBy.js';
 import sortKeys from 'sort-keys';
 import printConfig from 'stylelint/lib/printConfig.js';
 
-function save(outputName, data) {
+export function save(outputName, data) {
   return new Json()
     .config({ pretty: true })
     .onDone(() => data)

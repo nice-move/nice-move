@@ -1,3 +1,3 @@
 #!/bin/sh
 
-npx --no-install commitlint -e
+npm exec nice-move lint commit

@@ -21,14 +21,28 @@ npm install @nice-move/cli --save-dev
 ## Usage
 
 ```bash
-npx --no-install nice-move <command>
+npm exec nice-move <command>
 ```
 
 ## Commands
 
-### lint
+### `lint commit`
 
-Lint and format everything.
+Lint git commit message.
+
+Use [commitlint](https://commitlint.js.org/) to enforcing [conventional commits](https://conventionalcommits.org/).
+
+```sh
+#!/bin/sh
+
+# file: .git/hooks/commit-msg
+
+npm exec nice-move lint commit
+```
+
+### `lint staged`
+
+Lint and format git staged files.
 
 Install `eslint` / `stylelint` / `prettier` / `garou` when needed:
 
@@ -39,7 +53,7 @@ npm install eslint stylelint prettier garou --save-dev
 Add configurations:
 
 ```jsonc
-// example: package.json
+// file: package.json
 {
   "eslintConfig": {},
   "prettier": {},
@@ -48,14 +62,27 @@ Add configurations:
 }
 ```
 
+```sh
+#!/bin/sh
+
+# file: .git/hooks/pre-commit
+
+npm exec nice-move lint staged
+```
+
 Change a few files, then run:
 
 ```bash
 git add .
-npx --no-install nice-move lint
+npm exec nice-move lint staged
 ```
 
 ## Related
 
 - [@nice-move/init](../init)
-- [@nice-move/lint](../lint)
+- [@nice-move/commitlint-config](../commitlint-config)
+- [@nice-move/eslint-config-base](../eslint-config-base)
+- [@nice-move/eslint-config-react](../eslint-config-react)
+- [@nice-move/eslint-config-vue](../eslint-config-vue)
+- [@nice-move/stylelint-config](../stylelint-config)
+- [@nice-move/prettier-config](../prettier-config)

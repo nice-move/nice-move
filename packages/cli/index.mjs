@@ -8,6 +8,8 @@ process.on('SIGINT', () => {});
 
 new Cheetor('./package.json', import.meta.url)
   .website('https://www.npmjs.com/org/nice-move')
-  .commandFrom('../cmd/lint.mjs')
+  .commandSafe('@nice-move/lint/cmd/commit.mjs')
+  .commandSafe('@nice-move/lint/cmd/staged.mjs')
+  .commandSafe('@nice-move/lint/cmd/all.mjs')
   .commandSmart(svgoCaller)
   .setup();

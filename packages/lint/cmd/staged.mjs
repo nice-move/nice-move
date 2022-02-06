@@ -1,34 +1,11 @@
-import { createRequire } from 'module';
-
+// eslint-disable-next-line import/no-unresolved
 import lintStaged from 'lint-staged';
+import { getPkg } from 'settingz';
 
-import { getConfig } from './lib/get-config.mjs';
-
-function getMaxArgLength() {
-  switch (process.platform) {
-    case 'darwin':
-      return 262144;
-    case 'win32':
-      return 8191;
-    default:
-      return 131072;
-  }
-}
-
-const requireJson = createRequire(`${process.cwd()}/`);
-
-function readJson() {
-  try {
-    return requireJson('./package.json');
-  } catch (error) {
-    console.error(error);
-
-    return {};
-  }
-}
+import { getConfig } from '../lib/get-config.mjs';
 
 function getDependencies() {
-  const { devDependencies = {} } = readJson();
+  const devDependencies = getPkg('devDependencies');
 
   const prettier = 'prettier' in devDependencies;
   const eslint = 'eslint' in devDependencies;
@@ -40,7 +17,11 @@ function getDependencies() {
   return { rustywind, garou, stylelint, eslint, prettier, typescript };
 }
 
-export function lint({ shell }) {
+export const command = 'lint staged';
+
+export const describe = 'Lint and format git staged files';
+
+export function handler() {
   const dependencies = getDependencies();
 
   const config = getConfig(dependencies);
@@ -51,10 +32,9 @@ export function lint({ shell }) {
     config,
     cwd: process.cwd(),
     debug: false,
-    maxArgLength: getMaxArgLength() / 2,
     quiet: false,
     relative: false,
-    shell: Boolean(shell),
+    shell: false,
     stash: true,
   })
     .then((passed) => {

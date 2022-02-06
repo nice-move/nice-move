@@ -1,6 +1,14 @@
 #!/usr/bin/env node
 
-import { eslintInspector, stylelintInspector } from './index.mjs';
+import load from '@commitlint/load';
+
+import { eslintInspector, save, stylelintInspector } from './index.mjs';
+
+const { rules } = await load.default({
+  extends: ['@nice-move/commitlint-config'],
+});
+
+save('commitlint.json', rules);
 
 eslintInspector('@nice-move/base', 'sample.js', 'js.json');
 eslintInspector('@nice-move/base', 'src/sample.js', 'src/js.json');

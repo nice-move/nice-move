@@ -49,7 +49,7 @@ function action(isGit, wanted = {}) {
       const useLint = eslint || stylelint || prettier || garou;
 
       const prepublishOnly = [
-        useLint ? 'npm run lint' : undefined,
+        useLint ? 'npm run lint:staged' : undefined,
         ava ? 'npm test' : undefined,
       ].filter(Boolean);
 
@@ -62,7 +62,12 @@ function action(isGit, wanted = {}) {
       if (commitlint) {
         await new Text()
           .onDone(() =>
-            ['#!/bin/sh', '', 'npx --no-install commitlint -e', ''].join('\n'),
+            [
+              '#!/bin/sh',
+              '',
+              'npx --no-install nice-move lint commit',
+              '',
+            ].join('\n'),
           )
           .output('.githooks/commit-msg');
       }
@@ -91,24 +96,17 @@ function action(isGit, wanted = {}) {
                 },
               }
             : undefined,
-          commitlint
+          useLint || commitlint
             ? {
-                commitlint: {
-                  extends: '@nice-move/commitlint-config',
-                },
                 devDependencies: {
-                  commitlint: latest.commitlint,
-                  '@nice-move/commitlint-config': latest['commitlint-config'],
+                  '@nice-move/cli': latest.cli,
                 },
               }
             : undefined,
           useLint
             ? {
-                devDependencies: {
-                  '@nice-move/cli': latest.cli,
-                },
                 scripts: {
-                  lint: 'nice-move lint',
+                  'lint:staged': 'nice-move lint staged',
                 },
               }
             : undefined,

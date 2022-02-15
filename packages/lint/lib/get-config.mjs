@@ -1,6 +1,3 @@
-import { resolve } from 'path';
-import { fileURLToPath } from 'url';
-
 function parse(obj) {
   const io = Object.entries(obj)
     .map(([key, value]) => [key, value.filter(Boolean)])
@@ -19,52 +16,46 @@ export function getConfig({
 }) {
   const useColor = process.stdin.isTTY ? ' --color' : '';
 
-  const yarnConfig = resolve(fileURLToPath(import.meta.url), '../yarn.cjs');
-
   return parse({
     '*.{{wx,tt,q,ax,jx,ks}ml,swan}': [rustywind && 'rustywind --write'],
-    '{ts,js,project.,project.private.}config.json': [garou && 'garou'],
     '*.{vue,html,htm,md}': [
       rustywind && 'rustywind --write',
       garou && 'garou',
-      prettier && `prettier --write --ignore-unknown${useColor}`,
+      prettier && `prettier -w -u${useColor}`,
       stylelint &&
         `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
-      eslint && `eslint --fix --format=pretty${useColor}`,
+      eslint && `eslint --fix -f=pretty${useColor}`,
     ],
-    '*.{ts,tsx}': [
+    '*.{ts,tsx,mts,cts}': [
       rustywind && 'rustywind --write',
       garou && 'garou',
-      prettier && `prettier --write --ignore-unknown${useColor}`,
-      eslint && `eslint --fix --format=pretty${useColor}`,
+      prettier && `prettier -w -u${useColor}`,
+      eslint && `eslint --fix -f=pretty${useColor}`,
       typescript && (() => 'tsc --noEmit'),
     ],
     '*.{js,jsx,mjs,cjs,wxs,qs}': [
       rustywind && 'rustywind --write',
       garou && 'garou',
-      prettier && `prettier --write --ignore-unknown${useColor}`,
-      eslint && `eslint --fix --format=pretty${useColor}`,
+      prettier && `prettier -w -u${useColor}`,
+      eslint && `eslint --fix -f=pretty${useColor}`,
     ],
     '*.{c,sc,le,wx,q,tt,jx,ac}ss': [
       garou && 'garou',
-      prettier && `prettier --write --ignore-unknown${useColor}`,
+      prettier && `prettier -w -u${useColor}`,
       stylelint &&
         `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
     ],
-    '{*.{json,editorconfig,yml,yaml},.{babel,npm}rc}': [
-      prettier && `prettier --write --ignore-unknown${useColor}`,
+    '{*.{json,jsonc,webmanifest,editorconfig,yml,yaml,toml},.{babel,npm}rc}': [
+      prettier && `prettier -w -u${useColor}`,
     ],
     '*.svg': [
       garou && 'garou',
-      prettier && `prettier --parser html --write --ignore-unknown${useColor}`,
-      prettier && `prettier --write --ignore-unknown${useColor}`,
+      prettier && `prettier --parser html -w -u${useColor}`,
+      prettier && `prettier -w -u${useColor}`,
       stylelint &&
         `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
-      eslint && `eslint --fix --format=pretty${useColor}`,
+      eslint && `eslint --fix -f=pretty${useColor}`,
     ],
-    'yarn.lock': [
-      'yarn-deduplicate',
-      `replace-in-file --configFile="${yarnConfig}"`,
-    ],
+    'yarn.lock': [garou && 'garou'],
   });
 }

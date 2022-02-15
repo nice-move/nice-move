@@ -2,7 +2,7 @@ export default {
   ava: '^4.0.1',
   eslint: '^8.8.0',
   'eslint-plugin-ava': '^13.2.0',
-  garou: '^0.3.11',
+  garou: '^0.4.0',
   prettier: '^2.5.1',
   stylelint: '^14.3.0',
   typescript: '^4.5.5',

@@ -1,3 +1,4 @@
+import { execSync } from 'child_process';
 import { readdirSync } from 'fs';
 
 import centra from 'centra';
@@ -45,9 +46,14 @@ export function trim(value) {
 }
 
 function getUser() {
-  return import('user-meta')
-    .then(({ default: meta }) => meta)
-    .catch(() => ({}));
+  try {
+    return {
+      name: execSync('git config user.name').toString().trim(),
+      email: execSync('git config user.email').toString().trim(),
+    };
+  } catch {
+    return {};
+  }
 }
 
 export async function getAuthor(author) {
@@ -55,7 +61,7 @@ export async function getAuthor(author) {
     return author;
   }
 
-  const meta = await getUser();
+  const meta = getUser();
 
   return meta.name ? stringify(meta) : 'Unknown';
 }

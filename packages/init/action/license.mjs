@@ -3,6 +3,8 @@ import { getPkg } from 'settingz';
 
 import { cyan } from '../lib/color.mjs';
 import { getAuthorName } from '../lib/utils.mjs';
+import mit from '../template/mit.txt';
+import unlicense from '../template/unlicense.txt';
 
 export async function License() {
   const { license, author = '' } = getPkg();
@@ -13,16 +15,12 @@ export async function License() {
     const holder = await getAuthorName(author);
 
     return new Text()
-      .source(
-        isMIT ? '../../template/mit.tpl' : '../../template/unlicense.tpl',
-        import.meta.url,
-      )
-      .onDone((text) =>
+      .onDone(() =>
         isMIT
-          ? text
+          ? mit
               .replace('{{year}}', new Date().getFullYear())
               .replace('{{holder}}', holder)
-          : text,
+          : unlicense,
       )
       .output('LICENSE')
       .logger('Create/Overwrite', cyan('LICENSE'))

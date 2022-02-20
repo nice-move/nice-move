@@ -5,6 +5,7 @@ import ora from 'ora';
 
 import { cyan, green, red } from '../lib/color.mjs';
 import { download } from '../lib/utils.mjs';
+import gitattributes from '../template/.gitattributes.txt';
 
 const regexp =
   /# Created by https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+[\S\s]+# End of https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+/;
@@ -37,7 +38,7 @@ function getPlatform(context) {
 
 export async function GitFile() {
   await new Text()
-    .source('../../template/.gitattributes.tpl', import.meta.url)
+    .onDone(() => gitattributes)
     .output('.gitattributes')
     .logger('Create/Overwrite', cyan('.gitattributes'));
 

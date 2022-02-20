@@ -1,10 +1,10 @@
-import { EditorConfig } from './action/editorconfig.mjs';
-import { GitFile } from './action/git-file.mjs';
-import { License } from './action/license.mjs';
-import { Package } from './action/package.mjs';
-import { Readme } from './action/readme.mjs';
-import { Registry } from './action/registry.mjs';
-import { Prompt } from './prompt/index.mjs';
+import { EditorConfig } from '../action/editorconfig.mjs';
+import { GitFile } from '../action/git-file.mjs';
+import { License } from '../action/license.mjs';
+import { Package } from '../action/package.mjs';
+import { Readme } from '../action/readme.mjs';
+import { Registry } from '../action/registry.mjs';
+import { Prompt } from '../prompt/index.mjs';
 
 export async function init() {
   const {

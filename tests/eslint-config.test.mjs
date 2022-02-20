@@ -1,4 +1,5 @@
 import { eslintInspector } from '@nice-move/inspector';
+// eslint-disable-next-line import/no-unresolved
 import test from 'ava';
 
 const baseEngine = (filename) => eslintInspector('@nice-move/base', filename);
@@ -42,7 +43,7 @@ test('Base type', async (t) => {
 });
 
 test('Dir depth', async (t) => {
-  t.deepEqual(
+  t.notDeepEqual(
     //-
     await baseEngine('sample.js'),
     await baseEngine('src/sample.js'),
@@ -56,15 +57,5 @@ test('Dir depth', async (t) => {
   t.deepEqual(
     await baseEngine('src/abc/sample.js'),
     await baseEngine('src/abc/efg/sample.js'),
-  );
-
-  t.deepEqual(
-    await vueEngine('src/sample.vue'),
-    await vueEngine('src/abc/sample.vue'),
-  );
-
-  t.deepEqual(
-    await reactEngine('src/sample.jsx'),
-    await reactEngine('src/abc/sample.jsx'),
   );
 });

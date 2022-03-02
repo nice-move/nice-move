@@ -4,9 +4,13 @@ module.exports = {
   env: {
     browser: true,
     commonjs: false,
-    es2017: true,
-    es2020: true,
+    es2022: true,
     es2021: true,
+    es2020: true,
+    es2019: true,
+    es2018: true,
+    es2017: true,
+    es2016: true,
     node: false,
   },
   extends: ['plugin:sonarjs/recommended'],
@@ -31,6 +35,7 @@ module.exports = {
   },
   plugins: ['eslint-comments'],
   rules: {
+    'eslint-comments/no-unused-enable': 'warn',
     'array-callback-return': [
       'error',
       {
@@ -42,8 +47,6 @@ module.exports = {
     camelcase: 0,
     'class-methods-use-this': 'warn',
     'consistent-return': 'warn',
-    'eslint-comments/no-unused-disable': 'warn',
-    'eslint-comments/no-unused-enable': 'warn',
     'global-require': 0,
     'grouped-accessor-pairs': 0,
     'lines-between-class-members': 0,

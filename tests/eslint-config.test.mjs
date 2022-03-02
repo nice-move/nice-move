@@ -12,7 +12,7 @@ test('Pure js', async (t) => {
   const reactConfig = await reactEngine('sample.js');
 
   t.deepEqual(baseConfig, vueConfig);
-  t.deepEqual(baseConfig, reactConfig);
+  t.notDeepEqual(baseConfig, reactConfig);
 });
 
 test('Html support', async (t) => {

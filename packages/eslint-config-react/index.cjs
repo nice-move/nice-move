@@ -16,13 +16,16 @@ module.exports = {
       files: ['*.tsx', '*.jsx'],
       extends: [
         'airbnb',
-        'airbnb/hooks',
         ...(getConfig() ? ['plugin:react/jsx-runtime'] : []),
         ...roots.filter(
           (item) => !['eslint:recommended', 'airbnb-base'].includes(item),
         ),
         require.resolve('./lib/react.cjs'),
       ],
+    },
+    {
+      files: ['*.ts', '*.js', '*.mts', '*.mjs', '*.tsx', '*.jsx'],
+      extends: ['airbnb/hooks'],
     },
   ],
 };

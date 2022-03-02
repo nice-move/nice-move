@@ -94,9 +94,13 @@ function generate({ miniprogramRoot, pluginRoot, cloudfunctionRoot }) {
       files: excludedFiles,
       env: {
         browser: false,
+        es2022: false,
         es2021: false,
         es2020: false,
+        es2019: false,
+        es2018: false,
         es2017: false,
+        es2016: false,
         es6: false,
       },
       parserOptions: {

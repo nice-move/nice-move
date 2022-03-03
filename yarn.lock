@@ -2256,16 +2256,7 @@ eslint@^8.10.0:
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
 
-espree@^9.0.0:
-  version "9.3.1"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-9.3.1.tgz#8793b4bc27ea4c778c19908e0719e7b8f4115bcd"
-  integrity sha512-bvdyLmJMfwkV3NCRl5ZhJf22zBFo1y8bYh3VYb+bfzqNB4Je68P2sSuXyuFquzWLebHpNd2/d5uv7yoP9ISnGQ==
-  dependencies:
-    acorn "^8.7.0"
-    acorn-jsx "^5.3.1"
-    eslint-visitor-keys "^3.3.0"
-
-espree@^9.3.1:
+espree@^9.0.0, espree@^9.3.1:
   version "9.3.1"
   resolved "https://registry.yarnpkg.com/espree/-/espree-9.3.1.tgz#8793b4bc27ea4c778c19908e0719e7b8f4115bcd"
   integrity sha512-bvdyLmJMfwkV3NCRl5ZhJf22zBFo1y8bYh3VYb+bfzqNB4Je68P2sSuXyuFquzWLebHpNd2/d5uv7yoP9ISnGQ==
@@ -4764,7 +4755,7 @@ serialize-javascript@^6.0.0:
   dependencies:
     randombytes "^2.1.0"
 
-settingz@^0.1.5, settingz@^0.1.7:
+settingz@^0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/settingz/-/settingz-0.1.7.tgz#e3366019601df6c9f742a383857c218ffdfd0053"
   integrity sha512-4TzwZYfVzCTQkP12GRtBOTqbpNiSEoipELxRlrdKVqK2eaHgXHgmLSKqRZBrF4ZXBjpP1LFH51lZv2FiND1HCQ==

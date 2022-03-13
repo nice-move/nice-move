@@ -20,7 +20,7 @@
     "inspect": "nodemon",
     "lint:staged": "nice-move lint staged",
     "prepare": "git config core.hooksPath .githooks",
-    "test": "ava --fail-fast"
+    "test": "ava --fail-fast -c 1"
   },
   "workspaces": [
     "packages/*",

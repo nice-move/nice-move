@@ -10,9 +10,9 @@
   },
   "peerDependencies": {
     "@bring-it/cli": "^0.5.6",
-    "@playwright/test": "^1.19.1",
-    "@types/react": "^16.14.23",
-    "postcss": "^8.4.6",
+    "@playwright/test": "^1.19.2",
+    "@types/react": "^16.14.24",
+    "postcss": "^8.4.8",
     "react": "~16.14.0",
     "react-dom": "~16.14.0",
     "rustywind": "^0.13.0",

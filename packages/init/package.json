@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/init",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Initialize your frontend workspaces",
   "license": "MIT",
   "author": {
@@ -38,15 +38,14 @@
   "bin": {
     "nice-move-init": "dist/bin.cjs"
   },
-  "main": "bin/index.mjs",
   "files": [],
   "scripts": {
-    "build": "ncc build bin/index.mjs -o dist -m",
+    "build": "best-shot prod",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "centra": "^2.5.0",
-    "chalk": "^5.0.0",
+    "chalk": "^5.0.1",
     "deepmerge": "^4.2.2",
     "execa": "^6.1.0",
     "fs-chain": "^8.1.2",

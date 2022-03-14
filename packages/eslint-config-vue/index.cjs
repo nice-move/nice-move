@@ -3,9 +3,9 @@
 const { getPkg } = require('settingz');
 
 function getVersion() {
-  const { vue } = getPkg('dependencies');
+  const { vue = '' } = getPkg('dependencies');
 
-  return vue;
+  return vue.replace(/^[^~]/, '');
 }
 
 const version = getVersion();
@@ -15,7 +15,12 @@ module.exports = {
   overrides: [
     {
       files: '*.vue',
-      extends: ['plugin:vue/recommended', 'prettier'],
+      extends: [
+        version[0] === '3'
+          ? 'plugin:vue/vue3-recommended'
+          : 'plugin:vue/recommended',
+        'prettier',
+      ],
       parserOptions: {
         ecmaVersion: 2022,
       },

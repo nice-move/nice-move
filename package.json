@@ -28,7 +28,8 @@
   ],
   "dependencies": {
     "svgo": "^2.8.0",
-    "svgo-config": "^0.4.0"
+    "svgo-config": "^0.4.0",
+    "vue": "^3.2.31"
   },
   "devDependencies": {
     "@best-shot/cli": "^0.12.4",

@@ -19,7 +19,7 @@ export default {
   tailwindcss: '~3.0.23',
   vue: '~2.6.14',
   'eslint-config-base': '^0.6.3',
-  'stylelint-config': '^0.6.15',
+  'stylelint-config': '^0.6.16',
   'prettier-config': '^0.5.3',
   'commitlint-config': '^0.5.0',
   cli: '^0.7.1',

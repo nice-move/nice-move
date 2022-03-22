@@ -1,6 +1,6 @@
 'use strict';
 
-const { AT_RULE_NO_UNKNOWN } = require('./utils.cjs');
+const { FUNCTION_NO_UNKNOWN, AT_RULE_NO_UNKNOWN } = require('./utils.cjs');
 
 module.exports = {
   rules: {
@@ -24,6 +24,7 @@ module.exports = {
       },
     ],
     'function-url-quotes': 'always',
+    'function-no-unknown': FUNCTION_NO_UNKNOWN,
     'max-nesting-depth': [5, { severity: 'warning' }],
     'no-duplicate-selectors': [true, { severity: 'warning' }],
     'number-max-precision': [4, { severity: 'warning' }],

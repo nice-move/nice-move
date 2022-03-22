@@ -1,6 +1,6 @@
 'use strict';
 
-const { AT_RULE_NO_UNKNOWN } = require('./utils.cjs');
+const { AT_RULE_NO_UNKNOWN, FUNCTION_NO_UNKNOWN } = require('./utils.cjs');
 
 const loose = {
   severity: 'warning',
@@ -20,6 +20,7 @@ module.exports = {
       },
     ],
     'scss/selector-no-redundant-nesting-selector': true,
+    'scss/function-no-unknown': FUNCTION_NO_UNKNOWN,
 
     // off -------------
     'scss/at-import-no-partial-leading-underscore': null,

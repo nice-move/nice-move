@@ -13,7 +13,9 @@ function isMiniApp(value) {
   }
 }
 
-const AT_RULE_NO_UNKNOWN = haveLocalDependencies('tailwindcss')
+const tailwind = haveLocalDependencies('tailwindcss');
+
+const AT_RULE_NO_UNKNOWN = tailwind
   ? [
       true,
       {
@@ -29,7 +31,12 @@ const AT_RULE_NO_UNKNOWN = haveLocalDependencies('tailwindcss')
     ]
   : true;
 
+const FUNCTION_NO_UNKNOWN = tailwind
+  ? [true, { ignoreFunctions: ['theme'] }]
+  : true;
+
 module.exports = {
   isMiniApp,
   AT_RULE_NO_UNKNOWN,
+  FUNCTION_NO_UNKNOWN,
 };

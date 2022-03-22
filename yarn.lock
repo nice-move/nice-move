@@ -1278,12 +1278,12 @@ character-reference-invalid@^1.0.0:
   resolved "https://registry.yarnpkg.com/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
 
-cheetor@^0.12.2:
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/cheetor/-/cheetor-0.12.2.tgz#e9d6ad0673e7ddb6f0e495997314e0b73f825441"
-  integrity sha512-r1hE9koplr4p3Gld8zewgxK2uE5pwPGgFKfoBcyUU51WEqAmBmqBZwlyU8WkxXmjNaOzHSzC44Z89u2lp367oQ==
+cheetor@^0.12.2, cheetor@^0.12.5:
+  version "0.12.5"
+  resolved "https://registry.yarnpkg.com/cheetor/-/cheetor-0.12.5.tgz#e26bbd67d131f92a74d3697b1c58df8a60657b53"
+  integrity sha512-etmn+naj2HHLgTJm1Tq9OGdJNhcT1+A1J3QouqOEgO0raTcKKpv6965cuQdRgU2ge6vHyLQtgqwv1OiMFCHYSw==
   dependencies:
-    yargs "^17.2.1"
+    yargs "^17.3.1"
 
 chevrotain@7.1.1:
   version "7.1.1"
@@ -3873,7 +3873,7 @@ ms@^2.1.1, ms@^2.1.3:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-nanoid@^3.2.0, nanoid@^3.3.1:
+nanoid@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.1.tgz#6347a18cac88af88f58af0b3594b723d5e99bb35"
   integrity sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==
@@ -5864,7 +5864,7 @@ yargs-parser@^21.0.0:
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.0.0.tgz#a485d3966be4317426dd56bdb6a30131b281dc55"
   integrity sha512-z9kApYUOCwoeZ78rfRYYWdiU/iNL6mwwYlkkZfJoyMR1xps+NEBX5X7XmRpxkZHhXJ6+Ey00IwKxBBSW9FIjyA==
 
-yargs@^17.2.1, yargs@^17.3.1:
+yargs@^17.3.1:
   version "17.3.1"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.3.1.tgz#da56b28f32e2fd45aefb402ed9c26f42be4c07b9"
   integrity sha512-WUANQeVgjLbNsEmGk20f+nlHgOqzRFpiGWVaBrYGYIGANIIu3lWjoyi0fNlFmJkvfhCZ6BXINe7/W2O2bV4iaA==

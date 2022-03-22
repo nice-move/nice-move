@@ -36,11 +36,6 @@ module.exports = {
       rules: {
         'n/file-extension-in-import': 'error',
       },
-      settings: {
-        node: {
-          tryExtensions: ['.vue', '.tsx', '.jsx', '.ts', '.js'],
-        },
-      },
     },
     {
       // for node.js
@@ -54,11 +49,6 @@ module.exports = {
         exports: 'off',
         module: 'off',
         require: 'off',
-      },
-      settings: {
-        node: {
-          tryExtensions: ['.mjs', '.cjs', '.js', '.ts'],
-        },
       },
       rules: {
         'n/no-unsupported-features/es-syntax': [

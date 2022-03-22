@@ -48,12 +48,12 @@
     "node": "^12.22.0 || ^14.17.0 || >=16.13.0"
   },
   "eslintConfig": {
-    "extends": "@nice-move/eslint-config-base",
-    "rules": {
-      "import/no-extraneous-dependencies": 0
-    }
+    "extends": "@nice-move/eslint-config-base"
   },
   "nice-move": {
+    "bundle": [
+      "packages/init/**"
+    ],
     "internal-regex": "^@nice-move/inspector$"
   },
   "nodemonConfig": {

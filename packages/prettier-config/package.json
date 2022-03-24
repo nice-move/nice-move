@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-config",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "A `prettier` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -28,12 +28,12 @@
   "main": "index.cjs",
   "dependencies": {
     "@nice-move/prettier-plugin-package-json": "^0.5.1",
-    "@prettier/plugin-xml": "^1.2.0",
-    "prettier-plugin-ini": "^0.3.1",
+    "@prettier/plugin-xml": "^2.0.1",
+    "prettier-plugin-ini": "^1.0.0",
     "prettier-plugin-ssh-config": "^0.1.1"
   },
   "peerDependencies": {
-    "prettier": "^2.5.1"
+    "prettier": "^2.6.0"
   },
   "engines": {
     "node": "^12.22.0 || ^14.17.0 || >=16.13.0"

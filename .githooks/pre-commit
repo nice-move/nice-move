@@ -2,5 +2,5 @@
 
 npm exec pin-latest
 git add ./packages/init/lib/latest.mjs
-npm exec nice-move lint staged
+npm run lint:staged
 npm test

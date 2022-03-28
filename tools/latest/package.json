@@ -6,11 +6,11 @@
     "pin-latest": "index.cjs"
   },
   "dependencies": {
-    "fs-chain": "^8.1.2"
+    "fs-chain": "^8.2.0"
   },
   "peerDependencies": {
-    "@bring-it/cli": "^0.6.0",
-    "@playwright/test": "^1.20.0",
+    "@bring-it/cli": "^0.6.2",
+    "@playwright/test": "^1.20.1",
     "@types/react": "^16.14.24",
     "postcss": "^8.4.12",
     "react": "~16.14.0",

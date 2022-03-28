@@ -1,8 +1,8 @@
 import deepmerge from 'deepmerge';
 import { Json, Text } from 'fs-chain';
-import { getPkg } from 'settingz';
 
 import latest from '../lib/latest.mjs';
+import { getPkg } from '../lib/utils.mjs';
 
 function checkEslint({ vue, react }) {
   const type =

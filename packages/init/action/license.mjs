@@ -1,8 +1,7 @@
 import { Text } from 'fs-chain';
-import { getPkg } from 'settingz';
 
 import { cyan } from '../lib/color.mjs';
-import { getAuthorName } from '../lib/utils.mjs';
+import { getAuthorName, getPkg } from '../lib/utils.mjs';
 import mit from '../template/mit.txt';
 import unlicense from '../template/unlicense.txt';
 

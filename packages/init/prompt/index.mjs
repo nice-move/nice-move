@@ -1,9 +1,8 @@
 import isGitDirty from 'is-git-dirty';
 import isGitRepo from 'is-git-repository';
 import prompts from 'prompts';
-import { getPkg } from 'settingz';
 
-import { emptyDir, gitSupport } from '../lib/utils.mjs';
+import { emptyDir, getPkg, gitSupport } from '../lib/utils.mjs';
 
 import { Dependencies } from './dependencies.mjs';
 import { GitInit } from './git-init.mjs';

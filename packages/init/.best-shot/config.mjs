@@ -1,12 +1,13 @@
-export const config = [
-  {
-    name: 'init',
-    target: 'node14',
-    entry: {
-      cli: './bin/index.mjs',
-    },
-    output: {
-      path: 'dist',
-    },
+export const config = {
+  target: 'node14',
+  entry: {
+    cli: './bin/index.mjs',
   },
-];
+  output: {
+    path: 'dist',
+    module: true,
+  },
+  externals: {
+    'spawn-sync': 'spawn-sync commonjs2',
+  },
+};

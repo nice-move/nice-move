@@ -1,7 +1,7 @@
 import { Text } from 'fs-chain';
-import { getPkg } from 'settingz';
 
 import { cyan } from '../lib/color.mjs';
+import { getPkg } from '../lib/utils.mjs';
 
 export async function Readme() {
   const { name, description } = getPkg();

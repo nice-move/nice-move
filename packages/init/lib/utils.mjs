@@ -1,5 +1,6 @@
 import { execSync } from 'child_process';
-import { readdirSync } from 'fs';
+import { readdirSync, readFileSync } from 'fs';
+import { join } from 'path';
 
 import centra from 'centra';
 import { execa } from 'execa';
@@ -70,4 +71,12 @@ export async function getAuthorName(author) {
   const info = await getAuthor(author);
 
   return info.name || 'Unknown';
+}
+
+export function getPkg() {
+  try {
+    return JSON.parse(readFileSync(join(process.cwd(), 'package.json')));
+  } catch {
+    return {};
+  }
 }

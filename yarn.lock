@@ -1208,13 +1208,6 @@ character-reference-invalid@^1.0.0:
   resolved "https://registry.yarnpkg.com/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
 
-cheetor@^0.12.5:
-  version "0.12.5"
-  resolved "https://registry.yarnpkg.com/cheetor/-/cheetor-0.12.5.tgz#e26bbd67d131f92a74d3697b1c58df8a60657b53"
-  integrity sha512-etmn+naj2HHLgTJm1Tq9OGdJNhcT1+A1J3QouqOEgO0raTcKKpv6965cuQdRgU2ge6vHyLQtgqwv1OiMFCHYSw==
-  dependencies:
-    yargs "^17.3.1"
-
 cheetor@^0.13.0:
   version "0.13.0"
   resolved "https://registry.yarnpkg.com/cheetor/-/cheetor-0.13.0.tgz#d376e8fe2a6ef65e067c97206198fd4daaeeb93b"
@@ -2461,7 +2454,7 @@ format@^0.2.0:
   resolved "https://registry.yarnpkg.com/format/-/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
   integrity sha1-1hcBB+nv3E7TDJ3DkBbflCtctYs=
 
-fs-chain@^8.2.0, fs-chain@^8.2.1:
+fs-chain@^8.2.1:
   version "8.2.1"
   resolved "https://registry.yarnpkg.com/fs-chain/-/fs-chain-8.2.1.tgz#1469865abb8a5629042cd8f9189d1a4269a83a75"
   integrity sha512-9r5FIvkm2hZqVObzpm2sZapu5ERMSJVJUsDTQITykufAlgk3YsVzUhPSzc7tt8X+Zuz3zSv5pE1FSHPlw347BQ==

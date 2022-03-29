@@ -41,7 +41,6 @@ function action(isGit, wanted = {}) {
         tailwindcss = 'tailwindcss' in dependencies ||
           'tailwindcss' in devDependencies,
         rustywind = 'rustywind' in devDependencies,
-        postcss = 'postcss' in devDependencies,
         playwright = '@playwright/test' in devDependencies,
         'bring-it': bringIt = '@bring-it/cli' in devDependencies,
       } = wanted;
@@ -165,9 +164,6 @@ function action(isGit, wanted = {}) {
           rustywind
             ? { devDependencies: { tailwindcss: latest.rustywind } }
             : undefined,
-          postcss
-            ? { devDependencies: { postcss: latest.postcss } }
-            : undefined,
           playwright
             ? {
                 devDependencies: {
@@ -204,7 +200,6 @@ export function Dependencies() {
     'ava',
     'playwright',
     'bring-it',
-    'postcss',
     'tailwindcss',
   ];
 

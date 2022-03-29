@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@nice-move/lint": "^0.4.1",
-    "cheetor": "^0.12.5",
+    "cheetor": "^0.13.0",
     "execa": "^6.1.0",
     "settingz": "^0.1.7"
   },

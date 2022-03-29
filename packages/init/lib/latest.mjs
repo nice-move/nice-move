@@ -10,7 +10,6 @@ export default {
   '@bring-it/cli': '^0.6.2',
   '@playwright/test': '^1.20.1',
   '@types/react': '^16.14.24',
-  postcss: '^8.4.12',
   react: '~16.14.0',
   'react-dom': '~16.14.0',
   rustywind: '^0.13.0',
@@ -21,5 +20,5 @@ export default {
   'prettier-config': '^0.5.4',
   'commitlint-config': '^0.5.0',
   cli: '^0.7.1',
-  lts: '^12.22.0 || ^14.17.0 || >=16.13.0',
+  lts: '^14.17.0 || >=16.13.0',
 };

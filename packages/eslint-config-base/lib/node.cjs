@@ -53,7 +53,7 @@ module.exports = {
       rules: {
         'n/no-unsupported-features/es-syntax': [
           'error',
-          { ignores: ['modules', 'dynamicImport'] },
+          { ignores: ['modules'] },
         ],
       },
     },
@@ -69,10 +69,6 @@ module.exports = {
         strict: ['error', 'global'],
         'n/no-exports-assign': 'error',
         'n/no-new-require': 'error',
-        'n/no-unsupported-features/es-syntax': [
-          'error',
-          { ignores: ['dynamicImport'] },
-        ],
       },
     },
   ],

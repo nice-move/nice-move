@@ -27,6 +27,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'import/no-unresolved': 'off',
         'unicorn/filename-case': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
       },
     },
   ],

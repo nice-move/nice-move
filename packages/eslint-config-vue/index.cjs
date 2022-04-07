@@ -27,6 +27,7 @@ module.exports = {
       rules: {
         'vue/attributes-order': 0,
         'vue/component-name-in-template-casing': ['warn', 'PascalCase'],
+        'vue/component-tags-order': 0,
         'vue/multi-word-component-names': 0,
         'vue/no-duplicate-attr-inheritance': 'warn',
         'vue/no-empty-component-block': 'error',

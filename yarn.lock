@@ -361,7 +361,7 @@
     semver "^7.3.5"
     tsutils "^3.21.0"
 
-"@typescript-eslint/parser@^5.15.0", "@typescript-eslint/parser@^5.18.0":
+"@typescript-eslint/parser@^5.18.0":
   version "5.18.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-5.18.0.tgz#2bcd4ff21df33621df33e942ccb21cb897f004c6"
   integrity sha512-+08nYfurBzSSPndngnHvFw/fniWYJ5ymOrn/63oMIbgomVQOvIDhBoJmYZ9lwQOCnQV9xHGvf88ze3jFGUYooQ==
@@ -2491,14 +2491,14 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-garou@^0.4.4:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/garou/-/garou-0.4.4.tgz#23ddc7c135b057046d81849af3e370976a8909d3"
-  integrity sha512-vx8W+B4ZQXtA3MlcL5Hdg0AJEHG4XLQLXBM7MXyiiYO1SICsdwed550zhp1WwDB/gzvcTFwNF4jmRU9k/D6w6A==
+garou@^0.4.6:
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/garou/-/garou-0.4.6.tgz#138321bb324a31de45f17aa5023025b44efec7cd"
+  integrity sha512-gEtKO7bH9bbessrCawmHN2UwxjurBUrILZc49sigfrQ2fe5WyqgVYpu1JR+iDRT/WPpgRMbpK0Yy4pBU7Oh+pg==
   dependencies:
-    "@typescript-eslint/parser" "^5.15.0"
+    "@typescript-eslint/parser" "^5.18.0"
     eslint-plugin-html "^6.2.0"
-    yargs "^17.3.1"
+    yargs "^17.4.0"
 
 get-caller-file@^2.0.5:
   version "2.0.5"
@@ -4321,10 +4321,10 @@ prettier-plugin-ssh-config@^0.1.1:
   dependencies:
     ssh-config "^4.1.1"
 
-prettier@>=2.3, prettier@>=2.4.0, prettier@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.1.tgz#d472797e0d7461605c1609808e27b80c0f9cfe17"
-  integrity sha512-8UVbTBYGwN37Bs9LERmxCPjdvPxlEowx2urIL6urHzdb3SDq4B/Z6xLFCblrSnE4iKWcS6ziJ3aOYrc1kz/E2A==
+prettier@>=2.3, prettier@>=2.4.0, prettier@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.2.tgz#e26d71a18a74c3d0f0597f55f01fb6c06c206032"
+  integrity sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==
 
 pretty-ms@^7.0.1:
   version "7.0.1"
@@ -5165,10 +5165,10 @@ svg-tags@^1.0.0:
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
-svgo-config@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/svgo-config/-/svgo-config-0.4.0.tgz#a4c64b6f12ca2ac0fe0ac7b2e4042593d5683563"
-  integrity sha512-GF3AaJhI3R4HUQAOBpG/6v+4I5V5rJ/D7DalIlp37F+Er/eVkgBvMN4D+/K6EVOanJJMJ/c36nJVnCmp9FC+og==
+svgo-config@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/svgo-config/-/svgo-config-0.4.1.tgz#da12e09f606ab2f30f1311719d447816cf45c6c3"
+  integrity sha512-zP0ipU7UpS6s8wQk16mulZXqgL2CUwQIMYR+IsBrfNshKxu6VGwRQSmmhKZVvay4bUXH1jqBGXUMub6jUe58/w==
 
 svgo@^2.8.0:
   version "2.8.0"

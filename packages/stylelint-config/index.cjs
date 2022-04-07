@@ -46,6 +46,16 @@ module.exports = {
     {
       files: ['**/*.less'],
       customSyntax: 'postcss-less',
+      rules: {
+        'function-no-unknown': [
+          true,
+          {
+            ignoreFunctions: [
+              /^(if|boolean|e|escape|%|replace|length|extract|range|each|ceil|floor|percentage|round|sqrt|abs|sin|asin|cos|acos|tan|atan|pi|pow|mod|min|max|isnumber|isstring|iscolor|iskeyword|isurl|ispixel|isem|ispercentage|isunit|isruleset|isdefined|color|image-size|image-width|image-height|convert|data-uri|default|unit|get-unit|svg-gradient|rgb|rgba|argb|hsl|hsla|hsv|hsva|hue|saturation|lightness|hsvhue|hsvsaturation|hsvvalue|red|green|blue|alpha|luma|luminance|saturate|desaturate|lighten|darken|fadein|fadeout|fade|spin|mix|tint|shade|greyscale|contrast|multiply|screen|overlay|softlight|hardlight|difference|exclusion|average|negation)$/,
+            ],
+          },
+        ],
+      },
     },
     {
       files: ['**/*.{html,htm,svg,vue}'],

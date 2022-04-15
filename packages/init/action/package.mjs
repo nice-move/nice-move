@@ -56,9 +56,11 @@ export function Package(info) {
       ]),
     )
     .onDone((final) => {
-      if (!final.private) {
+      if (final.private === true) {
         Registry();
       }
+
+      return final;
     })
     .output()
     .logger('Add project info to', cyan(pkg))

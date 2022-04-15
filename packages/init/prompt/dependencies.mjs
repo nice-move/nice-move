@@ -71,6 +71,19 @@ function action(isGit, wanted = {}) {
           .output('.githooks/commit-msg');
       }
 
+      if (typescript) {
+        await new Json()
+          .config({ pretty: true })
+          .onDone(() => ({
+            compilerOptions: {
+              jsx: 'preserve',
+              strict: true,
+              target: 'es2022',
+            },
+          }))
+          .output('tsconfig.json');
+      }
+
       return deepmerge.all(
         [
           old,
@@ -92,6 +105,9 @@ function action(isGit, wanted = {}) {
             ? {
                 devDependencies: {
                   typescript: latest.typescript,
+                },
+                scripts: {
+                  'lint:type': 'tsc --noEmit',
                 },
               }
             : undefined,
@@ -168,6 +184,9 @@ function action(isGit, wanted = {}) {
             ? {
                 devDependencies: {
                   '@playwright/test': latest['@playwright/test'],
+                },
+                scripts: {
+                  'test:e2e': 'playwright test',
                 },
               }
             : undefined,

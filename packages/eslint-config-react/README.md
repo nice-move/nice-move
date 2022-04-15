@@ -43,13 +43,12 @@ eslint --fix .
 
 [ava]: https://github.com/avajs/ava
 [webpack]: https://webpack.js.org/
-[best-shot]: https://github.com/best-shot/best-shot
 
 | Environment | pattern                                                                                      |
 | :---------- | :------------------------------------------------------------------------------------------- |
-| browser     | `.js`, `.jsx`, `.html`                                                                       |
-| node.js     | `.mjs`, `.cjs`                                                                               |
-| es modules  | `.mjs`, `.js`, `.jsx`, `.html`                                                               |
+| browser     | `.js`, `.html`, `.jsx`                                                                       |
+| node.js     | `.mjs`, `.mts`, `.cjs`, `.cts`                                                               |
+| es modules  | `.mjs`, `.mts`, `.js`, `.html`, `.jsx`                                                       |
 | commonjs    | `.cjs`, source code in webpack project                                                       |
 | [webpack]   | `src/**`, `packages/*/**`                                                                    |
 | [ava]       | `{test,tests,spec,specs}/**`, `**/*.{test,spec}.*` <br /> when `eslint-plugin-ava` installed |

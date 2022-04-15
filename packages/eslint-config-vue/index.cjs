@@ -32,6 +32,8 @@ module.exports = {
         'vue/no-duplicate-attr-inheritance': 'warn',
         'vue/no-empty-component-block': 'error',
         'vue/no-template-target-blank': ['error', { allowReferrer: true }],
+        'vue/no-v-for-template-key': 'warn',
+        'vue/no-v-model-argument': 0,
         'vue/order-in-components': 0,
         'vue/padding-line-between-blocks': 0,
         'vue/require-name-property': 'warn',

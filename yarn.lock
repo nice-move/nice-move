@@ -964,14 +964,14 @@ base64-js@^1.3.1:
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
-best-shot@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/best-shot/-/best-shot-0.2.0.tgz#d8f3d3499c3a821ec9849f1a8317fb5aee710c69"
-  integrity sha512-pxdwXSqKOf84aM6CxbQ4LVCuYOY3qjhJYeegVGQYYsTSy7y2iPqU3NBEFt7Q4dvYcxOtyhVVhmVZBplTrFQ1+w==
+best-shot@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/best-shot/-/best-shot-0.2.2.tgz#810d7c7b686d8a9e09e7c320a1fcaf478869f268"
+  integrity sha512-apxbTVJdsYFVG3iuyADAT6BV+gw+xl+K8r09fEnnKDJV2mTd+SOJ/28EjlEH2A8KHqb/9qpZp2EU8tyWDRFFyA==
   dependencies:
     browserslist "^4.20.2"
     terser-webpack-plugin "^5.3.1"
-    webpack "^5.70.0"
+    webpack "^5.72.0"
 
 binary-extensions@^2.0.0:
   version "2.2.0"
@@ -3337,10 +3337,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
-lint-staged@^12.3.7:
-  version "12.3.7"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.3.7.tgz#ad0e2014302f704f9cf2c0ebdb97ac63d0f17be0"
-  integrity sha512-/S4D726e2GIsDVWIk1XGvheCaDm1SJRQp8efamZFWJxQMVEbOwSysp7xb49Oo73KYCdy97mIWinhlxcoNqIfIQ==
+lint-staged@^12.3.8:
+  version "12.3.8"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.3.8.tgz#ee3fe2e16c9d76f99d8348072900b017d6d76901"
+  integrity sha512-0+UpNaqIwKRSGAFOCcpuYNIv/j5QGVC+xUVvmSdxHO+IfIGoHbFLo3XcPmV/LLnsVj5EAncNHVtlITSoY5qWGQ==
   dependencies:
     cli-truncate "^3.1.0"
     colorette "^2.0.16"
@@ -4690,10 +4690,10 @@ serialize-javascript@^6.0.0:
   dependencies:
     randombytes "^2.1.0"
 
-settingz@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/settingz/-/settingz-0.1.7.tgz#e3366019601df6c9f742a383857c218ffdfd0053"
-  integrity sha512-4TzwZYfVzCTQkP12GRtBOTqbpNiSEoipELxRlrdKVqK2eaHgXHgmLSKqRZBrF4ZXBjpP1LFH51lZv2FiND1HCQ==
+settingz@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/settingz/-/settingz-0.1.9.tgz#4326b5a3b07a4a5148b4b1621ac95bbb6d1d4d91"
+  integrity sha512-KIqcIDQ0TBNerNML3mUjD6rbrCCipdkzbL9RR2B6YUBRamLYL+i8/2T90r5SYXC5cxmj2o88/J6WwzRdaW/Twg==
 
 shebang-command@^2.0.0:
   version "2.0.0"
@@ -5513,10 +5513,10 @@ webpack-sources@^3.2.3:
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.3.tgz#2d4daab8451fd4b240cc27055ff6a0c2ccea0cde"
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
-webpack@^5.70.0:
-  version "5.70.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.70.0.tgz#3461e6287a72b5e6e2f4872700bc8de0d7500e6d"
-  integrity sha512-ZMWWy8CeuTTjCxbeaQI21xSswseF2oNOwc70QSKNePvmxE7XW36i7vpBMYZFAUHPwQiEbNGCEYIOOlyRbdGmxw==
+webpack@^5.72.0:
+  version "5.72.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.72.0.tgz#f8bc40d9c6bb489a4b7a8a685101d6022b8b6e28"
+  integrity sha512-qmSmbspI0Qo5ld49htys8GY9XhS9CGqFoHTsOVAnjBdg0Zn79y135R+k4IR4rKK6+eKaabMhJwiVB7xw0SJu5w==
   dependencies:
     "@types/eslint-scope" "^3.7.3"
     "@types/estree" "^0.0.51"
@@ -5662,9 +5662,9 @@ yargs-parser@^21.0.0:
   integrity sha512-z9kApYUOCwoeZ78rfRYYWdiU/iNL6mwwYlkkZfJoyMR1xps+NEBX5X7XmRpxkZHhXJ6+Ey00IwKxBBSW9FIjyA==
 
 yargs@^17.3.1, yargs@^17.4.0:
-  version "17.4.0"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.4.0.tgz#9fc9efc96bd3aa2c1240446af28499f0e7593d00"
-  integrity sha512-WJudfrk81yWFSOkZYpAZx4Nt7V4xp7S/uJkX0CnxovMCt1wCE8LNftPpNuF9X/u9gN5nsD7ycYtRcDf2pL3UiA==
+  version "17.4.1"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.4.1.tgz#ebe23284207bb75cee7c408c33e722bfb27b5284"
+  integrity sha512-WSZD9jgobAg3ZKuCQZSa3g9QOJeCCqLoLAykiWgmXnDo9EPnn4RPf5qVTtzgOx66o6/oqhcA5tHtJXpG8pMt3g==
   dependencies:
     cliui "^7.0.2"
     escalade "^3.1.1"

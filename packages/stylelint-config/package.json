@@ -33,7 +33,7 @@
     "postcss-html": "^1.3.0",
     "postcss-less": "^6.0.0",
     "postcss-markdown": "^1.2.0",
-    "settingz": "^0.1.7",
+    "settingz": "^0.1.9",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-recommended-scss": "^6.0.0",

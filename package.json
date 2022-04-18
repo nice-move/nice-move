@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "ava": "^4.2.0",
-    "best-shot": "^0.2.0",
+    "best-shot": "^0.2.2",
     "eslint": "^8.13.0",
     "eslint-plugin-ava": "^13.2.0",
     "garou": "^0.4.6",
@@ -50,7 +50,8 @@
   },
   "nice-move": {
     "bundle": [
-      "packages/init/**"
+      "packages/init/**",
+      "packages/lint/**"
     ],
     "internal-regex": "^@nice-move/inspector$"
   },

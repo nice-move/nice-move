@@ -47,7 +47,7 @@
     "eslint-plugin-sonarjs": "^0.13.0",
     "eslint-plugin-unicorn": "^42.0.0",
     "espree": "^9.3.1",
-    "settingz": "^0.1.7"
+    "settingz": "^0.1.9"
   },
   "peerDependencies": {
     "eslint": "^8.13.0"

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/lint",
-  "version": "0.4.1",
+  "version": "0.5.1",
   "description": "Linter of '@nice-move/cli'",
   "license": "MIT",
   "author": {
@@ -32,13 +32,22 @@
   "bugs": {
     "url": "https://github.com/nice-move/nice-move/issues"
   },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "best-shot prod",
+    "prepublishOnly": "npm run build"
+  },
   "dependencies": {
+    "eslint-formatter-pretty": "^4.1.0",
+    "stylelint-formatter-pretty": "^3.1.0"
+  },
+  "devDependencies": {
     "@commitlint/format": "^16.2.1",
     "@commitlint/lint": "^16.2.1",
-    "eslint-formatter-pretty": "^4.1.0",
-    "lint-staged": "^12.3.7",
-    "settingz": "^0.1.7",
-    "stylelint-formatter-pretty": "^3.1.0"
+    "lint-staged": "^12.3.8",
+    "settingz": "^0.1.9"
   },
   "engines": {
     "node": "^14.17.0 || >=16.13.0"

@@ -1,5 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
-import lintStaged from 'lint-staged';
 import { getPkg } from 'settingz';
 
 import { getConfig } from '../lib/get-config.mjs';
@@ -17,16 +15,15 @@ function getDependencies() {
   return { rustywind, garou, stylelint, eslint, prettier, typescript };
 }
 
-export const command = 'lint staged';
+async function linter() {
+  // eslint-disable-next-line import/no-unresolved
+  const { default: lintStaged } = await import('lint-staged');
 
-export const describe = 'Lint and format git staged files';
-
-export function handler() {
   const dependencies = getDependencies();
 
   const config = getConfig(dependencies);
 
-  lintStaged({
+  return lintStaged({
     allowEmpty: true,
     concurrent: true,
     config,
@@ -36,11 +33,17 @@ export function handler() {
     relative: false,
     shell: false,
     stash: true,
-  })
-    .then((passed) => {
-      process.exitCode = passed ? 0 : 1;
-    })
-    .catch(() => {
-      process.exitCode = 1;
-    });
+  });
+}
+
+export function staged(cli) {
+  cli.command('staged', 'Lint and format git staged files', {}, () => {
+    linter()
+      .then((passed) => {
+        process.exitCode = passed ? 0 : 1;
+      })
+      .catch(() => {
+        process.exitCode = 1;
+      });
+  });
 }

@@ -64,9 +64,6 @@ module.exports = {
         files: (workspaces.packages || workspaces).map((item) =>
           join(item, '*'),
         ),
-        rules: {
-          'import/no-relative-packages': 'warn',
-        },
         settings: {
           'import/internal-regex': false,
         },

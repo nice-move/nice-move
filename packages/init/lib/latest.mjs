@@ -1,7 +1,7 @@
 export default {
   ava: '^4.2.0',
   'best-shot': '^0.2.4',
-  eslint: '^8.13.0',
+  eslint: '^8.14.0',
   'eslint-plugin-ava': '^13.2.0',
   garou: '^0.4.6',
   prettier: '^2.6.2',
@@ -15,7 +15,7 @@ export default {
   rustywind: '^0.14.0',
   tailwindcss: '~3.0.24',
   vue: '~3.2.33',
-  'eslint-config-base': '^0.6.8',
+  'eslint-config-base': '^0.6.9',
   'stylelint-config': '^0.6.17',
   'prettier-config': '^0.5.4',
   'commitlint-config': '^0.5.0',

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "description": "A `eslint` config for `react` project best practice",
   "license": "MIT",
   "author": {
@@ -36,12 +36,12 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "@nice-move/eslint-config-base": "^0.6.8",
+    "@nice-move/eslint-config-base": "^0.6.9",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.4.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
     "settingz": "^0.1.9"
   },
   "peerDependencies": {

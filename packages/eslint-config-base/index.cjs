@@ -28,7 +28,6 @@ module.exports = {
     'airbnb-base',
     require.resolve('./lib/unicorn.cjs'),
     require.resolve('./lib/promise.cjs'),
-    require.resolve('./lib/html.cjs'),
     require.resolve('./lib/import.cjs'),
     require.resolve('./lib/base.cjs'),
     require.resolve('./lib/electron.cjs'),
@@ -38,6 +37,7 @@ module.exports = {
     require.resolve('./lib/markdown.cjs'),
     require.resolve('./lib/test.cjs'),
     require.resolve('./lib/mini.cjs'),
+    'plugin:@nice-move/html/recommended',
     'prettier',
   ],
   ...configHas(

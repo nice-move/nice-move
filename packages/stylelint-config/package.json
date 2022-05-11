@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/stylelint-config",
-  "version": "0.6.17",
+  "version": "0.7.0",
   "description": "A `stylelint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -29,11 +29,11 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "postcss": "^8.4.12",
+    "postcss": "^8.4.13",
     "postcss-html": "^1.4.1",
     "postcss-less": "^6.0.0",
     "postcss-markdown": "^1.2.0",
-    "settingz": "^0.1.9",
+    "settingz": "^0.2.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-recommended-scss": "^6.0.0",
@@ -46,7 +46,7 @@
     "stylelint": "^14.6.1"
   },
   "engines": {
-    "node": "^12.22.0 || ^14.17.0 || >=16.13.0"
+    "node": "^14.17.0 || ^16.13.0 || >=18.0.0"
   },
   "publishConfig": {
     "access": "public",

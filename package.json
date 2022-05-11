@@ -39,11 +39,11 @@
     "garou": "^0.4.6",
     "nodemon": "^2.0.16",
     "prettier": "^2.6.2",
-    "stylelint": "^14.6.1",
+    "stylelint": "^14.8.2",
     "typescript": "^4.6.4"
   },
   "engines": {
-    "node": "^12.22.0 || ^14.17.0 || ^16.13.0 || >=18.0.0"
+    "node": "^14.17.0 || ^16.13.0 || >=18.0.0"
   },
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"

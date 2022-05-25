@@ -1,6 +1,6 @@
 import { getPkg } from 'settingz';
 
-import { getConfig } from '../lib/get-config.mjs';
+import { getConfig } from './get-config.mjs';
 
 function getDependencies() {
   const devDependencies = getPkg('devDependencies');

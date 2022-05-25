@@ -1,7 +1,7 @@
 export const config = {
   target: 'node14',
   entry: {
-    index: './src/index.mjs',
+    cli: './src/index.mjs',
   },
   output: {
     path: 'dist',
@@ -11,6 +11,10 @@ export const config = {
     {
       from: 'conventional-changelog-angular/writer-opts.js',
       to: new URL('fake.cjs', import.meta.url),
+    },
+    {
+      from: 'lint-staged/lib/loadConfig.js',
+      to: new URL('lint-staged-load-config.mjs', import.meta.url),
     },
   ],
 };

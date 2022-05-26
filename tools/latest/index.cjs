@@ -23,7 +23,6 @@ new JsonToText()
       'eslint-config-base',
       'stylelint-config',
       'prettier-config',
-      'commitlint-config',
       'cli',
     ),
     // eslint-disable-next-line import/no-extraneous-dependencies

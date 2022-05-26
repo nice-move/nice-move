@@ -19,7 +19,8 @@
   "scripts": {
     "inspect": "nodemon",
     "lint:staged": "nice-move lint staged",
-    "prepare": "git config core.hooksPath .githooks",
+    "lint:type": "tsc --noEmit",
+    "prepare": "nice-move git hooks",
     "test": "ava --fail-fast -c 1"
   },
   "workspaces": [
@@ -28,8 +29,7 @@
   ],
   "dependencies": {
     "svgo": "^2.8.0",
-    "svgo-config": "^0.4.1",
-    "vue": "^3.2.36"
+    "svgo-config": "^0.4.1"
   },
   "devDependencies": {
     "ava": "^4.2.0",

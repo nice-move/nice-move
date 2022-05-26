@@ -40,15 +40,16 @@ function action(isGit, wanted = {}) {
         vue = 'vue' in dependencies,
         tailwindcss = 'tailwindcss' in dependencies ||
           'tailwindcss' in devDependencies,
-        rustywind = 'rustywind' in devDependencies,
         playwright = '@playwright/test' in devDependencies,
         'bring-it': bringIt = '@bring-it/cli' in devDependencies,
+        'best-shot': bestShot = 'best-shot' in devDependencies,
       } = wanted;
 
       const useLint = eslint || stylelint || prettier || garou;
 
       const prepublishOnly = [
         useLint ? 'npm run lint:staged' : undefined,
+        typescript ? 'npm run lint:type' : undefined,
         ava ? 'npm test' : undefined,
       ].filter(Boolean);
 
@@ -87,10 +88,10 @@ function action(isGit, wanted = {}) {
       return deepmerge.all(
         [
           old,
-          isGit && (useLint || ava || commitlint)
+          isGit && (useLint || ava || commitlint || playwright || typescript)
             ? {
                 scripts: {
-                  prepare: 'git config core.hooksPath .githooks',
+                  prepare: 'nice-move git hooks',
                 },
               }
             : undefined,
@@ -175,10 +176,16 @@ function action(isGit, wanted = {}) {
             : undefined,
           vue ? { dependencies: { vue: latest.vue } } : undefined,
           tailwindcss
-            ? { dependencies: { tailwindcss: latest.tailwindcss } }
-            : undefined,
-          rustywind
-            ? { devDependencies: { tailwindcss: latest.rustywind } }
+            ? {
+                dependencies: {
+                  tailwindcss: latest.tailwindcss,
+                },
+                devDependencies: {
+                  'prettier-plugin-tailwindcss': prettier
+                    ? latest['prettier-plugin-tailwindcss']
+                    : undefined,
+                },
+              }
             : undefined,
           playwright
             ? {
@@ -197,6 +204,13 @@ function action(isGit, wanted = {}) {
                 },
               }
             : undefined,
+          bestShot
+            ? {
+                devDependencies: {
+                  'best-shot': latest['best-shot'],
+                },
+              }
+            : undefined,
         ].filter(Boolean),
       );
     })
@@ -207,6 +221,7 @@ function action(isGit, wanted = {}) {
 
 export function Dependencies() {
   const list = [
+    'tailwindcss',
     'react',
     'vue',
     'typescript',
@@ -215,11 +230,10 @@ export function Dependencies() {
     'stylelint',
     'prettier',
     'garou',
-    'rustywind',
     'ava',
     'playwright',
     'bring-it',
-    'tailwindcss',
+    'best-shot',
   ];
 
   const { dependencies = {}, devDependencies = {} } = getPkg();

@@ -1,11 +1,11 @@
 export default {
   ava: '^4.2.0',
-  'best-shot': '^0.2.6',
+  'best-shot': '^0.2.7',
   eslint: '^8.16.0',
   'eslint-plugin-ava': '^13.2.0',
   garou: '^0.4.8',
   prettier: '^2.6.2',
-  stylelint: '^14.8.4',
+  stylelint: '^14.8.5',
   typescript: '^4.7.2',
   '@bring-it/cli': '^0.6.2',
   '@playwright/test': '^1.21.0',

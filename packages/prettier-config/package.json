@@ -28,7 +28,7 @@
   "main": "index.cjs",
   "dependencies": {
     "@nice-move/prettier-plugin-package-json": "^0.5.1",
-    "@prettier/plugin-xml": "^2.1.0",
+    "@prettier/plugin-xml": "^2.2.0",
     "prettier-plugin-ini": "^1.0.0",
     "prettier-plugin-ssh-config": "^0.1.1"
   },

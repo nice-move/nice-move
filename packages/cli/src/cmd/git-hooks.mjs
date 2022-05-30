@@ -1,38 +1,59 @@
-/* eslint-disable promise/no-nesting */
-import { execa } from 'execa';
+import execa from 'execa';
 
 export const command = 'git';
 
 export const description = '';
 
+const cwd = process.cwd();
+
+function gitSupport() {
+  try {
+    return Boolean(execa.sync('git', ['--version'], { cwd }).stdout);
+  } catch {
+    throw new Error('git is not installed');
+  }
+}
+
 function isGitDir() {
-  return execa('git', ['rev-parse', '--is-inside-git-dir']).then(
-    ({ stdout }) => stdout === 'true',
-  );
+  try {
+    return (
+      execa.sync('git', ['rev-parse', '--is-inside-work-tree'], {
+        cwd,
+      }).stdout === 'true'
+    );
+  } catch {
+    throw new Error('not a git repository');
+  }
 }
 
 function setHook() {
-  return execa('git', ['config', 'core.hooksPath', '.githooks']).then(
-    ({ stderr }) => !stderr,
-  );
+  return execa('git', ['config', 'core.hooksPath', '.githooks'], {
+    cwd,
+  });
+}
+
+function check() {
+  try {
+    return gitSupport() && isGitDir();
+  } catch (error) {
+    console.error('Fail:', error.message);
+
+    return false;
+  }
 }
 
 export function builder(cli) {
   cli.command('hooks', 'Set .githooks as git.hooksPath', {}, () => {
-    isGitDir()
-      .then((okay) => {
-        if (okay) {
-          setHook()
-            .then(() => {
-              console.log('Done: set .githooks');
-            })
-            .catch((error) => {
-              process.exitCode = 1;
-              console.error('Error:', error.message);
-            });
-        }
-      })
-      .catch(() => {});
+    if (check()) {
+      setHook()
+        .then(() => {
+          console.log('Done: set .githooks');
+        })
+        .catch(() => {
+          console.error('Fail:', 'setting hooks failed');
+          process.exitCode = 1;
+        });
+    }
   });
 
   cli.demandCommand(1, 'Typing `hooks`');

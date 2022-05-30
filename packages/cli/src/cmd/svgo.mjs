@@ -1,6 +1,6 @@
 import { createRequire } from 'module';
 
-import { execa } from 'execa';
+import execa from 'execa';
 import { isReachable } from 'settingz';
 
 // eslint-disable-next-line consistent-return

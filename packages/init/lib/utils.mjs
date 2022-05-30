@@ -3,7 +3,6 @@ import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 
 import centra from 'centra';
-import { execa } from 'execa';
 import stringify from 'stringify-author';
 
 export function download(url) {
@@ -26,16 +25,6 @@ export function download(url) {
 
       throw new Error('template download fail');
     });
-}
-
-export async function gitSupport() {
-  try {
-    const { stdout } = await execa('git', ['--version']);
-
-    return Boolean(stdout);
-  } catch {
-    return false;
-  }
 }
 
 export function emptyDir() {

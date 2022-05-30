@@ -1,17 +1,32 @@
-import isGitDirty from 'is-git-dirty';
-import isGitRepo from 'is-git-repository';
+import { execa } from 'execa';
 import prompts from 'prompts';
 
-import { emptyDir, getPkg, gitSupport } from '../lib/utils.mjs';
+import { emptyDir, getPkg } from '../lib/utils.mjs';
 
 import { Dependencies } from './dependencies.mjs';
 import { GitInit } from './git-init.mjs';
 import { Install } from './install.mjs';
 import { Package } from './package.mjs';
 
+function gitSupport() {
+  return execa('git', ['--version']).then(({ stdout }) => Boolean(stdout));
+}
+
+function isGitDir() {
+  return execa('git', ['rev-parse', '--is-inside-git-dir']).then(
+    ({ stdout }) => stdout === 'true',
+  );
+}
+
+function isGitDirty() {
+  return execa('git', ['status', '--short']).then(
+    ({ stdout }) => stdout.length > 0,
+  );
+}
+
 export async function Prompt() {
   const gitSupported = await gitSupport();
-  const isGit = gitSupported && isGitRepo();
+  const isGit = gitSupported && isGitDir();
   const isDirty = isGit ? isGitDirty() : false;
   const isEmpty = emptyDir();
   const pkg = getPkg();

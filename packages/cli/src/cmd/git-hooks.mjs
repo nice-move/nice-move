@@ -1,27 +1,28 @@
+/* eslint-disable promise/no-nesting */
 import { execa } from 'execa';
-import isGitRepo from 'is-git-repository';
 
 export const command = 'git';
 
 export const description = '';
 
-export async function gitSupport() {
-  try {
-    const { stdout } = await execa('git', ['--version']);
+function isGitDir() {
+  return execa('git', ['rev-parse', '--is-inside-git-dir']).then(
+    ({ stdout }) => stdout === 'true',
+  );
+}
 
-    return Boolean(stdout);
-  } catch {
-    return false;
-  }
+function setHook() {
+  return execa('git', ['config', 'core.hooksPath', '.githooks']).then(
+    ({ stderr }) => !stderr,
+  );
 }
 
 export function builder(cli) {
   cli.command('hooks', 'Set .githooks as git.hooksPath', {}, () => {
-    gitSupport()
-      .then((support) => {
-        if (support && isGitRepo()) {
-          // eslint-disable-next-line promise/no-nesting
-          execa('git config core.hooksPath .githooks')
+    isGitDir()
+      .then((okay) => {
+        if (okay) {
+          setHook()
             .then(() => {
               console.log('Done: set .githooks');
             })

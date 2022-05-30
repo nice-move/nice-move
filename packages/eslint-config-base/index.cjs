@@ -57,7 +57,7 @@ module.exports = {
     '.git/',
     '.svn/',
     '*.min.*',
-    '/dist/',
+    '**/dist/**',
     '**/miniprogram_npm/**',
     'node_modules/',
     ...BestShot(),

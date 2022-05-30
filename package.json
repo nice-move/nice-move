@@ -20,7 +20,7 @@
     "inspect": "nodemon",
     "lint:staged": "nice-move lint staged",
     "lint:type": "tsc --noEmit",
-    "prepare": "nice-move git hooks",
+    "prepare": "git config core.hooksPath .githooks",
     "test": "ava --fail-fast -c 1"
   },
   "workspaces": [

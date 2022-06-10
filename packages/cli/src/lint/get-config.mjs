@@ -6,20 +6,11 @@ function parse(obj) {
   return io.length > 0 ? Object.fromEntries(io) : undefined;
 }
 
-export function getConfig({
-  rustywind,
-  garou,
-  stylelint,
-  eslint,
-  prettier,
-  typescript,
-}) {
+export function getConfig({ garou, stylelint, eslint, prettier, typescript }) {
   const useColor = process.stdin.isTTY ? ' --color' : '';
 
   return parse({
-    '*.{{wx,tt,q,ax,jx,ks}ml,swan}': [rustywind && 'rustywind --write'],
     '*.{vue,html,htm,md}': [
-      rustywind && 'rustywind --write',
       garou && 'garou',
       prettier && `prettier -w -u${useColor}`,
       stylelint &&
@@ -27,14 +18,12 @@ export function getConfig({
       eslint && `eslint --fix -f=pretty${useColor}`,
     ],
     '*.{ts,tsx,mts,cts}': [
-      rustywind && 'rustywind --write',
       garou && 'garou',
       prettier && `prettier -w -u${useColor}`,
       eslint && `eslint --fix -f=pretty${useColor}`,
       typescript && (() => 'tsc --noEmit'),
     ],
     '*.{js,jsx,mjs,cjs,wxs,qs}': [
-      rustywind && 'rustywind --write',
       garou && 'garou',
       prettier && `prettier -w -u${useColor}`,
       eslint && `eslint --fix -f=pretty${useColor}`,
@@ -45,7 +34,11 @@ export function getConfig({
       stylelint &&
         `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
     ],
-    '{*.{json,jsonc,webmanifest,editorconfig,yml,yaml,toml},.{babel,npm}rc}': [
+    '*.{json,yml,yaml}': [
+      garou && 'garou',
+      prettier && `prettier -w -u${useColor}`,
+    ],
+    '{*.{jsonc,webmanifest,editorconfig,toml},.{babel,npm}rc}': [
       prettier && `prettier -w -u${useColor}`,
     ],
     '*.svg': [

@@ -2,7 +2,5 @@
 
 npm exec pin-latest
 git add ./packages/init/lib/latest.mjs
-npm prune
-npm dedupe
 npm run lint:staged
 npm test

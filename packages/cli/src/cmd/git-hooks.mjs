@@ -1,4 +1,4 @@
-import execa from 'execa';
+import { execa, execaSync } from 'execa';
 
 export const command = 'git';
 
@@ -8,7 +8,7 @@ const cwd = process.cwd();
 
 function gitSupport() {
   try {
-    return Boolean(execa.sync('git', ['--version'], { cwd }).stdout);
+    return Boolean(execaSync('git', ['--version'], { cwd }).stdout);
   } catch {
     throw new Error('git is not installed');
   }
@@ -17,7 +17,7 @@ function gitSupport() {
 function isGitDir() {
   try {
     return (
-      execa.sync('git', ['rev-parse', '--is-inside-work-tree'], {
+      execaSync('git', ['rev-parse', '--is-inside-work-tree'], {
         cwd,
       }).stdout === 'true'
     );

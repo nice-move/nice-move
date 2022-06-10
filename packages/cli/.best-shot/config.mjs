@@ -16,5 +16,9 @@ export const config = {
       from: 'lint-staged/lib/loadConfig.js',
       to: new URL('lint-staged-load-config.mjs', import.meta.url),
     },
+    {
+      from: '@commitlint/rules/lib/trailer-exists.js',
+      to: new URL('trailer-exists.cjs', import.meta.url),
+    },
   ],
 };

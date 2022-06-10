@@ -9,10 +9,9 @@ function getDependencies() {
   const eslint = 'eslint' in devDependencies;
   const stylelint = 'stylelint' in devDependencies;
   const garou = 'garou' in devDependencies;
-  const rustywind = 'rustywind' in devDependencies;
   const typescript = 'typescript' in devDependencies;
 
-  return { rustywind, garou, stylelint, eslint, prettier, typescript };
+  return { garou, stylelint, eslint, prettier, typescript };
 }
 
 async function linter() {
@@ -42,7 +41,8 @@ export function staged(cli) {
       .then((passed) => {
         process.exitCode = passed ? 0 : 1;
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error(error);
         process.exitCode = 1;
       });
   });

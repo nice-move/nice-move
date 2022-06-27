@@ -1,4 +1,4 @@
-import execa from 'execa';
+import { execa } from 'execa';
 import prompts from 'prompts';
 
 import { emptyDir, getPkg } from '../lib/utils.mjs';

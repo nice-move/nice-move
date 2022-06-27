@@ -16,7 +16,7 @@ function getLocalVersion(...names) {
 
 new JsonToText()
   .source('package.json')
-  .onDone(({ devDependencies: { nodemon, ...rest } }) => ({
+  .onDone(({ devDependencies: { nodemon, execa, ...rest } }) => ({
     ...rest,
     ...require('./package.json').peerDependencies,
     ...getLocalVersion(

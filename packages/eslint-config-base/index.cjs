@@ -59,7 +59,7 @@ module.exports = {
     '*.min.*',
     '**/dist/**',
     '**/miniprogram_npm/**',
-    'node_modules/',
+    '**/node_modules/**',
     ...BestShot(),
     ...ignoreList(),
   ],

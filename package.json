@@ -35,7 +35,7 @@
     "@bring-it/npm": "^0.0.1",
     "ava": "^4.3.1",
     "best-shot": "^0.2.11",
-    "eslint": "^8.18.0",
+    "eslint": "^8.20.0",
     "eslint-plugin-ava": "^13.2.0",
     "execa": "^6.1.0",
     "garou": "^0.4.14",

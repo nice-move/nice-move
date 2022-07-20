@@ -38,7 +38,7 @@
     "eslint": "^8.20.0",
     "eslint-plugin-ava": "^13.2.0",
     "execa": "^6.1.0",
-    "garou": "^0.4.14",
+    "garou": "^0.5.0",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
     "stylelint": "^14.9.1",

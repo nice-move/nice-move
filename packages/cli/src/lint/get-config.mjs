@@ -45,8 +45,6 @@ export function getConfig({ garou, stylelint, eslint, prettier, typescript }) {
       garou && 'garou',
       prettier && `prettier --parser html -w -u${useColor}`,
       prettier && `prettier -w -u${useColor}`,
-      stylelint &&
-        `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
     ],
     'yarn.lock': [garou && 'garou'],
   });

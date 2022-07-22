@@ -67,6 +67,12 @@ module.exports = {
       },
     ],
     'no-nested-ternary': 0,
+    'no-restricted-exports': [
+      'error',
+      {
+        restrictedNamedExports: ['then', 'await'],
+      },
+    ],
     'no-param-reassign': [
       'warn',
       {

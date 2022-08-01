@@ -1,7 +1,7 @@
 export default {
   '@bring-it/npm': '^0.0.1',
   ava: '^4.3.1',
-  'best-shot': '^0.2.11',
+  'best-shot': '^0.2.12',
   eslint: '^8.20.0',
   'eslint-plugin-ava': '^13.2.0',
   garou: '^0.5.0',
@@ -18,7 +18,7 @@ export default {
   vue: '^3.2.37',
   'eslint-config-base': '^0.8.2',
   'stylelint-config': '^0.7.1',
-  'prettier-config': '^0.7.0',
+  'prettier-config': '^0.7.1',
   cli: '^0.9.7',
   lts: '^14.17.0 || ^16.13.0 || >=18.0.0',
 };

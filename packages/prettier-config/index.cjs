@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = {
-  htmlWhitespaceSensitivity: 'ignore',
+  htmlWhitespaceSensitivity: 'css',
   singleQuote: true,
   trailingComma: 'all',
-  xmlWhitespaceSensitivity: 'ignore',
+  xmlWhitespaceSensitivity: 'strict',
   iniSpaceAroundEquals: true,
   ...(process.versions.pnp
     ? {

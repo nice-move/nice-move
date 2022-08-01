@@ -19,6 +19,6 @@ export default {
   'eslint-config-base': '^0.8.2',
   'stylelint-config': '^0.7.1',
   'prettier-config': '^0.7.1',
-  cli: '^0.9.7',
+  cli: '^0.9.8',
   lts: '^14.17.0 || ^16.13.0 || >=18.0.0',
 };

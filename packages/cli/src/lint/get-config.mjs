@@ -41,11 +41,7 @@ export function getConfig({ garou, stylelint, eslint, prettier, typescript }) {
     '{*.{jsonc,webmanifest,editorconfig,toml},.{babel,npm}rc}': [
       prettier && `prettier -w -u${useColor}`,
     ],
-    '*.svg': [
-      garou && 'garou',
-      prettier && `prettier --parser html -w -u${useColor}`,
-      prettier && `prettier -w -u${useColor}`,
-    ],
+    '*.svg': [garou && 'garou', prettier && `prettier -w -u${useColor}`],
     'yarn.lock': [garou && 'garou'],
   });
 }

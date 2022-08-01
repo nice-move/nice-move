@@ -53,6 +53,7 @@ module.exports = {
     'max-classes-per-file': 0,
     'no-await-in-loop': 0,
     'no-console': 0,
+    'no-constant-binary-expression': 'error',
     'no-constructor-return': 0,
     'no-empty': [
       'error',

@@ -19,6 +19,7 @@ module.exports = {
         'no-unused-vars': 'warn',
         'import/no-extraneous-dependencies': 'off',
         'import/no-commonjs': 'off',
+        'import/no-nodejs-modules': 'off',
         'unicorn/prefer-module': 'off',
       },
     },

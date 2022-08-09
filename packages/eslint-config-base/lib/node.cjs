@@ -9,7 +9,22 @@ module.exports = {
   },
   overrides: [
     {
+      files: '*.nb.*',
+      env: {
+        browser: false,
+        node: true,
+        commonjs: true,
+      },
+      rules: {
+        'no-unused-vars': 'warn',
+        'import/no-extraneous-dependencies': 'off',
+        'import/no-commonjs': 'off',
+        'unicorn/prefer-module': 'off',
+      },
+    },
+    {
       files: '*.{m,c}js',
+      excludedFiles: '*.nb.*',
       env: {
         browser: false,
         node: true,
@@ -32,7 +47,14 @@ module.exports = {
     },
     {
       files: '*.*',
-      excludedFiles: ['**/*.md/*', '*.cjs', '*.ts', '*.cts', '*.mts', '*.md'],
+      excludedFiles: [
+        '*.{m,c}ts',
+        '*.cjs',
+        '*.md',
+        '*.nb.*',
+        '*.ts',
+        '**/*.md/*',
+      ],
       rules: {
         'n/file-extension-in-import': 'error',
       },
@@ -40,6 +62,7 @@ module.exports = {
     {
       // for node.js
       files: '*.mjs',
+      excludedFiles: '*.nb.*',
       env: {
         commonjs: false,
       },
@@ -59,6 +82,7 @@ module.exports = {
     },
     {
       files: '*.cjs',
+      excludedFiles: '*.nb.*',
       parserOptions: {
         ecmaFeatures: {
           impliedStrict: false,

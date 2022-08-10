@@ -4,8 +4,8 @@ const { configHas } = require('./utils.cjs');
 
 const commonjs =
   configHas(
-    ({ commonjs = [] }) => commonjs,
-    (commonjs) => commonjs,
+    ({ commonjs: globs = [] }) => globs,
+    (globs) => globs,
   ) || [];
 
 module.exports = {
@@ -39,12 +39,10 @@ module.exports = {
       },
     },
     {
-      files: ['*.{m,c}js', ...commonjs],
+      files: '*.{m,c}js',
       excludedFiles: '*.nb.*',
       env: {
-        browser: false,
         node: true,
-        commonjs: true,
       },
       rules: {
         'n/no-deprecated-api': 'error',
@@ -81,6 +79,7 @@ module.exports = {
       files: '*.mjs',
       excludedFiles: '*.nb.*',
       env: {
+        browser: false,
         commonjs: false,
       },
       globals: {
@@ -100,6 +99,10 @@ module.exports = {
     {
       files: ['*.cjs', ...commonjs],
       excludedFiles: '*.nb.*',
+      env: {
+        browser: false,
+        commonjs: true,
+      },
       parserOptions: {
         ecmaFeatures: {
           impliedStrict: false,

@@ -1,5 +1,13 @@
 'use strict';
 
+const { configHas } = require('./utils.cjs');
+
+const commonjs =
+  configHas(
+    ({ commonjs = [] }) => commonjs,
+    (commonjs) => commonjs,
+  ) || [];
+
 module.exports = {
   plugins: ['n'],
   rules: {
@@ -8,6 +16,13 @@ module.exports = {
     'n/no-path-concat': 'error',
   },
   overrides: [
+    {
+      files: '**/*',
+      excludedFiles: ['*.cjs', ...commonjs],
+      rules: {
+        'import/no-commonjs': 'error',
+      },
+    },
     {
       files: '*.nb.*',
       env: {
@@ -24,7 +39,7 @@ module.exports = {
       },
     },
     {
-      files: '*.{m,c}js',
+      files: ['*.{m,c}js', ...commonjs],
       excludedFiles: '*.nb.*',
       env: {
         browser: false,
@@ -55,6 +70,7 @@ module.exports = {
         '*.nb.*',
         '*.ts',
         '**/*.md/*',
+        ...commonjs,
       ],
       rules: {
         'n/file-extension-in-import': 'error',
@@ -82,7 +98,7 @@ module.exports = {
       },
     },
     {
-      files: '*.cjs',
+      files: ['*.cjs', ...commonjs],
       excludedFiles: '*.nb.*',
       parserOptions: {
         ecmaFeatures: {
@@ -94,6 +110,7 @@ module.exports = {
         strict: ['error', 'global'],
         'n/no-exports-assign': 'error',
         'n/no-new-require': 'error',
+        'unicorn/prefer-module': 'off',
       },
     },
   ],

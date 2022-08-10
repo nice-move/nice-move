@@ -23,12 +23,4 @@ module.exports = {
     'unicorn/require-post-message-target-origin': 'off',
     'unicorn/template-indent': 'off',
   },
-  overrides: [
-    {
-      files: '*.cjs',
-      rules: {
-        'unicorn/prefer-module': 'off',
-      },
-    },
-  ],
 };

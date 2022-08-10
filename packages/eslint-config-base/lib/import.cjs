@@ -70,13 +70,6 @@ module.exports = {
       }),
     ),
     {
-      files: '**/*',
-      excludedFiles: ['*.cjs'],
-      rules: {
-        'import/no-commonjs': 'error',
-      },
-    },
-    {
       files: '**/*.*',
       excludedFiles: '*.{m,c}js',
       rules: {

@@ -32,7 +32,7 @@
     "svgo-config": "^0.4.1"
   },
   "devDependencies": {
-    "@bring-it/npm": "^0.0.1",
+    "@bring-it/npm": "^0.0.3",
     "ava": "^4.3.1",
     "best-shot": "^0.2.12",
     "eslint": "^8.21.0",
@@ -74,7 +74,8 @@
     "ext": "js,cjs,mjs,json",
     "watch": [
       "./packages/**/*",
-      "./tools/**/*"
+      "./tools/**/*",
+      "package.json"
     ]
   },
   "prettier": "@nice-move/prettier-config",

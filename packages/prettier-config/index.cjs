@@ -1,12 +1,14 @@
 'use strict';
 
+const { configHas } = require('./utils.cjs');
+
 module.exports = {
   htmlWhitespaceSensitivity: 'css',
   singleQuote: true,
   trailingComma: 'all',
   xmlWhitespaceSensitivity: 'strict',
   iniSpaceAroundEquals: true,
-  ...(process.versions.pnp
+  ...(process.versions && process.versions.pnp
     ? {
         plugins: [
           require.resolve('@nice-move/prettier-plugin-package-json'),
@@ -72,5 +74,9 @@ module.exports = {
         parser: 'ssh-config',
       },
     },
+    ...(configHas(
+      ({ prettier = [] }) => prettier,
+      (bundle) => bundle,
+    ) || []),
   ],
 };

@@ -34,8 +34,8 @@
   "devDependencies": {
     "@bring-it/npm": "^0.0.3",
     "ava": "^4.3.1",
-    "best-shot": "^0.2.12",
-    "eslint": "^8.21.0",
+    "best-shot": "^0.2.13",
+    "eslint": "^8.22.0",
     "eslint-plugin-ava": "^13.2.0",
     "eslint-plugin-log-filenames": "^1.0.6",
     "execa": "^6.1.0",

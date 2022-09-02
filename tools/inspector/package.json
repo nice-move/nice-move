@@ -14,7 +14,7 @@
     "sort-keys": "^5.0.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.4.5"
+    "@types/eslint": "^8.4.6"
   },
   "peerDependencies": {
     "eslint": "^8.18.0",

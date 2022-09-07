@@ -6,7 +6,7 @@ function parse(obj) {
   return io.length > 0 ? Object.fromEntries(io) : undefined;
 }
 
-export function getConfig({ garou, stylelint, eslint, prettier, typescript }) {
+export function getConfig({ garou, stylelint, eslint, prettier }) {
   const useColor = process.stdin.isTTY ? ' --color' : '';
 
   return parse({
@@ -21,7 +21,6 @@ export function getConfig({ garou, stylelint, eslint, prettier, typescript }) {
       garou && 'garou',
       prettier && `prettier -w -u${useColor}`,
       eslint && `eslint --fix -f=pretty${useColor}`,
-      typescript && (() => 'tsc --noEmit'),
     ],
     '*.{js,jsx,mjs,cjs,wxs,qs}': [
       garou && 'garou',

@@ -9,9 +9,8 @@ function getDependencies() {
   const eslint = 'eslint' in devDependencies;
   const stylelint = 'stylelint' in devDependencies;
   const garou = 'garou' in devDependencies;
-  const typescript = 'typescript' in devDependencies;
 
-  return { garou, stylelint, eslint, prettier, typescript };
+  return { garou, stylelint, eslint, prettier };
 }
 
 async function linter() {

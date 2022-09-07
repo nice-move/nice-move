@@ -20,6 +20,6 @@ export default {
   'eslint-config-base': '^0.8.10',
   'stylelint-config': '^0.7.2',
   'prettier-config': '^0.7.3',
-  cli: '^0.9.9',
+  cli: '^0.9.10',
   lts: '^14.17.0 || ^16.13.0 || >=18.0.0',
 };

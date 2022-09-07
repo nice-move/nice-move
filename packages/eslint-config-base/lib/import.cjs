@@ -44,9 +44,19 @@ module.exports = {
   },
   settings: {
     ...Vscode,
-    'import/extensions': ['.tsx', '.ts', '.vue', '.jsx', '.js', '.mjs', '.cjs'],
+    'import/extensions': [
+      '.tsx',
+      '.ts',
+      '.cts',
+      '.mts',
+      '.vue',
+      '.jsx',
+      '.js',
+      '.mjs',
+      '.cjs',
+    ],
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.ts', '.cts', '.mts', '.tsx'],
       'vue-eslint-parser': ['.vue'],
       [require.resolve('./jsx-parser.cjs')]: ['.jsx'],
     },

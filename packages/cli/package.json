@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "description": "Frontend develop helper for frontend development",
   "license": "MIT",
   "author": {
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@commitlint/format": "^17.0.0",
-    "@commitlint/lint": "^17.0.3",
+    "@commitlint/lint": "^17.1.0",
     "cheetor": "^0.13.0",
     "execa": "^6.1.0",
     "lint-staged": "^13.0.3",

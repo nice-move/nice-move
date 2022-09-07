@@ -18,8 +18,8 @@ export default {
   tailwindcss: '^3.1.8',
   vue: '^3.2.38',
   'eslint-config-base': '^0.8.9',
-  'stylelint-config': '^0.7.1',
-  'prettier-config': '^0.7.2',
-  cli: '^0.9.8',
+  'stylelint-config': '^0.7.2',
+  'prettier-config': '^0.7.3',
+  cli: '^0.9.9',
   lts: '^14.17.0 || ^16.13.0 || >=18.0.0',
 };

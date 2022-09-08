@@ -1,5 +1,5 @@
-import { readFile } from 'fs/promises';
-import { resolve } from 'path';
+import { readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
 
 const rules = {
   'body-leading-blank': [1, 'always'],

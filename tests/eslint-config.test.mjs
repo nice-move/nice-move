@@ -1,5 +1,4 @@
 import { eslintInspector } from '@nice-move/inspector';
-// eslint-disable-next-line import/no-unresolved
 import test from 'ava';
 
 const baseEngine = (filename) => eslintInspector('@nice-move/base', filename);

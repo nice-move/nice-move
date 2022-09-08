@@ -1,6 +1,6 @@
 'use strict';
 
-const { relative } = require('path');
+const { relative } = require('node:path');
 const { reaching } = require('settingz');
 
 const cwd = process.cwd();

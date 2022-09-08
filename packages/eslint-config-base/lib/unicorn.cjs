@@ -15,7 +15,6 @@ module.exports = {
       { onlyIfContainsSeparator: true },
     ],
     'unicorn/prefer-export-from': ['error', { ignoreUsedVariables: true }],
-    'unicorn/prefer-node-protocol': 'off',
     'unicorn/prefer-prototype-methods': 'off',
     'unicorn/prefer-set-has': 'off',
     'unicorn/prefer-top-level-await': 'off',

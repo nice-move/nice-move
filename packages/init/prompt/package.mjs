@@ -1,4 +1,4 @@
-import { parse as parsePath } from 'path';
+import { parse as parsePath } from 'node:path';
 
 import parse from 'parse-author';
 import semverRegex from 'semver-regex';

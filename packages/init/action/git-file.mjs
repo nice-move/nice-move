@@ -1,4 +1,4 @@
-import { type } from 'os';
+import { type } from 'node:os';
 
 import { Text } from 'fs-chain';
 import ora from 'ora';

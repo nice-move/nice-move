@@ -52,6 +52,7 @@
     "extends": "@nice-move/eslint-config-base",
     "overrides": [
       {
+        "excludedFiles": "*.md",
         "files": "*.*",
         "processor": "log-filenames/.js"
       }

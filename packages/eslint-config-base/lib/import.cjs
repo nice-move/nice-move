@@ -1,6 +1,6 @@
 'use strict';
 
-const { join } = require('path');
+const { join } = require('node:path');
 const { pkgHas, configHas } = require('./utils.cjs');
 
 const Vscode = pkgHas(
@@ -65,6 +65,10 @@ module.exports = {
       ({ 'internal-regex': internalRegex }) => internalRegex,
       (internalRegex) => ({ 'import/internal-regex': internalRegex }),
     ),
+    'import/resolver': {
+      node: false,
+      [require.resolve('./node-next-resolver.cjs')]: {},
+    },
   },
   overrides: [
     pkgHas(
@@ -81,7 +85,7 @@ module.exports = {
     ),
     {
       files: '**/*.*',
-      excludedFiles: '*.{m,c}js',
+      excludedFiles: '*.{m,c}{j,t}s',
       rules: {
         'import/no-nodejs-modules': 'error',
       },

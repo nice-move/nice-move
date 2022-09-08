@@ -9,12 +9,12 @@ export async function Readme() {
   new Text()
     .source('README.md')
     .onFail()
-    .onDone((text) =>
-      !text
-        ? [`# ${name}`, description ? `${description}.\n` : '']
-            .filter(Boolean)
-            .join('\n\n')
-        : text,
+    .onDone(
+      (text) =>
+        text ||
+        [`# ${name}`, description ? `${description}.\n` : '']
+          .filter(Boolean)
+          .join('\n\n'),
     )
     .output()
     .logger('Create', cyan('README.md'))

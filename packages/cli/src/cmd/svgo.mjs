@@ -1,4 +1,4 @@
-import { createRequire } from 'module';
+import { createRequire } from 'node:module';
 
 import { execa } from 'execa';
 import { isReachable } from 'settingz';

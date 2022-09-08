@@ -20,7 +20,7 @@ A [stylelint] config created by personal preferences.
 - [CSS Modules exceptions - :global / :local](https://github.com/css-modules/css-modules#exceptions) in \*.module.{css,scss,less}, \*.vue
 - [Interoperable CSS (ICSS) - :export](https://github.com/css-modules/icss#export) in \*.module.{css,scss,less}, \*.vue
 - [Tailwind CSS](https://tailwindcss.com/) at rules when `tailwindcss` installed
-- Mini Progarm Stylesheet limitation when needed
+- Mini Program Stylesheet limitation when needed
 
 ## Installation
 

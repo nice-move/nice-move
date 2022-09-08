@@ -1,6 +1,6 @@
-import { execSync } from 'child_process';
-import { readdirSync, readFileSync } from 'fs';
-import { join } from 'path';
+import { execSync } from 'node:child_process';
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 import centra from 'centra';
 import stringify from 'stringify-author';

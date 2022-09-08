@@ -122,6 +122,35 @@ function generate({ miniprogramRoot, pluginRoot, cloudfunctionRoot }) {
         'unicorn/prefer-module': 0,
       },
     },
+    {
+      files: '*.js',
+      rules: {
+        'n/file-extension-in-import': [
+          'error',
+          'always',
+          {
+            '.ts': 'never',
+          },
+        ],
+        'import/extensions': [
+          'error',
+          'always',
+          {
+            ignorePackages: true,
+            pattern: {
+              ts: 'never',
+            },
+          },
+        ],
+      },
+      settings: {
+        'import/resolver': {
+          node: {
+            extensions: ['.ts'],
+          },
+        },
+      },
+    },
   ].filter(Boolean);
 }
 

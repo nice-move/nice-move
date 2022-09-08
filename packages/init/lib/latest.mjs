@@ -17,7 +17,7 @@ export default {
   'react-dom': '^18.2.0',
   tailwindcss: '^3.1.8',
   vue: '^3.2.39',
-  'eslint-config-base': '^0.8.11',
+  'eslint-config-base': '^0.8.12',
   'stylelint-config': '^0.7.2',
   'prettier-config': '^0.7.3',
   cli: '^0.9.10',

@@ -39,7 +39,7 @@ module.exports = {
       },
     },
     {
-      files: '*.{m,c}js',
+      files: '*.{m,c}{t,j}s',
       excludedFiles: '*.nb.*',
       env: {
         node: true,
@@ -76,7 +76,7 @@ module.exports = {
     },
     {
       // for node.js
-      files: '*.mjs',
+      files: ['*.mjs', '*.mts'],
       excludedFiles: '*.nb.*',
       env: {
         browser: false,
@@ -89,6 +89,9 @@ module.exports = {
         module: 'off',
         require: 'off',
       },
+    },
+    {
+      files: ['*.mjs', '*.mts', '*.cts'],
       rules: {
         'n/no-unsupported-features/es-syntax': [
           'error',
@@ -113,6 +116,11 @@ module.exports = {
         strict: ['error', 'global'],
         'n/no-exports-assign': 'error',
         'n/no-new-require': 'error',
+      },
+    },
+    {
+      files: ['*.cjs', '*.cts'],
+      rules: {
         'unicorn/prefer-module': 'off',
       },
     },

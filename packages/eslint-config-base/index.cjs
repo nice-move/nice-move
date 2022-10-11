@@ -31,6 +31,7 @@ module.exports = {
     require.resolve('./lib/import.cjs'),
     require.resolve('./lib/base.cjs'),
     require.resolve('./lib/electron.cjs'),
+    require.resolve('./lib/playwright.cjs'),
     require.resolve('./lib/node.cjs'),
     require.resolve('./lib/bundler.cjs'),
     require.resolve('./lib/typescript.cjs'),

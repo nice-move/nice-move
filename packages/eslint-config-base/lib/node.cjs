@@ -91,15 +91,6 @@ module.exports = {
       },
     },
     {
-      files: ['*.mjs', '*.mts', '*.cts'],
-      rules: {
-        'n/no-unsupported-features/es-syntax': [
-          'error',
-          { ignores: ['modules'] },
-        ],
-      },
-    },
-    {
       files: ['*.cjs', ...commonjs],
       excludedFiles: '*.nb.*',
       env: {

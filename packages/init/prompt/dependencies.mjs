@@ -40,8 +40,9 @@ function action(isGit, wanted = {}) {
         vue = 'vue' in dependencies,
         tailwindcss = 'tailwindcss' in dependencies ||
           'tailwindcss' in devDependencies,
-        playwright = '@playwright/test' in devDependencies,
-        'bring-it': bringIt = '@bring-it/cli' in devDependencies,
+        playwright,
+        '@bring-it/sftp': bringItSFTP = '@bring-it/cli' in devDependencies,
+        '@bring-it/npm': bringItNPM = '@bring-it/npm' in devDependencies,
         'best-shot': bestShot = 'best-shot' in devDependencies,
       } = wanted;
 
@@ -189,18 +190,23 @@ function action(isGit, wanted = {}) {
             : undefined,
           playwright
             ? {
-                devDependencies: {
-                  '@playwright/test': latest['@playwright/test'],
-                },
                 scripts: {
+                  'pretest:e2e': 'npm link @playwright/test',
                   'test:e2e': 'playwright test',
                 },
               }
             : undefined,
-          bringIt
+          bringItSFTP
             ? {
                 devDependencies: {
                   '@bring-it/cli': latest['@bring-it/cli'],
+                },
+              }
+            : undefined,
+          bringItNPM
+            ? {
+                devDependencies: {
+                  '@bring-it/npm': latest['@bring-it/npm'],
                 },
               }
             : undefined,
@@ -208,6 +214,14 @@ function action(isGit, wanted = {}) {
             ? {
                 devDependencies: {
                   'best-shot': latest['best-shot'],
+                },
+                'nice-move': {
+                  globals: {
+                    BEST_SHOT: 'readonly',
+                  },
+                },
+                scripts: {
+                  build: 'best-shot prod',
                 },
               }
             : undefined,
@@ -232,7 +246,8 @@ export function Dependencies() {
     'garou',
     'ava',
     'playwright',
-    'bring-it',
+    '@bring-it/sftp',
+    '@bring-it/npm',
     'best-shot',
   ];
 

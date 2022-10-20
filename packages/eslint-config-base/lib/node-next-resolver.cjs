@@ -8,9 +8,23 @@ const withNodeLabel = builtinModules.map((item) => `node:${item}`);
 
 const builtins = new Set([...builtinModules, ...withNodeLabel]);
 
+function isValidUrl(string) {
+  try {
+    const io = new URL(string);
+
+    return ['http:', 'https:'].includes(io.protocol);
+  } catch {
+    return false;
+  }
+}
+
 module.exports = {
   interfaceVersion: 2,
-  resolve: (source, file) => {
+  resolve: (source, file, config) => {
+    if (config.importHttp && isValidUrl(source)) {
+      return { found: true, path: null };
+    }
+
     if (/\.[cm][jt]s$/.test(file) && builtins.has(source)) {
       return { found: true, path: null };
     }

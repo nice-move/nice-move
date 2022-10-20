@@ -67,7 +67,11 @@ module.exports = {
     ),
     'import/resolver': {
       node: false,
-      [require.resolve('./node-next-resolver.cjs')]: {},
+      [require.resolve('./node-next-resolver.cjs')]:
+        configHas(
+          ({ 'import-http': importHttp }) => importHttp,
+          (importHttp) => ({ importHttp }),
+        ) || {},
     },
   },
   overrides: [

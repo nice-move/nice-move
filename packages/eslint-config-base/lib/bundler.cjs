@@ -6,7 +6,8 @@ const {
 const { isReachable } = require('settingz');
 
 function webpack() {
-  return isReachable('webpack/package.json')
+  return isReachable('webpack/package.json') ||
+    isReachable('best-shot/package.json')
     ? [
         {
           files: sourceAndPackages,

@@ -7,11 +7,11 @@
     "eslint-config-standard-jsx": "^11.0.0",
     "eslint-config-standard-react": "^12.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.4.0",
+    "eslint-plugin-n": "^15.5.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.31.10"
   },
   "peerDependencies": {
-    "eslint": "^8.26.0"
+    "eslint": "^8.27.0"
   }
 }

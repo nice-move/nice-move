@@ -17,8 +17,8 @@
     "@types/eslint": "^8.4.10"
   },
   "peerDependencies": {
-    "eslint": "^8.26.0",
-    "stylelint": "^14.14.0"
+    "eslint": "^8.27.0",
+    "stylelint": "^14.14.1"
   },
   "engines": {
     "node": "^16.15.0 || ^18.12.0"

@@ -27,5 +27,11 @@ module.exports = {
       files: ['*.ts', '*.js', '*.mts', '*.mjs', '*.tsx', '*.jsx'],
       extends: ['airbnb/hooks'],
     },
+    {
+      files: '**/*.md/*',
+      rules: {
+        'react/react-in-jsx-scope': 'off',
+      },
+    },
   ],
 };

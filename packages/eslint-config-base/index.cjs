@@ -58,6 +58,7 @@ module.exports = {
     '.git/',
     '.svn/',
     '*.min.*',
+    '**/.docusaurus/**',
     '**/dist/**',
     '**/miniprogram_npm/**',
     '**/node_modules/**',

@@ -22,6 +22,7 @@ module.exports = {
     '**/*.min.*',
     '**/dist/**',
     '**/.(cache|svn|git)/**',
+    '**/.docusaurus/**',
     '**/miniprogram_npm/**',
     ...BestShot(),
     ...ignoreList(),

@@ -37,10 +37,11 @@ module.exports = {
       },
     ],
     'import/newline-after-import': 0,
+    'import/no-default-export': 'warn',
     'import/no-dynamic-require': 0,
+    'import/no-relative-packages': 0,
     'import/order': 0,
     'import/prefer-default-export': 0,
-    'import/no-relative-packages': 0,
   },
   settings: {
     ...Vscode,

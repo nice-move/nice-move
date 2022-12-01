@@ -8,6 +8,6 @@ export const config = {
     module: true,
   },
   externals: {
-    'spawn-sync': 'commonjs2 spawn-sync',
+    'spawn-sync': 'node-commonjs spawn-sync',
   },
 };

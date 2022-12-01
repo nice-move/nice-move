@@ -44,7 +44,7 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "centra": "^2.5.0",
+    "centra": "^2.6.0",
     "chalk": "^5.1.2",
     "cheetor": "^0.13.0",
     "deepmerge": "^4.2.2",

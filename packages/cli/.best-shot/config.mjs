@@ -21,4 +21,7 @@ export const config = {
       to: new URL('trailer-exists.cjs', import.meta.url),
     },
   ],
+  externals: {
+    enquirer: 'node-commonjs enquirer',
+  },
 };

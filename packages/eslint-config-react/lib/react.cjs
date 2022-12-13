@@ -23,7 +23,14 @@ module.exports = {
       },
     ],
     'react/require-default-props': 'warn',
-
+    'react/forbid-prop-types': [
+      'error',
+      {
+        checkChildContextTypes: true,
+        checkContextTypes: true,
+        forbid: ['any', 'array'],
+      },
+    ],
     // handing by garou
     'react/jsx-boolean-value': 0,
     'react/self-closing-comp': 0,

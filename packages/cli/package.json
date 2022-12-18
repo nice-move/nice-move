@@ -49,7 +49,7 @@
     "@commitlint/lint": "^17.3.0",
     "cheetor": "^0.13.0",
     "execa": "^6.1.0",
-    "lint-staged": "^13.0.4",
+    "lint-staged": "^13.1.0",
     "settingz": "^0.2.0"
   },
   "engines": {

@@ -44,7 +44,7 @@
     "eslint-plugin-markdown": "^3.0.0",
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-sonarjs": "^0.17.0",
+    "eslint-plugin-sonarjs": "^0.18.0",
     "eslint-plugin-unicorn": "^45.0.2",
     "espree": "^9.4.1",
     "resolve.exports": "^1.1.0",

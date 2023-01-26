@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@commitlint/format": "^17.4.0",
-    "@commitlint/lint": "^17.4.0",
+    "@commitlint/lint": "^17.4.2",
     "cheetor": "^0.13.0",
     "execa": "^6.1.0",
     "lint-staged": "^13.1.0",

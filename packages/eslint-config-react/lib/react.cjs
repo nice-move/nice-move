@@ -31,6 +31,7 @@ module.exports = {
         forbid: ['any', 'array'],
       },
     ],
+    'react/no-object-type-as-default-prop': 'warn',
     // handing by garou
     'react/jsx-boolean-value': 0,
     'react/self-closing-comp': 0,

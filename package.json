@@ -34,16 +34,16 @@
   "devDependencies": {
     "@bring-it/npm": "^0.1.1",
     "ava": "^5.2.0",
-    "best-shot": "^0.3.1",
-    "eslint": "^8.35.0",
+    "best-shot": "^0.3.2",
+    "eslint": "^8.36.0",
     "eslint-plugin-ava": "^14.0.0",
     "eslint-plugin-log-filenames": "^1.0.6",
-    "execa": "^7.0.0",
-    "garou": "^0.6.3",
-    "nodemon": "^2.0.20",
+    "execa": "^7.1.1",
+    "garou": "^0.6.4",
+    "nodemon": "^2.0.21",
     "prettier": "^2.8.4",
-    "stylelint": "^15.2.0",
-    "typescript": "^4.9.5"
+    "stylelint": "^15.3.0",
+    "typescript": "^5.0.2"
   },
   "engines": {
     "node": "^16.15.0 || ^18.12.0"

@@ -1,0 +1,36 @@
+{
+  "name": "@nice-move/tsconfig",
+  "version": "0.0.0",
+  "description": "A `typescript` config created by personal preferences",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "keywords": [
+    "config",
+    "frontend",
+    "nice-move",
+    "tsconfig",
+    "typescript"
+  ],
+  "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/tsconfig",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nice-move/nice-move.git",
+    "directory": "packages/tsconfig"
+  },
+  "bugs": {
+    "url": "https://github.com/nice-move/nice-move/issues"
+  },
+  "peerDependencies": {
+    "typescript": "^4 || ^5"
+  },
+  "engines": {
+    "node": "^16.15.0 || ^18.12.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

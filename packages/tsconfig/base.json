@@ -10,8 +10,5 @@
     "strict": true,
     "target": "es2022"
   },
-  "display": "Base",
-  "include": [
-    "./"
-  ]
+  "display": "Base"
 }

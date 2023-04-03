@@ -41,7 +41,7 @@
     "execa": "^7.1.1",
     "garou": "^0.6.4",
     "nodemon": "^2.0.21",
-    "prettier": "^2.8.4",
+    "prettier": "^2.8.5",
     "stylelint": "^15.3.0",
     "typescript": "^5.0.2"
   },

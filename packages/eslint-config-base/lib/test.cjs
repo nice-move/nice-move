@@ -11,11 +11,14 @@ module.exports = {
     ? [
         {
           files: [
-            '**/{test,tests,spec,specs}/*.{m,c,}js',
-            '*.{test,spec}.{m,c,}js}',
+            '**/{test,tests,spec,specs}/*.{m,c,}{j,t}s',
+            '*.{test,spec}.{m,c,}{j,t}s}',
           ],
           plugins: ['ava'],
-          rules,
+          rules: {
+            ...rules,
+            'unicorn/no-empty-file': 0,
+          },
         },
       ]
     : [],

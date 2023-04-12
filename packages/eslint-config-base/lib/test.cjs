@@ -7,19 +7,17 @@ const { configs: { recommended: { rules } = {} } = {} } = reaching(
 );
 
 module.exports = {
-  overrides: rules
-    ? [
-        {
-          files: [
-            '**/{test,tests,spec,specs}/*.{m,c,}{j,t}s',
-            '*.{test,spec}.{m,c,}{j,t}s}',
-          ],
-          plugins: ['ava'],
-          rules: {
-            ...rules,
-            'unicorn/no-empty-file': 0,
-          },
-        },
-      ]
-    : [],
+  overrides: [
+    {
+      files: [
+        '**/{test,tests,spec,specs}/**/*.{m,c,}{j,t}s',
+        '*.{test,spec}.{m,c,}{j,t}s}',
+      ],
+      plugins: rules ? ['ava'] : undefined,
+      rules: {
+        ...rules,
+        'unicorn/no-empty-file': 0,
+      },
+    },
+  ],
 };

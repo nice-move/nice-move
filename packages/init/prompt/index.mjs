@@ -26,8 +26,8 @@ function isGitDirty() {
 
 export async function Prompt() {
   const gitSupported = await gitSupport();
-  const isGit = gitSupported && isGitDir();
-  const isDirty = isGit ? isGitDirty() : false;
+  const isGit = gitSupported && (await isGitDir());
+  const isDirty = isGit ? await isGitDirty() : false;
   const isEmpty = emptyDir();
   const pkg = getPkg();
   const cwd = process.cwd();

@@ -13,9 +13,9 @@ function gitSupport() {
 }
 
 function isGitDir() {
-  return execa('git', ['rev-parse', '--is-inside-git-dir']).then(
-    ({ stdout }) => stdout === 'true',
-  );
+  return execa('git', ['rev-parse', '--is-inside-git-dir'])
+    .then(({ stdout }) => stdout === 'true')
+    .catch(() => false);
 }
 
 function isGitDirty() {

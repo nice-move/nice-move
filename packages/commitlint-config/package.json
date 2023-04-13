@@ -35,8 +35,8 @@
     "@commitlint/config-conventional": "^17.4.4"
   },
   "peerDependencies": {
-    "@commitlint/cli": "^17.4.3",
-    "commitlint": "^17.4.3"
+    "@commitlint/cli": "^17.5.1",
+    "commitlint": "^17.5.1"
   },
   "peerDependenciesMeta": {
     "@commitlint/cli": {

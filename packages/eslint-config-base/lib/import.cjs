@@ -1,6 +1,5 @@
 'use strict';
 
-const { join } = require('node:path');
 const { pkgHas, configHas } = require('./utils.cjs');
 
 const Vscode = pkgHas(
@@ -78,18 +77,6 @@ module.exports = {
     },
   },
   overrides: [
-    pkgHas(
-      ({ workspaces }) =>
-        workspaces && (workspaces.packages || workspaces).length > 0,
-      (_, { workspaces }) => ({
-        files: (workspaces.packages || workspaces).map((item) =>
-          join(item, '*'),
-        ),
-        settings: {
-          'import/internal-regex': false,
-        },
-      }),
-    ),
     {
       files: '**/*.*',
       excludedFiles: '*.{m,c}{j,t}s',
@@ -97,5 +84,5 @@ module.exports = {
         'import/no-nodejs-modules': 'error',
       },
     },
-  ].filter(Boolean),
+  ],
 };

@@ -37,10 +37,12 @@ export function getConfig({ garou, stylelint, eslint, prettier }) {
       garou && 'garou',
       prettier && `prettier -w -u${useColor}`,
     ],
-    '*.{jsonc,webmanifest,editorconfig,toml},.{babel,npm}rc}': [
+    '{*.{jsonc,webmanifest,editorconfig,toml},.{babel,npm}rc}': [
       prettier && `prettier -w -u${useColor}`,
     ],
-    '{*.jenkinsfile,{j,J}enkinsfile': [prettier && `prettier -w -u${useColor}`],
+    '{*.jenkinsfile,{j,J}enkinsfile}': [
+      prettier && `prettier -w -u${useColor}`,
+    ],
     'yarn.lock': [garou && 'garou'],
   });
 }

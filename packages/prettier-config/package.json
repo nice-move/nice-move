@@ -27,17 +27,17 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "@nice-move/prettier-plugin-package-json": "^0.7.1",
+    "@nice-move/prettier-plugin-package-json": "^0.7.2",
     "@prettier/plugin-xml": "^2.2.0",
     "prettier-plugin-ini": "^1.1.0",
     "prettier-plugin-ssh-config": "^0.2.0",
     "settingz": "^0.2.0"
   },
   "peerDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^2.8.7"
   },
   "engines": {
-    "node": "^16.15.0 || ^18.12.0"
+    "node": "^18.12.0 || ^16.15.0"
   },
   "publishConfig": {
     "access": "public",

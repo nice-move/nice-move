@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-vue",
-  "version": "0.9.9",
+  "version": "0.9.10",
   "description": "A `eslint` config for `vue` project best practice",
   "license": "MIT",
   "author": {
@@ -35,12 +35,12 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "@nice-move/eslint-config-base": "^0.9.9",
-    "eslint-plugin-vue": "^9.10.0",
+    "@nice-move/eslint-config-base": "^0.9.10",
+    "eslint-plugin-vue": "^9.11.1",
     "settingz": "^0.2.0"
   },
   "peerDependencies": {
-    "eslint": "^8.38.0"
+    "eslint": "^8.40.0"
   },
   "engines": {
     "node": "^16.15.0 || ^18.12.0"

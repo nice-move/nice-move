@@ -11,12 +11,12 @@
   "peerDependencies": {
     "@bring-it/cli": "^0.7.3",
     "@bring-it/npm": "^0.1.1",
-    "@playwright/test": "^1.32.3",
-    "@types/react": "^18.0.34",
-    "prettier-plugin-tailwindcss": "^0.2.7",
+    "@playwright/test": "^1.33.0",
+    "@types/react": "^18.2.6",
+    "prettier-plugin-tailwindcss": "^0.2.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.3.1",
+    "tailwindcss": "^3.3.2",
     "vue": "^3.2.47"
   },
   "peerDependenciesMeta": {
@@ -49,6 +49,6 @@
     }
   },
   "engines": {
-    "node": "^16.15.0 || ^18.12.0"
+    "node": "^18.12.0 || ^16.15.0"
   }
 }

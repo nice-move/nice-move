@@ -21,7 +21,7 @@ function checkEslint({ vue, react }) {
 
 const message = 'Add/Reset project dependencies';
 
-function action(isGit, wanted = {}) {
+function action(isRoot, wanted = {}) {
   return new Json()
     .config({ pretty: true })
     .source('package.json')
@@ -89,7 +89,7 @@ function action(isGit, wanted = {}) {
       return deepmerge.all(
         [
           old,
-          isGit && (useLint || ava || commitlint || playwright || typescript)
+          isRoot && (useLint || ava || commitlint || playwright || typescript)
             ? {
                 scripts: {
                   prepare: 'nice-move git hooks',
@@ -267,9 +267,9 @@ export function Dependencies() {
     // eslint-disable-next-line consistent-return
     format: (keywords) => {
       if (keywords.length > 0) {
-        return (isGit) =>
+        return (isRoot) =>
           action(
-            isGit,
+            isRoot,
             Object.fromEntries(keywords.map((item) => [item, true])),
           );
       }

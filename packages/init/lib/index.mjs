@@ -11,7 +11,7 @@ export async function init() {
     GitInit,
     Install,
     info,
-    options: { isGit } = {},
+    options: { isRoot } = {},
   } = await Prompt();
 
   console.log('-'.repeat(32));
@@ -22,8 +22,8 @@ export async function init() {
     Readme,
     License,
     EditorConfig,
-    () => (GitInit || isGit ? GitFile() : undefined),
-    () => (Dependencies ? Dependencies(GitInit || isGit) : undefined),
+    () => (GitInit || isRoot ? GitFile() : undefined),
+    () => (Dependencies ? Dependencies(GitInit || isRoot) : undefined),
     Install,
   ].filter((func) => typeof func === 'function');
 

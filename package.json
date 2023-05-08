@@ -35,18 +35,18 @@
     "@bring-it/npm": "^0.1.1",
     "ava": "^5.2.0",
     "best-shot": "^0.3.2",
-    "eslint": "^8.38.0",
+    "eslint": "^8.40.0",
     "eslint-plugin-ava": "^14.0.0",
     "eslint-plugin-log-filenames": "^1.0.6",
     "execa": "^7.1.1",
     "garou": "^0.6.6",
     "nodemon": "^2.0.22",
-    "prettier": "^2.8.7",
-    "stylelint": "^15.4.0",
+    "prettier": "^2.8.8",
+    "stylelint": "^15.6.1",
     "typescript": "^5.0.4"
   },
   "engines": {
-    "node": "^16.15.0 || ^18.12.0"
+    "node": "^18.12.0 || ^16.15.0"
   },
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base",

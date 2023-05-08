@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/init",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Initialize your frontend workspaces",
   "license": "MIT",
   "author": {
@@ -60,7 +60,7 @@
     "yarn-install": "^1.0.0"
   },
   "engines": {
-    "node": "^16.15.0 || ^18.12.0"
+    "node": "^18.12.0 || ^16.15.0"
   },
   "publishConfig": {
     "access": "public",

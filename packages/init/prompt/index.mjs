@@ -12,9 +12,9 @@ function gitSupport() {
   return execa('git', ['--version']).then(({ stdout }) => Boolean(stdout));
 }
 
-function isGitDir() {
-  return execa('git', ['rev-parse', '--is-inside-git-dir'])
-    .then(({ stdout }) => stdout === 'true')
+function isGitRoot() {
+  return execa('git', ['rev-parse', '--git-dir'])
+    .then(({ stdout }) => stdout === '.git')
     .catch(() => false);
 }
 
@@ -26,15 +26,15 @@ function isGitDirty() {
 
 export async function Prompt() {
   const gitSupported = await gitSupport();
-  const isGit = gitSupported && (await isGitDir());
-  const isDirty = isGit ? await isGitDirty() : false;
+  const isRoot = gitSupported && (await isGitRoot());
+  const isDirty = isRoot ? await isGitDirty() : false;
   const isEmpty = emptyDir();
   const pkg = getPkg();
   const cwd = process.cwd();
 
   const options = {
     gitSupported,
-    isGit,
+    isRoot,
     isDirty,
     isEmpty,
     pkg,

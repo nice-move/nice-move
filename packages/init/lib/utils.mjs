@@ -28,7 +28,9 @@ export function download(url) {
 }
 
 export function emptyDir() {
-  return readdirSync(process.cwd()).length === 0;
+  return (
+    readdirSync(process.cwd()).filter((item) => item !== '.git').length === 0
+  );
 }
 
 export function trim(value) {

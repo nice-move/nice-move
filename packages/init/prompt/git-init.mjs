@@ -18,13 +18,13 @@ function init() {
   );
 }
 
-export function GitInit({ gitSupported, isGit }) {
+export function GitInit({ gitSupported, isRoot }) {
   return {
     message,
     name: 'GitInit',
     initial: true,
     type: (first) =>
-      first === false || !gitSupported || isGit ? null : 'confirm',
+      first === false || !gitSupported || isRoot ? null : 'confirm',
     // eslint-disable-next-line consistent-return
     format(value) {
       if (value === true) {

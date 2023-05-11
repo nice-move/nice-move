@@ -42,10 +42,10 @@ module.exports = {
         error.code === 'MODULE_NOT_FOUND' &&
         error.path?.endsWith('/package.json')
       ) {
-        const { name, module, main, exports } = require(error.path);
+        const { name, module, main, exports, imports } = require(error.path);
 
-        const resolved = resolveExports(
-          { name, module, main, exports },
+        const [resolved] = resolveExports(
+          { name, module, main, exports, imports },
           source,
         );
         const moduleId = path.join(path.dirname(error.path), resolved);

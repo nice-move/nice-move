@@ -63,7 +63,7 @@ export async function GitFile() {
               ? oldText.replace(regexp, newText)
               : `${oldText.trim()}\n\n${newText}`
           )
-            .replace(
+            .replaceAll(
               /(www\.)?toptal\.com\/developers\/gitignore/g,
               'gitignore.io',
             )

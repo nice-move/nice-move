@@ -77,11 +77,8 @@ function action(isRoot, wanted = {}) {
         await new Json()
           .config({ pretty: true })
           .onDone(() => ({
-            compilerOptions: {
-              jsx: 'preserve',
-              strict: true,
-              target: 'es2022',
-            },
+            extends: '@nice-move/tsconfig/base.json',
+            include: ['./'],
           }))
           .output('tsconfig.json');
       }
@@ -101,12 +98,16 @@ function action(isRoot, wanted = {}) {
                 devDependencies: {
                   garou: latest.garou,
                 },
+                'nice-move': {
+                  'import-groups': ['nice-move-preset'],
+                },
               }
             : undefined,
           typescript
             ? {
                 devDependencies: {
                   typescript: latest.typescript,
+                  '@nice-move/tsconfig': latest.tsconfig,
                 },
                 scripts: {
                   'lint:type': 'tsc --noEmit',
@@ -142,6 +143,7 @@ function action(isRoot, wanted = {}) {
                     ? undefined
                     : prepublishOnly.join(' && ') || undefined,
                   test: 'ava --fail-fast',
+                  snapshot: 'ava --fail-fast --u',
                 },
               }
             : undefined,

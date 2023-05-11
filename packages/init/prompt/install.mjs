@@ -8,6 +8,7 @@ export function Install() {
   return {
     message,
     name: 'Install',
+    initial: false,
     type: (first) => (first === false ? null : 'confirm'),
     // eslint-disable-next-line consistent-return
     format(value) {

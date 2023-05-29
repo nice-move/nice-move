@@ -14,11 +14,11 @@
     "sort-keys": "^5.0.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.37.0"
+    "@types/eslint": "^8.40.0"
   },
   "peerDependencies": {
-    "eslint": "^8.38.0",
-    "stylelint": "^15.4.0"
+    "eslint": "^8.41.0",
+    "stylelint": "^15.6.2"
   },
   "engines": {
     "node": "^16.15.0 || ^18.12.0"

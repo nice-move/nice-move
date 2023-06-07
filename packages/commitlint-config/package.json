@@ -32,11 +32,11 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "@commitlint/config-conventional": "^17.6.3"
+    "@commitlint/config-conventional": "^17.6.5"
   },
   "peerDependencies": {
-    "@commitlint/cli": "^17.6.3",
-    "commitlint": "^17.6.3"
+    "@commitlint/cli": "^17.6.5",
+    "commitlint": "^17.6.5"
   },
   "peerDependenciesMeta": {
     "@commitlint/cli": {

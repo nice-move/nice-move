@@ -143,7 +143,7 @@ function action(isRoot, wanted = {}) {
                     ? undefined
                     : prepublishOnly.join(' && ') || undefined,
                   test: 'ava --fail-fast',
-                  snapshot: 'ava --fail-fast --u',
+                  snapshot: 'ava --fail-fast -u',
                 },
               }
             : undefined,

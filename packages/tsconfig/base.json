@@ -4,8 +4,11 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
+    "lib": [
+      "es2022"
+    ],
+    "module": "es2022",
     "moduleResolution": "node",
-    "noEmit": true,
     "resolveJsonModule": true,
     "strict": true,
     "target": "es2022"

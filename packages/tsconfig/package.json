@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/tsconfig",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A `typescript` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -24,10 +24,10 @@
     "url": "https://github.com/nice-move/nice-move/issues"
   },
   "peerDependencies": {
-    "typescript": "^4 || ^5"
+    "typescript": "^5"
   },
   "engines": {
-    "node": "^18.12.0 || ^16.15.0"
+    "node": "^16.15.0 || ^18.12.0"
   },
   "publishConfig": {
     "access": "public",

@@ -6,13 +6,13 @@
     "pin-latest": "index.cjs"
   },
   "dependencies": {
-    "fs-chain": "^8.2.1"
+    "fs-chain": "^8.2.2"
   },
   "peerDependencies": {
     "@bring-it/cli": "^0.7.3",
-    "@bring-it/npm": "^0.1.1",
-    "@playwright/test": "^1.34.3",
-    "@types/react": "^18.2.7",
+    "@bring-it/npm": "^0.1.2",
+    "@playwright/test": "^1.35.1",
+    "@types/react": "^18.2.13",
     "prettier-plugin-tailwindcss": "^0.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

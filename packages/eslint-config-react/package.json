@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.9.15",
+  "version": "0.9.16",
   "description": "A `eslint` config for `react` project best practice",
   "license": "MIT",
   "author": {
@@ -45,7 +45,7 @@
     "settingz": "^0.2.0"
   },
   "peerDependencies": {
-    "eslint": "^8.43.0"
+    "eslint": "^8.44.0"
   },
   "engines": {
     "node": "^16.15.0 || ^18.12.0"

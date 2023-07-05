@@ -12,6 +12,6 @@
     "eslint-plugin-react": "^7.32.2"
   },
   "peerDependencies": {
-    "eslint": "^8.43.0"
+    "eslint": "^8.44.0"
   }
 }

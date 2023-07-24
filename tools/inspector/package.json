@@ -8,17 +8,17 @@
   },
   "main": "index.mjs",
   "dependencies": {
-    "@commitlint/load": "^17.5.0",
+    "@commitlint/load": "^17.6.7",
     "fs-chain": "^8.2.2",
     "lodash": "^4.17.21",
     "sort-keys": "^5.0.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.40.2"
+    "@types/eslint": "^8.44.0"
   },
   "peerDependencies": {
-    "eslint": "^8.43.0",
-    "stylelint": "^15.9.0"
+    "eslint": "^8.45.0",
+    "stylelint": "^15.10.2"
   },
   "engines": {
     "node": "^16.15.0 || ^18.12.0"

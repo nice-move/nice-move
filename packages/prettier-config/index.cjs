@@ -4,20 +4,16 @@ const { configHas } = require('./utils.cjs');
 
 module.exports = {
   htmlWhitespaceSensitivity: 'css',
+  iniSpaceAroundEquals: true,
   singleQuote: true,
   trailingComma: 'all',
+  xmlSortAttributesByKey: true,
   xmlWhitespaceSensitivity: 'strict',
-  iniSpaceAroundEquals: true,
-  ...(process.versions && process.versions.pnp
-    ? {
-        plugins: [
-          require.resolve('@nice-move/prettier-plugin-package-json'),
-          require.resolve('@prettier/plugin-xml'),
-          require.resolve('prettier-plugin-ini'),
-          require.resolve('prettier-plugin-ssh-config'),
-        ],
-      }
-    : undefined),
+  plugins: [
+    require.resolve('@nice-move/prettier-plugin-package-json'),
+    require.resolve('@prettier/plugin-xml'),
+    require.resolve('prettier-plugin-ini'),
+  ],
   overrides: [
     {
       files: ['*.json'],

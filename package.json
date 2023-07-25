@@ -39,9 +39,9 @@
     "eslint-plugin-ava": "^14.0.0",
     "eslint-plugin-log-filenames": "^1.0.6",
     "execa": "^7.1.1",
-    "garou": "^0.6.11",
+    "garou": "^0.6.12",
     "nodemon": "^3.0.1",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.0",
     "stylelint": "^15.10.2",
     "typescript": "^5.1.6"
   },

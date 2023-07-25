@@ -2,6 +2,16 @@
 
 const { configHas } = require('./utils.cjs');
 
+function loadPlugin(name) {
+  try {
+    require.resolve(`${name}/package.json`);
+
+    return name;
+  } catch {
+    return false;
+  }
+}
+
 module.exports = {
   htmlWhitespaceSensitivity: 'css',
   iniSpaceAroundEquals: true,
@@ -13,7 +23,10 @@ module.exports = {
     require.resolve('@nice-move/prettier-plugin-package-json'),
     require.resolve('@prettier/plugin-xml'),
     require.resolve('prettier-plugin-ini'),
-  ],
+    loadPlugin('prettier-plugin-ssh-config'),
+    loadPlugin('prettier-plugin-groovy'),
+    loadPlugin('prettier-plugin-tailwindcss'),
+  ].filter(Boolean),
   overrides: [
     {
       files: ['*.json'],

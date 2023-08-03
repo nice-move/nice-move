@@ -5,13 +5,13 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
     "lib": [
-      "es2022"
+      "ESNext"
     ],
-    "module": "es2022",
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "node16",
     "resolveJsonModule": true,
     "strict": true,
-    "target": "es2022"
+    "target": "esnext"
   },
   "display": "Base"
 }

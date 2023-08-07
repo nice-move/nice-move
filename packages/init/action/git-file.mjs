@@ -7,34 +7,11 @@ import { cyan, green, red } from '../lib/color.mjs';
 import { download } from '../lib/utils.mjs';
 import gitattributes from '../template/.gitattributes.txt';
 
-const regexp =
-  /# Created by https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+[\S\s]+# End of https?:\/\/(www\.)?(toptal\.com\/developers\/gitignore|gitignore\.io)\/api\/\S+/;
-
 const Types = {
   Windows_NT: 'windows',
   Linux: 'linux',
   Darwin: 'macos',
 };
-
-function getPlatform(context) {
-  try {
-    if (regexp.test(context)) {
-      return [
-        ...new Set([
-          ...context
-            .match(/gitignore\.io\/api\/(\S+)/)[1]
-            .split(',')
-            .filter((item) => item !== 'node'),
-          Types[type()],
-        ]),
-      ].sort();
-    }
-
-    throw new Error('fail');
-  } catch {
-    return Types[type()];
-  }
-}
 
 export async function GitFile() {
   await new Text()
@@ -52,25 +29,18 @@ export async function GitFile() {
     .source('.gitignore')
     .onFail()
     .onDone((oldText = '') => {
-      const platform = getPlatform(oldText);
+      const platform = Types[type()];
 
-      return download(`https://gitignore.io/api/node,${platform}`)
+      return download(
+        `https://gitignore.io/api/ssh,certificates,node,${platform}`,
+      )
         .then((newText) => {
-          const [match] = oldText.match(regexp) || [];
-
-          const io = (
-            match
-              ? oldText.replace(regexp, newText)
-              : `${oldText.trim()}\n\n${newText}`
-          )
+          const io = newText
             .replaceAll(
               /(www\.)?toptal\.com\/developers\/gitignore/g,
               'gitignore.io',
             )
-            .trim()
-            .split(/\n\n\+/g)
-            .filter((item) => item.trim())
-            .join('\n\n');
+            .trim();
 
           return `${io}\n`;
         })

@@ -41,7 +41,7 @@ function action(isRoot, wanted = {}) {
         tailwindcss = 'tailwindcss' in dependencies ||
           'tailwindcss' in devDependencies,
         playwright,
-        '@bring-it/sftp': bringItSFTP = '@bring-it/cli' in devDependencies,
+        '@bring-it/sftp': bringItSFTP = '@bring-it/sftp' in devDependencies,
         '@bring-it/npm': bringItNPM = '@bring-it/npm' in devDependencies,
         'best-shot': bestShot = 'best-shot' in devDependencies,
       } = wanted;
@@ -201,7 +201,7 @@ function action(isRoot, wanted = {}) {
           bringItSFTP
             ? {
                 devDependencies: {
-                  '@bring-it/cli': latest['@bring-it/cli'],
+                  '@bring-it/sftp': latest['@bring-it/sftp'],
                 },
               }
             : undefined,

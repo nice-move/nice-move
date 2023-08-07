@@ -6,10 +6,6 @@ module.exports = {
       files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint/eslint-plugin'],
-      // parserOptions: {
-      //   tsconfigRootDir: process.cwd(),
-      //   project: ['./tsconfig.json'],
-      // },
       // extends: [
       //   'plugin:@typescript-eslint/recommended-requiring-type-checking',
       //   'airbnb-typescript',

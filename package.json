@@ -21,6 +21,7 @@
     "lint:staged": "nice-move lint staged",
     "lint:type": "tsc --noEmit",
     "prepare": "git config core.hooksPath .githooks",
+    "snapshot": "ava --fail-fast -w -u",
     "test": "ava --fail-fast -c 1 --timeout 20s"
   },
   "workspaces": [

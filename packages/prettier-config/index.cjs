@@ -19,6 +19,13 @@ module.exports = {
   trailingComma: 'all',
   xmlSortAttributesByKey: true,
   xmlWhitespaceSensitivity: 'strict',
+  tailwindFunctions: [
+    'clsx',
+    'classnames',
+    'classname',
+    'classNames',
+    'className',
+  ],
   plugins: [
     require.resolve('@nice-move/prettier-plugin-package-json'),
     require.resolve('@prettier/plugin-xml'),
@@ -28,6 +35,32 @@ module.exports = {
     loadPlugin('prettier-plugin-tailwindcss'),
   ].filter(Boolean),
   overrides: [
+    {
+      files: ['*.vue'],
+      options: {
+        tailwindAttributes: [
+          'label-class',
+          'value-class',
+          'title-class',
+          'class-name',
+        ],
+      },
+    },
+    {
+      files: ['*.jsx', '*.tsx'],
+      options: {
+        tailwindAttributes: [
+          'expandedRowClassName',
+          'maskClassName',
+          'overlayClassName',
+          'popupClassName',
+          'rootClassName',
+          'rowClassName',
+          'wrapClassName',
+          'wrapperClassName',
+        ],
+      },
+    },
     {
       files: ['*.json'],
       options: {
@@ -75,6 +108,12 @@ module.exports = {
       options: {
         parser: 'babel',
         trailingComma: 'es5',
+      },
+    },
+    {
+      files: ['*.wxml'],
+      options: {
+        parser: 'html',
       },
     },
     {

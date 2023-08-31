@@ -36,15 +36,14 @@
     "@bring-it/npm": "^0.2.10",
     "ava": "^5.3.1",
     "best-shot": "^0.4.1",
-    "eslint": "^8.46.0",
+    "eslint": "^8.48.0",
     "eslint-plugin-ava": "^14.0.0",
     "eslint-plugin-log-filenames": "^1.0.6",
-    "execa": "^7.2.0",
     "garou": "^0.6.12",
     "nodemon": "^3.0.1",
-    "prettier": "^3.0.1",
-    "stylelint": "^15.10.2",
-    "typescript": "^5.1.6"
+    "prettier": "^3.0.3",
+    "stylelint": "^15.10.3",
+    "typescript": "^5.2.2"
   },
   "engines": {
     "node": "^16.15.0 || ^18.12.0"

@@ -122,6 +122,12 @@ module.exports = {
         parser: 'ssh-config',
       },
     },
+    {
+      files: ['pnpm-lock.yaml'],
+      options: {
+        requirePragma: true,
+      },
+    },
     ...(configHas(
       ({ prettier = [] }) => prettier,
       (bundle) => bundle,

@@ -1,6 +1,7 @@
 name: bring-it
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -14,11 +15,11 @@ jobs:
           - windows-latest
           - ubuntu-latest
         node:
-          - 18.12.0
-          - 16.15.0
+          - lts/*
+          - lts/-1
         exclude:
           - os: ubuntu-latest
-            node: 16.15.0
+            node: lts/*
 
     runs-on: ${{ matrix.os }}
     steps:

@@ -5,9 +5,10 @@ const { isReachable, haveLocalDependencies } = require('settingz');
 // eslint-disable-next-line consistent-return
 function isMiniApp(value) {
   if (
+    isReachable('./mini.project.json') ||
+    isReachable('./project.alipay.json') ||
     isReachable('./project.config.json') ||
-    isReachable('./project.swan.json') ||
-    isReachable('./mini.config.json')
+    isReachable('./project.swan.json')
   ) {
     return value;
   }

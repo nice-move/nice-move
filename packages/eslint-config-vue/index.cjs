@@ -5,7 +5,7 @@ const { getPkg } = require('settingz');
 function getVersion() {
   const { vue = '' } = getPkg('dependencies');
 
-  return vue.replace(/^[=>^~]/, '');
+  return vue.replaceAll(/[=>^~]/g, '');
 }
 
 const version = getVersion();
@@ -22,7 +22,10 @@ module.exports = {
         'prettier',
       ],
       parserOptions: {
-        ecmaVersion: 2022,
+        ecmaVersion: 'latest',
+      },
+      globals: {
+        defineModel: 'readonly',
       },
       rules: {
         'import/no-default-export': 0,

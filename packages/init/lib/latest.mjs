@@ -19,7 +19,7 @@ export default {
   vue: '^3.3.4',
   'eslint-config-base': '^0.9.20',
   'stylelint-config': '^0.9.6',
-  'prettier-config': '^0.9.4',
+  'prettier-config': '^0.9.6',
   tsconfig: '^0.1.0',
   cli: '^0.10.11',
   lts: '^16.15.0 || ^18.12.0',

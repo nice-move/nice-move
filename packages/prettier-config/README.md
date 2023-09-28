@@ -81,8 +81,10 @@ trim_trailing_whitespace = true
 This config including:
 
 - [@nice-move/prettier-plugin-package-json](https://github.com/nice-move/prettier-plugin-package-json)
-- [prettier-plugin-ssh-config](https://github.com/nice-move/prettier-plugin-ssh-config)
 
 ## Related
 
 - [garou](https://github.com/nice-move/garou)
+- [prettier-plugin-dbml](https://github.com/nice-move/prettier-plugin-dbml)
+- [prettier-plugin-groovy](https://github.com/nice-move/prettier-plugin-groovy)
+- [prettier-plugin-ssh-config](https://github.com/nice-move/prettier-plugin-ssh-config)

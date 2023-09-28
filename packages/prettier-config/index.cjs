@@ -30,8 +30,11 @@ module.exports = {
     require.resolve('@nice-move/prettier-plugin-package-json'),
     require.resolve('@prettier/plugin-xml'),
     require.resolve('prettier-plugin-ini'),
+    require.resolve('./extra.cjs'),
     loadPlugin('prettier-plugin-ssh-config'),
     loadPlugin('prettier-plugin-groovy'),
+    loadPlugin('prettier-plugin-java'),
+    loadPlugin('prettier-plugin-nginx'),
     loadPlugin('prettier-plugin-tailwindcss'),
   ].filter(Boolean),
   overrides: [

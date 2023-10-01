@@ -33,7 +33,7 @@
     "svgo-config": "^0.5.0"
   },
   "devDependencies": {
-    "@bring-it/npm": "^0.2.10",
+    "@bring-it/npm": "^0.3.0",
     "ava": "^5.3.1",
     "best-shot": "^0.4.2",
     "eslint": "^8.50.0",

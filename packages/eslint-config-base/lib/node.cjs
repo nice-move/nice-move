@@ -90,7 +90,7 @@ module.exports = {
           configFile: false,
           plugins: [
             [
-              '@babel/syntax-import-attributes',
+              require.resolve('@babel/plugin-syntax-import-attributes'),
               {
                 deprecatedAssertSyntax: true,
               },

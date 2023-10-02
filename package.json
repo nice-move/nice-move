@@ -33,13 +33,13 @@
     "svgo-config": "^0.5.0"
   },
   "devDependencies": {
-    "@bring-it/npm": "^0.2.10",
+    "@bring-it/npm": "^0.3.5",
     "ava": "^5.3.1",
     "best-shot": "^0.4.2",
     "eslint": "^8.50.0",
     "eslint-plugin-ava": "^14.0.0",
     "eslint-plugin-log-filenames": "^1.0.6",
-    "garou": "^0.6.13",
+    "garou": "^0.6.14",
     "nodemon": "^3.0.1",
     "prettier": "^3.0.3",
     "stylelint": "^15.10.3",
@@ -68,6 +68,7 @@
       "packages/cli/**"
     ],
     "import-attributes": true,
+    "import-groups": "nice-move-preset",
     "import-http": true,
     "internal-regex": "^@nice-move/inspector$"
   },

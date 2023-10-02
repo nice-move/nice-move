@@ -14,7 +14,6 @@ function getDependencies() {
 }
 
 async function linter() {
-  // eslint-disable-next-line import/no-unresolved
   const { default: lintStaged } = await import('lint-staged');
 
   const dependencies = getDependencies();

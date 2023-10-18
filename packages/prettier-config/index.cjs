@@ -95,7 +95,7 @@ module.exports = {
       },
     },
     {
-      files: ['.npmrc', '*.editorconfig', '*.ini'],
+      files: ['.npmrc', '*.editorconfig', '*.ini', '.sentryclirc'],
       options: {
         parser: 'ini',
       },

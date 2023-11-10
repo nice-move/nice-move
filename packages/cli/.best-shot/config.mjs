@@ -1,5 +1,5 @@
 export const config = {
-  target: 'node14',
+  target: 'node18',
   entry: {
     cli: './src/index.mjs',
   },

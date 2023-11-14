@@ -29,6 +29,7 @@ module.exports = {
         'unicorn/filename-case': 'off',
         'unicorn/custom-error-definition': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-extraneous-class': 'off',
       },
     },
   ],

@@ -8,7 +8,7 @@
   },
   "main": "index.mjs",
   "dependencies": {
-    "@commitlint/load": "^18.2.0",
+    "@commitlint/load": "^18.4.0",
     "fs-chain": "^8.2.3",
     "lodash": "^4.17.21",
     "sort-keys": "^5.0.0"

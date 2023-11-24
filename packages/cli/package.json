@@ -45,8 +45,8 @@
     "stylelint-formatter-pretty": "^3.2.1"
   },
   "devDependencies": {
-    "@commitlint/format": "^18.1.0",
-    "@commitlint/lint": "^18.1.0",
+    "@commitlint/format": "^18.4.0",
+    "@commitlint/lint": "^18.4.0",
     "cheetor": "^0.13.0",
     "execa": "^8.0.1",
     "lint-staged": "^15.0.2",

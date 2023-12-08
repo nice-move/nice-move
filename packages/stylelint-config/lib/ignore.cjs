@@ -23,6 +23,7 @@ module.exports = {
     '**/dist/**',
     '**/.(cache|svn|git)/**',
     '**/.docusaurus/**',
+    '**/.obsidian/**',
     '**/miniprogram_npm/**',
     ...BestShot(),
     ...ignoreList(),

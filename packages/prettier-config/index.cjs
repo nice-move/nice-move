@@ -31,6 +31,7 @@ module.exports = {
     require.resolve('@prettier/plugin-xml'),
     require.resolve('prettier-plugin-ini'),
     require.resolve('./extra.cjs'),
+    loadPlugin('prettier-plugin-diy'),
     loadPlugin('prettier-plugin-ssh-config'),
     loadPlugin('prettier-plugin-groovy'),
     loadPlugin('prettier-plugin-java'),

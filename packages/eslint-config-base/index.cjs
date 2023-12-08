@@ -59,6 +59,7 @@ module.exports = {
     '.svn/',
     '*.min.*',
     '**/.docusaurus/**',
+    '**/.obsidian/**',
     '**/dist/**',
     '**/miniprogram_npm/**',
     '**/node_modules/**',

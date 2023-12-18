@@ -2,7 +2,7 @@ import { ESLint } from 'eslint';
 import { Json } from 'fs-chain';
 import pickBy from 'lodash/pickBy.js';
 import sortKeys from 'sort-keys';
-import printConfig from 'stylelint/lib/printConfig.js';
+import stylelint from 'stylelint';
 
 export function save(outputName, data) {
   return new Json()
@@ -38,10 +38,8 @@ export function eslintInspector(configName, filename, outputName = '') {
 }
 
 export function stylelintInspector(inputName, outputName) {
-  printConfig({
-    extends: '@nice-move/stylelint-config',
-    files: [inputName],
-  })
+  stylelint
+    .resolveConfig(inputName)
     .then(({ rules, ...rest }) => ({
       rules: pickBy(rules, (item) => item !== null),
       ...rest,

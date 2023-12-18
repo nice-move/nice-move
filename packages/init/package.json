@@ -41,7 +41,7 @@
   "files": [],
   "scripts": {
     "build": "best-shot prod",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
     "centra": "^2.6.0",

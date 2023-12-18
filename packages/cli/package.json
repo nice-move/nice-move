@@ -38,7 +38,7 @@
   ],
   "scripts": {
     "build": "best-shot prod",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
     "eslint-formatter-pretty": "^5.0.0",

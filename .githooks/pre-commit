@@ -1,6 +1,6 @@
 #!/bin/sh
 
-npm exec pin-latest
+pnpm exec pin-latest
 git add ./packages/init/lib/latest.mjs
-npm run lint:staged
-npm test
+pnpm run lint:staged
+pnpm test

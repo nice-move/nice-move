@@ -6,18 +6,18 @@
     "pin-latest": "index.cjs"
   },
   "dependencies": {
-    "fs-chain": "^8.2.2"
+    "fs-chain": "^8.2.3"
   },
   "peerDependencies": {
-    "@bring-it/npm": "^0.3.9",
-    "@bring-it/sftp": "^0.1.8",
-    "@playwright/test": "^1.39.0",
-    "@types/react": "^18.2.33",
-    "prettier-plugin-tailwindcss": "^0.5.7",
+    "@bring-it/npm": "^0.4.1",
+    "@bring-it/sftp": "^0.2.1",
+    "@playwright/test": "^1.40.1",
+    "@types/react": "^18.2.45",
+    "prettier-plugin-tailwindcss": "^0.5.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.3.5",
-    "vue": "^3.3.7"
+    "tailwindcss": "^3.3.6",
+    "vue": "^3.3.12"
   },
   "peerDependenciesMeta": {
     "@bring-it/npm": {

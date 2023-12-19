@@ -33,12 +33,11 @@
     "svgo-config": "^0.5.0"
   },
   "devDependencies": {
-    "@bring-it/npm": "^0.4.1",
+    "@bring-it/npm": "^0.5.0",
     "ava": "^6.0.1",
     "best-shot": "^0.4.6",
     "eslint": "^8.56.0",
     "eslint-plugin-ava": "^14.0.0",
-    "eslint-plugin-log-filenames": "^1.0.6",
     "garou": "^0.6.20",
     "nodemon": "^3.0.2",
     "prettier": "^3.1.1",
@@ -46,28 +45,29 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "@nice-move/latest":"workspace:*",
-    "@nice-move/init":"workspace:*",
-    "@nice-move/eslint-config-react":"workspace:*",
-    "@nice-move/eslint-config-vue":"workspace:*",    "@nice-move/eslint-config-base":"workspace:*",
-    "@nice-move/inspector":"workspace:*"
+    "@nice-move/cli": "workspace:*",
+    "@nice-move/eslint-config-base": "workspace:*",
+    "@nice-move/eslint-config-react": "workspace:*",
+    "@nice-move/eslint-config-vue": "workspace:*",
+    "@nice-move/init": "workspace:*",
+    "@nice-move/inspector": "workspace:*",
+    "@nice-move/latest": "workspace:*",
+    "@nice-move/prettier-config": "workspace:*",
+    "@nice-move/stylelint-config": "workspace:*"
   },
   "engines": {
     "node": "^18.12.0 || ^20.0.0"
   },
-  "packageManager": "pnpm@8.12.0",
+  "packageManager": "pnpm@8.12.1",
+  "pnpm": {
+    "patchedDependencies": {
+      "@commitlint/rules@18.4.3": "patches/@commitlint__rules@18.4.3.patch",
+      "conventional-changelog-angular@7.0.0": "patches/conventional-changelog-angular@7.0.0.patch",
+      "lint-staged@15.2.0": "patches/lint-staged@15.2.0.patch"
+    }
+  },
   "eslintConfig": {
-    "extends": "@nice-move/eslint-config-base",
-    "overrides": [
-      {
-        "excludedFiles": "*.md",
-        "files": "*.*",
-        "processor": "log-filenames/.js"
-      }
-    ],
-    "plugins": [
-      "log-filenames"
-    ]
+    "extends": "@nice-move/eslint-config-base"
   },
   "nice-move": {
     "bundle": [

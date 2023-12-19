@@ -2,12 +2,25 @@ lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
-  excludeLinksFromLockfile: false
+
+patchedDependencies:
+  '@commitlint/rules@18.4.3':
+    hash: wpcy7rvaaueenl4sr7tujp5cnq
+    path: patches/@commitlint__rules@18.4.3.patch
+  conventional-changelog-angular@7.0.0:
+    hash: f2maegr6i6mxqemptyyo762qwe
+    path: patches/conventional-changelog-angular@7.0.0.patch
+  lint-staged@15.2.0:
+    hash: am7cm6ahmnwxad7hv534bwrcve
+    path: patches/lint-staged@15.2.0.patch
 
 importers:
 
   .:
     dependencies:
+      '@nice-move/cli':
+        specifier: workspace:*
+        version: link:packages/cli
       '@nice-move/eslint-config-base':
         specifier: workspace:*
         version: link:packages/eslint-config-base
@@ -26,6 +39,12 @@ importers:
       '@nice-move/latest':
         specifier: workspace:*
         version: link:tools/latest
+      '@nice-move/prettier-config':
+        specifier: workspace:*
+        version: link:packages/prettier-config
+      '@nice-move/stylelint-config':
+        specifier: workspace:*
+        version: link:packages/stylelint-config
       svgo:
         specifier: ^3.1.0
         version: 3.1.0
@@ -34,8 +53,8 @@ importers:
         version: 0.5.0(svgo@3.1.0)
     devDependencies:
       '@bring-it/npm':
-        specifier: ^0.4.1
-        version: 0.4.2(@bring-it/cli@0.8.1)
+        specifier: ^0.5.0
+        version: 0.5.0(@bring-it/cli@0.9.0)
       ava:
         specifier: ^6.0.1
         version: 6.0.1
@@ -48,9 +67,6 @@ importers:
       eslint-plugin-ava:
         specifier: ^14.0.0
         version: 14.0.0(eslint@8.56.0)
-      eslint-plugin-log-filenames:
-        specifier: ^1.0.6
-        version: 1.0.6(eslint@8.56.0)
       garou:
         specifier: ^0.6.20
         version: 0.6.20(eslint@8.56.0)(typescript@5.3.3)
@@ -72,9 +88,6 @@ importers:
       eslint-formatter-pretty:
         specifier: ^5.0.0
         version: 5.0.0
-      stylelint-formatter-pretty:
-        specifier: ^3.2.1
-        version: 3.2.1
     devDependencies:
       '@commitlint/format':
         specifier: ^18.4.0
@@ -90,7 +103,7 @@ importers:
         version: 8.0.1
       lint-staged:
         specifier: ^15.0.2
-        version: 15.2.0
+        version: 15.2.0(patch_hash=am7cm6ahmnwxad7hv534bwrcve)
       settingz:
         specifier: ^0.2.0
         version: 0.2.0
@@ -658,6 +671,16 @@ packages:
     dependencies:
       globby: 14.0.0
       yargs: 17.7.2
+    dev: false
+
+  /@bring-it/cli@0.9.0:
+    resolution: {integrity: sha512-UOk6ZSrouN2af0v30huQaiq+9/lN01ibiAv9oLZN/yNIrGjIDUnSZZMeBLNlTUA4A6LxUI2l8leDv4aCFRg7ew==}
+    engines: {node: ^18.0.0 || ^20.0.0, npm: '>=9.0.0'}
+    hasBin: true
+    dependencies:
+      globby: 14.0.0
+      yargs: 17.7.2
+    dev: true
 
   /@bring-it/npm@0.4.2(@bring-it/cli@0.8.1):
     resolution: {integrity: sha512-Kt3u24sRQn/JxXiwpTIEw8Lp3ko8d5mivz11P1eUtgUFQX2Sbvis86sVYH3BqJH5Xv204FgLjQNMoCOvjU1qBA==}
@@ -666,6 +689,16 @@ packages:
       '@bring-it/cli': ^0.8.0
     dependencies:
       '@bring-it/cli': 0.8.1
+    dev: false
+
+  /@bring-it/npm@0.5.0(@bring-it/cli@0.9.0):
+    resolution: {integrity: sha512-6QbOnE5HkrsnRTMJC7bQcbjR+LHHVC+nA1yPndiBIZ1l/1BKMBiQ1IESojPdW91jKqX9/R55Mhe+xYLWWCBSuA==}
+    engines: {node: ^18.0.0 || ^20.0.0, npm: '>=9.0.0'}
+    peerDependencies:
+      '@bring-it/cli': ^0.9.0
+    dependencies:
+      '@bring-it/cli': 0.9.0
+    dev: true
 
   /@bring-it/sftp@0.2.1:
     resolution: {integrity: sha512-0NHgnwSY4oxN7pWAyImqBR/7l7payzP6Sll4DZT0BpT/VVJN+HSXW5EHyRzugNl39mFdiJ61qMSn8CSvdFDWug==}
@@ -744,7 +777,7 @@ packages:
     dependencies:
       '@commitlint/is-ignored': 18.4.3
       '@commitlint/parse': 18.4.3
-      '@commitlint/rules': 18.4.3
+      '@commitlint/rules': 18.4.3(patch_hash=wpcy7rvaaueenl4sr7tujp5cnq)
       '@commitlint/types': 18.4.3
 
   /@commitlint/load@18.4.3(typescript@5.3.3):
@@ -776,7 +809,7 @@ packages:
     engines: {node: '>=v18'}
     dependencies:
       '@commitlint/types': 18.4.3
-      conventional-changelog-angular: 7.0.0
+      conventional-changelog-angular: 7.0.0(patch_hash=f2maegr6i6mxqemptyyo762qwe)
       conventional-commits-parser: 5.0.0
 
   /@commitlint/read@18.4.3:
@@ -802,7 +835,7 @@ packages:
       resolve-global: 1.0.0
     dev: false
 
-  /@commitlint/rules@18.4.3:
+  /@commitlint/rules@18.4.3(patch_hash=wpcy7rvaaueenl4sr7tujp5cnq):
     resolution: {integrity: sha512-8KIeukDf45BiY+Lul1T0imSNXF0sMrlLG6JpLLKolkmYVQ6PxxoNOriwyZ3UTFFpaVbPy0rcITaV7U9JCAfDTA==}
     engines: {node: '>=v18'}
     dependencies:
@@ -811,6 +844,7 @@ packages:
       '@commitlint/to-lines': 18.4.3
       '@commitlint/types': 18.4.3
       execa: 5.1.1
+    patched: true
 
   /@commitlint/to-lines@18.4.3:
     resolution: {integrity: sha512-fy1TAleik4Zfru1RJ8ZU6cOSvgSVhUellxd3WZV1D5RwHZETt1sZdcA4mQN2y3VcIZsUNKkW0Mq8CM9/L9harQ==}
@@ -2243,11 +2277,12 @@ packages:
     resolution: {integrity: sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==}
     dev: true
 
-  /conventional-changelog-angular@7.0.0:
+  /conventional-changelog-angular@7.0.0(patch_hash=f2maegr6i6mxqemptyyo762qwe):
     resolution: {integrity: sha512-ROjNchA9LgfNMTTFSIWPzebCwOGFdgkEq45EnvvrmSLvCtAw0HSmrCs7/ty+wAeYUZyNay0YMUNYFTRL72PkBQ==}
     engines: {node: '>=16'}
     dependencies:
       compare-func: 2.0.0
+    patched: true
 
   /conventional-changelog-conventionalcommits@7.0.2:
     resolution: {integrity: sha512-NKXYmMR/Hr1DevQegFB4MwfM5Vv0m4UIxKZTTYuD98lpTknaZlSRrDOG4X7wIXpGkfsYxZTghUN+Qq+T0YQI7w==}
@@ -2965,14 +3000,6 @@ packages:
       object.entries: 1.1.7
       object.fromentries: 2.0.7
     dev: false
-
-  /eslint-plugin-log-filenames@1.0.6(eslint@8.56.0):
-    resolution: {integrity: sha512-6a2NMpYn+dWJBL7ZSAbhjdnExCOn1ECMAgXjIsiozuCjZwQ1jq1+geGAvorjPzWLHwM6yAGR2mMpTCFxlVN0TQ==}
-    peerDependencies:
-      eslint: '>=3'
-    dependencies:
-      eslint: 8.56.0
-    dev: true
 
   /eslint-plugin-markdown@3.0.1(eslint@8.56.0):
     resolution: {integrity: sha512-8rqoc148DWdGdmYF6WSQFT3uQ6PO7zXYgeBpHAOAakX/zpq+NvFYbDA/H7PYzHajwtmaOzAwfxyl++x0g1/N9A==}
@@ -4281,7 +4308,7 @@ packages:
   /lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  /lint-staged@15.2.0:
+  /lint-staged@15.2.0(patch_hash=am7cm6ahmnwxad7hv534bwrcve):
     resolution: {integrity: sha512-TFZzUEV00f+2YLaVPWBWGAMq7So6yQx+GG8YRMDeOEIf95Zn5RyiLMsEiX4KTNl9vq/w+NqRJkLA1kPIo15ufQ==}
     engines: {node: '>=18.12.0'}
     hasBin: true
@@ -4299,6 +4326,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+    patched: true
 
   /listr2@8.0.0:
     resolution: {integrity: sha512-u8cusxAcyqAiQ2RhYvV7kRKNLgUvtObIbhOX2NCXqvp1UU32xIg5CT22ykS2TPKJXZWJwtK3IKLiqAGlGNE+Zg==}
@@ -6001,18 +6029,6 @@ packages:
       stylelint: ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
     dependencies:
       stylelint: 16.0.2(typescript@5.3.3)
-    dev: false
-
-  /stylelint-formatter-pretty@3.2.1:
-    resolution: {integrity: sha512-fYL7iKejFK7YxTXtWmlIauuhgCPxRbLleTm6GuKKRHzEVaNt6mqchoWdHn3IzIZngFN8GEqh4Z5HpfbyBTTCBQ==}
-    engines: {node: '>=14'}
-    dependencies:
-      ansi-escapes: 4.3.2
-      log-symbols: 4.1.0
-      picocolors: 1.0.0
-      plur: 4.0.0
-      string-width: 4.2.3
-      supports-hyperlinks: 3.0.0
     dev: false
 
   /stylelint-scss@6.0.0(stylelint@16.0.2):

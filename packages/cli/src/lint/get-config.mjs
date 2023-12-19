@@ -13,8 +13,7 @@ export function getConfig({ garou, stylelint, eslint, prettier }) {
     '*.{vue,html,htm,md}': [
       garou && 'garou',
       prettier && `prettier -w -u${useColor}`,
-      stylelint &&
-        `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
+      stylelint && `stylelint --fix${useColor}`,
       eslint && `eslint --fix -f=pretty${useColor}`,
     ],
     '*.{ts,tsx,mts,cts}': [
@@ -30,8 +29,7 @@ export function getConfig({ garou, stylelint, eslint, prettier }) {
     '*.{c,sc,le,wx,q,tt,jx,ac}ss': [
       garou && 'garou',
       prettier && `prettier -w -u${useColor}`,
-      stylelint &&
-        `stylelint --fix --custom-formatter=node_modules/stylelint-formatter-pretty${useColor}`,
+      stylelint && `stylelint --fix${useColor}`,
     ],
     '*.{json,yml,yaml,svg}': [
       garou && 'garou',

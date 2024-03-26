@@ -29,20 +29,20 @@
     "tools/*"
   ],
   "dependencies": {
-    "svgo": "^3.1.0",
-    "svgo-config": "^0.5.0"
+    "svgo": "^3.2.0",
+    "svgo-config": "^0.7.0"
   },
   "devDependencies": {
-    "@bring-it/npm": "^0.5.0",
-    "ava": "^6.0.1",
-    "best-shot": "^0.5.1",
-    "eslint": "^8.56.0",
+    "@bring-it/npm": "^0.5.2",
+    "ava": "^6.1.2",
+    "best-shot": "^0.5.2",
+    "eslint": "^8.57.0",
     "eslint-plugin-ava": "^14.0.0",
-    "garou": "^0.6.22",
-    "nodemon": "^3.0.2",
-    "prettier": "^3.1.1",
-    "stylelint": "^16.0.2",
-    "typescript": "^5.3.3"
+    "garou": "^0.7.2",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
+    "stylelint": "^16.3.0",
+    "typescript": "^5.4.3"
   },
   "peerDependencies": {
     "@nice-move/cli": "workspace:*",
@@ -58,12 +58,9 @@
   "engines": {
     "node": "^18.12.0 || ^20.0.0"
   },
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@8.15.5",
   "pnpm": {
     "patchedDependencies": {
-      "@commitlint/rules@18.4.3": "patches/@commitlint__rules@18.4.3.patch",
-      "conventional-changelog-angular@7.0.0": "patches/conventional-changelog-angular@7.0.0.patch",
-      "lint-staged@15.2.0": "patches/lint-staged@15.2.0.patch"
     }
   },
   "eslintConfig": {

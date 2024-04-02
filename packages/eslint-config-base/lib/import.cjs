@@ -27,6 +27,7 @@ module.exports = {
           '**/.*rc.{m,c,}{t,j}s',
           '**/*.config.{m,c,}{t,j}s',
           '**/config.{m,c,}{t,j}s',
+          '.*/config.{m,c,}{t,j}s',
           '**/.best-shot/**',
           ...(configHas(
             ({ bundle = [] }) => bundle,

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -38,8 +38,8 @@
     "@babel/eslint-parser": "^7.24.1",
     "@babel/plugin-syntax-import-attributes": "^7.24.1",
     "@nice-move/eslint-plugin-html": "0.0.0-beta.4",
-    "@typescript-eslint/eslint-plugin": "^7.4.0",
-    "@typescript-eslint/parser": "^7.4.0",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
@@ -47,8 +47,8 @@
     "eslint-plugin-markdown": "^3.0.1",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-sonarjs": "^0.24.0",
-    "eslint-plugin-unicorn": "^49.0.0",
+    "eslint-plugin-sonarjs": "^0.25.0",
+    "eslint-plugin-unicorn": "^51.0.1",
     "espree": "^9.6.1",
     "resolve.exports": "^2.0.2",
     "settingz": "^0.2.0"

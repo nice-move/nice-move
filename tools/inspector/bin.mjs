@@ -4,7 +4,7 @@ import load from '@commitlint/load';
 
 import { eslintInspector, save, stylelintInspector } from './index.mjs';
 
-const { rules } = await load.default({
+const { rules } = await load({
   extends: ['@nice-move/commitlint-config'],
 });
 
@@ -38,6 +38,8 @@ eslintInspector('@nice-move/base', 'sample.md/o.js', 'md/js.json');
 
 eslintInspector('@nice-move/base', 'test/sample.js', 'test.json');
 eslintInspector('@nice-move/base', 'spec/sample.js', 'spec.json');
+
+eslintInspector('@nice-move/base', '.vitepress/config.mts', 'config.json');
 
 stylelintInspector('test.css', 'css.json');
 stylelintInspector('test.less', 'less.json');

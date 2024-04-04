@@ -14,13 +14,19 @@ module.exports = {
         require.resolve('./lib/base.cjs'),
       ],
       plugins: [
-        // 'stylelint-declaration-block-no-ignored-properties',
+        'stylelint-declaration-block-no-ignored-properties',
         'stylelint-suitcss',
+        'stylelint-no-unresolved-module',
+        'stylelint-require-units',
       ],
       rules: {
         'suitcss/root-no-standard-properties': true,
         'suitcss/selector-root-no-composition': true,
-        // 'plugin/declaration-block-no-ignored-properties': true,
+        'plugin/declaration-block-no-ignored-properties': true,
+        'matterialize/stylelint-require-units': true,
+        'plugin/no-unresolved-module': {
+          modules: ['node_modules'],
+        },
       },
     },
     {

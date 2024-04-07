@@ -9,5 +9,6 @@ export const config = {
   },
   externals: {
     enquirer: 'node-commonjs enquirer',
+    lilconfig: 'node-commonjs lilconfig',
   },
 };

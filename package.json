@@ -61,6 +61,13 @@
     "node": "^18.12.0 || ^20.0.0"
   },
   "packageManager": "pnpm@8.15.6",
+  "pnpm": {
+    "patchedDependencies": {
+      "@commitlint/rules@19.0.3": "patches/@commitlint__rules@19.0.3.patch",
+      "conventional-changelog-angular@7.0.0": "patches/conventional-changelog-angular@7.0.0.patch",
+      "lint-staged@15.2.2": "patches/lint-staged@15.2.2.patch"
+    }
+  },
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"
   },

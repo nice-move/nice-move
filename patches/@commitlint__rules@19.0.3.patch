@@ -1,0 +1,21 @@
+diff --git a/lib/index.js b/lib/index.js
+index 5bb54bdb681c7f093c5f84d92f88b27ae2e08bf1..127af9c257320866f5cf58e955c711612a6560a4 100644
+--- a/lib/index.js
++++ b/lib/index.js
+@@ -28,7 +28,7 @@ import { subjectFullStop } from './subject-full-stop.js';
+ import { subjectMaxLength } from './subject-max-length.js';
+ import { subjectMinLength } from './subject-min-length.js';
+ import { subjectExclamationMark } from './subject-exclamation-mark.js';
+-import { trailerExists } from './trailer-exists.js';
++
+ import { typeCase } from './type-case.js';
+ import { typeEmpty } from './type-empty.js';
+ import { typeEnum } from './type-enum.js';
+@@ -65,7 +65,6 @@ export default {
+     'subject-max-length': subjectMaxLength,
+     'subject-min-length': subjectMinLength,
+     'subject-exclamation-mark': subjectExclamationMark,
+-    'trailer-exists': trailerExists,
+     'type-case': typeCase,
+     'type-empty': typeEmpty,
+     'type-enum': typeEnum,

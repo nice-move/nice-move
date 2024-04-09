@@ -1,4 +1,7 @@
 {
   "extends": "@nice-move/tsconfig/base.json",
-  "include": ["./"]
+  "include": ["./"],
+  "compilerOptions": {
+    "types": ["sass"]
+  }
 }

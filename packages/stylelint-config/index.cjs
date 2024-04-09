@@ -22,8 +22,11 @@ module.exports = {
       rules: {
         'suitcss/root-no-standard-properties': true,
         'suitcss/selector-root-no-composition': true,
-        'plugin/declaration-block-no-ignored-properties': true,
-        'matterialize/stylelint-require-units': true,
+        'plugin/declaration-block-no-ignored-properties': [
+          true,
+          { severity: 'warning' },
+        ],
+        'matterialize/stylelint-require-units': [true, { severity: 'warning' }],
         'plugin/no-unresolved-module': {
           modules: ['node_modules'],
         },

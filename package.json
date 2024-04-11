@@ -38,12 +38,12 @@
     "best-shot": "^0.5.2",
     "eslint": "^8.57.0",
     "eslint-plugin-ava": "^14.0.0",
-    "garou": "^0.7.2",
+    "garou": "^0.7.3",
     "nodemon": "^3.1.0",
     "prettier": "^3.2.5",
     "sass": "^1.74.1",
     "stylelint": "^16.3.1",
-    "typescript": "^5.4.4"
+    "typescript": "^5.4.5"
   },
   "peerDependencies": {
     "@nice-move/cli": "workspace:*",

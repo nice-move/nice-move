@@ -41,7 +41,7 @@
     "garou": "^0.7.3",
     "nodemon": "^3.1.0",
     "prettier": "^3.2.5",
-    "sass": "^1.74.1",
+    "sass": "^1.75.0",
     "stylelint": "^16.3.1",
     "typescript": "^5.4.5"
   },
@@ -57,16 +57,16 @@
     "@nice-move/prettier-config": "workspace:*",
     "@nice-move/stylelint-config": "workspace:*"
   },
-  "engines": {
-    "node": "^18.12.0 || ^20.0.0"
-  },
-  "packageManager": "pnpm@8.15.6",
   "pnpm": {
     "patchedDependencies": {
       "@commitlint/rules@19.0.3": "patches/@commitlint__rules@19.0.3.patch",
       "conventional-changelog-angular@7.0.0": "patches/conventional-changelog-angular@7.0.0.patch",
       "lint-staged@15.2.2": "patches/lint-staged@15.2.2.patch"
     }
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": "^18.12.0 || ^20.0.0"
   },
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"

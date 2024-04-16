@@ -11,7 +11,7 @@ const commonjs =
 module.exports = {
   plugins: ['n'],
   rules: {
-    'n/shebang': 'error',
+    'n/hashbang': 'error',
     'n/no-process-env': 'error',
     'n/no-path-concat': 'error',
   },

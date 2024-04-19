@@ -26,6 +26,7 @@ A [prettier] config created by personal preferences.
 
 - .npmrc
 - .babelrc
+- .sentryclirc
 - .ssh/config ssh_config
 
 ### Mini progarm
@@ -35,6 +36,32 @@ A [prettier] config created by personal preferences.
 - .ttss
 - .qss .qs
 - .wxss .wxs
+
+### Include plugins
+
+- [@nice-move/prettier-plugin-package-json](https://github.com/nice-move/prettier-plugin-package-json)
+- prettier-plugin-ini
+- @prettier/plugin-xml
+
+### Auto load plugins when they are installed
+
+- [prettier-plugin-ssh-config]
+- [prettier-plugin-groovy]
+- prettier-plugin-java
+- prettier-plugin-nginx
+- prettier-plugin-tailwindcss
+- @cospaia/prettier-plugin-clojure
+
+### Addons support from kroki
+
+- .bpmn
+- .bytefield
+- .excalidraw
+- .markmap
+- .vega
+- .vegalite
+- .wavedrom
+- .wireviz
 
 ## Installation
 
@@ -76,15 +103,12 @@ tab_width = 2
 trim_trailing_whitespace = true
 ```
 
-## Tips
-
-This config including:
-
-- [@nice-move/prettier-plugin-package-json](https://github.com/nice-move/prettier-plugin-package-json)
-
 ## Related
 
 - [garou](https://github.com/nice-move/garou)
 - [prettier-plugin-dbml](https://github.com/nice-move/prettier-plugin-dbml)
-- [prettier-plugin-groovy](https://github.com/nice-move/prettier-plugin-groovy)
-- [prettier-plugin-ssh-config](https://github.com/nice-move/prettier-plugin-ssh-config)
+- [prettier-plugin-groovy]
+- [prettier-plugin-ssh-config]
+
+[prettier-plugin-ssh-config]: https://github.com/nice-move/prettier-plugin-ssh-config
+[prettier-plugin-groovy]: https://github.com/nice-move/prettier-plugin-groovy

@@ -1,7 +1,8 @@
 export default {
   '@bring-it/npm': '^0.5.2',
+  '@cospaia/prettier-plugin-clojure': '^0.0.2',
   ava: '^6.1.2',
-  'best-shot': '^0.5.2',
+  'best-shot': '^0.5.3',
   eslint: '^8.57.0',
   'eslint-plugin-ava': '^14.0.0',
   garou: '^0.7.3',
@@ -19,7 +20,7 @@ export default {
   vue: '^3.4.22',
   'eslint-config-base': '^0.11.4',
   'stylelint-config': '^0.10.6',
-  'prettier-config': '^0.11.2',
+  'prettier-config': '^0.11.3',
   tsconfig: '^0.1.0',
   cli: '^0.11.10',
   lts: '^18.12.0 || ^20.0.0',

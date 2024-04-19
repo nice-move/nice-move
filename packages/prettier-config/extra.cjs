@@ -15,12 +15,32 @@ module.exports = {
     {
       name: 'VegaLite',
       parsers: ['json'],
-      extensions: ['.vegalite'],
+      extensions: ['.vegalite', '.vega'],
     },
     {
       name: 'Markmap',
       parsers: ['markdown'],
       extensions: ['.markmap'],
+    },
+    {
+      name: 'Bpmn',
+      parsers: ['xml'],
+      extensions: ['.bpmn'],
+    },
+    {
+      name: 'excalidraw',
+      parsers: ['json'],
+      extensions: ['.excalidraw'],
+    },
+    {
+      name: 'clojure',
+      parsers: ['clojure'],
+      extensions: ['.clj'],
+    },
+    {
+      name: 'bytefield',
+      parsers: ['clojure'],
+      extensions: ['.bytefield'],
     },
   ],
 };

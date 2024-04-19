@@ -32,11 +32,12 @@ module.exports = {
     require.resolve('prettier-plugin-ini'),
     require.resolve('./extra.cjs'),
     loadPlugin('prettier-plugin-diy'),
-    loadPlugin('prettier-plugin-ssh-config'),
     loadPlugin('prettier-plugin-groovy'),
     loadPlugin('prettier-plugin-java'),
     loadPlugin('prettier-plugin-nginx'),
+    loadPlugin('prettier-plugin-ssh-config'),
     loadPlugin('prettier-plugin-tailwindcss'),
+    loadPlugin('@cospaia/prettier-plugin-clojure'),
   ].filter(Boolean),
   overrides: [
     {
@@ -74,7 +75,7 @@ module.exports = {
     {
       files: ['.*rc', '.*rc.json', '{t,j}sconfig.json', '.vscode/*.json'],
       options: {
-        parser: 'json',
+        parser: 'jsonc',
       },
     },
     {

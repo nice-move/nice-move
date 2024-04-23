@@ -23,6 +23,7 @@ new JsonToText()
       'eslint-config-base',
       'stylelint-config',
       'prettier-config',
+      'syncpack-config',
       'tsconfig',
       'cli',
     ),

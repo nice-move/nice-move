@@ -20,9 +20,11 @@
     "inspect": "nodemon",
     "lint:staged": "nice-move lint staged",
     "lint:type": "tsc --noEmit",
+    "lint:version": "syncpack lint",
     "prepare": "git config core.hooksPath .githooks",
     "snapshot": "ava --fail-fast -w -u",
-    "test": "ava --fail-fast -c 1 --timeout 20s"
+    "test": "ava --fail-fast -c 1 --timeout 20s",
+    "version:pin": "syncpack fix-mismatches"
   },
   "workspaces": [
     "packages/*",
@@ -44,19 +46,21 @@
     "prettier": "^3.2.5",
     "sass": "^1.75.0",
     "stylelint": "^16.3.1",
-    "typescript": "^5.4.5"
+    "syncpack": "^12.3.1",
+    "typescript": "~5.4.5"
   },
   "peerDependencies": {
-    "@nice-move/cli": "workspace:*",
-    "@nice-move/commitlint-config": "workspace:*",
-    "@nice-move/eslint-config-base": "workspace:*",
-    "@nice-move/eslint-config-react": "workspace:*",
-    "@nice-move/eslint-config-vue": "workspace:*",
-    "@nice-move/init": "workspace:*",
-    "@nice-move/inspector": "workspace:*",
-    "@nice-move/latest": "workspace:*",
-    "@nice-move/prettier-config": "workspace:*",
-    "@nice-move/stylelint-config": "workspace:*"
+    "@nice-move/cli": "workspace:~",
+    "@nice-move/commitlint-config": "workspace:~",
+    "@nice-move/eslint-config-base": "workspace:~",
+    "@nice-move/eslint-config-react": "workspace:~",
+    "@nice-move/eslint-config-vue": "workspace:~",
+    "@nice-move/init": "workspace:~",
+    "@nice-move/inspector": "workspace:~",
+    "@nice-move/latest": "workspace:~",
+    "@nice-move/prettier-config": "workspace:~",
+    "@nice-move/stylelint-config": "workspace:~",
+    "@nice-move/syncpack-config": "workspace:~"
   },
   "pnpm": {
     "patchedDependencies": {

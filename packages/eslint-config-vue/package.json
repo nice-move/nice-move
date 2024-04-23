@@ -39,7 +39,7 @@
     "settingz": "^0.2.0"
   },
   "peerDependencies": {
-    "@nice-move/eslint-config-base": "workspace:^",
+    "@nice-move/eslint-config-base": "workspace:~",
     "eslint": "^8.57.0"
   },
   "engines": {

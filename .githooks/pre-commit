@@ -3,4 +3,5 @@
 pnpm exec pin-latest
 git add ./packages/init/lib/latest.mjs
 pnpm run lint:staged
+pnpm run lint:version
 pnpm test

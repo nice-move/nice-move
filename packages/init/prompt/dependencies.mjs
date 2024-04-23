@@ -36,6 +36,7 @@ function action(isRoot, wanted = {}) {
         prettier = 'prettier' in devDependencies,
         react = 'react' in dependencies,
         stylelint = 'stylelint' in devDependencies,
+        syncpack = 'syncpack' in devDependencies,
         typescript = 'typescript' in devDependencies,
         vue = 'vue' in dependencies,
         tailwindcss = 'tailwindcss' in dependencies ||
@@ -71,6 +72,20 @@ function action(isRoot, wanted = {}) {
             ].join('\n'),
           )
           .output('.githooks/commit-msg');
+      }
+
+      if (syncpack) {
+        await new Text()
+          .onDone(() =>
+            [
+              '// @ts-check',
+              '',
+              "import defineConfig from '@nice-move/syncpack-config';",
+              '',
+              'export default defineConfig(import.meta.url, {});',
+            ].join('\n'),
+          )
+          .output('syncpack.config.js');
       }
 
       if (typescript) {
@@ -156,6 +171,14 @@ function action(isRoot, wanted = {}) {
                 },
                 stylelint: {
                   extends: '@nice-move/stylelint-config',
+                },
+              }
+            : undefined,
+          syncpack
+            ? {
+                devDependencies: {
+                  '@nice-move/syncpack-config': latest['syncpack-config'],
+                  syncpack: latest.syncpack,
                 },
               }
             : undefined,
@@ -245,6 +268,7 @@ export function Dependencies() {
     'eslint',
     'stylelint',
     'prettier',
+    'syncpack',
     'garou',
     'ava',
     'playwright',

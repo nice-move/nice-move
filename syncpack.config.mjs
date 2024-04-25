@@ -15,14 +15,10 @@ export default defineConfig(import.meta.url, {
       preferVersion: 'highestSemver',
     },
     {
-      dependencies: [
-        '@nice-move/eslint-config-base',
-        '@nice-move/eslint-config-react',
-        '@nice-move/eslint-config-vue',
-      ],
+      dependencies: ['@nice-move/eslint-config-*'],
       dependencyTypes: ['local'],
       label: 'Same version',
-      pinVersion: '0.11.4',
+      pinVersion: '0.11.5',
     },
     {
       dependencies: ['@nice-move/*'],

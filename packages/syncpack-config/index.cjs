@@ -39,12 +39,11 @@ module.exports = function defineConfig(url, config) {
         range: '~',
       },
       {
-        dependencyTypes: ['packageManager'],
+        dependencyTypes: ['local', 'packageManager'],
         range: '',
       },
       {
-        dependencies: ['**'],
-        dependencyTypes: ['!local'],
+        dependencyTypes: ['!engines'],
         range: '^',
       },
     ],
@@ -56,18 +55,18 @@ module.exports = function defineConfig(url, config) {
         label: '@types packages should only be under peerDependencies',
       },
       {
-        dependencies: ['node'],
-        dependencyTypes: ['engines'],
-        label: 'Pin engines.node',
-        pinVersion: pkg.engines?.node || '^20.0.0',
-      },
-      {
         dependencies: ['react', 'react-dom'],
         dependencyTypes: ['!local'],
         label: 'Pin react',
         policy: 'sameRange',
       },
       ...(config.versionGroups || []),
+      {
+        dependencies: ['node'],
+        dependencyTypes: ['engines'],
+        label: 'Pin engines.node',
+        pinVersion: pkg.engines?.node || '^20.0.0',
+      },
       {
         dependencyTypes: ['!local'],
         label: 'Pin others',

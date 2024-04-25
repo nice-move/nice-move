@@ -45,8 +45,8 @@
     "nodemon": "^3.1.0",
     "prettier": "^3.2.5",
     "sass": "^1.75.0",
-    "stylelint": "^16.3.1",
-    "syncpack": "^12.3.1",
+    "stylelint": "^16.4.0",
+    "syncpack": "^12.3.2",
     "typescript": "~5.4.5"
   },
   "peerDependencies": {

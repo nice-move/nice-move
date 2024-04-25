@@ -52,6 +52,12 @@ importers:
       '@nice-move/syncpack-config':
         specifier: workspace:~
         version: link:packages/syncpack-config
+      '@nice-move/tsconfig':
+        specifier: workspace:~
+        version: link:packages/tsconfig
+      '@types/node':
+        specifier: ^20.12.7
+        version: 20.12.7
       svgo:
         specifier: ^3.2.0
         version: 3.2.0
@@ -69,8 +75,8 @@ importers:
         specifier: ^6.1.2
         version: 6.1.2
       best-shot:
-        specifier: ^0.5.3
-        version: 0.5.3(browserslist@4.23.0)
+        specifier: ^0.5.4
+        version: 0.5.4(browserslist@4.23.0)
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -78,8 +84,8 @@ importers:
         specifier: ^14.0.0
         version: 14.0.0(eslint@8.57.0)
       garou:
-        specifier: ^0.7.3
-        version: 0.7.3(eslint@8.57.0)(stylelint@16.4.0)(typescript@5.4.5)
+        specifier: ^0.7.4
+        version: 0.7.4(eslint@8.57.0)(stylelint@16.4.0)(typescript@5.4.5)
       nodemon:
         specifier: ^3.1.0
         version: 3.1.0
@@ -1907,9 +1913,9 @@ packages:
   /balanced-match@2.0.0:
     resolution: {integrity: sha512-1ugUSr8BHXRnK23KfuYS+gVMC3LB8QGH9W1iGtDPsNWoQbgtXSExkBu2aDR4epiGWZOjZsj6lDl/N/AqqTC3UA==}
 
-  /best-shot@0.5.3(browserslist@4.23.0):
-    resolution: {integrity: sha512-stit+S3Zq89jFiL5mg8CqkyBQ8dKAnDsi7c0ZIsIjr71xLK4lrB48796RMpDodaqG4jNb5kSJx9mjWK723eesg==}
-    engines: {node: ^18.12.0 || ^20.0.0}
+  /best-shot@0.5.4(browserslist@4.23.0):
+    resolution: {integrity: sha512-C/v6eTlyaoi2/C/tv4O5AHfKzpra/oPBrIpgbgdqJyxNqHVOUNNij3BGS/AXV86Wl8EKsZDH1eDGtEB9UWJ2CA==}
+    engines: {node: '>=20.0.0 || ^18.12.0'}
     hasBin: true
     peerDependencies:
       browserslist: ^4.23.0
@@ -3542,8 +3548,8 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: false
 
-  /garou@0.7.3(eslint@8.57.0)(stylelint@16.4.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-SJ+3/pdDQyngJPQ8lQPBv3Y3woY730iou/S1CwnwFfWu90w5512CLXrYPZrpfQ4AIKPrXGqmbNUTsF222viJKA==}
+  /garou@0.7.4(eslint@8.57.0)(stylelint@16.4.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-rQAcpbPU6BkWqV1fGad5lCEomrXcZSNpzgnhwT6XDQZhP4PmqDbHmU8KIDS8lcyGwvpmKYBCpPPKdzrGvmmBvw==}
     engines: {node: ^18.12.0 || ^20.0.0}
     hasBin: true
     peerDependencies:

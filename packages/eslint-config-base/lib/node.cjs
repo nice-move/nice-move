@@ -18,7 +18,7 @@ module.exports = {
   overrides: [
     {
       files: '**/*',
-      excludedFiles: ['*.cjs', ...commonjs],
+      excludedFiles: ['*.cjs', '*.cts', ...commonjs],
       rules: {
         'import/no-commonjs': 'error',
       },

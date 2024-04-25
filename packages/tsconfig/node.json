@@ -4,6 +4,9 @@
   "compilerOptions": {
     "lib": [
       "ESNext"
+    ],
+    "types": [
+      "node"
     ]
   },
   "display": "Node"

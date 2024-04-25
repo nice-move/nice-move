@@ -37,7 +37,6 @@ module.exports = {
       },
     ],
     'import/newline-after-import': 0,
-    'import/no-default-export': 'warn',
     'import/no-dynamic-require': 0,
     'import/no-empty-named-blocks': 'error',
     'import/no-relative-packages': 0,
@@ -83,6 +82,17 @@ module.exports = {
       excludedFiles: '*.{m,c}{j,t}s',
       rules: {
         'import/no-nodejs-modules': 'error',
+      },
+    },
+    {
+      files: '**/*.*',
+      excludedFiles: [
+        '*.config.{m,c}{j,t}s',
+        '.config/**/.{m,c}{j,t}s',
+        'config/**/.{m,c}{j,t}s',
+      ],
+      rules: {
+        'import/no-default-export': 'warn',
       },
     },
   ],

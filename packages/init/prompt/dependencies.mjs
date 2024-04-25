@@ -85,7 +85,7 @@ function action(isRoot, wanted = {}) {
               'export default defineConfig(import.meta.url, {});',
             ].join('\n'),
           )
-          .output('syncpack.config.js');
+          .output('syncpack.config.mjs');
       }
 
       if (typescript) {
@@ -180,6 +180,10 @@ function action(isRoot, wanted = {}) {
                   '@nice-move/syncpack-config': latest['syncpack-config'],
                   syncpack: latest.syncpack,
                 },
+                scripts: {
+                  'lint:version': 'syncpack lint',
+                  'version:pin': 'syncpack fix-mismatches',
+                },
               }
             : undefined,
           prettier
@@ -197,7 +201,7 @@ function action(isRoot, wanted = {}) {
                   react: latest.react,
                   'react-dom': latest['react-dom'],
                 },
-                devDependencies: { '@types/react': latest['@types/react'] },
+                peerDependencies: { '@types/react': latest['@types/react'] },
               }
             : undefined,
           vue ? { dependencies: { vue: latest.vue } } : undefined,

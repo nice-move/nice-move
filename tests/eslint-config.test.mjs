@@ -1,5 +1,6 @@
-import { eslintInspector } from '@nice-move/inspector';
 import test from 'ava';
+
+import { eslintInspector } from '@nice-move/inspector';
 
 const baseEngine = (filename) => eslintInspector('@nice-move/base', filename);
 const vueEngine = (filename) => eslintInspector('@nice-move/vue', filename);

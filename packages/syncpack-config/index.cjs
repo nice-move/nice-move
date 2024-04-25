@@ -3,12 +3,6 @@
 const { fileURLToPath } = require('node:url');
 const { join } = require('node:path');
 
-// @ts-check
-
-/**
- * @typedef {import("syncpack").RcFile} Rc
- * @type {(url: string, config: Rc) => Rc}
- */
 module.exports = function defineConfig(url, config) {
   let pkg = {};
 

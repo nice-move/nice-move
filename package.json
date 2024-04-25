@@ -38,10 +38,10 @@
     "@bring-it/npm": "^0.5.2",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "ava": "^6.1.2",
-    "best-shot": "^0.5.3",
+    "best-shot": "^0.5.4",
     "eslint": "^8.57.0",
     "eslint-plugin-ava": "^14.0.0",
-    "garou": "^0.7.3",
+    "garou": "^0.7.4",
     "nodemon": "^3.1.0",
     "prettier": "^3.2.5",
     "sass": "^1.75.0",
@@ -60,7 +60,9 @@
     "@nice-move/latest": "workspace:~",
     "@nice-move/prettier-config": "workspace:~",
     "@nice-move/stylelint-config": "workspace:~",
-    "@nice-move/syncpack-config": "workspace:~"
+    "@nice-move/syncpack-config": "workspace:~",
+    "@nice-move/tsconfig": "workspace:~",
+    "@types/node": "^20.12.7"
   },
   "pnpm": {
     "patchedDependencies": {

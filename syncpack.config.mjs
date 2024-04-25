@@ -1,5 +1,3 @@
-/* eslint-disable import/no-default-export */
-
 // @ts-check
 
 import defineConfig from '@nice-move/syncpack-config';
@@ -18,7 +16,7 @@ export default defineConfig(import.meta.url, {
       dependencies: ['@nice-move/eslint-config-*'],
       dependencyTypes: ['local'],
       label: 'Same version',
-      pinVersion: '0.11.5',
+      pinVersion: '0.11.6',
     },
     {
       dependencies: ['@nice-move/*'],

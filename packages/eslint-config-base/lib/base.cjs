@@ -35,6 +35,7 @@ module.exports = {
   },
   plugins: ['eslint-comments'],
   rules: {
+    'lines-around-directive': 0,
     'eslint-comments/no-unused-enable': 'warn',
     'array-callback-return': [
       'error',

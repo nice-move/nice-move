@@ -29,7 +29,7 @@ module.exports = function defineConfig(url, config) {
     semverGroups: [
       ...(config.semverGroups || []),
       {
-        dependencies: ['typescript'],
+        dependencies: ['typescript', 'react', 'react-dom'],
         range: '~',
       },
       {
@@ -49,7 +49,12 @@ module.exports = function defineConfig(url, config) {
         label: '@types packages should only be under peerDependencies',
       },
       {
-        dependencies: ['react', 'react-dom'],
+        dependencies: [
+          'react',
+          'react-dom',
+          '@types/react-dom',
+          '@types/react',
+        ],
         dependencyTypes: ['!local'],
         label: 'Pin react',
         policy: 'sameRange',

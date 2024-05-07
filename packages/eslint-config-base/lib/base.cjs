@@ -13,7 +13,7 @@ module.exports = {
     es2016: true,
     node: false,
   },
-  extends: ['plugin:sonarjs/recommended'],
+  extends: ['plugin:sonarjs/recommended-legacy'],
   overrides: [
     {
       files: ['*.jsx', '*.tsx'],

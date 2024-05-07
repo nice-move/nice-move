@@ -2,7 +2,7 @@
 
 const {
   configs: {
-    recommended: {
+    'recommended-legacy': {
       overrides: [_, { rules }],
     },
   },

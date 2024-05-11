@@ -1,14 +1,24 @@
 export const config = {
   target: 'node18',
   entry: {
-    cli: './src/index.mjs',
+    cli: {
+      import: './src/index.mjs',
+      dependOn: ['cmd/lint', 'cmd/git'],
+    },
+    'cmd/lint': './src/lint/index.mjs',
+    'cmd/git': './src/cmd/git-hooks.mjs',
   },
   output: {
     path: 'dist',
     module: true,
   },
   externals: {
-    enquirer: 'node-commonjs enquirer',
-    lilconfig: 'node-commonjs lilconfig',
+    cheetor: 'module cheetor',
+    enquirer: 'module enquirer',
+    lilconfig: 'module lilconfig',
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: true,
   },
 };

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-config",
-  "version": "0.11.3",
+  "version": "0.11.4",
   "description": "A `prettier` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -29,6 +29,7 @@
   "dependencies": {
     "@nice-move/prettier-plugin-package-json": "^0.8.0",
     "@prettier/plugin-xml": "^3.4.1",
+    "prettier-plugin-css-order": "^2.1.2",
     "prettier-plugin-ini": "^1.1.0",
     "settingz": "^0.2.0"
   },

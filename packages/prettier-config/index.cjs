@@ -26,10 +26,12 @@ module.exports = {
     'classNames',
     'className',
   ],
+  cssDeclarationSorterCustomOrder: [],
   plugins: [
     require.resolve('@nice-move/prettier-plugin-package-json'),
     require.resolve('@prettier/plugin-xml'),
     require.resolve('prettier-plugin-ini'),
+    require.resolve('prettier-plugin-css-order'),
     require.resolve('./extra.cjs'),
     loadPlugin('prettier-plugin-diy'),
     loadPlugin('prettier-plugin-groovy'),

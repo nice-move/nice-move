@@ -42,6 +42,7 @@ A [prettier] config created by personal preferences.
 - [@nice-move/prettier-plugin-package-json](https://github.com/nice-move/prettier-plugin-package-json)
 - prettier-plugin-ini
 - @prettier/plugin-xml
+- prettier-plugin-css-order
 
 ### Auto load plugins when they are installed
 

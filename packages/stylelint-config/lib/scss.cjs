@@ -21,6 +21,8 @@ module.exports = {
     'scss/at-extend-no-missing-placeholder': true,
     'scss/at-if-no-null': true,
     'scss/at-import-partial-extension': 'always',
+    'scss/at-mixin-argumentless-call-parentheses': 'always',
+    'scss/at-rule-conditional-no-parentheses': true,
     'scss/at-rule-no-unknown': AT_RULE_NO_UNKNOWN,
     'scss/comment-no-empty': true,
     'scss/declaration-nested-properties': 'never',

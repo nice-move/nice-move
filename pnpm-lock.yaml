@@ -92,6 +92,9 @@ importers:
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
+      prettier-plugin-tailwindcss:
+        specifier: ^0.5.14
+        version: 0.5.14(prettier-plugin-css-order@2.1.2(postcss@8.4.38)(prettier@3.2.5))(prettier@3.2.5)
       sass:
         specifier: ^1.77.1
         version: 1.77.1

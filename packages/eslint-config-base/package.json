@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.11.7",
+  "version": "0.11.8",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -48,7 +48,7 @@
     "eslint-plugin-n": "^17.6.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-sonarjs": "^1.0.3",
-    "eslint-plugin-unicorn": "^52.0.0",
+    "eslint-plugin-unicorn": "^53.0.0",
     "espree": "^9.6.1",
     "resolve.exports": "^2.0.2",
     "settingz": "^0.2.0"

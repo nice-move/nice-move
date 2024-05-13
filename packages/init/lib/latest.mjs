@@ -1,5 +1,5 @@
 export default {
-  '@bring-it/npm': '^0.5.2',
+  '@bring-it/npm': '^0.5.4',
   '@cospaia/prettier-plugin-clojure': '^0.0.2',
   ava: '^6.1.3',
   'best-shot': '^0.5.7',
@@ -19,7 +19,7 @@ export default {
   'react-dom': '~18.2.0',
   tailwindcss: '^3.4.3',
   vue: '^3.4.27',
-  'eslint-config-base': '^0.11.7',
+  'eslint-config-base': '^0.11.8',
   'stylelint-config': '^0.10.6',
   'prettier-config': '^0.11.3',
   'syncpack-config': '^0.1.2',

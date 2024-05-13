@@ -48,7 +48,7 @@
   "devDependencies": {
     "@commitlint/format": "^19.3.0",
     "@commitlint/lint": "^19.2.2",
-    "execa": "^8.0.1",
+    "execa": "^9.0.2",
     "lint-staged": "^15.2.2",
     "settingz": "^0.2.0"
   },

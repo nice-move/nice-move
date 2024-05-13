@@ -5,7 +5,6 @@ import { emptyDir, getPkg } from '../lib/utils.mjs';
 
 import { Dependencies } from './dependencies.mjs';
 import { GitInit } from './git-init.mjs';
-import { Install } from './install.mjs';
 import { Package } from './package.mjs';
 
 function gitSupport() {
@@ -56,7 +55,6 @@ export async function Prompt() {
       GitInit(options),
       ...PackagePrompts,
       Dependencies(options),
-      Install(options),
     ],
     {
       onCancel() {

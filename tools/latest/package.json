@@ -9,7 +9,7 @@
     "fs-chain": "^8.2.3"
   },
   "peerDependencies": {
-    "@bring-it/npm": "^0.5.2",
+    "@bring-it/npm": "^0.5.4",
     "@bring-it/sftp": "^0.3.1",
     "@playwright/test": "^1.44.0",
     "@types/react": "^18.2.79",

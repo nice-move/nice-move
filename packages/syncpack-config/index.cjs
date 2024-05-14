@@ -29,7 +29,13 @@ module.exports = function defineConfig(url, config) {
     semverGroups: [
       ...(config.semverGroups || []),
       {
-        dependencies: ['typescript', 'react', 'react-dom'],
+        dependencies: [
+          'typescript',
+          'react',
+          'react-dom',
+          '@types/react-dom',
+          '@types/react',
+        ],
         range: '~',
       },
       {

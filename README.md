@@ -15,6 +15,7 @@ Frontend develop helper for frontend development.
 - [@nice-move/eslint-config-vue](./packages/eslint-config-vue/)
 - [@nice-move/stylelint-config](./packages/stylelint-config/)
 - [@nice-move/prettier-config](./packages/prettier-config/)
+- [@nice-move/syncpack-config](./packages/syncpack-config/)
 - [@nice-move/tsconfig](./packages/tsconfig/)
 
 ## Related

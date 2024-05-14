@@ -41,7 +41,7 @@
     "best-shot": "^0.5.7",
     "eslint": "^8.57.0",
     "eslint-plugin-ava": "^14.0.0",
-    "garou": "^0.7.4",
+    "garou": "^0.7.5",
     "nodemon": "^3.1.0",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",

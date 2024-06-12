@@ -90,6 +90,7 @@ module.exports = {
         '*.config.{m,c}{j,t}s',
         '.config/**/.{m,c}{j,t}s',
         'config/**/.{m,c}{j,t}s',
+        '**/*.md/*',
       ],
       rules: {
         'import/no-default-export': 'warn',

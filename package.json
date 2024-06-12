@@ -26,10 +26,6 @@
     "test": "ava --fail-fast -c 1 --timeout 20s",
     "version:pin": "syncpack fix-mismatches"
   },
-  "workspaces": [
-    "packages/*",
-    "tools/*"
-  ],
   "dependencies": {
     "svgo": "^3.3.2",
     "svgo-config": "^0.7.0"
@@ -38,19 +34,23 @@
     "@bring-it/npm": "^0.5.4",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "ava": "^6.1.3",
-    "best-shot": "^0.5.7",
+    "best-shot": "^0.5.8",
     "eslint": "^8.57.0",
     "eslint-plugin-ava": "^14.0.0",
     "garou": "^0.7.5",
-    "nodemon": "^3.1.0",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.14",
-    "sass": "^1.77.1",
-    "stylelint": "^16.5.0",
+    "nodemon": "^3.1.3",
+    "postcss": "^8.4.38",
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.3",
+    "sass": "^1.77.5",
+    "stylelint": "^16.6.1",
     "syncpack": "^12.3.2",
     "typescript": "~5.4.5"
   },
   "peerDependencies": {
+    "@nice-move/all-in-base": "workspace:~",
+    "@nice-move/all-in-react": "workspace:~",
+    "@nice-move/all-in-vue": "workspace:~",
     "@nice-move/cli": "workspace:~",
     "@nice-move/commitlint-config": "workspace:~",
     "@nice-move/eslint-config-base": "workspace:~",
@@ -63,16 +63,15 @@
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~",
-    "@types/node": "^20.12.7"
+    "@types/node": "^20.14.1"
   },
   "pnpm": {
     "patchedDependencies": {
       "@commitlint/rules@19.0.3": "patches/@commitlint__rules@19.0.3.patch",
-      "conventional-changelog-angular@7.0.0": "patches/conventional-changelog-angular@7.0.0.patch",
-      "lint-staged@15.2.2": "patches/lint-staged@15.2.2.patch"
+      "conventional-changelog-angular@7.0.0": "patches/conventional-changelog-angular@7.0.0.patch"
     }
   },
-  "packageManager": "pnpm@9.1.0",
+  "packageManager": "pnpm@9.2.0",
   "engines": {
     "node": "^18.12.0 || ^20.0.0"
   },

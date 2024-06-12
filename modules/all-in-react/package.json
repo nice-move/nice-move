@@ -1,0 +1,53 @@
+{
+  "name": "@nice-move/all-in-react",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "keywords": [
+    "eslint",
+    "nice-move",
+    "prettier",
+    "stylelint"
+  ],
+  "homepage": "https://github.com/nice-move/nice-move/tree/master/modules/all-in-react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nice-move/nice-move.git",
+    "directory": "modules/all-in-react"
+  },
+  "bugs": {
+    "url": "https://github.com/nice-move/nice-move/issues"
+  },
+  "dependencies": {
+    "@nice-move/cli": "workspace:~",
+    "@nice-move/eslint-config-react": "workspace:~",
+    "@nice-move/prettier-config": "workspace:~",
+    "@nice-move/stylelint-config": "workspace:~",
+    "@nice-move/tsconfig": "workspace:~"
+  },
+  "peerDependencies": {
+    "eslint": "^8.57.0",
+    "garou": "^0.7.5",
+    "prettier": "^3.3.2",
+    "stylelint": "^16.6.1",
+    "typescript": "~5.4.5"
+  },
+  "peerDependenciesMeta": {
+    "garou": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": "^18.12.0 || ^20.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

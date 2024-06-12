@@ -1,8 +1,8 @@
 diff --git a/lib/loadConfig.js b/lib/loadConfig.js
-index c31e475507ecb9c5ef2b71d186ac4984f35428ec..a8858e55ce3319f942612060c19ecf70cb311a88 100644
+index 4a07ceb1c8c81576a2689d9b8282d4716325e44f..a8858e55ce3319f942612060c19ecf70cb311a88 100644
 --- a/lib/loadConfig.js
 +++ b/lib/loadConfig.js
-@@ -1,124 +1 @@
+@@ -1,125 +1 @@
 -/** @typedef {import('./index').Logger} Logger */
 -
 -import fs from 'node:fs/promises'
@@ -12,6 +12,7 @@ index c31e475507ecb9c5ef2b71d186ac4984f35428ec..a8858e55ce3319f942612060c19ecf70
 -import YAML from 'yaml'
 -
 -import { dynamicImport } from './dynamicImport.js'
+-import { failedToLoadConfig } from './messages.js'
 -import { resolveConfig } from './resolveConfig.js'
 -import {
 -  CONFIG_FILE_NAMES,
@@ -122,8 +123,8 @@ index c31e475507ecb9c5ef2b71d186ac4984f35428ec..a8858e55ce3319f942612060c19ecf70
 -
 -    return { config, filepath }
 -  } catch (error) {
--    debugLog('Failed to load configuration!')
--    logger.error(error)
+-    debugLog('Failed to load configuration from `%s` with error:\n', configPath, error)
+-    logger.error(failedToLoadConfig(configPath))
 -    return {}
 -  }
 -}

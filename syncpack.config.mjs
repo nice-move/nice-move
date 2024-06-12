@@ -19,6 +19,12 @@ export default defineConfig(import.meta.url, {
       pinVersion: '0.11.8',
     },
     {
+      dependencies: ['@nice-move/all-in-*'],
+      dependencyTypes: ['local'],
+      label: 'Same version 2',
+      pinVersion: '0.1.0',
+    },
+    {
       dependencies: ['@nice-move/*'],
       dependencyTypes: ['!local'],
       label: 'Pin pnpm workspace',

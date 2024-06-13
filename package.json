@@ -41,7 +41,7 @@
     "nodemon": "^3.1.3",
     "postcss": "^8.4.38",
     "prettier": "^3.3.2",
-    "prettier-plugin-tailwindcss": "^0.6.3",
+    "prettier-plugin-tailwindcss": "^0.6.4",
     "sass": "^1.77.5",
     "stylelint": "^16.6.1",
     "syncpack": "^12.3.2",
@@ -68,7 +68,8 @@
   "pnpm": {
     "patchedDependencies": {
       "@commitlint/rules@19.0.3": "patches/@commitlint__rules@19.0.3.patch",
-      "conventional-changelog-angular@7.0.0": "patches/conventional-changelog-angular@7.0.0.patch"
+      "conventional-changelog-angular@7.0.0": "patches/conventional-changelog-angular@7.0.0.patch",
+      "lint-staged@15.2.7": "patches/lint-staged@15.2.7.patch"
     }
   },
   "packageManager": "pnpm@9.2.0",

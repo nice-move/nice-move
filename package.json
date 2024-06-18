@@ -72,7 +72,7 @@
       "lint-staged@15.2.7": "patches/lint-staged@15.2.7.patch"
     }
   },
-  "packageManager": "pnpm@9.2.0",
+  "packageManager": "pnpm@9.4.0",
   "engines": {
     "node": "^18.12.0 || ^20.0.0"
   },

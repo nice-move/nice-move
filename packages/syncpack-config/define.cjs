@@ -17,6 +17,10 @@ module.exports = function defineConfig(url, config = {}) {
     console.error(error);
   }
 
+  const ws = pkg.packageManager?.startsWith?.('pnpm')
+    ? findWorkspaces() ?? []
+    : [];
+
   return {
     ...config,
     lintFormatting: false,
@@ -70,9 +74,9 @@ module.exports = function defineConfig(url, config = {}) {
         label: 'Pin react',
         policy: 'sameRange',
       },
-      pkg.packageManager?.startsWith?.('pnpm')
+      ws.length > 0
         ? {
-            dependencies: findWorkspaces().map((item) => item.package.name),
+            dependencies: ws.map((item) => item.package.name),
             dependencyTypes: ['!local'],
             label: 'Pin pnpm workspace',
             pinVersion: 'workspace:~',

@@ -48,11 +48,10 @@ module.exports = function defineConfig(url, config = {}) {
         range: '~',
       },
       {
-        dependencyTypes: ['local', 'packageManager'],
+        dependencyTypes: ['local', 'packageManager', 'vue'],
         range: '',
       },
       {
-        dependencyTypes: ['!engines'],
         range: '^',
       },
     ],

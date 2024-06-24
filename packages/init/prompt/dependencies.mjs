@@ -64,12 +64,9 @@ function action(isRoot, wanted = {}) {
       if (commitlint) {
         await new Text()
           .onDone(() =>
-            [
-              '#!/bin/sh',
-              '',
-              'npx --no-install nice-move lint commit',
-              '',
-            ].join('\n'),
+            ['#!/bin/sh', 'npx --no-install nice-move lint commit', ''].join(
+              '\n\n',
+            ),
           )
           .output('.githooks/commit-msg');
       }
@@ -79,11 +76,10 @@ function action(isRoot, wanted = {}) {
           .onDone(() =>
             [
               '// @ts-check',
-              '',
-              "import defineConfig from '@nice-move/syncpack-config';",
-              '',
+              "import defineConfig from '@nice-move/syncpack-config/define.cjs';",
               'export default defineConfig(import.meta.url, {});',
-            ].join('\n'),
+              "// export { default } from '@nice-move/syncpack-config';",
+            ].join('\n\n'),
           )
           .output('syncpack.config.mjs');
       }
@@ -201,7 +197,9 @@ function action(isRoot, wanted = {}) {
                   react: latest.react,
                   'react-dom': latest['react-dom'],
                 },
-                peerDependencies: { '@types/react': latest['@types/react'] },
+                peerDependencies: {
+                  '@types/react': latest['@types/react'],
+                },
               }
             : undefined,
           vue ? { dependencies: { vue: latest.vue } } : undefined,

@@ -35,11 +35,11 @@
     "postcss-markdown": "^1.2.0",
     "postcss-scss": "^4.0.9",
     "settingz": "^0.2.0",
-    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard": "^36.0.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
     "stylelint-no-unresolved-module": "^2.2.2",
     "stylelint-require-units": "^2.0.0",
-    "stylelint-scss": "^6.3.1",
+    "stylelint-scss": "^6.3.2",
     "stylelint-suitcss": "^5.0.0"
   },
   "peerDependencies": {

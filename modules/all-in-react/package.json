@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-react",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -33,7 +33,7 @@
     "garou": "^0.7.5",
     "prettier": "^3.3.2",
     "stylelint": "^16.6.1",
-    "typescript": "~5.4.5"
+    "typescript": "~5.5.2"
   },
   "peerDependenciesMeta": {
     "garou": {

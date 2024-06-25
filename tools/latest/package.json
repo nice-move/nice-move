@@ -11,7 +11,7 @@
   "peerDependencies": {
     "@bring-it/npm": "^0.5.4",
     "@bring-it/sftp": "^0.3.1",
-    "@playwright/test": "^1.44.0",
+    "@playwright/test": "~1.44.0",
     "@types/react": "~18.2.79",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "react": "~18.2.0",

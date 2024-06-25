@@ -40,10 +40,13 @@ module.exports = function defineConfig(url, config = {}) {
       {
         dependencies: [
           'typescript',
+          'playwright-*',
+          '@playwright/*',
           'react',
           'react-dom',
           '@types/react-dom',
           '@types/react',
+          'vue-router',
         ],
         range: '~',
       },

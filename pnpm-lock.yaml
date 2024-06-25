@@ -75,8 +75,8 @@ importers:
         version: 0.7.0(svgo@3.3.2)
     devDependencies:
       '@bring-it/npm':
-        specifier: ^0.5.4
-        version: 0.5.4(@bring-it/cli@0.9.3)
+        specifier: ^0.5.5
+        version: 0.5.5(@bring-it/cli@0.9.3)
       '@cospaia/prettier-plugin-clojure':
         specifier: ^0.0.2
         version: 0.0.2
@@ -93,8 +93,8 @@ importers:
         specifier: ^14.0.0
         version: 14.0.0(eslint@8.57.0)
       garou:
-        specifier: ^0.7.5
-        version: 0.7.5(eslint@8.57.0)(stylelint@16.6.1(typescript@5.5.2))(typescript@5.5.2)
+        specifier: ^0.7.6
+        version: 0.7.6(eslint@8.57.0)(stylelint@16.6.1(typescript@5.5.2))(typescript@5.5.2)
       nodemon:
         specifier: ^3.1.4
         version: 3.1.4
@@ -662,6 +662,13 @@ packages:
 
   '@bring-it/npm@0.5.4':
     resolution: {integrity: sha512-68QjQmAuv09NIkMX+MZisFb3xeIAJ3GwOXm5ZrYoyWdU+bDDOtle0WDXygpK0SvrANTAumJkIUxxrFEQkWEUVA==}
+    engines: {node: ^18.0.0 || ^20.0.0, npm: '>=9.0.0'}
+    hasBin: true
+    peerDependencies:
+      '@bring-it/cli': ^0.9.3
+
+  '@bring-it/npm@0.5.5':
+    resolution: {integrity: sha512-FVARTU7jcxjNc8gRklBECVdbv2Op8a70MGzGE9y/Bq1OE7Vjffaso8SIOTZSP60Um1HT9YSSTuhgJsaXAdsZ8g==}
     engines: {node: ^18.0.0 || ^20.0.0, npm: '>=9.0.0'}
     hasBin: true
     peerDependencies:
@@ -2200,6 +2207,18 @@ packages:
       eslint: ^8.57.0 || ^9.0.0
       stylelint: ^16.5.0
       typescript: ^5.4.5
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  garou@0.7.6:
+    resolution: {integrity: sha512-ajP83nQcVncqmo9Jc+yNBBz62ZEUjz4I+lMh1/6jY3yc011P29tht5Aclg3r5Vo5Ua0lM7YpU5pEuMxl0ZvapA==}
+    engines: {node: ^18.12.0 || ^20.0.0}
+    hasBin: true
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
+      stylelint: ^16.6.1
+      typescript: ^5.5.2
     peerDependenciesMeta:
       typescript:
         optional: true
@@ -4473,6 +4492,10 @@ snapshots:
     dependencies:
       '@bring-it/cli': 0.9.3
 
+  '@bring-it/npm@0.5.5(@bring-it/cli@0.9.3)':
+    dependencies:
+      '@bring-it/cli': 0.9.3
+
   '@bring-it/sftp@0.3.3(@bring-it/cli@0.9.3)':
     dependencies:
       '@bring-it/cli': 0.9.3
@@ -6363,6 +6386,24 @@ snapshots:
   functions-have-names@1.2.3: {}
 
   garou@0.7.5(eslint@8.57.0)(stylelint@16.6.1(typescript@5.5.2))(typescript@5.5.2):
+    dependencies:
+      '@typescript-eslint/parser': 7.14.1(eslint@8.57.0)(typescript@5.5.2)
+      '@yarnpkg/lockfile': 1.1.0
+      eslint: 8.57.0
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.14.1(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint@8.57.0)
+      flat-cache: 3.2.0
+      stylelint: 16.6.1(typescript@5.5.2)
+      vue-eslint-parser: 9.4.3(eslint@8.57.0)
+      write-file-atomic: 5.0.1
+    optionalDependencies:
+      typescript: 5.5.2
+    transitivePeerDependencies:
+      - eslint-import-resolver-node
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
+
+  garou@0.7.6(eslint@8.57.0)(stylelint@16.6.1(typescript@5.5.2))(typescript@5.5.2):
     dependencies:
       '@typescript-eslint/parser': 7.14.1(eslint@8.57.0)(typescript@5.5.2)
       '@yarnpkg/lockfile': 1.1.0

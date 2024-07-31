@@ -18,7 +18,7 @@ module.exports = function defineConfig(url, config = {}) {
   }
 
   const ws = pkg.packageManager?.startsWith?.('pnpm')
-    ? findWorkspaces() ?? []
+    ? (findWorkspaces() ?? [])
     : [];
 
   return {
@@ -39,13 +39,14 @@ module.exports = function defineConfig(url, config = {}) {
       ...(config.semverGroups || []),
       {
         dependencies: [
-          'typescript',
-          'playwright-*',
           '@playwright/*',
-          'react',
-          'react-dom',
+          '@sentry/*',
           '@types/react-dom',
           '@types/react',
+          'playwright-*',
+          'react-dom',
+          'react',
+          'typescript',
           'vue-router',
         ],
         range: '~',

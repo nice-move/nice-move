@@ -13,7 +13,10 @@ module.exports = {
     es2016: true,
     node: false,
   },
-  extends: ['plugin:sonarjs/recommended-legacy'],
+  extends: [
+    'plugin:sonarjs/recommended-legacy',
+    'plugin:@eslint-community/eslint-comments/recommended',
+  ],
   overrides: [
     {
       files: ['*.jsx', '*.tsx'],
@@ -33,10 +36,9 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['eslint-comments'],
   rules: {
     'lines-around-directive': 0,
-    'eslint-comments/no-unused-enable': 'warn',
+    '@eslint-community/eslint-comments/no-unused-enable': 'warn',
     'array-callback-return': [
       'error',
       {

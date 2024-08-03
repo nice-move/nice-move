@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-vue",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -32,7 +32,7 @@
     "eslint": "^8.57.0",
     "garou": "^0.7.6",
     "prettier": "^3.3.3",
-    "stylelint": "^16.7.0",
+    "stylelint": "^16.8.1",
     "typescript": "~5.5.4"
   },
   "peerDependenciesMeta": {
@@ -44,7 +44,7 @@
     }
   },
   "engines": {
-    "node": "^18.12.0 || ^20.0.0"
+    "node": "^18.12.0 || ^20.0.0 || ^22.0.0"
   },
   "publishConfig": {
     "access": "public",

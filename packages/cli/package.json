@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.11.13",
+  "version": "0.11.14",
   "description": "Frontend develop helper for frontend development",
   "license": "MIT",
   "author": {
@@ -38,7 +38,7 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "best-shot prod",
+    "build": "best-shot-cli prod",
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
@@ -49,11 +49,11 @@
     "@commitlint/format": "^19.3.0",
     "@commitlint/lint": "^19.2.2",
     "execa": "^9.3.0",
-    "lint-staged": "^15.2.7",
+    "lint-staged": "^15.2.8",
     "settingz": "^0.2.0"
   },
   "engines": {
-    "node": "^18.12.0 || ^20.0.0"
+    "node": "^18.12.0 || ^20.0.0 || ^22.0.0"
   },
   "publishConfig": {
     "access": "public",

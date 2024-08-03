@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/init",
-  "version": "0.8.9",
+  "version": "0.8.10",
   "description": "Initialize your frontend workspaces",
   "license": "MIT",
   "author": {
@@ -40,7 +40,7 @@
   },
   "files": [],
   "scripts": {
-    "build": "best-shot prod",
+    "build": "best-shot-cli prod",
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
@@ -59,7 +59,7 @@
     "validate-npm-package-name": "^5.0.1"
   },
   "engines": {
-    "node": "^18.12.0 || ^20.0.0"
+    "node": "^18.12.0 || ^20.0.0 || ^22.0.0"
   },
   "publishConfig": {
     "access": "public",

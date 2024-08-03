@@ -35,7 +35,7 @@
     "@bring-it/npm": "^0.5.7",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "ava": "^6.1.3",
-    "best-shot": "^0.5.17",
+    "best-shot": "^0.6.0",
     "eslint": "^8.57.0",
     "eslint-plugin-ava": "^14.0.0",
     "garou": "^0.7.6",
@@ -44,7 +44,7 @@
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "sass": "^1.77.8",
-    "stylelint": "^16.7.0",
+    "stylelint": "^16.8.1",
     "syncpack": "^12.4.0",
     "typescript": "~5.5.4"
   },
@@ -64,18 +64,18 @@
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~",
-    "@types/node": "^20.14.8"
+    "@types/node": "^20.14.14"
   },
   "pnpm": {
     "patchedDependencies": {
       "@commitlint/rules@19.0.3": "patches/@commitlint__rules@19.0.3.patch",
       "conventional-changelog-angular@7.0.0": "patches/conventional-changelog-angular@7.0.0.patch",
-      "lint-staged@15.2.7": "patches/lint-staged@15.2.7.patch"
+      "lint-staged@15.2.8": "patches/lint-staged@15.2.8.patch"
     }
   },
   "packageManager": "pnpm@9.5.0",
   "engines": {
-    "node": "^18.12.0 || ^20.0.0",
+    "node": "^18.12.0 || ^20.0.0 || ^22.0.0",
     "pnpm": "^9.5.0"
   },
   "eslintConfig": {

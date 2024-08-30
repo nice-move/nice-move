@@ -11,6 +11,9 @@ export const config = {
   output: {
     path: 'dist',
     module: true,
+    library: {
+      type: 'module',
+    },
   },
   externals: {
     cheetor: 'module cheetor',

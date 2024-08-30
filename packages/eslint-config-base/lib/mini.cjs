@@ -17,8 +17,13 @@ function matcher(paths, globs) {
 
 const config = reaching('./project.config.json');
 
-function generate({ miniprogramRoot, pluginRoot, cloudfunctionRoot }) {
-  const paths = [miniprogramRoot, pluginRoot]
+function generate({
+  miniprogramRoot,
+  pluginRoot,
+  srcMiniprogramRoot,
+  cloudfunctionRoot,
+}) {
+  const paths = [miniprogramRoot, srcMiniprogramRoot, pluginRoot]
     .filter(Boolean)
     .map((item) => relativeToCWD(item));
 
@@ -64,6 +69,8 @@ function generate({ miniprogramRoot, pluginRoot, cloudfunctionRoot }) {
       files: matcher(paths, 'page{,s}/**'),
       excludedFiles,
       globals: {
+        Behavior: 'readonly',
+        Component: 'readonly',
         Page: 'readonly',
       },
     },

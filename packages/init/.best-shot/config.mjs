@@ -6,6 +6,9 @@ export const config = {
   output: {
     path: 'dist',
     module: true,
+    library: {
+      type: 'module',
+    },
   },
   externals: {
     'spawn-sync': 'node-commonjs spawn-sync',

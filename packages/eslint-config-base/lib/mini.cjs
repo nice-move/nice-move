@@ -21,9 +21,10 @@ function generate({
   miniprogramRoot,
   pluginRoot,
   srcMiniprogramRoot,
+  srcPluginRoot,
   cloudfunctionRoot,
 }) {
-  const paths = [miniprogramRoot, srcMiniprogramRoot, pluginRoot]
+  const paths = [miniprogramRoot, srcMiniprogramRoot, pluginRoot, srcPluginRoot]
     .filter(Boolean)
     .map((item) => relativeToCWD(item));
 

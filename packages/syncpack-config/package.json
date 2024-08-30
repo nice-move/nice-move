@@ -30,7 +30,7 @@
     "find-workspaces": "^0.3.1"
   },
   "peerDependencies": {
-    "syncpack": "^12.4.0 || ^13.0.0"
+    "syncpack": "^13.0.0"
   },
   "engines": {
     "node": "^18.12.0 || ^20.0.0 || ^22.0.0"

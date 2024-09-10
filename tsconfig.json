@@ -2,6 +2,6 @@
   "extends": "@nice-move/tsconfig/node.json",
   "include": ["./"],
   "compilerOptions": {
-    "types": ["sass", "node"],
+    "types": ["node"],
   },
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-const { getPkg } = require('settingz');
+const { getPkg, reaching } = require('settingz');
 
 function getVersion() {
   const { vue = '' } = getPkg('dependencies');
@@ -9,6 +9,8 @@ function getVersion() {
 }
 
 const version = getVersion();
+
+const config = reaching('./project.config.json');
 
 module.exports = {
   extends: ['@nice-move/eslint-config-base'],
@@ -55,6 +57,14 @@ module.exports = {
         ],
         ...(version
           ? { 'vue/no-unsupported-features': ['error', { version }] }
+          : undefined),
+        ...(config.id
+          ? {
+              'vue/no-v-text-v-html-on-component': [
+                'error',
+                { allow: ['view', 'text'] },
+              ],
+            }
           : undefined),
       },
     },

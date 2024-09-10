@@ -48,11 +48,13 @@ module.exports = function defineConfig(url, config = {}) {
           'react',
           'typescript',
           'vue-router',
+          'vue',
+          '@vue/*',
         ],
         range: '~',
       },
       {
-        dependencyTypes: ['local', 'packageManager', 'vue'],
+        dependencyTypes: ['local', 'packageManager'],
         range: '',
       },
       {

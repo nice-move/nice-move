@@ -4,6 +4,8 @@ module.exports = {
   env: {
     browser: true,
     commonjs: false,
+    es2024: true,
+    es2023: true,
     es2022: true,
     es2021: true,
     es2020: true,
@@ -13,10 +15,7 @@ module.exports = {
     es2016: true,
     node: false,
   },
-  extends: [
-    'plugin:sonarjs/recommended-legacy',
-    'plugin:@eslint-community/eslint-comments/recommended',
-  ],
+  extends: ['plugin:@eslint-community/eslint-comments/recommended'],
   overrides: [
     {
       files: ['*.jsx', '*.tsx'],
@@ -121,9 +120,6 @@ module.exports = {
     'prefer-arrow-callback': 'warn',
     'prefer-exponentiation-operator': 0,
     'prefer-template': 'warn',
-    'sonarjs/cognitive-complexity': 0,
-    'sonarjs/no-duplicate-string': 0,
-    'sonarjs/no-identical-functions': 0,
     'spaced-comment': 0,
   },
 };

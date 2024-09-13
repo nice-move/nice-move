@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/commitlint-config",
-  "version": "0.10.3",
+  "version": "0.10.4",
   "description": "A `commitlint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -32,7 +32,7 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "@commitlint/config-conventional": "^19.4.1"
+    "@commitlint/config-conventional": "^19.5.0"
   },
   "peerDependencies": {
     "@commitlint/cli": "^19.2.2",

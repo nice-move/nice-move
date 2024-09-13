@@ -15,13 +15,13 @@ export default defineConfig(import.meta.url, {
       dependencies: ['@nice-move/eslint-config-*'],
       dependencyTypes: ['local'],
       label: 'Same version 1',
-      pinVersion: '0.11.20',
+      pinVersion: '0.11.21',
     },
     {
       dependencies: ['@nice-move/all-in-*'],
       dependencyTypes: ['local'],
       label: 'Same version 2',
-      pinVersion: '0.1.10',
+      pinVersion: '0.1.11',
     },
   ],
 });

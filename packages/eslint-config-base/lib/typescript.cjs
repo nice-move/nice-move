@@ -11,7 +11,6 @@ module.exports = {
       //   'airbnb-typescript',
       // ],
       rules: {
-        '@typescript-eslint/ban-types': 'error',
         '@typescript-eslint/no-array-constructor': 'error',
         '@typescript-eslint/no-duplicate-enum-values': 'error',
         '@typescript-eslint/no-dynamic-delete': 'error',

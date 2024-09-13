@@ -20,11 +20,11 @@ export default {
   'react-dom': '~18.2.0',
   tailwindcss: '^3.4.3',
   vue: '~3.4.27',
-  'eslint-config-base': '^0.11.20',
+  'eslint-config-base': '^0.11.21',
   'stylelint-config': '^0.10.7',
   'prettier-config': '^0.12.5',
   'syncpack-config': '^0.2.8',
   tsconfig: '^0.2.5',
-  cli: '^0.11.14',
+  cli: '^0.11.15',
   lts: '^18.12.0 || ^20.0.0 || ^22.0.0',
 };

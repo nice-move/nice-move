@@ -1,25 +1,25 @@
 diff --git a/lib/loadConfig.js b/lib/loadConfig.js
-index 4a07ceb1c8c81576a2689d9b8282d4716325e44f..247675b68103950fb5e47745dd0a28c54a96f855 100644
+index 46885d786a9efdcdd78e2a8ac494d5d76cf21be5..a8858e55ce3319f942612060c19ecf70cb311a88 100644
 --- a/lib/loadConfig.js
 +++ b/lib/loadConfig.js
-@@ -1,125 +1,3 @@
- /** @typedef {import('./index').Logger} Logger */
- 
+@@ -1,125 +1 @@
+-/** @typedef {import('./index').Logger} Logger */
+-
 -import fs from 'node:fs/promises'
 -import path from 'node:path'
 -
 -import debug from 'debug'
 -import YAML from 'yaml'
 -
--import { dynamicImport } from './dynamicImport.js'
--import { failedToLoadConfig } from './messages.js'
--import { resolveConfig } from './resolveConfig.js'
 -import {
 -  CONFIG_FILE_NAMES,
 -  CONFIG_NAME,
 -  PACKAGE_JSON_FILE,
 -  PACKAGE_YAML_FILES,
 -} from './configFiles.js'
+-import { dynamicImport } from './dynamicImport.js'
+-import { failedToLoadConfig } from './messages.js'
+-import { resolveConfig } from './resolveConfig.js'
 -
 -const debugLog = debug('lint-staged:loadConfig')
 -

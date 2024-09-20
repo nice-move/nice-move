@@ -1,5 +1,5 @@
 {
-  "name": "@nice-move/all-in-vue",
+  "name": "@nice-move/all-in-web",
   "version": "0.2.0",
   "license": "MIT",
   "author": {
@@ -12,18 +12,18 @@
     "prettier",
     "stylelint"
   ],
-  "homepage": "https://github.com/nice-move/nice-move/tree/master/modules/all-in-vue",
+  "homepage": "https://github.com/nice-move/nice-move/tree/master/modules/all-in-web",
   "repository": {
     "type": "git",
     "url": "https://github.com/nice-move/nice-move.git",
-    "directory": "modules/all-in-vue"
+    "directory": "modules/all-in-web"
   },
   "bugs": {
     "url": "https://github.com/nice-move/nice-move/issues"
   },
   "dependencies": {
     "@nice-move/cli": "workspace:~",
-    "@nice-move/eslint-config-vue": "workspace:~",
+    "@nice-move/eslint-config-base": "workspace:~",
     "@nice-move/prettier-config": "workspace:~",
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~"

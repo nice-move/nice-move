@@ -28,6 +28,9 @@ importers:
       '@nice-move/all-in-vue':
         specifier: workspace:~
         version: link:modules/all-in-vue
+      '@nice-move/all-in-web':
+        specifier: workspace:~
+        version: link:modules/all-in-web
       '@nice-move/cli':
         specifier: workspace:~
         version: link:packages/cli
@@ -65,7 +68,7 @@ importers:
         specifier: workspace:~
         version: link:packages/tsconfig
       '@types/node':
-        specifier: ^20.16.2
+        specifier: ^20.16.5
         version: 20.16.5
       svgo:
         specifier: ^3.3.2
@@ -75,11 +78,11 @@ importers:
         version: 0.7.0(svgo@3.3.2)
     devDependencies:
       '@bring-it/cli':
-        specifier: ^0.9.8
-        version: 0.9.8
+        specifier: ^0.9.9
+        version: 0.9.9
       '@bring-it/npm':
         specifier: ^0.5.9
-        version: 0.5.9(@bring-it/cli@0.9.8)
+        version: 0.5.9(@bring-it/cli@0.9.9)
       '@cospaia/prettier-plugin-clojure':
         specifier: ^0.0.2
         version: 0.0.2
@@ -99,8 +102,8 @@ importers:
         specifier: ^0.7.8
         version: 0.7.8(eslint@8.57.1)(stylelint@16.9.0(typescript@5.5.4))(typescript@5.5.4)
       nodemon:
-        specifier: ^3.1.5
-        version: 3.1.5
+        specifier: ^3.1.6
+        version: 3.1.6
       postcss:
         specifier: ^8.4.47
         version: 8.4.47
@@ -131,14 +134,11 @@ importers:
       '@nice-move/prettier-config':
         specifier: workspace:~
         version: link:../../packages/prettier-config
-      '@nice-move/stylelint-config':
-        specifier: workspace:~
-        version: link:../../packages/stylelint-config
       '@nice-move/tsconfig':
         specifier: workspace:~
         version: link:../../packages/tsconfig
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
         version: 8.57.1
       garou:
         specifier: ^0.7.8
@@ -146,9 +146,6 @@ importers:
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
-      stylelint:
-        specifier: ^16.9.0
-        version: 16.9.0(typescript@5.5.4)
       typescript:
         specifier: ~5.5.4
         version: 5.5.4
@@ -171,7 +168,7 @@ importers:
         specifier: workspace:~
         version: link:../../packages/tsconfig
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
         version: 8.57.1
       garou:
         specifier: ^0.7.8
@@ -204,7 +201,40 @@ importers:
         specifier: workspace:~
         version: link:../../packages/tsconfig
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
+        version: 8.57.1
+      garou:
+        specifier: ^0.7.8
+        version: 0.7.8(eslint@8.57.1)(stylelint@16.9.0(typescript@5.5.4))(typescript@5.5.4)
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      stylelint:
+        specifier: ^16.9.0
+        version: 16.9.0(typescript@5.5.4)
+      typescript:
+        specifier: ~5.5.4
+        version: 5.5.4
+
+  modules/all-in-web:
+    dependencies:
+      '@nice-move/cli':
+        specifier: workspace:~
+        version: link:../../packages/cli
+      '@nice-move/eslint-config-base':
+        specifier: workspace:~
+        version: link:../../packages/eslint-config-base
+      '@nice-move/prettier-config':
+        specifier: workspace:~
+        version: link:../../packages/prettier-config
+      '@nice-move/stylelint-config':
+        specifier: workspace:~
+        version: link:../../packages/stylelint-config
+      '@nice-move/tsconfig':
+        specifier: workspace:~
+        version: link:../../packages/tsconfig
+      eslint:
+        specifier: ^8.57.1
         version: 8.57.1
       garou:
         specifier: ^0.7.8
@@ -280,7 +310,7 @@ importers:
         specifier: ^8.6.0
         version: 8.6.0(eslint@8.57.1)(typescript@5.6.2)
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
         version: 8.57.1
       eslint-config-airbnb-base:
         specifier: ^15.0.0
@@ -319,7 +349,7 @@ importers:
         specifier: workspace:~
         version: link:../eslint-config-base
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
         version: 8.57.1
       eslint-config-airbnb:
         specifier: ^19.0.4
@@ -346,7 +376,7 @@ importers:
         specifier: workspace:~
         version: link:../eslint-config-base
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
         version: 8.57.1
       eslint-plugin-vue:
         specifier: ^9.28.0
@@ -473,7 +503,7 @@ importers:
     dependencies:
       typescript:
         specifier: ^5.5.4
-        version: 5.6.2
+        version: 5.5.4
 
   tools/inspector:
     dependencies:
@@ -484,7 +514,7 @@ importers:
         specifier: ^8.56.10
         version: 8.56.12
       eslint:
-        specifier: ^8.57.0
+        specifier: ^8.57.1
         version: 8.57.1
       fs-chain:
         specifier: ^8.2.3
@@ -503,10 +533,10 @@ importers:
     dependencies:
       '@bring-it/npm':
         specifier: ^0.5.9
-        version: 0.5.9(@bring-it/cli@0.9.8)
+        version: 0.5.9(@bring-it/cli@0.9.9)
       '@bring-it/sftp':
         specifier: ^0.3.1
-        version: 0.3.7(@bring-it/cli@0.9.8)
+        version: 0.3.7(@bring-it/cli@0.9.9)
       '@playwright/test':
         specifier: ~1.44.0
         version: 1.44.1
@@ -636,8 +666,8 @@ packages:
     peerDependencies:
       webpack: ^4 || ^5
 
-  '@bring-it/cli@0.9.8':
-    resolution: {integrity: sha512-+VgAehr9y3ODfywDL2b9H4NHlvJnjjZDyP7tMRjqxrF+6eqyPrcGOrByDJ9u7CEQJxTRnsoJXkEew+zOgmXQxA==}
+  '@bring-it/cli@0.9.9':
+    resolution: {integrity: sha512-/g5lDw3/x/JXrq7dxkGmBDGzCJpfnEjAs6JWHhIl5GR1y5QhNOipWxDfPpCAl7plAGis1d7/fXDGhjW57KinOw==}
     engines: {node: '>=22.0.0 || ^18.20.0 || ^20.4.0'}
     hasBin: true
 
@@ -2428,7 +2458,7 @@ packages:
     engines: {node: '>= 0.4'}
 
   is-arrayish@0.2.1:
-    resolution: {integrity: sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg==}
+    resolution: {integrity: sha1-d8mYQFJ6qOyxqLppe4BkWnqSap0=}
 
   is-async-function@2.0.0:
     resolution: {integrity: sha512-Y1JXKrfykRJGdlDwdKlLpLyMIiWqWvuSd17TvZk68PLAOGOoF4Xyav1z0Xhoi+gCYjZVeC5SI+hYFOfvXmGRCA==}
@@ -3009,8 +3039,8 @@ packages:
   node-releases@2.0.18:
     resolution: {integrity: sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g==}
 
-  nodemon@3.1.5:
-    resolution: {integrity: sha512-V5UtfYc7hjFD4SI3EzD5TR8ChAHEZ+Ns7Z5fBk8fAbTVAj+q3G+w7sHJrHxXBkVn6ApLVTljau8wfHwqmGUjMw==}
+  nodemon@3.1.6:
+    resolution: {integrity: sha512-C8ymJbXpTTinxjWuMfMxw0rZhTn/r7ypSGldQyqPEgDEaVwAthqC0aodsMwontnAInN9TuPwRLeBoyhmfv+iSA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -4414,18 +4444,18 @@ snapshots:
     dependencies:
       webpack: 5.94.0
 
-  '@bring-it/cli@0.9.8':
+  '@bring-it/cli@0.9.9':
     dependencies:
       globby: 14.0.2
       yargs: 17.7.2
 
-  '@bring-it/npm@0.5.9(@bring-it/cli@0.9.8)':
+  '@bring-it/npm@0.5.9(@bring-it/cli@0.9.9)':
     dependencies:
-      '@bring-it/cli': 0.9.8
+      '@bring-it/cli': 0.9.9
 
-  '@bring-it/sftp@0.3.7(@bring-it/cli@0.9.8)':
+  '@bring-it/sftp@0.3.7(@bring-it/cli@0.9.9)':
     dependencies:
-      '@bring-it/cli': 0.9.8
+      '@bring-it/cli': 0.9.9
       globby: 14.0.2
 
   '@commitlint/cli@19.5.0(@types/node@20.16.5)(typescript@5.5.4)':
@@ -6785,7 +6815,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 20.16.5
+      '@types/node': 22.5.5
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -7146,7 +7176,7 @@ snapshots:
 
   node-releases@2.0.18: {}
 
-  nodemon@3.1.5:
+  nodemon@3.1.6:
     dependencies:
       chokidar: 3.6.0
       debug: 4.3.7(supports-color@5.5.0)

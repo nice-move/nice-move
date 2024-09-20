@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-base",
-  "version": "0.1.11",
+  "version": "0.2.0",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -9,8 +9,7 @@
   "keywords": [
     "eslint",
     "nice-move",
-    "prettier",
-    "stylelint"
+    "prettier"
   ],
   "homepage": "https://github.com/nice-move/nice-move/tree/master/modules/all-in-base",
   "repository": {
@@ -25,14 +24,12 @@
     "@nice-move/cli": "workspace:~",
     "@nice-move/eslint-config-base": "workspace:~",
     "@nice-move/prettier-config": "workspace:~",
-    "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~"
   },
   "peerDependencies": {
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
     "garou": "^0.7.8",
     "prettier": "^3.3.3",
-    "stylelint": "^16.9.0",
     "typescript": "~5.5.4"
   },
   "peerDependenciesMeta": {

@@ -1,5 +1,5 @@
 export default {
-  '@bring-it/cli': '^0.9.8',
+  '@bring-it/cli': '^0.9.9',
   '@bring-it/npm': '^0.5.9',
   '@cospaia/prettier-plugin-clojure': '^0.0.2',
   ava: '^6.1.3',

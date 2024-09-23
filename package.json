@@ -45,7 +45,7 @@
     "prettier-plugin-tailwindcss": "^0.6.6",
     "stylelint": "^16.9.0",
     "syncpack": "^13.0.0",
-    "typescript": "~5.5.4"
+    "typescript": "~5.6.2"
   },
   "peerDependencies": {
     "@nice-move/all-in-base": "workspace:~",

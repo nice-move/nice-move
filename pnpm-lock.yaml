@@ -100,7 +100,7 @@ importers:
         version: 14.0.0(eslint@8.57.1)
       garou:
         specifier: ^0.7.8
-        version: 0.7.8(eslint@8.57.1)(stylelint@16.9.0(typescript@5.5.4))(typescript@5.5.4)
+        version: 0.7.8(eslint@8.57.1)(stylelint@16.9.0(typescript@5.6.2))(typescript@5.6.2)
       nodemon:
         specifier: ^3.1.6
         version: 3.1.6
@@ -115,13 +115,13 @@ importers:
         version: 0.6.6(prettier-plugin-css-order@2.1.2(postcss@8.4.47)(prettier@3.3.3))(prettier@3.3.3)
       stylelint:
         specifier: ^16.9.0
-        version: 16.9.0(typescript@5.5.4)
+        version: 16.9.0(typescript@5.6.2)
       syncpack:
         specifier: ^13.0.0
-        version: 13.0.0(typescript@5.5.4)
+        version: 13.0.0(typescript@5.6.2)
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.2
+        version: 5.6.2
 
   modules/all-in-base:
     dependencies:
@@ -278,13 +278,13 @@ importers:
     dependencies:
       '@commitlint/cli':
         specifier: ^19.2.2
-        version: 19.5.0(@types/node@20.16.5)(typescript@5.5.4)
+        version: 19.5.0(@types/node@20.16.5)(typescript@5.6.2)
       '@commitlint/config-conventional':
         specifier: ^19.5.0
         version: 19.5.0
       commitlint:
         specifier: ^19.2.2
-        version: 19.5.0(@types/node@20.16.5)(typescript@5.5.4)
+        version: 19.5.0(@types/node@20.16.5)(typescript@5.6.2)
 
   packages/eslint-config-base:
     dependencies:
@@ -2458,7 +2458,7 @@ packages:
     engines: {node: '>= 0.4'}
 
   is-arrayish@0.2.1:
-    resolution: {integrity: sha1-d8mYQFJ6qOyxqLppe4BkWnqSap0=}
+    resolution: {integrity: sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg==}
 
   is-async-function@2.0.0:
     resolution: {integrity: sha512-Y1JXKrfykRJGdlDwdKlLpLyMIiWqWvuSd17TvZk68PLAOGOoF4Xyav1z0Xhoi+gCYjZVeC5SI+hYFOfvXmGRCA==}
@@ -4145,7 +4145,7 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
   util-deprecate@1.0.2:
-    resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+    resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
 
   v8-compile-cache@2.4.0:
     resolution: {integrity: sha512-ocyWc3bAHBB/guyqJQVI5o4BZkPhznPYUG2ea80Gond/BgNWpap8TOmLSeeQG7bnh2KMISxskdADG59j7zruhw==}
@@ -4458,11 +4458,11 @@ snapshots:
       '@bring-it/cli': 0.9.9
       globby: 14.0.2
 
-  '@commitlint/cli@19.5.0(@types/node@20.16.5)(typescript@5.5.4)':
+  '@commitlint/cli@19.5.0(@types/node@20.16.5)(typescript@5.6.2)':
     dependencies:
       '@commitlint/format': 19.5.0
       '@commitlint/lint': 19.5.0
-      '@commitlint/load': 19.5.0(@types/node@20.16.5)(typescript@5.5.4)
+      '@commitlint/load': 19.5.0(@types/node@20.16.5)(typescript@5.6.2)
       '@commitlint/read': 19.5.0
       '@commitlint/types': 19.5.0
       tinyexec: 0.3.0
@@ -4509,15 +4509,15 @@ snapshots:
       '@commitlint/rules': 19.5.0(patch_hash=jbsgqjaeavgjizxjid3yuchniy)
       '@commitlint/types': 19.5.0
 
-  '@commitlint/load@19.5.0(@types/node@20.16.5)(typescript@5.5.4)':
+  '@commitlint/load@19.5.0(@types/node@20.16.5)(typescript@5.6.2)':
     dependencies:
       '@commitlint/config-validator': 19.5.0
       '@commitlint/execute-rule': 19.5.0
       '@commitlint/resolve-extends': 19.5.0
       '@commitlint/types': 19.5.0
       chalk: 5.3.0
-      cosmiconfig: 9.0.0(typescript@5.5.4)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.16.5)(cosmiconfig@9.0.0(typescript@5.5.4))(typescript@5.5.4)
+      cosmiconfig: 9.0.0(typescript@5.6.2)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.16.5)(cosmiconfig@9.0.0(typescript@5.6.2))(typescript@5.6.2)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -5492,9 +5492,9 @@ snapshots:
 
   commander@7.2.0: {}
 
-  commitlint@19.5.0(@types/node@20.16.5)(typescript@5.5.4):
+  commitlint@19.5.0(@types/node@20.16.5)(typescript@5.6.2):
     dependencies:
-      '@commitlint/cli': 19.5.0(@types/node@20.16.5)(typescript@5.5.4)
+      '@commitlint/cli': 19.5.0(@types/node@20.16.5)(typescript@5.6.2)
       '@commitlint/types': 19.5.0
     transitivePeerDependencies:
       - '@types/node'
@@ -5549,12 +5549,12 @@ snapshots:
     dependencies:
       browserslist: 4.23.3
 
-  cosmiconfig-typescript-loader@5.0.0(@types/node@20.16.5)(cosmiconfig@9.0.0(typescript@5.5.4))(typescript@5.5.4):
+  cosmiconfig-typescript-loader@5.0.0(@types/node@20.16.5)(cosmiconfig@9.0.0(typescript@5.6.2))(typescript@5.6.2):
     dependencies:
       '@types/node': 20.16.5
-      cosmiconfig: 9.0.0(typescript@5.5.4)
+      cosmiconfig: 9.0.0(typescript@5.6.2)
       jiti: 1.21.6
-      typescript: 5.5.4
+      typescript: 5.6.2
 
   cosmiconfig-typescript-loader@5.0.0(@types/node@22.5.5)(cosmiconfig@9.0.0(typescript@5.6.2))(typescript@5.6.2):
     dependencies:
@@ -6395,6 +6395,24 @@ snapshots:
       write-file-atomic: 5.0.1
     optionalDependencies:
       typescript: 5.5.4
+    transitivePeerDependencies:
+      - eslint-import-resolver-node
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
+
+  garou@0.7.8(eslint@8.57.1)(stylelint@16.9.0(typescript@5.6.2))(typescript@5.6.2):
+    dependencies:
+      '@typescript-eslint/parser': 8.6.0(eslint@8.57.1)(typescript@5.6.2)
+      '@yarnpkg/lockfile': 1.1.0
+      eslint: 8.57.1
+      eslint-module-utils: 2.11.0(@typescript-eslint/parser@8.6.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint@8.57.1)
+      flat-cache: 3.2.0
+      stylelint: 16.9.0(typescript@5.6.2)
+      vue-eslint-parser: 9.4.3(eslint@8.57.1)
+      write-file-atomic: 5.0.1
+    optionalDependencies:
+      typescript: 5.6.2
     transitivePeerDependencies:
       - eslint-import-resolver-node
       - eslint-import-resolver-typescript
@@ -8200,29 +8218,6 @@ snapshots:
       css-what: 6.1.0
       csso: 5.0.5
       picocolors: 1.1.0
-
-  syncpack@13.0.0(typescript@5.5.4):
-    dependencies:
-      '@effect/schema': 0.71.1(effect@3.6.5)
-      chalk: 5.3.0
-      chalk-template: 1.1.0
-      commander: 12.1.0
-      cosmiconfig: 9.0.0(typescript@5.5.4)
-      effect: 3.6.5
-      enquirer: 2.4.1
-      fast-check: 3.21.0
-      globby: 14.0.2
-      jsonc-parser: 3.3.1
-      minimatch: 9.0.5
-      npm-package-arg: 11.0.3
-      ora: 8.0.1
-      prompts: 2.4.2
-      read-yaml-file: 2.1.0
-      semver: 7.6.3
-      tightrope: 0.2.0
-      ts-toolbelt: 9.6.0
-    transitivePeerDependencies:
-      - typescript
 
   syncpack@13.0.0(typescript@5.6.2):
     dependencies:

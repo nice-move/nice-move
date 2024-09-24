@@ -12,11 +12,7 @@ function readConfig() {
       } = {},
     } = getPkg();
 
-    return parseImportGroups(
-      internalRegex
-        ? [...(Array.isArray(config) ? config : [config]), internalRegex]
-        : config,
-    );
+    return parseImportGroups(internalRegex ? [config, internalRegex] : config);
   } catch {
     return [];
   }
@@ -54,7 +50,7 @@ export default {
     '<TYPES>^[.]',
     '',
     String.raw`^\./`,
-  ],
+  ].flat(),
   plugins: [
     require.resolve('@nice-move/prettier-plugin-package-json'),
     require.resolve('@prettier/plugin-xml'),

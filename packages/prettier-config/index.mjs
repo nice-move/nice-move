@@ -1,5 +1,3 @@
-import { builtinModules } from 'node:module';
-
 import { getPkg } from 'settingz/index.mjs';
 
 import { parseImportGroups } from './lib.mjs';
@@ -9,10 +7,9 @@ function readConfig() {
   try {
     const {
       'nice-move': {
-        'import-groups': Config = [],
+        'import-groups': config = [],
         'internal-regex': internalRegex,
       } = {},
-      garou: { 'import-groups': config = Config } = {},
     } = getPkg();
 
     return parseImportGroups(
@@ -24,10 +21,6 @@ function readConfig() {
     return [];
   }
 }
-
-const builtin = builtinModules.filter(
-  (item) => !(item.includes('/') || item.startsWith('_')),
-);
 
 export default {
   htmlWhitespaceSensitivity: 'css',
@@ -44,7 +37,7 @@ export default {
     'className',
   ],
   importOrder: [
-    `^(node:)?(${builtin.join('|')})(/|$)`,
+    '<BUILTIN_MODULES>',
     '',
     '<THIRD_PARTY_MODULES>',
     '',

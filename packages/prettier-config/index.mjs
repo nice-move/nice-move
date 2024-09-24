@@ -56,7 +56,7 @@ export default {
     require.resolve('@prettier/plugin-xml'),
     require.resolve('prettier-plugin-ini'),
     require.resolve('prettier-plugin-css-order'),
-    require.resolve('@ianvs/prettier-plugin-sort-imports'),
+    require.resolve('@nice-move/prettier-plugin-sort-imports'),
     require.resolve('./extra.mjs'),
     loadPlugin('prettier-plugin-diy'),
     loadPlugin('prettier-plugin-groovy'),

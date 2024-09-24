@@ -1,4 +1,33 @@
+import { builtinModules } from 'node:module';
+
+import { getPkg } from 'settingz/index.mjs';
+
+import { parseImportGroups } from './lib.mjs';
 import { configHas, loadPlugin, require } from './utils.mjs';
+
+function readConfig() {
+  try {
+    const {
+      'nice-move': {
+        'import-groups': Config = [],
+        'internal-regex': internalRegex,
+      } = {},
+      garou: { 'import-groups': config = Config } = {},
+    } = getPkg();
+
+    return parseImportGroups(
+      internalRegex
+        ? [...(Array.isArray(config) ? config : [config]), internalRegex]
+        : config,
+    );
+  } catch {
+    return [];
+  }
+}
+
+const builtin = builtinModules.filter(
+  (item) => !(item.includes('/') || item.startsWith('_')),
+);
 
 export default {
   htmlWhitespaceSensitivity: 'css',
@@ -14,11 +43,31 @@ export default {
     'classNames',
     'className',
   ],
+  importOrder: [
+    `^(node:)?(${builtin.join('|')})(/|$)`,
+    '',
+    '<THIRD_PARTY_MODULES>',
+    '',
+    '<TYPES>',
+    '',
+    ...readConfig(),
+    '',
+    '^@/(.*)$',
+    '',
+    '<TYPES>^[.][.]/',
+    '',
+    String.raw`^\.\./`,
+    '',
+    '<TYPES>^[.]',
+    '',
+    String.raw`^\./`,
+  ],
   plugins: [
     require.resolve('@nice-move/prettier-plugin-package-json'),
     require.resolve('@prettier/plugin-xml'),
     require.resolve('prettier-plugin-ini'),
     require.resolve('prettier-plugin-css-order'),
+    require.resolve('@ianvs/prettier-plugin-sort-imports'),
     require.resolve('./extra.mjs'),
     loadPlugin('prettier-plugin-diy'),
     loadPlugin('prettier-plugin-groovy'),

@@ -23,9 +23,7 @@ npm install @nice-move/syncpack-config --save-dev
 
 ```mjs
 // example: syncpack.config.mjs
-
 // @ts-check
-
 import defineConfig from '@nice-move/syncpack-config';
 
 export default defineConfig(import.meta.url, {

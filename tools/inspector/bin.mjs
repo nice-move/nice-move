@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import load from '@commitlint/load';
 
 import { eslintInspector, save, stylelintInspector } from './index.mjs';

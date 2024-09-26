@@ -125,12 +125,6 @@ export default {
       },
     },
     {
-      files: ['.browserslistrc'],
-      options: {
-        requirePragma: true,
-      },
-    },
-    {
       files: 'package.json',
       options: {
         parser: 'package-json',
@@ -168,6 +162,12 @@ export default {
       },
     },
     {
+      files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
+      options: {
+        importOrderParserPlugins: ['typescript'],
+      },
+    },
+    {
       files: ['*.wxml'],
       options: {
         parser: 'html',
@@ -180,7 +180,12 @@ export default {
       },
     },
     {
-      files: ['pnpm-lock.yaml'],
+      files: [
+        'pnpm-lock.yaml',
+        '.browserslistrc',
+        'project.config.json',
+        'project.private.config.json',
+      ],
       options: {
         requirePragma: true,
       },

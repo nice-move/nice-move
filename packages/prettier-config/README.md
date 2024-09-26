@@ -43,6 +43,7 @@ A [prettier] config created by personal preferences.
 - prettier-plugin-ini
 - @prettier/plugin-xml
 - prettier-plugin-css-order
+- @ianvs/prettier-plugin-sort-imports
 
 ### Auto load plugins when they are installed
 

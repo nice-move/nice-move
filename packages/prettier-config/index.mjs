@@ -1,22 +1,4 @@
-import { getPkg } from 'settingz/index.mjs';
-
-import { parseImportGroups } from './lib.mjs';
-import { configHas, loadPlugin, require } from './utils.mjs';
-
-function readConfig() {
-  try {
-    const {
-      'nice-move': {
-        'import-groups': config = [],
-        'internal-regex': internalRegex,
-      } = {},
-    } = getPkg();
-
-    return parseImportGroups(internalRegex ? [config, internalRegex] : config);
-  } catch {
-    return [];
-  }
-}
+import { loadOrderPreset, loadPlugin, require } from './utils.mjs';
 
 export default {
   htmlWhitespaceSensitivity: 'css',
@@ -32,22 +14,59 @@ export default {
     'classNames',
     'className',
   ],
+  importOrderParserPlugins: ['importAttributes'],
   importOrder: [
     '<BUILTIN_MODULES>',
     '',
+    'electron',
+    'vscode',
+    '',
     '<THIRD_PARTY_MODULES>',
     '',
-    '<TYPES>',
+    // '<TYPES>',
     '',
-    ...readConfig(),
+    String.raw`^vue\/?`,
+    String.raw`^@vue\/?`,
+    String.raw`^vue-router\/?`,
+    String.raw`^pinia\/?`,
+    '',
+    String.raw`^prop-types\/?`,
+    String.raw`^react\/?`,
+    String.raw`^react-dom\/?`,
+    String.raw`^react-router\/?`,
+    String.raw`^react-router-dom\/?`,
+    '',
+    String.raw`^@antv\/`,
+    String.raw`^@ant-design\/`,
+    String.raw`^antd\/?`,
+    String.raw`^ahooks\/?`,
+    String.raw`^ahooks-vue\/?`,
+    '',
+    String.raw`^vant\/?`,
+    String.raw`^@vant\/`,
+    '',
+    String.raw`@tarojs\/`,
+    '',
+    '^@element-plus',
+    'element-plus',
+    'element-ui',
+    '',
+    String.raw`^@docusaurus\/`,
+    String.raw`^@theme\/`,
+    String.raw`^@theme-original\/`,
+    String.raw`^@generated\/`,
+    '',
+    String.raw`^echarts\/?`,
+    '',
+    ...loadOrderPreset(),
     '',
     '^@/(.*)$',
     '',
-    String.raw`<TYPES>^\.\./`,
+    // String.raw`<TYPES>^\.\./`,
     '',
     String.raw`^\.\./`,
     '',
-    String.raw`<TYPES>^\./`,
+    // String.raw`<TYPES>^\./`,
     '',
     String.raw`^\./`,
   ].flat(),
@@ -56,7 +75,7 @@ export default {
     require.resolve('@prettier/plugin-xml'),
     require.resolve('prettier-plugin-ini'),
     require.resolve('prettier-plugin-css-order'),
-    require.resolve('@nice-move/prettier-plugin-sort-imports'),
+    require.resolve('@ianvs/prettier-plugin-sort-imports'),
     require.resolve('./extra.mjs'),
     loadPlugin('prettier-plugin-diy'),
     loadPlugin('prettier-plugin-groovy'),
@@ -103,6 +122,12 @@ export default {
       files: ['.*rc', '.*rc.json', '{t,j}sconfig.json', '.vscode/*.json'],
       options: {
         parser: 'jsonc',
+      },
+    },
+    {
+      files: ['.browserslistrc'],
+      options: {
+        requirePragma: true,
       },
     },
     {
@@ -160,9 +185,5 @@ export default {
         requirePragma: true,
       },
     },
-    ...(configHas(
-      ({ prettier = [] }) => prettier,
-      (bundle) => bundle,
-    ) || []),
   ],
 };

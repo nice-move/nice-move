@@ -429,6 +429,9 @@ importers:
 
   packages/prettier-config:
     dependencies:
+      '@babel/plugin-syntax-import-attributes':
+        specifier: ^7.25.6
+        version: 7.25.6(@babel/core@7.25.2)
       '@ianvs/prettier-plugin-sort-imports':
         specifier: ^4.3.1
         version: 4.3.1(@vue/compiler-sfc@3.4.38)(prettier@3.3.3)
@@ -436,8 +439,8 @@ importers:
         specifier: ^0.8.0
         version: 0.8.0(prettier@3.3.3)
       '@nice-move/prettier-plugin-sort-imports':
-        specifier: ^4.3.1
-        version: 4.3.1(@vue/compiler-sfc@3.4.38)(prettier@3.3.3)
+        specifier: ^4.3.2-patch.1
+        version: 4.3.2-patch.1(@vue/compiler-sfc@3.4.38)(prettier@3.3.3)
       '@prettier/plugin-xml':
         specifier: ^3.4.1
         version: 3.4.1(prettier@3.3.3)
@@ -913,8 +916,8 @@ packages:
     peerDependencies:
       prettier: ^3.2.5
 
-  '@nice-move/prettier-plugin-sort-imports@4.3.1':
-    resolution: {integrity: sha512-RQ2M67BsXWbvBjOzBtmsvm9WAFcrlfEfgH7M2XY9NXSevkiGDyOPfMk/tL5JwpHGz5grGhxBxz1vdpOBuM0lPQ==}
+  '@nice-move/prettier-plugin-sort-imports@4.3.2-patch.1':
+    resolution: {integrity: sha512-dF92w1PhxtZM7Ax1goDzJ5gK/5/3R8I8L9a3jYBtTGk2OuwDX4ltgRClQI5cMD390koDjY6FDnv/q6Xl2B2jEA==}
     peerDependencies:
       '@vue/compiler-sfc': 2.7.x || 3.x
       prettier: 2 || 3
@@ -4959,7 +4962,7 @@ snapshots:
     dependencies:
       prettier: 3.3.3
 
-  '@nice-move/prettier-plugin-sort-imports@4.3.1(@vue/compiler-sfc@3.4.38)(prettier@3.3.3)':
+  '@nice-move/prettier-plugin-sort-imports@4.3.2-patch.1(@vue/compiler-sfc@3.4.38)(prettier@3.3.3)':
     dependencies:
       '@babel/core': 7.25.2
       '@babel/generator': 7.25.6

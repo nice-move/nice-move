@@ -1,17 +1,6 @@
 import { createRequire } from 'node:module';
 
-import { getPkg, haveDevDependencies } from 'settingz';
-
-// eslint-disable-next-line consistent-return
-export function configHas(checker, getResult) {
-  const pkg = getPkg('nice-move');
-
-  const io = checker(pkg);
-
-  if (io) {
-    return getResult(io, pkg);
-  }
-}
+import { haveDevDependencies } from 'settingz';
 
 export const require = createRequire(import.meta.url);
 
@@ -20,5 +9,21 @@ export function loadPlugin(name) {
     return haveDevDependencies(name) ? require.resolve(name) : false;
   } catch {
     return false;
+  }
+}
+
+export function loadOrderPreset() {
+  try {
+    const {
+      'nice-move': {
+        'import-groups': config = [],
+        'internal-regex': internalRegex,
+      } = {},
+      // eslint-disable-next-line import/no-unresolved
+    } = require('@nice-move/config/package.json');
+
+    return [config, internalRegex].filter(Boolean);
+  } catch {
+    return [];
   }
 }

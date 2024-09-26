@@ -68,8 +68,8 @@ importers:
         specifier: workspace:~
         version: link:packages/tsconfig
       '@types/node':
-        specifier: ^20.16.6
-        version: 20.16.6
+        specifier: ^20.16.9
+        version: 20.16.9
       svgo:
         specifier: ^3.3.2
         version: 3.3.2
@@ -99,8 +99,8 @@ importers:
         specifier: ^14.0.0
         version: 14.0.0(eslint@8.57.1)
       garou:
-        specifier: ^0.7.8
-        version: 0.7.8(eslint@8.57.1)(stylelint@16.9.0(typescript@5.6.2))(typescript@5.6.2)
+        specifier: ^0.8.0
+        version: 0.8.0(eslint@8.57.1)(stylelint@16.9.0(typescript@5.6.2))(typescript@5.6.2)
       nodemon:
         specifier: ^3.1.7
         version: 3.1.7
@@ -111,8 +111,8 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.6
-        version: 0.6.6(@ianvs/prettier-plugin-sort-imports@4.3.1(@vue/compiler-sfc@3.4.38)(prettier@3.3.3))(@trivago/prettier-plugin-sort-imports@4.3.0(@vue/compiler-sfc@3.4.38)(prettier@3.3.3))(prettier-plugin-css-order@2.1.2(postcss@8.4.47)(prettier@3.3.3))(prettier@3.3.3)
+        specifier: ^0.6.8
+        version: 0.6.8(@ianvs/prettier-plugin-sort-imports@4.3.1(@vue/compiler-sfc@3.4.38)(prettier@3.3.3))(@trivago/prettier-plugin-sort-imports@4.3.0(@vue/compiler-sfc@3.4.38)(prettier@3.3.3))(prettier-plugin-css-order@2.1.2(postcss@8.4.47)(prettier@3.3.3))(prettier@3.3.3)
       stylelint:
         specifier: ^16.9.0
         version: 16.9.0(typescript@5.6.2)
@@ -278,13 +278,13 @@ importers:
     dependencies:
       '@commitlint/cli':
         specifier: ^19.2.2
-        version: 19.5.0(@types/node@20.16.6)(typescript@5.6.2)
+        version: 19.5.0(@types/node@20.16.9)(typescript@5.6.2)
       '@commitlint/config-conventional':
         specifier: ^19.5.0
         version: 19.5.0
       commitlint:
         specifier: ^19.2.2
-        version: 19.5.0(@types/node@20.16.6)(typescript@5.6.2)
+        version: 19.5.0(@types/node@20.16.9)(typescript@5.6.2)
 
   packages/eslint-config-base:
     dependencies:
@@ -429,6 +429,9 @@ importers:
 
   packages/prettier-config:
     dependencies:
+      '@ianvs/prettier-plugin-sort-imports':
+        specifier: ^4.3.1
+        version: 4.3.1(@vue/compiler-sfc@3.4.38)(prettier@3.3.3)
       '@nice-move/prettier-plugin-package-json':
         specifier: ^0.8.0
         version: 0.8.0(prettier@3.3.3)
@@ -1000,8 +1003,8 @@ packages:
   '@types/minimist@1.2.5':
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
 
-  '@types/node@20.16.6':
-    resolution: {integrity: sha512-T7PpxM/6yeDE+AdlVysT62BX6/bECZOmQAgiFg5NoBd5MQheZ3tzal7f1wvzfiEcmrcJNRi2zRr2nY2zF+0uqw==}
+  '@types/node@20.16.9':
+    resolution: {integrity: sha512-rkvIVJxsOfBejxK7I0FO5sa2WxFmJCzoDwcd88+fq/CUfynNywTo/1/T6hyFz22CyztsnLS9nVlHOnTI36RH5w==}
 
   '@types/node@22.5.5':
     resolution: {integrity: sha512-Xjs4y5UPO/CLdzpgR6GirZJx36yScjh73+2NlLlkFRSoQN8B0DpfXPdZGnvVmLRLOsqDpOfTNv7D9trgGhmOIA==}
@@ -1042,8 +1045,22 @@ packages:
       typescript:
         optional: true
 
+  '@typescript-eslint/parser@8.7.0':
+    resolution: {integrity: sha512-lN0btVpj2unxHlNYLI//BQ7nzbMJYBVQX5+pbNXvGYazdlgYonMn4AhhHifQ+J4fGRYA/m1DjaQjx+fDetqBOQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   '@typescript-eslint/scope-manager@8.6.0':
     resolution: {integrity: sha512-ZuoutoS5y9UOxKvpc/GkvF4cuEmpokda4wRg64JEia27wX+PysIE9q+lzDtlHHgblwUWwo5/Qn+/WyTUvDwBHw==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@typescript-eslint/scope-manager@8.7.0':
+    resolution: {integrity: sha512-87rC0k3ZlDOuz82zzXRtQ7Akv3GKhHs0ti4YcbAJtaomllXoSO8hi7Ix3ccEvCd824dy9aIX+j3d2UMAfCtVpg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@typescript-eslint/type-utils@8.6.0':
@@ -1059,8 +1076,21 @@ packages:
     resolution: {integrity: sha512-rojqFZGd4MQxw33SrOy09qIDS8WEldM8JWtKQLAjf/X5mGSeEFh5ixQlxssMNyPslVIk9yzWqXCsV2eFhYrYUw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@typescript-eslint/types@8.7.0':
+    resolution: {integrity: sha512-LLt4BLHFwSfASHSF2K29SZ+ZCsbQOM+LuarPjRUuHm+Qd09hSe3GCeaQbcCr+Mik+0QFRmep/FyZBO6fJ64U3w==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
   '@typescript-eslint/typescript-estree@8.6.0':
     resolution: {integrity: sha512-MOVAzsKJIPIlLK239l5s06YXjNqpKTVhBVDnqUumQJja5+Y94V3+4VUFRA0G60y2jNnTVwRCkhyGQpavfsbq/g==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  '@typescript-eslint/typescript-estree@8.7.0':
+    resolution: {integrity: sha512-MC8nmcGHsmfAKxwnluTQpNqceniT8SteVwd2voYlmiSWGOtjvGXdPl17dYu2797GVscK30Z04WRM28CrKS9WOg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       typescript: '*'
@@ -1076,6 +1106,10 @@ packages:
 
   '@typescript-eslint/visitor-keys@8.6.0':
     resolution: {integrity: sha512-wapVFfZg9H0qOYh4grNVQiMklJGluQrOUiOhYRrQWhx7BY/+I1IYb8BczWNbbUpO+pqy0rDciv3lQH5E1bCLrg==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@typescript-eslint/visitor-keys@8.7.0':
+    resolution: {integrity: sha512-b1tx0orFCCh/THWPQa2ZwWzvOeyzzp36vkJYOpVg0u8UVOIsfVrnuC9FqAw9gRKn+rG2VmWQ/zDJZzkxUnj/XQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@ungap/structured-clone@1.2.0':
@@ -1959,6 +1993,27 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
+  eslint-module-utils@2.11.1:
+    resolution: {integrity: sha512-EwcbfLOhwVMAfatfqLecR2yv3dE5+kQ8kx+Rrt0DvDXEVwW86KQ/xbMDQhtp5l42VXukD5SOF8mQQHbaNtO0CQ==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      '@typescript-eslint/parser': '*'
+      eslint: '*'
+      eslint-import-resolver-node: '*'
+      eslint-import-resolver-typescript: '*'
+      eslint-import-resolver-webpack: '*'
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
+      eslint:
+        optional: true
+      eslint-import-resolver-node:
+        optional: true
+      eslint-import-resolver-typescript:
+        optional: true
+      eslint-import-resolver-webpack:
+        optional: true
+
   eslint-plugin-ava@14.0.0:
     resolution: {integrity: sha512-XmKT6hppaipwwnLVwwvQliSU6AF1QMHiNoLD5JQfzhUhf0jY7CO0O624fQrE+Y/fTb9vbW8r77nKf7M/oHulxw==}
     engines: {node: '>=14.17 <15 || >=16.4'}
@@ -2253,6 +2308,18 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
       stylelint: ^16.8.1
+      typescript: ^5.5.4
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  garou@0.8.0:
+    resolution: {integrity: sha512-GOocEpEKmwo6mtWM9wInY17iYsOUPk5BYyhJ2OX4Pk6ZXLMYJiq5jLNgzLlEfC7Dv9FPSYkq6rQPQj8DglZlQA==}
+    engines: {node: ^18.12.0 || ^20.0.0 || ^22.0.0}
+    hasBin: true
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
+      stylelint: ^16.9.0
       typescript: ^5.5.4
     peerDependenciesMeta:
       typescript:
@@ -3522,6 +3589,61 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
+  prettier-plugin-tailwindcss@0.6.8:
+    resolution: {integrity: sha512-dGu3kdm7SXPkiW4nzeWKCl3uoImdd5CTZEJGxyypEPL37Wj0HT2pLqjrvSei1nTeuQfO4PUfjeW5cTUNRLZ4sA==}
+    engines: {node: '>=14.21.3'}
+    peerDependencies:
+      '@ianvs/prettier-plugin-sort-imports': '*'
+      '@prettier/plugin-pug': '*'
+      '@shopify/prettier-plugin-liquid': '*'
+      '@trivago/prettier-plugin-sort-imports': '*'
+      '@zackad/prettier-plugin-twig-melody': '*'
+      prettier: ^3.0
+      prettier-plugin-astro: '*'
+      prettier-plugin-css-order: '*'
+      prettier-plugin-import-sort: '*'
+      prettier-plugin-jsdoc: '*'
+      prettier-plugin-marko: '*'
+      prettier-plugin-multiline-arrays: '*'
+      prettier-plugin-organize-attributes: '*'
+      prettier-plugin-organize-imports: '*'
+      prettier-plugin-sort-imports: '*'
+      prettier-plugin-style-order: '*'
+      prettier-plugin-svelte: '*'
+    peerDependenciesMeta:
+      '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      '@prettier/plugin-pug':
+        optional: true
+      '@shopify/prettier-plugin-liquid':
+        optional: true
+      '@trivago/prettier-plugin-sort-imports':
+        optional: true
+      '@zackad/prettier-plugin-twig-melody':
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-import-sort:
+        optional: true
+      prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-marko:
+        optional: true
+      prettier-plugin-multiline-arrays:
+        optional: true
+      prettier-plugin-organize-attributes:
+        optional: true
+      prettier-plugin-organize-imports:
+        optional: true
+      prettier-plugin-sort-imports:
+        optional: true
+      prettier-plugin-style-order:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+
   prettier@3.3.3:
     resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
     engines: {node: '>=14'}
@@ -4573,11 +4695,11 @@ snapshots:
       '@bring-it/cli': 0.9.9
       globby: 14.0.2
 
-  '@commitlint/cli@19.5.0(@types/node@20.16.6)(typescript@5.6.2)':
+  '@commitlint/cli@19.5.0(@types/node@20.16.9)(typescript@5.6.2)':
     dependencies:
       '@commitlint/format': 19.5.0
       '@commitlint/lint': 19.5.0
-      '@commitlint/load': 19.5.0(@types/node@20.16.6)(typescript@5.6.2)
+      '@commitlint/load': 19.5.0(@types/node@20.16.9)(typescript@5.6.2)
       '@commitlint/read': 19.5.0
       '@commitlint/types': 19.5.0
       tinyexec: 0.3.0
@@ -4624,7 +4746,7 @@ snapshots:
       '@commitlint/rules': 19.5.0(patch_hash=jbsgqjaeavgjizxjid3yuchniy)
       '@commitlint/types': 19.5.0
 
-  '@commitlint/load@19.5.0(@types/node@20.16.6)(typescript@5.6.2)':
+  '@commitlint/load@19.5.0(@types/node@20.16.9)(typescript@5.6.2)':
     dependencies:
       '@commitlint/config-validator': 19.5.0
       '@commitlint/execute-rule': 19.5.0
@@ -4632,7 +4754,7 @@ snapshots:
       '@commitlint/types': 19.5.0
       chalk: 5.3.0
       cosmiconfig: 9.0.0(typescript@5.6.2)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.16.6)(cosmiconfig@9.0.0(typescript@5.6.2))(typescript@5.6.2)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.16.9)(cosmiconfig@9.0.0(typescript@5.6.2))(typescript@5.6.2)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -4781,7 +4903,6 @@ snapshots:
       '@vue/compiler-sfc': 3.4.38
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -4931,7 +5052,7 @@ snapshots:
 
   '@types/minimist@1.2.5': {}
 
-  '@types/node@20.16.6':
+  '@types/node@20.16.9':
     dependencies:
       undici-types: 6.19.8
 
@@ -4996,10 +5117,28 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@typescript-eslint/parser@8.7.0(eslint@8.57.1)(typescript@5.6.2)':
+    dependencies:
+      '@typescript-eslint/scope-manager': 8.7.0
+      '@typescript-eslint/types': 8.7.0
+      '@typescript-eslint/typescript-estree': 8.7.0(typescript@5.6.2)
+      '@typescript-eslint/visitor-keys': 8.7.0
+      debug: 4.3.7(supports-color@5.5.0)
+      eslint: 8.57.1
+    optionalDependencies:
+      typescript: 5.6.2
+    transitivePeerDependencies:
+      - supports-color
+
   '@typescript-eslint/scope-manager@8.6.0':
     dependencies:
       '@typescript-eslint/types': 8.6.0
       '@typescript-eslint/visitor-keys': 8.6.0
+
+  '@typescript-eslint/scope-manager@8.7.0':
+    dependencies:
+      '@typescript-eslint/types': 8.7.0
+      '@typescript-eslint/visitor-keys': 8.7.0
 
   '@typescript-eslint/type-utils@8.6.0(eslint@8.57.1)(typescript@5.6.2)':
     dependencies:
@@ -5014,6 +5153,8 @@ snapshots:
       - supports-color
 
   '@typescript-eslint/types@8.6.0': {}
+
+  '@typescript-eslint/types@8.7.0': {}
 
   '@typescript-eslint/typescript-estree@8.6.0(typescript@5.5.4)':
     dependencies:
@@ -5045,6 +5186,21 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@typescript-eslint/typescript-estree@8.7.0(typescript@5.6.2)':
+    dependencies:
+      '@typescript-eslint/types': 8.7.0
+      '@typescript-eslint/visitor-keys': 8.7.0
+      debug: 4.3.7(supports-color@5.5.0)
+      fast-glob: 3.3.2
+      is-glob: 4.0.3
+      minimatch: 9.0.5
+      semver: 7.6.3
+      ts-api-utils: 1.3.0(typescript@5.6.2)
+    optionalDependencies:
+      typescript: 5.6.2
+    transitivePeerDependencies:
+      - supports-color
+
   '@typescript-eslint/utils@8.6.0(eslint@8.57.1)(typescript@5.6.2)':
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.1)
@@ -5059,6 +5215,11 @@ snapshots:
   '@typescript-eslint/visitor-keys@8.6.0':
     dependencies:
       '@typescript-eslint/types': 8.6.0
+      eslint-visitor-keys: 3.4.3
+
+  '@typescript-eslint/visitor-keys@8.7.0':
+    dependencies:
+      '@typescript-eslint/types': 8.7.0
       eslint-visitor-keys: 3.4.3
 
   '@ungap/structured-clone@1.2.0': {}
@@ -5651,9 +5812,9 @@ snapshots:
 
   commander@7.2.0: {}
 
-  commitlint@19.5.0(@types/node@20.16.6)(typescript@5.6.2):
+  commitlint@19.5.0(@types/node@20.16.9)(typescript@5.6.2):
     dependencies:
-      '@commitlint/cli': 19.5.0(@types/node@20.16.6)(typescript@5.6.2)
+      '@commitlint/cli': 19.5.0(@types/node@20.16.9)(typescript@5.6.2)
       '@commitlint/types': 19.5.0
     transitivePeerDependencies:
       - '@types/node'
@@ -5708,9 +5869,9 @@ snapshots:
     dependencies:
       browserslist: 4.23.3
 
-  cosmiconfig-typescript-loader@5.0.0(@types/node@20.16.6)(cosmiconfig@9.0.0(typescript@5.6.2))(typescript@5.6.2):
+  cosmiconfig-typescript-loader@5.0.0(@types/node@20.16.9)(cosmiconfig@9.0.0(typescript@5.6.2))(typescript@5.6.2):
     dependencies:
-      '@types/node': 20.16.6
+      '@types/node': 20.16.9
       cosmiconfig: 9.0.0(typescript@5.6.2)
       jiti: 1.21.6
       typescript: 5.6.2
@@ -6137,6 +6298,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  eslint-module-utils@2.11.1(@typescript-eslint/parser@8.7.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1):
+    dependencies:
+      debug: 3.2.7
+    optionalDependencies:
+      '@typescript-eslint/parser': 8.7.0(eslint@8.57.1)(typescript@5.6.2)
+      eslint: 8.57.1
+    transitivePeerDependencies:
+      - supports-color
+
   eslint-plugin-ava@14.0.0(eslint@8.57.1):
     dependencies:
       enhance-visitors: 1.0.0
@@ -6560,12 +6730,12 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  garou@0.7.8(eslint@8.57.1)(stylelint@16.9.0(typescript@5.6.2))(typescript@5.6.2):
+  garou@0.8.0(eslint@8.57.1)(stylelint@16.9.0(typescript@5.6.2))(typescript@5.6.2):
     dependencies:
-      '@typescript-eslint/parser': 8.6.0(eslint@8.57.1)(typescript@5.6.2)
+      '@typescript-eslint/parser': 8.7.0(eslint@8.57.1)(typescript@5.6.2)
       '@yarnpkg/lockfile': 1.1.0
       eslint: 8.57.1
-      eslint-module-utils: 2.11.0(@typescript-eslint/parser@8.6.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint@8.57.1)
+      eslint-module-utils: 2.11.1(@typescript-eslint/parser@8.7.0(eslint@8.57.1)(typescript@5.6.2))(eslint@8.57.1)
       flat-cache: 3.2.0
       stylelint: 16.9.0(typescript@5.6.2)
       vue-eslint-parser: 9.4.3(eslint@8.57.1)
@@ -6995,7 +7165,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.5.5
+      '@types/node': 20.16.9
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -7738,6 +7908,14 @@ snapshots:
       prettier: 3.3.3
 
   prettier-plugin-tailwindcss@0.6.6(@ianvs/prettier-plugin-sort-imports@4.3.1(@vue/compiler-sfc@3.4.38)(prettier@3.3.3))(@trivago/prettier-plugin-sort-imports@4.3.0(@vue/compiler-sfc@3.4.38)(prettier@3.3.3))(prettier-plugin-css-order@2.1.2(postcss@8.4.47)(prettier@3.3.3))(prettier@3.3.3):
+    dependencies:
+      prettier: 3.3.3
+    optionalDependencies:
+      '@ianvs/prettier-plugin-sort-imports': 4.3.1(@vue/compiler-sfc@3.4.38)(prettier@3.3.3)
+      '@trivago/prettier-plugin-sort-imports': 4.3.0(@vue/compiler-sfc@3.4.38)(prettier@3.3.3)
+      prettier-plugin-css-order: 2.1.2(postcss@8.4.47)(prettier@3.3.3)
+
+  prettier-plugin-tailwindcss@0.6.8(@ianvs/prettier-plugin-sort-imports@4.3.1(@vue/compiler-sfc@3.4.38)(prettier@3.3.3))(@trivago/prettier-plugin-sort-imports@4.3.0(@vue/compiler-sfc@3.4.38)(prettier@3.3.3))(prettier-plugin-css-order@2.1.2(postcss@8.4.47)(prettier@3.3.3))(prettier@3.3.3):
     dependencies:
       prettier: 3.3.3
     optionalDependencies:

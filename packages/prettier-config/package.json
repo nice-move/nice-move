@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-config",
-  "version": "0.13.3",
+  "version": "0.13.4",
   "description": "A `prettier` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -28,6 +28,7 @@
   "main": "index.mjs",
   "type": "module",
   "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
     "@nice-move/prettier-plugin-package-json": "^0.8.0",
     "@nice-move/prettier-plugin-sort-imports": "^4.3.1",
     "@prettier/plugin-xml": "^3.4.1",

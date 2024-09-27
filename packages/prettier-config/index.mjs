@@ -14,7 +14,7 @@ export default {
     'classNames',
     'className',
   ],
-  importOrderParserPlugins: ['importAttributes'],
+  importOrderParserPlugins: ['importAttributes', 'jsx'],
   importOrder: [
     '<BUILTIN_MODULES>',
     '',

@@ -20,7 +20,7 @@ export default defineConfig(import.meta.url, {
       dependencies: ['@nice-move/all-in-*'],
       dependencyTypes: ['local'],
       label: 'Same version 2',
-      pinVersion: '0.2.1',
+      pinVersion: '0.2.2',
     },
   ],
 });

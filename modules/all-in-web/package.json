@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-web",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -30,10 +30,10 @@
   },
   "peerDependencies": {
     "eslint": "^8.57.1",
-    "garou": "^0.7.8",
+    "garou": "^0.8.0",
     "prettier": "^3.3.3",
     "stylelint": "^16.9.0",
-    "typescript": "~5.5.4"
+    "typescript": "~5.6.2"
   },
   "peerDependenciesMeta": {
     "garou": {
@@ -44,7 +44,7 @@
     }
   },
   "engines": {
-    "node": "^18.12.0 || ^20.0.0 || ^22.0.0"
+    "node": "^18.17.0 || ^20.5.0 || ^22.0.0"
   },
   "publishConfig": {
     "access": "public",

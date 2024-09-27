@@ -33,7 +33,7 @@
     "syncpack": "^13.0.0"
   },
   "engines": {
-    "node": "^18.12.0 || ^20.0.0 || ^22.0.0"
+    "node": "^18.17.0 || ^20.5.0 || ^22.0.0"
   },
   "publishConfig": {
     "access": "public",

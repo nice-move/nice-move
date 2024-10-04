@@ -23,6 +23,7 @@ function BestShot() {
 module.exports = {
   noInlineConfig: false,
   reportUnusedDisableDirectives: true,
+  plugins: ['regexp'],
   extends: [
     'eslint:recommended',
     'airbnb-base',
@@ -39,6 +40,7 @@ module.exports = {
     require.resolve('./lib/test.cjs'),
     require.resolve('./lib/mini.cjs'),
     'plugin:@nice-move/html/recommended',
+    'plugin:regexp/recommended',
     'prettier',
   ],
   ...configHas(

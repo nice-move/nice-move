@@ -37,7 +37,6 @@ module.exports = {
   },
   rules: {
     'lines-around-directive': 0,
-    '@eslint-community/eslint-comments/no-unused-enable': 'warn',
     'array-callback-return': [
       'error',
       {
@@ -121,5 +120,7 @@ module.exports = {
     'prefer-exponentiation-operator': 0,
     'prefer-template': 'warn',
     'spaced-comment': 0,
+    '@eslint-community/eslint-comments/no-unused-enable': 'warn',
+    '@eslint-community/eslint-comments/disable-enable-pair': 0,
   },
 };

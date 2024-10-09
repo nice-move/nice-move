@@ -2,25 +2,23 @@
 import defineConfig from '@nice-move/syncpack-config/define.cjs';
 
 export default defineConfig(import.meta.url, {
-  semverGroups: [
+  versionGroups: [
     {
       dependencies: ['typescript'],
       packages: ['@nice-move/tsconfig'],
-      range: '^',
+      pinVersion: '~5.5.4',
     },
-  ],
-  versionGroups: [
     {
       dependencies: ['@nice-move/eslint-config-*'],
       dependencyTypes: ['local'],
       label: 'Same version 1',
-      pinVersion: '0.11.23',
+      pinVersion: '0.11.24',
     },
     {
       dependencies: ['@nice-move/all-in-*'],
       dependencyTypes: ['local'],
       label: 'Same version 2',
-      pinVersion: '0.2.3',
+      pinVersion: '0.2.4',
     },
   ],
 });

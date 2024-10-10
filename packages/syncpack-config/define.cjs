@@ -2,7 +2,17 @@
 
 const { fileURLToPath } = require('node:url');
 const { join } = require('node:path');
+const { readFileSync } = require('node:fs');
 const { findWorkspaces } = require('find-workspaces');
+const { parse } = require('yaml');
+
+function readYaml() {
+  const path = join(process.cwd(), 'pnpm-workspace.yaml');
+
+  const file = readFileSync(path, 'utf8');
+
+  return parse(file).catalog || {};
+}
 
 module.exports = function defineConfig(url, config = {}) {
   let pkg = {};
@@ -17,9 +27,11 @@ module.exports = function defineConfig(url, config = {}) {
     console.error(error);
   }
 
-  const ws = pkg.packageManager?.startsWith?.('pnpm')
-    ? (findWorkspaces() ?? [])
-    : [];
+  const pnpm = pkg.packageManager?.startsWith?.('pnpm');
+
+  const ws = pnpm ? (findWorkspaces() ?? []) : [];
+
+  const catalog = pnpm ? Object.keys(readYaml()) : [];
 
   return {
     ...config,
@@ -33,6 +45,10 @@ module.exports = function defineConfig(url, config = {}) {
       packageManager: {
         path: 'packageManager',
         strategy: 'name@version',
+      },
+      optional: {
+        path: 'optionalDependencies',
+        strategy: 'versionsByName',
       },
     },
     semverGroups: [
@@ -54,7 +70,7 @@ module.exports = function defineConfig(url, config = {}) {
         range: '~',
       },
       {
-        dependencyTypes: ['local', 'packageManager'],
+        dependencyTypes: ['local', 'optional', 'packageManager'],
         range: '',
       },
       {
@@ -62,11 +78,34 @@ module.exports = function defineConfig(url, config = {}) {
       },
     ],
     versionGroups: [
+      ws.length > 0
+        ? {
+            dependencies: ws.map((item) => item.package.name),
+            dependencyTypes: ['!local'],
+            label: 'Pin pnpm workspace',
+            pinVersion: 'workspace:~',
+          }
+        : undefined,
+      catalog.length > 0
+        ? {
+            dependencies: catalog,
+            dependencyTypes: [
+              'dev',
+              'prod',
+              'optional',
+              'peer',
+              'pnpmOverrides',
+            ],
+            label: 'Pin pnpm catalog',
+            pinVersion: 'catalog:',
+          }
+        : undefined,
+      ...(config.versionGroups || []),
       {
-        dependencies: ['@types/**'],
-        dependencyTypes: ['!peer'],
-        isBanned: true,
-        label: '@types packages should only be under peerDependencies',
+        dependencies: ['node'],
+        dependencyTypes: ['engines'],
+        label: 'Pin engines.node',
+        pinVersion: pkg.engines?.node || '^20.0.0',
       },
       {
         dependencies: [
@@ -78,21 +117,6 @@ module.exports = function defineConfig(url, config = {}) {
         dependencyTypes: ['!local'],
         label: 'Pin react',
         policy: 'sameRange',
-      },
-      ws.length > 0
-        ? {
-            dependencies: ws.map((item) => item.package.name),
-            dependencyTypes: ['!local'],
-            label: 'Pin pnpm workspace',
-            pinVersion: 'workspace:~',
-          }
-        : undefined,
-      ...(config.versionGroups || []),
-      {
-        dependencies: ['node'],
-        dependencyTypes: ['engines'],
-        label: 'Pin engines.node',
-        pinVersion: pkg.engines?.node || '^20.0.0',
       },
       {
         dependencyTypes: ['!local'],

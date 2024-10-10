@@ -24,7 +24,7 @@
     "url": "https://github.com/nice-move/nice-move/issues"
   },
   "peerDependencies": {
-    "typescript": "~5.5.4"
+    "typescript": "catalog:"
   },
   "engines": {
     "node": "^18.17.0 || ^20.5.0 || ^22.0.0"

@@ -2,3 +2,7 @@ packages:
   - packages/*
   - modules/*
   - tools/*
+
+catalog:
+  eslint: ^8.57.1
+  typescript: ~5.5.4

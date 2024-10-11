@@ -1,4 +1,4 @@
-import deepmerge from 'deepmerge';
+import deepmerge from 'deepmerge-ts';
 import { Json, Text } from 'fs-chain';
 import { osLocale } from 'os-locale';
 
@@ -38,7 +38,7 @@ export function Package(info) {
     .source(pkg)
     .onFail()
     .onDone((old = {}) =>
-      deepmerge.all([
+      deepmerge(
         {
           engines: {
             node: latest.lts,
@@ -53,7 +53,7 @@ export function Package(info) {
         },
         old,
         info,
-      ]),
+      ),
     )
     .onDone((final) => {
       if (final.private === true) {

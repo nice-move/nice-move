@@ -1,4 +1,4 @@
-import deepmerge from 'deepmerge';
+import deepmerge from 'deepmerge-ts';
 import { Json, Text } from 'fs-chain';
 
 import latest from '../lib/latest.mjs';
@@ -94,8 +94,8 @@ function action(isRoot, wanted = {}) {
           .output('tsconfig.json');
       }
 
-      return deepmerge.all(
-        [
+      return deepmerge(
+        ...[
           old,
           isRoot && (useLint || ava || commitlint || playwright || typescript)
             ? {

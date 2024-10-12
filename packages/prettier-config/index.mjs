@@ -164,7 +164,7 @@ export default {
     {
       files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
       options: {
-        importOrderParserPlugins: ['typescript'],
+        importOrderParserPlugins: ['typescript', 'importAttributes', 'jsx'],
       },
     },
     {

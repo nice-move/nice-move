@@ -38,7 +38,7 @@
     "best-shot": "^0.7.6",
     "eslint": "catalog:",
     "eslint-plugin-ava": "^14.0.0",
-    "garou": "^0.8.0",
+    "garou": "^0.8.1",
     "nodemon": "^3.1.7",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",

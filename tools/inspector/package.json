@@ -9,14 +9,14 @@
   "main": "index.mjs",
   "dependencies": {
     "@commitlint/load": "^19.5.0",
-    "fs-chain": "^8.2.3",
-    "lodash": "^4.17.21",
-    "sort-keys": "^5.1.0"
+    "fs-chain": "catalog:",
+    "lodash": "catalog:",
+    "sort-keys": "catalog:"
   },
   "peerDependencies": {
     "@types/eslint": "^8.56.10",
     "eslint": "catalog:",
-    "stylelint": "^16.9.0"
+    "stylelint": "^16.10.0"
   },
   "engines": {
     "node": "^18.17.0 || ^20.5.0 || ^22.0.0"

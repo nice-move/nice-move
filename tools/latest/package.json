@@ -6,7 +6,7 @@
     "pin-latest": "index.cjs"
   },
   "dependencies": {
-    "fs-chain": "^8.2.3"
+    "fs-chain": "catalog:"
   },
   "peerDependencies": {
     "@bring-it/npm": "^0.5.9",

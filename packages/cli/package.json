@@ -48,9 +48,9 @@
   "devDependencies": {
     "@commitlint/format": "^19.5.0",
     "@commitlint/lint": "^19.5.0",
-    "execa": "^9.4.0",
+    "execa": "catalog:",
     "lint-staged": "^15.2.10",
-    "settingz": "^0.2.0"
+    "settingz": "catalog:"
   },
   "engines": {
     "node": "^18.17.0 || ^20.5.0 || ^22.0.0"

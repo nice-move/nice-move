@@ -28,7 +28,7 @@
   "type": "commonjs",
   "dependencies": {
     "find-workspaces": "^0.3.1",
-    "yaml": "^2.5.1"
+    "yaml": "catalog:"
   },
   "peerDependencies": {
     "syncpack": "^13.0.0"

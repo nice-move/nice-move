@@ -38,7 +38,7 @@
     "best-shot": "^0.7.6",
     "eslint": "catalog:",
     "eslint-plugin-ava": "^14.0.0",
-    "garou": "^0.8.0",
+    "garou": "catalog:",
     "nodemon": "^3.1.7",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
@@ -64,7 +64,7 @@
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~",
-    "@types/node": "^20.16.11"
+    "@types/node": "^20.16.12"
   },
   "pnpm": {
     "patchedDependencies": {

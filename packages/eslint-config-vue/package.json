@@ -35,7 +35,7 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "eslint-plugin-vue": "^9.29.0",
+    "eslint-plugin-vue": "^9.29.1",
     "settingz": "catalog:"
   },
   "peerDependencies": {

@@ -1,4 +1,4 @@
-import deepmerge from 'deepmerge-ts';
+import { deepmerge } from 'deepmerge-ts';
 import { Json, Text } from 'fs-chain';
 import { osLocale } from 'os-locale';
 

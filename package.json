@@ -34,7 +34,7 @@
     "@bring-it/cli": "^0.9.9",
     "@bring-it/npm": "^0.5.9",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
-    "ava": "^6.1.3",
+    "ava": "^6.2.0",
     "best-shot": "^0.7.7",
     "eslint": "catalog:",
     "eslint-plugin-ava": "^14.0.0",
@@ -64,7 +64,7 @@
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~",
-    "@types/node": "^20.16.14"
+    "@types/node": "^20.17.2"
   },
   "pnpm": {
     "patchedDependencies": {

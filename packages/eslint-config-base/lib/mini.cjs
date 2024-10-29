@@ -102,6 +102,7 @@ function generate({
       files: excludedFiles,
       env: {
         browser: false,
+        es2023: false,
         es2022: false,
         es2021: false,
         es2020: false,
@@ -183,35 +184,6 @@ function generate({
           'WeakRef',
           'WeakSet',
         ],
-      },
-    },
-    {
-      files: '*.js',
-      rules: {
-        'n/file-extension-in-import': [
-          'error',
-          'always',
-          {
-            '.ts': 'never',
-          },
-        ],
-        'import/extensions': [
-          'error',
-          'always',
-          {
-            ignorePackages: true,
-            pattern: {
-              ts: 'never',
-            },
-          },
-        ],
-      },
-      settings: {
-        'import/resolver': {
-          node: {
-            extensions: ['.ts'],
-          },
-        },
       },
     },
   ].filter(Boolean);

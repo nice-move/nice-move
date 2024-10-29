@@ -45,26 +45,6 @@ module.exports = {
             varsIgnorePattern: '^_+$',
           },
         ],
-        'import/extensions': [
-          'error',
-          'always',
-          {
-            ignorePackages: true,
-            pattern: {
-              ts: 'never',
-              mts: 'never',
-              cts: 'never',
-              tsx: 'never',
-            },
-          },
-        ],
-      },
-      settings: {
-        'import/resolver': {
-          node: {
-            extensions: ['.ts', '.cts', '.mts', '.tsx'],
-          },
-        },
       },
     },
   ],

@@ -24,7 +24,7 @@ export default {
   'stylelint-config': '^0.10.8',
   'prettier-config': '^0.14.8',
   'syncpack-config': '^0.2.9',
-  tsconfig: '^0.2.5',
+  tsconfig: '^0.2.6',
   cli: '^0.11.16',
   lts: '^18.17.0 || ^20.5.0 || ^22.0.0',
 };

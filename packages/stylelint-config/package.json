@@ -29,7 +29,7 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "postcss": "^8.4.47",
+    "postcss": "^8.4.49",
     "postcss-html": "^1.7.0",
     "postcss-less": "^6.0.0",
     "postcss-markdown": "^1.2.0",
@@ -39,7 +39,7 @@
     "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
     "stylelint-no-unresolved-module": "^2.3.0",
     "stylelint-require-units": "^2.0.0",
-    "stylelint-scss": "^6.8.1",
+    "stylelint-scss": "^6.9.0",
     "stylelint-suitcss": "^5.0.0"
   },
   "peerDependencies": {

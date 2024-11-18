@@ -31,7 +31,7 @@
     "@babel/plugin-syntax-import-attributes": "^7.26.0",
     "@babel/plugin-syntax-jsx": "^7.25.9",
     "@babel/plugin-syntax-typescript": "^7.25.9",
-    "@ianvs/prettier-plugin-sort-imports": "npm:@nice-move/prettier-plugin-sort-imports@~4.4.1-rc0",
+    "@ianvs/prettier-plugin-sort-imports": "npm:@nice-move/prettier-plugin-sort-imports@4.4.1-rc0",
     "@nice-move/prettier-plugin-package-json": "^0.8.0",
     "@prettier/plugin-xml": "^3.4.1",
     "prettier-plugin-css-order": "^2.1.2",

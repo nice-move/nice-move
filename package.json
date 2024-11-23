@@ -42,7 +42,7 @@
     "nodemon": "^3.1.7",
     "postcss": "^8.4.49",
     "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.8",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "stylelint": "^16.10.0",
     "syncpack": "^13.0.0",
     "typescript": "catalog:"
@@ -64,7 +64,7 @@
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~",
-    "@types/node": "^20.17.6"
+    "@types/node": "^20.17.7"
   },
   "pnpm": {
     "patchedDependencies": {

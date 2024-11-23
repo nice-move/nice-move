@@ -9,9 +9,9 @@ catalog:
   eslint: ^8.57.1
   execa: ^9.5.1
   fs-chain: ^8.2.4
-  garou: ^0.8.1
+  garou: ^0.8.2
   lodash: ^4.17.21
   settingz: ^0.2.0
   sort-keys: ^5.1.0
   typescript: ~5.6.3
-  yaml: ^2.6.0
+  yaml: ^2.6.1

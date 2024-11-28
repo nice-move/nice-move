@@ -41,7 +41,7 @@
     "garou": "catalog:",
     "nodemon": "^3.1.7",
     "postcss": "^8.4.49",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.1",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "stylelint": "^16.10.0",
     "syncpack": "^13.0.0",
@@ -64,7 +64,7 @@
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~",
-    "@types/node": "^20.17.7"
+    "@types/node": "^22.10.1"
   },
   "pnpm": {
     "patchedDependencies": {
@@ -73,10 +73,10 @@
       "lint-staged": "patches/lint-staged.patch"
     }
   },
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.14.2",
   "engines": {
-    "node": "^18.17.0 || ^20.5.0 || ^22.0.0",
-    "pnpm": "^9.12.1"
+    "node": "^18.20.5 || ^20.18.1 || ^22.11.0",
+    "pnpm": "^9.14.2"
   },
   "eslintConfig": {
     "extends": "@nice-move/eslint-config-base"

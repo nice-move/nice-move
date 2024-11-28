@@ -14,11 +14,11 @@
     "sort-keys": "catalog:"
   },
   "peerDependencies": {
-    "@types/eslint": "^8.56.10",
+    "@types/eslint": "^8.56.12",
     "eslint": "catalog:",
     "stylelint": "^16.10.0"
   },
   "engines": {
-    "node": "^18.17.0 || ^20.5.0 || ^22.0.0"
+    "node": "^18.20.5 || ^20.18.1 || ^22.11.0"
   }
 }

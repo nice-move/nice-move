@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.11.30",
+  "version": "0.11.31",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -39,14 +39,14 @@
     "@babel/plugin-syntax-import-attributes": "^7.26.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
     "@nice-move/eslint-plugin-html": "0.0.0-beta.4",
-    "@typescript-eslint/eslint-plugin": "^8.15.0",
-    "@typescript-eslint/parser": "^8.15.0",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-n": "^17.14.0",
-    "eslint-plugin-promise": "^7.1.0",
+    "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-unicorn": "^56.0.1",
     "espree": "^9.6.1",
@@ -57,7 +57,7 @@
     "eslint": "catalog:"
   },
   "engines": {
-    "node": "^18.17.0 || ^20.5.0 || ^22.0.0"
+    "node": "^18.20.5 || ^20.18.1 || ^22.11.0"
   },
   "publishConfig": {
     "access": "public",

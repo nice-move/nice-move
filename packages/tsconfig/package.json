@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/tsconfig",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "A `typescript` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -27,7 +27,7 @@
     "typescript": "catalog:"
   },
   "engines": {
-    "node": "^18.17.0 || ^20.5.0 || ^22.0.0"
+    "node": "^18.20.5 || ^20.18.1 || ^22.11.0"
   },
   "publishConfig": {
     "access": "public",

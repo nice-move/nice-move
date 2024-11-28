@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-react",
-  "version": "0.2.12",
+  "version": "0.2.14",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -31,7 +31,7 @@
   "peerDependencies": {
     "eslint": "catalog:",
     "garou": "catalog:",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.1",
     "stylelint": "^16.10.0",
     "typescript": "catalog:"
   },
@@ -44,7 +44,7 @@
     }
   },
   "engines": {
-    "node": "^18.17.0 || ^20.5.0 || ^22.0.0"
+    "node": "^18.20.5 || ^20.18.1 || ^22.11.0"
   },
   "publishConfig": {
     "access": "public",

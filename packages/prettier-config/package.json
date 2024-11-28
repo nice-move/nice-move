@@ -39,10 +39,10 @@
     "settingz": "catalog:"
   },
   "peerDependencies": {
-    "prettier": "^3.3.3"
+    "prettier": "^3.4.1"
   },
   "engines": {
-    "node": "^18.17.0 || ^20.5.0 || ^22.0.0"
+    "node": "^18.20.5 || ^20.18.1 || ^22.11.0"
   },
   "publishConfig": {
     "access": "public",

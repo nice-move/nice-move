@@ -150,7 +150,7 @@ importers:
         specifier: ^0.6.9
         version: 0.6.9(prettier-plugin-css-order@2.1.2(postcss@8.4.49)(prettier@3.4.1))(prettier@3.4.1)
       stylelint:
-        specifier: ^16.10.0
+        specifier: ^16.11.0
         version: 16.11.0(typescript@5.7.2)
       syncpack:
         specifier: ^13.0.0
@@ -4123,7 +4123,7 @@ packages:
     hasBin: true
 
   tr46@0.0.3:
-    resolution: {integrity: sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=}
+    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
 
   trim-newlines@3.0.1:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}

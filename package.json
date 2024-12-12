@@ -35,7 +35,7 @@
     "@bring-it/npm": "^0.5.9",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "ava": "^6.2.0",
-    "best-shot": "^0.7.8",
+    "best-shot": "^0.7.9",
     "eslint": "catalog:",
     "eslint-plugin-ava": "^14.0.0",
     "garou": "catalog:",

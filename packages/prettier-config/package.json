@@ -39,7 +39,7 @@
     "settingz": "catalog:"
   },
   "peerDependencies": {
-    "prettier": "^3.4.1"
+    "prettier": "^3.4.2"
   },
   "engines": {
     "node": "^18.20.5 || ^20.18.1 || ^22.11.0"

@@ -75,27 +75,14 @@ module.exports = {
       },
     },
     {
-      files: [
-        '*.mjs',
-        configHas(
-          ({ 'import-attributes': has }) => has,
-          () => '*.js',
-        ),
-      ].filter(Boolean),
+      files: ['*.mjs', '*.js', '*.jsx'],
       parser: '@babel/eslint-parser',
       parserOptions: {
         requireConfigFile: false,
         babelOptions: {
           babelrc: false,
           configFile: false,
-          plugins: [
-            [
-              require.resolve('@babel/plugin-syntax-import-attributes'),
-              {
-                deprecatedAssertSyntax: true,
-              },
-            ],
-          ],
+          plugins: [require.resolve('@babel/plugin-syntax-import-attributes')],
         },
       },
     },

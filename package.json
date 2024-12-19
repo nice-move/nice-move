@@ -35,7 +35,7 @@
     "@bring-it/npm": "^0.5.9",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "ava": "^6.2.0",
-    "best-shot": "^0.7.10",
+    "best-shot": "^0.8.0",
     "eslint": "catalog:",
     "eslint-plugin-ava": "^14.0.0",
     "garou": "catalog:",
@@ -64,7 +64,7 @@
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~",
-    "@types/node": "^22.10.1"
+    "@types/node": "^22.10.2"
   },
   "pnpm": {
     "patchedDependencies": {
@@ -87,8 +87,6 @@
       "packages/lint/**",
       "packages/cli/**"
     ],
-    "import-attributes": true,
-    "import-groups": "nice-move-preset",
     "import-http": true,
     "internal-regex": "^@nice-move/inspector$"
   },

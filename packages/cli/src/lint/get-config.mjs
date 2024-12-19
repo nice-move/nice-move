@@ -14,17 +14,17 @@ export function getConfig({ garou, stylelint, eslint, prettier }) {
       garou && 'garou',
       prettier && `prettier -w -u${useColor}`,
       stylelint && `stylelint --fix${useColor}`,
-      eslint && `eslint --fix -f=pretty${useColor}`,
+      eslint && `eslint --fix ${useColor}`,
     ],
     '*.{ts,tsx,mts,cts}': [
       garou && 'garou',
       prettier && `prettier -w -u${useColor}`,
-      eslint && `eslint --fix -f=pretty${useColor}`,
+      eslint && `eslint --fix ${useColor}`,
     ],
     '*.{js,jsx,mjs,cjs,wxs,qs}': [
       garou && 'garou',
       prettier && `prettier -w -u${useColor}`,
-      eslint && `eslint --fix -f=pretty${useColor}`,
+      eslint && `eslint --fix ${useColor}`,
     ],
     '*.{c,sc,le,wx,q,tt,jx,ac}ss': [
       garou && 'garou',

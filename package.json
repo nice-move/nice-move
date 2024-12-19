@@ -73,7 +73,7 @@
       "lint-staged": "patches/lint-staged.patch"
     }
   },
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@9.14.4",
   "engines": {
     "node": "^18.20.5 || ^20.18.1 || ^22.11.0",
     "pnpm": "^9.14.2"

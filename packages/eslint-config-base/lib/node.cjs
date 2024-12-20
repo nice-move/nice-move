@@ -75,7 +75,7 @@ module.exports = {
       },
     },
     {
-      files: ['*.mjs', '*.js', '*.jsx'],
+      files: ['*.mjs', '*.js'],
       parser: '@babel/eslint-parser',
       parserOptions: {
         requireConfigFile: false,
@@ -83,6 +83,21 @@ module.exports = {
           babelrc: false,
           configFile: false,
           plugins: [require.resolve('@babel/plugin-syntax-import-attributes')],
+        },
+      },
+    },
+    {
+      files: ['*.jsx'],
+      parser: '@babel/eslint-parser',
+      parserOptions: {
+        requireConfigFile: false,
+        babelOptions: {
+          babelrc: false,
+          configFile: false,
+          plugins: [
+            require.resolve('@babel/plugin-syntax-jsx'),
+            require.resolve('@babel/plugin-syntax-import-attributes'),
+          ],
         },
       },
     },

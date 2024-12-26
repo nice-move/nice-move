@@ -3,7 +3,7 @@ export default {
   '@bring-it/npm': '^0.5.9',
   '@cospaia/prettier-plugin-clojure': '^0.0.2',
   ava: '^6.2.0',
-  'best-shot': '^0.8.0',
+  'best-shot': '^0.9.0',
   eslint: 'catalog:',
   'eslint-plugin-ava': '^14.0.0',
   garou: 'catalog:',
@@ -26,5 +26,5 @@ export default {
   'syncpack-config': '^0.2.9',
   tsconfig: '^0.2.7',
   cli: '^0.11.18',
-  lts: '^18.20.5 || ^20.18.1 || ^22.11.0',
+  lts: '^20.18.1 || ^22.11.0',
 };

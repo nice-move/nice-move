@@ -17,13 +17,12 @@
     "url": "https://github.com/nice-move/nice-move/issues"
   },
   "scripts": {
-    "inspect": "nodemon",
     "lint:staged": "nice-move lint staged",
     "lint:type": "tsc --noEmit",
     "lint:version": "syncpack lint",
     "prepare": "git config core.hooksPath .githooks",
-    "snapshot": "ava --fail-fast -w -u",
-    "test": "ava --fail-fast -c 1 --timeout 20s",
+    "snapshot": "vitest --config test/vitest.config.mjs -u",
+    "test": "vitest run --config test/vitest.config.mjs",
     "version:pin": "syncpack fix-mismatches"
   },
   "dependencies": {
@@ -34,18 +33,19 @@
     "@bring-it/cli": "^0.9.9",
     "@bring-it/npm": "^0.5.9",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
-    "ava": "^6.2.0",
+    "@vitest/ui": "^2.1.8",
     "best-shot": "^0.9.0",
     "eslint": "catalog:",
-    "eslint-plugin-ava": "^14.0.0",
     "garou": "catalog:",
     "nodemon": "^3.1.9",
     "postcss": "^8.4.49",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
+    "slash": "^5.1.0",
     "stylelint": "^16.12.0",
     "syncpack": "^13.0.0",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "vitest": "^2.1.8"
   },
   "peerDependencies": {
     "@nice-move/all-in-base": "workspace:~",
@@ -87,18 +87,7 @@
       "packages/lint/**",
       "packages/cli/**"
     ],
-    "import-http": true,
-    "internal-regex": "^@nice-move/inspector$"
-  },
-  "nodemonConfig": {
-    "delay": 5,
-    "exec": "inspect",
-    "ext": "js,cjs,mjs,json",
-    "watch": [
-      "./packages/**/*",
-      "./tools/**/*",
-      "package.json"
-    ]
+    "import-http": true
   },
   "prettier": "@nice-move/prettier-config",
   "stylelint": {

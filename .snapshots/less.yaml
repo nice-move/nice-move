@@ -1,0 +1,235 @@
+{
+  "customSyntax": "postcss-less",
+  "ignoreFiles": [
+    "/<:root>/**/*.min.*",
+    "/<:root>/**/dist/**",
+    "/<:root>/**/.(cache|svn|git)/**",
+    "/<:root>/**/.docusaurus/**",
+    "/<:root>/**/.obsidian/**",
+    "/<:root>/**/miniprogram_npm/**",
+  ],
+  "pluginFunctions": {
+    "matterialize/stylelint-require-units": [Function],
+    "plugin/declaration-block-no-ignored-properties": [Function],
+    "plugin/no-unresolved-module": [Function],
+    "suitcss/custom-property-no-outside-root": [Function],
+    "suitcss/root-no-standard-properties": [Function],
+    "suitcss/selector-root-no-composition": [Function],
+  },
+  "plugins": [
+    "/<:root>/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.12.0_typescript@5.7.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
+    "/<:root>/node_modules/.pnpm/stylelint-suitcss@5.0.0/node_modules/stylelint-suitcss/index.js",
+    "/<:root>/node_modules/.pnpm/stylelint-no-unresolved-module@2.3.0_stylelint@16.12.0_typescript@5.7.2_/node_modules/stylelint-no-unresolved-module/esm/index.js",
+    "/<:root>/node_modules/.pnpm/stylelint-require-units@2.0.0_stylelint@16.12.0_typescript@5.7.2_/node_modules/stylelint-require-units/src/stylelint-require-units.js",
+  ],
+  "reportInvalidScopeDisables": true,
+  "reportNeedlessDisables": true,
+  "rules": {
+    "annotation-no-unknown": [
+      true,
+    ],
+    "at-rule-no-unknown": [
+      true,
+    ],
+    "block-no-empty": [
+      true,
+    ],
+    "color-no-invalid-hex": [
+      true,
+    ],
+    "custom-property-no-missing-var-function": [
+      true,
+    ],
+    "declaration-block-no-duplicate-custom-properties": [
+      true,
+    ],
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": [
+          "consecutive-duplicates-with-different-syntaxes",
+        ],
+      },
+    ],
+    "declaration-block-no-redundant-longhand-properties": [
+      true,
+      {
+        "severity": "warning",
+      },
+    ],
+    "declaration-block-no-shorthand-property-overrides": [
+      true,
+    ],
+    "declaration-block-single-line-max-declarations": [
+      1,
+    ],
+    "font-family-name-quotes": [
+      "always-where-recommended",
+    ],
+    "font-family-no-duplicate-names": [
+      true,
+    ],
+    "font-family-no-missing-generic-family-keyword": [
+      true,
+      {
+        "ignoreFontFamilies": [
+          /\^icon-/,
+          /\^iconfont-/,
+          /\^icon-font-/,
+          /\^fonticon-/,
+          /\^font-icon-/,
+        ],
+      },
+    ],
+    "function-linear-gradient-no-nonstandard-direction": [
+      true,
+    ],
+    "function-url-quotes": [
+      "always",
+    ],
+    "import-notation": [
+      "string",
+    ],
+    "keyframe-block-no-duplicate-selectors": [
+      true,
+    ],
+    "keyframe-declaration-no-important": [
+      true,
+    ],
+    "keyframe-selector-notation": [
+      "percentage-unless-within-keyword-only-block",
+    ],
+    "lightness-notation": [
+      "percentage",
+    ],
+    "matterialize/stylelint-require-units": [
+      true,
+      {
+        "severity": "warning",
+      },
+    ],
+    "max-nesting-depth": [
+      5,
+      {
+        "severity": "warning",
+      },
+    ],
+    "media-feature-name-no-unknown": [
+      true,
+    ],
+    "media-feature-range-notation": [
+      "context",
+    ],
+    "media-query-no-invalid": [
+      true,
+    ],
+    "named-grid-areas-no-invalid": [
+      true,
+    ],
+    "no-descending-specificity": [
+      true,
+    ],
+    "no-duplicate-at-import-rules": [
+      true,
+    ],
+    "no-duplicate-selectors": [
+      true,
+      {
+        "severity": "warning",
+      },
+    ],
+    "no-empty-source": [
+      true,
+    ],
+    "no-invalid-double-slash-comments": [
+      true,
+    ],
+    "no-invalid-position-at-import-rule": [
+      true,
+    ],
+    "no-irregular-whitespace": [
+      true,
+    ],
+    "number-max-precision": [
+      4,
+      {
+        "severity": "warning",
+      },
+    ],
+    "plugin/declaration-block-no-ignored-properties": [
+      true,
+      {
+        "severity": "warning",
+      },
+    ],
+    "plugin/no-unresolved-module": [
+      {
+        "modules": [
+          "node_modules",
+        ],
+      },
+    ],
+    "property-no-unknown": [
+      true,
+    ],
+    "selector-anb-no-unmatchable": [
+      true,
+    ],
+    "selector-disallowed-list": [
+      [
+        "*",
+        /\^\(\?!page\)\[A-Za-z\]\+\$/,
+        /\[/:\\\\\]/,
+      ],
+    ],
+    "selector-max-compound-selectors": [
+      5,
+      {
+        "severity": "warning",
+      },
+    ],
+    "selector-max-universal": [
+      1,
+    ],
+    "selector-no-qualifying-type": [
+      true,
+    ],
+    "selector-not-notation": [
+      "complex",
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+    ],
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": [
+          "page",
+        ],
+      },
+    ],
+    "string-no-newline": [
+      true,
+    ],
+    "suitcss/root-no-standard-properties": [
+      true,
+    ],
+    "suitcss/selector-root-no-composition": [
+      true,
+    ],
+    "time-min-milliseconds": [
+      200,
+    ],
+    "unit-no-unknown": [
+      true,
+      {
+        "ignoreUnits": [
+          "rpx",
+        ],
+      },
+    ],
+  },
+}

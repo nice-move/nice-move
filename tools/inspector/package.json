@@ -3,13 +3,9 @@
   "name": "@nice-move/inspector",
   "version": "0.0.0",
   "license": "UNLICENSED",
-  "bin": {
-    "inspect": "bin.mjs"
-  },
   "main": "index.mjs",
   "dependencies": {
     "@commitlint/load": "^19.6.1",
-    "fs-chain": "catalog:",
     "lodash": "catalog:",
     "sort-keys": "catalog:"
   },

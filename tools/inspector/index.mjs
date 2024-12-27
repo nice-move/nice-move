@@ -57,7 +57,8 @@ export function eslintInspector(configName, filename) {
         data.parser = fixPath(data.parser);
       }
       if (data?.plugins && Array.isArray(data.plugins)) {
-        data.plugins = data.plugins.map((line) => fixPath(line)).sort();
+        data.plugins = data.plugins.map((line) => fixPath(line));
+        data.plugins.sort();
       }
       if (data?.languageOptions?.parserOptions?.babelOptions?.plugins) {
         data.languageOptions.parserOptions.babelOptions.plugins =

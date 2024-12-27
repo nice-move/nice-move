@@ -75,33 +75,6 @@ module.exports = {
       },
     },
     {
-      files: ['*.mjs', '*.js'],
-      parser: '@babel/eslint-parser',
-      parserOptions: {
-        requireConfigFile: false,
-        babelOptions: {
-          babelrc: false,
-          configFile: false,
-          plugins: [require.resolve('@babel/plugin-syntax-import-attributes')],
-        },
-      },
-    },
-    {
-      files: ['*.jsx'],
-      parser: '@babel/eslint-parser',
-      parserOptions: {
-        requireConfigFile: false,
-        babelOptions: {
-          babelrc: false,
-          configFile: false,
-          plugins: [
-            require.resolve('@babel/plugin-syntax-jsx'),
-            require.resolve('@babel/plugin-syntax-import-attributes'),
-          ],
-        },
-      },
-    },
-    {
       // for node.js
       files: ['*.mjs', '*.mts'],
       excludedFiles: '*.nb.*',

@@ -34,9 +34,6 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/eslint-parser": "^7.25.9",
-    "@babel/plugin-syntax-import-attributes": "^7.26.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
     "@nice-move/eslint-plugin-html": "^0.1.0",
     "@typescript-eslint/eslint-plugin": "^8.18.2",

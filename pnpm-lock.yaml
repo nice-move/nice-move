@@ -337,7 +337,7 @@ importers:
         specifier: ^4.4.1
         version: 4.4.1(eslint@8.57.1)
       '@nice-move/eslint-plugin-html':
-        specifier: 0.1.0
+        specifier: ^0.1.0
         version: 0.1.0(eslint@8.57.1)
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.18.2
@@ -350,7 +350,7 @@ importers:
         version: 8.57.1
       eslint-config-airbnb-base:
         specifier: ^15.0.0
-        version: 15.0.0(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1)
+        version: 15.0.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1))(eslint@8.57.1)
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@8.57.1)
@@ -565,10 +565,10 @@ importers:
         specifier: ^19.6.1
         version: 19.6.1(@types/node@22.10.2)(typescript@5.7.2)
       '@eslint/eslintrc':
-        specifier: 3.2.0
+        specifier: ^3.2.0
         version: 3.2.0
       '@eslint/js':
-        specifier: 10.0.0
+        specifier: ^10.0.0
         version: 10.0.0
       '@types/eslint':
         specifier: ^8.56.12
@@ -577,7 +577,7 @@ importers:
         specifier: 'catalog:'
         version: 8.57.1
       eslint9:
-        specifier: npm:eslint@9.17.0
+        specifier: npm:eslint@^9.17.0
         version: eslint@9.17.0(jiti@2.4.2)
       lodash:
         specifier: 'catalog:'
@@ -6173,7 +6173,7 @@ snapshots:
       eslint: 8.57.1
       semver: 7.6.3
 
-  eslint-config-airbnb-base@15.0.0(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1):
+  eslint-config-airbnb-base@15.0.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       confusing-browser-globals: 1.0.11
       eslint: 8.57.1
@@ -6185,7 +6185,7 @@ snapshots:
   eslint-config-airbnb@19.0.4(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint-plugin-jsx-a11y@6.10.2(eslint@8.57.1))(eslint-plugin-react-hooks@4.6.2(eslint@8.57.1))(eslint-plugin-react@7.37.3(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       eslint: 8.57.1
-      eslint-config-airbnb-base: 15.0.0(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1)
+      eslint-config-airbnb-base: 15.0.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1))(eslint@8.57.1)
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.18.2(eslint@8.57.1)(typescript@5.7.2))(eslint@8.57.1)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.57.1)
       eslint-plugin-react: 7.37.3(eslint@8.57.1)

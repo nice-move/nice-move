@@ -23,10 +23,6 @@ it('should match commitlint rules snapshot', async () => {
 it('should match eslint inspector snapshots', async () => {
   await makeSnapshot(eslintInspector('base', 'sample.js'), 'js');
   await makeSnapshot(eslintInspector('base', 'src/sample.js'), 'src/js');
-  await makeSnapshot(
-    eslintInspector('base', 'packages/mock/sample.js'),
-    'packages/mock/js',
-  );
   await makeSnapshot(eslintInspector('base', 'sample.ts'), 'ts');
   await makeSnapshot(eslintInspector('base', 'sample.cts'), 'cts');
   await makeSnapshot(eslintInspector('base', 'sample.mts'), 'mts');

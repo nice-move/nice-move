@@ -9,8 +9,10 @@ function pkgHas(checker, getResult) {
   const io = checker(pkg);
 
   if (io) {
-    return getResult(io, pkg);
+    return getResult(io, pkg) || [];
   }
+
+  return [];
 }
 
 // eslint-disable-next-line consistent-return

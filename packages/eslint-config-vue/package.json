@@ -35,11 +35,11 @@
   },
   "main": "index.cjs",
   "dependencies": {
+    "@nice-move/eslint-config-base": "workspace:~",
     "eslint-plugin-vue": "^9.32.0",
     "settingz": "catalog:"
   },
   "peerDependencies": {
-    "@nice-move/eslint-config-base": "workspace:~",
     "eslint": "catalog:"
   },
   "engines": {

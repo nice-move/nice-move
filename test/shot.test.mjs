@@ -55,47 +55,29 @@ it('should match commitlint rules snapshot', async () => {
 });
 
 it('should match eslint inspector snapshots', async () => {
-  await makeSnapshot(eslintInspector('@nice-move/base', 'sample.js'), 'js');
+  await makeSnapshot(eslintInspector('base', 'sample.js'), 'js');
+  await makeSnapshot(eslintInspector('base', 'src/sample.js'), 'src/js');
   await makeSnapshot(
-    eslintInspector('@nice-move/base', 'src/sample.js'),
-    'src/js',
-  );
-  await makeSnapshot(
-    eslintInspector('@nice-move/base', 'packages/mock/sample.js'),
+    eslintInspector('base', 'packages/mock/sample.js'),
     'packages/mock/js',
   );
-  await makeSnapshot(eslintInspector('@nice-move/base', 'sample.ts'), 'ts');
-  await makeSnapshot(eslintInspector('@nice-move/base', 'sample.cts'), 'cts');
-  await makeSnapshot(eslintInspector('@nice-move/base', 'sample.mts'), 'mts');
-  await makeSnapshot(eslintInspector('@nice-move/base', 'sample.html'), 'html');
-  await makeSnapshot(eslintInspector('@nice-move/base', 'sample.cjs'), 'cjs');
-  await makeSnapshot(eslintInspector('@nice-move/base', 'sample.mjs'), 'mjs');
-  await makeSnapshot(eslintInspector('@nice-move/base', 'sample.wxs'), 'wxs');
-  await makeSnapshot(eslintInspector('@nice-move/vue', 'sample.vue'), 'vue');
+  await makeSnapshot(eslintInspector('base', 'sample.ts'), 'ts');
+  await makeSnapshot(eslintInspector('base', 'sample.cts'), 'cts');
+  await makeSnapshot(eslintInspector('base', 'sample.mts'), 'mts');
+  await makeSnapshot(eslintInspector('base', 'sample.html'), 'html');
+  await makeSnapshot(eslintInspector('base', 'sample.cjs'), 'cjs');
+  await makeSnapshot(eslintInspector('base', 'sample.mjs'), 'mjs');
+  await makeSnapshot(eslintInspector('base', 'sample.wxs'), 'wxs');
+  await makeSnapshot(eslintInspector('vue', 'sample.vue'), 'vue');
+  await makeSnapshot(eslintInspector('vue', 'src/sample.vue'), 'src/vue');
+  await makeSnapshot(eslintInspector('react', 'sample.jsx'), 'jsx');
+  await makeSnapshot(eslintInspector('react', 'src/sample.jsx'), 'src/jsx');
+  await makeSnapshot(eslintInspector('base', 'sample.md'), 'md');
+  await makeSnapshot(eslintInspector('base', 'sample.md/o.js'), 'md/js');
+  await makeSnapshot(eslintInspector('base', 'test/sample.js'), 'test');
+  await makeSnapshot(eslintInspector('base', 'spec/sample.js'), 'spec');
   await makeSnapshot(
-    eslintInspector('@nice-move/vue', 'src/sample.vue'),
-    'src/vue',
-  );
-  await makeSnapshot(eslintInspector('@nice-move/react', 'sample.jsx'), 'jsx');
-  await makeSnapshot(
-    eslintInspector('@nice-move/react', 'src/sample.jsx'),
-    'src/jsx',
-  );
-  await makeSnapshot(eslintInspector('@nice-move/base', 'sample.md'), 'md');
-  await makeSnapshot(
-    eslintInspector('@nice-move/base', 'sample.md/o.js'),
-    'md/js',
-  );
-  await makeSnapshot(
-    eslintInspector('@nice-move/base', 'test/sample.js'),
-    'test',
-  );
-  await makeSnapshot(
-    eslintInspector('@nice-move/base', 'spec/sample.js'),
-    'spec',
-  );
-  await makeSnapshot(
-    eslintInspector('@nice-move/base', '.vitepress/config.mts'),
+    eslintInspector('base', '.vitepress/config.mts'),
     'config',
   );
 });

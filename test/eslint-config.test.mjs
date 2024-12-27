@@ -1,9 +1,9 @@
 import { eslintInspector } from '@nice-move/inspector';
 import { describe, expect, it } from 'vitest';
 
-const baseEngine = (filename) => eslintInspector('@nice-move/base', filename);
-const vueEngine = (filename) => eslintInspector('@nice-move/vue', filename);
-const reactEngine = (filename) => eslintInspector('@nice-move/react', filename);
+const baseEngine = (filename) => eslintInspector('base', filename);
+const vueEngine = (filename) => eslintInspector('vue', filename);
+const reactEngine = (filename) => eslintInspector('react', filename);
 
 describe('ESLint Config Tests', () => {
   it('Pure js', async () => {

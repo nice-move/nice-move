@@ -8,7 +8,7 @@ export function eslintInspector(configName, filename) {
     useEslintrc: false,
     baseConfig: {
       root: true,
-      extends: configName,
+      extends: '@nice-move/' + configName,
     },
   });
 

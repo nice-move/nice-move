@@ -111,6 +111,7 @@ module.exports = {
       {
         argsIgnorePattern: '^_+$',
         ignoreRestSiblings: true,
+        reportUsedIgnorePattern: true,
         varsIgnorePattern: '^_+$',
       },
     ],

@@ -70,6 +70,9 @@
       "@commitlint/rules": "patches/@commitlint__rules.patch",
       "conventional-changelog-angular@7.0.0": "patches/conventional-changelog-angular@7.0.0.patch",
       "lint-staged": "patches/lint-staged.patch"
+    },
+    "overrides": {
+      "globals": "^15.14.0"
     }
   },
   "packageManager": "pnpm@9.15.1",

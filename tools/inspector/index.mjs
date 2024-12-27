@@ -17,7 +17,12 @@ const require = createRequire(import.meta.url);
 const cwd = process.cwd();
 
 function fixPath(path) {
-  return slash(path.replace(slash(cwd), '/<:root>').replace(cwd, '/<:root>'));
+  return slash(
+    path
+      .replace(/^file:\/\/\//, '')
+      .replace(slash(cwd), '/<:root>')
+      .replace(cwd, '/<:root>'),
+  );
 }
 
 export function eslintInspector(configName, filename) {

@@ -1,8 +1,5 @@
 'use strict';
 
-const {
-  matches: { source },
-} = require('./utils.cjs');
 const { isReachable } = require('settingz');
 
 function webpack() {
@@ -10,7 +7,7 @@ function webpack() {
     isReachable('best-shot/package.json')
     ? [
         {
-          files: source,
+          files: ['src/**'],
           excludedFiles: ['*.html', '*.htm'],
           globals: {
             __webpack_public_path__: true,

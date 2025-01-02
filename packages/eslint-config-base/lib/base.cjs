@@ -1,9 +1,11 @@
 'use strict';
 
+const { getGlobals } = require('../lib/utils.cjs');
+
 module.exports = {
   env: {
     browser: true,
-    commonjs: false,
+    es2025: true,
     es2024: true,
     es2023: true,
     es2022: true,
@@ -14,7 +16,21 @@ module.exports = {
     es2017: true,
     es2016: true,
     node: false,
+    commonjs: false,
   },
+  globals: getGlobals({
+    browser: true,
+    es2025: true,
+    es2024: true,
+    es2023: true,
+    es2022: true,
+    es2021: true,
+    es2020: true,
+    es2019: true,
+    es2018: true,
+    es2017: true,
+    es2016: true,
+  }),
   extends: ['plugin:@eslint-community/eslint-comments/recommended'],
   overrides: [
     {

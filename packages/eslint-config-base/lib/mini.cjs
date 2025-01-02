@@ -4,6 +4,7 @@ const { relative } = require('node:path');
 const { reaching } = require('settingz');
 
 const cwd = process.cwd();
+const { getGlobals } = require('../lib/utils.cjs');
 
 function relativeToCWD(path) {
   return relative(cwd, path);
@@ -46,10 +47,8 @@ function generate({
     {
       files: matcher(paths, '**'),
       excludedFiles,
-      env: {
-        browser: false,
-      },
       globals: {
+        ...getGlobals({ es2025: true }),
         ...globals,
         wx: 'readonly',
         getApp: 'readonly',
@@ -84,10 +83,8 @@ function generate({
     cloudMatcher
       ? {
           files: [cloudMatcher],
-          env: {
-            browser: false,
-          },
           globals: {
+            ...getGlobals(),
             ...globals,
             require: 'readonly',
             exports: 'readonly',
@@ -100,28 +97,16 @@ function generate({
       : undefined,
     {
       files: excludedFiles,
-      env: {
-        browser: false,
-        es2023: false,
-        es2022: false,
-        es2021: false,
-        es2020: false,
-        es2019: false,
-        es2018: false,
-        es2017: false,
-        es2016: false,
-        es6: false,
-        node: false,
-      },
-      parserOptions: {
-        ecmaVersion: 5,
-        sourceType: 'script',
-      },
       globals: {
+        ...getGlobals(),
         require: 'readonly',
         module: 'readonly',
         getRegExp: 'readonly',
         getDate: 'readonly',
+      },
+      parserOptions: {
+        ecmaVersion: 5,
+        sourceType: 'script',
       },
       rules: {
         'import/no-commonjs': 0,

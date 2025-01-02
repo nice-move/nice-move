@@ -1,6 +1,6 @@
 'use strict';
 
-const { configHas } = require('./utils.cjs');
+const { configHas, getGlobals } = require('./utils.cjs');
 
 const commonjs =
   configHas(
@@ -24,25 +24,9 @@ module.exports = {
       },
     },
     {
-      files: '*.nb.*',
-      env: {
-        browser: false,
-        node: true,
-        commonjs: true,
-      },
-      rules: {
-        'no-unused-vars': 'warn',
-        'import/no-extraneous-dependencies': 'off',
-        'import/no-commonjs': 'off',
-        'import/no-nodejs-modules': 'off',
-        'unicorn/prefer-module': 'off',
-      },
-    },
-    {
       files: '*.{m,c}{t,j}s',
-      excludedFiles: '*.nb.*',
-      env: {
-        node: true,
+      globals: {
+        ...getGlobals({ es2025: true, node: true }),
       },
       rules: {
         'n/no-deprecated-api': 'error',
@@ -65,7 +49,6 @@ module.exports = {
         '*.{m,c}ts',
         '*.cjs',
         '*.md',
-        '*.nb.*',
         '*.ts',
         '**/*.md/*',
         ...commonjs,
@@ -77,12 +60,13 @@ module.exports = {
     {
       // for node.js
       files: ['*.mjs', '*.mts'],
-      excludedFiles: '*.nb.*',
-      env: {
-        browser: false,
-        commonjs: false,
+      parserOptions: {
+        ecmaFeatures: {
+          globalReturn: true,
+        },
       },
       globals: {
+        ...getGlobals(),
         __dirname: 'off',
         __filename: 'off',
         exports: 'off',
@@ -92,14 +76,13 @@ module.exports = {
     },
     {
       files: ['*.cjs', ...commonjs],
-      excludedFiles: '*.nb.*',
-      env: {
-        browser: false,
-        commonjs: true,
+      globals: {
+        ...getGlobals({ es2025: true, commonjs: true }),
       },
       parserOptions: {
         ecmaFeatures: {
           impliedStrict: false,
+          globalReturn: true,
         },
         sourceType: 'script',
       },
@@ -113,6 +96,11 @@ module.exports = {
       files: ['*.cjs', '*.cts'],
       rules: {
         'unicorn/prefer-module': 'off',
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          globalReturn: true,
+        },
       },
     },
   ],

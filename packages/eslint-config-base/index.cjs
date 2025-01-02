@@ -1,9 +1,5 @@
 'use strict';
 
-const {
-  configHas,
-  matches: { sourceAndPackages },
-} = require('./lib/utils.cjs');
 const { readJson, getPkg } = require('settingz');
 
 function ignoreList() {
@@ -41,17 +37,6 @@ module.exports = {
     'plugin:regexp/recommended',
     'prettier',
   ],
-  ...configHas(
-    ({ globals }) => globals,
-    (globals) => ({
-      overrides: [
-        {
-          files: sourceAndPackages,
-          globals,
-        },
-      ],
-    }),
-  ),
   ignorePatterns: [
     '!.*',
     '.cache/',

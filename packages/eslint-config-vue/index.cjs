@@ -26,9 +26,6 @@ module.exports = {
       parserOptions: {
         ecmaVersion: 'latest',
       },
-      globals: {
-        defineModel: 'readonly',
-      },
       rules: {
         'import/no-default-export': 0,
         'vue/attributes-order': 0,

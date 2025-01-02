@@ -2,6 +2,9 @@
 
 const { getGlobals } = require('./utils.cjs');
 
+const esmConfig = require('eslint-plugin-n/lib/configs/recommended-module');
+const cjsConfig = require('eslint-plugin-n/lib/configs/recommended-script');
+
 module.exports = {
   plugins: ['n'],
   rules: {
@@ -10,6 +13,14 @@ module.exports = {
     'n/no-path-concat': 'error',
   },
   overrides: [
+    {
+      files: ['**/*.{js,jsx,ts,tsx,mjs,mts,cts,vue}'],
+      rules: esmConfig.eslintrc.rules,
+    },
+    {
+      files: ['**/*.{cjs,qs,wxs}'],
+      rules: cjsConfig.eslintrc.rules,
+    },
     {
       files: '**/*',
       excludedFiles: ['*.cjs', '*.cts'],
@@ -21,6 +32,11 @@ module.exports = {
       files: '**/*.{m,c}{t,j}s',
       env: {
         node: true,
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          globalReturn: true,
+        },
       },
       globals: {
         ...getGlobals({ es2025: true, node: true }),
@@ -41,24 +57,14 @@ module.exports = {
       },
     },
     {
-      files: '*.*',
-      excludedFiles: ['*.{m,c}ts', '*.cjs', '*.md', '*.ts', '**/*.md/*'],
+      files: '**/*.*',
+      excludedFiles: ['*.cjs', '*.md', '**/*.md/*'],
       rules: {
         'n/file-extension-in-import': 'error',
       },
     },
     {
       files: ['**/*.cjs'],
-      globals: {
-        ...getGlobals({ es2025: true, commonjs: true, node: true }),
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          impliedStrict: false,
-          globalReturn: true,
-        },
-        sourceType: 'script',
-      },
       rules: {
         strict: ['error', 'global'],
         'n/no-exports-assign': 'error',
@@ -70,10 +76,11 @@ module.exports = {
       rules: {
         'unicorn/prefer-module': 'off',
       },
-      parserOptions: {
-        ecmaFeatures: {
-          globalReturn: true,
-        },
+    },
+    {
+      files: ['**/*.mjs', '**/*.mts'],
+      env: {
+        commonjs: false,
       },
     },
   ],

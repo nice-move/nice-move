@@ -100,6 +100,11 @@ function generate({
       parserOptions: {
         ecmaVersion: 5,
         sourceType: 'script',
+        ecmaFeatures: {
+          globalReturn: false,
+          impliedStrict: false,
+          jsx: false,
+        },
       },
       globals: {
         ...getGlobals(),

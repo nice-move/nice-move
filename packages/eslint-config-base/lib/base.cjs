@@ -10,6 +10,15 @@ module.exports = {
     commonjs: false,
   },
   globals: getGlobals({ es2025: true }),
+  parserOptions: {
+    ecmaFeatures: {
+      globalReturn: false,
+      impliedStrict: true,
+      jsx: false,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
   extends: ['plugin:@eslint-community/eslint-comments/recommended'],
   overrides: [
     {
@@ -30,16 +39,25 @@ module.exports = {
         },
       },
     },
-  ],
-  parserOptions: {
-    ecmaFeatures: {
-      globalReturn: false,
-      impliedStrict: true,
-      jsx: false,
+    {
+      files: ['**/*.cjs'],
+      parserOptions: {
+        sourceType: 'script',
+        ecmaFeatures: {
+          impliedStrict: false,
+        },
+      },
     },
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
+    {
+      files: ['**/*.cts'],
+      parserOptions: {
+        sourceType: 'module',
+        ecmaFeatures: {
+          impliedStrict: true,
+        },
+      },
+    },
+  ],
   rules: {
     'lines-around-directive': 0,
     'array-callback-return': [

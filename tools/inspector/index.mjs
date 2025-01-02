@@ -60,11 +60,27 @@ export function eslintInspector(configName, filename) {
         data.plugins = data.plugins.map((line) => fixPath(line));
         data.plugins.sort();
       }
-      if (data?.languageOptions?.parserOptions?.babelOptions?.plugins) {
-        data.languageOptions.parserOptions.babelOptions.plugins =
-          data.languageOptions.parserOptions.babelOptions.plugins.map((line) =>
-            fixPath(line),
-          );
+
+      if (data?.languageOptions) {
+        if (data.languageOptions.globals) {
+          for (const [key, value] of Object.entries(
+            data.languageOptions.globals,
+          )) {
+            data.languageOptions.globals[key] =
+              value === true
+                ? 'writable'
+                : value === false
+                  ? 'readonly'
+                  : value;
+          }
+        }
+
+        if (data.languageOptions.parserOptions?.babelOptions?.plugins) {
+          data.languageOptions.parserOptions.babelOptions.plugins =
+            data.languageOptions.parserOptions.babelOptions.plugins.map(
+              (line) => fixPath(line),
+            );
+        }
       }
 
       if (data?.settings?.['import/resolver']) {

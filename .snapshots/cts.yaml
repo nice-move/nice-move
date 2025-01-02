@@ -1914,11 +1914,11 @@
       "createProgram": [Function],
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.18.2",
+        "version": "8.19.0",
       },
       "parse": [Function],
       "parseForESLint": [Function],
-      "version": "8.18.2",
+      "version": "8.19.0",
       "withoutProjectParserOptions": [Function],
     },
     "parserOptions": {

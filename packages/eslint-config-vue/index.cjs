@@ -1,5 +1,7 @@
 'use strict';
 
+const { getGlobals } = require('../eslint-config-base/lib/utils.cjs');
+
 const { getPkg, reaching } = require('settingz');
 
 function getVersion() {
@@ -16,15 +18,13 @@ module.exports = {
   extends: ['@nice-move/eslint-config-base'],
   overrides: [
     {
-      files: '*.vue',
-      extends: [
-        version[0] === '3'
-          ? 'plugin:vue/vue3-recommended'
-          : 'plugin:vue/recommended',
-        'prettier',
-      ],
+      files: '**/*.vue',
+      extends: ['plugin:vue/vue3-recommended', 'prettier'],
       parserOptions: {
         ecmaVersion: 'latest',
+      },
+      globals: {
+        ...getGlobals({ es2025: true, browser: true }),
       },
       rules: {
         'import/no-default-export': 0,

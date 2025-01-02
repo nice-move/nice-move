@@ -4,37 +4,26 @@ const { getGlobals } = require('../lib/utils.cjs');
 
 module.exports = {
   env: {
-    browser: true,
     es2025: true,
-    es2024: true,
-    es2023: true,
-    es2022: true,
-    es2021: true,
-    es2020: true,
-    es2019: true,
-    es2018: true,
-    es2017: true,
-    es2016: true,
+    browser: false,
     node: false,
     commonjs: false,
   },
-  globals: getGlobals({
-    browser: true,
-    es2025: true,
-    es2024: true,
-    es2023: true,
-    es2022: true,
-    es2021: true,
-    es2020: true,
-    es2019: true,
-    es2018: true,
-    es2017: true,
-    es2016: true,
-  }),
+  globals: getGlobals({ es2025: true }),
   extends: ['plugin:@eslint-community/eslint-comments/recommended'],
   overrides: [
     {
-      files: ['*.jsx', '*.tsx'],
+      files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
+      env: {
+        es2025: true,
+        browser: true,
+        node: false,
+        commonjs: false,
+      },
+      globals: getGlobals({ es2025: true, browser: true }),
+    },
+    {
+      files: ['**/*.jsx', '**/*.tsx'],
       parserOptions: {
         ecmaFeatures: {
           jsx: true,

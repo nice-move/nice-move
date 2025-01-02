@@ -1,12 +1,6 @@
 'use strict';
 
-const { configHas, getGlobals } = require('./utils.cjs');
-
-const commonjs =
-  configHas(
-    ({ commonjs: globs = [] }) => globs,
-    (globs) => globs,
-  ) || [];
+const { getGlobals } = require('./utils.cjs');
 
 module.exports = {
   plugins: ['n'],
@@ -18,13 +12,16 @@ module.exports = {
   overrides: [
     {
       files: '**/*',
-      excludedFiles: ['*.cjs', '*.cts', ...commonjs],
+      excludedFiles: ['*.cjs', '*.cts'],
       rules: {
         'import/no-commonjs': 'error',
       },
     },
     {
-      files: '*.{m,c}{t,j}s',
+      files: '**/*.{m,c}{t,j}s',
+      env: {
+        node: true,
+      },
       globals: {
         ...getGlobals({ es2025: true, node: true }),
       },
@@ -45,39 +42,15 @@ module.exports = {
     },
     {
       files: '*.*',
-      excludedFiles: [
-        '*.{m,c}ts',
-        '*.cjs',
-        '*.md',
-        '*.ts',
-        '**/*.md/*',
-        ...commonjs,
-      ],
+      excludedFiles: ['*.{m,c}ts', '*.cjs', '*.md', '*.ts', '**/*.md/*'],
       rules: {
         'n/file-extension-in-import': 'error',
       },
     },
     {
-      // for node.js
-      files: ['*.mjs', '*.mts'],
-      parserOptions: {
-        ecmaFeatures: {
-          globalReturn: true,
-        },
-      },
+      files: ['**/*.cjs'],
       globals: {
-        ...getGlobals(),
-        __dirname: 'off',
-        __filename: 'off',
-        exports: 'off',
-        module: 'off',
-        require: 'off',
-      },
-    },
-    {
-      files: ['*.cjs', ...commonjs],
-      globals: {
-        ...getGlobals({ es2025: true, commonjs: true }),
+        ...getGlobals({ es2025: true, commonjs: true, node: true }),
       },
       parserOptions: {
         ecmaFeatures: {
@@ -93,7 +66,7 @@ module.exports = {
       },
     },
     {
-      files: ['*.cjs', '*.cts'],
+      files: ['**/*.cjs', '**/*.cts'],
       rules: {
         'unicorn/prefer-module': 'off',
       },

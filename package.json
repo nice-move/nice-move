@@ -67,6 +67,8 @@
   },
   "pnpm": {
     "overrides": {
+      "eslint": "catalog:",
+      "eslint-plugin-react-hooks": "^5.1.0",
       "globals": "^15.14.0"
     },
     "patchedDependencies": {

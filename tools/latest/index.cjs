@@ -27,7 +27,6 @@ new JsonToText()
       'tsconfig',
       'cli',
     ),
-    // eslint-disable-next-line import/no-extraneous-dependencies
     lts: require('@nice-move/init/package.json').engines.node,
   }))
   .onDone((data) => `export default ${JSON.stringify(data)}`)

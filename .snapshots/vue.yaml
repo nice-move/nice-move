@@ -2321,12 +2321,12 @@
   },
   "plugins": [
     "@",
-    "import",
     "unicorn",
     "promise",
+    "import",
     "@eslint-community/eslint-comments",
-    "n",
     "regexp",
+    "n",
     "vue",
   ],
   "processor": {
@@ -2515,9 +2515,6 @@
       },
     ],
     "import/no-webpack-loader-syntax": [
-      "error",
-    ],
-    "n/file-extension-in-import": [
       "error",
     ],
     "n/hashbang": [

@@ -2367,9 +2367,9 @@
         "jsx": false,
         "objectLiteralDuplicateProperties": false,
       },
-      "sourceType": "script",
+      "sourceType": "commonjs",
     },
-    "sourceType": "script",
+    "sourceType": "commonjs",
   },
   "linterOptions": {
     "noInlineConfig": false,
@@ -2377,12 +2377,12 @@
   },
   "plugins": [
     "@",
-    "import",
     "unicorn",
     "promise",
+    "import",
     "@eslint-community/eslint-comments",
-    "n",
     "regexp",
+    "n",
   ],
   "rules": {
     "@eslint-community/eslint-comments/no-aggregating-enable": [
@@ -2558,6 +2558,9 @@
       },
     ],
     "import/no-webpack-loader-syntax": [
+      "error",
+    ],
+    "n/file-extension-in-import": [
       "error",
     ],
     "n/hashbang": [

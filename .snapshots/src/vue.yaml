@@ -1683,8 +1683,6 @@
       "XSLTProcessor": "readonly",
       "__dirname": "off",
       "__filename": "off",
-      "__webpack_base_uri__": "writable",
-      "__webpack_public_path__": "writable",
       "addEventListener": "readonly",
       "ai": "readonly",
       "alert": "readonly",
@@ -2323,12 +2321,12 @@
   },
   "plugins": [
     "@",
-    "import",
     "unicorn",
     "promise",
+    "import",
     "@eslint-community/eslint-comments",
-    "n",
     "regexp",
+    "n",
     "vue",
   ],
   "processor": {
@@ -2517,9 +2515,6 @@
       },
     ],
     "import/no-webpack-loader-syntax": [
-      "error",
-    ],
-    "n/file-extension-in-import": [
       "error",
     ],
     "n/hashbang": [

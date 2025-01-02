@@ -806,7 +806,7 @@
       "Boolean": "readonly",
       "BroadcastChannel": "readonly",
       "BrowserCaptureMediaStreamTrack": "readonly",
-      "Buffer": "off",
+      "Buffer": "readonly",
       "ByteLengthQueuingStrategy": "readonly",
       "CDATASection": "readonly",
       "CSS": "readonly",
@@ -1692,7 +1692,7 @@
       "caches": "readonly",
       "cancelAnimationFrame": "readonly",
       "cancelIdleCallback": "readonly",
-      "clearImmediate": "off",
+      "clearImmediate": "readonly",
       "clearInterval": "readonly",
       "clearTimeout": "readonly",
       "clientInformation": "readonly",
@@ -1731,7 +1731,7 @@
       "getComputedStyle": "readonly",
       "getScreenDetails": "readonly",
       "getSelection": "readonly",
-      "global": "off",
+      "global": "readonly",
       "globalThis": "readonly",
       "history": "readonly",
       "indexedDB": "readonly",
@@ -1893,7 +1893,7 @@
       "personalbar": "readonly",
       "postMessage": "readonly",
       "print": "readonly",
-      "process": "off",
+      "process": "readonly",
       "prompt": "readonly",
       "queryLocalFonts": "readonly",
       "queueMicrotask": "readonly",
@@ -1920,7 +1920,7 @@
       "scrollbars": "readonly",
       "self": "readonly",
       "sessionStorage": "readonly",
-      "setImmediate": "off",
+      "setImmediate": "readonly",
       "setInterval": "readonly",
       "setTimeout": "readonly",
       "sharedStorage": "readonly",
@@ -1942,16 +1942,11 @@
       "window": "readonly",
     },
     "parser": {
-      "clearCaches": [Function],
-      "createProgram": [Function],
       "meta": {
         "name": "typescript-eslint/parser",
         "version": "8.19.0",
       },
-      "parse": [Function],
       "parseForESLint": [Function],
-      "version": "8.19.0",
-      "withoutProjectParserOptions": [Function],
     },
     "parserOptions": {
       "ecmaFeatures": {
@@ -1970,13 +1965,13 @@
   },
   "plugins": [
     "@",
-    "import",
     "unicorn",
     "promise",
+    "import",
     "@eslint-community/eslint-comments",
+    "regexp",
     "n",
     "@typescript-eslint",
-    "regexp",
   ],
   "rules": {
     "@eslint-community/eslint-comments/no-aggregating-enable": [
@@ -1991,6 +1986,12 @@
     "@eslint-community/eslint-comments/no-unused-enable": [
       "warn",
     ],
+    "@typescript-eslint/ban-ts-comment": [
+      "error",
+      {
+        "minimumDescriptionLength": 10,
+      },
+    ],
     "@typescript-eslint/no-array-constructor": [
       "error",
     ],
@@ -1998,6 +1999,9 @@
       "error",
     ],
     "@typescript-eslint/no-dynamic-delete": [
+      "error",
+    ],
+    "@typescript-eslint/no-empty-object-type": [
       "error",
     ],
     "@typescript-eslint/no-explicit-any": [
@@ -2027,6 +2031,9 @@
     "@typescript-eslint/no-non-null-assertion": [
       "error",
     ],
+    "@typescript-eslint/no-require-imports": [
+      "error",
+    ],
     "@typescript-eslint/no-this-alias": [
       "error",
     ],
@@ -2036,22 +2043,38 @@
     "@typescript-eslint/no-unsafe-declaration-merging": [
       "error",
     ],
+    "@typescript-eslint/no-unsafe-function-type": [
+      "error",
+    ],
+    "@typescript-eslint/no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": false,
+        "allowTaggedTemplates": false,
+        "allowTernary": false,
+      },
+    ],
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
         "argsIgnorePattern": "^_+$",
         "ignoreRestSiblings": true,
-        "reportUsedIgnorePattern": true,
         "varsIgnorePattern": "^_+$",
       },
     ],
     "@typescript-eslint/no-useless-constructor": [
       "error",
     ],
+    "@typescript-eslint/no-wrapper-object-types": [
+      "error",
+    ],
     "@typescript-eslint/prefer-as-const": [
       "error",
     ],
     "@typescript-eslint/prefer-literal-enum-member": [
+      "error",
+    ],
+    "@typescript-eslint/prefer-namespace-keyword": [
       "error",
     ],
     "@typescript-eslint/triple-slash-reference": [
@@ -2083,9 +2106,6 @@
       {
         "treatUndefinedAsUnspecified": false,
       },
-    ],
-    "constructor-super": [
-      "error",
     ],
     "default-case": [
       "error",
@@ -2120,12 +2140,6 @@
       "warn",
       "always",
       {},
-    ],
-    "getter-return": [
-      "error",
-      {
-        "allowImplicit": true,
-      },
     ],
     "guard-for-in": [
       "error",
@@ -2305,9 +2319,6 @@
     "no-alert": [
       "warn",
     ],
-    "no-array-constructor": [
-      "error",
-    ],
     "no-async-promise-executor": [
       "error",
     ],
@@ -2327,18 +2338,12 @@
     "no-case-declarations": [
       "error",
     ],
-    "no-class-assign": [
-      "error",
-    ],
     "no-compare-neg-zero": [
       "error",
     ],
     "no-cond-assign": [
       "error",
       "always",
-    ],
-    "no-const-assign": [
-      "error",
     ],
     "no-constant-binary-expression": [
       "error",
@@ -2361,16 +2366,7 @@
     "no-delete-var": [
       "error",
     ],
-    "no-dupe-args": [
-      "error",
-    ],
-    "no-dupe-class-members": [
-      "error",
-    ],
     "no-dupe-else-if": [
-      "error",
-    ],
-    "no-dupe-keys": [
       "error",
     ],
     "no-duplicate-case": [
@@ -2439,9 +2435,6 @@
         "reportUnusedFallthroughComment": false,
       },
     ],
-    "no-func-assign": [
-      "error",
-    ],
     "no-global-assign": [
       "error",
       {
@@ -2459,9 +2452,6 @@
       },
     ],
     "no-implied-eval": [
-      "error",
-    ],
-    "no-import-assign": [
       "error",
     ],
     "no-inner-declarations": [
@@ -2524,25 +2514,16 @@
     "no-new-func": [
       "error",
     ],
-    "no-new-native-nonconstructor": [
-      "error",
-    ],
     "no-new-object": [
       "error",
     ],
     "no-new-require": [
       "error",
     ],
-    "no-new-symbol": [
-      "error",
-    ],
     "no-new-wrappers": [
       "error",
     ],
     "no-nonoctal-decimal-escape": [
-      "error",
-    ],
-    "no-obj-calls": [
       "error",
     ],
     "no-octal": [
@@ -2572,12 +2553,6 @@
     ],
     "no-prototype-builtins": [
       "error",
-    ],
-    "no-redeclare": [
-      "error",
-      {
-        "builtinGlobals": true,
-      },
     ],
     "no-regex-spaces": [
       "error",
@@ -2747,9 +2722,6 @@
         "allowInParentheses": true,
       },
     ],
-    "no-setter-return": [
-      "error",
-    ],
     "no-shadow": [
       "error",
       {
@@ -2765,17 +2737,8 @@
     "no-sparse-arrays": [
       "error",
     ],
-    "no-this-before-super": [
-      "error",
-    ],
     "no-throw-literal": [
       "error",
-    ],
-    "no-undef": [
-      "error",
-      {
-        "typeof": false,
-      },
     ],
     "no-unneeded-ternary": [
       "error",
@@ -2783,17 +2746,8 @@
         "defaultAssignment": false,
       },
     ],
-    "no-unreachable": [
-      "error",
-    ],
     "no-unsafe-finally": [
       "error",
-    ],
-    "no-unsafe-negation": [
-      "error",
-      {
-        "enforceForOrderingRelations": false,
-      },
     ],
     "no-unsafe-optional-chaining": [
       "error",
@@ -2801,26 +2755,8 @@
         "disallowArithmeticOperators": true,
       },
     ],
-    "no-unused-expressions": [
-      "error",
-      {
-        "allowShortCircuit": false,
-        "allowTaggedTemplates": true,
-        "allowTernary": false,
-        "enforceForJSX": false,
-      },
-    ],
     "no-unused-labels": [
       "error",
-    ],
-    "no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_+$",
-        "ignoreRestSiblings": true,
-        "reportUsedIgnorePattern": true,
-        "varsIgnorePattern": "^_+$",
-      },
     ],
     "no-use-before-define": [
       "error",
@@ -2841,9 +2777,6 @@
       },
     ],
     "no-useless-concat": [
-      "error",
-    ],
-    "no-useless-constructor": [
       "error",
     ],
     "no-useless-escape": [

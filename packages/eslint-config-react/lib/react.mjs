@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export default {
   rules: {
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/click-events-have-key-events': 0,

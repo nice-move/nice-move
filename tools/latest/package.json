@@ -10,12 +10,12 @@
   },
   "peerDependencies": {
     "@bring-it/npm": "^0.5.9",
-    "@bring-it/sftp": "^0.3.7",
-    "@playwright/test": "~1.49.0",
-    "@types/react": "~18.2.79",
+    "@bring-it/sftp": "^0.3.8",
+    "@playwright/test": "~1.49.1",
+    "@types/react": "~18.3.18",
     "prettier-plugin-tailwindcss": "^0.6.9",
-    "react": "~18.2.0",
-    "react-dom": "~18.2.0",
+    "react": "~18.3.1",
+    "react-dom": "~18.3.1",
     "tailwindcss": "^3.4.17",
     "vue": "~3.5.13"
   },
@@ -49,6 +49,6 @@
     }
   },
   "engines": {
-    "node": "^20.18.1 || ^22.11.0"
+    "node": "^22.11.0"
   }
 }

@@ -1,12 +1,9 @@
 'use strict';
 
-const { configHas } = require('./utils.cjs');
+const { getGlobals } = require('./utils.cjs');
 
-const commonjs =
-  configHas(
-    ({ commonjs: globs = [] }) => globs,
-    (globs) => globs,
-  ) || [];
+const esmConfig = require('eslint-plugin-n/lib/configs/recommended-module');
+const cjsConfig = require('eslint-plugin-n/lib/configs/recommended-script');
 
 module.exports = {
   plugins: ['n'],
@@ -17,32 +14,32 @@ module.exports = {
   },
   overrides: [
     {
+      files: ['**/*.{js,jsx,ts,tsx,mjs,mts,cts,vue}'],
+      rules: esmConfig.eslintrc.rules,
+    },
+    {
+      files: ['**/*.{cjs,qs,wxs}'],
+      rules: cjsConfig.eslintrc.rules,
+    },
+    {
       files: '**/*',
-      excludedFiles: ['*.cjs', '*.cts', ...commonjs],
+      excludedFiles: ['*.cjs', '*.cts'],
       rules: {
         'import/no-commonjs': 'error',
       },
     },
     {
-      files: '*.nb.*',
-      env: {
-        browser: false,
-        node: true,
-        commonjs: true,
-      },
-      rules: {
-        'no-unused-vars': 'warn',
-        'import/no-extraneous-dependencies': 'off',
-        'import/no-commonjs': 'off',
-        'import/no-nodejs-modules': 'off',
-        'unicorn/prefer-module': 'off',
-      },
-    },
-    {
-      files: '*.{m,c}{t,j}s',
-      excludedFiles: '*.nb.*',
+      files: '**/*.{m,c}{t,j}s',
       env: {
         node: true,
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          globalReturn: true,
+        },
+      },
+      globals: {
+        ...getGlobals({ es2025: true, node: true }),
       },
       rules: {
         'n/no-deprecated-api': 'error',
@@ -60,76 +57,14 @@ module.exports = {
       },
     },
     {
-      files: '*.*',
-      excludedFiles: [
-        '*.{m,c}ts',
-        '*.cjs',
-        '*.md',
-        '*.nb.*',
-        '*.ts',
-        '**/*.md/*',
-        ...commonjs,
-      ],
+      files: '**/*.*',
+      excludedFiles: ['*.cjs', '*.wxs', '*.qs', '*.md', '**/*.md/*'],
       rules: {
         'n/file-extension-in-import': 'error',
       },
     },
     {
-      files: ['*.mjs', '*.js'],
-      parser: '@babel/eslint-parser',
-      parserOptions: {
-        requireConfigFile: false,
-        babelOptions: {
-          babelrc: false,
-          configFile: false,
-          plugins: [require.resolve('@babel/plugin-syntax-import-attributes')],
-        },
-      },
-    },
-    {
-      files: ['*.jsx'],
-      parser: '@babel/eslint-parser',
-      parserOptions: {
-        requireConfigFile: false,
-        babelOptions: {
-          babelrc: false,
-          configFile: false,
-          plugins: [
-            require.resolve('@babel/plugin-syntax-jsx'),
-            require.resolve('@babel/plugin-syntax-import-attributes'),
-          ],
-        },
-      },
-    },
-    {
-      // for node.js
-      files: ['*.mjs', '*.mts'],
-      excludedFiles: '*.nb.*',
-      env: {
-        browser: false,
-        commonjs: false,
-      },
-      globals: {
-        __dirname: 'off',
-        __filename: 'off',
-        exports: 'off',
-        module: 'off',
-        require: 'off',
-      },
-    },
-    {
-      files: ['*.cjs', ...commonjs],
-      excludedFiles: '*.nb.*',
-      env: {
-        browser: false,
-        commonjs: true,
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          impliedStrict: false,
-        },
-        sourceType: 'script',
-      },
+      files: ['**/*.cjs'],
       rules: {
         strict: ['error', 'global'],
         'n/no-exports-assign': 'error',
@@ -137,9 +72,15 @@ module.exports = {
       },
     },
     {
-      files: ['*.cjs', '*.cts'],
+      files: ['**/*.cjs', '**/*.cts'],
       rules: {
         'unicorn/prefer-module': 'off',
+      },
+    },
+    {
+      files: ['**/*.mjs', '**/*.mts'],
+      env: {
+        commonjs: false,
       },
     },
   ],

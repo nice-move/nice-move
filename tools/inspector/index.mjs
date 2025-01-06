@@ -17,7 +17,12 @@ const require = createRequire(import.meta.url);
 const cwd = process.cwd();
 
 function fixPath(path) {
-  return slash(path.replace(slash(cwd), '/<:root>').replace(cwd, '/<:root>'));
+  return slash(
+    path
+      .replace(/^file:\/\/\//, '')
+      .replace(slash(cwd), '/<:root>')
+      .replace(cwd, '/<:root>'),
+  );
 }
 
 export function eslintInspector(configName, filename) {
@@ -53,12 +58,29 @@ export function eslintInspector(configName, filename) {
       }
       if (data?.plugins && Array.isArray(data.plugins)) {
         data.plugins = data.plugins.map((line) => fixPath(line));
+        data.plugins.sort();
       }
-      if (data?.languageOptions?.parserOptions?.babelOptions?.plugins) {
-        data.languageOptions.parserOptions.babelOptions.plugins =
-          data.languageOptions.parserOptions.babelOptions.plugins.map((line) =>
-            fixPath(line),
-          );
+
+      if (data?.languageOptions) {
+        if (data.languageOptions.globals) {
+          for (const [key, value] of Object.entries(
+            data.languageOptions.globals,
+          )) {
+            data.languageOptions.globals[key] =
+              value === true
+                ? 'writable'
+                : value === false
+                  ? 'readonly'
+                  : value;
+          }
+        }
+
+        if (data.languageOptions.parserOptions?.babelOptions?.plugins) {
+          data.languageOptions.parserOptions.babelOptions.plugins =
+            data.languageOptions.parserOptions.babelOptions.plugins.map(
+              (line) => fixPath(line),
+            );
+        }
       }
 
       if (data?.settings?.['import/resolver']) {
@@ -79,7 +101,7 @@ export function eslintInspector(configName, filename) {
         );
       }
 
-      return { plugins: Object.keys(plugins), ...data };
+      return { plugins: Object.keys(plugins).sort(), ...data };
     })
     .catch((error) => {
       console.error(error);

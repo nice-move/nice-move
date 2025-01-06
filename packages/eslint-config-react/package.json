@@ -36,6 +36,7 @@
   },
   "main": "index.cjs",
   "dependencies": {
+    "@nice-move/eslint-config-base": "workspace:~",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -44,11 +45,10 @@
     "settingz": "catalog:"
   },
   "peerDependencies": {
-    "@nice-move/eslint-config-base": "workspace:~",
     "eslint": "catalog:"
   },
   "engines": {
-    "node": "^20.18.1 || ^22.11.0"
+    "node": "^22.11.0"
   },
   "publishConfig": {
     "access": "public",

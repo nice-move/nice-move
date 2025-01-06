@@ -14,11 +14,6 @@ module.exports = {
       files: '*.md',
       plugins: ['markdown'],
       processor: 'markdown/markdown',
-      env: {
-        browser: false,
-        commonjs: false,
-        node: false,
-      },
     },
     {
       files: '**/*.md/*',

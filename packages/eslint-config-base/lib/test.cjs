@@ -16,7 +16,6 @@ module.exports = {
       plugins: rules ? ['ava'] : undefined,
       rules: {
         ...rules,
-        'unicorn/no-empty-file': 0,
         'ava/no-ignored-test-files': 0,
       },
     },

@@ -34,13 +34,10 @@
   },
   "main": "index.cjs",
   "dependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/eslint-parser": "^7.25.9",
-    "@babel/plugin-syntax-import-attributes": "^7.26.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
-    "@nice-move/eslint-plugin-html": "0.1.0",
-    "@typescript-eslint/eslint-plugin": "^8.18.2",
-    "@typescript-eslint/parser": "^8.18.2",
+    "@nice-move/eslint-plugin-html": "^0.1.1",
+    "@typescript-eslint/eslint-plugin": "^8.19.0",
+    "@typescript-eslint/parser": "^8.19.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
@@ -57,7 +54,7 @@
     "eslint": "catalog:"
   },
   "engines": {
-    "node": "^20.18.1 || ^22.11.0"
+    "node": "^22.11.0"
   },
   "publishConfig": {
     "access": "public",

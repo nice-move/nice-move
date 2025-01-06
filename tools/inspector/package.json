@@ -6,8 +6,8 @@
   "main": "index.mjs",
   "dependencies": {
     "@commitlint/load": "^19.6.1",
-    "@eslint/eslintrc": "3.2.0",
-    "@eslint/js": "10.0.0",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^10.0.0",
     "slash": "^5.1.0",
     "lodash": "catalog:",
     "sort-keys": "catalog:"
@@ -15,10 +15,10 @@
   "peerDependencies": {
     "@types/eslint": "^8.56.12",
     "eslint": "catalog:",
-    "eslint9": "npm:eslint@9.17.0",
+    "eslint9": "npm:eslint@^9.17.0",
     "stylelint": "^16.12.0"
   },
   "engines": {
-    "node": "^20.18.1 || ^22.11.0"
+    "node": "^22.11.0"
   }
 }

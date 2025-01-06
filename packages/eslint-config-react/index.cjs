@@ -1,22 +1,15 @@
 'use strict';
 
 const { extends: roots } = require('@nice-move/eslint-config-base');
-const { getPkg } = require('settingz');
-
-function getConfig() {
-  const { 'jsx-runtime': runtime = true } = getPkg('nice-move');
-
-  return runtime;
-}
 
 module.exports = {
   extends: ['@nice-move/eslint-config-base'],
   overrides: [
     {
-      files: ['*.tsx', '*.jsx'],
+      files: ['**/*.tsx', '**/*.jsx'],
       extends: [
         'airbnb',
-        ...(getConfig() ? ['plugin:react/jsx-runtime'] : []),
+        'plugin:react/jsx-runtime',
         ...roots.filter(
           (item) => !['eslint:recommended', 'airbnb-base'].includes(item),
         ),
@@ -24,11 +17,18 @@ module.exports = {
       ],
     },
     {
-      files: ['*.ts', '*.js', '*.mts', '*.mjs', '*.tsx', '*.jsx'],
+      files: [
+        '**/*.ts',
+        '**/*.js',
+        '**/*.mts',
+        '**/*.mjs',
+        '**/*.tsx',
+        '**/*.jsx',
+      ],
       extends: ['airbnb/hooks'],
     },
     {
-      files: '**/*.md/*',
+      files: ['**/*.md/*'],
       rules: {
         'react/react-in-jsx-scope': 'off',
       },

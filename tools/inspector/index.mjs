@@ -1,16 +1,10 @@
 import { createRequire } from 'node:module';
 
-import { FlatCompat } from '@eslint/eslintrc';
-import js from '@eslint/js';
 import { ESLint } from 'eslint9';
 import pickBy from 'lodash/pickBy.js';
 import slash from 'slash';
 import sortKeys from 'sort-keys';
 import stylelint from 'stylelint';
-
-const compat = new FlatCompat({
-  recommendedConfig: js.configs.recommended,
-});
 
 const require = createRequire(import.meta.url);
 
@@ -26,11 +20,10 @@ function fixPath(path) {
 }
 
 export function eslintInspector(configName, filename) {
-  const data = require('@nice-move/eslint-config-' + configName);
-
   const engine = new ESLint({
-    overrideConfigFile: true,
-    overrideConfig: compat.config(data),
+    overrideConfigFile: require.resolve(
+      `@nice-move/eslint-config-${configName}`,
+    ),
   });
 
   return engine
@@ -74,8 +67,7 @@ export function eslintInspector(configName, filename) {
                   : value;
           }
         }
-
-        if (data.languageOptions.parserOptions?.babelOptions?.plugins) {
+        if (data?.languageOptions.parserOptions?.babelOptions?.plugins) {
           data.languageOptions.parserOptions.babelOptions.plugins =
             data.languageOptions.parserOptions.babelOptions.plugins.map(
               (line) => fixPath(line),

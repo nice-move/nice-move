@@ -1942,16 +1942,11 @@
       "window": "off",
     },
     "parser": {
-      "clearCaches": [Function],
-      "createProgram": [Function],
       "meta": {
         "name": "typescript-eslint/parser",
         "version": "8.19.0",
       },
-      "parse": [Function],
       "parseForESLint": [Function],
-      "version": "8.19.0",
-      "withoutProjectParserOptions": [Function],
     },
     "parserOptions": {
       "ecmaFeatures": {
@@ -2057,7 +2052,6 @@
         "allowShortCircuit": false,
         "allowTaggedTemplates": false,
         "allowTernary": false,
-        "enforceForJSX": false,
       },
     ],
     "@typescript-eslint/no-unused-vars": [

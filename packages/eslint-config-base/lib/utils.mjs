@@ -1,10 +1,7 @@
-'use strict';
+import globals from 'globals';
+import { getPkg } from 'settingz';
 
-const { getPkg } = require('settingz');
-const globals = require('globals');
-
-// eslint-disable-next-line consistent-return
-exports.pkgHas = function pkgHas(checker, getResult) {
+export function pkgHas(checker, getResult) {
   const pkg = getPkg();
 
   const io = checker(pkg);
@@ -14,10 +11,10 @@ exports.pkgHas = function pkgHas(checker, getResult) {
   }
 
   return [];
-};
+}
 
 // eslint-disable-next-line consistent-return
-exports.configHas = function configHas(checker, getResult) {
+export function configHas(checker, getResult) {
   const pkg = getPkg('nice-move');
 
   const io = checker(pkg);
@@ -25,9 +22,9 @@ exports.configHas = function configHas(checker, getResult) {
   if (io) {
     return getResult(io, pkg);
   }
-};
+}
 
-exports.getGlobals = function getGlobals(env = {}) {
+export function getGlobals(env = {}) {
   return Object.fromEntries([
     ...Object.keys({
       ...globals.browser,
@@ -43,4 +40,4 @@ exports.getGlobals = function getGlobals(env = {}) {
         : Object.keys(globals[key] || {}).map((k) => [k, 'off']),
     ),
   ]);
-};
+}

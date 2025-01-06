@@ -2413,7 +2413,7 @@
       "error",
     ],
     "class-methods-use-this": [
-      "warn",
+      "error",
       {
         "enforceForClassFields": true,
         "exceptMethods": [
@@ -3339,6 +3339,22 @@
       "error",
       {
         "typeof": false,
+      },
+    ],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "__REDUX_DEVTOOLS_EXTENSION_COMPOSE__",
+        ],
+        "allowAfterSuper": false,
+        "allowAfterThis": false,
+        "allowAfterThisConstructor": false,
+        "allowFunctionParams": true,
+        "allowInArrayDestructuring": true,
+        "allowInObjectDestructuring": true,
+        "enforceInClassFields": false,
+        "enforceInMethodNames": true,
       },
     ],
     "no-unneeded-ternary": [
@@ -4316,7 +4332,13 @@
       "/<:root>/packages/eslint-config-base/lib/node-next-resolver.cjs": {
         "importHttp": true,
       },
-      "node": false,
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".json",
+        ],
+      },
     },
     "propWrapperFunctions": [
       "forbidExtraProps",

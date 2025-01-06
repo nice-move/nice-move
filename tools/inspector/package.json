@@ -13,12 +13,12 @@
     "sort-keys": "catalog:"
   },
   "peerDependencies": {
-    "@types/eslint": "^8.56.12",
+    "@types/eslint": "^9.6.1",
     "eslint": "catalog:",
     "eslint9": "npm:eslint@^9.17.0",
     "stylelint": "^16.12.0"
   },
   "engines": {
-    "node": "^22.11.0"
+    "node": "^20.18.1 || ^22.11.0"
   }
 }

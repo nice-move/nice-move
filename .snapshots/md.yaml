@@ -748,16 +748,16 @@
       "AbsoluteOrientationSensor": "off",
       "AbstractRange": "off",
       "Accelerometer": "off",
-      "AggregateError": "readonly",
+      "AggregateError": "off",
       "AnalyserNode": "off",
       "Animation": "off",
       "AnimationEffect": "off",
       "AnimationEvent": "off",
       "AnimationPlaybackEvent": "off",
       "AnimationTimeline": "off",
-      "Array": "readonly",
-      "ArrayBuffer": "readonly",
-      "Atomics": "readonly",
+      "Array": "off",
+      "ArrayBuffer": "off",
+      "Atomics": "off",
       "Attr": "off",
       "Audio": "off",
       "AudioBuffer": "off",
@@ -789,9 +789,9 @@
       "BaseAudioContext": "off",
       "BatteryManager": "off",
       "BeforeUnloadEvent": "off",
-      "BigInt": "readonly",
-      "BigInt64Array": "readonly",
-      "BigUint64Array": "readonly",
+      "BigInt": "off",
+      "BigInt64Array": "off",
+      "BigUint64Array": "off",
       "BiquadFilterNode": "off",
       "Blob": "off",
       "BlobEvent": "off",
@@ -803,7 +803,7 @@
       "BluetoothRemoteGATTServer": "off",
       "BluetoothRemoteGATTService": "off",
       "BluetoothUUID": "off",
-      "Boolean": "readonly",
+      "Boolean": "off",
       "BroadcastChannel": "off",
       "BrowserCaptureMediaStreamTrack": "off",
       "Buffer": "off",
@@ -925,8 +925,8 @@
       "DataTransfer": "off",
       "DataTransferItem": "off",
       "DataTransferItemList": "off",
-      "DataView": "readonly",
-      "Date": "readonly",
+      "DataView": "off",
+      "Date": "off",
       "DecompressionStream": "off",
       "DelayNode": "off",
       "DelegatedInkTrailPresenter": "off",
@@ -947,9 +947,9 @@
       "ElementInternals": "off",
       "EncodedAudioChunk": "off",
       "EncodedVideoChunk": "off",
-      "Error": "readonly",
+      "Error": "off",
       "ErrorEvent": "off",
-      "EvalError": "readonly",
+      "EvalError": "off",
       "Event": "off",
       "EventCounts": "off",
       "EventSource": "off",
@@ -973,10 +973,10 @@
       "FileSystemFileHandle": "off",
       "FileSystemHandle": "off",
       "FileSystemWritableFileStream": "off",
-      "FinalizationRegistry": "readonly",
+      "FinalizationRegistry": "off",
       "Float16Array": "off",
-      "Float32Array": "readonly",
-      "Float64Array": "readonly",
+      "Float32Array": "off",
+      "Float64Array": "off",
       "FocusEvent": "off",
       "FontData": "off",
       "FontFace": "off",
@@ -985,7 +985,7 @@
       "FormData": "off",
       "FormDataEvent": "off",
       "FragmentDirective": "off",
-      "Function": "readonly",
+      "Function": "off",
       "GPU": "off",
       "GPUAdapter": "off",
       "GPUAdapterInfo": "off",
@@ -1151,19 +1151,19 @@
       "ImageDecoder": "off",
       "ImageTrack": "off",
       "ImageTrackList": "off",
-      "Infinity": "readonly",
+      "Infinity": "off",
       "Ink": "off",
       "InputDeviceCapabilities": "off",
       "InputDeviceInfo": "off",
       "InputEvent": "off",
-      "Int16Array": "readonly",
-      "Int32Array": "readonly",
-      "Int8Array": "readonly",
+      "Int16Array": "off",
+      "Int32Array": "off",
+      "Int8Array": "off",
       "IntersectionObserver": "off",
       "IntersectionObserverEntry": "off",
-      "Intl": "readonly",
-      "Iterator": "readonly",
-      "JSON": "readonly",
+      "Intl": "off",
+      "Iterator": "off",
+      "JSON": "off",
       "Keyboard": "off",
       "KeyboardEvent": "off",
       "KeyboardLayoutMap": "off",
@@ -1185,8 +1185,8 @@
       "MIDIOutput": "off",
       "MIDIOutputMap": "off",
       "MIDIPort": "off",
-      "Map": "readonly",
-      "Math": "readonly",
+      "Map": "off",
+      "Math": "off",
       "MathMLElement": "off",
       "MediaCapabilities": "off",
       "MediaCapabilitiesInfo": "off",
@@ -1232,7 +1232,7 @@
       "MutationEvent": "off",
       "MutationObserver": "off",
       "MutationRecord": "off",
-      "NaN": "readonly",
+      "NaN": "off",
       "NamedNodeMap": "off",
       "NavigateEvent": "off",
       "Navigation": "off",
@@ -1255,9 +1255,9 @@
       "NotRestoredReasons": "off",
       "Notification": "off",
       "NotifyPaintEvent": "off",
-      "Number": "readonly",
+      "Number": "off",
       "OTPCredential": "off",
-      "Object": "readonly",
+      "Object": "off",
       "OfflineAudioCompletionEvent": "off",
       "OfflineAudioContext": "off",
       "OffscreenCanvas": "off",
@@ -1319,10 +1319,10 @@
       "ProcessingInstruction": "off",
       "Profiler": "off",
       "ProgressEvent": "off",
-      "Promise": "readonly",
+      "Promise": "off",
       "PromiseRejectionEvent": "off",
       "ProtectedAudience": "off",
-      "Proxy": "readonly",
+      "Proxy": "off",
       "PublicKeyCredential": "off",
       "PushManager": "off",
       "PushSubscription": "off",
@@ -1352,16 +1352,16 @@
       "RTCTrackEvent": "off",
       "RadioNodeList": "off",
       "Range": "off",
-      "RangeError": "readonly",
+      "RangeError": "off",
       "ReadableByteStreamController": "off",
       "ReadableStream": "off",
       "ReadableStreamBYOBReader": "off",
       "ReadableStreamBYOBRequest": "off",
       "ReadableStreamDefaultController": "off",
       "ReadableStreamDefaultReader": "off",
-      "ReferenceError": "readonly",
-      "Reflect": "readonly",
-      "RegExp": "readonly",
+      "ReferenceError": "off",
+      "Reflect": "off",
+      "RegExp": "off",
       "RelativeOrientationSensor": "off",
       "RemotePlayback": "off",
       "ReportingObserver": "off",
@@ -1484,9 +1484,9 @@
       "ServiceWorker": "off",
       "ServiceWorkerContainer": "off",
       "ServiceWorkerRegistration": "off",
-      "Set": "readonly",
+      "Set": "off",
       "ShadowRoot": "off",
-      "SharedArrayBuffer": "readonly",
+      "SharedArrayBuffer": "off",
       "SharedStorage": "off",
       "SharedStorageWorklet": "off",
       "SharedWorker": "off",
@@ -1505,16 +1505,16 @@
       "StorageBucketManager": "off",
       "StorageEvent": "off",
       "StorageManager": "off",
-      "String": "readonly",
+      "String": "off",
       "StylePropertyMap": "off",
       "StylePropertyMapReadOnly": "off",
       "StyleSheet": "off",
       "StyleSheetList": "off",
       "SubmitEvent": "off",
       "SubtleCrypto": "off",
-      "Symbol": "readonly",
+      "Symbol": "off",
       "SyncManager": "off",
-      "SyntaxError": "readonly",
+      "SyntaxError": "off",
       "TEMPORARY": "off",
       "TaskAttributionTiming": "off",
       "TaskController": "off",
@@ -1550,9 +1550,9 @@
       "TrustedScriptURL": "off",
       "TrustedTypePolicy": "off",
       "TrustedTypePolicyFactory": "off",
-      "TypeError": "readonly",
+      "TypeError": "off",
       "UIEvent": "off",
-      "URIError": "readonly",
+      "URIError": "off",
       "URL": "off",
       "URLPattern": "off",
       "URLSearchParams": "off",
@@ -1569,10 +1569,10 @@
       "USBIsochronousOutTransferPacket": "off",
       "USBIsochronousOutTransferResult": "off",
       "USBOutTransferResult": "off",
-      "Uint16Array": "readonly",
-      "Uint32Array": "readonly",
-      "Uint8Array": "readonly",
-      "Uint8ClampedArray": "readonly",
+      "Uint16Array": "off",
+      "Uint32Array": "off",
+      "Uint8Array": "off",
+      "Uint8ClampedArray": "off",
       "UserActivation": "off",
       "VTTCue": "off",
       "VTTRegion": "off",
@@ -1593,9 +1593,9 @@
       "WakeLock": "off",
       "WakeLockSentinel": "off",
       "WaveShaperNode": "off",
-      "WeakMap": "readonly",
-      "WeakRef": "readonly",
-      "WeakSet": "readonly",
+      "WeakMap": "off",
+      "WeakRef": "off",
+      "WeakSet": "off",
       "WebAssembly": "off",
       "WebGL2RenderingContext": "off",
       "WebGLActiveInfo": "off",
@@ -1708,16 +1708,16 @@
       "currentFrame": "off",
       "currentTime": "off",
       "customElements": "off",
-      "decodeURI": "readonly",
-      "decodeURIComponent": "readonly",
+      "decodeURI": "off",
+      "decodeURIComponent": "off",
       "devicePixelRatio": "off",
       "dispatchEvent": "off",
       "document": "off",
       "documentPictureInPicture": "off",
-      "encodeURI": "readonly",
-      "encodeURIComponent": "readonly",
-      "escape": "readonly",
-      "eval": "readonly",
+      "encodeURI": "off",
+      "encodeURIComponent": "off",
+      "escape": "off",
+      "eval": "off",
       "event": "off",
       "exports": "off",
       "external": "off",
@@ -1732,13 +1732,13 @@
       "getScreenDetails": "off",
       "getSelection": "off",
       "global": "off",
-      "globalThis": "readonly",
+      "globalThis": "off",
       "history": "off",
       "indexedDB": "off",
       "innerHeight": "off",
       "innerWidth": "off",
-      "isFinite": "readonly",
-      "isNaN": "readonly",
+      "isFinite": "off",
+      "isNaN": "off",
       "isSecureContext": "off",
       "launchQueue": "off",
       "length": "off",
@@ -1887,8 +1887,8 @@
       "pageXOffset": "off",
       "pageYOffset": "off",
       "parent": "off",
-      "parseFloat": "readonly",
-      "parseInt": "readonly",
+      "parseFloat": "off",
+      "parseInt": "off",
       "performance": "off",
       "personalbar": "off",
       "postMessage": "off",
@@ -1936,8 +1936,8 @@
       "toolbar": "off",
       "top": "off",
       "trustedTypes": "off",
-      "undefined": "readonly",
-      "unescape": "readonly",
+      "undefined": "off",
+      "unescape": "off",
       "visualViewport": "off",
       "window": "off",
     },
@@ -2363,8 +2363,6 @@
       "ecmaFeatures": {
         "generators": false,
         "globalReturn": false,
-        "impliedStrict": true,
-        "jsx": false,
         "objectLiteralDuplicateProperties": false,
       },
       "sourceType": "module",
@@ -2377,12 +2375,9 @@
   },
   "plugins": [
     "@",
-    "@eslint-community/eslint-comments",
     "import",
     "markdown",
-    "n",
     "promise",
-    "regexp",
     "unicorn",
   ],
   "processor": {
@@ -2395,38 +2390,43 @@
     "supportsAutofix": true,
   },
   "rules": {
-    "@eslint-community/eslint-comments/no-aggregating-enable": [
-      "error",
-    ],
-    "@eslint-community/eslint-comments/no-duplicate-disable": [
-      "error",
-    ],
-    "@eslint-community/eslint-comments/no-unlimited-disable": [
-      "error",
-    ],
-    "@eslint-community/eslint-comments/no-unused-enable": [
-      "warn",
-    ],
     "array-callback-return": [
       "error",
       {
         "allowImplicit": true,
         "allowVoid": false,
-        "checkForEach": true,
+        "checkForEach": false,
+      },
+    ],
+    "arrow-body-style": [
+      "error",
+      "as-needed",
+      {
+        "requireReturnForObjectLiteral": false,
       },
     ],
     "block-scoped-var": [
       "error",
     ],
+    "camelcase": [
+      "error",
+      {
+        "allow": [],
+        "ignoreDestructuring": false,
+        "ignoreGlobals": false,
+        "ignoreImports": false,
+        "properties": "never",
+      },
+    ],
     "class-methods-use-this": [
-      "warn",
+      "error",
       {
         "enforceForClassFields": true,
         "exceptMethods": [],
       },
     ],
     "consistent-return": [
-      "warn",
+      "error",
       {
         "treatUndefinedAsUnspecified": false,
       },
@@ -2474,6 +2474,13 @@
         "allowImplicit": true,
       },
     ],
+    "global-require": [
+      "error",
+    ],
+    "grouped-accessor-pairs": [
+      "error",
+      "anyOrder",
+    ],
     "guard-for-in": [
       "error",
     ],
@@ -2485,9 +2492,11 @@
     ],
     "import/extensions": [
       "error",
-      "always",
+      "ignorePackages",
       {
-        "ignorePackages": true,
+        "js": "never",
+        "jsx": "never",
+        "mjs": "never",
       },
     ],
     "import/first": [
@@ -2499,40 +2508,58 @@
     "import/namespace": [
       "error",
     ],
+    "import/newline-after-import": [
+      "error",
+    ],
     "import/no-absolute-path": [
       "error",
     ],
     "import/no-amd": [
       "error",
     ],
-    "import/no-commonjs": [
+    "import/no-cycle": [
       "error",
-    ],
-    "import/no-default-export": [
-      "warn",
+      {
+        "allowUnsafeDynamicCyclicDependency": false,
+        "disableScc": false,
+        "ignoreExternal": false,
+        "maxDepth": "∞",
+      },
     ],
     "import/no-duplicates": [
       "warn",
     ],
-    "import/no-empty-named-blocks": [
+    "import/no-dynamic-require": [
       "error",
     ],
     "import/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": [
-          "**/*.{test,spec}.{m,c,}{t,j}s",
-          "{test,tests,try}.{m,c,}{t,j}s",
-          "{test,tests,config}/**/*.{m,c,}{t,j}s",
-          "**/.*rc.{m,c,}{t,j}s",
-          "**/*.config.{m,c,}{t,j}s",
-          "**/config.{m,c,}{t,j}s",
-          ".*/config.{m,c,}{t,j}s",
-          "**/.best-shot/**",
-          "packages/init/**",
-          "packages/lint/**",
-          "packages/cli/**",
+          "test/**",
+          "tests/**",
+          "spec/**",
+          "**/__tests__/**",
+          "**/__mocks__/**",
+          "test.{js,jsx}",
+          "test-*.{js,jsx}",
+          "**/*{.,_}{test,spec}.{js,jsx}",
+          "**/jest.config.js",
+          "**/jest.setup.js",
+          "**/vue.config.js",
+          "**/webpack.config.js",
+          "**/webpack.config.*.js",
+          "**/rollup.config.js",
+          "**/rollup.config.*.js",
+          "**/gulpfile.js",
+          "**/gulpfile.*.js",
+          "**/Gruntfile{,.js}",
+          "**/protractor.conf.js",
+          "**/protractor.conf.*.js",
+          "**/karma.conf.js",
+          "**/.eslintrc.js",
         ],
+        "optionalDependencies": false,
       },
     ],
     "import/no-import-module-exports": [
@@ -2553,7 +2580,7 @@
     "import/no-named-default": [
       "error",
     ],
-    "import/no-nodejs-modules": [
+    "import/no-relative-packages": [
       "error",
     ],
     "import/no-self-import": [
@@ -2576,14 +2603,41 @@
     "import/no-webpack-loader-syntax": [
       "error",
     ],
-    "n/hashbang": [
+    "import/order": [
+      "error",
+      {
+        "distinctGroup": true,
+        "groups": [
+          [
+            "builtin",
+            "external",
+            "internal",
+          ],
+        ],
+        "named": false,
+        "warnOnUnassignedImports": false,
+      },
+    ],
+    "import/prefer-default-export": [
       "error",
     ],
-    "n/no-path-concat": [
+    "lines-around-directive": [
       "error",
+      {
+        "after": "always",
+        "before": "always",
+      },
     ],
-    "n/no-process-env": [
+    "lines-between-class-members": [
       "error",
+      "always",
+      {
+        "exceptAfterSingleLine": false,
+      },
+    ],
+    "max-classes-per-file": [
+      "error",
+      1,
     ],
     "new-cap": [
       "error",
@@ -2606,6 +2660,9 @@
       "error",
     ],
     "no-async-promise-executor": [
+      "error",
+    ],
+    "no-await-in-loop": [
       "error",
     ],
     "no-bitwise": [
@@ -2634,6 +2691,10 @@
       "error",
       "always",
     ],
+    "no-console": [
+      "warn",
+      {},
+    ],
     "no-const-assign": [
       "error",
     ],
@@ -2645,6 +2706,9 @@
       {
         "checkLoops": "allExceptWhileTrue",
       },
+    ],
+    "no-constructor-return": [
+      "error",
     ],
     "no-continue": [
       "error",
@@ -2682,8 +2746,11 @@
     "no-empty": [
       "error",
       {
-        "allowEmptyCatch": true,
+        "allowEmptyCatch": false,
       },
+    ],
+    "no-empty-character-class": [
+      "error",
     ],
     "no-empty-function": [
       "error",
@@ -2745,16 +2812,6 @@
         "exceptions": [],
       },
     ],
-    "no-implicit-coercion": [
-      "warn",
-      {
-        "allow": [],
-        "boolean": true,
-        "disallowTemplateShorthand": true,
-        "number": true,
-        "string": true,
-      },
-    ],
     "no-implied-eval": [
       "error",
     ],
@@ -2767,6 +2824,10 @@
       {
         "blockScopedFunctions": "allow",
       },
+    ],
+    "no-invalid-regexp": [
+      "error",
+      {},
     ],
     "no-irregular-whitespace": [
       "error",
@@ -2849,14 +2910,32 @@
       "error",
     ],
     "no-param-reassign": [
-      "warn",
+      "error",
       {
-        "ignorePropertyModificationsFor": [],
+        "ignorePropertyModificationsFor": [
+          "acc",
+          "accumulator",
+          "e",
+          "ctx",
+          "context",
+          "req",
+          "request",
+          "res",
+          "response",
+          "$scope",
+          "staticContext",
+        ],
         "props": true,
       },
     ],
     "no-path-concat": [
       "error",
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": false,
+      },
     ],
     "no-promise-executor-return": [
       "error",
@@ -2883,8 +2962,8 @@
       "error",
       {
         "restrictedNamedExports": [
+          "default",
           "then",
-          "await",
         ],
       },
     ],
@@ -3015,8 +3094,16 @@
         "selector": "ForInStatement",
       },
       {
+        "message": "iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.",
+        "selector": "ForOfStatement",
+      },
+      {
         "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.",
         "selector": "LabeledStatement",
+      },
+      {
+        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize.",
+        "selector": "WithStatement",
       },
     ],
     "no-return-assign": [
@@ -3062,6 +3149,9 @@
     "no-sparse-arrays": [
       "error",
     ],
+    "no-template-curly-in-string": [
+      "error",
+    ],
     "no-this-before-super": [
       "error",
     ],
@@ -3074,6 +3164,23 @@
         "typeof": false,
       },
     ],
+    "no-undef-init": [
+      "error",
+    ],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [],
+        "allowAfterSuper": false,
+        "allowAfterThis": false,
+        "allowAfterThisConstructor": false,
+        "allowFunctionParams": true,
+        "allowInArrayDestructuring": true,
+        "allowInObjectDestructuring": true,
+        "enforceInClassFields": false,
+        "enforceInMethodNames": true,
+      },
+    ],
     "no-unneeded-ternary": [
       "error",
       {
@@ -3082,6 +3189,12 @@
     ],
     "no-unreachable": [
       "error",
+    ],
+    "no-unreachable-loop": [
+      "error",
+      {
+        "ignore": [],
+      },
     ],
     "no-unsafe-finally": [
       "error",
@@ -3102,7 +3215,7 @@
       "error",
       {
         "allowShortCircuit": false,
-        "allowTaggedTemplates": true,
+        "allowTaggedTemplates": false,
         "allowTernary": false,
         "enforceForJSX": false,
       },
@@ -3113,10 +3226,9 @@
     "no-unused-vars": [
       "error",
       {
-        "argsIgnorePattern": "^_+$",
+        "args": "after-used",
         "ignoreRestSiblings": true,
-        "reportUsedIgnorePattern": true,
-        "varsIgnorePattern": "^_+$",
+        "vars": "all",
       },
     ],
     "no-use-before-define": [
@@ -3127,6 +3239,9 @@
         "functions": true,
         "variables": true,
       },
+    ],
+    "no-useless-backreference": [
+      "error",
     ],
     "no-useless-catch": [
       "error",
@@ -3146,6 +3261,14 @@
     "no-useless-escape": [
       "error",
     ],
+    "no-useless-rename": [
+      "error",
+      {
+        "ignoreDestructuring": false,
+        "ignoreExport": false,
+        "ignoreImport": false,
+      },
+    ],
     "no-useless-return": [
       "error",
     ],
@@ -3161,6 +3284,14 @@
     "no-with": [
       "error",
     ],
+    "object-shorthand": [
+      "error",
+      "always",
+      {
+        "avoidQuotes": true,
+        "ignoreConstructors": false,
+      },
+    ],
     "one-var": [
       "error",
       "never",
@@ -3170,7 +3301,7 @@
       "always",
     ],
     "prefer-arrow-callback": [
-      "warn",
+      "error",
       {
         "allowNamedFunctions": false,
         "allowUnboundThis": true,
@@ -3199,6 +3330,9 @@
         "enforceForRenamedProperties": false,
       },
     ],
+    "prefer-exponentiation-operator": [
+      "error",
+    ],
     "prefer-numeric-literals": [
       "error",
     ],
@@ -3224,7 +3358,7 @@
       "error",
     ],
     "prefer-template": [
-      "warn",
+      "error",
     ],
     "promise/catch-or-return": [
       "warn",
@@ -3257,188 +3391,38 @@
       "error",
       "always",
     ],
-    "regexp/confusing-quantifier": [
-      "warn",
-    ],
-    "regexp/control-character-escape": [
-      "error",
-    ],
-    "regexp/match-any": [
-      "error",
-    ],
-    "regexp/negation": [
-      "error",
-    ],
-    "regexp/no-contradiction-with-assertion": [
-      "error",
-    ],
-    "regexp/no-dupe-characters-character-class": [
-      "error",
-    ],
-    "regexp/no-dupe-disjunctions": [
-      "error",
-    ],
-    "regexp/no-empty-alternative": [
-      "warn",
-    ],
-    "regexp/no-empty-capturing-group": [
-      "error",
-    ],
-    "regexp/no-empty-character-class": [
-      "error",
-    ],
-    "regexp/no-empty-group": [
-      "error",
-    ],
-    "regexp/no-empty-lookarounds-assertion": [
-      "error",
-    ],
-    "regexp/no-empty-string-literal": [
-      "error",
-    ],
-    "regexp/no-escape-backspace": [
-      "error",
-    ],
-    "regexp/no-extra-lookaround-assertions": [
-      "error",
-    ],
-    "regexp/no-invalid-regexp": [
-      "error",
-    ],
-    "regexp/no-invisible-character": [
-      "error",
-    ],
-    "regexp/no-lazy-ends": [
-      "warn",
-    ],
-    "regexp/no-legacy-features": [
-      "error",
-    ],
-    "regexp/no-misleading-capturing-group": [
-      "error",
-    ],
-    "regexp/no-misleading-unicode-character": [
-      "error",
-    ],
-    "regexp/no-missing-g-flag": [
-      "error",
-    ],
-    "regexp/no-non-standard-flag": [
-      "error",
-    ],
-    "regexp/no-obscure-range": [
-      "error",
-    ],
-    "regexp/no-optional-assertion": [
-      "error",
-    ],
-    "regexp/no-potentially-useless-backreference": [
-      "warn",
-    ],
-    "regexp/no-super-linear-backtracking": [
-      "error",
-    ],
-    "regexp/no-trivially-nested-assertion": [
-      "error",
-    ],
-    "regexp/no-trivially-nested-quantifier": [
-      "error",
-    ],
-    "regexp/no-unused-capturing-group": [
-      "error",
-    ],
-    "regexp/no-useless-assertions": [
-      "error",
-    ],
-    "regexp/no-useless-backreference": [
-      "error",
-    ],
-    "regexp/no-useless-character-class": [
-      "error",
-    ],
-    "regexp/no-useless-dollar-replacements": [
-      "error",
-    ],
-    "regexp/no-useless-escape": [
-      "error",
-    ],
-    "regexp/no-useless-flag": [
-      "warn",
-    ],
-    "regexp/no-useless-lazy": [
-      "error",
-    ],
-    "regexp/no-useless-non-capturing-group": [
-      "error",
-    ],
-    "regexp/no-useless-quantifier": [
-      "error",
-    ],
-    "regexp/no-useless-range": [
-      "error",
-    ],
-    "regexp/no-useless-set-operand": [
-      "error",
-    ],
-    "regexp/no-useless-string-literal": [
-      "error",
-    ],
-    "regexp/no-useless-two-nums-quantifier": [
-      "error",
-    ],
-    "regexp/no-zero-quantifier": [
-      "error",
-    ],
-    "regexp/optimal-lookaround-quantifier": [
-      "warn",
-    ],
-    "regexp/optimal-quantifier-concatenation": [
-      "error",
-    ],
-    "regexp/prefer-character-class": [
-      "error",
-    ],
-    "regexp/prefer-d": [
-      "error",
-    ],
-    "regexp/prefer-plus-quantifier": [
-      "error",
-    ],
-    "regexp/prefer-predefined-assertion": [
-      "error",
-    ],
-    "regexp/prefer-question-quantifier": [
-      "error",
-    ],
-    "regexp/prefer-range": [
-      "error",
-    ],
-    "regexp/prefer-set-operation": [
-      "error",
-    ],
-    "regexp/prefer-star-quantifier": [
-      "error",
-    ],
-    "regexp/prefer-unicode-codepoint-escapes": [
-      "error",
-    ],
-    "regexp/prefer-w": [
-      "error",
-    ],
-    "regexp/simplify-set-operations": [
-      "error",
-    ],
-    "regexp/sort-flags": [
-      "error",
-    ],
-    "regexp/strict": [
-      "error",
-    ],
-    "regexp/use-ignore-case": [
-      "error",
-    ],
     "require-yield": [
       "error",
+    ],
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "block": {
+          "balanced": true,
+          "exceptions": [
+            "-",
+            "+",
+          ],
+          "markers": [
+            "=",
+            "!",
+            ":",
+            "::",
+          ],
+        },
+        "line": {
+          "exceptions": [
+            "-",
+            "+",
+          ],
+          "markers": [
+            "=",
+            "!",
+            "/",
+          ],
+        },
+      },
     ],
     "strict": [
       "error",
@@ -3792,36 +3776,22 @@
   "settings": {
     "import/core-modules": [],
     "import/extensions": [
-      ".tsx",
-      ".ts",
-      ".cts",
-      ".mts",
-      ".vue",
-      ".jsx",
       ".js",
       ".mjs",
-      ".cjs",
+      ".jsx",
     ],
-    "import/ignore": false,
-    "import/parsers": {
-      "/<:root>/packages/eslint-config-base/lib/jsx-parser.cjs": [
-        ".jsx",
-      ],
-      "@typescript-eslint/parser": [
-        ".ts",
-        ".cts",
-        ".mts",
-        ".tsx",
-      ],
-      "vue-eslint-parser": [
-        ".vue",
-      ],
-    },
+    "import/ignore": [
+      "node_modules",
+      "\.(coffee|scss|css|less|hbs|svg|json)$",
+    ],
     "import/resolver": {
-      "/<:root>/packages/eslint-config-base/lib/node-next-resolver.cjs": {
-        "importHttp": true,
+      "node": {
+        "extensions": [
+          ".mjs",
+          ".js",
+          ".json",
+        ],
       },
-      "node": false,
     },
   },
 }

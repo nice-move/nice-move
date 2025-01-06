@@ -11,6 +11,7 @@
   "peerDependencies": {
     "@bring-it/npm": "^0.5.9",
     "@bring-it/sftp": "^0.3.8",
+    "@nice-move/init": "workspace:~",
     "@playwright/test": "~1.49.1",
     "@types/react": "~18.3.18",
     "prettier-plugin-tailwindcss": "^0.6.9",
@@ -49,6 +50,6 @@
     }
   },
   "engines": {
-    "node": "^22.11.0"
+    "node": "^20.18.1 || ^22.11.0"
   }
 }

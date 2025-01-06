@@ -2369,9 +2369,9 @@
         "jsx": false,
         "objectLiteralDuplicateProperties": false,
       },
-      "sourceType": "script",
+      "sourceType": "commonjs",
     },
-    "sourceType": "script",
+    "sourceType": "commonjs",
   },
   "linterOptions": {
     "noInlineConfig": false,

@@ -63,10 +63,13 @@
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~",
-    "@types/node": "^22.10.5"
+    "@types/node": "^22.10.5",
+    "@commitlint/load": "^19.6.1"
   },
   "pnpm": {
     "overrides": {
+      "eslint": "catalog:",
+      "eslint-plugin-react-hooks": "^5.1.0",
       "globals": "^15.14.0"
     },
     "patchedDependencies": {
@@ -77,7 +80,7 @@
   },
   "packageManager": "pnpm@9.15.3",
   "engines": {
-    "node": "^22.11.0",
+    "node": "^20.18.1 || ^22.11.0",
     "pnpm": "^9.15.3"
   },
   "eslintConfig": {

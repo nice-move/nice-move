@@ -22,15 +22,11 @@ npm install eslint @nice-move/eslint-config-vue --save-dev
 
 ## Usage
 
-Add to package.json
+Add to eslint.config.mjs
 
-```jsonc
-// example: package.json
-{
-  "eslintConfig": {
-    "extends": "@nice-move/eslint-config-vue"
-  }
-}
+```js
+// example: eslint.config.mjs
+export { default } from '@nice-move/eslint-config-vue';
 ```
 
 Then run
@@ -41,17 +37,12 @@ eslint --fix .
 
 ## Specification
 
-[ava]: https://github.com/avajs/ava
-[webpack]: https://webpack.js.org/
-
 | Environment | pattern                                                                                      |
 | :---------- | :------------------------------------------------------------------------------------------- |
 | browser     | `.js`, `.html`, `.vue`                                                                       |
 | node.js     | `.mjs`, `.mts`, `.cjs`, `.cts`                                                               |
 | es modules  | `.mjs`, `.mts`, `.js`, `.html`, `.vue`                                                       |
 | commonjs    | `.cjs`, source code in webpack project                                                       |
-| [webpack]   | `src/**`, `packages/*/**`                                                                    |
-| [ava]       | `{test,tests,spec,specs}/**`, `**/*.{test,spec}.*` <br /> when `eslint-plugin-ava` installed |
 
 ## Tips
 

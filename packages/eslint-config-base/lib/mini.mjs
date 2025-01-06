@@ -1,10 +1,8 @@
-'use strict';
-
-const { relative } = require('node:path');
-const { reaching } = require('settingz');
+import { relative } from 'node:path';
+import { reaching } from 'settingz';
+import { getGlobals } from './utils.mjs';
 
 const cwd = process.cwd();
-const { getGlobals } = require('../lib/utils.cjs');
 
 function relativeToCWD(path) {
   return relative(cwd, path);
@@ -29,65 +27,71 @@ function generate({
     .filter(Boolean)
     .map((item) => relativeToCWD(item));
 
-  const excludedFiles = ['*.wxs', '*.qs'];
+  const ignores = ['**/*.wxs', '**/*.qs'];
 
   const cloudMatcher = cloudfunctionRoot
     ? matcher([relativeToCWD(cloudfunctionRoot)], '**')
     : undefined;
 
-  const globals = {
-    clearInterval: 'readonly',
-    clearTimeout: 'readonly',
-    console: 'readonly',
-    setInterval: 'readonly',
-    setTimeout: 'readonly',
-  };
+  // const globals = {
+  //   clearInterval: 'readonly',
+  //   clearTimeout: 'readonly',
+  //   console: 'readonly',
+  //   setInterval: 'readonly',
+  //   setTimeout: 'readonly',
+  // };
 
   return [
     {
-      files: matcher(paths, '**'),
-      excludedFiles,
-      globals: {
-        ...getGlobals({ es2025: true }),
-        ...globals,
-        wx: 'readonly',
-        getApp: 'readonly',
-        getCurrentPages: 'readonly',
-        requirePlugin: 'readonly',
-        requireMiniProgram: 'readonly',
+      files: [matcher(paths, '**')],
+      ignores,
+      languageOptions: {
+        globals: {
+          wx: 'readonly',
+          getApp: 'readonly',
+          getCurrentPages: 'readonly',
+          requirePlugin: 'readonly',
+          requireMiniProgram: 'readonly',
+        },
       },
     },
     {
-      files: matcher(paths, 'component{,s}/**'),
-      excludedFiles,
-      globals: {
-        Component: 'readonly',
-        Behavior: 'readonly',
+      files: [matcher(paths, 'component{,s}/**')],
+      ignores,
+      languageOptions: {
+        globals: {
+          Component: 'readonly',
+          Behavior: 'readonly',
+        },
       },
     },
     {
-      files: matcher(paths, 'page{,s}/**'),
-      excludedFiles,
-      globals: {
-        Behavior: 'readonly',
-        Component: 'readonly',
-        Page: 'readonly',
+      files: [matcher(paths, 'page{,s}/**')],
+      ignores,
+      languageOptions: {
+        globals: {
+          Behavior: 'readonly',
+          Component: 'readonly',
+          Page: 'readonly',
+        },
       },
     },
     {
-      files: matcher(paths, 'app.js'),
-      globals: {
-        App: 'readonly',
+      files: [matcher(paths, 'app.js')],
+      languageOptions: {
+        globals: {
+          App: 'readonly',
+        },
       },
     },
     cloudMatcher
       ? {
           files: [cloudMatcher],
-          globals: {
-            ...getGlobals(),
-            ...globals,
-            require: 'readonly',
-            exports: 'readonly',
+          languageOptions: {
+            globals: {
+              require: 'readonly',
+              exports: 'readonly',
+            },
           },
           rules: {
             'import/no-commonjs': 'off',
@@ -96,37 +100,40 @@ function generate({
         }
       : undefined,
     {
-      files: excludedFiles,
-      parserOptions: {
+      files: ignores,
+      languageOptions: {
         ecmaVersion: 5,
-        sourceType: 'script',
-        ecmaFeatures: {
-          globalReturn: false,
-          impliedStrict: false,
-          jsx: false,
+        sourceType: 'commonjs',
+        globals: {
+          ...getGlobals(),
+          Date: false,
+          decodeURI: false,
+          decodeURIComponent: false,
+          encodeURI: false,
+          encodeURIComponent: false,
+          getDate: false,
+          getRegExp: false,
+          Infinity: false,
+          isFinite: false,
+          isNaN: false,
+          JSON: false,
+          Math: false,
+          module: false,
+          NaN: false,
+          Number: false,
+          parseFloat: false,
+          parseInt: false,
+          require: false,
+          undefined: false,
         },
-      },
-      globals: {
-        ...getGlobals(),
-        Date: false,
-        decodeURI: false,
-        decodeURIComponent: false,
-        encodeURI: false,
-        encodeURIComponent: false,
-        getDate: false,
-        getRegExp: false,
-        Infinity: false,
-        isFinite: false,
-        isNaN: false,
-        JSON: false,
-        Math: false,
-        module: false,
-        NaN: false,
-        Number: false,
-        parseFloat: false,
-        parseInt: false,
-        require: false,
-        undefined: false,
+        parserOptions: {
+          ecmaFeatures: {
+            globalReturn: false,
+            impliedStrict: false,
+            jsx: false,
+            objectLiteralDuplicateProperties: false,
+          },
+        },
       },
       rules: {
         'import/no-commonjs': 0,
@@ -194,6 +201,4 @@ function generate({
   ].filter(Boolean);
 }
 
-module.exports = {
-  overrides: config.appid ? generate(config) : [],
-};
+export default config.appid ? generate(config) : [];

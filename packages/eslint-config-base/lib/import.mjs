@@ -59,6 +59,7 @@ export default [
       'import/order': 0,
       'import/prefer-default-export': 0,
       'import/no-cycle': 0,
+      'import/no-duplicates': ['warn', { considerQueryString: true }],
     },
     settings: {
       ...Vscode,

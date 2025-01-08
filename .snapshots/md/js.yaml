@@ -2500,6 +2500,9 @@
     ],
     "import/no-duplicates": [
       "warn",
+      {
+        "considerQueryString": true,
+      },
     ],
     "import/no-empty-named-blocks": [
       "error",

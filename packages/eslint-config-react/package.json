@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "description": "A `eslint` config for `react` project best practice",
   "license": "MIT",
   "author": {
@@ -34,18 +34,18 @@
   "bugs": {
     "url": "https://github.com/nice-move/nice-move/issues"
   },
-  "type": "module",
   "main": "index.mjs",
+  "type": "module",
   "dependencies": {
-    "globals": "^15.14.0",
     "@eslint/eslintrc": "^3.2.0",
     "@nice-move/eslint-config-base": "workspace:~",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.37.3",
     "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
     "settingz": "catalog:"
   },
   "peerDependencies": {

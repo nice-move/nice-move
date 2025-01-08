@@ -1944,7 +1944,7 @@
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.19.0",
+        "version": "8.19.1",
       },
       "parseForESLint": [Function],
     },
@@ -2175,6 +2175,9 @@
     ],
     "import/no-duplicates": [
       "warn",
+      {
+        "considerQueryString": true,
+      },
     ],
     "import/no-empty-named-blocks": [
       "error",

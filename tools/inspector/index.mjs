@@ -36,6 +36,7 @@ export function eslintInspector(configName, filename) {
           if (v[0] === 2) {
             v[0] = 'error';
           }
+
           if (v[0] === 1) {
             v[0] = 'warn';
           }
@@ -49,6 +50,7 @@ export function eslintInspector(configName, filename) {
       if (data?.parser) {
         data.parser = fixPath(data.parser);
       }
+
       if (data?.plugins && Array.isArray(data.plugins)) {
         data.plugins = data.plugins.map((line) => fixPath(line));
         data.plugins.sort();
@@ -67,6 +69,7 @@ export function eslintInspector(configName, filename) {
                   : value;
           }
         }
+
         if (data?.languageOptions.parserOptions?.babelOptions?.plugins) {
           data.languageOptions.parserOptions.babelOptions.plugins =
             data.languageOptions.parserOptions.babelOptions.plugins.map(

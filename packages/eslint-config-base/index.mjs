@@ -6,8 +6,6 @@ import js from '@eslint/js';
 import { recommended as html } from '@nice-move/eslint-plugin-html/lib/configs-next.mjs';
 import airbnb from 'eslint-config-airbnb-base';
 import prettier from 'eslint-config-prettier';
-
-
 import { getPkg, readJson } from 'settingz';
 
 import base from './lib/base.mjs';
@@ -44,6 +42,7 @@ const compat = new FlatCompat({
 
 const old = compat.config(airbnb).map((item) => {
   delete item.plugins;
+
   return item;
 });
 

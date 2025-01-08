@@ -6,24 +6,27 @@ function pick({ rules, plugins }) {
 
 export default [
   {
-    files: ['**/*.{js,jsx,ts,tsx,mjs,mts,cts,vue}'],
+    files: ['**/*.{mjs,mts,cts}'],
     ...pick(nodePlugin.configs['flat/recommended-module']),
   },
   {
-    files: ['**/*.{cjs,qs,wxs}'],
-    ...pick(nodePlugin.configs['flat/recommended-script']),
-  },
-  {
-    files: ['**/*.{js,jsx,ts,tsx,vue,qs,wxs}'],
+    files: ['**/*.{mjs,mts,cts}'],
     rules: {
-      'n/hashbang': 'error',
-      'n/no-process-env': 'error',
+      'n/no-missing-import': 0,
+      'n/no-extraneous-import': 0,
+      'n/no-missing-require': 0,
+      'n/no-extraneous-require': 0,
     },
   },
   {
-    files: ['**/*.{js,jsx,ts,tsx,mjs,mts,cjs,cts,vue,qs,wxs}'],
+    files: ['**/*.cjs'],
+    ...pick(nodePlugin.configs['flat/recommended-script']),
+  },
+  {
+    files: ['**/*.cjs'],
     rules: {
-      'n/no-path-concat': 'error',
+      'n/no-missing-import': 0,
+      'n/no-extraneous-import': 0,
     },
   },
   {
@@ -35,6 +38,7 @@ export default [
   {
     files: ['**/*.{m,c}{t,j}s'],
     rules: {
+      'n/no-path-concat': 'error',
       'n/no-deprecated-api': 'error',
       'n/no-process-env': 'off',
       'n/no-process-exit': 'warn',
@@ -54,6 +58,9 @@ export default [
     ignores: ['**/*.md/*'],
     rules: {
       'n/file-extension-in-import': 'error',
+    },
+    plugins: {
+      n: nodePlugin,
     },
   },
   {

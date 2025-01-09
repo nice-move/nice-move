@@ -3692,12 +3692,6 @@
         ],
       },
     ],
-    "react/require-default-props": [
-      "warn",
-      {
-        "forbidDefaultForRequired": true,
-      },
-    ],
     "react/require-render-return": [
       "error",
     ],

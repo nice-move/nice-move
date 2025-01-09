@@ -20,7 +20,7 @@ export default {
         ignore: ['children', 'className', 'style', 'meta'],
       },
     ],
-    'react/require-default-props': 'warn',
+    'react/require-default-props': 0,
     'react/forbid-prop-types': [
       'error',
       {

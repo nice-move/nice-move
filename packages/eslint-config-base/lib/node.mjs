@@ -62,6 +62,22 @@ export default [
     plugins: {
       n: nodePlugin,
     },
+    settings: {
+      n: {
+        tryExtensions: [
+          '.js',
+          '.ts',
+          '.jsx',
+          '.tsx',
+          '.mjs',
+          '.mts',
+          '.cjs',
+          '.cts',
+          '.vue',
+        ],
+        typescriptExtensionMap: [],
+      },
+    },
   },
   {
     files: ['**/*.{cjs,cts}'],

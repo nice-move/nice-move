@@ -2433,9 +2433,6 @@
     "default-case-last": [
       "error",
     ],
-    "default-param-last": [
-      "error",
-    ],
     "dot-notation": [
       "error",
       {
@@ -3861,5 +3858,16 @@
       },
       "node": false,
     },
+    "tryExtensions": [
+      ".js",
+      ".ts",
+      ".jsx",
+      ".tsx",
+      ".mjs",
+      ".cjs",
+      ".mts",
+      ".cts",
+      ".vue",
+    ],
   },
 }

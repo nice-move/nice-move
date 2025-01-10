@@ -102,8 +102,22 @@ export default [
       'prefer-exponentiation-operator': 0,
       'prefer-template': 'warn',
       'spaced-comment': 0,
+      'default-param-last': 0,
       '@eslint-community/eslint-comments/no-unused-enable': 'warn',
       '@eslint-community/eslint-comments/disable-enable-pair': 0,
+    },
+    settings: {
+      tryExtensions: [
+        '.js',
+        '.ts',
+        '.jsx',
+        '.tsx',
+        '.mjs',
+        '.cjs',
+        '.mts',
+        '.cts',
+        '.vue',
+      ],
     },
   },
   {

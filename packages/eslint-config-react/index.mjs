@@ -2,7 +2,7 @@ import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { FlatCompat } from '@eslint/eslintrc';
-import base from '@nice-move/eslint-config-base';
+import { create } from '@nice-move/eslint-config-base';
 import hooks from 'eslint-config-airbnb/hooks';
 import airbnb from 'eslint-config-airbnb/rules/react';
 import airbnb2 from 'eslint-config-airbnb/rules/react-a11y';
@@ -22,9 +22,10 @@ const compat = new FlatCompat({
 const files = ['**/*.{ts,js,tsx,jsx}'];
 
 export default [
-  ...base,
-  ...compat.config(airbnb).map((config) => ({ ...config, files })),
-  ...compat.config(airbnb2).map((config) => ({ ...config, files })),
+  ...create(
+    ...compat.config(airbnb).map((config) => ({ ...config, files })),
+    ...compat.config(airbnb2).map((config) => ({ ...config, files })),
+  ),
   {
     files,
     ...react,

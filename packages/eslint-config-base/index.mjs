@@ -46,9 +46,10 @@ const old = compat.config(airbnb).map((item) => {
   return item;
 });
 
-export default [
+export const create = (...addings) => [
   js.configs.recommended,
   ...old,
+  ...addings,
   ...unicorn,
   ...promise,
   ...imports,
@@ -57,7 +58,7 @@ export default [
     ({ devDependencies: { electron } = {} }) => electron,
     () => [
       {
-        files: ['src/**'],
+        files: ['src/**/*.{mjs,mts,cjs,cts}'],
         settings: {
           'import/core-modules': ['electron'],
         },
@@ -69,7 +70,7 @@ export default [
       playwright,
     () => [
       {
-        files: ['test/**'],
+        files: ['{test,e2e}/**/*.{mjs,mts,cjs,cts}'],
         settings: {
           'import/core-modules': ['@playwright/test'],
         },
@@ -104,3 +105,5 @@ export default [
     ],
   },
 ];
+
+export default create();

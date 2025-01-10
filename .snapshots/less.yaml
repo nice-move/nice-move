@@ -17,10 +17,10 @@
     "suitcss/selector-root-no-composition": [Function],
   },
   "plugins": [
-    "/<:root>/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.12.0_typescript@5.7.2_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
+    "/<:root>/node_modules/.pnpm/stylelint-declaration-block-no-ignored-properties@2.8.0_stylelint@16.12.0_typescript@5.7.3_/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
     "/<:root>/node_modules/.pnpm/stylelint-suitcss@5.0.0/node_modules/stylelint-suitcss/index.js",
-    "/<:root>/node_modules/.pnpm/stylelint-no-unresolved-module@2.3.0_stylelint@16.12.0_typescript@5.7.2_/node_modules/stylelint-no-unresolved-module/esm/index.js",
-    "/<:root>/node_modules/.pnpm/stylelint-require-units@2.0.0_stylelint@16.12.0_typescript@5.7.2_/node_modules/stylelint-require-units/src/stylelint-require-units.js",
+    "/<:root>/node_modules/.pnpm/stylelint-no-unresolved-module@2.3.0_stylelint@16.12.0_typescript@5.7.3_/node_modules/stylelint-no-unresolved-module/esm/index.js",
+    "/<:root>/node_modules/.pnpm/stylelint-require-units@2.0.0_stylelint@16.12.0_typescript@5.7.3_/node_modules/stylelint-require-units/src/stylelint-require-units.js",
   ],
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true,

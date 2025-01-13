@@ -65,18 +65,6 @@ export const create = (...addings) => [
       },
     ],
   ),
-  ...pkgHas(
-    ({ peerDependencies: { '@playwright/test': playwright } = {} }) =>
-      playwright,
-    () => [
-      {
-        files: ['{test,e2e}/**/*.{mjs,mts,cjs,cts}'],
-        settings: {
-          'import/core-modules': ['@playwright/test'],
-        },
-      },
-    ],
-  ),
   ...node,
   ...typescript,
   ...markdown,

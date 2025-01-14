@@ -1,6 +1,6 @@
 import { createRequire } from 'node:module';
 
-import { ESLint } from 'eslint9';
+import { ESLint } from 'eslint';
 import pickBy from 'lodash/pickBy.js';
 import slash from 'slash';
 import sortKeys from 'sort-keys';

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/init",
-  "version": "0.8.15",
+  "version": "0.8.16",
   "description": "Initialize your frontend workspaces",
   "license": "MIT",
   "author": {
@@ -47,7 +47,7 @@
     "centra": "^2.7.0",
     "chalk": "catalog:",
     "cheetor": "^0.13.0",
-    "deepmerge-ts": "catalog:",
+    "deepmerge-ts": "^7.1.4",
     "execa": "catalog:",
     "fs-chain": "catalog:",
     "ora": "^8.1.1",

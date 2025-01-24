@@ -4,8 +4,8 @@ packages:
   - tools/*
 
 catalog:
+  '@eslint/js': ^9.18.0
   chalk: ^5.4.1
-  deepmerge-ts: ^7.1.3
   eslint: ^9.18.0
   execa: ^9.5.2
   fs-chain: ^8.2.4
@@ -13,6 +13,6 @@ catalog:
   lodash: ^4.17.21
   settingz: ^0.2.0
   sort-keys: ^5.1.0
-  stylelint: ^16.13.0
+  stylelint: ^16.13.2
   typescript: ~5.7.3
   yaml: ^2.7.0

@@ -53,7 +53,7 @@ patchedDependencies:
     hash: f2maegr6i6mxqemptyyo762qwe
     path: patches/conventional-changelog-angular@7.0.0.patch
   lint-staged:
-    hash: wxssh3ioqekdtytrm6z3blowei
+    hash: 3cuz7yfxpc6xae4vidd2fzcycu
     path: patches/lint-staged.patch
 
 importers:
@@ -310,7 +310,7 @@ importers:
         version: 9.5.2
       lint-staged:
         specifier: ^15.4.3
-        version: 15.4.3(patch_hash=wxssh3ioqekdtytrm6z3blowei)
+        version: 15.4.3(patch_hash=3cuz7yfxpc6xae4vidd2fzcycu)
       settingz:
         specifier: 'catalog:'
         version: 0.2.0
@@ -346,7 +346,7 @@ importers:
         version: 9.19.0(jiti@2.4.2)
       eslint-config-airbnb-base:
         specifier: ^15.0.0
-        version: 15.0.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2))
+        version: 15.0.0(eslint-plugin-import@2.31.0(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2))
       eslint-config-prettier:
         specifier: ^10.0.1
         version: 10.0.1(eslint@9.19.0(jiti@2.4.2))
@@ -6295,7 +6295,7 @@ snapshots:
       eslint: 9.19.0(jiti@2.4.2)
       semver: 7.6.3
 
-  eslint-config-airbnb-base@15.0.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2)):
+  eslint-config-airbnb-base@15.0.0(eslint-plugin-import@2.31.0(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2)):
     dependencies:
       confusing-browser-globals: 1.0.11
       eslint: 9.19.0(jiti@2.4.2)
@@ -6307,7 +6307,7 @@ snapshots:
   eslint-config-airbnb@19.0.4(eslint-plugin-import@2.31.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-jsx-a11y@6.10.2(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-react@7.37.4(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.19.0(jiti@2.4.2)
-      eslint-config-airbnb-base: 15.0.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2))
+      eslint-config-airbnb-base: 15.0.0(eslint-plugin-import@2.31.0(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-react: 7.37.4(eslint@9.19.0(jiti@2.4.2))
@@ -7271,7 +7271,7 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@15.4.3(patch_hash=wxssh3ioqekdtytrm6z3blowei):
+  lint-staged@15.4.3(patch_hash=3cuz7yfxpc6xae4vidd2fzcycu):
     dependencies:
       chalk: 5.4.1
       commander: 13.1.0

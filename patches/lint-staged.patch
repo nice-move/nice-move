@@ -1,8 +1,8 @@
 diff --git a/lib/loadConfig.js b/lib/loadConfig.js
-index 46885d786a9efdcdd78e2a8ac494d5d76cf21be5..a8858e55ce3319f942612060c19ecf70cb311a88 100644
+index 12019179f89ed8890fa9bfb20fdde12ca693f654..a8858e55ce3319f942612060c19ecf70cb311a88 100644
 --- a/lib/loadConfig.js
 +++ b/lib/loadConfig.js
-@@ -1,125 +1 @@
+@@ -1,127 +1 @@
 -/** @typedef {import('./index').Logger} Logger */
 -
 -import fs from 'node:fs/promises'
@@ -62,19 +62,21 @@ index 46885d786a9efdcdd78e2a8ac494d5d76cf21be5..a8858e55ce3319f942612060c19ecf70
 - * assumption is in `cosmiconfig` as well.
 - */
 -const loaders = {
+-  [NO_EXT]: yamlParse,
+-  '.cjs': dynamicImport,
+-  '.cts': dynamicImport,
 -  '.js': dynamicImport,
 -  '.json': jsonParse,
 -  '.mjs': dynamicImport,
--  '.cjs': dynamicImport,
+-  '.mts': dynamicImport,
+-  '.ts': dynamicImport,
 -  '.yaml': yamlParse,
 -  '.yml': yamlParse,
--  [NO_EXT]: yamlParse,
 -}
 -
 -const readFile = async (filepath) => {
 -  const absolutePath = path.resolve(filepath)
--  const file = await fs.readFile(absolutePath)
--  return await file.toString()
+-  return fs.readFile(absolutePath, 'utf-8')
 -}
 -
 -const loadConfigByExt = async (filepath) => {

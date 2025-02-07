@@ -26,6 +26,6 @@ export default {
   'prettier-config': '^0.14.11',
   'syncpack-config': '^0.2.9',
   tsconfig: '^0.2.7',
-  cli: '^0.11.20',
+  cli: '^0.11.21',
   lts: '^20.18.1 || ^22.11.0',
 };

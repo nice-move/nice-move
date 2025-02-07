@@ -33,7 +33,7 @@
     "@bring-it/cli": "^0.9.9",
     "@bring-it/npm": "^0.5.9",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
-    "@vitest/ui": "^3.0.4",
+    "@vitest/ui": "^3.0.5",
     "best-shot": "^0.9.0",
     "eslint": "catalog:",
     "garou": "catalog:",
@@ -42,9 +42,9 @@
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "stylelint": "catalog:",
-    "syncpack": "^13.0.0",
+    "syncpack": "^13.0.2",
     "typescript": "catalog:",
-    "vitest": "^3.0.4"
+    "vitest": "^3.0.5"
   },
   "peerDependencies": {
     "@commitlint/load": "^19.6.1",
@@ -64,7 +64,7 @@
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~",
-    "@types/node": "^22.10.5"
+    "@types/node": "^22.13.1"
   },
   "pnpm": {
     "overrides": {

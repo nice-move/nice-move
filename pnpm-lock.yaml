@@ -7,7 +7,7 @@ settings:
 catalogs:
   default:
     '@eslint/js':
-      specifier: ^9.18.0
+      specifier: ^9.19.0
       version: 9.19.0
     chalk:
       specifier: ^5.4.1

@@ -30,21 +30,21 @@
     "svgo-config": "^0.7.0"
   },
   "devDependencies": {
-    "@bring-it/cli": "^0.9.9",
-    "@bring-it/npm": "^0.5.9",
+    "@bring-it/cli": "^0.10.0",
+    "@bring-it/npm": "^0.6.0",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
-    "@vitest/ui": "^3.0.5",
-    "best-shot": "^0.9.0",
+    "@vitest/ui": "^3.0.6",
+    "best-shot": "^0.9.2",
     "eslint": "catalog:",
     "garou": "catalog:",
     "nodemon": "^3.1.9",
-    "postcss": "^8.5.1",
-    "prettier": "^3.4.2",
+    "postcss": "^8.5.2",
+    "prettier": "^3.5.1",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "stylelint": "catalog:",
     "syncpack": "^13.0.2",
     "typescript": "catalog:",
-    "vitest": "^3.0.5"
+    "vitest": "^3.0.6"
   },
   "peerDependencies": {
     "@commitlint/load": "^19.6.1",
@@ -64,13 +64,13 @@
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~",
-    "@types/node": "^22.13.1"
+    "@types/node": "^22.13.4"
   },
   "pnpm": {
     "overrides": {
       "eslint": "catalog:",
       "eslint-plugin-react-hooks": "^5.1.0",
-      "globals": "^15.14.0"
+      "globals": "catalog:"
     },
     "patchedDependencies": {
       "@commitlint/rules": "patches/@commitlint__rules.patch",
@@ -78,10 +78,10 @@
       "lint-staged": "patches/lint-staged.patch"
     }
   },
-  "packageManager": "pnpm@9.15.3",
+  "packageManager": "pnpm@9.15.4",
   "engines": {
     "node": "^20.18.1 || ^22.11.0",
-    "pnpm": "^9.15.3"
+    "pnpm": "^9.15.4"
   },
   "nice-move": {
     "bundle": [

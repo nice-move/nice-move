@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-vue",
-  "version": "0.4.10",
+  "version": "0.4.11",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -33,7 +33,7 @@
   "peerDependencies": {
     "eslint": "catalog:",
     "garou": "catalog:",
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.1",
     "stylelint": "catalog:",
     "typescript": "catalog:"
   },

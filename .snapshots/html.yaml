@@ -2373,6 +2373,13 @@
     ],
     "unicorn/catch-error-name": [
       "error",
+      {},
+    ],
+    "unicorn/consistent-assert": [
+      "error",
+    ],
+    "unicorn/consistent-date-clone": [
+      "error",
     ],
     "unicorn/consistent-empty-array-spread": [
       "error",
@@ -2382,6 +2389,9 @@
     ],
     "unicorn/consistent-function-scoping": [
       "error",
+      {
+        "checkArrowFunctions": true,
+      },
     ],
     "unicorn/custom-error-definition": [
       "warn",
@@ -2404,6 +2414,9 @@
     "unicorn/no-abusive-eslint-disable": [
       "error",
     ],
+    "unicorn/no-accessor-recursion": [
+      "error",
+    ],
     "unicorn/no-anonymous-default-export": [
       "error",
     ],
@@ -2415,6 +2428,7 @@
     ],
     "unicorn/no-array-push-push": [
       "error",
+      {},
     ],
     "unicorn/no-await-expression-member": [
       "error",
@@ -2437,8 +2451,14 @@
     "unicorn/no-hex-escape": [
       "error",
     ],
-    "unicorn/no-instanceof-array": [
+    "unicorn/no-instanceof-builtins": [
       "error",
+      {
+        "exclude": [],
+        "include": [],
+        "strategy": "loose",
+        "useErrorIsError": false,
+      },
     ],
     "unicorn/no-invalid-fetch-options": [
       "error",
@@ -2453,6 +2473,9 @@
       "error",
     ],
     "unicorn/no-magic-array-flat-depth": [
+      "error",
+    ],
+    "unicorn/no-named-default": [
       "error",
     ],
     "unicorn/no-negated-condition": [
@@ -2487,6 +2510,9 @@
     ],
     "unicorn/no-typeof-undefined": [
       "error",
+      {
+        "checkGlobalVariables": false,
+      },
     ],
     "unicorn/no-unnecessary-await": [
       "error",
@@ -2517,6 +2543,7 @@
     ],
     "unicorn/no-useless-undefined": [
       "error",
+      {},
     ],
     "unicorn/no-zero-fractions": [
       "error",
@@ -2524,17 +2551,38 @@
     "unicorn/numeric-separators-style": [
       "warn",
       {
+        "binary": {
+          "groupLength": 4,
+          "minimumDigits": 0,
+        },
+        "hexadecimal": {
+          "groupLength": 2,
+          "minimumDigits": 0,
+        },
+        "number": {
+          "groupLength": 3,
+          "minimumDigits": 5,
+        },
+        "octal": {
+          "groupLength": 4,
+          "minimumDigits": 0,
+        },
         "onlyIfContainsSeparator": true,
       },
     ],
     "unicorn/prefer-add-event-listener": [
       "error",
+      {},
     ],
     "unicorn/prefer-array-find": [
       "error",
+      {
+        "checkFromLast": true,
+      },
     ],
     "unicorn/prefer-array-flat": [
       "error",
+      {},
     ],
     "unicorn/prefer-array-flat-map": [
       "error",
@@ -2547,6 +2595,10 @@
     ],
     "unicorn/prefer-at": [
       "error",
+      {
+        "checkAllIndexAccess": false,
+        "getLastElementFunctions": [],
+      },
     ],
     "unicorn/prefer-blob-reading-methods": [
       "error",
@@ -2616,9 +2668,14 @@
     ],
     "unicorn/prefer-number-properties": [
       "error",
+      {
+        "checkInfinity": false,
+        "checkNaN": true,
+      },
     ],
     "unicorn/prefer-object-from-entries": [
       "error",
+      {},
     ],
     "unicorn/prefer-optional-catch-binding": [
       "error",
@@ -2655,12 +2712,18 @@
     ],
     "unicorn/prefer-structured-clone": [
       "error",
+      {},
     ],
     "unicorn/prefer-switch": [
       "error",
+      {
+        "emptyDefaultCase": "no-default-comment",
+        "minimumCases": 3,
+      },
     ],
     "unicorn/prefer-ternary": [
       "error",
+      "always",
     ],
     "unicorn/prefer-type-error": [
       "error",
@@ -2677,6 +2740,7 @@
     ],
     "unicorn/switch-case-braces": [
       "error",
+      "always",
     ],
     "unicorn/text-encoding-identifier-case": [
       "error",

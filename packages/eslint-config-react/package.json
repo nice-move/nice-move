@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.12.9",
+  "version": "0.12.10",
   "description": "A `eslint` config for `react` project best practice",
   "license": "MIT",
   "author": {
@@ -45,7 +45,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.1.0",
-    "globals": "^15.14.0",
+    "globals": "catalog:",
     "settingz": "catalog:"
   },
   "peerDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.12.10",
+  "version": "0.12.11",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -36,7 +36,7 @@
   "type": "module",
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
-    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/eslintrc": "^3.3.0",
     "@eslint/js": "catalog:",
     "@nice-move/eslint-plugin-html": "^0.1.1",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -51,7 +51,7 @@
     "globals": "catalog:",
     "resolve.exports": "^2.0.3",
     "settingz": "catalog:",
-    "typescript-eslint": "^8.24.1"
+    "typescript-eslint": "^8.25.0"
   },
   "peerDependencies": {
     "eslint": "catalog:"

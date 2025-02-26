@@ -98,7 +98,7 @@
     "/<:root>/node_modules/.pnpm/stylelint-suitcss@5.0.0/node_modules/stylelint-suitcss/index.js",
     "/<:root>/node_modules/.pnpm/stylelint-no-unresolved-module@2.3.0_stylelint@16.14.1_typescript@5.7.3_/node_modules/stylelint-no-unresolved-module/esm/index.js",
     "/<:root>/node_modules/.pnpm/stylelint-require-units@2.0.0_stylelint@16.14.1_typescript@5.7.3_/node_modules/stylelint-require-units/src/stylelint-require-units.js",
-    "/<:root>/node_modules/.pnpm/stylelint-scss@6.11.0_stylelint@16.14.1_typescript@5.7.3_/node_modules/stylelint-scss/src/index.js",
+    "/<:root>/node_modules/.pnpm/stylelint-scss@6.11.1_stylelint@16.14.1_typescript@5.7.3_/node_modules/stylelint-scss/src/index.js",
   ],
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true,

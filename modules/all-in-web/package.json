@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-web",
-  "version": "0.4.12",
+  "version": "0.4.13",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -31,7 +31,7 @@
   "peerDependencies": {
     "eslint": "catalog:",
     "garou": "catalog:",
-    "prettier": "^3.5.2",
+    "prettier": "^3.5.3",
     "stylelint": "catalog:",
     "typescript": "catalog:"
   },

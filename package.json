@@ -39,7 +39,7 @@
     "garou": "catalog:",
     "nodemon": "^3.1.9",
     "postcss": "^8.5.3",
-    "prettier": "^3.5.2",
+    "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "stylelint": "catalog:",
     "syncpack": "^13.0.2",
@@ -69,7 +69,7 @@
   "pnpm": {
     "overrides": {
       "eslint": "catalog:",
-      "eslint-plugin-react-hooks": "^5.1.0",
+      "eslint-plugin-react-hooks": "^5.2.0",
       "globals": "catalog:"
     },
     "patchedDependencies": {

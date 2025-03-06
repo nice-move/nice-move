@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "svgo": "^3.3.2",
-    "svgo-config": "^0.7.0"
+    "svgo-config": "^0.9.0"
   },
   "devDependencies": {
     "@bring-it/cli": "^0.10.0",

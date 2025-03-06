@@ -118,8 +118,8 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2
       svgo-config:
-        specifier: ^0.7.0
-        version: 0.7.0(svgo@3.3.2)
+        specifier: ^0.9.0
+        version: 0.9.0(svgo@3.3.2)
     devDependencies:
       '@bring-it/cli':
         specifier: ^0.10.0
@@ -435,8 +435,8 @@ importers:
         specifier: ^10.0.2
         version: 10.0.2(eslint@9.21.0(jiti@2.4.2))
       eslint-plugin-vue:
-        specifier: ^9.32.0
-        version: 9.32.0(eslint@9.21.0(jiti@2.4.2))
+        specifier: ^9.33.0
+        version: 9.33.0(eslint@9.21.0(jiti@2.4.2))
       globals:
         specifier: ^16.0.0
         version: 16.0.0
@@ -2256,8 +2256,8 @@ packages:
     peerDependencies:
       eslint: ^9.21.0
 
-  eslint-plugin-vue@9.32.0:
-    resolution: {integrity: sha512-b/Y05HYmnB/32wqVcjxjHZzNpwxj1onBOvqW89W+V+XNG1dRuaFbNd3vT9CLbr2LXjEoq+3vn8DanWf7XU22Ug==}
+  eslint-plugin-vue@9.33.0:
+    resolution: {integrity: sha512-174lJKuNsuDIlLpjeXc5E2Tss8P44uIimAfGD0b90k0NoirJqpG7stLuU9Vp/9ioTOrQdWVREc4mRd1BD+CvGw==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^9.21.0
@@ -4184,11 +4184,11 @@ packages:
   svg-tags@1.0.0:
     resolution: {integrity: sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==}
 
-  svgo-config@0.7.0:
-    resolution: {integrity: sha512-vRlrk0NItE2tmaXPtwN2h8Phx8oWcRCqigN4faBGk3/Gsxb+Lo4GraIYBFTmrS4YeCtixYoGUnxMjZP+cM8f+Q==}
-    engines: {node: '>=20.0.0 || ^16.13.0 || ^18.12.0'}
+  svgo-config@0.9.0:
+    resolution: {integrity: sha512-DDMozQuHrPQCxPRdrf8BY5Xfq85EmLQuce2bD+XhQGqT5qpef9MdnAb0NVFN1UPijKOfPMJAGcy6t3pNyC4uig==}
+    engines: {node: '>=22.11.0'}
     peerDependencies:
-      svgo: ^3.2.0
+      svgo: ^3.3.2
 
   svgo@3.3.2:
     resolution: {integrity: sha512-OoohrmuUlBs8B8o6MB2Aevn+pRIH9zDALSR+6hhqVfa6fRwG/Qw9VUMSMW9VNg2CFc/MTIfabtdOVl9ODIJjpw==}
@@ -6419,7 +6419,7 @@ snapshots:
       semver: 7.7.1
       strip-indent: 4.0.0
 
-  eslint-plugin-vue@9.32.0(eslint@9.21.0(jiti@2.4.2)):
+  eslint-plugin-vue@9.33.0(eslint@9.21.0(jiti@2.4.2)):
     dependencies:
       '@eslint-community/eslint-utils': 4.4.1(eslint@9.21.0(jiti@2.4.2))
       eslint: 9.21.0(jiti@2.4.2)
@@ -8475,7 +8475,7 @@ snapshots:
 
   svg-tags@1.0.0: {}
 
-  svgo-config@0.7.0(svgo@3.3.2):
+  svgo-config@0.9.0(svgo@3.3.2):
     dependencies:
       svgo: 3.3.2
 

@@ -2022,6 +2022,7 @@
           "ExportAllDeclaration": [
             "exported",
             "source",
+            "attributes",
           ],
           "ExportDefaultDeclaration": [
             "declaration",
@@ -2030,6 +2031,7 @@
             "declaration",
             "specifiers",
             "source",
+            "attributes",
           ],
           "ExportSpecifier": [
             "exported",
@@ -2070,15 +2072,21 @@
             "consequent",
             "alternate",
           ],
+          "ImportAttribute": [
+            "key",
+            "value",
+          ],
           "ImportDeclaration": [
             "specifiers",
             "source",
+            "attributes",
           ],
           "ImportDefaultSpecifier": [
             "local",
           ],
           "ImportExpression": [
             "source",
+            "options",
           ],
           "ImportNamespaceSpecifier": [
             "local",
@@ -2254,6 +2262,9 @@
             "left",
             "right",
           ],
+          "VGenericExpression": [
+            "params",
+          ],
           "VIdentifier": [],
           "VLiteral": [],
           "VOnExpression": [
@@ -2299,7 +2310,7 @@
       },
       "meta": {
         "name": "vue-eslint-parser",
-        "version": "9.4.3",
+        "version": "10.1.1",
       },
       "parse": [Function],
       "parseForESLint": [Function],
@@ -2332,7 +2343,7 @@
   "processor": {
     "meta": {
       "name": "eslint-plugin-vue",
-      "version": "9.33.0",
+      "version": "10.0.0",
     },
     "postprocess": [Function],
     "preprocess": [Function],
@@ -3782,6 +3793,9 @@
     "vue/attribute-hyphenation": [
       "warn",
     ],
+    "vue/block-order": [
+      "warn",
+    ],
     "vue/comment-directive": [
       "error",
     ],
@@ -3813,6 +3827,9 @@
     "vue/no-deprecated-data-object-declaration": [
       "error",
     ],
+    "vue/no-deprecated-delete-set": [
+      "error",
+    ],
     "vue/no-deprecated-destroyed-lifecycle": [
       "error",
     ],
@@ -3835,6 +3852,9 @@
       "error",
     ],
     "vue/no-deprecated-inline-template": [
+      "error",
+    ],
+    "vue/no-deprecated-model-definition": [
       "error",
     ],
     "vue/no-deprecated-props-default-this": [
@@ -3905,6 +3925,9 @@
     ],
     "vue/no-ref-as-operand": [
       "error",
+    ],
+    "vue/no-required-prop-with-default": [
+      "warn",
     ],
     "vue/no-reserved-component-names": [
       "error",
@@ -4038,7 +4061,7 @@
         "autofix": true,
       },
     ],
-    "vue/v-on-function-call": [
+    "vue/v-on-handler-style": [
       "warn",
     ],
     "vue/v-on-style": [
@@ -4051,6 +4074,9 @@
       "error",
     ],
     "vue/valid-define-emits": [
+      "error",
+    ],
+    "vue/valid-define-options": [
       "error",
     ],
     "vue/valid-define-props": [

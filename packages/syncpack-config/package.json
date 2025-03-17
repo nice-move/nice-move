@@ -31,7 +31,7 @@
     "yaml": "catalog:"
   },
   "peerDependencies": {
-    "syncpack": "^13.0.2"
+    "syncpack": "^13.0.3"
   },
   "engines": {
     "node": "^20.18.1 || ^22.11.0"

@@ -45,10 +45,10 @@
     "cheetor": "^0.13.0"
   },
   "devDependencies": {
-    "@commitlint/format": "^19.5.0",
-    "@commitlint/lint": "^19.7.1",
+    "@commitlint/format": "^19.8.0",
+    "@commitlint/lint": "^19.8.0",
     "execa": "catalog:",
-    "lint-staged": "^15.4.3",
+    "lint-staged": "^15.5.0",
     "settingz": "catalog:"
   },
   "engines": {

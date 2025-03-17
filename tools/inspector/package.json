@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "main": "index.mjs",
   "dependencies": {
-    "@commitlint/load": "^19.6.1",
+    "@commitlint/load": "^19.8.0",
     "@eslint/eslintrc": "^3.3.0",
     "@eslint/js": "catalog:",
     "lodash": "catalog:",

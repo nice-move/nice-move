@@ -10,4 +10,5 @@
     "risd",
     "unlicense",
   ],
+  "typescript.tsdk": "node_modules\\typescript\\lib",
 }

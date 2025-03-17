@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.12.12",
+  "version": "0.12.13",
   "description": "A `eslint` config for `react` project best practice",
   "license": "MIT",
   "author": {
@@ -40,7 +40,7 @@
     "@eslint/eslintrc": "^3.3.0",
     "@nice-move/eslint-config-base": "workspace:~",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^10.0.2",
+    "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.4",

@@ -11,12 +11,16 @@ const require = createRequire(import.meta.url);
 const cwd = process.cwd();
 
 function fixPath(path) {
-  return slash(
+  const io = slash(
     path
       .replace(/^file:\/\/\//, '')
       .replace(slash(cwd), '/<:root>')
       .replace(cwd, '/<:root>'),
   );
+
+  return io.startsWith('/<:root>') && io.length > 40
+    ? `${io.slice(0, 16)}****${io.slice(-16)}`
+    : io;
 }
 
 export function eslintInspector(configName, filename) {

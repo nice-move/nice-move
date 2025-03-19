@@ -4301,7 +4301,7 @@
     ],
     "import/ignore": false,
     "import/parsers": {
-      "/<:root>/packages/eslint-config-base/lib/jsx-parser.cjs": [
+      "/<:root>/package****b/jsx-parser.cjs": [
         ".jsx",
       ],
       "@typescript-eslint/parser": [
@@ -4315,7 +4315,7 @@
       ],
     },
     "import/resolver": {
-      "/<:root>/packages/eslint-config-base/lib/node-next-resolver.cjs": {
+      "/<:root>/package****ext-resolver.cjs": {
         "importHttp": true,
       },
       "node": false,

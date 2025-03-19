@@ -33,7 +33,7 @@
     "@bring-it/cli": "^0.10.0",
     "@bring-it/npm": "^0.6.0",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
-    "@vitest/ui": "^3.0.8",
+    "@vitest/ui": "^3.0.9",
     "best-shot": "^0.9.4",
     "eslint": "catalog:",
     "garou": "catalog:",
@@ -44,7 +44,7 @@
     "stylelint": "catalog:",
     "syncpack": "^13.0.3",
     "typescript": "catalog:",
-    "vitest": "^3.0.8"
+    "vitest": "^3.0.9"
   },
   "peerDependencies": {
     "@commitlint/load": "^19.8.0",
@@ -78,10 +78,10 @@
       "lint-staged": "patches/lint-staged.patch"
     }
   },
-  "packageManager": "pnpm@9.15.9",
+  "packageManager": "pnpm@10.6.4",
   "engines": {
     "node": "^20.18.1 || ^22.11.0",
-    "pnpm": "^9.15.9"
+    "pnpm": "^10.6.4"
   },
   "nice-move": {
     "bundle": [

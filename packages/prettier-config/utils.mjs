@@ -22,7 +22,7 @@ export function loadOrderPreset() {
       // eslint-disable-next-line import/no-unresolved
     } = require('@nice-move/config/package.json');
 
-    return [config, internalRegex].filter(Boolean);
+    return [...config, internalRegex].map((item) => item || '');
   } catch {
     return [];
   }

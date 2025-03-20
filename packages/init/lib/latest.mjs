@@ -23,7 +23,7 @@ export default {
   vue: '~3.5.13',
   'eslint-config-base': '^0.12.13',
   'stylelint-config': '^0.10.9',
-  'prettier-config': '^0.14.11',
+  'prettier-config': '^0.14.12',
   'syncpack-config': '^0.2.9',
   tsconfig: '^0.2.9',
   cli: '^0.11.21',

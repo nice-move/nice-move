@@ -35,6 +35,11 @@
     ],
     "at-rule-no-deprecated": [
       true,
+      {
+        "ignoreAtRules": [
+          "apply",
+        ],
+      },
     ],
     "at-rule-no-unknown": [
       true,
@@ -81,6 +86,11 @@
     ],
     "declaration-property-value-no-unknown": [
       true,
+      {
+        "ignoreProperties": {
+          "/.+/": "/\d+rpx/",
+        },
+      },
     ],
     "font-family-name-quotes": [
       "always-where-recommended",

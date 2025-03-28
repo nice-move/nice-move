@@ -1,6 +1,6 @@
 'use strict';
 
-const { isReachable, haveLocalDependencies } = require('settingz');
+const { isReachable, haveLocalDependencies, getPkg } = require('settingz');
 
 // eslint-disable-next-line consistent-return
 function isMiniApp(value) {
@@ -8,7 +8,8 @@ function isMiniApp(value) {
     isReachable('./mini.project.json') ||
     isReachable('./project.alipay.json') ||
     isReachable('./project.config.json') ||
-    isReachable('./project.swan.json')
+    isReachable('./project.swan.json') ||
+    getPkg('nice-move').isMiniApp
   ) {
     return value;
   }

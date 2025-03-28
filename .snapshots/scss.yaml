@@ -111,6 +111,11 @@
     ],
     "at-rule-no-deprecated": [
       true,
+      {
+        "ignoreAtRules": [
+          "apply",
+        ],
+      },
     ],
     "at-rule-prelude-no-invalid": [
       true,
@@ -154,6 +159,11 @@
     ],
     "declaration-property-value-no-unknown": [
       true,
+      {
+        "ignoreProperties": {
+          "/.+/": "/\d+rpx/",
+        },
+      },
     ],
     "font-family-name-quotes": [
       "always-where-recommended",
@@ -276,9 +286,6 @@
     "scss/at-if-no-null": [
       true,
     ],
-    "scss/at-import-partial-extension": [
-      "always",
-    ],
     "scss/at-mixin-argumentless-call-parentheses": [
       "always",
     ],
@@ -315,6 +322,9 @@
     ],
     "scss/function-unquote-no-unquoted-strings-inside": [
       true,
+    ],
+    "scss/load-partial-extension": [
+      "always",
     ],
     "scss/no-duplicate-dollar-variables": [
       true,

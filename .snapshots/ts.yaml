@@ -1944,7 +1944,7 @@
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.26.1",
+        "version": "8.28.0",
       },
       "parseForESLint": [Function],
     },
@@ -3062,6 +3062,7 @@
     ],
     "unicorn/escape-case": [
       "error",
+      "uppercase",
     ],
     "unicorn/explicit-length-check": [
       "error",

@@ -34,7 +34,7 @@
     "@bring-it/npm": "^0.6.0",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "@vitest/ui": "^3.0.9",
-    "best-shot": "^0.9.4",
+    "best-shot": "^0.9.7",
     "eslint": "catalog:",
     "garou": "catalog:",
     "nodemon": "^3.1.9",

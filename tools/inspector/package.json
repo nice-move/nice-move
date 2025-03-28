@@ -6,7 +6,7 @@
   "main": "index.mjs",
   "dependencies": {
     "@commitlint/load": "^19.8.0",
-    "@eslint/eslintrc": "^3.3.0",
+    "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "catalog:",
     "lodash": "catalog:",
     "slash": "^5.1.0",

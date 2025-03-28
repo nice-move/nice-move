@@ -20,7 +20,7 @@ module.exports = {
     ],
     'scss/at-extend-no-missing-placeholder': true,
     'scss/at-if-no-null': true,
-    'scss/at-import-partial-extension': 'always',
+    'scss/load-partial-extension': 'always',
     'scss/at-mixin-argumentless-call-parentheses': 'always',
     'scss/at-rule-conditional-no-parentheses': true,
     'scss/at-rule-no-unknown': AT_RULE_NO_UNKNOWN,

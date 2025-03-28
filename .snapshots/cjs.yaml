@@ -3519,6 +3519,7 @@
     ],
     "unicorn/escape-case": [
       "error",
+      "uppercase",
     ],
     "unicorn/explicit-length-check": [
       "error",

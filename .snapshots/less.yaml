@@ -36,11 +36,6 @@
     ],
     "at-rule-no-deprecated": [
       true,
-      {
-        "ignoreAtRules": [
-          "apply",
-        ],
-      },
     ],
     "at-rule-no-unknown": [
       true,
@@ -87,11 +82,6 @@
     ],
     "declaration-property-value-no-unknown": [
       true,
-      {
-        "ignoreProperties": {
-          "/.+/": "/\d+rpx/",
-        },
-      },
     ],
     "font-family-name-quotes": [
       "always-where-recommended",
@@ -207,9 +197,8 @@
     ],
     "selector-disallowed-list": [
       [
-        "*",
-        /\^\(\?!page\)\[A-Za-z\]\+\$/,
-        /\[/:\\\\\]/,
+        /,\\s\*,/,
+        /\^\\s\*,\\s\*/,
       ],
     ],
     "selector-max-compound-selectors": [
@@ -236,8 +225,8 @@
     "selector-type-no-unknown": [
       true,
       {
-        "ignoreTypes": [
-          "page",
+        "ignore": [
+          "custom-elements",
         ],
       },
     ],
@@ -258,14 +247,6 @@
     ],
     "time-min-milliseconds": [
       200,
-    ],
-    "unit-no-unknown": [
-      true,
-      {
-        "ignoreUnits": [
-          "rpx",
-        ],
-      },
     ],
   },
 }

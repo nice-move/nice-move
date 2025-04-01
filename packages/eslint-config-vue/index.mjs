@@ -6,17 +6,11 @@ import base from '@nice-move/eslint-config-base';
 import { getGlobals } from '@nice-move/eslint-config-base/lib/utils.mjs';
 import prettier from 'eslint-config-prettier';
 import pluginVue from 'eslint-plugin-vue';
-import { getPkg, reaching } from 'settingz';
+import { getPkg } from 'settingz';
 
-function getVersion() {
-  const { vue = '' } = getPkg('dependencies');
+const version = '3.5.13';
 
-  return vue.replaceAll(/[=>^~]/g, '');
-}
-
-const version = getVersion();
-
-const config = reaching('./project.config.json');
+const { isMiniApp } = getPkg('nice-move');
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -76,7 +70,7 @@ export default [
       ...(version
         ? { 'vue/no-unsupported-features': ['error', { version }] }
         : undefined),
-      ...(config.id
+      ...(isMiniApp
         ? {
             'vue/no-v-text-v-html-on-component': [
               'error',

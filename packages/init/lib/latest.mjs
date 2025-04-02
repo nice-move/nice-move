@@ -21,7 +21,7 @@ export default {
   'react-dom': '~18.3.1',
   tailwindcss: '^3.4.17',
   vue: '~3.5.13',
-  'eslint-config-base': '^0.12.15',
+  'eslint-config-base': '^0.12.16',
   'stylelint-config': '^0.10.12',
   'prettier-config': '^0.14.12',
   'syncpack-config': '^0.2.9',

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.12.15",
+  "version": "0.12.16",
   "description": "A `eslint` config for `react` project best practice",
   "license": "MIT",
   "author": {

@@ -1,5 +1,9 @@
+import { createRequire } from 'node:module';
+
 import globals from 'globals';
 import { getPkg } from 'settingz';
+
+export const require = createRequire(import.meta.url);
 
 export function pkgHas(checker, getResult) {
   const pkg = getPkg();
@@ -13,9 +17,18 @@ export function pkgHas(checker, getResult) {
   return [];
 }
 
+function getConfig(name) {
+  try {
+    // eslint-disable-next-line import/no-unresolved
+    return require('@nice-move/config/package.json')[name];
+  } catch {
+    return null;
+  }
+}
+
 // eslint-disable-next-line consistent-return
 export function configHas(checker, getResult) {
-  const pkg = getPkg('nice-move');
+  const pkg = getConfig('nice-move') || getPkg('nice-move');
 
   const io = checker(pkg);
 

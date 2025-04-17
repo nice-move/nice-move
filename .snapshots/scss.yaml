@@ -123,6 +123,15 @@
     "block-no-empty": [
       true,
     ],
+    "color-function-alias-notation": [
+      "without-alpha",
+    ],
+    "container-name-pattern": [
+      "^(--)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
+    ],
     "custom-property-no-missing-var-function": [
       true,
     ],
@@ -187,6 +196,12 @@
     ],
     "keyframe-selector-notation": [
       "percentage-unless-within-keyword-only-block",
+    ],
+    "layer-name-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      {
+        "message": [Function],
+      },
     ],
     "lightness-notation": [
       "percentage",
@@ -385,6 +400,9 @@
       true,
     ],
     "suitcss/selector-root-no-composition": [
+      true,
+    ],
+    "syntax-string-no-invalid": [
       true,
     ],
     "time-min-milliseconds": [

@@ -3,7 +3,7 @@
   "name": "@nice-move/latest",
   "version": "0.0.0",
   "bin": {
-    "pin-latest": "index.cjs"
+    "pin-latest": "index.mjs"
   },
   "dependencies": {
     "fs-chain": "catalog:"
@@ -12,8 +12,9 @@
     "@bring-it/npm": "^0.6.0",
     "@bring-it/sftp": "^0.4.0",
     "@nice-move/init": "workspace:~",
-    "@playwright/test": "~1.50.1",
-    "@types/react": "~18.3.18",
+    "@nice-move/syncpack-config": "workspace:~",
+    "@playwright/test": "~1.51.1",
+    "@types/react": "~18.3.20",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "react": "~18.3.1",
     "react-dom": "~18.3.1",

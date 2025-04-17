@@ -53,7 +53,11 @@ function action(isRoot, wanted = {}) {
         useLint ? 'npm run lint:staged' : undefined,
         typescript ? 'npm run lint:type' : undefined,
         ava ? 'npm test' : undefined,
-      ].filter(Boolean);
+      ]
+        .filter(Boolean)
+        .map((line, idx, lines) =>
+          idx === lines - 1 ? line : `${line}  || exit 1`,
+        );
 
       if (prepublishOnly.length > 0) {
         await new Text()

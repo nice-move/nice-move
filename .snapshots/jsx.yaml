@@ -2434,6 +2434,7 @@
           "componentDidCatch",
           "getSnapshotBeforeUpdate",
         ],
+        "ignoreOverrideMethods": false,
       },
     ],
     "consistent-return": [

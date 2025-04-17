@@ -34,7 +34,7 @@
     "@bring-it/npm": "^0.6.0",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "@vitest/ui": "^3.1.1",
-    "best-shot": "^0.9.7",
+    "best-shot": "^0.9.11",
     "eslint": "catalog:",
     "garou": "catalog:",
     "nodemon": "^3.1.9",
@@ -64,7 +64,7 @@
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~",
-    "@types/node": "^22.13.10"
+    "@types/node": "^22.14.1"
   },
   "pnpm": {
     "overrides": {
@@ -78,10 +78,10 @@
       "lint-staged": "patches/lint-staged.patch"
     }
   },
-  "packageManager": "pnpm@10.6.4",
+  "packageManager": "pnpm@10.8.1",
   "engines": {
     "node": "^20.18.1 || ^22.11.0",
-    "pnpm": "^10.6.4"
+    "pnpm": "^10.8.1"
   },
   "nice-move": {
     "bundle": [

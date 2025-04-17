@@ -1,7 +1,6 @@
 #!/bin/sh
 
-pnpm exec pin-latest
-git add ./packages/init/lib/latest.mjs
-pnpm run lint:staged
-pnpm run lint:version
+pnpm exec pin-latest || exit 1
+git add ./packages/init/lib/latest.mjs || exit 1
+pnpm run lint:staged || exit 1
 pnpm test

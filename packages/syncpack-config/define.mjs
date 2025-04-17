@@ -1,12 +1,11 @@
-'use strict';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const { fileURLToPath } = require('node:url');
-const { join } = require('node:path');
-const { readFileSync } = require('node:fs');
-const { findWorkspaces } = require('find-workspaces');
-const { parse } = require('yaml');
+import { findWorkspaces } from 'find-workspaces';
+import { parse } from 'yaml';
 
-function readYaml() {
+export function readYaml() {
   const path = join(process.cwd(), 'pnpm-workspace.yaml');
 
   const file = readFileSync(path, 'utf8');
@@ -14,14 +13,17 @@ function readYaml() {
   return parse(file).catalog || {};
 }
 
-module.exports = function defineConfig(url, config = {}) {
+export function defineConfig(url, config = {}) {
   let pkg = {};
 
   try {
-    pkg = require(
-      url === '~'
-        ? join(process.cwd(), 'package.json')
-        : join(fileURLToPath(url), '../package.json'),
+    pkg = JSON.parse(
+      readFileSync(
+        url === '~'
+          ? join(process.cwd(), 'package.json')
+          : join(fileURLToPath(url), '../package.json'),
+        'utf8',
+      ),
     );
   } catch (error) {
     console.error(error);
@@ -125,4 +127,4 @@ module.exports = function defineConfig(url, config = {}) {
       },
     ].filter(Boolean),
   };
-};
+}

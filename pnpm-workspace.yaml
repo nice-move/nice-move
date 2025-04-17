@@ -4,16 +4,16 @@ packages:
   - tools/*
 
 catalog:
-  '@eslint/js': ^9.23.0
+  '@eslint/js': ^9.24.0
   chalk: ^5.4.1
-  eslint: ^9.23.0
+  eslint: ^9.24.0
   execa: ^9.5.2
-  fs-chain: ^9.0.0
+  fs-chain: ^10.0.0
   garou: ^0.9.5
   globals: ^16.0.0
   lodash: ^4.17.21
   settingz: ^0.2.0
   sort-keys: ^5.1.0
-  stylelint: ^16.17.0
-  typescript: ~5.8.2
+  stylelint: ^16.18.0
+  typescript: ~5.8.3
   yaml: ^2.7.1

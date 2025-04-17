@@ -1,15 +1,17 @@
 #!/usr/bin/env node
+import { createRequire } from 'node:module';
 
-'use strict';
+import { readYaml } from '@nice-move/syncpack-config/define.mjs';
+import { JsonToText } from 'fs-chain';
 
-const { JsonToText } = require('fs-chain');
+const require = createRequire(import.meta.url);
 
 function getLocalVersion(...names) {
   return Object.fromEntries(
     names.map((name) => {
       const pkg = require(`@nice-move/${name}/package.json`);
 
-      return [name, `^${pkg.version}`];
+      return [`@nice-move/${name}`, `^${pkg.version}`];
     }),
   );
 }
@@ -26,7 +28,9 @@ new JsonToText()
       'syncpack-config',
       'tsconfig',
       'cli',
+      'init',
     ),
+    ...readYaml(),
     lts: require('@nice-move/init/package.json').engines.node,
   }))
   .onDone((data) => `export default ${JSON.stringify(data)}`)

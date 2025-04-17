@@ -2413,6 +2413,7 @@
       {
         "enforceForClassFields": true,
         "exceptMethods": [],
+        "ignoreOverrideMethods": false,
       },
     ],
     "consistent-return": [

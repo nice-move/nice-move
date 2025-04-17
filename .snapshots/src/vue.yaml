@@ -2310,7 +2310,7 @@
       },
       "meta": {
         "name": "vue-eslint-parser",
-        "version": "10.1.1",
+        "version": "10.1.3",
       },
       "parse": [Function],
       "parseForESLint": [Function],
@@ -2378,6 +2378,7 @@
       {
         "enforceForClassFields": true,
         "exceptMethods": [],
+        "ignoreOverrideMethods": false,
       },
     ],
     "consistent-return": [

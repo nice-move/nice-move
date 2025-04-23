@@ -33,18 +33,18 @@
     "@bring-it/cli": "^0.10.0",
     "@bring-it/npm": "^0.6.0",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
-    "@vitest/ui": "^3.1.1",
-    "best-shot": "^0.9.11",
+    "@vitest/ui": "^3.1.2",
+    "best-shot": "^0.9.12",
     "eslint": "catalog:",
     "garou": "catalog:",
-    "nodemon": "^3.1.9",
+    "nodemon": "^3.1.10",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "stylelint": "catalog:",
     "syncpack": "^13.0.3",
     "typescript": "catalog:",
-    "vitest": "^3.1.1"
+    "vitest": "^3.1.2"
   },
   "peerDependencies": {
     "@commitlint/load": "^19.8.0",

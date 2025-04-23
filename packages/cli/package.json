@@ -48,7 +48,7 @@
     "@commitlint/format": "^19.8.0",
     "@commitlint/lint": "^19.8.0",
     "execa": "catalog:",
-    "lint-staged": "^15.5.0",
+    "lint-staged": "^15.5.1",
     "settingz": "catalog:"
   },
   "engines": {

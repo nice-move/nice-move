@@ -1,5 +1,7 @@
 import { relative } from 'node:path';
+
 import { reaching } from 'settingz';
+
 import { getGlobals } from './utils.mjs';
 
 const cwd = process.cwd();
@@ -125,6 +127,7 @@ function generate({
           parseInt: false,
           require: false,
           undefined: false,
+          console: 'readonly',
         },
         parserOptions: {
           ecmaFeatures: {
@@ -148,6 +151,7 @@ function generate({
         'unicorn/prefer-includes': 0,
         'unicorn/prefer-module': 0,
         'unicorn/prefer-string-replace-all': 0,
+        'unicorn/prefer-at': 0,
         'no-restricted-globals': [
           'error',
           'AggregateError',

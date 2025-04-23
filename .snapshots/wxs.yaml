@@ -1699,7 +1699,7 @@
       "close": "off",
       "closed": "off",
       "confirm": "off",
-      "console": "off",
+      "console": "readonly",
       "cookieStore": "off",
       "createImageBitmap": "off",
       "credentialless": "off",
@@ -3614,13 +3614,6 @@
     ],
     "unicorn/prefer-array-some": [
       "error",
-    ],
-    "unicorn/prefer-at": [
-      "error",
-      {
-        "checkAllIndexAccess": false,
-        "getLastElementFunctions": [],
-      },
     ],
     "unicorn/prefer-blob-reading-methods": [
       "error",

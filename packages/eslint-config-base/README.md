@@ -36,12 +36,12 @@ eslint --fix .
 
 ## Specification
 
-| Environment | pattern                                                                                      |
-| :---------- | :------------------------------------------------------------------------------------------- |
-| browser     | `.js`, `.html`                                                                               |
-| node.js     | `.mjs`, `.mts`, `.cjs`, `.cts`                                                               |
-| es modules  | `.mjs`, `.mts`, `.js`, `.html`                                                               |
-| commonjs    | `.cjs`, source code in webpack project                                                       |
+| Environment | pattern                                |
+| :---------- | :------------------------------------- |
+| browser     | `.js`, `.html`                         |
+| node.js     | `.mjs`, `.mts`, `.cjs`, `.cts`         |
+| es modules  | `.mjs`, `.mts`, `.js`, `.html`         |
+| commonjs    | `.cjs`, source code in webpack project |
 
 ## Tips
 

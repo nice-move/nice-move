@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-vue",
-  "version": "0.12.18",
+  "version": "0.12.19",
   "description": "A `eslint` config for `vue` project best practice",
   "license": "MIT",
   "author": {
@@ -27,7 +27,7 @@
   "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/eslint-config-vue",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nice-move/nice-move.git",
+    "url": "git+https://github.com/nice-move/nice-move.git",
     "directory": "packages/eslint-config-vue"
   },
   "bugs": {

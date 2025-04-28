@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.12.18",
+  "version": "0.12.19",
   "description": "A `eslint` config for `react` project best practice",
   "license": "MIT",
   "author": {
@@ -28,7 +28,7 @@
   "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/eslint-config-react",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nice-move/nice-move.git",
+    "url": "git+https://github.com/nice-move/nice-move.git",
     "directory": "packages/eslint-config-react"
   },
   "bugs": {
@@ -44,7 +44,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-hooks": "^6.0.0",
     "globals": "catalog:",
     "settingz": "catalog:"
   },

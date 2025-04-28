@@ -11,7 +11,7 @@
   "homepage": "https://github.com/nice-move/nice-move",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nice-move/nice-move.git"
+    "url": "git+https://github.com/nice-move/nice-move.git"
   },
   "bugs": {
     "url": "https://github.com/nice-move/nice-move/issues"
@@ -42,7 +42,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "stylelint": "catalog:",
-    "syncpack": "^13.0.3",
+    "syncpack": "^13.0.4",
     "typescript": "catalog:",
     "vitest": "^3.1.2"
   },
@@ -64,12 +64,12 @@
     "@nice-move/stylelint-config": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
     "@nice-move/tsconfig": "workspace:~",
-    "@types/node": "^22.14.1"
+    "@types/node": "^22.15.3"
   },
   "pnpm": {
     "overrides": {
       "eslint": "catalog:",
-      "eslint-plugin-react-hooks": "^5.2.0",
+      "eslint-plugin-react-hooks": "^6.0.0",
       "globals": "catalog:"
     },
     "patchedDependencies": {
@@ -78,10 +78,10 @@
       "lint-staged": "patches/lint-staged.patch"
     }
   },
-  "packageManager": "pnpm@10.8.1",
+  "packageManager": "pnpm@10.10.0",
   "engines": {
     "node": "^20.18.1 || ^22.11.0",
-    "pnpm": "^10.8.1"
+    "pnpm": "^10.10.0"
   },
   "nice-move": {
     "bundle": [

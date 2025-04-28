@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.12.18",
+  "version": "0.12.19",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -26,7 +26,7 @@
   "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/eslint-config-base",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nice-move/nice-move.git",
+    "url": "git+https://github.com/nice-move/nice-move.git",
     "directory": "packages/eslint-config-base"
   },
   "bugs": {
@@ -46,12 +46,12 @@
     "eslint-plugin-n": "^17.17.0",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-regexp": "^2.7.0",
-    "eslint-plugin-unicorn": "^58.0.0",
+    "eslint-plugin-unicorn": "^59.0.0",
     "espree": "^10.3.0",
     "globals": "catalog:",
     "resolve.exports": "^2.0.3",
     "settingz": "catalog:",
-    "typescript-eslint": "^8.31.0"
+    "typescript-eslint": "^8.31.1"
   },
   "peerDependencies": {
     "eslint": "catalog:"

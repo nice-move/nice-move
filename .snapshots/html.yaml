@@ -2428,10 +2428,6 @@
     "unicorn/no-array-method-this-argument": [
       "error",
     ],
-    "unicorn/no-array-push-push": [
-      "error",
-      {},
-    ],
     "unicorn/no-await-expression-member": [
       "error",
     ],
@@ -2466,9 +2462,6 @@
       "error",
     ],
     "unicorn/no-invalid-remove-event-listener": [
-      "error",
-    ],
-    "unicorn/no-length-as-slice-end": [
       "error",
     ],
     "unicorn/no-lonely-if": [
@@ -2516,10 +2509,19 @@
         "checkGlobalVariables": false,
       },
     ],
+    "unicorn/no-unnecessary-array-flat-depth": [
+      "error",
+    ],
+    "unicorn/no-unnecessary-array-splice-count": [
+      "error",
+    ],
     "unicorn/no-unnecessary-await": [
       "error",
     ],
     "unicorn/no-unnecessary-polyfills": [
+      "error",
+    ],
+    "unicorn/no-unnecessary-slice-end": [
       "error",
     ],
     "unicorn/no-unreadable-array-destructuring": [
@@ -2693,6 +2695,10 @@
     ],
     "unicorn/prefer-set-size": [
       "error",
+    ],
+    "unicorn/prefer-single-call": [
+      "error",
+      {},
     ],
     "unicorn/prefer-spread": [
       "error",

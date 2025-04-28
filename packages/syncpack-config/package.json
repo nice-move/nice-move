@@ -18,7 +18,7 @@
   "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/syncpack-config",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nice-move/nice-move.git",
+    "url": "git+https://github.com/nice-move/nice-move.git",
     "directory": "packages/syncpack-config"
   },
   "bugs": {
@@ -31,7 +31,7 @@
     "yaml": "catalog:"
   },
   "peerDependencies": {
-    "syncpack": "^13.0.3"
+    "syncpack": "^13.0.4"
   },
   "engines": {
     "node": "^20.18.1 || ^22.11.0"

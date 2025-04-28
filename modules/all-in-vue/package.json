@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-vue",
-  "version": "0.4.21",
+  "version": "0.4.22",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -15,7 +15,7 @@
   "homepage": "https://github.com/nice-move/nice-move/tree/master/modules/all-in-vue",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nice-move/nice-move.git",
+    "url": "git+https://github.com/nice-move/nice-move.git",
     "directory": "modules/all-in-vue"
   },
   "bugs": {

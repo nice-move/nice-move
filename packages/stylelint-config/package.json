@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/stylelint-config",
-  "version": "0.10.13",
+  "version": "0.10.14",
   "description": "A `stylelint` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -28,6 +28,7 @@
     "url": "https://github.com/nice-move/nice-move/issues"
   },
   "main": "index.cjs",
+  "type": "commonjs",
   "dependencies": {
     "postcss": "^8.5.3",
     "postcss-html": "^1.8.0",

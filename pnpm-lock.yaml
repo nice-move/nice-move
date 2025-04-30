@@ -504,8 +504,8 @@ importers:
         specifier: npm:@nice-move/prettier-plugin-sort-imports@4.4.1-rc0
         version: '@nice-move/prettier-plugin-sort-imports@4.4.1-rc0(@vue/compiler-sfc@3.5.13)(prettier@3.5.3)'
       '@nice-move/prettier-plugin-package-json':
-        specifier: ^0.9.1
-        version: 0.9.1(prettier@3.5.3)
+        specifier: ^0.9.2
+        version: 0.9.2(prettier@3.5.3)
       '@prettier/plugin-xml':
         specifier: ^3.4.1
         version: 3.4.1(prettier@3.5.3)
@@ -1157,9 +1157,9 @@ packages:
     peerDependencies:
       eslint: ^9.25.1
 
-  '@nice-move/prettier-plugin-package-json@0.9.1':
-    resolution: {integrity: sha512-Usjj+NFeor3QcbGlTXWIceckFaLgSRWXRLpvVSuLkeFLtYNmAwz1VYuFjxFSXRm0LCzsA3ZmHVTYpMO9GYTkKg==}
-    engines: {node: '>=22.11.0 || ^20.5.0'}
+  '@nice-move/prettier-plugin-package-json@0.9.2':
+    resolution: {integrity: sha512-+54k5UPKbrkt3yDwxsziY9BZGuy7ZRvFBuq9lW2K0HwEEriPy+0HThW4DtqIlV2/B2S3lhI4cVD2Vr18HU1KXw==}
+    engines: {node: '>=22.11.0 || ^20.5.0', pnpm: '>=10.10.0'}
     peerDependencies:
       prettier: ^3.5.3
 
@@ -5172,7 +5172,7 @@ snapshots:
       globals: 16.0.0
       node-html-parser: 7.0.1
 
-  '@nice-move/prettier-plugin-package-json@0.9.1(prettier@3.5.3)':
+  '@nice-move/prettier-plugin-package-json@0.9.2(prettier@3.5.3)':
     dependencies:
       prettier: 3.5.3
 

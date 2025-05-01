@@ -1,5 +1,7 @@
 import { loadOrderPreset, loadPlugin, require } from './utils.mjs';
 
+const tailwind = loadPlugin('prettier-plugin-tailwindcss');
+
 export default {
   htmlWhitespaceSensitivity: 'css',
   iniSpaceAroundEquals: true,
@@ -83,35 +85,39 @@ export default {
     loadPlugin('prettier-plugin-nginx'),
     loadPlugin('prettier-plugin-ssh-config'),
     loadPlugin('@cospaia/prettier-plugin-clojure'),
-    loadPlugin('prettier-plugin-tailwindcss'),
+    tailwind,
   ].filter(Boolean),
   overrides: [
-    {
-      files: ['*.vue'],
-      options: {
-        tailwindAttributes: [
-          'label-class',
-          'value-class',
-          'title-class',
-          'class-name',
-        ],
-      },
-    },
-    {
-      files: ['*.jsx', '*.tsx'],
-      options: {
-        tailwindAttributes: [
-          'expandedRowClassName',
-          'maskClassName',
-          'overlayClassName',
-          'popupClassName',
-          'rootClassName',
-          'rowClassName',
-          'wrapClassName',
-          'wrapperClassName',
-        ],
-      },
-    },
+    ...(tailwind
+      ? [
+          {
+            files: ['*.vue'],
+            options: {
+              tailwindAttributes: [
+                'label-class',
+                'value-class',
+                'title-class',
+                'class-name',
+              ],
+            },
+          },
+          {
+            files: ['*.jsx', '*.tsx'],
+            options: {
+              tailwindAttributes: [
+                'expandedRowClassName',
+                'maskClassName',
+                'overlayClassName',
+                'popupClassName',
+                'rootClassName',
+                'rowClassName',
+                'wrapClassName',
+                'wrapperClassName',
+              ],
+            },
+          },
+        ]
+      : []),
     {
       files: ['*.json'],
       options: {

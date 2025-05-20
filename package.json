@@ -69,7 +69,7 @@
   "pnpm": {
     "overrides": {
       "eslint": "catalog:",
-      "eslint-plugin-react-hooks": "^6.0.0",
+      "eslint-plugin-react-hooks": "catalog:",
       "globals": "catalog:"
     },
     "patchedDependencies": {
@@ -81,7 +81,7 @@
   "packageManager": "pnpm@10.11.0",
   "engines": {
     "node": "^20.18.1 || ^22.11.0",
-    "pnpm": "^10.10.0"
+    "pnpm": "^10.11.0"
   },
   "nice-move": {
     "bundle": [

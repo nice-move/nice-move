@@ -8,7 +8,6 @@
     "/<:root>/**/miniprogram_npm/**",
   ],
   "pluginFunctions": {
-    "matterialize/stylelint-require-units": [Function],
     "plugin/declaration-block-no-ignored-properties": [Function],
     "plugin/no-unresolved-module": [Function],
     "suitcss/custom-property-no-outside-root": [Function],
@@ -19,7 +18,6 @@
     "/<:root>/node_mo****perties/index.js",
     "/<:root>/node_mo****suitcss/index.js",
     "/<:root>/node_mo****ule/esm/index.js",
-    "/<:root>/node_mo****require-units.js",
   ],
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true,
@@ -135,12 +133,6 @@
     ],
     "lightness-notation": [
       "percentage",
-    ],
-    "matterialize/stylelint-require-units": [
-      true,
-      {
-        "severity": "warning",
-      },
     ],
     "max-nesting-depth": [
       5,

@@ -1,5 +1,5 @@
 export const config = {
-  target: 'node18',
+  target: 'node20',
   entry: {
     cli: {
       import: './src/index.mjs',

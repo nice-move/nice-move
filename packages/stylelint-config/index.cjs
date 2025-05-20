@@ -17,7 +17,6 @@ module.exports = {
         'stylelint-declaration-block-no-ignored-properties',
         'stylelint-suitcss',
         'stylelint-no-unresolved-module',
-        'stylelint-require-units',
       ],
       rules: {
         'suitcss/root-no-standard-properties': true,
@@ -26,7 +25,6 @@ module.exports = {
           true,
           { severity: 'warning' },
         ],
-        'matterialize/stylelint-require-units': [true, { severity: 'warning' }],
         'plugin/no-unresolved-module': {
           modules: ['node_modules'],
         },

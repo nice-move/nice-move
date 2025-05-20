@@ -1,1 +1,1 @@
-export type { RcFile as default } from 'syncpack';
+export type { RcFile as default } from 'syncpack'

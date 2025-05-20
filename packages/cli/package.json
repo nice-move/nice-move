@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/cli",
-  "version": "0.11.23",
+  "version": "0.11.25",
   "description": "Frontend develop helper for frontend development",
   "license": "MIT",
   "author": {
@@ -38,7 +38,7 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "best-shot prod",
+    "build": "tsdown",
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {

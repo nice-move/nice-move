@@ -746,6 +746,7 @@
       "AggregateError": "readonly",
       "Array": "readonly",
       "ArrayBuffer": "readonly",
+      "AsyncDisposableStack": "readonly",
       "Atomics": "readonly",
       "BigInt": "readonly",
       "BigInt64Array": "readonly",
@@ -765,12 +766,14 @@
       "DataView": "readonly",
       "Date": "readonly",
       "DecompressionStream": "readonly",
+      "DisposableStack": "readonly",
       "Error": "readonly",
       "EvalError": "readonly",
       "Event": "readonly",
       "EventTarget": "readonly",
       "File": "readonly",
       "FinalizationRegistry": "readonly",
+      "Float16Array": "readonly",
       "Float32Array": "readonly",
       "Float64Array": "readonly",
       "FormData": "readonly",
@@ -817,6 +820,7 @@
       "SharedArrayBuffer": "readonly",
       "String": "readonly",
       "SubtleCrypto": "readonly",
+      "SuppressedError": "readonly",
       "Symbol": "readonly",
       "SyntaxError": "readonly",
       "TextDecoder": "readonly",
@@ -828,6 +832,7 @@
       "TypeError": "readonly",
       "URIError": "readonly",
       "URL": "readonly",
+      "URLPattern": "readonly",
       "URLSearchParams": "readonly",
       "Uint16Array": "readonly",
       "Uint32Array": "readonly",
@@ -2082,6 +2087,9 @@
     ],
     "no-shadow-restricted-names": [
       "error",
+      {
+        "reportGlobalThis": false,
+      },
     ],
     "no-sparse-arrays": [
       "error",
@@ -2155,6 +2163,7 @@
         "allowTaggedTemplates": false,
         "allowTernary": false,
         "enforceForJSX": false,
+        "ignoreDirectives": false,
       },
     ],
     "no-unused-labels": [
@@ -2197,6 +2206,9 @@
     ],
     "no-useless-escape": [
       "error",
+      {
+        "allowRegexCharacters": [],
+      },
     ],
     "no-useless-rename": [
       "error",

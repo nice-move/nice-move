@@ -13,13 +13,13 @@
     "@bring-it/sftp": "^0.4.0",
     "@nice-move/init": "workspace:~",
     "@nice-move/syncpack-config": "workspace:~",
-    "@playwright/test": "~1.51.1",
-    "@types/react": "~18.3.20",
+    "@playwright/test": "~1.52.0",
+    "@types/react": "~18.3.21",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "react": "~18.3.1",
     "react-dom": "~18.3.1",
     "tailwindcss": "^3.4.17",
-    "vue": "~3.5.13"
+    "vue": "~3.5.14"
   },
   "peerDependenciesMeta": {
     "@bring-it/npm": {

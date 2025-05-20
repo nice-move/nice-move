@@ -196,5 +196,11 @@ export default {
         requirePragma: true,
       },
     },
+    {
+      files: ['*.d.ts', '*.d.mts', '*.d.cts'],
+      options: {
+        semi: false,
+      },
+    },
   ],
 };

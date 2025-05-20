@@ -52,4 +52,10 @@ export default [
       '@typescript-eslint/no-require-imports': 0,
     },
   },
+  {
+    files: ['**/*.d.cts', '**/*.d.cts', '**/*.d.mts'],
+    rules: {
+      'no-use-before-define': 0,
+    },
+  },
 ];

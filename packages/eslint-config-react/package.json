@@ -38,7 +38,7 @@
   "type": "module",
   "dependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@nice-move/eslint-config-base": "workspace:~",
+    "@nice-move/eslint-config-base": "workspace:^",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-import": "^2.31.0",
@@ -52,7 +52,7 @@
     "eslint": "catalog:"
   },
   "engines": {
-    "node": "^20.18.1 || ^22.11.0"
+    "node": "^20.19.2 || ^22.14.0 || ^24.0.0"
   },
   "publishConfig": {
     "access": "public",

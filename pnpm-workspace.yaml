@@ -1,3 +1,15 @@
+shamefullyHoist: true
+
+overrides:
+  eslint: 'catalog:'
+  eslint-plugin-react-hooks: 'catalog:'
+  globals: 'catalog:'
+
+patchedDependencies:
+  '@commitlint/rules': patches/@commitlint__rules.patch
+  conventional-changelog-angular@7.0.0: patches/conventional-changelog-angular@7.0.0.patch
+  lint-staged: patches/lint-staged.patch
+
 packages:
   - packages/*
   - modules/*
@@ -9,7 +21,7 @@ catalog:
   eslint: ^9.27.0
   execa: ^9.5.3
   fs-chain: ^10.0.0
-  garou: ^0.9.7
+  garou: ^0.9.8
   globals: ^16.1.0
   lodash: ^4.17.21
   settingz: ^0.2.0

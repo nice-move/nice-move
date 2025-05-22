@@ -85,7 +85,7 @@ export function defineConfig(url, config = {}) {
             dependencies: ws.map((item) => item.package.name),
             dependencyTypes: ['!local'],
             label: 'Pin pnpm workspace',
-            pinVersion: 'workspace:~',
+            pinVersion: 'workspace:^',
           }
         : undefined,
       catalog.length > 0

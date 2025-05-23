@@ -4,7 +4,6 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,
-    "rewriteRelativeImportExtensions": true,
     "jsx": "preserve",
     "lib": [
       "DOM",

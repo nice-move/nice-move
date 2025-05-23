@@ -25,7 +25,7 @@ export default {
   '@nice-move/eslint-config-base': '^0.12.21',
   '@nice-move/stylelint-config': '^0.10.16',
   '@nice-move/prettier-config': '^0.14.15',
-  '@nice-move/tsconfig': '^0.2.9',
+  '@nice-move/tsconfig': '^0.2.10',
   '@nice-move/cli': '^0.11.25',
   '@eslint/js': '^9.27.0',
   chalk: '^5.4.1',

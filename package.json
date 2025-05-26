@@ -42,7 +42,7 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "stylelint": "catalog:",
     "syncpack": "^13.0.4",
-    "tsdown": "^0.12.1",
+    "tsdown": "^0.12.3",
     "typescript": "catalog:",
     "vitest": "^3.1.4"
   },

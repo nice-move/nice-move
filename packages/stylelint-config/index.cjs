@@ -89,7 +89,10 @@ module.exports = {
             },
           },
         ],
-        'at-rule-no-deprecated': [true, { ignoreAtRules: ['apply'] }],
+        'at-rule-no-deprecated': [
+          true,
+          { ignoreAtRules: ['apply', 'custom-variant', 'source'] },
+        ],
         'selector-type-no-unknown': [true, { ignoreTypes: ['page'] }],
         'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
         'selector-disallowed-list': ['*', /^(?!page)[A-Za-z]+$/, /[/\\]/],

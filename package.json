@@ -33,18 +33,18 @@
     "@bring-it/cli": "^0.10.0",
     "@bring-it/npm": "^0.6.0",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
-    "@vitest/ui": "^3.1.4",
+    "@vitest/ui": "^3.2.3",
     "eslint": "catalog:",
     "garou": "catalog:",
     "nodemon": "^3.1.10",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.4",
     "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
+    "prettier-plugin-tailwindcss": "^0.6.12",
     "stylelint": "catalog:",
     "syncpack": "^13.0.4",
-    "tsdown": "^0.12.3",
+    "tsdown": "^0.12.7",
     "typescript": "catalog:",
-    "vitest": "^3.1.4"
+    "vitest": "^3.2.3"
   },
   "peerDependencies": {
     "@commitlint/load": "^19.8.1",
@@ -64,21 +64,9 @@
     "@nice-move/stylelint-config": "workspace:^",
     "@nice-move/syncpack-config": "workspace:^",
     "@nice-move/tsconfig": "workspace:^",
-    "@types/node": "^22.15.21"
+    "@types/node": "^22.15.31"
   },
-  "pnpm": {
-    "overrides": {
-      "eslint": "catalog:",
-      "eslint-plugin-react-hooks": "catalog:",
-      "globals": "catalog:"
-    },
-    "patchedDependencies": {
-      "@commitlint/rules": "patches/@commitlint__rules.patch",
-      "conventional-changelog-angular@7.0.0": "patches/conventional-changelog-angular@7.0.0.patch",
-      "lint-staged": "patches/lint-staged.patch"
-    }
-  },
-  "packageManager": "pnpm@10.11.0",
+  "packageManager": "pnpm@10.12.1",
   "engines": {
     "node": "^20.19.2 || ^22.14.0 || ^24.0.0",
     "pnpm": "^10.11.0"

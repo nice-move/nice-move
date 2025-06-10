@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-vue",
-  "version": "0.12.21",
+  "version": "0.12.22",
   "description": "A `eslint` config for `vue` project best practice",
   "license": "MIT",
   "author": {
@@ -39,7 +39,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@nice-move/eslint-config-base": "workspace:^",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-vue": "^10.1.0",
+    "eslint-plugin-vue": "^10.2.0",
     "globals": "catalog:",
     "settingz": "catalog:",
     "vue-eslint-parser": "^10.1.3"

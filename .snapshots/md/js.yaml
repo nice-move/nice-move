@@ -187,8 +187,8 @@
             "attributes",
           ],
           "ExportSpecifier": [
-            "exported",
             "local",
+            "exported",
           ],
           "ExpressionStatement": [
             "expression",
@@ -401,7 +401,7 @@
             "argument",
           ],
         },
-        "latestEcmaVersion": 16,
+        "latestEcmaVersion": 17,
         "name": "espree",
         "parse": [Function],
         "supportedEcmaVersions": [
@@ -418,9 +418,10 @@
           14,
           15,
           16,
+          17,
         ],
         "tokenize": [Function],
-        "version": "10.3.0",
+        "version": "10.4.0",
       },
       "parserOptions": {},
       "sourceType": "module",
@@ -2145,8 +2146,8 @@
           "attributes",
         ],
         "ExportSpecifier": [
-          "exported",
           "local",
+          "exported",
         ],
         "ExpressionStatement": [
           "expression",
@@ -2359,7 +2360,7 @@
           "argument",
         ],
       },
-      "latestEcmaVersion": 16,
+      "latestEcmaVersion": 17,
       "name": "espree",
       "parse": [Function],
       "supportedEcmaVersions": [
@@ -2376,9 +2377,10 @@
         14,
         15,
         16,
+        17,
       ],
       "tokenize": [Function],
-      "version": "10.3.0",
+      "version": "10.4.0",
     },
     "parserOptions": {
       "ecmaFeatures": {
@@ -3026,7 +3028,9 @@
         "allow": [],
         "builtinGlobals": false,
         "hoist": "functions",
+        "ignoreFunctionTypeParameterNameValueShadow": true,
         "ignoreOnInitialization": false,
+        "ignoreTypeValueShadow": true,
       },
     ],
     "no-shadow-restricted-names": [
@@ -3076,7 +3080,10 @@
       {
         "allowNamedExports": false,
         "classes": true,
+        "enums": true,
         "functions": true,
+        "ignoreTypeReferences": true,
+        "typedefs": true,
         "variables": true,
       },
     ],

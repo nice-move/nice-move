@@ -80,23 +80,24 @@ module.exports = {
         require.resolve('./lib/prettier.cjs'),
         require.resolve('./lib/garou.cjs'),
       ],
-      rules: isMiniApp({
-        'declaration-property-value-no-unknown': [
-          true,
-          {
-            ignoreProperties: {
-              '/.+/': String.raw`/\d+rpx/`,
+      rules:
+        isMiniApp({
+          'declaration-property-value-no-unknown': [
+            true,
+            {
+              ignoreProperties: {
+                '/.+/': String.raw`/\d+rpx/`,
+              },
             },
-          },
-        ],
-        'at-rule-no-deprecated': [
-          true,
-          { ignoreAtRules: ['apply', 'custom-variant', 'source'] },
-        ],
-        'selector-type-no-unknown': [true, { ignoreTypes: ['page'] }],
-        'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
-        'selector-disallowed-list': ['*', /^(?!page)[A-Za-z]+$/, /[/\\]/],
-      }),
+          ],
+          'at-rule-no-deprecated': [
+            true,
+            { ignoreAtRules: ['apply', 'custom-variant', 'source'] },
+          ],
+          'selector-type-no-unknown': [true, { ignoreTypes: ['page'] }],
+          'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
+          'selector-disallowed-list': ['*', /^(?!page)[A-Za-z]+$/, /[/\\]/],
+        }) || {},
     },
   ],
 };

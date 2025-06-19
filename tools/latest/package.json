@@ -9,7 +9,7 @@
     "fs-chain": "catalog:"
   },
   "peerDependencies": {
-    "@bring-it/npm": "^0.6.0",
+    "@bring-it/npm": "^0.6.1",
     "@bring-it/sftp": "^0.4.0",
     "@nice-move/init": "workspace:^",
     "@nice-move/syncpack-config": "workspace:^",

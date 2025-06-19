@@ -524,8 +524,8 @@
         "attributes",
       ],
       "ExportSpecifier": [
-        "exported",
         "local",
+        "exported",
       ],
       "ExpressionStatement": [
         "expression",
@@ -740,7 +740,7 @@
     },
   },
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "globals": {
       "AI": "readonly",
       "AICreateMonitor": "readonly",
@@ -1966,7 +1966,7 @@
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.34.0",
+        "version": "8.34.1",
       },
       "parseForESLint": [Function],
     },

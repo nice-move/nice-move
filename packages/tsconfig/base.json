@@ -22,8 +22,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
     "allowUnreachableCode": false,
+    "verbatimModuleSyntax": true,
     "allowUnusedLabels": false
   },
   "display": "Base"

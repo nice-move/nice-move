@@ -43,7 +43,7 @@
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-markdown": "^5.1.0",
-    "eslint-plugin-n": "^17.19.0",
+    "eslint-plugin-n": "^17.20.0",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-regexp": "^2.9.0",
     "eslint-plugin-unicorn": "^59.0.1",
@@ -51,7 +51,7 @@
     "globals": "catalog:",
     "resolve.exports": "^2.0.3",
     "settingz": "catalog:",
-    "typescript-eslint": "^8.34.0"
+    "typescript-eslint": "^8.34.1"
   },
   "peerDependencies": {
     "eslint": "catalog:"

@@ -524,8 +524,8 @@
         "attributes",
       ],
       "ExportSpecifier": [
-        "exported",
         "local",
+        "exported",
       ],
       "ExpressionStatement": [
         "expression",

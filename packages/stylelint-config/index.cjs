@@ -5,6 +5,7 @@ const { isMiniApp } = require('./lib/utils.cjs');
 module.exports = {
   reportNeedlessDisables: true,
   reportInvalidScopeDisables: true,
+  rules: {},
   overrides: [
     {
       files: ['**/*.*'],

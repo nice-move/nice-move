@@ -9,7 +9,7 @@ catalog:
   eslint: ^9.29.0
   execa: ^9.6.0
   fs-chain: ^10.0.0
-  garou: ^0.9.10
+  garou: ^0.9.11
   globals: ^16.2.0
   lodash: ^4.17.21
   settingz: ^0.2.0

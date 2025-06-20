@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Cheetor } from 'cheetor';
 
 process.on('SIGINT', () => {});

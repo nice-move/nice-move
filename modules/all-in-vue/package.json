@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-vue",
-  "version": "0.4.32",
+  "version": "0.4.33",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -20,6 +20,9 @@
   },
   "bugs": {
     "url": "https://github.com/nice-move/nice-move/issues"
+  },
+  "bin": {
+    "nice-move": "cli.mjs"
   },
   "main": "eslint.config.mjs",
   "type": "module",

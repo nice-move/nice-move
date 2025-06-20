@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-react",
-  "version": "0.4.33",
+  "version": "0.5.0",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -24,7 +24,11 @@
   "bin": {
     "nice-move": "cli.mjs"
   },
-  "main": "eslint.config.mjs",
+  "exports": {
+    "./eslint": "./eslint.config.mjs",
+    "./prettier": "./prettier.config.mjs",
+    "./stylelint": "./stylelint.config.mjs"
+  },
   "type": "module",
   "dependencies": {
     "@nice-move/cli": "workspace:^",

@@ -1,7 +1,7 @@
 {
-  "extends": "@nice-move/tsconfig/node.json",
+  "extends": "@nice-move/all-in-base/tsconfig",
   "include": ["./"],
   "compilerOptions": {
-    "types": ["node"],
+    "skipLibCheck": true,
   },
 }

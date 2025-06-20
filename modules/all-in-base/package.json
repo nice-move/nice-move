@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-base",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -25,7 +25,8 @@
   },
   "exports": {
     "./eslint": "./eslint.config.mjs",
-    "./prettier": "./prettier.config.mjs"
+    "./prettier": "./prettier.config.mjs",
+    "./tsconfig": "./tsconfig.json"
   },
   "type": "module",
   "dependencies": {

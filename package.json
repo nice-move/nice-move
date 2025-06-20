@@ -18,7 +18,7 @@
   },
   "scripts": {
     "lint:staged": "nice-move lint staged",
-    "lint:type": "tsc --noEmit",
+    "lint:type": "tsc -p tsconfig.json",
     "lint:version": "syncpack lint",
     "prepare": "git config core.hooksPath .githooks",
     "snapshot": "vitest --config test/vitest.config.mjs -u",

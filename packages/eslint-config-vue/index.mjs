@@ -8,7 +8,7 @@ import prettier from 'eslint-config-prettier';
 import pluginVue from 'eslint-plugin-vue';
 import { getPkg } from 'settingz';
 
-const version = '3.5.13';
+const version = '3.5.17';
 
 const { isMiniApp } = getPkg('nice-move');
 

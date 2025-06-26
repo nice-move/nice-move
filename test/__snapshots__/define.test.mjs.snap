@@ -1,0 +1,432 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should generate config for non-pnpm project 1`] = `
+{
+  "customTypes": {
+    "engines": {
+      "path": "engines",
+      "strategy": "versionsByName",
+    },
+    "optional": {
+      "path": "optionalDependencies",
+      "strategy": "versionsByName",
+    },
+    "packageManager": {
+      "path": "packageManager",
+      "strategy": "name@version",
+    },
+  },
+  "lintFormatting": false,
+  "semverGroups": [
+    {
+      "dependencies": [
+        "@playwright/*",
+        "@sentry/*",
+        "@types/react",
+        "@types/react-dom",
+        "@vue/*",
+        "playwright-*",
+        "react",
+        "react-dom",
+        "typescript",
+        "vue",
+        "vue-router",
+      ],
+      "range": "~",
+    },
+    {
+      "dependencyTypes": [
+        "local",
+        "optional",
+        "packageManager",
+      ],
+      "range": "",
+    },
+    {
+      "range": "^",
+    },
+  ],
+  "versionGroups": [
+    {
+      "dependencies": [
+        "abc",
+      ],
+      "pinVersion": "0.12.23",
+    },
+    {
+      "dependencies": [
+        "node",
+      ],
+      "dependencyTypes": [
+        "engines",
+      ],
+      "label": "Pin engines.node",
+      "pinVersion": "^16.0.0",
+    },
+    {
+      "dependencyTypes": [
+        "!local",
+      ],
+      "label": "Pin others",
+      "preferVersion": "highestSemver",
+    },
+  ],
+}
+`;
+
+exports[`should generate config for pnpm project 1`] = `
+{
+  "customTypes": {
+    "engines": {
+      "path": "engines",
+      "strategy": "versionsByName",
+    },
+    "optional": {
+      "path": "optionalDependencies",
+      "strategy": "versionsByName",
+    },
+    "packageManager": {
+      "path": "packageManager",
+      "strategy": "name@version",
+    },
+  },
+  "lintFormatting": false,
+  "semverGroups": [
+    {
+      "dependencies": [
+        "@playwright/*",
+        "@sentry/*",
+        "@types/react",
+        "@types/react-dom",
+        "@vue/*",
+        "playwright-*",
+        "react",
+        "react-dom",
+        "typescript",
+        "vue",
+        "vue-router",
+      ],
+      "range": "~",
+    },
+    {
+      "dependencyTypes": [
+        "local",
+        "optional",
+        "packageManager",
+      ],
+      "range": "",
+    },
+    {
+      "range": "^",
+    },
+  ],
+  "versionGroups": [
+    {
+      "dependencies": [
+        "@scope/package-a",
+        "@scope/package-b",
+      ],
+      "dependencyTypes": [
+        "!local",
+      ],
+      "label": "Pin pnpm workspace",
+      "pinVersion": "workspace:^",
+    },
+    {
+      "dependencies": [
+        "typescript",
+        "vue",
+      ],
+      "dependencyTypes": [
+        "dev",
+        "prod",
+        "optional",
+        "peer",
+        "pnpmOverrides",
+      ],
+      "label": "Pin pnpm catalog ",
+      "pinVersion": "catalog:",
+    },
+    {
+      "dependencies": [
+        "eslint",
+      ],
+      "dependencyTypes": [
+        "dev",
+        "prod",
+        "optional",
+        "peer",
+        "pnpmOverrides",
+      ],
+      "label": "Pin pnpm catalog overrides",
+      "pinVersion": "catalog:overrides",
+    },
+    {
+      "dependencies": [
+        "abc",
+      ],
+      "pinVersion": "0.12.23",
+    },
+    {
+      "dependencies": [
+        "node",
+      ],
+      "dependencyTypes": [
+        "engines",
+      ],
+      "label": "Pin engines.node",
+      "pinVersion": "^18.0.0",
+    },
+    {
+      "dependencyTypes": [
+        "!local",
+      ],
+      "label": "Pin others",
+      "preferVersion": "highestSemver",
+    },
+  ],
+}
+`;
+
+exports[`should handle empty workspace and catalog 1`] = `
+{
+  "customTypes": {
+    "engines": {
+      "path": "engines",
+      "strategy": "versionsByName",
+    },
+    "optional": {
+      "path": "optionalDependencies",
+      "strategy": "versionsByName",
+    },
+    "packageManager": {
+      "path": "packageManager",
+      "strategy": "name@version",
+    },
+  },
+  "lintFormatting": false,
+  "semverGroups": [
+    {
+      "dependencies": [
+        "@playwright/*",
+        "@sentry/*",
+        "@types/react",
+        "@types/react-dom",
+        "@vue/*",
+        "playwright-*",
+        "react",
+        "react-dom",
+        "typescript",
+        "vue",
+        "vue-router",
+      ],
+      "range": "~",
+    },
+    {
+      "dependencyTypes": [
+        "local",
+        "optional",
+        "packageManager",
+      ],
+      "range": "",
+    },
+    {
+      "range": "^",
+    },
+  ],
+  "versionGroups": [
+    {
+      "dependencies": [
+        "abc",
+      ],
+      "pinVersion": "0.12.23",
+    },
+    {
+      "dependencies": [
+        "node",
+      ],
+      "dependencyTypes": [
+        "engines",
+      ],
+      "label": "Pin engines.node",
+      "pinVersion": "^20.0.0",
+    },
+    {
+      "dependencyTypes": [
+        "!local",
+      ],
+      "label": "Pin others",
+      "preferVersion": "highestSemver",
+    },
+  ],
+}
+`;
+
+exports[`should handle file read errors 1`] = `
+{
+  "customTypes": {
+    "engines": {
+      "path": "engines",
+      "strategy": "versionsByName",
+    },
+    "optional": {
+      "path": "optionalDependencies",
+      "strategy": "versionsByName",
+    },
+    "packageManager": {
+      "path": "packageManager",
+      "strategy": "name@version",
+    },
+  },
+  "lintFormatting": false,
+  "semverGroups": [
+    {
+      "dependencies": [
+        "@playwright/*",
+        "@sentry/*",
+        "@types/react",
+        "@types/react-dom",
+        "@vue/*",
+        "playwright-*",
+        "react",
+        "react-dom",
+        "typescript",
+        "vue",
+        "vue-router",
+      ],
+      "range": "~",
+    },
+    {
+      "dependencyTypes": [
+        "local",
+        "optional",
+        "packageManager",
+      ],
+      "range": "",
+    },
+    {
+      "range": "^",
+    },
+  ],
+  "versionGroups": [
+    {
+      "dependencies": [
+        "abc",
+      ],
+      "pinVersion": "0.12.23",
+    },
+    {
+      "dependencies": [
+        "node",
+      ],
+      "dependencyTypes": [
+        "engines",
+      ],
+      "label": "Pin engines.node",
+      "pinVersion": "^20.0.0",
+    },
+    {
+      "dependencyTypes": [
+        "!local",
+      ],
+      "label": "Pin others",
+      "preferVersion": "highestSemver",
+    },
+  ],
+}
+`;
+
+exports[`should merge custom config 1`] = `
+{
+  "customTypes": {
+    "custom": {
+      "path": "customPath",
+      "strategy": "customStrategy",
+    },
+    "engines": {
+      "path": "engines",
+      "strategy": "versionsByName",
+    },
+    "optional": {
+      "path": "optionalDependencies",
+      "strategy": "versionsByName",
+    },
+    "packageManager": {
+      "path": "packageManager",
+      "strategy": "name@version",
+    },
+  },
+  "lintFormatting": false,
+  "semverGroups": [
+    {
+      "dependencies": [
+        "custom-dep",
+      ],
+      "range": "~",
+    },
+    {
+      "dependencies": [
+        "@playwright/*",
+        "@sentry/*",
+        "@types/react",
+        "@types/react-dom",
+        "@vue/*",
+        "playwright-*",
+        "react",
+        "react-dom",
+        "typescript",
+        "vue",
+        "vue-router",
+      ],
+      "range": "~",
+    },
+    {
+      "dependencyTypes": [
+        "local",
+        "optional",
+        "packageManager",
+      ],
+      "range": "",
+    },
+    {
+      "range": "^",
+    },
+  ],
+  "versionGroups": [
+    {
+      "dependencies": [
+        "@scope/package-a",
+        "@scope/package-b",
+      ],
+      "dependencyTypes": [
+        "!local",
+      ],
+      "label": "Pin pnpm workspace",
+      "pinVersion": "workspace:^",
+    },
+    {
+      "dependencies": [
+        "custom-version",
+      ],
+      "label": "Custom Version",
+    },
+    {
+      "dependencies": [
+        "node",
+      ],
+      "dependencyTypes": [
+        "engines",
+      ],
+      "label": "Pin engines.node",
+      "pinVersion": "^20.0.0",
+    },
+    {
+      "dependencyTypes": [
+        "!local",
+      ],
+      "label": "Pin others",
+      "preferVersion": "highestSemver",
+    },
+  ],
+}
+`;

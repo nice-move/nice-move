@@ -26,8 +26,8 @@
     "version:pin": "syncpack fix-mismatches"
   },
   "dependencies": {
-    "svgo": "^3.3.2",
-    "svgo-config": "^0.9.1"
+    "svgo": "^4.0.0",
+    "svgo-config": "^0.10.0"
   },
   "devDependencies": {
     "@bring-it/cli": "^0.10.0",
@@ -35,14 +35,15 @@
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "@vitest/ui": "^3.2.4",
     "eslint": "catalog:",
+    "find-workspaces": "^0.3.1",
     "garou": "catalog:",
     "nodemon": "^3.1.10",
     "postcss": "^8.5.6",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.1",
     "prettier-plugin-tailwindcss": "^0.6.13",
     "stylelint": "catalog:",
     "syncpack": "^13.0.4",
-    "tsdown": "^0.12.8",
+    "tsdown": "^0.12.9",
     "typescript": "catalog:",
     "vitest": "^3.2.4"
   },
@@ -64,9 +65,9 @@
     "@nice-move/stylelint-config": "workspace:^",
     "@nice-move/syncpack-config": "workspace:^",
     "@nice-move/tsconfig": "workspace:^",
-    "@types/node": "^22.15.32"
+    "@types/node": "^22.15.33"
   },
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.12.3",
   "engines": {
     "node": "^20.19.2 || ^22.14.0 || ^24.0.0",
     "pnpm": "^10.12.1"

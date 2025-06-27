@@ -78,7 +78,8 @@
       "packages/lint/**",
       "packages/cli/**"
     ],
-    "import-http": true
+    "import-http": true,
+    "isMiniApp": true
   },
   "prettier": "@nice-move/prettier-config",
   "stylelint": {

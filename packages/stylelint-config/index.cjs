@@ -1,36 +1,45 @@
 'use strict';
 
-const { isMiniApp } = require('./lib/utils.cjs');
+const { isMiniApp, tailwind } = require('./lib/utils.cjs');
 
 module.exports = {
   reportNeedlessDisables: true,
   reportInvalidScopeDisables: true,
-  rules: {},
-  overrides: [
-    {
-      files: ['**/*.*'],
-      extends: [
-        require.resolve('stylelint-config-standard'),
-        require.resolve('./lib/ignore.cjs'),
-        require.resolve('./lib/base.cjs'),
-      ],
-      plugins: [
-        'stylelint-declaration-block-no-ignored-properties',
-        'stylelint-suitcss',
-        'stylelint-no-unresolved-module',
-      ],
-      rules: {
-        'suitcss/root-no-standard-properties': true,
-        'suitcss/selector-root-no-composition': true,
-        'plugin/declaration-block-no-ignored-properties': [
-          true,
-          { severity: 'warning' },
-        ],
-        'plugin/no-unresolved-module': {
-          modules: ['node_modules'],
-        },
-      },
+  extends: [
+    require.resolve('stylelint-config-standard'),
+    require.resolve('./lib/ignore.cjs'),
+    require.resolve('./lib/base.cjs'),
+  ],
+  plugins: [
+    'stylelint-declaration-block-no-ignored-properties',
+    'stylelint-suitcss',
+    'stylelint-no-unresolved-module',
+  ],
+  rules: {
+    'suitcss/root-no-standard-properties': true,
+    'suitcss/selector-root-no-composition': true,
+    'plugin/declaration-block-no-ignored-properties': [
+      true,
+      { severity: 'warning' },
+    ],
+    'plugin/no-unresolved-module': {
+      modules: ['node_modules'],
     },
+    ...(tailwind
+      ? {
+          'at-rule-no-deprecated': [true, { ignoreAtRules: ['apply'] }],
+          'declaration-property-value-no-unknown': [
+            true,
+            {
+              ignoreProperties: {
+                '/.+/': /theme\([.\w]+\)/.toString(),
+              },
+            },
+          ],
+        }
+      : undefined),
+  },
+  overrides: [
     {
       files: ['**/*.scss'],
       customSyntax: require('postcss-scss'),
@@ -87,13 +96,11 @@ module.exports = {
             true,
             {
               ignoreProperties: {
-                '/.+/': String.raw`/\d+rpx/`,
+                '/.+/': tailwind
+                  ? /\drpx|theme\([.\w]+\)/.toString()
+                  : /\drpx/.toString(),
               },
             },
-          ],
-          'at-rule-no-deprecated': [
-            true,
-            { ignoreAtRules: ['apply', 'custom-variant', 'source'] },
           ],
           'selector-type-no-unknown': [true, { ignoreTypes: ['page'] }],
           'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],

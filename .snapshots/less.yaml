@@ -89,6 +89,11 @@
     ],
     "declaration-property-value-no-unknown": [
       true,
+      {
+        "ignoreProperties": {
+          "/.+/": "/\drpx/",
+        },
+      },
     ],
     "font-family-name-quotes": [
       "always-where-recommended",
@@ -204,8 +209,9 @@
     ],
     "selector-disallowed-list": [
       [
-        /,\\s\*,/,
-        /\^\\s\*,\\s\*/,
+        "*",
+        /\^\(\?!page\)\[A-Za-z\]\+\$/,
+        /\[/\\\\\]/,
       ],
     ],
     "selector-max-compound-selectors": [
@@ -232,8 +238,8 @@
     "selector-type-no-unknown": [
       true,
       {
-        "ignore": [
-          "custom-elements",
+        "ignoreTypes": [
+          "page",
         ],
       },
     ],
@@ -257,6 +263,14 @@
     ],
     "time-min-milliseconds": [
       200,
+    ],
+    "unit-no-unknown": [
+      true,
+      {
+        "ignoreUnits": [
+          "rpx",
+        ],
+      },
     ],
   },
 }

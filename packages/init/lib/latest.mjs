@@ -25,7 +25,7 @@ export default {
   vue: '~3.5.17',
   yaml: '^2.8.0',
   '@nice-move/eslint-config-base': '^0.12.23',
-  '@nice-move/stylelint-config': '^0.10.19',
+  '@nice-move/stylelint-config': '^0.10.20',
   '@nice-move/prettier-config': '^0.14.15',
   '@nice-move/tsconfig': '^0.2.14',
   '@nice-move/cli': '^0.11.26',

@@ -16,12 +16,14 @@ const AT_RULE_NO_UNKNOWN = tailwind
       true,
       {
         ignoreAtRules: [
-          'tailwind',
           'apply',
+          'custom-variant',
           'layer',
-          'variants',
           'responsive',
           'screen',
+          'source',
+          'tailwind',
+          'variants',
         ],
       },
     ]
@@ -33,6 +35,7 @@ const FUNCTION_NO_UNKNOWN = tailwind
 
 module.exports = {
   isMiniApp,
+  tailwind,
   AT_RULE_NO_UNKNOWN,
   FUNCTION_NO_UNKNOWN,
 };

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/stylelint-config",
-  "version": "0.10.19",
+  "version": "0.10.20",
   "description": "A `stylelint` config created by personal preferences",
   "license": "MIT",
   "author": {

@@ -1559,6 +1559,7 @@
           ],
         ],
         "named": false,
+        "sortTypesGroup": false,
         "warnOnUnassignedImports": false,
       },
     ],

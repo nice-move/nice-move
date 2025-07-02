@@ -34,12 +34,12 @@
     "@bring-it/npm": "^0.6.1",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "@vitest/ui": "^3.2.4",
-    "eslint": "catalog:",
+    "eslint": "catalog:overrides",
     "find-workspaces": "^0.3.1",
     "garou": "catalog:",
     "nodemon": "^3.1.10",
     "postcss": "^8.5.6",
-    "prettier": "^3.6.1",
+    "prettier": "catalog:overrides",
     "prettier-plugin-tailwindcss": "^0.6.13",
     "stylelint": "catalog:",
     "syncpack": "^13.0.4",
@@ -65,12 +65,12 @@
     "@nice-move/stylelint-config": "workspace:^",
     "@nice-move/syncpack-config": "workspace:^",
     "@nice-move/tsconfig": "workspace:^",
-    "@types/node": "^22.15.33"
+    "@types/node": "^22.16.0"
   },
-  "packageManager": "pnpm@10.12.3",
+  "packageManager": "pnpm@10.12.4",
   "engines": {
     "node": "^20.19.2 || ^22.14.0 || ^24.0.0",
-    "pnpm": "^10.12.1"
+    "pnpm": "^10.12.4"
   },
   "nice-move": {
     "bundle": [

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.12.23",
+  "version": "0.12.24",
   "description": "A `eslint` config for `react` project best practice",
   "license": "MIT",
   "author": {
@@ -41,15 +41,15 @@
     "@nice-move/eslint-config-base": "workspace:^",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "catalog:",
-    "globals": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:overrides",
+    "globals": "catalog:overrides",
     "settingz": "catalog:"
   },
   "peerDependencies": {
-    "eslint": "catalog:"
+    "eslint": "catalog:overrides"
   },
   "engines": {
     "node": "^20.19.2 || ^22.14.0 || ^24.0.0"

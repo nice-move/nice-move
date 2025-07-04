@@ -2373,7 +2373,7 @@
   "processor": {
     "meta": {
       "name": "eslint-plugin-vue",
-      "version": "10.2.0",
+      "version": "10.3.0",
     },
     "postprocess": [Function],
     "preprocess": [Function],
@@ -2402,14 +2402,6 @@
     ],
     "block-scoped-var": [
       "error",
-    ],
-    "class-methods-use-this": [
-      "warn",
-      {
-        "enforceForClassFields": true,
-        "exceptMethods": [],
-        "ignoreOverrideMethods": false,
-      },
     ],
     "consistent-return": [
       "warn",

@@ -28,7 +28,7 @@ export default [
       'arrow-body-style': 0,
       camelcase: 0,
       'global-require': 0,
-      'class-methods-use-this': 'warn',
+      'class-methods-use-this': 0,
       'consistent-return': 'warn',
       'grouped-accessor-pairs': 0,
       'lines-between-class-members': 0,

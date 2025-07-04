@@ -2125,14 +2125,6 @@
     "block-scoped-var": [
       "error",
     ],
-    "class-methods-use-this": [
-      "warn",
-      {
-        "enforceForClassFields": true,
-        "exceptMethods": [],
-        "ignoreOverrideMethods": false,
-      },
-    ],
     "consistent-return": [
       "warn",
       {

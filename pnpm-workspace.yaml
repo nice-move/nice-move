@@ -12,7 +12,7 @@ catalog:
   lodash: ^4.17.21
   settingz: ^0.2.0
   sort-keys: ^5.1.0
-  stylelint: ^16.21.0
+  stylelint: ^16.21.1
   typescript: ~5.8.3
   yaml: ^2.8.0
 

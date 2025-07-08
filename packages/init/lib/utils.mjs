@@ -2,29 +2,36 @@ import { execSync } from 'node:child_process';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import centra from 'centra';
 import stringify from 'stringify-author';
 
-export function download(url) {
-  return centra(url)
-    .timeout(5000)
-    .send()
-    .then((response) => {
-      if (response.statusCode === 301) {
-        return download(response.headers.location);
-      }
+export async function download(url) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 5000);
 
-      return response.text();
-    })
-    .then((response) => {
-      const data = response.trim();
+  try {
+    const response = await fetch(url, { signal: controller.signal });
 
-      if (data) {
-        return data;
-      }
+    // Clear the timeout as request completed
+    clearTimeout(timeoutId);
 
-      throw new Error('template download fail');
-    });
+    const text = await response.text();
+    const data = text.trim();
+
+    if (data) {
+      return data;
+    }
+
+    throw new Error('template download fail');
+  } catch (error) {
+    // Clear the timeout to prevent memory leaks
+    clearTimeout(timeoutId);
+
+    if (error.name === 'AbortError') {
+      throw new Error('request timeout');
+    }
+
+    throw error;
+  }
 }
 
 export function emptyDir() {

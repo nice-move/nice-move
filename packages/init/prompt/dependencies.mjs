@@ -113,9 +113,6 @@ function action(isRoot, wanted = {}) {
                 devDependencies: {
                   garou: latest.garou,
                 },
-                'nice-move': {
-                  'import-groups': ['nice-move-preset'],
-                },
               }
             : undefined,
           typescript

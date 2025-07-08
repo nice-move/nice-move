@@ -11,5 +11,4 @@ export default defineConfig({
   fixedExtension: true,
   platform: 'node',
   minify: true,
-  external: ['spawn-sync'],
 });

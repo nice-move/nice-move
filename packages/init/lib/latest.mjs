@@ -26,7 +26,7 @@ export default {
   yaml: 'catalog:',
   '@nice-move/eslint-config-base': '^0.13.0',
   '@nice-move/stylelint-config': '^0.10.20',
-  '@nice-move/prettier-config': '^0.14.15',
+  '@nice-move/prettier-config': '^0.15.0',
   '@nice-move/tsconfig': '^0.2.14',
   '@nice-move/cli': '^0.11.26',
   catalog: {

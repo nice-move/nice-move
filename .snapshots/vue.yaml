@@ -3488,6 +3488,12 @@
     "unicorn/no-array-method-this-argument": [
       "error",
     ],
+    "unicorn/no-array-reverse": [
+      "error",
+      {
+        "allowExpressionStatement": true,
+      },
+    ],
     "unicorn/no-await-expression-member": [
       "error",
     ],
@@ -3590,6 +3596,9 @@
     "unicorn/no-unreadable-iife": [
       "error",
     ],
+    "unicorn/no-useless-error-capture-stack-trace": [
+      "error",
+    ],
     "unicorn/no-useless-fallback-in-spread": [
       "error",
     ],
@@ -3665,6 +3674,9 @@
       },
     ],
     "unicorn/prefer-blob-reading-methods": [
+      "error",
+    ],
+    "unicorn/prefer-class-fields": [
       "error",
     ],
     "unicorn/prefer-code-point": [
@@ -3801,6 +3813,9 @@
       "always",
     ],
     "unicorn/require-array-join-separator": [
+      "error",
+    ],
+    "unicorn/require-module-specifiers": [
       "error",
     ],
     "unicorn/require-number-to-fixed-digits-argument": [

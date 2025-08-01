@@ -1,20 +1,22 @@
 diff --git a/lib/index.js b/lib/index.js
-index 5bb54bdb681c7f093c5f84d92f88b27ae2e08bf1..66e79aa8f0e0e0a35572ed04da667e02270d0c08 100644
+index 08cb7495f124a5372b89cb8ace9fc1edd844ce63..3b488f1fe266ab36edda1c078efaa6e85b584a7c 100644
 --- a/lib/index.js
 +++ b/lib/index.js
-@@ -28,7 +28,6 @@ import { subjectFullStop } from './subject-full-stop.js';
- import { subjectMaxLength } from './subject-max-length.js';
- import { subjectMinLength } from './subject-min-length.js';
- import { subjectExclamationMark } from './subject-exclamation-mark.js';
--import { trailerExists } from './trailer-exists.js';
- import { typeCase } from './type-case.js';
- import { typeEmpty } from './type-empty.js';
- import { typeEnum } from './type-enum.js';
-@@ -65,7 +64,6 @@ export default {
-     'subject-max-length': subjectMaxLength,
-     'subject-min-length': subjectMinLength,
-     'subject-exclamation-mark': subjectExclamationMark,
--    'trailer-exists': trailerExists,
-     'type-case': typeCase,
-     'type-empty': typeEmpty,
-     'type-enum': typeEnum,
+@@ -28,7 +28,7 @@ import { subjectFullStop } from "./subject-full-stop.js";
+ import { subjectMaxLength } from "./subject-max-length.js";
+ import { subjectMinLength } from "./subject-min-length.js";
+ import { subjectExclamationMark } from "./subject-exclamation-mark.js";
+-import { trailerExists } from "./trailer-exists.js";
++// import { trailerExists } from "./trailer-exists.js";
+ import { typeCase } from "./type-case.js";
+ import { typeEmpty } from "./type-empty.js";
+ import { typeEnum } from "./type-enum.js";
+@@ -65,7 +65,7 @@ export default {
+     "subject-max-length": subjectMaxLength,
+     "subject-min-length": subjectMinLength,
+     "subject-exclamation-mark": subjectExclamationMark,
+-    "trailer-exists": trailerExists,
++    // "trailer-exists": trailerExists,
+     "type-case": typeCase,
+     "type-empty": typeEmpty,
+     "type-enum": typeEnum,

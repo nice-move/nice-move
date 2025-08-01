@@ -46,7 +46,7 @@
     "stylelint": "catalog:"
   },
   "engines": {
-    "node": "^20.19.2 || ^22.14.0 || ^24.0.0"
+    "node": "^22.14.0 || ^24.0.0"
   },
   "publishConfig": {
     "access": "public",

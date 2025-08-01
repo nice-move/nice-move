@@ -9,13 +9,17 @@ export default {
   trailingComma: 'all',
   xmlSortAttributesByKey: true,
   xmlWhitespaceSensitivity: 'strict',
-  tailwindFunctions: [
-    'clsx',
-    'classnames',
-    'classname',
-    'classNames',
-    'className',
-  ],
+  ...(tailwind
+    ? {
+        tailwindFunctions: [
+          'clsx',
+          'classnames',
+          'classname',
+          'classNames',
+          'className',
+        ],
+      }
+    : undefined),
   importOrderParserPlugins: ['importAttributes', 'jsx'],
   importOrder: [
     '<BUILTIN_MODULES>',

@@ -25,9 +25,9 @@ export default {
   vue: '~3.5.17',
   yaml: 'catalog:',
   '@nice-move/eslint-config-base': '^0.13.0',
-  '@nice-move/stylelint-config': '^0.10.21',
-  '@nice-move/prettier-config': '^0.15.4',
-  '@nice-move/tsconfig': '^0.3.1',
+  '@nice-move/stylelint-config': '^0.10.22',
+  '@nice-move/prettier-config': '^0.15.5',
+  '@nice-move/tsconfig': '^0.3.2',
   '@nice-move/cli': '^0.11.26',
   catalog: {
     '@eslint/js': '^9.32.0',
@@ -50,5 +50,5 @@ export default {
       prettier: '~3.6.2',
     },
   },
-  lts: '^22.18.0 || ^24.0.0',
+  lts: '^22.17.0 || ^24.0.0',
 };

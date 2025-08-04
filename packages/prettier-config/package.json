@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/prettier-config",
-  "version": "0.15.4",
+  "version": "0.15.5",
   "description": "A `prettier` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -41,7 +41,7 @@
     "prettier": "catalog:overrides"
   },
   "engines": {
-    "node": "^22.18.0 || ^24.0.0"
+    "node": "^22.17.0 || ^24.0.0"
   },
   "publishConfig": {
     "access": "public",

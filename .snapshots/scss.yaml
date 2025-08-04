@@ -121,6 +121,9 @@
     "block-no-empty": [
       true,
     ],
+    "block-no-redundant-nested-style-rules": [
+      true,
+    ],
     "color-function-alias-notation": [
       "without-alpha",
     ],
@@ -227,7 +230,13 @@
     "media-query-no-invalid": [
       true,
     ],
+    "media-type-no-deprecated": [
+      true,
+    ],
     "named-grid-areas-no-invalid": [
+      true,
+    ],
+    "nesting-selector-no-missing-scoping-root": [
       true,
     ],
     "no-descending-specificity": [
@@ -257,6 +266,9 @@
         ],
       },
     ],
+    "no-invalid-position-declaration": [
+      true,
+    ],
     "no-irregular-whitespace": [
       true,
     ],
@@ -278,6 +290,9 @@
           "node_modules",
         ],
       },
+    ],
+    "property-no-deprecated": [
+      true,
     ],
     "property-no-unknown": [
       true,

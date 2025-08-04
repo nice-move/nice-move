@@ -39,7 +39,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@nice-move/eslint-config-base": "workspace:^",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-vue": "^10.3.0",
+    "eslint-plugin-vue": "^10.4.0",
     "globals": "catalog:overrides",
     "settingz": "catalog:",
     "vue-eslint-parser": "^10.2.0"
@@ -48,7 +48,7 @@
     "eslint": "catalog:overrides"
   },
   "engines": {
-    "node": "^22.14.0 || ^24.0.0"
+    "node": "^22.18.0 || ^24.0.0"
   },
   "publishConfig": {
     "access": "public",

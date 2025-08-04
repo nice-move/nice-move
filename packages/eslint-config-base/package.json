@@ -43,9 +43,9 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-markdown": "^5.1.0",
-    "eslint-plugin-n": "^17.21.0",
+    "eslint-plugin-n": "^17.21.3",
     "eslint-plugin-promise": "^7.2.1",
-    "eslint-plugin-regexp": "^2.9.0",
+    "eslint-plugin-regexp": "^2.9.1",
     "eslint-plugin-unicorn": "^60.0.0",
     "espree": "^10.4.0",
     "globals": "catalog:overrides",
@@ -57,7 +57,7 @@
     "eslint": "catalog:overrides"
   },
   "engines": {
-    "node": "^22.14.0 || ^24.0.0"
+    "node": "^22.18.0 || ^24.0.0"
   },
   "publishConfig": {
     "access": "public",

@@ -5,16 +5,18 @@ packages:
 
 catalog:
   '@eslint/js': ^9.32.0
-  chalk: ^5.4.1
+  chalk: ^5.5.0
   execa: ^9.6.0
   fs-chain: ^10.0.0
-  garou: ^0.9.11
+  garou: ^0.9.12
   lodash: ^4.17.21
   settingz: ^0.2.0
   sort-keys: ^5.1.0
-  stylelint: ^16.22.0
+  stylelint: ^16.23.0
   typescript: ~5.8.3
   yaml: ^2.8.0
+
+catalogMode: prefer
 
 catalogs:
   overrides:
@@ -23,10 +25,12 @@ catalogs:
     globals: ^16.3.0
     prettier: ~3.6.2
 
+ignorePatchFailures: false
+
 overrides:
-  eslint: 'catalog:overrides'
-  eslint-plugin-react-hooks: 'catalog:overrides'
-  globals: 'catalog:overrides'
+  eslint: catalog:overrides
+  eslint-plugin-react-hooks: catalog:overrides
+  globals: catalog:overrides
 
 patchedDependencies:
   '@commitlint/rules': patches/@commitlint__rules.patch
@@ -34,6 +38,5 @@ patchedDependencies:
   lint-staged: patches/lint-staged.patch
 
 shamefullyHoist: true
-catalogMode: prefer
-ignorePatchFailures: false
+
 verifyDepsBeforeRun: warn

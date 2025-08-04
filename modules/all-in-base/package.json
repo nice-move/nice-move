@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-base",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "license": "MIT",
   "author": {
     "name": "Eric Chen",
@@ -50,7 +50,7 @@
     }
   },
   "engines": {
-    "node": "^22.14.0 || ^24.0.0"
+    "node": "^22.18.0 || ^24.0.0"
   },
   "publishConfig": {
     "access": "public",

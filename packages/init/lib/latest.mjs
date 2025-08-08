@@ -11,7 +11,7 @@ export default {
   'prettier-plugin-tailwindcss': '^0.6.14',
   stylelint: 'catalog:',
   syncpack: '^13.0.4',
-  tsdown: '^0.13.2',
+  tsdown: '^0.13.4',
   typescript: 'catalog:',
   vitest: '^3.2.4',
   '@bring-it/sftp': '^0.4.0',
@@ -24,10 +24,10 @@ export default {
   tailwindcss: '^3.4.17',
   vue: '~3.5.17',
   yaml: 'catalog:',
-  '@nice-move/eslint-config-base': '^0.13.0',
+  '@nice-move/eslint-config-base': '^0.13.1',
   '@nice-move/stylelint-config': '^0.10.22',
-  '@nice-move/prettier-config': '^0.15.5',
-  '@nice-move/tsconfig': '^0.3.2',
+  '@nice-move/prettier-config': '^0.15.6',
+  '@nice-move/tsconfig': '^0.3.3',
   '@nice-move/cli': '^0.11.26',
   catalog: {
     '@eslint/js': '^9.32.0',
@@ -38,9 +38,9 @@ export default {
     lodash: '^4.17.21',
     settingz: '^0.2.0',
     'sort-keys': '^5.1.0',
-    stylelint: '^16.23.0',
-    typescript: '~5.8.3',
-    yaml: '^2.8.0',
+    stylelint: '^16.23.1',
+    typescript: '~5.9.2',
+    yaml: '^2.8.1',
   },
   catalogs: {
     overrides: {
@@ -50,5 +50,5 @@ export default {
       prettier: '~3.6.2',
     },
   },
-  lts: '^22.17.0 || ^24.0.0',
+  lts: '^22.18.0 || ^24.0.0',
 };

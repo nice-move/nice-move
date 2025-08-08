@@ -646,7 +646,7 @@ importers:
         specifier: ^3.4.17
         version: 3.4.17
       vue:
-        specifier: ~3.5.17
+        specifier: ~3.5.18
         version: 3.5.18(typescript@5.9.2)
       yaml:
         specifier: 'catalog:'

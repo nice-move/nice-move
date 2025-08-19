@@ -8,23 +8,27 @@
     "lib": [
       "ESNext"
     ],
+    "typeRoots": [
+      "types"
+    ],
     "types": [],
-    "noEmit": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "erasableSyntaxOnly": true,
     "module": "esnext",
     "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
-    "strict": true,
-    "target": "esnext",
-    "erasableSyntaxOnly": true,
+    "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noUncheckedIndexedAccess": true,
-    "allowUnreachableCode": false,
-    "verbatimModuleSyntax": true,
-    "allowUnusedLabels": false
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "verbatimModuleSyntax": true
   },
   "display": "Base"
 }

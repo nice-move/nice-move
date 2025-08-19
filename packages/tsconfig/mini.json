@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "types": [],
+    "typeRoots": [
+      "types",
+      "node_modules/miniprogram-api-typings",
+      "node_modules/@types/whatwg-url"
+    ]
+  },
+  "display": "Mini"
+}

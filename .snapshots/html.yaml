@@ -1424,6 +1424,9 @@
     "grouped-accessor-pairs": [
       "error",
       "anyOrder",
+      {
+        "enforceForTSTypes": false,
+      },
     ],
     "guard-for-in": [
       "error",

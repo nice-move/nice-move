@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/tsconfig",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "A `typescript` config created by personal preferences",
   "license": "MIT",
   "author": {

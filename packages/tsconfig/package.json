@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/tsconfig",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "A `typescript` config created by personal preferences",
   "license": "MIT",
   "author": {
@@ -24,6 +24,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@types/node": "^22.18.0",
     "@types/whatwg-url": "^13.0.0"
   },
   "peerDependencies": {

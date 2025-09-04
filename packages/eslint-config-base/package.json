@@ -4,8 +4,7 @@
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
-    "name": "Eric Chen",
-    "email": "airkro@qq.com"
+    "name": "Eric Chen"
   },
   "keywords": [
     "airbnb",
@@ -51,7 +50,7 @@
     "globals": "catalog:overrides",
     "resolve.exports": "^2.0.3",
     "settingz": "catalog:",
-    "typescript-eslint": "^8.41.0"
+    "typescript-eslint": "^8.42.0"
   },
   "peerDependencies": {
     "eslint": "catalog:overrides"

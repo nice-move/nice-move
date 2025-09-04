@@ -4,8 +4,7 @@
   "description": "A `eslint` config for `react` project best practice",
   "license": "MIT",
   "author": {
-    "name": "Eric Chen",
-    "email": "airkro@qq.com"
+    "name": "Eric Chen"
   },
   "keywords": [
     "airbnb",

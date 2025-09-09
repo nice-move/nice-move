@@ -9,7 +9,8 @@
       "ESNext"
     ],
     "typeRoots": [
-      "types"
+      "types",
+      "node_modules/@types"
     ],
     "types": [],
     "allowUnreachableCode": false,

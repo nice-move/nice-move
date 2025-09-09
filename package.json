@@ -64,7 +64,7 @@
     "@nice-move/stylelint-config": "workspace:^",
     "@nice-move/syncpack-config": "workspace:^",
     "@nice-move/tsconfig": "workspace:^",
-    "@types/node": "^22.18.0"
+    "@types/node": "^22.18.1"
   },
   "packageManager": "pnpm@10.14.0",
   "engines": {

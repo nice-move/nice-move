@@ -39,7 +39,7 @@
     "@nice-move/eslint-config-base": "workspace:^",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.4.0",
-    "globals": "catalog:overrides",
+    "globals": "^16.4.0",
     "settingz": "catalog:",
     "vue-eslint-parser": "^10.2.0"
   },

@@ -3,7 +3,13 @@
   "extends": "./web.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "types": [],
+    "typeRoots": [
+      "types",
+      "node_modules/@types/react",
+      "node_modules/@types/react-dom"
+    ]
   },
   "display": "React"
 }

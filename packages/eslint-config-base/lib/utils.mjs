@@ -42,7 +42,7 @@ export function getGlobals(env = {}) {
     ...Object.keys({
       ...globals.browser,
       ...globals.node,
-      ...globals.es2025,
+      ...globals.es2026,
     }).map((key) => [key, 'off']),
     ...Object.entries(env).flatMap(([key, on]) =>
       on

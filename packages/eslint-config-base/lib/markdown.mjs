@@ -1,31 +1,21 @@
-import markdown from 'eslint-plugin-markdown';
-
-import { getGlobals } from './utils.mjs';
+import markdown from '@eslint/markdown';
 
 export default [
   {
     files: ['**/*.md'],
-    name: 'markdown/recommended/plugin',
     plugins: {
       markdown,
     },
-  },
-  {
-    name: 'markdown/recommended/processor',
-    files: ['**/*.md'],
-    processor: 'markdown/markdown',
+    language: 'markdown/gfm',
     languageOptions: {
-      ecmaVersion: 'latest',
-      globals: {
-        ...getGlobals(),
-      },
+      frontmatter: 'yaml',
+    },
+    rules: {
+      'markdown/no-html': 'warn',
     },
   },
   {
-    files: ['**/*.md/**'],
-    // plugins: {
-    //   markdown,
-    // },
+    files: ['**/*.md/**/*.*'],
     rules: {
       strict: 'off',
       'eol-last': 'off',

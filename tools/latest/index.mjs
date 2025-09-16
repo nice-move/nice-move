@@ -2,6 +2,7 @@
 import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { join } from 'node:path';
+import { deepmerge } from 'deepmerge-ts';
 
 import { JsonToText } from 'fs-chain';
 import { parse } from 'yaml';
@@ -15,20 +16,20 @@ function readYaml() {
     const parsed = parse(file) || {};
 
     // 确保 catalog 和 catalogs 是对象
-    return {
-      catalog:
-        parsed.catalog && typeof parsed.catalog === 'object'
-          ? parsed.catalog
-          : {},
-      catalogs:
+    return deepmerge(
+      parsed.catalog && typeof parsed.catalog === 'object'
+        ? parsed.catalog
+        : {},
+      ...Object.values(
         parsed.catalogs && typeof parsed.catalogs === 'object'
           ? parsed.catalogs
           : {},
-    };
+      ),
+    );
   } catch (error) {
     console.error('Failed to read pnpm-workspace.yaml:', error);
 
-    return { catalog: {}, catalogs: {} };
+    return {};
   }
 }
 

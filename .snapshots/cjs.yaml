@@ -3595,6 +3595,12 @@
         "allowExpressionStatement": true,
       },
     ],
+    "unicorn/no-array-sort": [
+      "error",
+      {
+        "allowExpressionStatement": true,
+      },
+    ],
     "unicorn/no-await-expression-member": [
       "error",
     ],
@@ -3774,10 +3780,16 @@
         "getLastElementFunctions": [],
       },
     ],
+    "unicorn/prefer-bigint-literals": [
+      "error",
+    ],
     "unicorn/prefer-blob-reading-methods": [
       "error",
     ],
     "unicorn/prefer-class-fields": [
+      "error",
+    ],
+    "unicorn/prefer-classlist-toggle": [
       "error",
     ],
     "unicorn/prefer-code-point": [
@@ -3911,6 +3923,9 @@
       "always",
     ],
     "unicorn/require-array-join-separator": [
+      "error",
+    ],
+    "unicorn/require-module-attributes": [
       "error",
     ],
     "unicorn/require-module-specifiers": [

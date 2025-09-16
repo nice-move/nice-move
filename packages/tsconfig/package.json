@@ -24,7 +24,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@types/node": "^22.18.1",
+    "@types/node": "^22.18.4",
     "@types/whatwg-url": "^13.0.0"
   },
   "peerDependencies": {

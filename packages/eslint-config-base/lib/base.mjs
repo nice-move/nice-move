@@ -3,7 +3,7 @@ import * as regexpPlugin from 'eslint-plugin-regexp';
 
 import { getGlobals } from './utils.mjs';
 
-const all = ['**/*.{js,jsx,ts,tsx,mjs,mts,cjs,cts,qs,wxs,vue}'];
+export const all = ['**/*.{js,jsx,ts,tsx,mjs,mts,cjs,cts,qs,wxs,vue,html,htm}'];
 
 export default [
   {
@@ -121,7 +121,7 @@ export default [
     },
   },
   {
-    files: ['**/*.{js,jsx,ts,tsx,mjs,mts,cjs,cts,vue}'],
+    files: ['**/*.{js,jsx,ts,tsx,mjs,mts,cjs,cts,vue,html,htm}'],
     languageOptions: {
       ecmaVersion: 'latest',
       globals: {
@@ -130,7 +130,7 @@ export default [
     },
   },
   {
-    files: ['**/*.js', '**/*.ts', '**/*.jsx', '**/*.tsx'],
+    files: ['**/*.{js,ts,jsx,tsx,html,htm}'],
     languageOptions: {
       sourceType: 'module',
       globals: {

@@ -7,6 +7,7 @@ export default [
       markdown,
     },
     language: 'markdown/gfm',
+    processor: 'markdown/markdown',
     languageOptions: {
       frontmatter: 'yaml',
     },

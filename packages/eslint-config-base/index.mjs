@@ -8,7 +8,7 @@ import airbnb from 'eslint-config-airbnb-base';
 import prettier from 'eslint-config-prettier';
 import { getPkg, readJson } from 'settingz';
 
-import base from './lib/base.mjs';
+import base, { all as allExts } from './lib/base.mjs';
 import imports from './lib/import.mjs';
 import markdown from './lib/markdown.mjs';
 import mini from './lib/mini.mjs';
@@ -43,11 +43,16 @@ const compat = new FlatCompat({
 const old = compat.config(airbnb).map((item) => {
   delete item.plugins;
 
+  item.files = allExts;
+
   return item;
 });
 
 export const create = (...addings) => [
-  js.configs.recommended,
+  {
+    files: allExts,
+    ...js.configs.recommended,
+  },
   ...old,
   ...addings,
   ...unicorn,

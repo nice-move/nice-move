@@ -1,7 +1,7 @@
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
 export default [
-  eslintPluginUnicorn.configs['flat/recommended'],
+  eslintPluginUnicorn.configs.recommended,
   {
     rules: {
       'unicorn/consistent-destructuring': 'off',

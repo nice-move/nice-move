@@ -8,7 +8,7 @@ catalog:
   chalk: ^5.6.2
   execa: ^9.6.0
   fs-chain: ^10.0.0
-  garou: ^0.9.13
+  garou: ^0.9.14
   lodash: ^4.17.21
   settingz: ^0.2.0
   sort-keys: ^6.0.0

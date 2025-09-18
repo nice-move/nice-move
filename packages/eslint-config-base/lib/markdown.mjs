@@ -12,11 +12,12 @@ export default [
       frontmatter: 'yaml',
     },
     rules: {
+      ...markdown.configs.recommended[0].rules,
       'markdown/no-html': 'warn',
     },
   },
   {
-    files: ['**/*.md/**/*.*'],
+    files: ['**/*.md/*.{ts,js,mts,mjs,cts,cjs,tsx,jsx,vue,qs,wxs,html,htm}'],
     rules: {
       strict: 'off',
       'eol-last': 'off',

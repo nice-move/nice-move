@@ -1982,7 +1982,7 @@
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.44.0",
+        "version": "8.45.0",
       },
       "parseForESLint": [Function],
     },
@@ -2309,6 +2309,9 @@
     ],
     "n/no-unsupported-features/node-builtins": [
       "error",
+      {
+        "allowExperimental": true,
+      },
     ],
     "n/prefer-global/buffer": [
       "warn",
@@ -2524,6 +2527,9 @@
     ],
     "no-misleading-character-class": [
       "error",
+      {
+        "allowEscape": false,
+      },
     ],
     "no-multi-assign": [
       "error",

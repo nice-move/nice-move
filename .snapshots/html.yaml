@@ -2862,6 +2862,9 @@
     ],
     "no-misleading-character-class": [
       "error",
+      {
+        "allowEscape": false,
+      },
     ],
     "no-multi-assign": [
       "error",

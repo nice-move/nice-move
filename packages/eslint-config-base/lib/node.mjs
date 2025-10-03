@@ -44,7 +44,12 @@ export default [
       'n/no-process-exit': 'warn',
       'n/no-unsupported-features/es-builtins': 'error',
       'n/no-unsupported-features/es-syntax': 'error',
-      'n/no-unsupported-features/node-builtins': 'error',
+      'n/no-unsupported-features/node-builtins': [
+        'error',
+        {
+          allowExperimental: true,
+        },
+      ],
       'n/prefer-global/buffer': 'warn',
       'n/prefer-global/console': 'warn',
       'n/prefer-global/process': 'warn',

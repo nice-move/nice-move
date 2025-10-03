@@ -2636,6 +2636,9 @@
     ],
     "n/no-unsupported-features/node-builtins": [
       "error",
+      {
+        "allowExperimental": true,
+      },
     ],
     "n/prefer-global/buffer": [
       "warn",
@@ -2875,6 +2878,9 @@
     ],
     "no-misleading-character-class": [
       "error",
+      {
+        "allowEscape": false,
+      },
     ],
     "no-multi-assign": [
       "error",

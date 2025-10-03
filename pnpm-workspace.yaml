@@ -4,23 +4,23 @@ packages:
   - tools/*
 
 catalog:
-  '@eslint/js': ^9.35.0
+  '@eslint/js': ^9.36.0
   chalk: ^5.6.2
   execa: ^9.6.0
   fs-chain: ^10.0.0
-  garou: ^0.9.14
+  garou: ^0.9.15
   lodash: ^4.17.21
   settingz: ^0.2.0
   sort-keys: ^6.0.0
-  stylelint: ^16.24.0
-  typescript: ~5.9.2
+  stylelint: ^16.25.0
+  typescript: ~5.9.3
   yaml: ^2.8.1
 
 catalogMode: prefer
 
 catalogs:
   overrides:
-    eslint: ^9.35.0
+    eslint: ^9.36.0
     eslint-plugin-react-hooks: ^5.2.0
     globals: ^16.4.0
     prettier: ~3.6.2

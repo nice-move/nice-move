@@ -91,7 +91,7 @@
   "processor": {
     "meta": {
       "name": "@eslint/markdown/markdown",
-      "version": "7.2.0",
+      "version": "7.3.0",
     },
     "postprocess": [Function],
     "preprocess": [Function],
@@ -177,6 +177,9 @@
     ],
     "markdown/no-missing-label-refs": [
       "error",
+      {
+        "allowLabels": [],
+      },
     ],
     "markdown/no-missing-link-fragments": [
       "error",
@@ -190,6 +193,9 @@
       {
         "frontmatterTitle": "^(?!\s*['"]title[:=]['"])\s*\{?\s*['"]?title['"]?\s*[:=]",
       },
+    ],
+    "markdown/no-reference-like-urls": [
+      "error",
     ],
     "markdown/no-reversed-media-syntax": [
       "error",

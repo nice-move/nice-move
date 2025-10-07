@@ -47,7 +47,7 @@
     "vitest": "^3.2.4"
   },
   "peerDependencies": {
-    "@commitlint/load": "^19.8.1",
+    "@commitlint/load": "^20.1.0",
     "@nice-move/all-in-base": "workspace:^",
     "@nice-move/all-in-react": "workspace:^",
     "@nice-move/all-in-vue": "workspace:^",
@@ -66,10 +66,10 @@
     "@nice-move/tsconfig": "workspace:^",
     "@types/node": "^22.18.8"
   },
-  "packageManager": "pnpm@10.17.0",
+  "packageManager": "pnpm@10.18.1",
   "engines": {
     "node": "^22.18.0 || ^24.0.0",
-    "pnpm": "^10.17.0"
+    "pnpm": "^10.18.1"
   },
   "nice-move": {
     "bundle": [

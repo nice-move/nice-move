@@ -4,7 +4,7 @@ packages:
   - tools/*
 
 catalog:
-  '@eslint/js': ^9.39.0
+  '@eslint/js': ^9.39.1
   chalk: ^5.6.2
   execa: ^9.6.0
   fs-chain: ^10.0.0
@@ -20,7 +20,7 @@ catalogMode: prefer
 
 catalogs:
   overrides:
-    eslint: ^9.39.0
+    eslint: ^9.39.1
     eslint-plugin-react-hooks: ^5.2.0
     globals: ^16.5.0
     prettier: ~3.6.2

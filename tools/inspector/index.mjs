@@ -10,12 +10,13 @@ const require = createRequire(import.meta.url);
 
 const cwd = process.cwd();
 
+const regexp = new RegExp(slash(cwd).replaceAll('/', String.raw`[\/\\]`), 'i');
+
+console.log(regexp);
+
 function fixPath(path) {
   const io = slash(
-    path
-      .replace(/^file:\/\/\//, '')
-      .replace(slash(cwd), '/<:root>')
-      .replace(cwd, '/<:root>'),
+    path.replace(/^file:\/\/\//i, '').replace(regexp, '/<:root>'),
   );
 
   return io.startsWith('/<:root>') && io.length > 40
@@ -100,7 +101,7 @@ export function eslintInspector(configName, filename) {
         );
       }
 
-      return { plugins: Object.keys(plugins).sort(), ...data };
+      return { plugins: Object.keys(plugins).toSorted(), ...data };
     })
     .catch((error) => {
       console.error(error);

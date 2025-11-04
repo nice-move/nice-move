@@ -37,7 +37,7 @@
     "settingz": "catalog:",
     "stylelint-config-standard": "^39.0.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
-    "stylelint-no-unresolved-module": "^2.4.0",
+    "stylelint-no-unresolved-module": "^2.5.2",
     "stylelint-scss": "^6.12.1",
     "stylelint-suitcss": "^5.0.0"
   },

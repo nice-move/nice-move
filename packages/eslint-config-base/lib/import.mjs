@@ -14,7 +14,7 @@ export default [
   {
     files: ['**/*.{js,jsx,ts,tsx,cjs,mjs,cts,mts}'],
     ignores: [
-      '*.config.{m,c}{j,t}s',
+      '**/*.config.{m,c}{j,t}s',
       '.config/**/.{m,c}{j,t}s',
       'config/**/.{m,c}{j,t}s',
       '**/*.md/*',

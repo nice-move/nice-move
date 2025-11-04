@@ -945,6 +945,7 @@
       "DeviceMotionEventRotationRate": "readonly",
       "DeviceOrientationEvent": "readonly",
       "DevicePosture": "readonly",
+      "DigitalCredential": "readonly",
       "DisposableStack": "readonly",
       "Document": "readonly",
       "DocumentFragment": "readonly",
@@ -1148,6 +1149,7 @@
       "IDBKeyRange": "readonly",
       "IDBObjectStore": "readonly",
       "IDBOpenDBRequest": "readonly",
+      "IDBRecord": "readonly",
       "IDBRequest": "readonly",
       "IDBTransaction": "readonly",
       "IDBVersionChangeEvent": "readonly",
@@ -1174,6 +1176,7 @@
       "Int32Array": "readonly",
       "Int8Array": "readonly",
       "IntegrityViolationReportBody": "readonly",
+      "InterestEvent": "readonly",
       "IntersectionObserver": "readonly",
       "IntersectionObserverEntry": "readonly",
       "Intl": "readonly",
@@ -1256,6 +1259,7 @@
       "NavigationCurrentEntryChangeEvent": "readonly",
       "NavigationDestination": "readonly",
       "NavigationHistoryEntry": "readonly",
+      "NavigationPrecommitController": "readonly",
       "NavigationPreloadManager": "readonly",
       "NavigationTransition": "readonly",
       "Navigator": "readonly",
@@ -1523,6 +1527,7 @@
       "SpeechRecognition": "readonly",
       "SpeechRecognitionErrorEvent": "readonly",
       "SpeechRecognitionEvent": "readonly",
+      "SpeechRecognitionPhrase": "readonly",
       "SpeechSynthesis": "readonly",
       "SpeechSynthesisErrorEvent": "readonly",
       "SpeechSynthesisEvent": "readonly",
@@ -3612,6 +3617,9 @@
     "unicorn/no-hex-escape": [
       "error",
     ],
+    "unicorn/no-immediate-mutation": [
+      "error",
+    ],
     "unicorn/no-instanceof-builtins": [
       "error",
       {
@@ -3691,6 +3699,9 @@
       "error",
     ],
     "unicorn/no-unreadable-iife": [
+      "error",
+    ],
+    "unicorn/no-useless-collection-argument": [
       "error",
     ],
     "unicorn/no-useless-error-capture-stack-trace": [
@@ -3868,6 +3879,9 @@
     "unicorn/prefer-regexp-test": [
       "error",
     ],
+    "unicorn/prefer-response-static-json": [
+      "error",
+    ],
     "unicorn/prefer-set-size": [
       "error",
     ],
@@ -3933,6 +3947,9 @@
     ],
     "unicorn/text-encoding-identifier-case": [
       "error",
+      {
+        "withDash": false,
+      },
     ],
     "unicorn/throw-new-error": [
       "error",

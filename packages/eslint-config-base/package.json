@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.13.9",
+  "version": "0.13.10",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -37,7 +37,7 @@
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "catalog:",
-    "@eslint/markdown": "^7.4.0",
+    "@eslint/markdown": "^7.5.0",
     "@nice-move/eslint-plugin-html": "^0.1.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^10.1.8",
@@ -45,12 +45,12 @@
     "eslint-plugin-n": "^17.23.1",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-regexp": "^2.10.0",
-    "eslint-plugin-unicorn": "^61.0.2",
+    "eslint-plugin-unicorn": "^62.0.0",
     "espree": "^10.4.0",
     "globals": "catalog:overrides",
     "resolve.exports": "^2.0.3",
     "settingz": "catalog:",
-    "typescript-eslint": "^8.46.0"
+    "typescript-eslint": "^8.46.3"
   },
   "peerDependencies": {
     "eslint": "catalog:overrides"

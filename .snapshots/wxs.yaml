@@ -945,6 +945,7 @@
       "DeviceMotionEventRotationRate": "off",
       "DeviceOrientationEvent": "off",
       "DevicePosture": "off",
+      "DigitalCredential": "off",
       "DisposableStack": "off",
       "Document": "off",
       "DocumentFragment": "off",
@@ -1148,6 +1149,7 @@
       "IDBKeyRange": "off",
       "IDBObjectStore": "off",
       "IDBOpenDBRequest": "off",
+      "IDBRecord": "off",
       "IDBRequest": "off",
       "IDBTransaction": "off",
       "IDBVersionChangeEvent": "off",
@@ -1174,6 +1176,7 @@
       "Int32Array": "off",
       "Int8Array": "off",
       "IntegrityViolationReportBody": "off",
+      "InterestEvent": "off",
       "IntersectionObserver": "off",
       "IntersectionObserverEntry": "off",
       "Intl": "off",
@@ -1256,6 +1259,7 @@
       "NavigationCurrentEntryChangeEvent": "off",
       "NavigationDestination": "off",
       "NavigationHistoryEntry": "off",
+      "NavigationPrecommitController": "off",
       "NavigationPreloadManager": "off",
       "NavigationTransition": "off",
       "Navigator": "off",
@@ -1523,6 +1527,7 @@
       "SpeechRecognition": "off",
       "SpeechRecognitionErrorEvent": "off",
       "SpeechRecognitionEvent": "off",
+      "SpeechRecognitionPhrase": "off",
       "SpeechSynthesis": "off",
       "SpeechSynthesisErrorEvent": "off",
       "SpeechSynthesisEvent": "off",
@@ -3527,6 +3532,9 @@
     "unicorn/no-hex-escape": [
       "error",
     ],
+    "unicorn/no-immediate-mutation": [
+      "error",
+    ],
     "unicorn/no-instanceof-builtins": [
       "error",
       {
@@ -3606,6 +3614,9 @@
       "error",
     ],
     "unicorn/no-unreadable-iife": [
+      "error",
+    ],
+    "unicorn/no-useless-collection-argument": [
       "error",
     ],
     "unicorn/no-useless-error-capture-stack-trace": [
@@ -3764,6 +3775,9 @@
     "unicorn/prefer-regexp-test": [
       "error",
     ],
+    "unicorn/prefer-response-static-json": [
+      "error",
+    ],
     "unicorn/prefer-set-size": [
       "error",
     ],
@@ -3826,6 +3840,9 @@
     ],
     "unicorn/text-encoding-identifier-case": [
       "error",
+      {
+        "withDash": false,
+      },
     ],
     "unicorn/throw-new-error": [
       "error",

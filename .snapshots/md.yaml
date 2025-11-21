@@ -91,7 +91,7 @@
   "processor": {
     "meta": {
       "name": "@eslint/markdown/markdown",
-      "version": "7.5.0",
+      "version": "7.5.1",
     },
     "postprocess": [Function],
     "preprocess": [Function],

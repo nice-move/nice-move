@@ -14,7 +14,7 @@
   },
   "peerDependencies": {
     "@types/eslint": "^9.6.1",
-    "eslint": "catalog:overrides",
+    "eslint": "catalog:",
     "stylelint": "catalog:"
   },
   "engines": {

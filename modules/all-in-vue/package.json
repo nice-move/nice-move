@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/all-in-vue",
-  "version": "0.6.20",
+  "version": "0.6.21",
   "license": "MIT",
   "author": {
     "name": "Eric Chen"
@@ -38,7 +38,7 @@
     "@nice-move/tsconfig": "workspace:^"
   },
   "peerDependencies": {
-    "eslint": "catalog:overrides",
+    "eslint": "catalog:",
     "garou": "catalog:",
     "prettier": "catalog:overrides",
     "stylelint": "catalog:",

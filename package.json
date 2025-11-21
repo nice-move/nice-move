@@ -32,19 +32,19 @@
     "@bring-it/cli": "^0.11.1",
     "@bring-it/npm": "^0.9.3",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
-    "@vitest/ui": "^4.0.6",
-    "eslint": "catalog:overrides",
+    "@vitest/ui": "^4.0.12",
+    "eslint": "catalog:",
     "find-workspaces": "^0.3.1",
     "garou": "catalog:",
-    "nodemon": "^3.1.10",
+    "nodemon": "^3.1.11",
     "postcss": "^8.5.6",
     "prettier": "catalog:overrides",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "stylelint": "catalog:",
     "syncpack": "^13.0.4",
-    "tsdown": "^0.15.12",
+    "tsdown": "^0.16.6",
     "typescript": "catalog:",
-    "vitest": "^4.0.6"
+    "vitest": "^4.0.12"
   },
   "peerDependencies": {
     "@commitlint/load": "^20.1.0",
@@ -64,12 +64,12 @@
     "@nice-move/stylelint-config": "workspace:^",
     "@nice-move/syncpack-config": "workspace:^",
     "@nice-move/tsconfig": "workspace:^",
-    "@types/node": "^22.19.0"
+    "@types/node": "catalog:"
   },
-  "packageManager": "pnpm@10.20.0",
+  "packageManager": "pnpm@10.23.0",
   "engines": {
     "node": "^22.18.0 || ^24.0.0",
-    "pnpm": "^10.20.0"
+    "pnpm": "^10.23.0"
   },
   "nice-move": {
     "bundle": [

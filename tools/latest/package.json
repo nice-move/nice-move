@@ -20,7 +20,7 @@
     "react": "~18.3.1",
     "react-dom": "~18.3.1",
     "tailwindcss": "^3.4.18",
-    "vue": "~3.5.22",
+    "vue": "~3.5.24",
     "yaml": "catalog:"
   },
   "peerDependenciesMeta": {

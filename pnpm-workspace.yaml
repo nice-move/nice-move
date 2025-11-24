@@ -6,18 +6,21 @@ packages:
 catalog:
   '@eslint/js': ^9.39.1
   '@eslint/markdown': ^7.5.1
-  '@types/node': ^22.19.1
+  '@types/node': ^24.10.1
+  '@vitest/ui': ^4.0.13
   chalk: ^5.6.2
   eslint: ^9.39.1
+  eslint-plugin-vue: ^10.6.0
   execa: ^9.6.0
   fs-chain: ^10.0.0
   garou: ^0.9.16
   lodash: ^4.17.21
   settingz: ^0.2.0
   sort-keys: ^6.0.0
-  stylelint: ^16.25.0
+  stylelint: ^16.26.0
   typescript: ~5.9.3
   typescript-eslint: ^8.47.0
+  vitest: ^4.0.13
   yaml: ^2.8.1
 
 catalogMode: prefer

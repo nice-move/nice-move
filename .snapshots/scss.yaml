@@ -88,13 +88,9 @@
     "scss/selector-nest-combinators": [Function],
     "scss/selector-no-redundant-nesting-selector": [Function],
     "scss/selector-no-union-class-name": [Function],
-    "suitcss/custom-property-no-outside-root": [Function],
-    "suitcss/root-no-standard-properties": [Function],
-    "suitcss/selector-root-no-composition": [Function],
   },
   "plugins": [
     "/<:root>/node_mo****perties/index.js",
-    "/<:root>/node_mo****suitcss/index.js",
     "/<:root>/node_mo****ule/esm/index.js",
     "/<:root>/node_mo****css/src/index.js",
   ],
@@ -408,12 +404,6 @@
           "declaration-values",
         ],
       },
-    ],
-    "suitcss/root-no-standard-properties": [
-      true,
-    ],
-    "suitcss/selector-root-no-composition": [
-      true,
     ],
     "syntax-string-no-invalid": [
       true,

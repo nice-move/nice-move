@@ -12,8 +12,6 @@ const cwd = process.cwd();
 
 const regexp = new RegExp(slash(cwd).replaceAll('/', String.raw`[\/\\]`), 'i');
 
-console.log(regexp);
-
 function fixPath(path) {
   const io = slash(
     path.replace(/^file:\/\/\//i, '').replace(regexp, '/<:root>'),

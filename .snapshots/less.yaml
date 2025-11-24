@@ -11,13 +11,9 @@
   "pluginFunctions": {
     "plugin/declaration-block-no-ignored-properties": [Function],
     "plugin/no-unresolved-module": [Function],
-    "suitcss/custom-property-no-outside-root": [Function],
-    "suitcss/root-no-standard-properties": [Function],
-    "suitcss/selector-root-no-composition": [Function],
   },
   "plugins": [
     "/<:root>/node_mo****perties/index.js",
-    "/<:root>/node_mo****suitcss/index.js",
     "/<:root>/node_mo****ule/esm/index.js",
   ],
   "reportInvalidScopeDisables": true,
@@ -266,12 +262,6 @@
           "declaration-values",
         ],
       },
-    ],
-    "suitcss/root-no-standard-properties": [
-      true,
-    ],
-    "suitcss/selector-root-no-composition": [
-      true,
     ],
     "syntax-string-no-invalid": [
       true,

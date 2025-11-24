@@ -12,12 +12,9 @@ module.exports = {
   ],
   plugins: [
     'stylelint-declaration-block-no-ignored-properties',
-    'stylelint-suitcss',
     'stylelint-no-unresolved-module',
   ],
   rules: {
-    'suitcss/root-no-standard-properties': true,
-    'suitcss/selector-root-no-composition': true,
     'plugin/declaration-block-no-ignored-properties': [
       true,
       { severity: 'warning' },

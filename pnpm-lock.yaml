@@ -642,8 +642,8 @@ importers:
         specifier: ^0.9.3
         version: 0.9.3(@bring-it/cli@0.11.1)
       '@bring-it/sftp':
-        specifier: ^0.7.0
-        version: 0.7.0(@bring-it/cli@0.11.1)
+        specifier: ^0.7.1
+        version: 0.7.1(@bring-it/cli@0.11.1)
       '@nice-move/init':
         specifier: workspace:^
         version: link:../../packages/init
@@ -788,12 +788,12 @@ packages:
     peerDependencies:
       '@bring-it/cli': ^0.11.1
 
-  '@bring-it/sftp@0.7.0':
-    resolution: {integrity: sha512-6SE1y9a/2LkmxvmD6u6bVhYnkC3rzqcG88kmuippQm5NbNDef8aKJlsK+DcC7GXtub2KuJywIoDUOMgnbSU4FQ==}
+  '@bring-it/sftp@0.7.1':
+    resolution: {integrity: sha512-IKeB40aFNNaSMWkKfDd4ZE4aMGr8hKWR60IEgb3G9Nj8cH7Xw4SqQy01YZbqmVavvA+S2Do8ATb4aH2LT62lSw==}
     engines: {node: '>=22.18.0'}
     hasBin: true
     peerDependencies:
-      '@bring-it/cli': ^0.11.0
+      '@bring-it/cli': ^0.11.1
 
   '@cacheable/memory@2.0.5':
     resolution: {integrity: sha512-fkiAxCvssEyJZ5fxX4tcdZFRmW9JehSTGvvqmXn6rTzG5cH6V/3C4ad8yb01vOjp2xBydHkHrgpW0qeGtzt6VQ==}
@@ -4804,10 +4804,10 @@ snapshots:
     dependencies:
       '@bring-it/cli': 0.11.1
 
-  '@bring-it/sftp@0.7.0(@bring-it/cli@0.11.1)':
+  '@bring-it/sftp@0.7.1(@bring-it/cli@0.11.1)':
     dependencies:
       '@bring-it/cli': 0.11.1
-      globby: 14.1.0
+      globby: 15.0.0
 
   '@cacheable/memory@2.0.5':
     dependencies:

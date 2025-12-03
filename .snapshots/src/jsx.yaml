@@ -2561,7 +2561,6 @@
           ".*/config.{m,c,}{t,j}s",
           "**/.best-shot/**",
           "packages/init/**",
-          "packages/lint/**",
           "packages/cli/**",
         ],
       },

@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.13.11",
+  "version": "0.13.12",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -35,7 +35,7 @@
   "type": "module",
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
-    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/eslintrc": "catalog:",
     "@eslint/js": "catalog:",
     "@eslint/markdown": "catalog:",
     "@nice-move/eslint-plugin-html": "^0.1.1",

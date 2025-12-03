@@ -39,10 +39,10 @@
     "nodemon": "^3.1.11",
     "postcss": "^8.5.6",
     "prettier": "catalog:overrides",
-    "prettier-plugin-tailwindcss": "^0.7.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "stylelint": "catalog:",
     "syncpack": "^13.0.4",
-    "tsdown": "^0.16.6",
+    "tsdown": "^0.16.8",
     "typescript": "catalog:",
     "vitest": "catalog:"
   },

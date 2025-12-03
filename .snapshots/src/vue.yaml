@@ -2386,7 +2386,7 @@
   "processor": {
     "meta": {
       "name": "eslint-plugin-vue",
-      "version": "10.6.0",
+      "version": "10.6.2",
     },
     "postprocess": [Function],
     "preprocess": [Function],

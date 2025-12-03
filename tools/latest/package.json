@@ -15,7 +15,7 @@
     "@nice-move/init": "workspace:^",
     "@nice-move/syncpack-config": "workspace:^",
     "@playwright/test": "~1.56.0",
-    "@types/react": "~18.3.26",
+    "@types/react": "~18.3.27",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "react": "~18.3.1",
     "react-dom": "~18.3.1",

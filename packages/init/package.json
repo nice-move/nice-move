@@ -59,7 +59,7 @@
     "validate-npm-package-name": "^7.0.0"
   },
   "engines": {
-    "node": "^22.18.0 || ^24.0.0"
+    "node": ">=24.0.0 || ^22.18.0"
   },
   "publishConfig": {
     "access": "public",

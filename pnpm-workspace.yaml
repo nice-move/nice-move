@@ -4,8 +4,8 @@ packages:
   - tools/*
 
 catalog:
-  '@eslint/js': ^9.39.1
   '@eslint/eslintrc': ^3.3.3
+  '@eslint/js': ^9.39.1
   '@eslint/markdown': ^7.5.1
   '@types/node': ^24.10.1
   '@vitest/ui': ^4.0.15
@@ -26,12 +26,15 @@ catalog:
 
 catalogs:
   overrides:
-    eslint-plugin-react-hooks: ^5.2.0
     eslint: ^9.39.1
+    eslint-plugin-react-hooks: ^5.2.0
     globals: ^16.5.0
     prettier: ~3.6.2
 
-ignorePatchFailures: false
+configDependencies:
+  '@nice-move/pnpm-config': 0.1.0+sha512-BBii99Eyzf1R808pLcFpmi3dDCFA5A43QdK9RpDWdiW2ViJJnmdBNsxr9DZ19xlvUuf/yf9h+z9VynjLgc+Ykg==
+
+pnpmfile: node_modules/.pnpm-config/@nice-move/pnpm-config/pnpmfile.cjs
 
 overrides:
   eslint: catalog:overrides
@@ -42,7 +45,3 @@ patchedDependencies:
   '@commitlint/rules': patches/@commitlint__rules.patch
   conventional-changelog-angular@7.0.0: patches/conventional-changelog-angular@7.0.0.patch
   lint-staged: patches/lint-staged.patch
-
-shamefullyHoist: true
-
-verifyDepsBeforeRun: warn

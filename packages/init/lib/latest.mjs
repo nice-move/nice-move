@@ -43,5 +43,5 @@ export default {
   'typescript-eslint': '^8.48.1',
   'eslint-plugin-react-hooks': '^5.2.0',
   globals: '^16.5.0',
-  lts: '^22.18.0 || ^24.0.0',
+  lts: '>=24.0.0 || ^22.18.0',
 };

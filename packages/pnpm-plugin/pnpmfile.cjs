@@ -8,7 +8,7 @@ module.exports = {
         ignorePatchFailures: false,
         minimumReleaseAge: 1440,
         shamefullyHoist: true,
-        strictDepBuilds: true,
+        strictDepBuilds: false,
         verifyDepsBeforeRun: 'warn',
       });
     },

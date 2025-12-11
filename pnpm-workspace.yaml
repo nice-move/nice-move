@@ -7,7 +7,7 @@ catalog:
   '@eslint/eslintrc': ^3.3.3
   '@eslint/js': ^9.39.1
   '@eslint/markdown': ^7.5.1
-  '@types/node': ^24.10.1
+  '@types/node': ^24.10.2
   '@vitest/ui': ^4.0.15
   chalk: ^5.6.2
   eslint: ^9.39.1
@@ -20,7 +20,7 @@ catalog:
   sort-keys: ^6.0.0
   stylelint: ^16.26.1
   typescript: ~5.9.3
-  typescript-eslint: ^8.48.0
+  typescript-eslint: ^8.49.0
   vitest: ^4.0.15
   yaml: ^2.8.2
 
@@ -29,10 +29,10 @@ catalogs:
     eslint: ^9.39.1
     eslint-plugin-react-hooks: ^5.2.0
     globals: ^16.5.0
-    prettier: ~3.6.2
+    prettier: ~3.7.4
 
 configDependencies:
-  pnpm-plugin-nice-move: 0.0.0+sha512-Izo1w5H/T0w9WSt5cR6460Xj3ZeUi6v9PtobM9utn6biuYbvWa0Fkthc4dfMAxRdW5uVM5KBb77sm2CRW3qfeQ==
+  pnpm-plugin-nice-move: 0.1.0+sha512-M70sSpJmx0htcWXAYdd+VtlFthhQEHWsfLIINitKLVEWs4NyCOdiyd+zGkcqJE8PwqVPd6hpiNX9edIuvB9wjw==
 
 onlyBuiltDependencies:
   - esbuild

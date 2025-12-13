@@ -11,7 +11,7 @@
   },
   "peerDependencies": {
     "@bring-it/npm": "^0.9.3",
-    "@bring-it/sftp": "^0.7.0",
+    "@bring-it/sftp": "^0.7.1",
     "@nice-move/init": "workspace:^",
     "@nice-move/syncpack-config": "workspace:^",
     "@playwright/test": "~1.56.0",

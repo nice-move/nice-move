@@ -1,6 +1,6 @@
 import { execa } from 'execa';
 
-import { green, red } from '../lib/color.mjs';
+import { green, red } from '../lib/color.mts';
 
 const message = 'Initialize as git repository';
 

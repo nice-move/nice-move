@@ -3,7 +3,6 @@
   "extends": "./base.json",
   "compilerOptions": {
     "typeRoots": [
-      "types",
       "node_modules/@types",
       "node_modules/@types/bun"
     ]

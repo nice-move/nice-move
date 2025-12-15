@@ -1,6 +1,6 @@
 import { Text } from 'fs-chain';
 
-import { cyan } from '../lib/color.mjs';
+import { cyan } from '../lib/color.mts';
 import editorconfig from '../template/.editorconfig.txt';
 
 export function EditorConfig() {

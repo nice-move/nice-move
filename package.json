@@ -16,6 +16,7 @@
     "url": "https://github.com/nice-move/nice-move/issues"
   },
   "scripts": {
+    "lint:eslint": "eslint . --quiet --fix --concurrency=auto",
     "lint:staged": "nice-move lint staged",
     "lint:type": "tsc -p tsconfig.json",
     "lint:version": "syncpack lint",

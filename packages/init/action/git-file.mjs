@@ -3,7 +3,7 @@ import { type } from 'node:os';
 import { Text } from 'fs-chain';
 import ora from 'ora';
 
-import { cyan, green, red } from '../lib/color.mjs';
+import { cyan, green, red } from '../lib/color.mts';
 import { download } from '../lib/utils.mjs';
 import gitattributes from '../template/.gitattributes.txt';
 

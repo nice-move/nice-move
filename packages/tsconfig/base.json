@@ -9,10 +9,8 @@
       "ESNext"
     ],
     "typeRoots": [
-      "types",
       "node_modules/@types"
     ],
-    "types": [],
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "erasableSyntaxOnly": true,
@@ -29,6 +27,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
+    "types": [],
     "verbatimModuleSyntax": true
   },
   "display": "Base"

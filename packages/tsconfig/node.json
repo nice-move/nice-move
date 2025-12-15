@@ -5,9 +5,7 @@
     "types": [
       "node"
     ],
-    "rewriteRelativeImportExtensions": true,
     "typeRoots": [
-      "types",
       "node_modules/@types",
       "node_modules/@types/node"
     ]

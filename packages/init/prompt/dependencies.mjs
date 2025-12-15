@@ -16,6 +16,9 @@ function checkEslint({ vue, react }) {
       [`@nice-move/eslint-config-${type}`]: latest['eslint-config-base'],
       eslint: latest.eslint,
     },
+    script: {
+      'lint:eslint': 'eslint . --quiet --fix --concurrency=auto',
+    },
   };
 }
 

@@ -2,7 +2,7 @@ import { deepmerge } from 'deepmerge-ts';
 import { Json, Text } from 'fs-chain';
 import { osLocale } from 'os-locale';
 
-import { cyan } from '../lib/color.mjs';
+import { cyan } from '../lib/color.mts';
 import latest from '../lib/latest.mjs';
 
 const pkg = 'package.json';

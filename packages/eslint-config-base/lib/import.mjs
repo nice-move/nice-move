@@ -38,8 +38,9 @@ export default [
         {
           devDependencies: [
             '**/*.{test,spec}.{m,c,}{t,j}s',
-            '{test,tests,try}.{m,c,}{t,j}s',
-            '{test,tests,config}/**/*.{m,c,}{t,j}s',
+            '**/{test,tests}.{m,c,}{t,j}s',
+            '**/{test,tests}/**/*.{m,c,}{t,j}s',
+            '{config,try}/**/*.{m,c,}{t,j}s',
             '**/.*rc.{m,c,}{t,j}s',
             '**/*.config.{m,c,}{t,j}s',
             '**/config.{m,c,}{t,j}s',

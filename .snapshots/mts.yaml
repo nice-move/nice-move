@@ -1987,7 +1987,7 @@
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.49.0",
+        "version": "8.50.0",
       },
       "parseForESLint": [Function],
     },
@@ -2226,8 +2226,9 @@
       {
         "devDependencies": [
           "**/*.{test,spec}.{m,c,}{t,j}s",
-          "{test,tests,try}.{m,c,}{t,j}s",
-          "{test,tests,config}/**/*.{m,c,}{t,j}s",
+          "**/{test,tests}.{m,c,}{t,j}s",
+          "**/{test,tests}/**/*.{m,c,}{t,j}s",
+          "{config,try}/**/*.{m,c,}{t,j}s",
           "**/.*rc.{m,c,}{t,j}s",
           "**/*.config.{m,c,}{t,j}s",
           "**/config.{m,c,}{t,j}s",

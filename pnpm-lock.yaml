@@ -654,7 +654,7 @@ importers:
         specifier: ~1.56.0
         version: 1.56.1
       '@types/react':
-        specifier: ~18.3.26
+        specifier: ~18.3.27
         version: 18.3.27
       deepmerge-ts:
         specifier: ^7.1.5

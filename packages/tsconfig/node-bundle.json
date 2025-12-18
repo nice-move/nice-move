@@ -3,7 +3,6 @@
   "extends": "./node.json",
   "compilerOptions": {
     "noEmit": false,
-    "outDir": "dist",
     "allowJs": true,
     "declaration": true,
     "rewriteRelativeImportExtensions": true

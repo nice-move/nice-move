@@ -8,9 +8,6 @@
     "lib": [
       "ESNext"
     ],
-    "typeRoots": [
-      "node_modules/@types"
-    ],
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "erasableSyntaxOnly": true,

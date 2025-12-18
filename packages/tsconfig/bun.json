@@ -1,11 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./base.json",
-  "compilerOptions": {
-    "typeRoots": [
-      "node_modules/@types",
-      "node_modules/@types/bun"
-    ]
-  },
   "display": "Bun"
 }

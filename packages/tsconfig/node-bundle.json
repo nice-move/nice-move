@@ -4,6 +4,8 @@
   "compilerOptions": {
     "noEmit": false,
     "outDir": "dist",
+    "allowJs": true,
+    "declaration": true,
     "rewriteRelativeImportExtensions": true
   },
   "display": "Node-Bundle"

@@ -3114,10 +3114,10 @@
     "no-unused-vars": [
       "error",
       {
-        "argsIgnorePattern": "^_+$",
+        "argsIgnorePattern": "^_",
         "ignoreRestSiblings": true,
         "reportUsedIgnorePattern": true,
-        "varsIgnorePattern": "^_+$",
+        "varsIgnorePattern": "^_",
       },
     ],
     "no-use-before-define": [

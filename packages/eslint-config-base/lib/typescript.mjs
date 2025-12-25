@@ -38,10 +38,10 @@ export default [
       '@typescript-eslint/no-unused-vars': [
         'warn',
         {
-          argsIgnorePattern: '^_+$',
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
           ignoreRestSiblings: true,
           reportUsedIgnorePattern: true,
-          varsIgnorePattern: '^_+$',
         },
       ],
     },

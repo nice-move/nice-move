@@ -90,8 +90,8 @@ export default [
       'no-unused-vars': [
         'error',
         {
-          argsIgnorePattern: '^_+$',
-          varsIgnorePattern: '^_+$',
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
           ignoreRestSiblings: true,
           reportUsedIgnorePattern: true,
         },

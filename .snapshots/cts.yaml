@@ -1987,7 +1987,7 @@
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.50.0",
+        "version": "8.50.1",
       },
       "parseForESLint": [Function],
     },
@@ -2097,10 +2097,10 @@
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
-        "argsIgnorePattern": "^_+$",
+        "argsIgnorePattern": "^_",
         "ignoreRestSiblings": true,
         "reportUsedIgnorePattern": true,
-        "varsIgnorePattern": "^_+$",
+        "varsIgnorePattern": "^_",
       },
     ],
     "@typescript-eslint/no-useless-constructor": [

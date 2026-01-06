@@ -43,12 +43,12 @@
     "prettier-plugin-tailwindcss": "^0.7.2",
     "stylelint": "catalog:",
     "syncpack": "^13.0.4",
-    "tsdown": "^0.18.2",
+    "tsdown": "^0.18.4",
     "typescript": "catalog:",
     "vitest": "catalog:"
   },
   "peerDependencies": {
-    "@commitlint/load": "^20.2.0",
+    "@commitlint/load": "^20.3.0",
     "@nice-move/all-in-base": "workspace:^",
     "@nice-move/all-in-react": "workspace:^",
     "@nice-move/all-in-vue": "workspace:^",

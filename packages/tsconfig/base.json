@@ -8,6 +8,7 @@
     "lib": [
       "ESNext"
     ],
+    "moduleDetection": "force",
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "erasableSyntaxOnly": true,

@@ -4,7 +4,7 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "type": [
+    "types": [
       "react",
       "react-dom"
     ]

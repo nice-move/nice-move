@@ -45,20 +45,27 @@ function getLocalVersion(...names) {
 
 new JsonToText()
   .source('package.json')
-  .onDone(({ devDependencies: { nodemon, execa, ...rest } }) => ({
-    ...rest,
-    ...require('./package.json').peerDependencies,
-    ...getLocalVersion(
-      'eslint-config-base',
-      'stylelint-config',
-      'prettier-config',
-      'syncpack-config',
-      'tsconfig',
-      'cli',
-      'init',
-    ),
-    ...readYaml(),
-    lts: require('@nice-move/init/package.json').engines.node,
-  }))
+  .onDone(
+    ({
+      devDependencies: { nodemon, execa, ...rest },
+      packageManager,
+      engines,
+    }) => ({
+      ...rest,
+      ...require('./package.json').peerDependencies,
+      ...getLocalVersion(
+        'eslint-config-base',
+        'stylelint-config',
+        'prettier-config',
+        'syncpack-config',
+        'tsconfig',
+        'cli',
+        'init',
+      ),
+      ...readYaml(),
+      packageManager,
+      engines,
+    }),
+  )
   .onDone((data) => `export default ${JSON.stringify(data)}`)
   .output('~@nice-move/init/lib/latest.mjs');

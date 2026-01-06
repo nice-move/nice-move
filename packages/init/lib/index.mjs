@@ -4,12 +4,12 @@ import { License } from '../action/license.mjs';
 import { Package } from '../action/package.mjs';
 import { Readme } from '../action/readme.mjs';
 import { Prompt } from '../prompt/index.mjs';
+import { Pnpm } from '../action/pnpm.mjs';
 
 export async function init() {
   const {
     Dependencies,
     GitInit,
-    Install,
     info,
     options: { isRoot } = {},
   } = await Prompt();
@@ -18,13 +18,13 @@ export async function init() {
 
   const actions = [
     GitInit,
+    Pnpm(),
     () => Package(info),
     Readme,
     License,
     EditorConfig,
     () => (GitInit || isRoot ? GitFile() : undefined),
     () => (Dependencies ? Dependencies(GitInit || isRoot) : undefined),
-    Install,
   ].filter((func) => typeof func === 'function');
 
   for (const action of actions) {

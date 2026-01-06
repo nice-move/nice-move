@@ -26,13 +26,12 @@ npx @nice-move/init
 
 - Confirm when workspace not empty or repository not clean
 - Run `git init` when workspace not a git project
-- Run a better `npm init` / `yarn init` command when needed
+- Run a better `npm init` command when needed
 - Create or overwrite `.gitignore` / `.gitattributes`
 - Create or overwrite `LICENSE` / `.editorconfig`
 - Create `README.md` when it not exists
-- Set registry to China mirror in `.npmrc` / `.yarnrc`
+- Set registry to China mirror in `.npmrc`
 - Add or reset project dependencies by interactive
-- Run `npm` / `yarn` install command
 
 ## Related
 

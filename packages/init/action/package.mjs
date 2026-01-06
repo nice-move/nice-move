@@ -1,36 +1,11 @@
 import { deepmerge } from 'deepmerge-ts';
-import { Json, Text } from 'fs-chain';
-import { osLocale } from 'os-locale';
+import { Json } from 'fs-chain';
 
 import { cyan } from '../lib/color.mts';
 import latest from '../lib/latest.mjs';
+import { Registry } from './registry.mjs';
 
 const pkg = 'package.json';
-
-async function Registry() {
-  const InChina = (await osLocale()) === 'zh-CN';
-
-  if (InChina) {
-    new Text()
-      .source('.npmrc')
-      .onFail()
-      .onDone((text = '') => {
-        if (
-          text.trim() &&
-          /registry\s*=\s*["']?https:\/\/mirrors\.tencent\.com\/npm\/["']?/i.test(
-            text,
-          )
-        ) {
-          return text;
-        }
-
-        return `registry = https://mirrors.tencent.com/npm/\r${text}`;
-      })
-      .output()
-      .logger('Set registry to China mirror in', cyan('.npmrc'))
-      .catch(console.warn);
-  }
-}
 
 export function Package(info) {
   return new Json()
@@ -40,8 +15,11 @@ export function Package(info) {
     .onDone((old = {}) =>
       deepmerge(
         {
+          packageManager: latest.packageManager,
+          type: 'module',
           engines: {
-            node: latest.lts,
+            node: latest.engines.node,
+            pnpm: latest.engines.pnpm,
           },
           publishConfig:
             info.private || old.private

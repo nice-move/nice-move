@@ -9,14 +9,11 @@ function checkEslint({ vue, react }) {
     (react && vue) || (!react && !vue) ? 'base' : react ? 'react' : 'vue';
 
   return {
-    eslintConfig: {
-      extends: `@nice-move/eslint-config-${type}`,
-    },
     devDependencies: {
       [`@nice-move/eslint-config-${type}`]: latest['eslint-config-base'],
       eslint: latest.eslint,
     },
-    script: {
+    scripts: {
       'lint:eslint': 'eslint . --quiet --fix --concurrency=auto',
     },
   };
@@ -53,9 +50,9 @@ function action(isRoot, wanted = {}) {
       const useLint = eslint || stylelint || prettier || garou;
 
       const prepublishOnly = [
-        useLint ? 'npm run lint:staged' : undefined,
-        typescript ? 'npm run lint:type' : undefined,
-        ava ? 'npm test' : undefined,
+        useLint ? 'pnpm run lint:staged' : undefined,
+        typescript ? 'pnpm run lint:type' : undefined,
+        ava ? 'pnpm test' : undefined,
       ]
         .filter(Boolean)
         .map((line, idx, lines) =>
@@ -71,11 +68,25 @@ function action(isRoot, wanted = {}) {
       if (commitlint) {
         await new Text()
           .onDone(() =>
-            ['#!/bin/sh', 'npx --no-install nice-move lint commit', ''].join(
-              '\n\n',
-            ),
+            ['#!/bin/sh', 'pnpm exec nice-move lint commit', ''].join('\n\n'),
           )
           .output('.githooks/commit-msg');
+      }
+
+      if (eslint) {
+        await new Text()
+          .onDone(() =>
+            [
+              react
+                ? "import config from '@nice-move/eslint-config-react';"
+                : vue
+                  ? "import config from '@nice-move/eslint-config-vue';"
+                  : "import config from '@nice-move/eslint-config-base';",
+              'export default [...config];',
+              '',
+            ].join('\n\n'),
+          )
+          .output('eslint.config.mjs');
       }
 
       if (syncpack) {
@@ -83,9 +94,9 @@ function action(isRoot, wanted = {}) {
           .onDone(() =>
             [
               '// @ts-check',
-              "import defineConfig from '@nice-move/syncpack-config/define.cjs';",
-              'export default defineConfig(import.meta.url, {});',
-              "// export { default } from '@nice-move/syncpack-config';",
+              "// import defineConfig from '@nice-move/syncpack-config/define.mjs';",
+              '// export default defineConfig(import.meta.url, {});',
+              "export { default } from '@nice-move/syncpack-config';",
             ].join('\n\n'),
           )
           .output('syncpack.config.mjs');
@@ -95,8 +106,14 @@ function action(isRoot, wanted = {}) {
         await new Json()
           .config({ pretty: true })
           .onDone(() => ({
-            extends: '@nice-move/tsconfig/base.json',
-            include: ['./'],
+            extends: react
+              ? '@nice-move/tsconfig/react.json'
+              : vue
+                ? '@nice-move/tsconfig/vue.json'
+                : '@nice-move/tsconfig/base.json',
+            compilerOptions: {
+              noEmit: true,
+            },
           }))
           .output('tsconfig.json');
       }
@@ -104,13 +121,11 @@ function action(isRoot, wanted = {}) {
       return deepmerge(
         ...[
           old,
-          isRoot && (useLint || ava || commitlint || playwright || typescript)
-            ? {
-                scripts: {
-                  prepare: 'nice-move git hooks',
-                },
-              }
-            : undefined,
+          {
+            scripts: {
+              prepare: 'nice-move git hooks',
+            },
+          },
           garou
             ? {
                 devDependencies: {
@@ -125,7 +140,7 @@ function action(isRoot, wanted = {}) {
                   '@nice-move/tsconfig': latest.tsconfig,
                 },
                 scripts: {
-                  'lint:type': 'tsc --noEmit',
+                  'lint:type': 'tsc -p tsconfig.json',
                 },
               }
             : undefined,
@@ -201,8 +216,9 @@ function action(isRoot, wanted = {}) {
                   react: latest.react,
                   'react-dom': latest['react-dom'],
                 },
-                peerDependencies: {
+                devDependencies: {
                   '@types/react': latest['@types/react'],
+                  '@types/react-dom': latest['@types/react-dom'],
                 },
               }
             : undefined,
@@ -222,7 +238,7 @@ function action(isRoot, wanted = {}) {
           playwright
             ? {
                 scripts: {
-                  'pretest:e2e': 'npm link @playwright/test',
+                  'pretest:e2e': 'pnpm link @playwright/test',
                   'test:e2e': 'playwright test',
                 },
               }

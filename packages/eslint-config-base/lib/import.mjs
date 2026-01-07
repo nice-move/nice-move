@@ -17,6 +17,7 @@ export default [
       '**/*.config.{m,c}{j,t}s',
       '.config/**/.{m,c}{j,t}s',
       'config/**/.{m,c}{j,t}s',
+      '**/*.d.{m,c,}ts',
       '**/*.md/*',
     ],
     rules: {

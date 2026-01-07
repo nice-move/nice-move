@@ -34,7 +34,7 @@
     "@bring-it/npm": "^0.9.3",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "@vitest/ui": "catalog:",
-    "eslint": "catalog:",
+    "eslint": "^9.39.1",
     "find-workspaces": "^0.3.1",
     "garou": "catalog:",
     "nodemon": "^3.1.11",

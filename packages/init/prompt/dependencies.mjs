@@ -53,15 +53,20 @@ function action(isRoot, wanted = {}) {
         useLint ? 'pnpm run lint:staged' : undefined,
         typescript ? 'pnpm run lint:type' : undefined,
         ava ? 'pnpm test' : undefined,
-      ]
-        .filter(Boolean)
-        .map((line, idx, lines) =>
-          idx === lines - 1 ? line : `${line}  || exit 1`,
-        );
+      ].filter(Boolean);
 
       if (prepublishOnly.length > 0) {
         await new Text()
-          .onDone(() => ['#!/bin/sh', '', ...prepublishOnly, ''].join('\n'))
+          .onDone(() =>
+            [
+              '#!/bin/sh',
+              '',
+              ...prepublishOnly.map((line, idx, lines) =>
+                idx === lines - 1 ? line : `${line} || exit 1`,
+              ),
+              '',
+            ].join('\n'),
+          )
           .output('.githooks/pre-commit');
       }
 
@@ -169,9 +174,10 @@ function action(isRoot, wanted = {}) {
                     : undefined),
                 },
                 scripts: {
-                  prepublishOnly: old.private
-                    ? undefined
-                    : prepublishOnly.join(' && ') || undefined,
+                  prepublishOnly:
+                    !old.private && prepublishOnly.length > 0
+                      ? prepublishOnly.join(' && ')
+                      : undefined,
                   test: 'ava --fail-fast',
                   snapshot: 'ava --fail-fast -u',
                 },

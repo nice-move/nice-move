@@ -2130,12 +2130,6 @@
     "block-scoped-var": [
       "error",
     ],
-    "consistent-return": [
-      "warn",
-      {
-        "treatUndefinedAsUnspecified": false,
-      },
-    ],
     "default-case": [
       "error",
       {

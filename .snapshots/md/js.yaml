@@ -2446,12 +2446,6 @@
     "block-scoped-var": [
       "error",
     ],
-    "consistent-return": [
-      "warn",
-      {
-        "treatUndefinedAsUnspecified": false,
-      },
-    ],
     "constructor-super": [
       "error",
     ],

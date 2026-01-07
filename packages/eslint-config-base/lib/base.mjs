@@ -29,7 +29,7 @@ export default [
       camelcase: 0,
       'global-require': 0,
       'class-methods-use-this': 0,
-      'consistent-return': 'warn',
+      'consistent-return': 0,
       'grouped-accessor-pairs': 0,
       'lines-between-class-members': 0,
       'max-classes-per-file': 0,

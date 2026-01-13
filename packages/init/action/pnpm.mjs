@@ -5,9 +5,9 @@ import { parse, stringify } from 'yaml';
 export async function Pnpm() {
   new Text()
     .source('pnpm-workspace.yaml')
-    .onFail()
+    .onFail(() => '')
     .onDone((text) => {
-      const config = parse(text);
+      const config = text.trim() ? parse(text) : {};
 
       config.configDependencies ??= {
         'pnpm-plugin-nice-move':

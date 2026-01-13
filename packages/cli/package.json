@@ -44,8 +44,8 @@
     "cheetor": "^0.13.0"
   },
   "devDependencies": {
-    "@commitlint/format": "^20.2.0",
-    "@commitlint/lint": "^20.3.0",
+    "@commitlint/format": "^20.3.1",
+    "@commitlint/lint": "^20.3.1",
     "execa": "catalog:",
     "lint-staged": "^15.5.2",
     "settingz": "catalog:"

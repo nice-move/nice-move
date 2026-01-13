@@ -48,7 +48,7 @@
     "vitest": "catalog:"
   },
   "peerDependencies": {
-    "@commitlint/load": "^20.3.0",
+    "@commitlint/load": "^20.3.1",
     "@nice-move/all-in-base": "workspace:^",
     "@nice-move/all-in-react": "workspace:^",
     "@nice-move/all-in-vue": "workspace:^",

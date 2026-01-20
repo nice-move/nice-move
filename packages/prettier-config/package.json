@@ -27,9 +27,9 @@
   "main": "index.mjs",
   "type": "module",
   "dependencies": {
-    "@babel/plugin-syntax-import-attributes": "^7.27.1",
-    "@babel/plugin-syntax-jsx": "^7.27.1",
-    "@babel/plugin-syntax-typescript": "^7.27.1",
+    "@babel/plugin-syntax-import-attributes": "^7.28.6",
+    "@babel/plugin-syntax-jsx": "^7.28.6",
+    "@babel/plugin-syntax-typescript": "^7.28.6",
     "@nice-move/prettier-plugin-package-json": "^0.9.2",
     "@prettier/plugin-xml": "^3.4.2",
     "prettier-plugin-css-order": "^2.2.0",

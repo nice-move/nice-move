@@ -41,7 +41,7 @@ export default [
             '**/*.{test,spec}.{m,c,}{t,j}s',
             '**/{test,tests}.{m,c,}{t,j}s',
             '**/{test,tests}/**/*.{m,c,}{t,j}s',
-            '{config,try}/**/*.{m,c,}{t,j}s',
+            '{ci,config,try}/**/*.{m,c,}{t,j}s',
             '**/.*rc.{m,c,}{t,j}s',
             '**/*.config.{m,c,}{t,j}s',
             '**/config.{m,c,}{t,j}s',

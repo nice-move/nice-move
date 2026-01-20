@@ -1982,7 +1982,7 @@
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.52.0",
+        "version": "8.53.0",
       },
       "parseForESLint": [Function],
     },
@@ -2211,7 +2211,7 @@
           "**/*.{test,spec}.{m,c,}{t,j}s",
           "**/{test,tests}.{m,c,}{t,j}s",
           "**/{test,tests}/**/*.{m,c,}{t,j}s",
-          "{config,try}/**/*.{m,c,}{t,j}s",
+          "{ci,config,try}/**/*.{m,c,}{t,j}s",
           "**/.*rc.{m,c,}{t,j}s",
           "**/*.config.{m,c,}{t,j}s",
           "**/config.{m,c,}{t,j}s",

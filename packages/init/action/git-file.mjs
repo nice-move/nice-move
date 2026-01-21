@@ -32,30 +32,28 @@ export async function GitFile() {
       const platform = Types[type()];
 
       return download(
-        `https://gitignore.io/api/ssh,certificates,node,${platform}`,
+        `https://www.toptal.com/developers/gitignore/api/ssh,certificates,node,${platform}`,
       )
         .then((newText) => {
-          const io = newText
-            .replaceAll(
-              /(www\.)?toptal\.com\/developers\/gitignore/g,
-              'gitignore.io',
-            )
-            .trim();
+          const io = newText.replaceAll(
+            /(www\.)?toptal\.com\/developers\/gitignore/g,
+            'gitignore.io',
+          );
 
-          return `${io}\n`;
+          return io.startsWith('# Created') ? io : 'node_modules';
         })
         .catch(() => oldText || 'node_modules\n');
     })
     .output()
     .then(() => {
       spinner.stopAndPersist({
-        symbol: green('√'),
+        symbol: green('✔'),
         text: message,
       });
     })
     .catch((error) => {
       spinner.stopAndPersist({
-        symbol: red('×'),
+        symbol: red('✘'),
         text: `${message} - ${error.message}`,
       });
     });

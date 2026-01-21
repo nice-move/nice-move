@@ -20,7 +20,7 @@ catalog:
   sort-keys: ^6.0.0
   stylelint: ^16.26.1
   typescript: ~5.9.3
-  typescript-eslint: ^8.53.0
+  typescript-eslint: ^8.53.1
   vitest: ^4.0.17
   yaml: ^2.8.2
 
@@ -29,7 +29,7 @@ catalogs:
     eslint: ^9.39.2
     eslint-plugin-react-hooks: ^5.2.0
     globals: ^17.0.0
-    prettier: ~3.7.4
+    prettier: ~3.8.0
 
 configDependencies:
   pnpm-plugin-nice-move: 0.1.0+sha512-M70sSpJmx0htcWXAYdd+VtlFthhQEHWsfLIINitKLVEWs4NyCOdiyd+zGkcqJE8PwqVPd6hpiNX9edIuvB9wjw==

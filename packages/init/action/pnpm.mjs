@@ -16,6 +16,8 @@ export async function Pnpm() {
 
       config.shamefullyHoist ??= true;
 
+      config.allowBuilds ??= {};
+
       return stringify(config, {
         singleQuote: true,
       });

@@ -7,11 +7,12 @@ export async function Pnpm() {
     .source('pnpm-workspace.yaml')
     .onFail(() => '')
     .onDone((text) => {
+      /** @type {import('@pnpm/config').Config} */
       const config = text.trim() ? parse(text) : {};
 
       config.configDependencies ??= {
         'pnpm-plugin-nice-move':
-          '0.1.0+sha512-M70sSpJmx0htcWXAYdd+VtlFthhQEHWsfLIINitKLVEWs4NyCOdiyd+zGkcqJE8PwqVPd6hpiNX9edIuvB9wjw==',
+          '0.2.0+sha512-l2lUgbyXPStU80fF9szueoqh26htBxsBLZZ0CY6WngH1EaCSjMYhRFGxIIg282kN03Lr1EvvzYjdsltVq6J0tw==',
       };
 
       config.shamefullyHoist ??= true;

@@ -10,7 +10,8 @@ function checkEslint({ vue, react }) {
 
   return {
     devDependencies: {
-      [`@nice-move/eslint-config-${type}`]: latest['eslint-config-base'],
+      [`@nice-move/eslint-config-${type}`]:
+        latest['@nice-move/eslint-config-base'],
       eslint: latest.eslint,
     },
     scripts: {
@@ -165,6 +166,9 @@ function action(isRoot, wanted = {}) {
             : undefined,
           ava
             ? {
+                ava: {
+                  extensions: ['mts', 'mjs'],
+                },
                 devDependencies: {
                   ava: latest.ava,
                   ...(eslint
@@ -187,7 +191,8 @@ function action(isRoot, wanted = {}) {
           stylelint
             ? {
                 devDependencies: {
-                  '@nice-move/stylelint-config': latest['stylelint-config'],
+                  '@nice-move/stylelint-config':
+                    latest['@nice-move/stylelint-config'],
                   stylelint: latest.stylelint,
                 },
                 stylelint: {
@@ -198,7 +203,8 @@ function action(isRoot, wanted = {}) {
           syncpack
             ? {
                 devDependencies: {
-                  '@nice-move/syncpack-config': latest['syncpack-config'],
+                  '@nice-move/syncpack-config':
+                    latest['@nice-move/syncpack-config'],
                   syncpack: latest.syncpack,
                 },
                 scripts: {
@@ -210,7 +216,8 @@ function action(isRoot, wanted = {}) {
           prettier
             ? {
                 devDependencies: {
-                  '@nice-move/prettier-config': latest['prettier-config'],
+                  '@nice-move/prettier-config':
+                    latest['@nice-move/prettier-config'],
                   prettier: latest.prettier,
                 },
                 prettier: '@nice-move/prettier-config',
@@ -318,7 +325,7 @@ export function Dependencies() {
       value: item,
       selected: item in dependencies || item in devDependencies,
     })),
-    // eslint-disable-next-line consistent-return
+     
     format: (keywords) => {
       if (keywords.length > 0) {
         return (isRoot) =>

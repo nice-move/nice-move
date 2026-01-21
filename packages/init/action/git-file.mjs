@@ -13,6 +13,13 @@ const Types = {
   Darwin: 'macos',
 };
 
+function replaceURL(source) {
+  return source.replaceAll(
+    /(www\.)?toptal\.com\/developers\/gitignore/g,
+    'gitignore.io',
+  );
+}
+
 export async function GitFile() {
   await new Text()
     .onDone(() => gitattributes)
@@ -31,16 +38,20 @@ export async function GitFile() {
     .onDone((oldText = '') => {
       const platform = Types[type()];
 
-      return download(
-        `https://www.toptal.com/developers/gitignore/api/ssh,certificates,node,${platform}`,
-      )
-        .then((newText) => {
-          const io = newText.replaceAll(
-            /(www\.)?toptal\.com\/developers\/gitignore/g,
-            'gitignore.io',
-          );
+      const url = `https://www.toptal.com/developers/gitignore/api/ssh,certificates,node,${platform}`;
 
-          return io.startsWith('# Created') ? io : 'node_modules';
+      return download(url)
+        .then((newText) => {
+          const io = replaceURL(newText);
+
+          return io.startsWith('# Created')
+            ? io
+            : [
+                `# Created by ${replaceURL(url)}`,
+                '# but failed to download',
+                '',
+                'node_modules',
+              ].join('\n');
         })
         .catch(() => oldText || 'node_modules\n');
     })

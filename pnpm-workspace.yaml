@@ -15,7 +15,7 @@ catalog:
   execa: ^9.6.1
   fs-chain: ^10.0.0
   garou: ^0.9.17
-  lodash: ^4.17.21
+  lodash: ^4.17.23
   settingz: ^0.2.0
   sort-keys: ^6.0.0
   stylelint: ^16.26.1

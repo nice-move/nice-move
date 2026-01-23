@@ -29,7 +29,7 @@ catalogs:
     eslint: ^9.39.2
     eslint-plugin-react-hooks: ^5.2.0
     globals: ^17.0.0
-    prettier: ~3.8.0
+    prettier: ~3.8.1
 
 configDependencies:
   pnpm-plugin-nice-move: 0.2.0+sha512-l2lUgbyXPStU80fF9szueoqh26htBxsBLZZ0CY6WngH1EaCSjMYhRFGxIIg282kN03Lr1EvvzYjdsltVq6J0tw==
@@ -45,4 +45,4 @@ patchedDependencies:
   lint-staged: patches/lint-staged.patch
 
 trustPolicyExclude:
-  - 'semver@6.3.1'
+  - semver@6.3.1

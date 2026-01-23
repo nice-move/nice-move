@@ -2,15 +2,40 @@
 
 // @ts-check
 
-const minimumReleaseAgeExclude = [
-  '@nice-move/*',
-  '@best-shot/*',
-  '@all-star/*',
-];
+const isObject = (v) =>
+  v !== null && typeof v === 'object' && !Array.isArray(v);
 
-const trustPolicyExclude = ['semver', 'memfs@4.56.2'];
+function deepMerge(target = {}, source = {}) {
+  return Object.entries(source).reduce(
+    (out, [key, srcVal]) => {
+      if (srcVal === undefined) {
+        return out;
+      }
 
-/* eslint-disable no-param-reassign */
+      const tgtVal = out[key];
+
+      if (tgtVal === undefined) {
+        out[key] = srcVal;
+
+        return out;
+      }
+
+      if (Array.isArray(srcVal) && Array.isArray(tgtVal)) {
+        const seen = new Set(tgtVal);
+        out[key] = [...tgtVal, ...srcVal.filter((i) => !seen.has(i))];
+
+        return out;
+      }
+
+      if (isObject(srcVal) && isObject(tgtVal)) {
+        out[key] = deepMerge(tgtVal, srcVal);
+      }
+
+      return out;
+    },
+    { ...target },
+  );
+}
 
 module.exports = {
   /**
@@ -18,7 +43,7 @@ module.exports = {
    */
   hooks: {
     updateConfig(/** @type {import('@pnpm/config').Config} */ config) {
-      Object.assign(config, {
+      return deepMerge(config, {
         blockExoticSubdeps: true,
         engineStrict: true,
         ignorePatchFailures: false,
@@ -28,35 +53,34 @@ module.exports = {
         strictDepBuilds: false,
         trustPolicy: 'no-downgrade',
         verifyDepsBeforeRun: 'warn',
+        strictPeerDependencies: true,
+        trustPolicyExclude: ['semver', 'memfs@4.56.2'],
+        minimumReleaseAgeExclude: [
+          '@all-star/*',
+          '@best-shot/*',
+          '@into-mini/*',
+          '@nice-move/*',
+        ],
+        allowBuilds: {
+          '@parcel/watcher': false,
+          'core-js': false,
+          'core-js-pure': false,
+          esbuild: false,
+          less: false,
+          ssh2: false,
+          'vue-demi': false,
+          'cpu-features': false,
+        },
+        updateConfig: {
+          ignoreDependencies: [
+            'tailwindcss',
+            'stylelint',
+            'react',
+            'react-dom',
+            'react-router',
+          ],
+        },
       });
-
-      config.strictPeerDependencies ??= true;
-
-      config.allowBuilds ??= {};
-
-      config.allowBuilds['@parcel/watcher'] ??= false;
-      config.allowBuilds['core-js'] ??= false;
-      config.allowBuilds['core-js-pure'] ??= false;
-      config.allowBuilds.esbuild ??= false;
-      config.allowBuilds.less ??= false;
-
-      config.minimumReleaseAgeExclude ??= [];
-
-      for (const item of minimumReleaseAgeExclude) {
-        if (!config.minimumReleaseAgeExclude.includes(item)) {
-          config.minimumReleaseAgeExclude.push(item);
-        }
-      }
-
-      config.trustPolicyExclude ??= [];
-
-      for (const item of trustPolicyExclude) {
-        if (!config.trustPolicyExclude.includes(item)) {
-          config.trustPolicyExclude.push(item);
-        }
-      }
-
-      return config;
     },
   },
 };

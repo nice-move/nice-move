@@ -33,6 +33,7 @@ it('should match eslint inspector snapshots', async () => {
   await makeSnapshot(eslintInspector('vue', 'sample.vue'), 'vue');
   await makeSnapshot(eslintInspector('vue', 'src/sample.vue'), 'src/vue');
   await makeSnapshot(eslintInspector('react', 'sample.jsx'), 'jsx');
+  await makeSnapshot(eslintInspector('react', 'sample.tsx'), 'tsx');
   await makeSnapshot(eslintInspector('react', 'src/sample.jsx'), 'src/jsx');
   await makeSnapshot(eslintInspector('base', 'sample.md'), 'md');
   await makeSnapshot(eslintInspector('base', 'sample.md/o.js'), 'md/js');

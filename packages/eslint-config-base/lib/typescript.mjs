@@ -13,6 +13,7 @@ export default [
     //   'airbnb-typescript',
     // ],
     rules: {
+      '@typescript-eslint/no-deprecated': 'warn',
       '@typescript-eslint/no-array-constructor': 'error',
       '@typescript-eslint/no-duplicate-enum-values': 'error',
       '@typescript-eslint/no-dynamic-delete': 'error',

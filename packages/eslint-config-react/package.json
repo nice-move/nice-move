@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-react",
-  "version": "0.13.19",
+  "version": "0.13.20",
   "description": "A `eslint` config for `react` project best practice",
   "license": "MIT",
   "author": {
@@ -45,7 +45,8 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "catalog:overrides",
     "globals": "catalog:overrides",
-    "settingz": "catalog:"
+    "settingz": "catalog:",
+    "typescript-eslint": "catalog:"
   },
   "peerDependencies": {
     "eslint": "catalog:"

@@ -1982,7 +1982,7 @@
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.53.1",
+        "version": "8.54.0",
       },
       "parseForESLint": [Function],
     },
@@ -2032,6 +2032,9 @@
     ],
     "@typescript-eslint/no-array-constructor": [
       "error",
+    ],
+    "@typescript-eslint/no-deprecated": [
+      "warn",
     ],
     "@typescript-eslint/no-duplicate-enum-values": [
       "error",

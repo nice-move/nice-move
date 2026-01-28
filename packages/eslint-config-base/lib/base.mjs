@@ -1,5 +1,5 @@
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
-import * as regexpPlugin from 'eslint-plugin-regexp';
+import { configs as regexpConfigs } from 'eslint-plugin-regexp';
 
 import { getGlobals } from './utils.mjs';
 
@@ -12,7 +12,7 @@ export default [
   },
   {
     files: all,
-    ...regexpPlugin.configs['flat/recommended'],
+    ...regexpConfigs['flat/recommended'],
   },
   {
     files: all,

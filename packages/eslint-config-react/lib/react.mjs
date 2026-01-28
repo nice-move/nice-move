@@ -1,4 +1,15 @@
+import { parser, plugin } from 'typescript-eslint';
+
 export default {
+  languageOptions: {
+    parser,
+    parserOptions: {
+      sourceType: 'module',
+    },
+  },
+  plugins: {
+    '@typescript-eslint': plugin,
+  },
   rules: {
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/click-events-have-key-events': 0,
@@ -34,5 +45,6 @@ export default {
     'react/jsx-boolean-value': 0,
     'react/self-closing-comp': 0,
     'react/sort-comp': 0,
+    '@typescript-eslint/no-deprecated': 'warn',
   },
 };

@@ -5,6 +5,7 @@ export default {
     parser,
     parserOptions: {
       sourceType: 'module',
+      projectService: true,
     },
   },
   plugins: {

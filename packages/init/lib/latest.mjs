@@ -27,7 +27,7 @@ export default {
   tailwindcss: '^3.4.19',
   vue: '~3.5.26',
   yaml: '^2.8.2',
-  '@nice-move/eslint-config-base': '^0.13.20',
+  '@nice-move/eslint-config-base': '^0.13.22',
   '@nice-move/stylelint-config': '^0.10.25',
   '@nice-move/prettier-config': '^0.15.8',
   '@nice-move/tsconfig': '^0.4.2',

@@ -12,6 +12,11 @@ export default [
     // extends: [
     //   'airbnb-typescript',
     // ],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+      },
+    },
     rules: {
       '@typescript-eslint/no-deprecated': 'warn',
       '@typescript-eslint/no-array-constructor': 'error',

@@ -20,6 +20,7 @@ export default [
     files: ['**/*.md/*.{ts,js,mts,mjs,cts,cjs,tsx,jsx,vue,qs,wxs,html,htm}'],
     rules: {
       strict: 'off',
+      '@typescript-eslint/no-deprecated': 'off',
       '@typescript-eslint/no-extraneous-class': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       'eol-last': 'off',

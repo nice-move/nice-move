@@ -1995,6 +1995,7 @@
         "objectLiteralDuplicateProperties": false,
       },
       "jsxPragma": null,
+      "projectService": true,
       "sourceType": "module",
     },
     "sourceType": "module",

@@ -1,6 +1,3 @@
-import { dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
 import { FlatCompat } from '@eslint/eslintrc';
 import base from '@nice-move/eslint-config-base';
 import { getGlobals } from '@nice-move/eslint-config-base/lib/utils.mjs';
@@ -12,12 +9,9 @@ const version = '3.5.17';
 
 const { isMiniApp } = getPkg('nice-move');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  resolvePluginsRelativeTo: __dirname,
+  baseDirectory: import.meta.__dirname,
+  resolvePluginsRelativeTo: import.meta.__dirname,
 });
 
 export default [

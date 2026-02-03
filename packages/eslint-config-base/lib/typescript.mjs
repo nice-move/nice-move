@@ -8,10 +8,8 @@ export default [
     files: match,
   })),
   {
-    files: match,
-    // extends: [
-    //   'airbnb-typescript',
-    // ],
+    files: [...match, '**/*.jsx'],
+    ignores: ['**/*.md/*'],
     languageOptions: {
       parserOptions: {
         projectService: true,
@@ -19,6 +17,14 @@ export default [
     },
     rules: {
       '@typescript-eslint/no-deprecated': 'warn',
+    },
+  },
+  {
+    files: match,
+    // extends: [
+    //   'airbnb-typescript',
+    // ],
+    rules: {
       '@typescript-eslint/no-array-constructor': 'error',
       '@typescript-eslint/no-duplicate-enum-values': 'error',
       '@typescript-eslint/no-dynamic-delete': 'error',

@@ -27,7 +27,7 @@ export default {
   tailwindcss: '^3.4.19',
   vue: '~3.5.26',
   yaml: '^2.8.2',
-  '@nice-move/eslint-config-base': '^0.13.22',
+  '@nice-move/eslint-config-base': '^0.13.24',
   '@nice-move/stylelint-config': '^0.10.25',
   '@nice-move/prettier-config': '^0.15.8',
   '@nice-move/tsconfig': '^0.4.2',
@@ -45,7 +45,7 @@ export default {
   'sort-keys': '^6.0.0',
   'typescript-eslint': '^8.54.0',
   'eslint-plugin-react-hooks': '^5.2.0',
-  globals: '^17.0.0',
+  globals: '^17.3.0',
   packageManager: 'pnpm@10.28.2',
   engines: { node: '>=24.0.0 || ^22.18.0', pnpm: '^10.28.2' },
 };

@@ -36,7 +36,8 @@ it('should match eslint inspector snapshots', async () => {
   await makeSnapshot(eslintInspector('react', 'sample.tsx'), 'tsx');
   await makeSnapshot(eslintInspector('react', 'src/sample.jsx'), 'src/jsx');
   await makeSnapshot(eslintInspector('base', 'sample.md'), 'md');
-  await makeSnapshot(eslintInspector('base', 'sample.md/o.js'), 'md/js');
+  await makeSnapshot(eslintInspector('base', 'sample.md/o.js'), '.md/js');
+  await makeSnapshot(eslintInspector('base', 'sample.md/o.ts'), '.md/ts');
   await makeSnapshot(eslintInspector('base', 'test/sample.js'), 'test');
   await makeSnapshot(eslintInspector('base', 'spec/sample.js'), 'spec');
   await makeSnapshot(

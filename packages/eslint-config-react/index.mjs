@@ -22,6 +22,15 @@ export default [
   ),
   {
     files,
+    ignores: ['**/*.md/*'],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+      },
+    },
+  },
+  {
+    files,
     ...react,
   },
   ...compat.config(hooks).map((config) => ({ ...config, files })),
@@ -29,6 +38,7 @@ export default [
     files: ['**/*.md/*'],
     rules: {
       'react/react-in-jsx-scope': 'off',
+      'react/jsx-no-undef': 'warn',
     },
   },
   reactPlugin.configs.flat['jsx-runtime'],

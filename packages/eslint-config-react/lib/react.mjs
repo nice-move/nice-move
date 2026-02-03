@@ -5,7 +5,6 @@ export default {
     parser,
     parserOptions: {
       sourceType: 'module',
-      projectService: true,
     },
   },
   plugins: {
@@ -46,6 +45,5 @@ export default {
     'react/jsx-boolean-value': 0,
     'react/self-closing-comp': 0,
     'react/sort-comp': 0,
-    '@typescript-eslint/no-deprecated': 'warn',
   },
 };

@@ -20,7 +20,7 @@ catalog:
   sort-keys: ^6.0.0
   stylelint: ^16.26.1
   typescript: ~5.9.3
-  typescript-eslint: ^8.54.0
+  typescript-eslint: ^8.55.0
   vitest: ^4.0.18
   yaml: ^2.8.2
 

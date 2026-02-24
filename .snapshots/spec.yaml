@@ -3480,7 +3480,10 @@
     ],
     "unicorn/catch-error-name": [
       "error",
-      {},
+      {
+        "ignore": [],
+        "name": "error",
+      },
     ],
     "unicorn/consistent-assert": [
       "error",
@@ -3512,9 +3515,25 @@
     ],
     "unicorn/explicit-length-check": [
       "error",
+      {
+        "non-zero": "greater-than",
+      },
     ],
     "unicorn/filename-case": [
       "error",
+    ],
+    "unicorn/isolated-functions": [
+      "error",
+      {
+        "comments": [
+          "@isolated",
+        ],
+        "functions": [
+          "makeSynchronous",
+        ],
+        "overrideGlobals": {},
+        "selectors": [],
+      },
     ],
     "unicorn/new-for-builtins": [
       "error",
@@ -3674,7 +3693,10 @@
     ],
     "unicorn/no-useless-undefined": [
       "error",
-      {},
+      {
+        "checkArguments": true,
+        "checkArrowFunctionBody": true,
+      },
     ],
     "unicorn/no-zero-fractions": [
       "error",
@@ -3703,7 +3725,12 @@
     ],
     "unicorn/prefer-add-event-listener": [
       "error",
-      {},
+      {
+        "excludedPackages": [
+          "koa",
+          "sax",
+        ],
+      },
     ],
     "unicorn/prefer-array-find": [
       "error",
@@ -3713,7 +3740,9 @@
     ],
     "unicorn/prefer-array-flat": [
       "error",
-      {},
+      {
+        "functions": [],
+      },
     ],
     "unicorn/prefer-array-flat-map": [
       "error",
@@ -3815,7 +3844,9 @@
     ],
     "unicorn/prefer-object-from-entries": [
       "error",
-      {},
+      {
+        "functions": [],
+      },
     ],
     "unicorn/prefer-optional-catch-binding": [
       "error",
@@ -3837,7 +3868,9 @@
     ],
     "unicorn/prefer-single-call": [
       "error",
-      {},
+      {
+        "ignore": [],
+      },
     ],
     "unicorn/prefer-spread": [
       "error",
@@ -3859,7 +3892,9 @@
     ],
     "unicorn/prefer-structured-clone": [
       "error",
-      {},
+      {
+        "functions": [],
+      },
     ],
     "unicorn/prefer-switch": [
       "error",

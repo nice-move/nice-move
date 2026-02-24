@@ -2350,7 +2350,7 @@
       },
       "meta": {
         "name": "vue-eslint-parser",
-        "version": "10.2.0",
+        "version": "10.4.0",
       },
       "parse": [Function],
       "parseForESLint": [Function],
@@ -2363,6 +2363,7 @@
         "jsx": false,
         "objectLiteralDuplicateProperties": false,
       },
+      "parser": "@typescript-eslint/parser",
     },
     "sourceType": "module",
   },
@@ -2383,7 +2384,7 @@
   "processor": {
     "meta": {
       "name": "eslint-plugin-vue",
-      "version": "10.7.0",
+      "version": "10.8.0",
     },
     "postprocess": [Function],
     "preprocess": [Function],
@@ -3441,7 +3442,10 @@
     ],
     "unicorn/catch-error-name": [
       "error",
-      {},
+      {
+        "ignore": [],
+        "name": "error",
+      },
     ],
     "unicorn/consistent-assert": [
       "error",
@@ -3473,9 +3477,25 @@
     ],
     "unicorn/explicit-length-check": [
       "error",
+      {
+        "non-zero": "greater-than",
+      },
     ],
     "unicorn/filename-case": [
       "error",
+    ],
+    "unicorn/isolated-functions": [
+      "error",
+      {
+        "comments": [
+          "@isolated",
+        ],
+        "functions": [
+          "makeSynchronous",
+        ],
+        "overrideGlobals": {},
+        "selectors": [],
+      },
     ],
     "unicorn/new-for-builtins": [
       "error",
@@ -3635,7 +3655,10 @@
     ],
     "unicorn/no-useless-undefined": [
       "error",
-      {},
+      {
+        "checkArguments": true,
+        "checkArrowFunctionBody": true,
+      },
     ],
     "unicorn/no-zero-fractions": [
       "error",
@@ -3664,7 +3687,12 @@
     ],
     "unicorn/prefer-add-event-listener": [
       "error",
-      {},
+      {
+        "excludedPackages": [
+          "koa",
+          "sax",
+        ],
+      },
     ],
     "unicorn/prefer-array-find": [
       "error",
@@ -3674,7 +3702,9 @@
     ],
     "unicorn/prefer-array-flat": [
       "error",
-      {},
+      {
+        "functions": [],
+      },
     ],
     "unicorn/prefer-array-flat-map": [
       "error",
@@ -3776,7 +3806,9 @@
     ],
     "unicorn/prefer-object-from-entries": [
       "error",
-      {},
+      {
+        "functions": [],
+      },
     ],
     "unicorn/prefer-optional-catch-binding": [
       "error",
@@ -3798,7 +3830,9 @@
     ],
     "unicorn/prefer-single-call": [
       "error",
-      {},
+      {
+        "ignore": [],
+      },
     ],
     "unicorn/prefer-spread": [
       "error",
@@ -3820,7 +3854,9 @@
     ],
     "unicorn/prefer-structured-clone": [
       "error",
-      {},
+      {
+        "functions": [],
+      },
     ],
     "unicorn/prefer-switch": [
       "error",
@@ -4057,7 +4093,7 @@
     "vue/no-unsupported-features": [
       "error",
       {
-        "version": "3.5.17",
+        "version": "3.5.26",
       },
     ],
     "vue/no-unused-components": [

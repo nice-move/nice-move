@@ -5,7 +5,7 @@ import prettier from 'eslint-config-prettier';
 import pluginVue from 'eslint-plugin-vue';
 import { getPkg } from 'settingz';
 
-const version = '3.5.17';
+const version = '3.5.26';
 
 const { isMiniApp } = getPkg('nice-move');
 
@@ -25,6 +25,7 @@ export default [
     languageOptions: {
       ecmaVersion: 'latest',
       parserOptions: {
+        parser: '@typescript-eslint/parser',
         ecmaFeatures: {
           globalReturn: false,
           impliedStrict: true,

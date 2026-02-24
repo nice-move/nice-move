@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.13.24",
+  "version": "0.13.25",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -42,10 +42,10 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-n": "^17.23.2",
+    "eslint-plugin-n": "^17.24.0",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-regexp": "^3.0.0",
-    "eslint-plugin-unicorn": "^62.0.0",
+    "eslint-plugin-unicorn": "^63.0.0",
     "espree": "^10.4.0",
     "globals": "catalog:overrides",
     "resolve.exports": "^2.0.3",

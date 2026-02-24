@@ -9,9 +9,10 @@ export default defineConfig({
   },
   format: 'module',
   clean: ['dist/*'],
-  target: 'node20.18',
+  target: 'node22.18',
   fixedExtension: true,
   platform: 'node',
   minify: true,
   external: ['cheetor'],
+  inlineOnly: false,
 });

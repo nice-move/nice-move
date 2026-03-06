@@ -70,10 +70,10 @@
     "@nice-move/tsconfig": "workspace:^",
     "@types/node": "catalog:"
   },
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@10.30.3",
   "engines": {
     "node": ">=24.0.0 || ^22.18.0",
-    "pnpm": "^10.28.2"
+    "pnpm": "^10.30.3"
   },
   "nice-move": {
     "bundle": [

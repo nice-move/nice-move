@@ -26,7 +26,7 @@
     "version:pin": "syncpack fix-mismatches"
   },
   "dependencies": {
-    "svgo": "^4.0.0",
+    "svgo": "^4.0.1",
     "svgo-config": "^0.10.0"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "find-workspaces": "^0.3.1",
     "garou": "catalog:",
     "nodemon": "^3.1.14",
-    "postcss": "^8.5.6",
+    "postcss": "^8.5.8",
     "prettier": "catalog:overrides",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "stylelint": "catalog:",
@@ -51,7 +51,7 @@
     "vitest": "catalog:"
   },
   "peerDependencies": {
-    "@commitlint/load": "^20.4.0",
+    "@commitlint/load": "^20.4.3",
     "@nice-move/all-in-base": "workspace:^",
     "@nice-move/all-in-react": "workspace:^",
     "@nice-move/all-in-vue": "workspace:^",

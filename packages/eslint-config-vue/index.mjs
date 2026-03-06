@@ -79,4 +79,7 @@ export default [
     ...rule,
     files: ['**/*.vue'],
   })),
+  {
+    ignores: ['auto-imports.d.ts', 'components.d.ts'],
+  },
 ];

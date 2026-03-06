@@ -34,7 +34,7 @@
   "main": "index.mjs",
   "type": "module",
   "dependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.6.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
     "@eslint/eslintrc": "catalog:",
     "@eslint/js": "catalog:",
     "@eslint/markdown": "catalog:",

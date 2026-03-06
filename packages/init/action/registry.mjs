@@ -1,9 +1,9 @@
-import { osLocale } from 'os-locale';
+import osLocale from 'os-locale';
 import { Text } from 'fs-chain';
 import { cyan } from '../lib/color.mts';
 
 export async function Registry() {
-  const InChina = (await osLocale()) === 'zh-CN';
+  const InChina = osLocale() === 'zh-CN';
 
   if (InChina) {
     new Text()

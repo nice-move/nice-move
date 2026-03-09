@@ -30,7 +30,6 @@ export default defineConfig(import.meta.url, {
   versionGroups: [
     {
       dependencies: ['@example/*'],
-      dependencyTypes: ['!local'],
       label: 'Pin pnpm workspace',
       pinVersion: 'workspace:~'
     }

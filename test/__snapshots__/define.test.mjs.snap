@@ -16,7 +16,6 @@ exports[`should generate config for non-pnpm project 1`] = `
       "strategy": "name@version",
     },
   },
-  "lintFormatting": false,
   "semverGroups": [
     {
       "dependencies": [
@@ -71,6 +70,20 @@ exports[`should generate config for non-pnpm project 1`] = `
       "label": "Pin others",
       "preferVersion": "highestSemver",
     },
+    {
+      "dependencies": [
+        "react",
+        "react-dom",
+      ],
+      "policy": "sameMinor",
+    },
+    {
+      "dependencies": [
+        "vue",
+        "@vue/*",
+      ],
+      "policy": "sameMinor",
+    },
   ],
 }
 `;
@@ -91,7 +104,6 @@ exports[`should generate config for pnpm project 1`] = `
       "strategy": "name@version",
     },
   },
-  "lintFormatting": false,
   "semverGroups": [
     {
       "dependencies": [
@@ -125,8 +137,7 @@ exports[`should generate config for pnpm project 1`] = `
   "versionGroups": [
     {
       "dependencies": [
-        "@scope/package-a",
-        "@scope/package-b",
+        "$LOCAL",
       ],
       "dependencyTypes": [
         "!local",
@@ -144,7 +155,9 @@ exports[`should generate config for pnpm project 1`] = `
         "prod",
         "optional",
         "peer",
+        "overrides",
         "pnpmOverrides",
+        "resolutions",
       ],
       "label": "Pin pnpm catalog ",
       "pinVersion": "catalog:",
@@ -158,7 +171,9 @@ exports[`should generate config for pnpm project 1`] = `
         "prod",
         "optional",
         "peer",
+        "overrides",
         "pnpmOverrides",
+        "resolutions",
       ],
       "label": "Pin pnpm catalog overrides",
       "pinVersion": "catalog:overrides",
@@ -186,6 +201,20 @@ exports[`should generate config for pnpm project 1`] = `
       "label": "Pin others",
       "preferVersion": "highestSemver",
     },
+    {
+      "dependencies": [
+        "react",
+        "react-dom",
+      ],
+      "policy": "sameMinor",
+    },
+    {
+      "dependencies": [
+        "vue",
+        "@vue/*",
+      ],
+      "policy": "sameMinor",
+    },
   ],
 }
 `;
@@ -206,7 +235,6 @@ exports[`should handle empty workspace and catalog 1`] = `
       "strategy": "name@version",
     },
   },
-  "lintFormatting": false,
   "semverGroups": [
     {
       "dependencies": [
@@ -240,6 +268,16 @@ exports[`should handle empty workspace and catalog 1`] = `
   "versionGroups": [
     {
       "dependencies": [
+        "$LOCAL",
+      ],
+      "dependencyTypes": [
+        "!local",
+      ],
+      "label": "Pin pnpm workspace",
+      "pinVersion": "workspace:^",
+    },
+    {
+      "dependencies": [
         "abc",
       ],
       "pinVersion": "0.12.23",
@@ -260,6 +298,20 @@ exports[`should handle empty workspace and catalog 1`] = `
       ],
       "label": "Pin others",
       "preferVersion": "highestSemver",
+    },
+    {
+      "dependencies": [
+        "react",
+        "react-dom",
+      ],
+      "policy": "sameMinor",
+    },
+    {
+      "dependencies": [
+        "vue",
+        "@vue/*",
+      ],
+      "policy": "sameMinor",
     },
   ],
 }
@@ -281,7 +333,6 @@ exports[`should handle file read errors 1`] = `
       "strategy": "name@version",
     },
   },
-  "lintFormatting": false,
   "semverGroups": [
     {
       "dependencies": [
@@ -335,6 +386,20 @@ exports[`should handle file read errors 1`] = `
       ],
       "label": "Pin others",
       "preferVersion": "highestSemver",
+    },
+    {
+      "dependencies": [
+        "react",
+        "react-dom",
+      ],
+      "policy": "sameMinor",
+    },
+    {
+      "dependencies": [
+        "vue",
+        "@vue/*",
+      ],
+      "policy": "sameMinor",
     },
   ],
 }
@@ -360,7 +425,6 @@ exports[`should merge custom config 1`] = `
       "strategy": "name@version",
     },
   },
-  "lintFormatting": false,
   "semverGroups": [
     {
       "dependencies": [
@@ -400,8 +464,7 @@ exports[`should merge custom config 1`] = `
   "versionGroups": [
     {
       "dependencies": [
-        "@scope/package-a",
-        "@scope/package-b",
+        "$LOCAL",
       ],
       "dependencyTypes": [
         "!local",
@@ -431,6 +494,20 @@ exports[`should merge custom config 1`] = `
       ],
       "label": "Pin others",
       "preferVersion": "highestSemver",
+    },
+    {
+      "dependencies": [
+        "react",
+        "react-dom",
+      ],
+      "policy": "sameMinor",
+    },
+    {
+      "dependencies": [
+        "vue",
+        "@vue/*",
+      ],
+      "policy": "sameMinor",
     },
   ],
 }

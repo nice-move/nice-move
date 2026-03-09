@@ -209,7 +209,7 @@ function action(isRoot, wanted = {}) {
                 },
                 scripts: {
                   'lint:version': 'syncpack lint',
-                  'version:pin': 'syncpack fix-mismatches',
+                  'version:pin': 'syncpack fix',
                 },
               }
             : undefined,
@@ -325,7 +325,6 @@ export function Dependencies() {
       value: item,
       selected: item in dependencies || item in devDependencies,
     })),
-     
     format: (keywords) => {
       if (keywords.length > 0) {
         return (isRoot) =>

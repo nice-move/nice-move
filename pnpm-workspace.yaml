@@ -4,13 +4,13 @@ packages:
   - tools/*
 
 catalog:
-  '@eslint/eslintrc': ^3.3.4
-  '@eslint/js': ^9.39.3
+  '@eslint/eslintrc': ^3.3.5
+  '@eslint/js': ^9.39.4
   '@eslint/markdown': ^7.5.1
-  '@types/node': ^24.11.0
+  '@types/node': ^24.12.0
   '@vitest/ui': ^4.0.18
   chalk: ^5.6.2
-  eslint: ^9.39.3
+  eslint: ^9.39.4
   eslint-plugin-vue: ^10.8.0
   execa: ^9.6.1
   fs-chain: ^10.0.0
@@ -26,7 +26,7 @@ catalog:
 
 catalogs:
   overrides:
-    eslint: ^9.39.3
+    eslint: ^9.39.4
     eslint-plugin-react-hooks: ^5.2.0
     globals: ^17.4.0
     prettier: ~3.8.1
@@ -46,3 +46,7 @@ patchedDependencies:
 trustPolicyExclude:
   - semver@6.3.1
   - '@pnpm/config'
+
+minimumReleaseAgeExclude:
+  - syncpack
+  - syncpack-*

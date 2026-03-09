@@ -3,7 +3,6 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { findWorkspaces } from 'find-workspaces';
 import { parse } from 'yaml';
 
 /**
@@ -106,16 +105,11 @@ const DEFAULT_SEMVER_GROUPS = [
 
 /**
  * 创建工作区版本组配置
- * @param {object[]} workspaces - 工作区列表
  * @returns {object|undefined} 版本组配置
  */
-function createWorkspaceVersionGroup(workspaces) {
-  if (workspaces.length === 0) {
-    return undefined;
-  }
-
+function createWorkspaceVersionGroup() {
   return {
-    dependencies: workspaces.map((item) => item.package.name),
+    dependencies: ['$LOCAL'],
     dependencyTypes: ['!local'],
     label: 'Pin pnpm workspace',
     pinVersion: 'workspace:^',
@@ -141,7 +135,15 @@ function createCatalogVersionGroup(packagesMap, prefix = '') {
 
   return {
     dependencies: packageNames,
-    dependencyTypes: ['dev', 'prod', 'optional', 'peer', 'pnpmOverrides'],
+    dependencyTypes: [
+      'dev',
+      'prod',
+      'optional',
+      'peer',
+      'overrides',
+      'pnpmOverrides',
+      'resolutions',
+    ],
     label: `Pin pnpm catalog ${prefix}`,
     pinVersion: prefix ? `catalog:${prefix}` : 'catalog:',
   };
@@ -192,13 +194,22 @@ function createNodeEngineVersionGroup(pkg = {}) {
 
 /**
  * 默认的其他依赖版本组配置
- * @type {object}
  */
-const DEFAULT_OTHERS_VERSION_GROUP = {
-  dependencyTypes: ['!local'],
-  label: 'Pin others',
-  preferVersion: 'highestSemver',
-};
+const DEFAULT_OTHERS_VERSION_GROUP = [
+  {
+    dependencyTypes: ['!local'],
+    label: 'Pin others',
+    preferVersion: 'highestSemver',
+  },
+  {
+    dependencies: ['react', 'react-dom'],
+    policy: 'sameMinor',
+  },
+  {
+    dependencies: ['vue', '@vue/*'],
+    policy: 'sameMinor',
+  },
+];
 
 /**
  * 定义 syncpack 配置
@@ -214,7 +225,7 @@ export function defineConfig(url, config = {}) {
   // 构建版本组配置
   const versionGroups = [
     // 工作区配置
-    isPnpm ? createWorkspaceVersionGroup(findWorkspaces() ?? []) : null,
+    isPnpm ? createWorkspaceVersionGroup() : null,
 
     // 目录配置
     ...(isPnpm ? createCatalogGroups(readYaml()) : []),
@@ -226,13 +237,12 @@ export function defineConfig(url, config = {}) {
     createNodeEngineVersionGroup(pkg),
 
     // 其他依赖配置
-    DEFAULT_OTHERS_VERSION_GROUP,
+    ...DEFAULT_OTHERS_VERSION_GROUP,
   ].filter(Boolean);
 
   // 返回最终配置
   return {
     ...config,
-    lintFormatting: false,
     customTypes: { ...DEFAULT_CUSTOM_TYPES, ...config.customTypes },
     semverGroups: [...(config.semverGroups || []), ...DEFAULT_SEMVER_GROUPS],
     versionGroups,

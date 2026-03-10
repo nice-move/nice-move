@@ -45,15 +45,17 @@ module.exports = {
     updateConfig(/** @type {import('@pnpm/config').Config} */ config) {
       return deepMerge(config, {
         blockExoticSubdeps: true,
+        disallowWorkspaceCycles: true,
         engineStrict: true,
         ignorePatchFailures: false,
+        ignoreWorkspaceCycles: false,
         minimumReleaseAge: 1440,
         optimisticRepeatInstall: true,
         shamefullyHoist: true,
         strictDepBuilds: false,
+        strictPeerDependencies: true,
         trustPolicy: 'no-downgrade',
         verifyDepsBeforeRun: 'warn',
-        strictPeerDependencies: true,
         trustPolicyExclude: ['semver', 'memfs@4.56.2'],
         minimumReleaseAgeExclude: [
           '@all-star/*',
@@ -78,6 +80,9 @@ module.exports = {
             'react',
             'react-dom',
             'react-router',
+            'unplugin-vue-components',
+            'eslint',
+            '@antv/f2',
           ],
         },
       });

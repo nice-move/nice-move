@@ -16,6 +16,22 @@ exports[`should generate config for non-pnpm project 1`] = `
       "strategy": "name@version",
     },
   },
+  "dependencyGroups": [
+    {
+      "aliasName": "react-pkgs",
+      "dependencies": [
+        "react",
+        "react-dom",
+      ],
+    },
+    {
+      "aliasName": "vue-pkgs",
+      "dependencies": [
+        "vue",
+        "@vue/*",
+      ],
+    },
+  ],
   "semverGroups": [
     {
       "dependencies": [
@@ -23,13 +39,11 @@ exports[`should generate config for non-pnpm project 1`] = `
         "@sentry/*",
         "@types/react",
         "@types/react-dom",
-        "@vue/*",
         "playwright-*",
         "prettier",
-        "react",
-        "react-dom",
+        "react-pkgs",
         "typescript",
-        "vue",
+        "vue-pkgs",
         "vue-router",
       ],
       "range": "~",
@@ -55,13 +69,13 @@ exports[`should generate config for non-pnpm project 1`] = `
     },
     {
       "dependencies": [
-        "node",
+        "react-pkgs",
+        "vue-pkgs",
       ],
       "dependencyTypes": [
-        "engines",
+        "!local",
       ],
-      "label": "Pin engines.node",
-      "pinVersion": "^16.0.0",
+      "preferVersion": "lowestSemver",
     },
     {
       "dependencyTypes": [
@@ -72,17 +86,13 @@ exports[`should generate config for non-pnpm project 1`] = `
     },
     {
       "dependencies": [
-        "react",
-        "react-dom",
+        "node",
       ],
-      "policy": "sameMinor",
-    },
-    {
-      "dependencies": [
-        "vue",
-        "@vue/*",
+      "dependencyTypes": [
+        "engines",
       ],
-      "policy": "sameMinor",
+      "label": "Pin engines.node",
+      "pinVersion": "^16.0.0",
     },
   ],
 }
@@ -104,6 +114,22 @@ exports[`should generate config for pnpm project 1`] = `
       "strategy": "name@version",
     },
   },
+  "dependencyGroups": [
+    {
+      "aliasName": "react-pkgs",
+      "dependencies": [
+        "react",
+        "react-dom",
+      ],
+    },
+    {
+      "aliasName": "vue-pkgs",
+      "dependencies": [
+        "vue",
+        "@vue/*",
+      ],
+    },
+  ],
   "semverGroups": [
     {
       "dependencies": [
@@ -111,13 +137,11 @@ exports[`should generate config for pnpm project 1`] = `
         "@sentry/*",
         "@types/react",
         "@types/react-dom",
-        "@vue/*",
         "playwright-*",
         "prettier",
-        "react",
-        "react-dom",
+        "react-pkgs",
         "typescript",
-        "vue",
+        "vue-pkgs",
         "vue-router",
       ],
       "range": "~",
@@ -186,13 +210,13 @@ exports[`should generate config for pnpm project 1`] = `
     },
     {
       "dependencies": [
-        "node",
+        "react-pkgs",
+        "vue-pkgs",
       ],
       "dependencyTypes": [
-        "engines",
+        "!local",
       ],
-      "label": "Pin engines.node",
-      "pinVersion": "^18.0.0",
+      "preferVersion": "lowestSemver",
     },
     {
       "dependencyTypes": [
@@ -203,17 +227,13 @@ exports[`should generate config for pnpm project 1`] = `
     },
     {
       "dependencies": [
-        "react",
-        "react-dom",
+        "node",
       ],
-      "policy": "sameMinor",
-    },
-    {
-      "dependencies": [
-        "vue",
-        "@vue/*",
+      "dependencyTypes": [
+        "engines",
       ],
-      "policy": "sameMinor",
+      "label": "Pin engines.node",
+      "pinVersion": "^18.0.0",
     },
   ],
 }
@@ -235,6 +255,22 @@ exports[`should handle empty workspace and catalog 1`] = `
       "strategy": "name@version",
     },
   },
+  "dependencyGroups": [
+    {
+      "aliasName": "react-pkgs",
+      "dependencies": [
+        "react",
+        "react-dom",
+      ],
+    },
+    {
+      "aliasName": "vue-pkgs",
+      "dependencies": [
+        "vue",
+        "@vue/*",
+      ],
+    },
+  ],
   "semverGroups": [
     {
       "dependencies": [
@@ -242,13 +278,11 @@ exports[`should handle empty workspace and catalog 1`] = `
         "@sentry/*",
         "@types/react",
         "@types/react-dom",
-        "@vue/*",
         "playwright-*",
         "prettier",
-        "react",
-        "react-dom",
+        "react-pkgs",
         "typescript",
-        "vue",
+        "vue-pkgs",
         "vue-router",
       ],
       "range": "~",
@@ -284,13 +318,13 @@ exports[`should handle empty workspace and catalog 1`] = `
     },
     {
       "dependencies": [
-        "node",
+        "react-pkgs",
+        "vue-pkgs",
       ],
       "dependencyTypes": [
-        "engines",
+        "!local",
       ],
-      "label": "Pin engines.node",
-      "pinVersion": "^20.0.0",
+      "preferVersion": "lowestSemver",
     },
     {
       "dependencyTypes": [
@@ -301,17 +335,13 @@ exports[`should handle empty workspace and catalog 1`] = `
     },
     {
       "dependencies": [
-        "react",
-        "react-dom",
+        "node",
       ],
-      "policy": "sameMinor",
-    },
-    {
-      "dependencies": [
-        "vue",
-        "@vue/*",
+      "dependencyTypes": [
+        "engines",
       ],
-      "policy": "sameMinor",
+      "label": "Pin engines.node",
+      "pinVersion": "^20.0.0",
     },
   ],
 }
@@ -333,6 +363,22 @@ exports[`should handle file read errors 1`] = `
       "strategy": "name@version",
     },
   },
+  "dependencyGroups": [
+    {
+      "aliasName": "react-pkgs",
+      "dependencies": [
+        "react",
+        "react-dom",
+      ],
+    },
+    {
+      "aliasName": "vue-pkgs",
+      "dependencies": [
+        "vue",
+        "@vue/*",
+      ],
+    },
+  ],
   "semverGroups": [
     {
       "dependencies": [
@@ -340,13 +386,11 @@ exports[`should handle file read errors 1`] = `
         "@sentry/*",
         "@types/react",
         "@types/react-dom",
-        "@vue/*",
         "playwright-*",
         "prettier",
-        "react",
-        "react-dom",
+        "react-pkgs",
         "typescript",
-        "vue",
+        "vue-pkgs",
         "vue-router",
       ],
       "range": "~",
@@ -372,13 +416,13 @@ exports[`should handle file read errors 1`] = `
     },
     {
       "dependencies": [
-        "node",
+        "react-pkgs",
+        "vue-pkgs",
       ],
       "dependencyTypes": [
-        "engines",
+        "!local",
       ],
-      "label": "Pin engines.node",
-      "pinVersion": "^20.0.0",
+      "preferVersion": "lowestSemver",
     },
     {
       "dependencyTypes": [
@@ -389,17 +433,13 @@ exports[`should handle file read errors 1`] = `
     },
     {
       "dependencies": [
-        "react",
-        "react-dom",
+        "node",
       ],
-      "policy": "sameMinor",
-    },
-    {
-      "dependencies": [
-        "vue",
-        "@vue/*",
+      "dependencyTypes": [
+        "engines",
       ],
-      "policy": "sameMinor",
+      "label": "Pin engines.node",
+      "pinVersion": "^20.0.0",
     },
   ],
 }
@@ -425,6 +465,22 @@ exports[`should merge custom config 1`] = `
       "strategy": "name@version",
     },
   },
+  "dependencyGroups": [
+    {
+      "aliasName": "react-pkgs",
+      "dependencies": [
+        "react",
+        "react-dom",
+      ],
+    },
+    {
+      "aliasName": "vue-pkgs",
+      "dependencies": [
+        "vue",
+        "@vue/*",
+      ],
+    },
+  ],
   "semverGroups": [
     {
       "dependencies": [
@@ -438,13 +494,11 @@ exports[`should merge custom config 1`] = `
         "@sentry/*",
         "@types/react",
         "@types/react-dom",
-        "@vue/*",
         "playwright-*",
         "prettier",
-        "react",
-        "react-dom",
+        "react-pkgs",
         "typescript",
-        "vue",
+        "vue-pkgs",
         "vue-router",
       ],
       "range": "~",
@@ -480,13 +534,13 @@ exports[`should merge custom config 1`] = `
     },
     {
       "dependencies": [
-        "node",
+        "react-pkgs",
+        "vue-pkgs",
       ],
       "dependencyTypes": [
-        "engines",
+        "!local",
       ],
-      "label": "Pin engines.node",
-      "pinVersion": "^20.0.0",
+      "preferVersion": "lowestSemver",
     },
     {
       "dependencyTypes": [
@@ -497,17 +551,13 @@ exports[`should merge custom config 1`] = `
     },
     {
       "dependencies": [
-        "react",
-        "react-dom",
+        "node",
       ],
-      "policy": "sameMinor",
-    },
-    {
-      "dependencies": [
-        "vue",
-        "@vue/*",
+      "dependencyTypes": [
+        "engines",
       ],
-      "policy": "sameMinor",
+      "label": "Pin engines.node",
+      "pinVersion": "^20.0.0",
     },
   ],
 }

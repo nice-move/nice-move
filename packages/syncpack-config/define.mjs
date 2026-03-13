@@ -83,14 +83,12 @@ const DEFAULT_SEMVER_GROUPS = [
       '@sentry/*',
       '@types/react-dom',
       '@types/react',
-      '@vue/*',
       'playwright-*',
       'prettier',
-      'react-dom',
-      'react',
+      'react-pkgs',
       'typescript',
+      'vue-pkgs',
       'vue-router',
-      'vue',
     ].toSorted(),
     range: '~',
   },
@@ -198,16 +196,24 @@ function createNodeEngineVersionGroup(pkg = {}) {
 const DEFAULT_OTHERS_VERSION_GROUP = [
   {
     dependencyTypes: ['!local'],
+    dependencies: ['react-pkgs', 'vue-pkgs'],
+    preferVersion: 'lowestSemver',
+  },
+  {
+    dependencyTypes: ['!local'],
     label: 'Pin others',
     preferVersion: 'highestSemver',
   },
+];
+
+const DEFAULT_DEPENDENCY_GROUPS = [
   {
     dependencies: ['react', 'react-dom'],
-    policy: 'sameMinor',
+    aliasName: 'react-pkgs',
   },
   {
     dependencies: ['vue', '@vue/*'],
-    policy: 'sameMinor',
+    aliasName: 'vue-pkgs',
   },
 ];
 
@@ -233,17 +239,24 @@ export function defineConfig(url, config = {}) {
     // 用户配置
     ...(config.versionGroups || []),
 
-    // Node 引擎配置
-    createNodeEngineVersionGroup(pkg),
-
     // 其他依赖配置
     ...DEFAULT_OTHERS_VERSION_GROUP,
+
+    // Node 引擎配置
+    createNodeEngineVersionGroup(pkg),
   ].filter(Boolean);
 
   // 返回最终配置
   return {
     ...config,
-    customTypes: { ...DEFAULT_CUSTOM_TYPES, ...config.customTypes },
+    dependencyGroups: [
+      ...(config.dependencyGroups || []),
+      ...DEFAULT_DEPENDENCY_GROUPS,
+    ],
+    customTypes: {
+      ...config.customTypes,
+      ...DEFAULT_CUSTOM_TYPES,
+    },
     semverGroups: [...(config.semverGroups || []), ...DEFAULT_SEMVER_GROUPS],
     versionGroups,
   };

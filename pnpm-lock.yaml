@@ -15,9 +15,6 @@ catalogs:
     '@eslint/markdown':
       specifier: ^7.5.1
       version: 7.5.1
-    '@types/node':
-      specifier: ^24.12.0
-      version: 24.12.0
     '@vitest/ui':
       specifier: ^4.0.18
       version: 4.0.18
@@ -70,7 +67,7 @@ overrides:
   eslint-plugin-react-hooks: ^5.2.0
   globals: ^17.4.0
 
-pnpmfileChecksum: sha256-mS1QIEGtFQ28TeF9birCFL18c0lFsb9V6ngFKSiJCGo=
+pnpmfileChecksum: sha256-zzjwswQFunNfRwV/YHqbrjCZmcKs701+5nVJlVW36iE=
 
 patchedDependencies:
   '@commitlint/rules':
@@ -136,7 +133,7 @@ importers:
         specifier: workspace:^
         version: link:packages/tsconfig
       '@types/node':
-        specifier: 'catalog:'
+        specifier: ^24.0.0
         version: 24.12.0
       svgo:
         specifier: ^4.0.1
@@ -608,7 +605,7 @@ importers:
   packages/tsconfig:
     dependencies:
       '@types/node':
-        specifier: 'catalog:'
+        specifier: ^24.0.0
         version: 24.12.0
       '@types/whatwg-url':
         specifier: ^13.0.0
@@ -686,7 +683,7 @@ importers:
         specifier: ^3.4.19
         version: 3.4.19(yaml@2.8.2)
       vue:
-        specifier: ~3.5.29
+        specifier: ~3.5.26
         version: 3.5.30(typescript@5.9.3)
       yaml:
         specifier: 'catalog:'

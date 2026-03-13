@@ -93,6 +93,10 @@ const DEFAULT_SEMVER_GROUPS = [
     range: '~',
   },
   {
+    dependencies: ['taro-pkgs'],
+    range: '',
+  },
+  {
     dependencyTypes: ['local', 'optional', 'packageManager'],
     range: '',
   },
@@ -190,30 +194,38 @@ function createNodeEngineVersionGroup(pkg = {}) {
   };
 }
 
-/**
- * 默认的其他依赖版本组配置
- */
-const DEFAULT_OTHERS_VERSION_GROUP = [
-  {
-    dependencyTypes: ['!local'],
-    dependencies: ['react-pkgs', 'vue-pkgs'],
-    preferVersion: 'lowestSemver',
-  },
-  {
-    dependencyTypes: ['!local'],
-    label: 'Pin others',
-    preferVersion: 'highestSemver',
-  },
-];
-
 const DEFAULT_DEPENDENCY_GROUPS = [
   {
     dependencies: ['react', 'react-dom'],
     aliasName: 'react-pkgs',
   },
   {
-    dependencies: ['vue', '@vue/*'],
+    dependencies: ['vue', '@vue/reactivity', '@vue/compiler-*'],
     aliasName: 'vue-pkgs',
+  },
+  {
+    dependencies: ['core-js', 'core-js-compat'],
+    aliasName: 'core-js-pkgs',
+  },
+  {
+    dependencies: ['babel-preset-taro', '@tarojs/*'],
+    aliasName: 'taro-pkgs',
+  },
+];
+
+/**
+ * 默认的其他依赖版本组配置
+ */
+const DEFAULT_OTHERS_VERSION_GROUP = [
+  {
+    dependencyTypes: ['!local'],
+    dependencies: DEFAULT_DEPENDENCY_GROUPS.map((group) => group.aliasName),
+    preferVersion: 'lowestSemver',
+  },
+  {
+    dependencyTypes: ['!local'],
+    label: 'Pin others',
+    preferVersion: 'highestSemver',
   },
 ];
 

@@ -28,7 +28,22 @@ exports[`should generate config for non-pnpm project 1`] = `
       "aliasName": "vue-pkgs",
       "dependencies": [
         "vue",
-        "@vue/*",
+        "@vue/reactivity",
+        "@vue/compiler-*",
+      ],
+    },
+    {
+      "aliasName": "core-js-pkgs",
+      "dependencies": [
+        "core-js",
+        "core-js-compat",
+      ],
+    },
+    {
+      "aliasName": "taro-pkgs",
+      "dependencies": [
+        "babel-preset-taro",
+        "@tarojs/*",
       ],
     },
   ],
@@ -47,6 +62,12 @@ exports[`should generate config for non-pnpm project 1`] = `
         "vue-router",
       ],
       "range": "~",
+    },
+    {
+      "dependencies": [
+        "taro-pkgs",
+      ],
+      "range": "",
     },
     {
       "dependencyTypes": [
@@ -71,6 +92,8 @@ exports[`should generate config for non-pnpm project 1`] = `
       "dependencies": [
         "react-pkgs",
         "vue-pkgs",
+        "core-js-pkgs",
+        "taro-pkgs",
       ],
       "dependencyTypes": [
         "!local",
@@ -126,7 +149,22 @@ exports[`should generate config for pnpm project 1`] = `
       "aliasName": "vue-pkgs",
       "dependencies": [
         "vue",
-        "@vue/*",
+        "@vue/reactivity",
+        "@vue/compiler-*",
+      ],
+    },
+    {
+      "aliasName": "core-js-pkgs",
+      "dependencies": [
+        "core-js",
+        "core-js-compat",
+      ],
+    },
+    {
+      "aliasName": "taro-pkgs",
+      "dependencies": [
+        "babel-preset-taro",
+        "@tarojs/*",
       ],
     },
   ],
@@ -145,6 +183,12 @@ exports[`should generate config for pnpm project 1`] = `
         "vue-router",
       ],
       "range": "~",
+    },
+    {
+      "dependencies": [
+        "taro-pkgs",
+      ],
+      "range": "",
     },
     {
       "dependencyTypes": [
@@ -212,6 +256,8 @@ exports[`should generate config for pnpm project 1`] = `
       "dependencies": [
         "react-pkgs",
         "vue-pkgs",
+        "core-js-pkgs",
+        "taro-pkgs",
       ],
       "dependencyTypes": [
         "!local",
@@ -267,7 +313,22 @@ exports[`should handle empty workspace and catalog 1`] = `
       "aliasName": "vue-pkgs",
       "dependencies": [
         "vue",
-        "@vue/*",
+        "@vue/reactivity",
+        "@vue/compiler-*",
+      ],
+    },
+    {
+      "aliasName": "core-js-pkgs",
+      "dependencies": [
+        "core-js",
+        "core-js-compat",
+      ],
+    },
+    {
+      "aliasName": "taro-pkgs",
+      "dependencies": [
+        "babel-preset-taro",
+        "@tarojs/*",
       ],
     },
   ],
@@ -286,6 +347,12 @@ exports[`should handle empty workspace and catalog 1`] = `
         "vue-router",
       ],
       "range": "~",
+    },
+    {
+      "dependencies": [
+        "taro-pkgs",
+      ],
+      "range": "",
     },
     {
       "dependencyTypes": [
@@ -320,6 +387,8 @@ exports[`should handle empty workspace and catalog 1`] = `
       "dependencies": [
         "react-pkgs",
         "vue-pkgs",
+        "core-js-pkgs",
+        "taro-pkgs",
       ],
       "dependencyTypes": [
         "!local",
@@ -375,7 +444,22 @@ exports[`should handle file read errors 1`] = `
       "aliasName": "vue-pkgs",
       "dependencies": [
         "vue",
-        "@vue/*",
+        "@vue/reactivity",
+        "@vue/compiler-*",
+      ],
+    },
+    {
+      "aliasName": "core-js-pkgs",
+      "dependencies": [
+        "core-js",
+        "core-js-compat",
+      ],
+    },
+    {
+      "aliasName": "taro-pkgs",
+      "dependencies": [
+        "babel-preset-taro",
+        "@tarojs/*",
       ],
     },
   ],
@@ -394,6 +478,12 @@ exports[`should handle file read errors 1`] = `
         "vue-router",
       ],
       "range": "~",
+    },
+    {
+      "dependencies": [
+        "taro-pkgs",
+      ],
+      "range": "",
     },
     {
       "dependencyTypes": [
@@ -418,6 +508,8 @@ exports[`should handle file read errors 1`] = `
       "dependencies": [
         "react-pkgs",
         "vue-pkgs",
+        "core-js-pkgs",
+        "taro-pkgs",
       ],
       "dependencyTypes": [
         "!local",
@@ -477,7 +569,22 @@ exports[`should merge custom config 1`] = `
       "aliasName": "vue-pkgs",
       "dependencies": [
         "vue",
-        "@vue/*",
+        "@vue/reactivity",
+        "@vue/compiler-*",
+      ],
+    },
+    {
+      "aliasName": "core-js-pkgs",
+      "dependencies": [
+        "core-js",
+        "core-js-compat",
+      ],
+    },
+    {
+      "aliasName": "taro-pkgs",
+      "dependencies": [
+        "babel-preset-taro",
+        "@tarojs/*",
       ],
     },
   ],
@@ -502,6 +609,12 @@ exports[`should merge custom config 1`] = `
         "vue-router",
       ],
       "range": "~",
+    },
+    {
+      "dependencies": [
+        "taro-pkgs",
+      ],
+      "range": "",
     },
     {
       "dependencyTypes": [
@@ -536,6 +649,8 @@ exports[`should merge custom config 1`] = `
       "dependencies": [
         "react-pkgs",
         "vue-pkgs",
+        "core-js-pkgs",
+        "taro-pkgs",
       ],
       "dependencyTypes": [
         "!local",

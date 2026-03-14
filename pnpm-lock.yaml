@@ -67,8 +67,6 @@ overrides:
   eslint-plugin-react-hooks: ^5.2.0
   globals: ^17.4.0
 
-pnpmfileChecksum: sha256-zzjwswQFunNfRwV/YHqbrjCZmcKs701+5nVJlVW36iE=
-
 patchedDependencies:
   '@commitlint/rules':
     hash: deb5aa421ffc0025f72ff79944be145cb0e050cc304a43038b4a523eb031fba0
@@ -605,7 +603,7 @@ importers:
   packages/tsconfig:
     dependencies:
       '@types/node':
-        specifier: ^24.0.0
+        specifier: ^24.11.0
         version: 24.12.0
       '@types/whatwg-url':
         specifier: ^13.0.0

@@ -85,9 +85,12 @@ const DEFAULT_SEMVER_GROUPS = [
       '@types/react',
       'playwright-*',
       'prettier',
-      'react-pkgs',
+      'react',
+      'react-dom',
       'typescript',
-      'vue-pkgs',
+      'vue',
+      '@vue/reactivity',
+      '@vue/compiler-*',
       'vue-router',
     ].toSorted(),
     range: '~',
@@ -195,18 +198,6 @@ function createNodeEngineVersionGroup(pkg = {}) {
 }
 
 const DEFAULT_DEPENDENCY_GROUPS = [
-  {
-    dependencies: ['react', 'react-dom'],
-    aliasName: 'react-pkgs',
-  },
-  {
-    dependencies: ['vue', '@vue/reactivity', '@vue/compiler-*'],
-    aliasName: 'vue-pkgs',
-  },
-  {
-    dependencies: ['core-js', 'core-js-compat'],
-    aliasName: 'core-js-pkgs',
-  },
   {
     dependencies: ['babel-preset-taro', '@tarojs/*'],
     aliasName: 'taro-pkgs',

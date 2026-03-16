@@ -18,28 +18,6 @@ exports[`should generate config for non-pnpm project 1`] = `
   },
   "dependencyGroups": [
     {
-      "aliasName": "react-pkgs",
-      "dependencies": [
-        "react",
-        "react-dom",
-      ],
-    },
-    {
-      "aliasName": "vue-pkgs",
-      "dependencies": [
-        "vue",
-        "@vue/reactivity",
-        "@vue/compiler-*",
-      ],
-    },
-    {
-      "aliasName": "core-js-pkgs",
-      "dependencies": [
-        "core-js",
-        "core-js-compat",
-      ],
-    },
-    {
       "aliasName": "taro-pkgs",
       "dependencies": [
         "babel-preset-taro",
@@ -54,11 +32,14 @@ exports[`should generate config for non-pnpm project 1`] = `
         "@sentry/*",
         "@types/react",
         "@types/react-dom",
+        "@vue/compiler-*",
+        "@vue/reactivity",
         "playwright-*",
         "prettier",
-        "react-pkgs",
+        "react",
+        "react-dom",
         "typescript",
-        "vue-pkgs",
+        "vue",
         "vue-router",
       ],
       "range": "~",
@@ -90,9 +71,6 @@ exports[`should generate config for non-pnpm project 1`] = `
     },
     {
       "dependencies": [
-        "react-pkgs",
-        "vue-pkgs",
-        "core-js-pkgs",
         "taro-pkgs",
       ],
       "dependencyTypes": [
@@ -139,28 +117,6 @@ exports[`should generate config for pnpm project 1`] = `
   },
   "dependencyGroups": [
     {
-      "aliasName": "react-pkgs",
-      "dependencies": [
-        "react",
-        "react-dom",
-      ],
-    },
-    {
-      "aliasName": "vue-pkgs",
-      "dependencies": [
-        "vue",
-        "@vue/reactivity",
-        "@vue/compiler-*",
-      ],
-    },
-    {
-      "aliasName": "core-js-pkgs",
-      "dependencies": [
-        "core-js",
-        "core-js-compat",
-      ],
-    },
-    {
       "aliasName": "taro-pkgs",
       "dependencies": [
         "babel-preset-taro",
@@ -175,11 +131,14 @@ exports[`should generate config for pnpm project 1`] = `
         "@sentry/*",
         "@types/react",
         "@types/react-dom",
+        "@vue/compiler-*",
+        "@vue/reactivity",
         "playwright-*",
         "prettier",
-        "react-pkgs",
+        "react",
+        "react-dom",
         "typescript",
-        "vue-pkgs",
+        "vue",
         "vue-router",
       ],
       "range": "~",
@@ -254,9 +213,6 @@ exports[`should generate config for pnpm project 1`] = `
     },
     {
       "dependencies": [
-        "react-pkgs",
-        "vue-pkgs",
-        "core-js-pkgs",
         "taro-pkgs",
       ],
       "dependencyTypes": [
@@ -303,28 +259,6 @@ exports[`should handle empty workspace and catalog 1`] = `
   },
   "dependencyGroups": [
     {
-      "aliasName": "react-pkgs",
-      "dependencies": [
-        "react",
-        "react-dom",
-      ],
-    },
-    {
-      "aliasName": "vue-pkgs",
-      "dependencies": [
-        "vue",
-        "@vue/reactivity",
-        "@vue/compiler-*",
-      ],
-    },
-    {
-      "aliasName": "core-js-pkgs",
-      "dependencies": [
-        "core-js",
-        "core-js-compat",
-      ],
-    },
-    {
       "aliasName": "taro-pkgs",
       "dependencies": [
         "babel-preset-taro",
@@ -339,11 +273,14 @@ exports[`should handle empty workspace and catalog 1`] = `
         "@sentry/*",
         "@types/react",
         "@types/react-dom",
+        "@vue/compiler-*",
+        "@vue/reactivity",
         "playwright-*",
         "prettier",
-        "react-pkgs",
+        "react",
+        "react-dom",
         "typescript",
-        "vue-pkgs",
+        "vue",
         "vue-router",
       ],
       "range": "~",
@@ -385,9 +322,6 @@ exports[`should handle empty workspace and catalog 1`] = `
     },
     {
       "dependencies": [
-        "react-pkgs",
-        "vue-pkgs",
-        "core-js-pkgs",
         "taro-pkgs",
       ],
       "dependencyTypes": [
@@ -434,28 +368,6 @@ exports[`should handle file read errors 1`] = `
   },
   "dependencyGroups": [
     {
-      "aliasName": "react-pkgs",
-      "dependencies": [
-        "react",
-        "react-dom",
-      ],
-    },
-    {
-      "aliasName": "vue-pkgs",
-      "dependencies": [
-        "vue",
-        "@vue/reactivity",
-        "@vue/compiler-*",
-      ],
-    },
-    {
-      "aliasName": "core-js-pkgs",
-      "dependencies": [
-        "core-js",
-        "core-js-compat",
-      ],
-    },
-    {
       "aliasName": "taro-pkgs",
       "dependencies": [
         "babel-preset-taro",
@@ -470,11 +382,14 @@ exports[`should handle file read errors 1`] = `
         "@sentry/*",
         "@types/react",
         "@types/react-dom",
+        "@vue/compiler-*",
+        "@vue/reactivity",
         "playwright-*",
         "prettier",
-        "react-pkgs",
+        "react",
+        "react-dom",
         "typescript",
-        "vue-pkgs",
+        "vue",
         "vue-router",
       ],
       "range": "~",
@@ -506,9 +421,6 @@ exports[`should handle file read errors 1`] = `
     },
     {
       "dependencies": [
-        "react-pkgs",
-        "vue-pkgs",
-        "core-js-pkgs",
         "taro-pkgs",
       ],
       "dependencyTypes": [
@@ -559,28 +471,6 @@ exports[`should merge custom config 1`] = `
   },
   "dependencyGroups": [
     {
-      "aliasName": "react-pkgs",
-      "dependencies": [
-        "react",
-        "react-dom",
-      ],
-    },
-    {
-      "aliasName": "vue-pkgs",
-      "dependencies": [
-        "vue",
-        "@vue/reactivity",
-        "@vue/compiler-*",
-      ],
-    },
-    {
-      "aliasName": "core-js-pkgs",
-      "dependencies": [
-        "core-js",
-        "core-js-compat",
-      ],
-    },
-    {
       "aliasName": "taro-pkgs",
       "dependencies": [
         "babel-preset-taro",
@@ -601,11 +491,14 @@ exports[`should merge custom config 1`] = `
         "@sentry/*",
         "@types/react",
         "@types/react-dom",
+        "@vue/compiler-*",
+        "@vue/reactivity",
         "playwright-*",
         "prettier",
-        "react-pkgs",
+        "react",
+        "react-dom",
         "typescript",
-        "vue-pkgs",
+        "vue",
         "vue-router",
       ],
       "range": "~",
@@ -647,9 +540,6 @@ exports[`should merge custom config 1`] = `
     },
     {
       "dependencies": [
-        "react-pkgs",
-        "vue-pkgs",
-        "core-js-pkgs",
         "taro-pkgs",
       ],
       "dependencyTypes": [

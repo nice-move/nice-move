@@ -2383,7 +2383,7 @@
   "plugins": [
     "@",
     "@eslint-community/eslint-comments",
-    "import",
+    "import-x",
     "n",
     "promise",
     "regexp",
@@ -2466,47 +2466,47 @@
     "guard-for-in": [
       "error",
     ],
-    "import/default": [
+    "import-x/default": [
       "error",
     ],
-    "import/export": [
+    "import-x/export": [
       "error",
     ],
-    "import/extensions": [
+    "import-x/extensions": [
       "error",
       "always",
       {
         "ignorePackages": true,
       },
     ],
-    "import/first": [
+    "import-x/first": [
       "error",
     ],
-    "import/named": [
+    "import-x/named": [
       "error",
     ],
-    "import/namespace": [
+    "import-x/namespace": [
       "error",
     ],
-    "import/no-absolute-path": [
+    "import-x/no-absolute-path": [
       "error",
     ],
-    "import/no-amd": [
+    "import-x/no-amd": [
       "error",
     ],
-    "import/no-commonjs": [
+    "import-x/no-commonjs": [
       "error",
     ],
-    "import/no-duplicates": [
+    "import-x/no-duplicates": [
       "warn",
       {
         "considerQueryString": true,
       },
     ],
-    "import/no-empty-named-blocks": [
+    "import-x/no-empty-named-blocks": [
       "error",
     ],
-    "import/no-extraneous-dependencies": [
+    "import-x/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": [
@@ -2524,45 +2524,44 @@
         ],
       },
     ],
-    "import/no-import-module-exports": [
+    "import-x/no-import-module-exports": [
       "error",
       {
         "exceptions": [],
       },
     ],
-    "import/no-mutable-exports": [
+    "import-x/no-mutable-exports": [
       "error",
     ],
-    "import/no-named-as-default": [
+    "import-x/no-named-as-default": [
       "warn",
     ],
-    "import/no-named-as-default-member": [
+    "import-x/no-named-as-default-member": [
       "warn",
     ],
-    "import/no-named-default": [
+    "import-x/no-named-default": [
       "error",
     ],
-    "import/no-nodejs-modules": [
+    "import-x/no-nodejs-modules": [
       "error",
     ],
-    "import/no-self-import": [
+    "import-x/no-self-import": [
       "error",
     ],
-    "import/no-unresolved": [
+    "import-x/no-unresolved": [
       "error",
       {
         "caseSensitive": true,
-        "caseSensitiveStrict": false,
         "commonjs": true,
       },
     ],
-    "import/no-useless-path-segments": [
+    "import-x/no-useless-path-segments": [
       "error",
       {
         "commonjs": true,
       },
     ],
-    "import/no-webpack-loader-syntax": [
+    "import-x/no-webpack-loader-syntax": [
       "error",
     ],
     "n/file-extension-in-import": [
@@ -4294,8 +4293,8 @@
     ],
   },
   "settings": {
-    "import/core-modules": [],
-    "import/extensions": [
+    "import-x/core-modules": [],
+    "import-x/extensions": [
       ".tsx",
       ".ts",
       ".cts",
@@ -4306,8 +4305,8 @@
       ".mjs",
       ".cjs",
     ],
-    "import/ignore": false,
-    "import/parsers": {
+    "import-x/ignore": false,
+    "import-x/parsers": {
       "/<:root>/package****b/jsx-parser.cjs": [
         ".jsx",
       ],
@@ -4321,11 +4320,14 @@
         ".vue",
       ],
     },
-    "import/resolver": {
-      "/<:root>/package****ext-resolver.mjs": {
-        "importHttp": true,
+    "import-x/resolver": {
+      "node": {
+        "extensions": [
+          ".mjs",
+          ".js",
+          ".json",
+        ],
       },
-      "node": false,
     },
     "n": {
       "tryExtensions": [

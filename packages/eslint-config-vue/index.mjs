@@ -37,7 +37,7 @@ export default [
       },
     },
     rules: {
-      'import/no-default-export': 0,
+      'import-x/no-default-export': 0,
       'vue/attributes-order': 0,
       'vue/component-name-in-template-casing': ['warn', 'PascalCase'],
       'vue/component-tags-order': 0,

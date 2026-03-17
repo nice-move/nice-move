@@ -81,18 +81,18 @@ export function eslintInspector(configName, filename) {
         }
       }
 
-      if (data?.settings?.['import/resolver']) {
-        data.settings['import/resolver'] = Object.fromEntries(
-          Object.entries(data.settings['import/resolver']).map(([k, v]) => [
+      if (data?.settings?.['import-x/resolver']) {
+        data.settings['import-x/resolver'] = Object.fromEntries(
+          Object.entries(data.settings['import-x/resolver']).map(([k, v]) => [
             fixPath(k),
             v,
           ]),
         );
       }
 
-      if (data?.settings?.['import/parsers']) {
-        data.settings['import/parsers'] = Object.fromEntries(
-          Object.entries(data.settings['import/parsers']).map(([k, v]) => [
+      if (data?.settings?.['import-x/parsers']) {
+        data.settings['import-x/parsers'] = Object.fromEntries(
+          Object.entries(data.settings['import-x/parsers']).map(([k, v]) => [
             fixPath(k),
             v,
           ]),

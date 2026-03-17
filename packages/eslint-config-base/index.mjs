@@ -39,8 +39,24 @@ const old = compat.config(airbnb).map((item) => {
 
   item.files = allExts;
 
+  item.settings &&= Object.fromEntries(
+    Object.entries(item.settings).map(([key, value]) => [
+      key.replace(/^import\//, 'import-x/'),
+      value,
+    ]),
+  );
+
+  item.rules &&= Object.fromEntries(
+    Object.entries(item.rules).map(([key, value]) => [
+      key.replace(/^import\//, 'import-x/'),
+      value,
+    ]),
+  );
+
   return item;
 });
+
+console.log(old);
 
 export const create = (...addings) => [
   {
@@ -59,7 +75,7 @@ export const create = (...addings) => [
       {
         files: ['src/**/*.{mjs,mts,cjs,cts}'],
         settings: {
-          'import/core-modules': ['electron'],
+          'import-x/core-modules': ['electron'],
         },
       },
     ],

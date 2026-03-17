@@ -104,7 +104,7 @@ function generate({
             },
           },
           rules: {
-            'import/no-commonjs': 'off',
+            'import-x/no-commonjs': 'off',
             'unicorn/prefer-module': 'off',
           },
         }
@@ -147,7 +147,7 @@ function generate({
         },
       },
       rules: {
-        'import/no-commonjs': 0,
+        'import-x/no-commonjs': 0,
         'no-var': 0,
         'object-shorthand': ['error', 'never'],
         'prefer-arrow-callback': 0,

@@ -1,16 +1,16 @@
 import { fileURLToPath } from 'node:url';
 
-import imports from 'eslint-plugin-import';
+import { flatConfigs } from 'eslint-plugin-import-x';
 
 import { configHas, pkgHas } from './utils.mjs';
 
 const Vscode = pkgHas(
   ({ engines: { vscode } = {} }) => vscode,
-  () => ({ 'import/core-modules': ['vscode'] }),
+  () => ({ 'import-x/core-modules': ['vscode'] }),
 );
 
 export default [
-  imports.flatConfigs.recommended,
+  flatConfigs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx,cjs,mjs,cts,mts}'],
     ignores: [
@@ -21,20 +21,20 @@ export default [
       '**/*.md/*',
     ],
     rules: {
-      'import/no-default-export': 'warn',
+      'import-x/no-default-export': 'warn',
     },
   },
   {
     files: ['**/*.{js,jsx,ts,tsx,cjs,mjs,cts,mts,qs,wxs,vue}'],
     rules: {
-      'import/extensions': [
+      'import-x/extensions': [
         'error',
         'always',
         {
           ignorePackages: true,
         },
       ],
-      'import/no-extraneous-dependencies': [
+      'import-x/no-extraneous-dependencies': [
         'error',
         {
           devDependencies: [
@@ -54,18 +54,18 @@ export default [
           ],
         },
       ],
-      'import/newline-after-import': 0,
-      'import/no-dynamic-require': 0,
-      'import/no-empty-named-blocks': 'error',
-      'import/no-relative-packages': 0,
-      'import/order': 0,
-      'import/prefer-default-export': 0,
-      'import/no-cycle': 0,
-      'import/no-duplicates': ['warn', { considerQueryString: true }],
+      'import-x/newline-after-import': 0,
+      'import-x/no-dynamic-require': 0,
+      'import-x/no-empty-named-blocks': 'error',
+      'import-x/no-relative-packages': 0,
+      'import-x/order': 0,
+      'import-x/prefer-default-export': 0,
+      'import-x/no-cycle': 0,
+      'import-x/no-duplicates': ['warn', { considerQueryString: true }],
     },
     settings: {
       ...Vscode,
-      'import/extensions': [
+      'import-x/extensions': [
         '.tsx',
         '.ts',
         '.cts',
@@ -76,30 +76,22 @@ export default [
         '.mjs',
         '.cjs',
       ],
-      'import/parsers': {
+      'import-x/parsers': {
         '@typescript-eslint/parser': ['.ts', '.cts', '.mts', '.tsx'],
         'vue-eslint-parser': ['.vue'],
         [fileURLToPath(import.meta.resolve('./jsx-parser.cjs'))]: ['.jsx'],
       },
-      'import/ignore': false,
+      'import-x/ignore': false,
       ...configHas(
         ({ 'internal-regex': internalRegex }) => internalRegex,
-        (internalRegex) => ({ 'import/internal-regex': internalRegex }),
+        (internalRegex) => ({ 'import-x/internal-regex': internalRegex }),
       ),
-      'import/resolver': {
-        node: false,
-        [fileURLToPath(import.meta.resolve('./node-next-resolver.mjs'))]:
-          configHas(
-            ({ 'import-http': importHttp }) => importHttp,
-            (importHttp) => ({ importHttp }),
-          ) || {},
-      },
     },
   },
   {
     files: ['**/*.{js,jsx,ts,tsx,vue,qs,wxs}'],
     rules: {
-      'import/no-nodejs-modules': 'error',
+      'import-x/no-nodejs-modules': 'error',
     },
   },
 ];

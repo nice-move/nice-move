@@ -32,7 +32,7 @@ export default [
   {
     files: ['**/*.{js,jsx,ts,tsx,mjs,mts,vue}'],
     rules: {
-      'import/no-commonjs': 'error',
+      'import-x/no-commonjs': 'error',
     },
   },
   {

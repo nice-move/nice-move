@@ -9,7 +9,6 @@
     "nodeTypeKey": "type",
   },
   "languageOptions": {
-    "ecmaVersion": 2018,
     "frontmatter": "yaml",
     "globals": {
       "AggregateError": "readonly",
@@ -75,7 +74,6 @@
       "undefined": "readonly",
       "unescape": "readonly",
     },
-    "sourceType": "module",
   },
   "linterOptions": {
     "noInlineConfig": false,
@@ -83,7 +81,7 @@
   },
   "plugins": [
     "@",
-    "import",
+    "import-x",
     "markdown",
     "promise",
     "unicorn",
@@ -98,28 +96,28 @@
     "supportsAutofix": true,
   },
   "rules": {
-    "import/default": [
+    "import-x/default": [
       "error",
     ],
-    "import/export": [
+    "import-x/export": [
       "error",
     ],
-    "import/named": [
+    "import-x/named": [
       "error",
     ],
-    "import/namespace": [
+    "import-x/namespace": [
       "error",
     ],
-    "import/no-duplicates": [
+    "import-x/no-duplicates": [
       "warn",
     ],
-    "import/no-named-as-default": [
+    "import-x/no-named-as-default": [
       "warn",
     ],
-    "import/no-named-as-default-member": [
+    "import-x/no-named-as-default-member": [
       "warn",
     ],
-    "import/no-unresolved": [
+    "import-x/no-unresolved": [
       "error",
     ],
     "markdown/fenced-code-language": [

@@ -2423,7 +2423,7 @@
     "@",
     "@eslint-community/eslint-comments",
     "@nice-move/html",
-    "import",
+    "import-x",
     "promise",
     "regexp",
     "unicorn",
@@ -2504,13 +2504,13 @@
     "guard-for-in": [
       "error",
     ],
-    "import/default": [
+    "import-x/default": [
       "error",
     ],
-    "import/export": [
+    "import-x/export": [
       "error",
     ],
-    "import/extensions": [
+    "import-x/extensions": [
       "error",
       "ignorePackages",
       {
@@ -2519,40 +2519,39 @@
         "mjs": "never",
       },
     ],
-    "import/first": [
+    "import-x/first": [
       "error",
     ],
-    "import/named": [
+    "import-x/named": [
       "error",
     ],
-    "import/namespace": [
+    "import-x/namespace": [
       "error",
     ],
-    "import/newline-after-import": [
+    "import-x/newline-after-import": [
       "error",
     ],
-    "import/no-absolute-path": [
+    "import-x/no-absolute-path": [
       "error",
     ],
-    "import/no-amd": [
+    "import-x/no-amd": [
       "error",
     ],
-    "import/no-cycle": [
+    "import-x/no-cycle": [
       "error",
       {
         "allowUnsafeDynamicCyclicDependency": false,
-        "disableScc": false,
         "ignoreExternal": false,
         "maxDepth": "∞",
       },
     ],
-    "import/no-duplicates": [
+    "import-x/no-duplicates": [
       "warn",
     ],
-    "import/no-dynamic-require": [
+    "import-x/no-dynamic-require": [
       "error",
     ],
-    "import/no-extraneous-dependencies": [
+    "import-x/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": [
@@ -2582,48 +2581,47 @@
         "optionalDependencies": false,
       },
     ],
-    "import/no-import-module-exports": [
+    "import-x/no-import-module-exports": [
       "error",
       {
         "exceptions": [],
       },
     ],
-    "import/no-mutable-exports": [
+    "import-x/no-mutable-exports": [
       "error",
     ],
-    "import/no-named-as-default": [
+    "import-x/no-named-as-default": [
       "warn",
     ],
-    "import/no-named-as-default-member": [
+    "import-x/no-named-as-default-member": [
       "warn",
     ],
-    "import/no-named-default": [
+    "import-x/no-named-default": [
       "error",
     ],
-    "import/no-relative-packages": [
+    "import-x/no-relative-packages": [
       "error",
     ],
-    "import/no-self-import": [
+    "import-x/no-self-import": [
       "error",
     ],
-    "import/no-unresolved": [
+    "import-x/no-unresolved": [
       "error",
       {
         "caseSensitive": true,
-        "caseSensitiveStrict": false,
         "commonjs": true,
       },
     ],
-    "import/no-useless-path-segments": [
+    "import-x/no-useless-path-segments": [
       "error",
       {
         "commonjs": true,
       },
     ],
-    "import/no-webpack-loader-syntax": [
+    "import-x/no-webpack-loader-syntax": [
       "error",
     ],
-    "import/order": [
+    "import-x/order": [
       "error",
       {
         "distinctGroup": true,
@@ -2639,7 +2637,7 @@
         "warnOnUnassignedImports": false,
       },
     ],
-    "import/prefer-default-export": [
+    "import-x/prefer-default-export": [
       "error",
     ],
     "new-cap": [
@@ -4010,17 +4008,17 @@
     ],
   },
   "settings": {
-    "import/core-modules": [],
-    "import/extensions": [
+    "import-x/core-modules": [],
+    "import-x/extensions": [
       ".js",
       ".mjs",
       ".jsx",
     ],
-    "import/ignore": [
+    "import-x/ignore": [
       "node_modules",
       "\.(coffee|scss|css|less|hbs|svg|json)$",
     ],
-    "import/resolver": {
+    "import-x/resolver": {
       "node": {
         "extensions": [
           ".mjs",

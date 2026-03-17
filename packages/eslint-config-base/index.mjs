@@ -56,8 +56,6 @@ const old = compat.config(airbnb).map((item) => {
   return item;
 });
 
-console.log(old);
-
 export const create = (...addings) => [
   {
     files: allExts,

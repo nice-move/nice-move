@@ -3997,7 +3997,7 @@
       ],
     },
     "import/resolver": {
-      "/<:root>/package****ext-resolver.cjs": {
+      "/<:root>/package****ext-resolver.mjs": {
         "importHttp": true,
       },
       "node": false,

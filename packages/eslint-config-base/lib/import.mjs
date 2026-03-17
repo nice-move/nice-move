@@ -88,7 +88,7 @@ export default [
       ),
       'import/resolver': {
         node: false,
-        [fileURLToPath(import.meta.resolve('./node-next-resolver.cjs'))]:
+        [fileURLToPath(import.meta.resolve('./node-next-resolver.mjs'))]:
           configHas(
             ({ 'import-http': importHttp }) => importHttp,
             (importHttp) => ({ importHttp }),

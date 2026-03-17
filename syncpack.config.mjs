@@ -6,14 +6,12 @@ export default defineConfig(import.meta.url, {
     {
       dependencies: ['@nice-move/eslint-config-*'],
       dependencyTypes: ['local'],
-      label: 'Same version 1',
-      pinVersion: '0.13.26',
+      pinVersion: '0.13.27',
     },
     {
       dependencies: ['@nice-move/all-in-*'],
       dependencyTypes: ['local'],
-      label: 'Same version 2',
-      pinVersion: '0.6.41',
+      pinVersion: '0.6.42',
     },
   ],
 });

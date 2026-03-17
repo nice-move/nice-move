@@ -33,10 +33,6 @@ catalogs:
 configDependencies:
   pnpm-plugin-nice-move: 0.3.1+sha512-pIq4uYqy3pZFCcyuJeGSmhNr3u1MGfNZbjnVKtJWUfM/NfhEBzAvlkHmVG5WYhbqNQA3xuqqaJaiOUGIQvo3JA==
 
-minimumReleaseAgeExclude:
-  - syncpack
-  - syncpack-*
-
 overrides:
   eslint: catalog:overrides
   eslint-plugin-react-hooks: catalog:overrides

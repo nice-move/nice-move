@@ -23,7 +23,7 @@
     "prepare": "git config core.hooksPath .githooks",
     "snapshot": "vitest --config test/vitest.config.mjs -u",
     "test": "vitest run --config test/vitest.config.mjs",
-    "version:pin": "syncpack fix"
+    "version:pin": "syncpack fix-mismatches"
   },
   "dependencies": {
     "svgo": "^4.0.1",

@@ -10,11 +10,9 @@
   ],
   "pluginFunctions": {
     "plugin/declaration-block-no-ignored-properties": [Function],
-    "plugin/no-unresolved-module": [Function],
   },
   "plugins": [
     "/<:root>/node_mo****perties/index.js",
-    "/<:root>/node_mo****ule/esm/index.js",
   ],
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true,
@@ -200,13 +198,6 @@
       true,
       {
         "severity": "warning",
-      },
-    ],
-    "plugin/no-unresolved-module": [
-      {
-        "modules": [
-          "node_modules",
-        ],
       },
     ],
     "property-no-deprecated": [

@@ -3506,6 +3506,9 @@
         "checkArrowFunctions": true,
       },
     ],
+    "unicorn/consistent-template-literal-escape": [
+      "error",
+    ],
     "unicorn/custom-error-definition": [
       "warn",
     ],
@@ -3680,6 +3683,9 @@
       "error",
     ],
     "unicorn/no-useless-fallback-in-spread": [
+      "error",
+    ],
+    "unicorn/no-useless-iterator-to-array": [
       "error",
     ],
     "unicorn/no-useless-length-check": [
@@ -3869,6 +3875,9 @@
     "unicorn/prefer-set-size": [
       "error",
     ],
+    "unicorn/prefer-simple-condition-first": [
+      "error",
+    ],
     "unicorn/prefer-single-call": [
       "error",
       {
@@ -3932,6 +3941,9 @@
     "unicorn/switch-case-braces": [
       "error",
       "always",
+    ],
+    "unicorn/switch-case-break-position": [
+      "error",
     ],
     "unicorn/text-encoding-identifier-case": [
       "error",

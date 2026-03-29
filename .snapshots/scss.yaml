@@ -13,7 +13,6 @@
   ],
   "pluginFunctions": {
     "plugin/declaration-block-no-ignored-properties": [Function],
-    "plugin/no-unresolved-module": [Function],
     "scss/at-each-key-value-single-line": [Function],
     "scss/at-else-closing-brace-newline-after": [Function],
     "scss/at-else-closing-brace-space-after": [Function],
@@ -26,12 +25,8 @@
     "scss/at-if-closing-brace-newline-after": [Function],
     "scss/at-if-closing-brace-space-after": [Function],
     "scss/at-if-no-null": [Function],
-    "scss/at-import-no-partial-leading-underscore": [Function],
-    "scss/at-import-partial-extension": [Function],
     "scss/at-import-partial-extension-allowed-list": [Function],
-    "scss/at-import-partial-extension-blacklist": [Function],
     "scss/at-import-partial-extension-disallowed-list": [Function],
-    "scss/at-import-partial-extension-whitelist": [Function],
     "scss/at-mixin-argumentless-call-parentheses": [Function],
     "scss/at-mixin-named-arguments": [Function],
     "scss/at-mixin-no-risky-nesting-selector": [Function],
@@ -85,13 +80,13 @@
     "scss/partial-no-import": [Function],
     "scss/percent-placeholder-pattern": [Function],
     "scss/property-no-unknown": [Function],
+    "scss/selector-class-pattern": [Function],
     "scss/selector-nest-combinators": [Function],
     "scss/selector-no-redundant-nesting-selector": [Function],
     "scss/selector-no-union-class-name": [Function],
   },
   "plugins": [
     "/<:root>/node_mo****perties/index.js",
-    "/<:root>/node_mo****ule/esm/index.js",
     "/<:root>/node_mo****css/src/index.js",
   ],
   "reportInvalidScopeDisables": true,
@@ -280,13 +275,6 @@
         "severity": "warning",
       },
     ],
-    "plugin/no-unresolved-module": [
-      {
-        "modules": [
-          "node_modules",
-        ],
-      },
-    ],
     "property-no-deprecated": [
       true,
     ],
@@ -299,6 +287,7 @@
     "scss/at-if-no-null": [
       true,
     ],
+    "scss/at-import-no-partial-leading-underscore": [],
     "scss/at-mixin-argumentless-call-parentheses": [
       "always",
     ],

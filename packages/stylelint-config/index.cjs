@@ -10,18 +10,12 @@ module.exports = {
     require.resolve('./lib/ignore.cjs'),
     require.resolve('./lib/base.cjs'),
   ],
-  plugins: [
-    'stylelint-declaration-block-no-ignored-properties',
-    'stylelint-no-unresolved-module',
-  ],
+  plugins: ['stylelint-declaration-block-no-ignored-properties'],
   rules: {
     'plugin/declaration-block-no-ignored-properties': [
       true,
       { severity: 'warning' },
     ],
-    'plugin/no-unresolved-module': {
-      modules: ['node_modules'],
-    },
     ...(tailwind
       ? {
           'at-rule-no-deprecated': [true, { ignoreAtRules: ['apply'] }],

@@ -19,7 +19,7 @@ export function loadOrderPreset() {
         'import-groups': config = [],
         'internal-regex': internalRegex,
       } = {},
-      // eslint-disable-next-line import/no-unresolved
+      // eslint-disable-next-line import-x/no-unresolved
     } = require('@nice-move/config/package.json');
 
     return [...config, internalRegex].map((item) => item || '');

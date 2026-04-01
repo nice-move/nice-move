@@ -19,14 +19,13 @@ export function pkgHas(checker, getResult) {
 
 function getConfig(name) {
   try {
-    // eslint-disable-next-line import/no-unresolved
+    // eslint-disable-next-line import-x/no-unresolved
     return require('@nice-move/config/package.json')[name];
   } catch {
     return null;
   }
 }
 
-// eslint-disable-next-line consistent-return
 export function configHas(checker, getResult) {
   const pkg = getConfig('nice-move') || getPkg('nice-move');
 

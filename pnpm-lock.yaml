@@ -33,6 +33,9 @@ catalogs:
     garou:
       specifier: ^0.9.18
       version: 0.9.18
+    lodash:
+      specifier: ^4.17.23
+      version: 4.18.0
     settingz:
       specifier: ^0.2.0
       version: 0.2.0
@@ -672,7 +675,7 @@ importers:
         specifier: ^3.4.19
         version: 3.4.19(yaml@2.8.3)
       vue:
-        specifier: ~3.5.26
+        specifier: ~3.5.30
         version: 3.5.31(typescript@6.0.2)
       yaml:
         specifier: 'catalog:'

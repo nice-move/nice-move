@@ -62,6 +62,7 @@ module.exports = {
           '@best-shot/*',
           '@into-mini/*',
           '@nice-move/*',
+          'garou',
         ],
         allowBuilds: {
           '@parcel/watcher': false,
@@ -76,13 +77,12 @@ module.exports = {
         updateConfig: {
           ignoreDependencies: [
             'tailwindcss',
-            'stylelint',
             'react',
             'react-dom',
-            'react-router',
             'unplugin-vue-components',
             'eslint',
             '@antv/f2',
+            'string-width',
           ],
         },
       });

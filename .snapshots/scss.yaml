@@ -287,7 +287,6 @@
     "scss/at-if-no-null": [
       true,
     ],
-    "scss/at-import-no-partial-leading-underscore": [],
     "scss/at-mixin-argumentless-call-parentheses": [
       "always",
     ],

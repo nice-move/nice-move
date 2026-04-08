@@ -73,6 +73,7 @@ module.exports = {
           ssh2: false,
           'vue-demi': false,
           'cpu-features': false,
+          'unrs-resolver': false,
         },
         updateConfig: {
           ignoreDependencies: [

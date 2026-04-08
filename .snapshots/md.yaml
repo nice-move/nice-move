@@ -3,6 +3,7 @@
     "columnStart": 1,
     "defaultLanguageOptions": {
       "frontmatter": false,
+      "math": false,
     },
     "fileType": "text",
     "lineStart": 1,
@@ -74,6 +75,7 @@
       "undefined": "readonly",
       "unescape": "readonly",
     },
+    "math": false,
   },
   "linterOptions": {
     "noInlineConfig": false,
@@ -89,7 +91,7 @@
   "processor": {
     "meta": {
       "name": "@eslint/markdown/markdown",
-      "version": "7.5.1",
+      "version": "8.0.1",
     },
     "postprocess": [Function],
     "preprocess": [Function],
@@ -139,6 +141,7 @@
           "//",
         ],
         "allowFootnoteDefinitions": [],
+        "checkFootnoteDefinitions": true,
       },
     ],
     "markdown/no-empty-definitions": [
@@ -211,6 +214,7 @@
           "//",
         ],
         "allowFootnoteDefinitions": [],
+        "checkFootnoteDefinitions": true,
       },
     ],
     "markdown/require-alt-text": [
@@ -467,13 +471,6 @@
     ],
     "unicorn/no-useless-switch-case": [
       "error",
-    ],
-    "unicorn/no-useless-undefined": [
-      "error",
-      {
-        "checkArguments": true,
-        "checkArrowFunctionBody": true,
-      },
     ],
     "unicorn/no-zero-fractions": [
       "error",

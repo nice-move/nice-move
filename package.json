@@ -45,7 +45,7 @@
     "prettier": "catalog:overrides",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "stylelint": "catalog:",
-    "syncpack": "^14.2.1",
+    "syncpack": "^13.0.4",
     "tsdown": "^0.21.7",
     "typescript": "catalog:",
     "vitest": "catalog:"
@@ -68,7 +68,7 @@
     "@nice-move/stylelint-config": "workspace:^",
     "@nice-move/syncpack-config": "workspace:^",
     "@nice-move/tsconfig": "workspace:^",
-    "@types/node": "^24.12.0"
+    "@types/node": "^24.12.2"
   },
   "packageManager": "pnpm@10.33.0",
   "engines": {

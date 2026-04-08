@@ -43,7 +43,6 @@ module.exports = {
     'scss/selector-no-redundant-nesting-selector': true,
 
     // off -------------
-    'scss/at-import-no-partial-leading-underscore': null,
     'scss/declaration-nested-properties-no-divided-groups': null,
 
     // ---- handle by prettier -----

@@ -3756,13 +3756,6 @@
     "unicorn/no-useless-switch-case": [
       "error",
     ],
-    "unicorn/no-useless-undefined": [
-      "error",
-      {
-        "checkArguments": true,
-        "checkArrowFunctionBody": true,
-      },
-    ],
     "unicorn/no-zero-fractions": [
       "error",
     ],

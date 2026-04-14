@@ -1,17 +1,5 @@
 {
-  "customSyntax": {
-    "parse": [Function],
-    "stringify": [Function],
-  },
-  "ignoreFiles": [
-    "/<:root>/**/*.min.*",
-    "/<:root>/**/dist/**",
-    "/<:root>/**/.(cache|svn|git)/**",
-    "/<:root>/**/.docusaurus/**",
-    "/<:root>/**/.obsidian/**",
-    "/<:root>/**/miniprogram_npm/**",
-  ],
-  "pluginFunctions": {
+  "_pluginFunctions": {
     "plugin/declaration-block-no-ignored-properties": [Function],
     "scss/at-each-key-value-single-line": [Function],
     "scss/at-else-closing-brace-newline-after": [Function],
@@ -85,6 +73,18 @@
     "scss/selector-no-redundant-nesting-selector": [Function],
     "scss/selector-no-union-class-name": [Function],
   },
+  "customSyntax": {
+    "parse": [Function],
+    "stringify": [Function],
+  },
+  "ignoreFiles": [
+    "/<:root>/**/*.min.*",
+    "/<:root>/**/dist/**",
+    "/<:root>/**/.(cache|svn|git)/**",
+    "/<:root>/**/.docusaurus/**",
+    "/<:root>/**/.obsidian/**",
+    "/<:root>/**/miniprogram_npm/**",
+  ],
   "plugins": [
     "/<:root>/node_mo****perties/index.js",
     "/<:root>/node_mo****css/src/index.js",

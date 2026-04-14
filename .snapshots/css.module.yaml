@@ -1,4 +1,7 @@
 {
+  "_pluginFunctions": {
+    "plugin/declaration-block-no-ignored-properties": [Function],
+  },
   "ignoreFiles": [
     "/<:root>/**/*.min.*",
     "/<:root>/**/dist/**",
@@ -7,9 +10,6 @@
     "/<:root>/**/.obsidian/**",
     "/<:root>/**/miniprogram_npm/**",
   ],
-  "pluginFunctions": {
-    "plugin/declaration-block-no-ignored-properties": [Function],
-  },
   "plugins": [
     "/<:root>/node_mo****perties/index.js",
   ],

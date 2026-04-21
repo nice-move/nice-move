@@ -17,9 +17,9 @@ catalog:
   lodash: ^4.18.1
   settingz: ^0.2.0
   sort-keys: ^6.0.0
-  stylelint: ^17.7.0
-  typescript: ~6.0.2
-  typescript-eslint: ^8.58.1
+  stylelint: ^17.8.0
+  typescript: ~6.0.3
+  typescript-eslint: ^8.58.2
   vitest: ^4.1.4
   yaml: ^2.8.3
 
@@ -28,7 +28,7 @@ catalogs:
     eslint: ^9.39.4
     eslint-plugin-react-hooks: ^5.2.0
     globals: ^17.4.0
-    prettier: ~3.8.2
+    prettier: ~3.8.3
 
 configDependencies:
   pnpm-plugin-nice-move: 0.3.3+sha512-sZBCAirkIGqRpZRR4DtPnvUF2R6kNPT/mWT34L6pt4E/WjwrMk4TcE8S0X0sv69Y8L2rFNd3o2GTbaokwtZATw==

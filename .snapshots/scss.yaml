@@ -73,6 +73,10 @@
     "scss/selector-no-redundant-nesting-selector": [Function],
     "scss/selector-no-union-class-name": [Function],
   },
+  "_resolvedCustomSyntax": {
+    "parse": [Function],
+    "stringify": [Function],
+  },
   "customSyntax": {
     "parse": [Function],
     "stringify": [Function],

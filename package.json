@@ -41,17 +41,17 @@
     "find-workspaces": "^0.3.1",
     "garou": "catalog:",
     "nodemon": "^3.1.14",
-    "postcss": "^8.5.10",
+    "postcss": "^8.5.12",
     "prettier": "catalog:overrides",
-    "prettier-plugin-tailwindcss": "^0.7.2",
+    "prettier-plugin-tailwindcss": "^0.7.3",
     "stylelint": "catalog:",
     "syncpack": "^13.0.4",
-    "tsdown": "^0.21.9",
+    "tsdown": "^0.21.10",
     "typescript": "catalog:",
     "vitest": "catalog:"
   },
   "peerDependencies": {
-    "@commitlint/load": "^20.5.0",
+    "@commitlint/load": "^20.5.2",
     "@nice-move/all-in-base": "workspace:^",
     "@nice-move/all-in-react": "workspace:^",
     "@nice-move/all-in-vue": "workspace:^",
@@ -70,10 +70,10 @@
     "@nice-move/tsconfig": "workspace:^",
     "@types/node": "^24.12.2"
   },
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.33.2",
   "engines": {
     "node": ">=24.0.0 || ^22.18.0",
-    "pnpm": "^10.33.0"
+    "pnpm": "^10.33.2"
   },
   "nice-move": {
     "bundle": [

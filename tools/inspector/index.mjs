@@ -13,6 +13,10 @@ const cwd = process.cwd();
 const regexp = new RegExp(slash(cwd).replaceAll('/', String.raw`[\/\\]`), 'i');
 
 function fixPath(path) {
+  if (typeof path !== 'string') {
+    return path;
+  }
+
   const io = slash(
     path.replace(/^file:\/\/\//i, '').replace(regexp, '/<:root>'),
   );
@@ -112,10 +116,11 @@ export function eslintInspector(configName, filename) {
 export function stylelintInspector(inputName) {
   return stylelint
     .resolveConfig(inputName)
-    .then(({ rules, ignoreFiles, plugins, ...rest }) => ({
+    .then(({ rules, ignoreFiles, plugins, customSyntax, ...rest }) => ({
       rules: pickBy(rules, (item) => item !== null),
       ignoreFiles: ignoreFiles.map((line) => fixPath(line)),
       plugins: plugins.map((line) => fixPath(line)),
+      ...(customSyntax ? { customSyntax: fixPath(customSyntax) } : undefined),
       ...rest,
     }))
     .then((data) => sortKeys(data, { deep: true }));

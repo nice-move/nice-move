@@ -50,7 +50,7 @@
     "deepmerge-ts": "^7.1.5",
     "execa": "catalog:",
     "fs-chain": "catalog:",
-    "ora": "^9.3.0",
+    "ora": "^9.4.0",
     "os-locale": "^8.0.0",
     "parse-author": "^2.0.0",
     "prompts": "^2.4.2",

@@ -2,7 +2,12 @@
   "_pluginFunctions": {
     "plugin/declaration-block-no-ignored-properties": [Function],
   },
-  "customSyntax": "postcss-less",
+  "_resolvedCustomSyntax": {
+    "nodeToString": [Function],
+    "parse": [Function],
+    "stringify": [Function],
+  },
+  "customSyntax": "/<:root>/node_mo****ess/lib/index.js",
   "ignoreFiles": [
     "/<:root>/**/*.min.*",
     "/<:root>/**/dist/**",

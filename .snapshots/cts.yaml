@@ -1993,7 +1993,7 @@
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.58.2",
+        "version": "8.59.0",
       },
       "parseForESLint": [Function],
     },

@@ -27,7 +27,7 @@ catalogs:
   overrides:
     eslint: ^9.39.4
     eslint-plugin-react-hooks: ^5.2.0
-    globals: ^17.4.0
+    globals: ^17.5.0
     prettier: ~3.8.3
 
 configDependencies:

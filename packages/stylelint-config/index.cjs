@@ -54,6 +54,7 @@ module.exports = {
     {
       files: ['**/*.vue'],
       rules: {
+        'function-no-unknown': null,
         'annotation-no-unknown': null,
       },
     },

@@ -2,7 +2,6 @@
 
 const { haveLocalDependencies, getPkg } = require('settingz');
 
-// eslint-disable-next-line consistent-return
 function isMiniApp(value) {
   if (getPkg('nice-move').isMiniApp) {
     return value;
@@ -16,6 +15,7 @@ const AT_RULE_NO_UNKNOWN = tailwind
       true,
       {
         ignoreAtRules: [
+          'wv-keep-import',
           'apply',
           'custom-variant',
           'layer',

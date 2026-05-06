@@ -18,7 +18,10 @@ module.exports = {
     ],
     ...(tailwind
       ? {
-          'at-rule-no-deprecated': [true, { ignoreAtRules: ['apply'] }],
+          'at-rule-no-deprecated': [
+            true,
+            { ignoreAtRules: ['apply', 'wv-keep-import'] },
+          ],
           'declaration-property-value-no-unknown': [
             true,
             {

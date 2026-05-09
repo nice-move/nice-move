@@ -74,6 +74,7 @@ module.exports = {
           'weapp-tailwindcss': true,
           esbuild: false,
           less: false,
+          sharp: false,
           ssh2: false,
         },
         updateConfig: {

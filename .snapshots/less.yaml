@@ -7,7 +7,7 @@
     "parse": [Function],
     "stringify": [Function],
   },
-  "customSyntax": "/<:root>/node_mo****ess/lib/index.js",
+  "customSyntax": "postcss-less",
   "ignoreFiles": [
     "/<:root>/**/*.min.*",
     "/<:root>/**/dist/**",

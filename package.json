@@ -41,9 +41,9 @@
     "find-workspaces": "^0.3.1",
     "garou": "catalog:",
     "nodemon": "^3.1.14",
-    "postcss": "^8.5.12",
+    "postcss": "^8.5.14",
     "prettier": "catalog:overrides",
-    "prettier-plugin-tailwindcss": "^0.7.3",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "stylelint": "catalog:",
     "syncpack": "^13.0.4",
     "tsdown": "^0.21.10",
@@ -51,7 +51,7 @@
     "vitest": "catalog:"
   },
   "peerDependencies": {
-    "@commitlint/load": "^20.5.2",
+    "@commitlint/load": "^20.5.3",
     "@nice-move/all-in-base": "workspace:^",
     "@nice-move/all-in-react": "workspace:^",
     "@nice-move/all-in-vue": "workspace:^",

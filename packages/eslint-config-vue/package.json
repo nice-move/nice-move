@@ -41,7 +41,7 @@
     "eslint-plugin-vue": "catalog:",
     "globals": "catalog:overrides",
     "settingz": "catalog:",
-    "vue-eslint-parser": "^10.4.0"
+    "vue-eslint-parser": "^10.4.1"
   },
   "peerDependencies": {
     "eslint": "catalog:"

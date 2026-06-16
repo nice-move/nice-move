@@ -41,7 +41,7 @@
     "find-workspaces": "^0.3.1",
     "garou": "catalog:",
     "nodemon": "^3.1.14",
-    "postcss": "^8.5.14",
+    "postcss": "^8.5.15",
     "prettier": "catalog:overrides",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "stylelint": "catalog:",

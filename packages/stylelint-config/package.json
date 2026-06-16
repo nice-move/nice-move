@@ -37,7 +37,7 @@
     "settingz": "catalog:",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^3.0.0",
-    "stylelint-scss": "^7.0.0"
+    "stylelint-scss": "^7.2.0"
   },
   "peerDependencies": {
     "stylelint": "catalog:"

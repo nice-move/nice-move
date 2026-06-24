@@ -23,7 +23,7 @@
     "prepare": "git config core.hooksPath .githooks",
     "snapshot": "vitest --config test/vitest.config.mjs -u",
     "test": "vitest run --config test/vitest.config.mjs",
-    "version:pin": "syncpack fix-mismatches"
+    "version:pin": "syncpack fix"
   },
   "dependencies": {
     "svgo": "^4.0.1",
@@ -41,17 +41,17 @@
     "find-workspaces": "^0.3.1",
     "garou": "catalog:",
     "nodemon": "^3.1.14",
-    "postcss": "^8.5.14",
+    "postcss": "^8.5.15",
     "prettier": "catalog:overrides",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "stylelint": "catalog:",
-    "syncpack": "^13.0.4",
-    "tsdown": "^0.21.10",
+    "syncpack": "^15.3.2",
+    "tsdown": "^0.22.3",
     "typescript": "catalog:",
     "vitest": "catalog:"
   },
   "peerDependencies": {
-    "@commitlint/load": "^20.5.3",
+    "@commitlint/load": "^21.0.2",
     "@nice-move/all-in-base": "workspace:^",
     "@nice-move/all-in-react": "workspace:^",
     "@nice-move/all-in-vue": "workspace:^",
@@ -68,7 +68,7 @@
     "@nice-move/stylelint-config": "workspace:^",
     "@nice-move/syncpack-config": "workspace:^",
     "@nice-move/tsconfig": "workspace:^",
-    "@types/node": "^24.12.2"
+    "@types/node": "^24.13.2"
   },
   "packageManager": "pnpm@10.33.2",
   "engines": {

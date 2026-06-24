@@ -7,7 +7,7 @@ catalog:
   '@eslint/eslintrc': ^3.3.5
   '@eslint/js': ^9.39.4
   '@eslint/markdown': ^8.0.2
-  '@vitest/ui': ^4.1.8
+  '@vitest/ui': ^4.1.9
   chalk: ^5.6.2
   eslint: ^9.39.4
   eslint-plugin-vue: ^10.9.2
@@ -20,21 +20,21 @@ catalog:
   stylelint: ^17.13.0
   typescript: ~6.0.3
   typescript-eslint: ^8.61.0
-  vitest: ^4.1.8
-  yaml: ^2.8.4
+  vitest: ^4.1.9
+  yaml: ^2.9.0
 
 catalogs:
   overrides:
     eslint: ^9.39.4
     eslint-plugin-react-hooks: ^5.2.0
     globals: ^17.4.0
-    prettier: ~3.8.3
+    prettier: ~3.8.4
 
 configDependencies:
   pnpm-plugin-nice-move: 0.3.4+sha512-C4PIE5LVgFP0+XChw+SSyFra3S93gwLxrbChVF+aCoCbIDcpzHbRviNRj3K9LYLQt41GSK5tRxx5pabOiCr+dQ==
 
 overrides:
-  eslint: catalog:overrides
+  eslint: 'catalog:'
   eslint-plugin-react-hooks: catalog:overrides
   globals: catalog:overrides
 

@@ -62,6 +62,7 @@ module.exports = {
           '@best-shot/*',
           '@into-mini/*',
           '@nice-move/*',
+          '@bring-it/*',
           'garou',
         ],
         allowBuilds: {

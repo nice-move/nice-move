@@ -30,18 +30,18 @@
     "svgo-config": "^0.10.0"
   },
   "devDependencies": {
-    "@bring-it/cli": "^0.11.1",
-    "@bring-it/npm": "^0.9.3",
+    "@bring-it/cli": "^0.11.3",
+    "@bring-it/npm": "^0.9.6",
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "@pnpm/config": "^1004.11.0",
     "@pnpm/pnpmfile": "^1002.1.13",
-    "@pnpm/types": "^1001.3.0",
+    "@pnpm/types": "^1001.3.1",
     "@vitest/ui": "catalog:",
     "eslint": "catalog:",
     "find-workspaces": "^0.3.1",
     "garou": "catalog:",
     "nodemon": "^3.1.14",
-    "postcss": "^8.5.15",
+    "postcss": "^8.5.16",
     "prettier": "catalog:overrides",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "stylelint": "catalog:",
@@ -51,7 +51,7 @@
     "vitest": "catalog:"
   },
   "peerDependencies": {
-    "@commitlint/load": "^21.0.2",
+    "@commitlint/load": "^21.2.0",
     "@nice-move/all-in-base": "workspace:^",
     "@nice-move/all-in-react": "workspace:^",
     "@nice-move/all-in-vue": "workspace:^",

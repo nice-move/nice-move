@@ -67,7 +67,7 @@ overrides:
   eslint-plugin-react-hooks: ^5.2.0
   globals: ^17.4.0
 
-pnpmfileChecksum: sha256-BFDcOh8eQxY17JizopgSLT3RHYVzHa6fg42C35K/Ows=
+pnpmfileChecksum: sha256-MwH099djuwFrHvaq7FUJQWv8V0QGOgA16ySgx2/BFw0=
 
 patchedDependencies:
   '@commitlint/rules':

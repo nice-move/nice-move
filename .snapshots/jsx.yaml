@@ -2169,7 +2169,7 @@
           "**/*.config.{m,c,}{t,j}s",
           "**/config.{m,c,}{t,j}s",
           ".*/config.{m,c,}{t,j}s",
-          "**/.best-shot/**",
+          "**/.{best-shot,storybook,vitepress}/**",
           "packages/init/**",
           "packages/cli/**",
         ],

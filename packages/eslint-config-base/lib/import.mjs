@@ -15,7 +15,7 @@ export default [
     files: ['**/*.{js,jsx,ts,tsx,cjs,mjs,cts,mts}'],
     ignores: [
       '**/*.config.{m,c}{j,t}s',
-      '.config/**/.{m,c}{j,t}s',
+      '.{config,storybook}/**/.{m,c}{j,t}s',
       'config/**/.{m,c}{j,t}s',
       '**/*.d.{m,c,}ts',
       '**/*.md/*',
@@ -46,7 +46,7 @@ export default [
             '**/*.config.{m,c,}{t,j}s',
             '**/config.{m,c,}{t,j}s',
             '.*/config.{m,c,}{t,j}s',
-            '**/.best-shot/**',
+            '**/.{best-shot,storybook,vitepress}/**',
             ...(configHas(
               ({ bundle = [] }) => bundle,
               (bundle) => bundle,

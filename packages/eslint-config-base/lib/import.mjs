@@ -46,7 +46,7 @@ export default [
             '**/*.config.{m,c,}{t,j}s',
             '**/config.{m,c,}{t,j}s',
             '.*/config.{m,c,}{t,j}s',
-            '**/.{best-shot,storybook,vitepress}/**',
+            '**/.{best-shot,storybook,vitepress}/**/*.{m,c,}{t,j}s{x,}',
             ...(configHas(
               ({ bundle = [] }) => bundle,
               (bundle) => bundle,

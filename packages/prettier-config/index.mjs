@@ -138,6 +138,7 @@ export default {
       files: 'package.json',
       options: {
         parser: 'package-json',
+        singleQuote: false,
       },
     },
     {

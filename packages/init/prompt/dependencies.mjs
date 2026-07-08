@@ -215,6 +215,9 @@ function action(isRoot, wanted = {}) {
             : undefined,
           prettier
             ? {
+                scripts: {
+                  'fmt:prettier': 'prettier -w .',
+                },
                 devDependencies: {
                   '@nice-move/prettier-config':
                     latest['@nice-move/prettier-config'],

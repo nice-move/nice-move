@@ -2174,7 +2174,7 @@
           "**/*.config.{m,c,}{t,j}s",
           "**/config.{m,c,}{t,j}s",
           ".*/config.{m,c,}{t,j}s",
-          "**/.{best-shot,storybook,vitepress}/**",
+          "**/.{best-shot,storybook,vitepress}/**/*.{m,c,}{t,j}s{x,}",
           "packages/init/**",
           "packages/cli/**",
         ],

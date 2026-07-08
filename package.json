@@ -16,6 +16,7 @@
     "url": "https://github.com/nice-move/nice-move/issues"
   },
   "scripts": {
+    "fmt:prettier": "prettier -w .",
     "lint:eslint": "eslint . --quiet --fix --concurrency=auto",
     "lint:staged": "nice-move lint staged",
     "lint:type": "tsc -p tsconfig.json",
@@ -35,7 +36,7 @@
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "@pnpm/config": "^1004.11.0",
     "@pnpm/pnpmfile": "^1002.1.13",
-    "@pnpm/types": "^1001.3.1",
+    "@pnpm/types": "~1001.3.1",
     "@vitest/ui": "catalog:",
     "eslint": "catalog:",
     "find-workspaces": "^0.3.1",

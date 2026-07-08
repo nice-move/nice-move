@@ -18,6 +18,7 @@ export default [
       '.{config,storybook}/**/.{m,c}{j,t}s',
       'config/**/.{m,c}{j,t}s',
       '**/*.d.{m,c,}ts',
+      '**/*.stories.*',
       '**/*.md/*',
     ],
     rules: {

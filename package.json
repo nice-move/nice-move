@@ -36,7 +36,7 @@
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "@pnpm/config": "^1004.11.0",
     "@pnpm/pnpmfile": "^1002.1.13",
-    "@pnpm/types": "~1001.3.1",
+    "@pnpm/types": "~1101.3.2",
     "@vitest/ui": "catalog:",
     "eslint": "catalog:",
     "find-workspaces": "^0.3.1",
@@ -71,7 +71,7 @@
     "@nice-move/tsconfig": "workspace:^",
     "@types/node": "^24.13.2"
   },
-  "packageManager": "pnpm@10.33.2",
+  "packageManager": "pnpm@10.34.4",
   "engines": {
     "node": ">=24.0.0 || ^22.18.0",
     "pnpm": "^10.33.2"

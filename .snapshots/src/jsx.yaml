@@ -2014,7 +2014,7 @@
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.62.1",
+        "version": "8.64.0",
       },
       "parseForESLint": [Function],
     },

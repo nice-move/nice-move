@@ -27,7 +27,7 @@
     "version:pin": "syncpack fix"
   },
   "dependencies": {
-    "svgo": "^4.0.1",
+    "svgo": "^4.0.2",
     "svgo-config": "^0.10.0"
   },
   "devDependencies": {
@@ -36,18 +36,18 @@
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "@pnpm/config": "^1004.11.0",
     "@pnpm/pnpmfile": "^1002.1.13",
-    "@pnpm/types": "~1101.3.2",
+    "@pnpm/types": "^1101.4.0",
     "@vitest/ui": "catalog:",
     "eslint": "catalog:",
     "find-workspaces": "^0.3.1",
     "garou": "catalog:",
     "nodemon": "^3.1.14",
-    "postcss": "^8.5.16",
+    "postcss": "^8.5.20",
     "prettier": "catalog:overrides",
-    "prettier-plugin-tailwindcss": "^0.8.0",
+    "prettier-plugin-tailwindcss": "^0.8.1",
     "stylelint": "catalog:",
     "syncpack": "^15.3.2",
-    "tsdown": "^0.22.3",
+    "tsdown": "^0.22.12",
     "typescript": "catalog:",
     "vitest": "catalog:"
   },
@@ -74,7 +74,7 @@
   "packageManager": "pnpm@10.34.4",
   "engines": {
     "node": ">=24.0.0 || ^22.18.0",
-    "pnpm": "^10.33.2"
+    "pnpm": "^10.34.4"
   },
   "nice-move": {
     "bundle": [

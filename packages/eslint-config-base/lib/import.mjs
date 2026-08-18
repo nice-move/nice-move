@@ -12,6 +12,14 @@ const Vscode = pkgHas(
 export default [
   flatConfigs.recommended,
   {
+    files: ['**/*.{mts,cts,tsx,ts}'],
+    languageOptions: {
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+      },
+    },
+  },
+  {
     files: ['**/*.{js,jsx,ts,tsx,cjs,mjs,cts,mts}'],
     ignores: [
       '**/*.config.{m,c}{j,t}s',

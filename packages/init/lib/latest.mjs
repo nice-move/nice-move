@@ -19,7 +19,7 @@ export default {
   vitest: '^4.1.10',
   '@bring-it/sftp': '^0.7.1',
   '@nice-move/init': '^0.9.1',
-  '@nice-move/syncpack-config': '^0.6.0',
+  '@nice-move/syncpack-config': '^0.6.2',
   '@playwright/test': '~1.58.2',
   '@types/react': '~18.3.31',
   react: '~18.3.1',

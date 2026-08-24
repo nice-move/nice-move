@@ -247,6 +247,7 @@
       {
         "ignoreTypes": [
           "page",
+          "wx-button",
         ],
       },
     ],

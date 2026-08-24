@@ -97,7 +97,10 @@ module.exports = {
               },
             },
           ],
-          'selector-type-no-unknown': [true, { ignoreTypes: ['page'] }],
+          'selector-type-no-unknown': [
+            true,
+            { ignoreTypes: ['page', 'wx-button'] },
+          ],
           'unit-no-unknown': [true, { ignoreUnits: ['rpx'] }],
           'selector-disallowed-list': ['*', /^(?!page)[A-Za-z]+$/, /[/\\]/],
         }) || {},

@@ -37,8 +37,8 @@
     "@pnpm/config": "^1004.11.0",
     "@pnpm/pnpmfile": "^1002.1.13",
     "@pnpm/types": "^1101.9.0",
-    "@vitest/ui": "catalog:",
-    "eslint": "catalog:",
+    "@vitest/ui": "catalog:vitest",
+    "eslint": "catalog:overrides",
     "find-workspaces": "^0.3.1",
     "garou": "catalog:",
     "nodemon": "^3.1.14",
@@ -49,7 +49,7 @@
     "syncpack": "^15.3.3",
     "tsdown": "^0.22.14",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:vitest"
   },
   "peerDependencies": {
     "@commitlint/load": "^21.2.2",

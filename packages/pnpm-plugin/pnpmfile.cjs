@@ -56,7 +56,9 @@ module.exports = {
         strictPeerDependencies: true,
         trustPolicy: 'no-downgrade',
         verifyDepsBeforeRun: 'warn',
-        trustPolicyExclude: ['memfs@4.56.2', 'chokidar@4.0.3'],
+        packageManagerStrictVersion: true,
+        trustPolicyExclude: ['memfs@4.56.2', 'semver@6.3.1', 'chokidar@4.0.3'],
+        managePackageManagerVersions: false,
         minimumReleaseAgeExclude: [
           '@all-star/*',
           '@best-shot/*',

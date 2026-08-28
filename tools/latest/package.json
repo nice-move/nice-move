@@ -7,7 +7,7 @@
   },
   "type": "module",
   "dependencies": {
-    "deepmerge-ts": "^7.1.6",
+    "deepmerge-ts": "catalog:",
     "fs-chain": "catalog:"
   },
   "peerDependencies": {

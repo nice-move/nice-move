@@ -2530,13 +2530,6 @@
     "import-x/export": [
       "error",
     ],
-    "import-x/extensions": [
-      "error",
-      "always",
-      {
-        "ignorePackages": true,
-      },
-    ],
     "import-x/first": [
       "error",
     ],

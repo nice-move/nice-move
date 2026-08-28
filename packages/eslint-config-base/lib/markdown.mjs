@@ -20,9 +20,11 @@ export default [
     files: ['**/*.md/*.{ts,js,mts,mjs,cts,cjs,tsx,jsx,vue,qs,wxs,html,htm}'],
     rules: {
       strict: 'off',
+      '@typescript-eslint/no-empty-object-type': 'off',
       '@typescript-eslint/no-extraneous-class': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       'eol-last': 'off',
+      'import-x/extensions': 'off',
       'import-x/no-extraneous-dependencies': 'off',
       'import-x/no-unresolved': 'off',
       'n/no-missing-require': 'off',

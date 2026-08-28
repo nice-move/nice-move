@@ -4243,7 +4243,11 @@
       },
     ],
     "vue/v-on-handler-style": [
-      "warn",
+      "error",
+      [
+        "method",
+        "inline-function",
+      ],
     ],
     "vue/v-on-style": [
       "warn",

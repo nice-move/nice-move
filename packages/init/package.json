@@ -47,7 +47,7 @@
   "devDependencies": {
     "chalk": "catalog:",
     "cheetor": "^0.13.0",
-    "deepmerge-ts": "^7.1.6",
+    "deepmerge-ts": "catalog:",
     "execa": "catalog:",
     "fs-chain": "catalog:",
     "ora": "^9.4.1",

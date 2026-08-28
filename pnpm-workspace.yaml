@@ -8,6 +8,7 @@ catalog:
   '@eslint/js': ^9.39.5
   '@eslint/markdown': ^8.0.3
   chalk: ^6.0.0
+  deepmerge-ts: ^8.0.2
   eslint-plugin-vue: ^10.10.0
   execa: ^10.0.1
   fs-chain: ^10.0.0
@@ -17,21 +18,21 @@ catalog:
   sort-keys: ^6.0.1
   stylelint: ^17.14.1
   typescript: ~6.0.3
-  typescript-eslint: ^8.67.0
+  typescript-eslint: ^8.68.0
   yaml: ^2.9.0
 
 catalogs:
-  vitest:
-    '@vitest/ui': ^4.1.11
-    vitest: ^4.1.11
   overrides:
     eslint: ^9.39.5
     eslint-plugin-react-hooks: ^5.2.0
     globals: ^17.11.0
     prettier: ~3.9.6
+  vitest:
+    '@vitest/ui': ^4.1.11
+    vitest: ^4.1.11
 
 configDependencies:
-  pnpm-plugin-nice-move: 0.3.6+sha512-r29ZIK+qcmhe98Jv8hchUBCGnM37P73iDLlHGEZGzM00e9SGYYMaJ6qLeeUer1zakblBzIAbsn2F2IiF8UoZWQ==
+  pnpm-plugin-nice-move: 0.3.7+sha512-XmvMlOA/Zd26tv69MyOSC90isG1+APVs8k6D0hGxV/FFYipyKtToR4eYo+ueptlEGce3nDegg7kWnjDF6aXHUQ==
 
 overrides:
   eslint: catalog:overrides
@@ -43,6 +44,5 @@ patchedDependencies:
   lint-staged: .patches/lint-staged.patch
 
 trustPolicyExclude:
-  - semver@6.3.1
   - '@pnpm/config'
   - '@pnpm/types'

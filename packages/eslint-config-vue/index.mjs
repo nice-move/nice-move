@@ -47,7 +47,7 @@ export default [
       'vue/no-template-target-blank': ['error', { allowReferrer: true }],
       'vue/order-in-components': 0,
       'vue/require-name-property': 'warn',
-      'vue/v-on-handler-style': 'warn',
+      'vue/v-on-handler-style': ['error', ['method', 'inline-function']],
       'vue/no-useless-mustaches': [
         'warn',
         {

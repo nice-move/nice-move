@@ -2017,7 +2017,7 @@
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.67.0",
+        "version": "8.68.0",
       },
       "parseForESLint": [Function],
     },
@@ -2072,9 +2072,6 @@
       "error",
     ],
     "@typescript-eslint/no-dynamic-delete": [
-      "error",
-    ],
-    "@typescript-eslint/no-empty-object-type": [
       "error",
     ],
     "@typescript-eslint/no-explicit-any": [
@@ -2195,13 +2192,6 @@
     ],
     "import-x/export": [
       "error",
-    ],
-    "import-x/extensions": [
-      "error",
-      "always",
-      {
-        "ignorePackages": true,
-      },
     ],
     "import-x/first": [
       "error",

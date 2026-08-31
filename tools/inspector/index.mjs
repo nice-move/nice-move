@@ -60,7 +60,6 @@ export function eslintInspector(configName, filename) {
 
       if (data?.plugins && Array.isArray(data.plugins)) {
         data.plugins = data.plugins.map((line) => fixPath(line));
-        data.plugins.sort();
       }
 
       if (data?.languageOptions) {
@@ -103,7 +102,7 @@ export function eslintInspector(configName, filename) {
         );
       }
 
-      return { plugins: Object.keys(plugins).toSorted(), ...data };
+      return { plugins: Object.keys(plugins), ...data };
     })
     .catch((error) => {
       console.error(error);
@@ -120,7 +119,7 @@ export function stylelintInspector(inputName) {
       rules: pickBy(rules, (item) => item !== null),
       ignoreFiles: ignoreFiles.map((line) => fixPath(line)),
       plugins: plugins.map((line) => fixPath(line)),
-      ...(customSyntax ? { customSyntax: fixPath(customSyntax) } : undefined),
+      ...(customSyntax && { customSyntax: fixPath(customSyntax) }),
       ...rest,
     }))
     .then((data) => sortKeys(data, { deep: true }));

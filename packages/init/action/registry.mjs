@@ -3,9 +3,9 @@ import { Text } from 'fs-chain';
 import { cyan } from '../lib/color.mts';
 
 export async function Registry() {
-  const InChina = osLocale() === 'zh-CN';
+  const isInChina = osLocale() === 'zh-CN';
 
-  if (InChina) {
+  if (isInChina) {
     new Text()
       .source('.npmrc')
       .onFail()

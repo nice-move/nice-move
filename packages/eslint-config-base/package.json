@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.15.10",
+  "version": "0.16.0",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -45,8 +45,8 @@
     "eslint-plugin-n": "^18.3.0",
     "eslint-plugin-promise": "^7.3.0",
     "eslint-plugin-regexp": "^3.2.0",
-    "eslint-plugin-unicorn": "^64.0.0",
-    "espree": "^10.4.0",
+    "eslint-plugin-unicorn": "^74.0.0",
+    "espree": "^11.2.0",
     "globals": "catalog:overrides",
     "settingz": "catalog:",
     "typescript-eslint": "catalog:"
@@ -55,7 +55,7 @@
     "eslint": "catalog:overrides"
   },
   "engines": {
-    "node": ">=24.0.0 || ^22.18.0"
+    "node": "^24.0.0"
   },
   "publishConfig": {
     "access": "public",

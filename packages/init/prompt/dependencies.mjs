@@ -171,11 +171,9 @@ function action(isRoot, wanted = {}) {
                 },
                 devDependencies: {
                   ava: latest.ava,
-                  ...(eslint
-                    ? {
-                        'eslint-plugin-ava': latest['eslint-plugin-ava'],
-                      }
-                    : undefined),
+                  ...(eslint && {
+                    'eslint-plugin-ava': latest['eslint-plugin-ava'],
+                  }),
                 },
                 scripts: {
                   prepublishOnly:
@@ -326,7 +324,9 @@ export function Dependencies() {
     choices: list.map((item) => ({
       title: item,
       value: item,
-      selected: item in dependencies || item in devDependencies,
+      selected:
+        Object.hasOwn(dependencies, item) ||
+        Object.hasOwn(devDependencies, item),
     })),
     format: (keywords) => {
       if (keywords.length > 0) {

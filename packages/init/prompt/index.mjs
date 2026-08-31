@@ -1,7 +1,7 @@
 import { execa } from 'execa';
 import prompts from 'prompts';
 
-import { emptyDir, getPkg } from '../lib/utils.mjs';
+import { isEmptyDir, getPkg } from '../lib/utils.mjs';
 
 import { Dependencies } from './dependencies.mjs';
 import { GitInit } from './git-init.mjs';
@@ -27,7 +27,7 @@ export async function Prompt() {
   const gitSupported = await gitSupport();
   const isRoot = gitSupported && (await isGitRoot());
   const isDirty = isRoot ? await isGitDirty() : false;
-  const isEmpty = emptyDir();
+  const isEmpty = isEmptyDir();
   const pkg = getPkg();
   const cwd = process.cwd();
 

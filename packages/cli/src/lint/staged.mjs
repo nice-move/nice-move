@@ -5,12 +5,17 @@ import { getConfig } from './get-config.mjs';
 function getDependencies() {
   const devDependencies = getPkg('devDependencies');
 
-  const prettier = 'prettier' in devDependencies;
-  const eslint = 'eslint' in devDependencies;
-  const stylelint = 'stylelint' in devDependencies;
-  const garou = 'garou' in devDependencies;
+  const isPrettier = 'prettier' in devDependencies;
+  const isEslint = 'eslint' in devDependencies;
+  const isStylelint = 'stylelint' in devDependencies;
+  const isGarou = 'garou' in devDependencies;
 
-  return { garou, stylelint, eslint, prettier };
+  return {
+    garou: isGarou,
+    stylelint: isStylelint,
+    eslint: isEslint,
+    prettier: isPrettier,
+  };
 }
 
 async function linter() {

@@ -27,14 +27,14 @@ export async function download(url) {
     clearTimeout(timeoutId);
 
     if (error.name === 'AbortError') {
-      throw new Error('request timeout');
+      throw new Error('request timeout', { cause: error });
     }
 
     throw error;
   }
 }
 
-export function emptyDir() {
+export function isEmptyDir() {
   return (
     readdirSync(process.cwd()).filter((item) => item !== '.git').length === 0
   );
@@ -73,7 +73,9 @@ export async function getAuthorName(author) {
 
 export function getPkg() {
   try {
-    return JSON.parse(readFileSync(join(process.cwd(), 'package.json')));
+    const filePath = join(process.cwd(), 'package.json');
+
+    return JSON.parse(readFileSync(filePath));
   } catch {
     return {};
   }

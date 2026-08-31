@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/no-useless-undefined */
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -92,7 +91,7 @@ const DEFAULT_SEMVER_GROUPS = [
       '@vue/reactivity',
       '@vue/compiler-*',
       'vue-router',
-    ].toSorted(),
+    ].toSorted((a, b) => a.localeCompare(b)),
     range: '~',
   },
   {

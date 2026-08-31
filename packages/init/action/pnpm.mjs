@@ -7,7 +7,9 @@ export async function Pnpm() {
     .source('pnpm-workspace.yaml')
     .onFail(() => '')
     .onDone((text) => {
-      /** @type {import('@pnpm/config').Config} */
+      /**
+      @type {import('@pnpm/config').Config}
+      */
       const config = text.trim() ? parse(text) : {};
 
       config.configDependencies ??= {

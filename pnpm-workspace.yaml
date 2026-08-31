@@ -4,8 +4,9 @@ packages:
   - tools/*
 
 catalog:
+  '@eslint/compat': ^2.1.0
   '@eslint/eslintrc': ^3.3.6
-  '@eslint/js': ^9.39.5
+  '@eslint/js': ^10.0.1
   '@eslint/markdown': ^8.0.3
   chalk: ^6.0.0
   deepmerge-ts: ^8.0.2
@@ -23,8 +24,8 @@ catalog:
 
 catalogs:
   overrides:
-    eslint: ^9.39.5
-    eslint-plugin-react-hooks: ^5.2.0
+    eslint: ^10.9.1
+    eslint-plugin-react-hooks: ^7.1.1
     globals: ^17.11.0
     prettier: ~3.9.6
   vitest:

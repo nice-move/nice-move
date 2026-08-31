@@ -8,7 +8,7 @@ import { getAuthor, trim } from '../lib/utils.mjs';
 
 const semver = semverRegex();
 
-function arrayLength(data) {
+function hasItems(data) {
   return Array.isArray(data) && data.length > 0;
 }
 
@@ -88,7 +88,7 @@ export async function Package({
         first === false ||
         isPrivate === false ||
         feedback.private === false ||
-        arrayLength(
+        hasItems(
           workspaces && workspaces.packages ? workspaces.packages : workspaces,
         )
           ? null

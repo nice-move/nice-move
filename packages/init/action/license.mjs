@@ -13,12 +13,14 @@ export async function License() {
   if (isMIT || license === 'Unlicense') {
     const holder = await getAuthorName(author);
 
+    const year = String(new Date().getFullYear());
+
     return new Text()
       .onDone(() =>
         isMIT
           ? mit
-              .replace('{{year}}', new Date().getFullYear())
-              .replace('{{holder}}', holder)
+              .replace('{{year}}', () => year)
+              .replace('{{holder}}', () => holder)
           : unlicense,
       )
       .output('LICENSE')

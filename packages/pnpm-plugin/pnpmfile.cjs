@@ -82,8 +82,6 @@ module.exports = {
         },
         updateConfig: {
           ignoreDependencies: [
-            '@antv/f2',
-            'eslint',
             'react-dom',
             'react',
             'string-width',

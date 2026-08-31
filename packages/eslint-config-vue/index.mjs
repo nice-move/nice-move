@@ -62,17 +62,13 @@ export default [
           disallowVue3BuiltInComponents: true,
         },
       ],
-      ...(version
-        ? { 'vue/no-unsupported-features': ['error', { version }] }
-        : undefined),
-      ...(isMiniApp
-        ? {
-            'vue/no-v-text-v-html-on-component': [
-              'error',
-              { allow: ['view', 'text'] },
-            ],
-          }
-        : undefined),
+      ...(version && { 'vue/no-unsupported-features': ['error', { version }] }),
+      ...(isMiniApp && {
+        'vue/no-v-text-v-html-on-component': [
+          'error',
+          { allow: ['view', 'text'] },
+        ],
+      }),
     },
   },
   ...compat.config(prettier).map((rule) => ({

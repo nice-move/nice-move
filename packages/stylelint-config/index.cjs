@@ -16,22 +16,20 @@ module.exports = {
       true,
       { severity: 'warning' },
     ],
-    ...(tailwind
-      ? {
-          'at-rule-no-deprecated': [
-            true,
-            { ignoreAtRules: ['apply', 'wv-keep-import'] },
-          ],
-          'declaration-property-value-no-unknown': [
-            true,
-            {
-              ignoreProperties: {
-                '/.+/': /theme\([.\w]+\)/.toString(),
-              },
-            },
-          ],
-        }
-      : undefined),
+    ...(tailwind && {
+      'at-rule-no-deprecated': [
+        true,
+        { ignoreAtRules: ['apply', 'wv-keep-import'] },
+      ],
+      'declaration-property-value-no-unknown': [
+        true,
+        {
+          ignoreProperties: {
+            '/.+/': /theme\([.\w]+\)/.toString(),
+          },
+        },
+      ],
+    }),
   },
   overrides: [
     {

@@ -4,18 +4,17 @@ import { green, red } from '../lib/color.mts';
 
 const message = 'Initialize as git repository';
 
-function init() {
-  return execa('git', ['init']).then(
-    (io) => {
-      console.log(green('√'), message);
+async function init() {
+  try {
+    const io = await execa('git', ['init']);
 
-      return io;
-    },
-    (error) => {
-      console.log(red('×'), message);
-      throw error;
-    },
-  );
+    console.log(green('√'), message);
+
+    return io;
+  } catch (error) {
+    console.log(red('×'), message);
+    throw error;
+  }
 }
 
 export function GitInit({ gitSupported, isRoot }) {
@@ -25,7 +24,7 @@ export function GitInit({ gitSupported, isRoot }) {
     initial: true,
     type: (first) =>
       first === false || !gitSupported || isRoot ? null : 'confirm',
-    // eslint-disable-next-line consistent-return
+
     format(value) {
       if (value === true) {
         return init;

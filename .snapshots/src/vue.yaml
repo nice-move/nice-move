@@ -421,7 +421,7 @@
           17,
         ],
         "tokenize": [Function],
-        "version": "10.4.0",
+        "version": "11.2.0",
       },
       "parserOptions": {},
       "sourceType": "module",
@@ -2411,12 +2411,12 @@
   },
   "plugins": [
     "@",
-    "@eslint-community/eslint-comments",
-    "import-x",
-    "n",
-    "promise",
-    "regexp",
     "unicorn",
+    "promise",
+    "import-x",
+    "@eslint-community/eslint-comments",
+    "regexp",
+    "n",
     "vue",
   ],
   "processor": {
@@ -2650,6 +2650,9 @@
     ],
     "no-constant-binary-expression": [
       "error",
+      {
+        "checkRelationalComparisons": false,
+      },
     ],
     "no-constant-condition": [
       "warn",
@@ -3075,7 +3078,7 @@
     "no-shadow-restricted-names": [
       "error",
       {
-        "reportGlobalThis": false,
+        "reportGlobalThis": true,
       },
     ],
     "no-sparse-arrays": [
@@ -3085,6 +3088,9 @@
       "error",
     ],
     "no-throw-literal": [
+      "error",
+    ],
+    "no-unassigned-vars": [
       "error",
     ],
     "no-undef": [
@@ -3133,9 +3139,14 @@
     "no-unused-vars": [
       "error",
       {
+        "args": "after-used",
         "argsIgnorePattern": "^_",
+        "caughtErrors": "all",
+        "ignoreClassWithStaticInitBlock": false,
         "ignoreRestSiblings": true,
+        "ignoreUsingDeclarations": false,
         "reportUsedIgnorePattern": true,
+        "vars": "all",
         "varsIgnorePattern": "^_",
       },
     ],
@@ -3150,6 +3161,9 @@
         "typedefs": true,
         "variables": true,
       },
+    ],
+    "no-useless-assignment": [
+      "error",
     ],
     "no-useless-catch": [
       "error",
@@ -3252,6 +3266,13 @@
     "prefer-template": [
       "warn",
     ],
+    "preserve-caught-error": [
+      "error",
+      {
+        "errorClassNames": [],
+        "requireCatchParameter": false,
+      },
+    ],
     "promise/catch-or-return": [
       "warn",
       {
@@ -3281,7 +3302,6 @@
     ],
     "radix": [
       "error",
-      "always",
     ],
     "regexp/confusing-quantifier": [
       "warn",
@@ -3477,6 +3497,9 @@
       "error",
       "never",
     ],
+    "unicorn/better-dom-traversing": [
+      "error",
+    ],
     "unicorn/catch-error-name": [
       "error",
       {
@@ -3484,8 +3507,50 @@
         "name": "error",
       },
     ],
+    "unicorn/class-reference-in-static-methods": [
+      "error",
+      {
+        "preferSuper": true,
+        "preferThis": true,
+      },
+    ],
     "unicorn/consistent-assert": [
       "error",
+    ],
+    "unicorn/consistent-boolean-name": [
+      "error",
+      {
+        "checkArguments": "always",
+        "checkFields": "never",
+        "checkFunctions": "always",
+        "checkMethods": "never",
+        "checkVariables": "always",
+        "ignore": [],
+        "wrappers": {},
+      },
+    ],
+    "unicorn/consistent-class-member-order": [
+      "error",
+      {
+        "order": [
+          "static-field",
+          "static-block",
+          "static-method",
+          "private-field",
+          "public-field",
+          "constructor",
+          "private-method",
+          "public-method",
+        ],
+      },
+    ],
+    "unicorn/consistent-compound-words": [
+      "error",
+      {},
+    ],
+    "unicorn/consistent-conditional-object-spread": [
+      "error",
+      "logical",
     ],
     "unicorn/consistent-date-clone": [
       "error",
@@ -3496,17 +3561,44 @@
     "unicorn/consistent-existence-index-check": [
       "error",
     ],
+    "unicorn/consistent-export-decorator-position": [
+      "error",
+      "above",
+    ],
     "unicorn/consistent-function-scoping": [
       "error",
       {
         "checkArrowFunctions": true,
       },
     ],
+    "unicorn/consistent-json-file-read": [
+      "error",
+      "string",
+    ],
+    "unicorn/consistent-optional-chaining": [
+      "error",
+    ],
     "unicorn/consistent-template-literal-escape": [
+      "error",
+    ],
+    "unicorn/consistent-tuple-labels": [
       "error",
     ],
     "unicorn/custom-error-definition": [
       "warn",
+    ],
+    "unicorn/default-export-style": [
+      "error",
+      {
+        "classes": "inline",
+        "functions": "inline",
+      },
+    ],
+    "unicorn/dom-node-dataset": [
+      "error",
+      {
+        "preferAttributes": false,
+      },
     ],
     "unicorn/error-message": [
       "error",
@@ -3521,6 +3613,10 @@
         "non-zero": "greater-than",
       },
     ],
+    "unicorn/explicit-timer-delay": [
+      "error",
+      "always",
+    ],
     "unicorn/filename-case": [
       "error",
     ],
@@ -3532,9 +3628,20 @@
         ],
         "functions": [
           "makeSynchronous",
+          "workerize",
         ],
         "overrideGlobals": {},
         "selectors": [],
+      },
+    ],
+    "unicorn/logical-assignment-operators": [
+      "error",
+      "always",
+    ],
+    "unicorn/max-nested-calls": [
+      "error",
+      {
+        "max": 3,
       },
     ],
     "unicorn/new-for-builtins": [
@@ -3546,10 +3653,25 @@
     "unicorn/no-accessor-recursion": [
       "error",
     ],
+    "unicorn/no-accidental-bitwise-operator": [
+      "error",
+    ],
     "unicorn/no-anonymous-default-export": [
       "error",
     ],
     "unicorn/no-array-callback-reference": [
+      "error",
+      {
+        "ignore": [],
+      },
+    ],
+    "unicorn/no-array-concat-in-loop": [
+      "error",
+    ],
+    "unicorn/no-array-fill-with-reference-type": [
+      "error",
+    ],
+    "unicorn/no-array-from-fill": [
       "error",
     ],
     "unicorn/no-array-method-this-argument": [
@@ -3567,28 +3689,103 @@
         "allowExpressionStatement": true,
       },
     ],
+    "unicorn/no-array-sort-for-min-max": [
+      "error",
+    ],
+    "unicorn/no-array-splice": [
+      "error",
+    ],
+    "unicorn/no-async-promise-finally": [
+      "error",
+    ],
     "unicorn/no-await-expression-member": [
       "error",
     ],
     "unicorn/no-await-in-promise-methods": [
       "error",
     ],
+    "unicorn/no-blob-to-file": [
+      "error",
+    ],
+    "unicorn/no-boolean-sort-comparator": [
+      "error",
+    ],
+    "unicorn/no-break-in-nested-loop": [
+      "error",
+    ],
+    "unicorn/no-canvas-to-image": [
+      "error",
+    ],
+    "unicorn/no-chained-comparison": [
+      "error",
+    ],
+    "unicorn/no-collection-bracket-access": [
+      "error",
+    ],
+    "unicorn/no-computed-property-existence-check": [
+      "error",
+    ],
+    "unicorn/no-confusing-array-splice": [
+      "error",
+    ],
+    "unicorn/no-confusing-array-with": [
+      "error",
+    ],
     "unicorn/no-console-spaces": [
+      "error",
+    ],
+    "unicorn/no-constant-zero-expression": [
+      "error",
+    ],
+    "unicorn/no-declarations-before-early-exit": [
       "error",
     ],
     "unicorn/no-document-cookie": [
       "error",
     ],
+    "unicorn/no-double-comparison": [
+      "error",
+    ],
+    "unicorn/no-duplicate-if-branches": [
+      "error",
+    ],
+    "unicorn/no-duplicate-logical-operands": [
+      "error",
+    ],
+    "unicorn/no-duplicate-loops": [
+      "error",
+    ],
+    "unicorn/no-duplicate-set-values": [
+      "error",
+    ],
     "unicorn/no-empty-file": [
+      "error",
+      {
+        "allowComments": false,
+      },
+    ],
+    "unicorn/no-error-property-assignment": [
+      "error",
+    ],
+    "unicorn/no-exports-in-scripts": [
       "error",
     ],
     "unicorn/no-for-loop": [
       "error",
     ],
-    "unicorn/no-hex-escape": [
+    "unicorn/no-global-object-property-assignment": [
       "error",
     ],
     "unicorn/no-immediate-mutation": [
+      "error",
+    ],
+    "unicorn/no-impossible-length-comparison": [
+      "error",
+    ],
+    "unicorn/no-incorrect-query-selector": [
+      "error",
+    ],
+    "unicorn/no-incorrect-template-string-interpolation": [
       "error",
     ],
     "unicorn/no-instanceof-builtins": [
@@ -3600,20 +3797,57 @@
         "useErrorIsError": false,
       },
     ],
+    "unicorn/no-invalid-argument-count": [
+      "error",
+      {},
+    ],
+    "unicorn/no-invalid-character-comparison": [
+      "error",
+    ],
     "unicorn/no-invalid-fetch-options": [
       "error",
     ],
     "unicorn/no-invalid-remove-event-listener": [
       "error",
     ],
+    "unicorn/no-invalid-well-known-symbol-methods": [
+      "error",
+    ],
+    "unicorn/no-late-current-target-access": [
+      "error",
+    ],
+    "unicorn/no-late-event-control": [
+      "error",
+    ],
     "unicorn/no-lonely-if": [
+      "error",
+    ],
+    "unicorn/no-loop-iterable-mutation": [
       "error",
     ],
     "unicorn/no-magic-array-flat-depth": [
       "error",
     ],
+    "unicorn/no-mismatched-map-key": [
+      "error",
+    ],
+    "unicorn/no-misrefactored-assignment": [
+      "error",
+    ],
+    "unicorn/no-multiple-promise-resolver-calls": [
+      "error",
+    ],
     "unicorn/no-named-default": [
       "error",
+    ],
+    "unicorn/no-negated-array-predicate": [
+      "error",
+    ],
+    "unicorn/no-negated-comparison": [
+      "error",
+      {
+        "checkLogicalExpressions": false,
+      },
     ],
     "unicorn/no-negated-condition": [
       "error",
@@ -3627,10 +3861,47 @@
     "unicorn/no-new-buffer": [
       "error",
     ],
+    "unicorn/no-non-function-verb-prefix": [
+      "error",
+      {
+        "ignore": [],
+        "verbs": [
+          "get",
+          "set",
+          "unset",
+          "delete",
+          "add",
+          "remove",
+          "destroy",
+          "create",
+        ],
+      },
+    ],
+    "unicorn/no-nonstandard-builtin-properties": [
+      "error",
+    ],
     "unicorn/no-object-as-default-parameter": [
       "error",
     ],
+    "unicorn/no-object-methods-with-collections": [
+      "error",
+    ],
+    "unicorn/no-optional-chaining-on-undeclared-variable": [
+      "error",
+    ],
     "unicorn/no-process-exit": [
+      "error",
+    ],
+    "unicorn/no-redundant-comparison": [
+      "error",
+    ],
+    "unicorn/no-return-array-push": [
+      "error",
+    ],
+    "unicorn/no-selector-as-dom-name": [
+      "error",
+    ],
+    "unicorn/no-shorthand-property-overrides": [
       "error",
     ],
     "unicorn/no-single-promise-in-promise-methods": [
@@ -3639,10 +3910,25 @@
     "unicorn/no-static-only-class": [
       "error",
     ],
+    "unicorn/no-subtraction-comparison": [
+      "error",
+    ],
     "unicorn/no-thenable": [
       "error",
     ],
     "unicorn/no-this-assignment": [
+      "error",
+    ],
+    "unicorn/no-this-outside-of-class": [
+      "error",
+    ],
+    "unicorn/no-top-level-assignment-in-function": [
+      "error",
+    ],
+    "unicorn/no-top-level-side-effects": [
+      "error",
+    ],
+    "unicorn/no-transition-all": [
       "error",
     ],
     "unicorn/no-typeof-undefined": [
@@ -3651,7 +3937,16 @@
         "checkGlobalVariables": false,
       },
     ],
+    "unicorn/no-uncalled-method": [
+      "error",
+    ],
+    "unicorn/no-undeclared-class-members": [
+      "error",
+    ],
     "unicorn/no-unnecessary-array-flat-depth": [
+      "error",
+    ],
+    "unicorn/no-unnecessary-array-flat-map": [
       "error",
     ],
     "unicorn/no-unnecessary-array-splice-count": [
@@ -3660,19 +3955,86 @@
     "unicorn/no-unnecessary-await": [
       "error",
     ],
+    "unicorn/no-unnecessary-boolean-comparison": [
+      "error",
+    ],
+    "unicorn/no-unnecessary-fetch-options": [
+      "error",
+    ],
+    "unicorn/no-unnecessary-global-this": [
+      "error",
+    ],
+    "unicorn/no-unnecessary-nested-ternary": [
+      "error",
+    ],
     "unicorn/no-unnecessary-polyfills": [
       "error",
+      {},
     ],
     "unicorn/no-unnecessary-slice-end": [
       "error",
     ],
+    "unicorn/no-unnecessary-splice": [
+      "error",
+    ],
+    "unicorn/no-unnecessary-string-trim": [
+      "error",
+    ],
     "unicorn/no-unreadable-array-destructuring": [
+      "error",
+      {
+        "maximumIgnoredElements": 1,
+      },
+    ],
+    "unicorn/no-unreadable-for-of-expression": [
       "error",
     ],
     "unicorn/no-unreadable-iife": [
       "error",
     ],
+    "unicorn/no-unreadable-object-destructuring": [
+      "error",
+    ],
+    "unicorn/no-unsafe-buffer-conversion": [
+      "error",
+    ],
+    "unicorn/no-unsafe-promise-all-settled-values": [
+      "error",
+    ],
+    "unicorn/no-unsafe-property-key": [
+      "error",
+    ],
+    "unicorn/no-unsafe-sqlite-interpolation": [
+      "error",
+    ],
+    "unicorn/no-unsafe-string-replacement": [
+      "error",
+    ],
+    "unicorn/no-unused-array-method-return": [
+      "error",
+    ],
+    "unicorn/no-useless-boolean-cast": [
+      "error",
+    ],
+    "unicorn/no-useless-coercion": [
+      "error",
+    ],
     "unicorn/no-useless-collection-argument": [
+      "error",
+    ],
+    "unicorn/no-useless-compound-assignment": [
+      "error",
+    ],
+    "unicorn/no-useless-concat": [
+      "error",
+    ],
+    "unicorn/no-useless-continue": [
+      "error",
+    ],
+    "unicorn/no-useless-delete-check": [
+      "error",
+    ],
+    "unicorn/no-useless-else": [
       "error",
     ],
     "unicorn/no-useless-error-capture-stack-trace": [
@@ -3687,13 +4049,31 @@
     "unicorn/no-useless-length-check": [
       "error",
     ],
+    "unicorn/no-useless-logical-operand": [
+      "error",
+    ],
+    "unicorn/no-useless-override": [
+      "error",
+    ],
     "unicorn/no-useless-promise-resolve-reject": [
+      "error",
+    ],
+    "unicorn/no-useless-re-export": [
+      "error",
+    ],
+    "unicorn/no-useless-recursion": [
       "error",
     ],
     "unicorn/no-useless-spread": [
       "error",
     ],
     "unicorn/no-useless-switch-case": [
+      "error",
+    ],
+    "unicorn/no-useless-template-literals": [
+      "error",
+    ],
+    "unicorn/no-xor-as-exponentiation": [
       "error",
     ],
     "unicorn/no-zero-fractions": [
@@ -3711,6 +4091,7 @@
           "minimumDigits": 0,
         },
         "number": {
+          "fractionGroupLength": Infinity,
           "groupLength": 3,
           "minimumDigits": 5,
         },
@@ -3721,6 +4102,16 @@
         "onlyIfContainsSeparator": true,
       },
     ],
+    "unicorn/operator-assignment": [
+      "error",
+      "always",
+    ],
+    "unicorn/prefer-abort-signal-any": [
+      "error",
+    ],
+    "unicorn/prefer-abort-signal-timeout": [
+      "error",
+    ],
     "unicorn/prefer-add-event-listener": [
       "error",
       {
@@ -3729,6 +4120,12 @@
           "sax",
         ],
       },
+    ],
+    "unicorn/prefer-add-event-listener-options": [
+      "error",
+    ],
+    "unicorn/prefer-aggregate-error": [
+      "error",
     ],
     "unicorn/prefer-array-find": [
       "error",
@@ -3745,7 +4142,25 @@
     "unicorn/prefer-array-flat-map": [
       "error",
     ],
+    "unicorn/prefer-array-from-async": [
+      "error",
+    ],
+    "unicorn/prefer-array-from-map": [
+      "error",
+    ],
+    "unicorn/prefer-array-from-range": [
+      "error",
+    ],
     "unicorn/prefer-array-index-of": [
+      "error",
+    ],
+    "unicorn/prefer-array-iterable-methods": [
+      "error",
+    ],
+    "unicorn/prefer-array-last-methods": [
+      "error",
+    ],
+    "unicorn/prefer-array-slice": [
       "error",
     ],
     "unicorn/prefer-array-some": [
@@ -3764,6 +4179,12 @@
     "unicorn/prefer-blob-reading-methods": [
       "error",
     ],
+    "unicorn/prefer-block-statement-over-iife": [
+      "error",
+    ],
+    "unicorn/prefer-boolean-return": [
+      "error",
+    ],
     "unicorn/prefer-class-fields": [
       "error",
     ],
@@ -3773,22 +4194,47 @@
     "unicorn/prefer-code-point": [
       "error",
     ],
+    "unicorn/prefer-continue": [
+      "error",
+      {
+        "maximumStatements": 1,
+      },
+    ],
     "unicorn/prefer-date-now": [
       "error",
     ],
     "unicorn/prefer-default-parameters": [
       "error",
     ],
+    "unicorn/prefer-direct-iteration": [
+      "error",
+    ],
     "unicorn/prefer-dom-node-append": [
       "error",
     ],
-    "unicorn/prefer-dom-node-dataset": [
+    "unicorn/prefer-dom-node-html-methods": [
       "error",
+      {
+        "checkGetHTML": true,
+        "checkSetHTML": false,
+      },
     ],
     "unicorn/prefer-dom-node-remove": [
       "error",
     ],
+    "unicorn/prefer-dom-node-replace-children": [
+      "error",
+    ],
     "unicorn/prefer-dom-node-text-content": [
+      "error",
+    ],
+    "unicorn/prefer-early-return": [
+      "error",
+      {
+        "maximumStatements": 1,
+      },
+    ],
+    "unicorn/prefer-else-if": [
       "error",
     ],
     "unicorn/prefer-event-target": [
@@ -3797,16 +4243,73 @@
     "unicorn/prefer-export-from": [
       "error",
       {
-        "ignoreUsedVariables": true,
+        "checkUsedVariables": false,
       },
     ],
+    "unicorn/prefer-flat-math-min-max": [
+      "error",
+    ],
+    "unicorn/prefer-get-or-insert-computed": [
+      "error",
+    ],
+    "unicorn/prefer-global-number-constants": [
+      "error",
+    ],
+    "unicorn/prefer-group-by": [
+      "error",
+    ],
+    "unicorn/prefer-has-check": [
+      "error",
+    ],
+    "unicorn/prefer-hoisting-branch-code": [
+      "error",
+    ],
+    "unicorn/prefer-https": [
+      "error",
+      {
+        "ignore": [],
+      },
+    ],
+    "unicorn/prefer-identifier-import-export-specifiers": [
+      "error",
+    ],
     "unicorn/prefer-includes": [
+      "error",
+    ],
+    "unicorn/prefer-includes-over-repeated-comparisons": [
+      "error",
+      {
+        "minimumComparisons": 3,
+      },
+    ],
+    "unicorn/prefer-iterable-in-constructor": [
+      "error",
+    ],
+    "unicorn/prefer-iterator-helpers": [
+      "error",
+    ],
+    "unicorn/prefer-iterator-to-array": [
+      "error",
+    ],
+    "unicorn/prefer-iterator-to-array-at-end": [
       "error",
     ],
     "unicorn/prefer-keyboard-event-key": [
       "error",
     ],
+    "unicorn/prefer-location-assign": [
+      "error",
+    ],
     "unicorn/prefer-logical-operator-over-ternary": [
+      "error",
+    ],
+    "unicorn/prefer-map-from-entries": [
+      "error",
+    ],
+    "unicorn/prefer-math-abs": [
+      "error",
+    ],
+    "unicorn/prefer-math-constants": [
       "error",
     ],
     "unicorn/prefer-math-min-max": [
@@ -3814,6 +4317,13 @@
     ],
     "unicorn/prefer-math-trunc": [
       "error",
+    ],
+    "unicorn/prefer-minimal-ternary": [
+      "error",
+      {
+        "checkComputedMemberAccess": false,
+        "checkVaryingBase": false,
+      },
     ],
     "unicorn/prefer-modern-dom-apis": [
       "error",
@@ -3833,12 +4343,24 @@
     "unicorn/prefer-node-protocol": [
       "error",
     ],
+    "unicorn/prefer-number-coercion": [
+      "error",
+    ],
+    "unicorn/prefer-number-is-safe-integer": [
+      "error",
+    ],
     "unicorn/prefer-number-properties": [
       "error",
       {
         "checkInfinity": false,
-        "checkNaN": true,
+        "checkNaN": false,
       },
+    ],
+    "unicorn/prefer-object-define-properties": [
+      "error",
+    ],
+    "unicorn/prefer-object-destructuring-defaults": [
+      "error",
     ],
     "unicorn/prefer-object-from-entries": [
       "error",
@@ -3846,11 +4368,39 @@
         "functions": [],
       },
     ],
+    "unicorn/prefer-object-iterable-methods": [
+      "error",
+    ],
+    "unicorn/prefer-observer-apis": [
+      "error",
+    ],
     "unicorn/prefer-optional-catch-binding": [
+      "error",
+    ],
+    "unicorn/prefer-path2d": [
+      "error",
+    ],
+    "unicorn/prefer-private-class-fields": [
+      "error",
+    ],
+    "unicorn/prefer-promise-try": [
+      "error",
+    ],
+    "unicorn/prefer-promise-with-resolvers": [
       "error",
     ],
     "unicorn/prefer-query-selector": [
       "error",
+      {
+        "allowWithVariables": false,
+      },
+    ],
+    "unicorn/prefer-queue-microtask": [
+      "error",
+      {
+        "checkSetImmediate": false,
+        "checkSetTimeout": false,
+      },
     ],
     "unicorn/prefer-reflect-apply": [
       "error",
@@ -3861,10 +4411,25 @@
     "unicorn/prefer-response-static-json": [
       "error",
     ],
+    "unicorn/prefer-scoped-selector": [
+      "error",
+    ],
+    "unicorn/prefer-set-methods": [
+      "error",
+    ],
     "unicorn/prefer-set-size": [
       "error",
     ],
     "unicorn/prefer-simple-condition-first": [
+      "error",
+    ],
+    "unicorn/prefer-simple-sort-comparator": [
+      "error",
+    ],
+    "unicorn/prefer-simplified-conditions": [
+      "error",
+    ],
+    "unicorn/prefer-single-array-predicate": [
       "error",
     ],
     "unicorn/prefer-single-call": [
@@ -3873,11 +4438,35 @@
         "ignore": [],
       },
     ],
+    "unicorn/prefer-single-object-destructuring": [
+      "error",
+    ],
+    "unicorn/prefer-single-replace": [
+      "error",
+    ],
+    "unicorn/prefer-smaller-scope": [
+      "error",
+    ],
+    "unicorn/prefer-split-limit": [
+      "error",
+    ],
     "unicorn/prefer-spread": [
+      "error",
+    ],
+    "unicorn/prefer-string-match-all": [
+      "error",
+    ],
+    "unicorn/prefer-string-pad-start-end": [
       "error",
     ],
     "unicorn/prefer-string-raw": [
       "error",
+    ],
+    "unicorn/prefer-string-repeat": [
+      "error",
+      {
+        "minimumRepetitions": 3,
+      },
     ],
     "unicorn/prefer-string-replace-all": [
       "error",
@@ -3908,7 +4497,34 @@
       "error",
       "always",
     ],
+    "unicorn/prefer-then-catch": [
+      "error",
+    ],
+    "unicorn/prefer-toggle-attribute": [
+      "error",
+    ],
     "unicorn/prefer-type-error": [
+      "error",
+    ],
+    "unicorn/prefer-type-literal-last": [
+      "error",
+    ],
+    "unicorn/prefer-unary-minus": [
+      "error",
+    ],
+    "unicorn/prefer-unicode-code-point-escapes": [
+      "error",
+    ],
+    "unicorn/prefer-url-can-parse": [
+      "error",
+    ],
+    "unicorn/prefer-url-href": [
+      "error",
+    ],
+    "unicorn/prefer-url-search-parameters": [
+      "error",
+    ],
+    "unicorn/prefer-while-loop-condition": [
       "error",
     ],
     "unicorn/relative-url-style": [
@@ -3918,6 +4534,15 @@
     "unicorn/require-array-join-separator": [
       "error",
     ],
+    "unicorn/require-array-sort-compare": [
+      "error",
+    ],
+    "unicorn/require-css-escape": [
+      "error",
+      {
+        "checkAllSelectors": false,
+      },
+    ],
     "unicorn/require-module-attributes": [
       "error",
     ],
@@ -3926,6 +4551,19 @@
     ],
     "unicorn/require-number-to-fixed-digits-argument": [
       "error",
+    ],
+    "unicorn/require-passive-events": [
+      "error",
+    ],
+    "unicorn/require-proxy-trap-boolean-return": [
+      "error",
+    ],
+    "unicorn/single-line-block-comment-style": [
+      "error",
+      "multiline",
+      {
+        "ignore": [],
+      },
     ],
     "unicorn/switch-case-braces": [
       "error",

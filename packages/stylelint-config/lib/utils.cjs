@@ -15,15 +15,17 @@ const AT_RULE_NO_UNKNOWN = tailwind
       true,
       {
         ignoreAtRules: [
-          'wv-keep-import',
           'apply',
+          'config',
           'custom-variant',
           'layer',
           'responsive',
           'screen',
           'source',
           'tailwind',
+          'utility',
           'variants',
+          'wv-keep-import',
         ],
       },
     ]

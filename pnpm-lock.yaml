@@ -74,8 +74,6 @@ overrides:
   eslint-plugin-react-hooks: ^7.1.1
   globals: ^17.11.0
 
-pnpmfileChecksum: sha256-s14HpfCLNltM+8qHl2jx4s+gssDS3uV99bz8cvsJF5Q=
-
 patchedDependencies:
   '@commitlint/rules':
     hash: deb5aa421ffc0025f72ff79944be145cb0e050cc304a43038b4a523eb031fba0
@@ -165,8 +163,8 @@ importers:
         specifier: ^1002.1.13
         version: 1002.1.13(@pnpm/logger@1001.0.1)
       '@pnpm/types':
-        specifier: ^1102.0.0
-        version: 1102.0.0
+        specifier: ^1102.1.0
+        version: 1102.1.0
       '@vitest/ui':
         specifier: catalog:vitest
         version: 4.1.11(vitest@4.1.11)
@@ -1412,8 +1410,8 @@ packages:
     resolution: {integrity: sha512-NLTXheat/u7OEGg5M5vF6Z85zx8uKUZE0+whtX/sbFV2XL48RdnOWGPTKYuVVkv8M+launaLUTgGEXNs/ess2w==}
     engines: {node: '>=18.12'}
 
-  '@pnpm/types@1102.0.0':
-    resolution: {integrity: sha512-mgR291P+TGABUzGifQyZyU+EE0lBSTGJ87C5J95Ez2XRFlfcH/9GIN5n2saIgzXQAiyoeFSlEVEiXeEIJy+B3A==}
+  '@pnpm/types@1102.1.0':
+    resolution: {integrity: sha512-h8qqbRIueCujntCBRnVpujeGzwWG+D39Z6pnXHsUp17ZZGLFK/W+ClRLSQZxWFBmgv9z7BNCAi7Arrf/exq5/A==}
     engines: {node: '>=22.13'}
 
   '@pnpm/which@3.0.1':
@@ -6271,7 +6269,7 @@ snapshots:
 
   '@pnpm/types@1001.3.0': {}
 
-  '@pnpm/types@1102.0.0': {}
+  '@pnpm/types@1102.1.0': {}
 
   '@pnpm/which@3.0.1':
     dependencies:

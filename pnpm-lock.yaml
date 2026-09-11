@@ -72,7 +72,7 @@ catalogs:
 overrides:
   eslint: ^10.9.1
   eslint-plugin-react-hooks: ^7.1.1
-  globals: ^17.11.0
+  globals: ^17.12.0
 
 patchedDependencies:
   '@commitlint/rules':
@@ -410,8 +410,8 @@ importers:
         specifier: ^11.2.0
         version: 11.2.0
       globals:
-        specifier: ^17.11.0
-        version: 17.11.0
+        specifier: ^17.12.0
+        version: 17.12.0
       settingz:
         specifier: 'catalog:'
         version: 0.2.0
@@ -452,8 +452,8 @@ importers:
         specifier: ^7.1.1
         version: 7.1.1(eslint@10.9.1(jiti@2.6.1))
       globals:
-        specifier: ^17.11.0
-        version: 17.11.0
+        specifier: ^17.12.0
+        version: 17.12.0
       settingz:
         specifier: 'catalog:'
         version: 0.2.0
@@ -479,8 +479,8 @@ importers:
         specifier: 'catalog:'
         version: 10.10.0(@stylistic/eslint-plugin@5.10.0(eslint@10.9.1(jiti@2.6.1)))(@typescript-eslint/parser@8.68.0(eslint@10.9.1(jiti@2.6.1))(typescript@6.0.3))(eslint@10.9.1(jiti@2.6.1))(vue-eslint-parser@10.4.1(eslint@10.9.1(jiti@2.6.1)))
       globals:
-        specifier: ^17.11.0
-        version: 17.11.0
+        specifier: ^17.12.0
+        version: 17.12.0
       settingz:
         specifier: 'catalog:'
         version: 0.2.0
@@ -3274,6 +3274,7 @@ packages:
   git-raw-commits@5.0.1:
     resolution: {integrity: sha512-Y+csSm2GD/PCSh6Isd/WiMjNAydu0VBiG9J7EdQsNA5P9uXvLayqjmTsNlK5Gs9IhblFZqOU0yid5Il5JPoLiQ==}
     engines: {node: '>=18'}
+    deprecated: Deprecated and no longer maintained. Use @conventional-changelog/git-client instead.
     hasBin: true
 
   github-slugger@2.0.0:
@@ -3299,8 +3300,8 @@ packages:
     resolution: {integrity: sha512-awConJSVCHVGND6x3tmMaKcQvwXLhjdkmomy2W+Goaui8YPgYgXJZewhg3fWC+DlfqqQuWg8AwqjGTD2nAPVWg==}
     engines: {node: '>=6'}
 
-  globals@17.11.0:
-    resolution: {integrity: sha512-Z2I8hM+PbJDXQDq3Icgpzv+mPdwr68iZUU9d5WW4FuXfDUQfkZaZuvjMv42/5crNyw154+9+VWXbYrUgDXbxNw==}
+  globals@17.12.0:
+    resolution: {integrity: sha512-cezEd/DTyyht9cvSSURyygXPfy04GtWO/5e6ZPvH7fCtjKz9PYOmuawphw1Ctd1f6C+5JypXfGD7ahNMXvevBA==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -5918,7 +5919,7 @@ snapshots:
       ajv: 6.15.0
       debug: 4.4.3(supports-color@5.5.0)
       espree: 10.4.0
-      globals: 17.11.0
+      globals: 17.12.0
       ignore: 5.3.2
       import-fresh: 3.3.1
       js-yaml: 4.3.1
@@ -6016,7 +6017,7 @@ snapshots:
   '@nice-move/eslint-plugin-html@0.1.1(eslint@10.9.1(jiti@2.6.1))':
     dependencies:
       eslint: 10.9.1(jiti@2.6.1)
-      globals: 17.11.0
+      globals: 17.12.0
       node-html-parser: 7.1.0
 
   '@nice-move/prettier-plugin-package-json@0.9.5(prettier@3.9.6)':
@@ -7744,7 +7745,7 @@ snapshots:
       eslint: 10.9.1(jiti@2.6.1)
       eslint-plugin-es-x: 7.8.0(eslint@10.9.1(jiti@2.6.1))
       get-tsconfig: 4.14.2
-      globals: 17.11.0
+      globals: 17.12.0
       globrex: 0.1.2
       ignore: 5.3.2
       semver: 7.8.5
@@ -7813,7 +7814,7 @@ snapshots:
       entities: 8.0.0
       eslint: 10.9.1(jiti@2.6.1)
       find-up-simple: 1.0.1
-      globals: 17.11.0
+      globals: 17.12.0
       indent-string: 5.0.0
       is-builtin-module: 5.0.0
       is-identifier: 1.1.0
@@ -8181,7 +8182,7 @@ snapshots:
       kind-of: 6.0.3
       which: 1.3.1
 
-  globals@17.11.0: {}
+  globals@17.12.0: {}
 
   globalthis@1.0.4:
     dependencies:

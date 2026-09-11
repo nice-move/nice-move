@@ -36,7 +36,7 @@
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "@pnpm/config": "^1004.11.0",
     "@pnpm/pnpmfile": "^1002.1.13",
-    "@pnpm/types": "^1102.0.0",
+    "@pnpm/types": "^1102.1.0",
     "@vitest/ui": "catalog:vitest",
     "eslint": "catalog:overrides",
     "find-workspaces": "^0.3.1",

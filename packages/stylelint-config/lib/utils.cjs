@@ -19,6 +19,7 @@ const AT_RULE_NO_UNKNOWN = tailwind
           'config',
           'custom-variant',
           'layer',
+          'theme',
           'responsive',
           'screen',
           'source',

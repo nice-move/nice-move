@@ -777,6 +777,7 @@
       "AudioPlaybackStats": "off",
       "AudioProcessingEvent": "off",
       "AudioScheduledSourceNode": "off",
+      "AudioSession": "off",
       "AudioSinkInfo": "off",
       "AudioWorklet": "off",
       "AudioWorkletNode": "off",
@@ -1069,6 +1070,7 @@
       "HTMLBaseElement": "off",
       "HTMLBodyElement": "off",
       "HTMLButtonElement": "off",
+      "HTMLCameraElement": "off",
       "HTMLCanvasElement": "off",
       "HTMLCollection": "off",
       "HTMLDListElement": "off",
@@ -1106,6 +1108,7 @@
       "HTMLMenuElement": "off",
       "HTMLMetaElement": "off",
       "HTMLMeterElement": "off",
+      "HTMLMicrophoneElement": "off",
       "HTMLModElement": "off",
       "HTMLOListElement": "off",
       "HTMLObjectElement": "off",
@@ -1213,6 +1216,7 @@
       "MIDIPort": "off",
       "Map": "readonly",
       "Math": "readonly",
+      "MathMLAnchorElement": "off",
       "MathMLElement": "off",
       "MediaCapabilities": "off",
       "MediaCapabilitiesInfo": "off",
@@ -1279,6 +1283,7 @@
       "NodeFilter": "off",
       "NodeIterator": "off",
       "NodeList": "off",
+      "NodeRange": "off",
       "NotRestoredReasonDetails": "off",
       "NotRestoredReasons": "off",
       "Notification": "off",
@@ -1291,6 +1296,7 @@
       "OfflineAudioContext": "off",
       "OffscreenCanvas": "off",
       "OffscreenCanvasRenderingContext2D": "off",
+      "OpaqueRange": "off",
       "Option": "off",
       "OrientationSensor": "off",
       "Origin": "off",
@@ -1604,6 +1610,7 @@
       "Translator": "off",
       "TreeWalker": "off",
       "TrustedHTML": "off",
+      "TrustedParserOptions": "off",
       "TrustedScript": "off",
       "TrustedScriptURL": "off",
       "TrustedTypePolicy": "off",
@@ -1974,6 +1981,7 @@
       "reportError": "off",
       "requestAnimationFrame": "off",
       "requestIdleCallback": "off",
+      "requestResize": "off",
       "require": "readonly",
       "resizeBy": "off",
       "resizeTo": "off",
@@ -4299,21 +4307,21 @@
     ],
     "import-x/ignore": false,
     "import-x/parsers": {
-      "/<:root>/package****b/jsx-parser.cjs": [
-        ".jsx",
-      ],
-      "@typescript-eslint/parser": [
+      "root:/@typescript-eslint/parser": [
         ".ts",
         ".cts",
         ".mts",
         ".tsx",
       ],
-      "vue-eslint-parser": [
+      "root:/packages/eslint-config-base/lib/jsx-parser.cjs": [
+        ".jsx",
+      ],
+      "root:/vue-eslint-parser": [
         ".vue",
       ],
     },
     "import-x/resolver": {
-      "node": {
+      "root:/node": {
         "extensions": [
           ".mjs",
           ".js",

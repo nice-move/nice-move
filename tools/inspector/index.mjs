@@ -5,25 +5,42 @@ import pickBy from 'lodash/pickBy.js';
 import slash from 'slash';
 import sortKeys from 'sort-keys';
 import stylelint from 'stylelint';
+import { relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const require = createRequire(import.meta.url);
 
 const cwd = process.cwd();
-
-const regexp = new RegExp(slash(cwd).replaceAll('/', String.raw`[\/\\]`), 'i');
 
 function fixPath(path) {
   if (typeof path !== 'string') {
     return path;
   }
 
-  const io = slash(
-    path.replace(/^file:\/\/\//i, '').replace(regexp, '/<:root>'),
+  // stylelint may return a `file:` URL (e.g. for `customSyntax`). Convert it
+  // to a real filesystem path so it can be made relative to cwd; otherwise the
+  // machine-specific absolute root leaks into the snapshot.
+  if (path.startsWith('file:')) {
+    try {
+      path = fileURLToPath(path);
+    } catch {
+      path = path.replace(/^file:\/+/, '');
+    }
+  }
+
+  let result = `root:/${slash(relative(cwd, path))}`;
+
+  // pnpm stores packages under a content-addressable directory whose name
+  // embeds a non-deterministic hash/dependency suffix (e.g.
+  // `.pnpm/pkg_374038f6...` or `.pnpm/pkg@1.0.0_stylelint@17_x...`). This
+  // segment varies between machines and installs, breaking snapshots, so
+  // normalize it away while keeping the stable `node_modules/<pkg>` tail.
+  result = result.replaceAll(
+    /node_modules\/\.pnpm\/[^/]+\/node_modules\//g,
+    'node_modules/',
   );
 
-  return io.startsWith('/<:root>') && io.length > 40
-    ? `${io.slice(0, 16)}****${io.slice(-16)}`
-    : io;
+  return result;
 }
 
 export function eslintInspector(configName, filename) {

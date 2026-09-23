@@ -1,12 +1,10 @@
-'use strict';
-
-const { AT_RULE_NO_UNKNOWN, FUNCTION_NO_UNKNOWN } = require('./utils.cjs');
+import { AT_RULE_NO_UNKNOWN, FUNCTION_NO_UNKNOWN } from './utils.mjs';
 
 const loose = {
   severity: 'warning',
 };
 
-module.exports = {
+export default {
   rules: {
     'annotation-no-unknown': null,
     'at-rule-no-unknown': null,

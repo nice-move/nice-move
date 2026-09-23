@@ -1,16 +1,14 @@
-'use strict';
+import { haveLocalDependencies, getPkg } from 'settingz';
 
-const { haveLocalDependencies, getPkg } = require('settingz');
-
-function isMiniApp(value) {
+export function isMiniApp(value) {
   if (getPkg('nice-move').isMiniApp) {
     return value;
   }
 }
 
-const tailwind = haveLocalDependencies('tailwindcss');
+export const tailwind = haveLocalDependencies('tailwindcss');
 
-const AT_RULE_NO_UNKNOWN = tailwind
+export const AT_RULE_NO_UNKNOWN = tailwind
   ? [
       true,
       {
@@ -19,6 +17,7 @@ const AT_RULE_NO_UNKNOWN = tailwind
           'config',
           'custom-variant',
           'layer',
+          'theme',
           'responsive',
           'screen',
           'source',
@@ -31,13 +30,6 @@ const AT_RULE_NO_UNKNOWN = tailwind
     ]
   : true;
 
-const FUNCTION_NO_UNKNOWN = tailwind
+export const FUNCTION_NO_UNKNOWN = tailwind
   ? [true, { ignoreFunctions: ['theme'] }]
   : true;
-
-module.exports = {
-  isMiniApp,
-  tailwind,
-  AT_RULE_NO_UNKNOWN,
-  FUNCTION_NO_UNKNOWN,
-};

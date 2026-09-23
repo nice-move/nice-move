@@ -777,6 +777,7 @@
       "AudioPlaybackStats": "readonly",
       "AudioProcessingEvent": "readonly",
       "AudioScheduledSourceNode": "readonly",
+      "AudioSession": "readonly",
       "AudioSinkInfo": "readonly",
       "AudioWorklet": "readonly",
       "AudioWorkletNode": "readonly",
@@ -1069,6 +1070,7 @@
       "HTMLBaseElement": "readonly",
       "HTMLBodyElement": "readonly",
       "HTMLButtonElement": "readonly",
+      "HTMLCameraElement": "readonly",
       "HTMLCanvasElement": "readonly",
       "HTMLCollection": "readonly",
       "HTMLDListElement": "readonly",
@@ -1106,6 +1108,7 @@
       "HTMLMenuElement": "readonly",
       "HTMLMetaElement": "readonly",
       "HTMLMeterElement": "readonly",
+      "HTMLMicrophoneElement": "readonly",
       "HTMLModElement": "readonly",
       "HTMLOListElement": "readonly",
       "HTMLObjectElement": "readonly",
@@ -1213,6 +1216,7 @@
       "MIDIPort": "readonly",
       "Map": "readonly",
       "Math": "readonly",
+      "MathMLAnchorElement": "readonly",
       "MathMLElement": "readonly",
       "MediaCapabilities": "readonly",
       "MediaCapabilitiesInfo": "readonly",
@@ -1279,6 +1283,7 @@
       "NodeFilter": "readonly",
       "NodeIterator": "readonly",
       "NodeList": "readonly",
+      "NodeRange": "readonly",
       "NotRestoredReasonDetails": "readonly",
       "NotRestoredReasons": "readonly",
       "Notification": "readonly",
@@ -1291,6 +1296,7 @@
       "OfflineAudioContext": "readonly",
       "OffscreenCanvas": "readonly",
       "OffscreenCanvasRenderingContext2D": "readonly",
+      "OpaqueRange": "readonly",
       "Option": "readonly",
       "OrientationSensor": "readonly",
       "Origin": "readonly",
@@ -1604,6 +1610,7 @@
       "Translator": "readonly",
       "TreeWalker": "readonly",
       "TrustedHTML": "readonly",
+      "TrustedParserOptions": "readonly",
       "TrustedScript": "readonly",
       "TrustedScriptURL": "readonly",
       "TrustedTypePolicy": "readonly",
@@ -1976,6 +1983,7 @@
       "reportError": "readonly",
       "requestAnimationFrame": "readonly",
       "requestIdleCallback": "readonly",
+      "requestResize": "readonly",
       "require": "off",
       "requireMiniProgram": "readonly",
       "requirePlugin": "readonly",
@@ -4726,21 +4734,21 @@
     ],
     "import-x/ignore": false,
     "import-x/parsers": {
-      "/<:root>/package****b/jsx-parser.cjs": [
-        ".jsx",
-      ],
-      "@typescript-eslint/parser": [
+      "root:/@typescript-eslint/parser": [
         ".ts",
         ".cts",
         ".mts",
         ".tsx",
       ],
-      "vue-eslint-parser": [
+      "root:/packages/eslint-config-base/lib/jsx-parser.cjs": [
+        ".jsx",
+      ],
+      "root:/vue-eslint-parser": [
         ".vue",
       ],
     },
     "import-x/resolver": {
-      "node": {
+      "root:/node": {
         "extensions": [
           ".mjs",
           ".js",

@@ -77,21 +77,18 @@
     "parse": [Function],
     "stringify": [Function],
   },
-  "customSyntax": {
-    "parse": [Function],
-    "stringify": [Function],
-  },
+  "customSyntax": "root:/node_modules/postcss-scss/lib/scss-syntax.mjs",
   "ignoreFiles": [
-    "/<:root>/**/*.min.*",
-    "/<:root>/**/dist/**",
-    "/<:root>/**/.(cache|svn|git)/**",
-    "/<:root>/**/.docusaurus/**",
-    "/<:root>/**/.obsidian/**",
-    "/<:root>/**/miniprogram_npm/**",
+    "root:/**/*.min.*",
+    "root:/**/dist/**",
+    "root:/**/.(cache|svn|git)/**",
+    "root:/**/.docusaurus/**",
+    "root:/**/.obsidian/**",
+    "root:/**/miniprogram_npm/**",
   ],
   "plugins": [
-    "/<:root>/node_mo****perties/index.js",
-    "/<:root>/node_mo****css/src/index.js",
+    "root:/node_modules/stylelint-declaration-block-no-ignored-properties/index.js",
+    "root:/node_modules/stylelint-scss/src/index.js",
   ],
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true,
@@ -103,6 +100,9 @@
       true,
     ],
     "at-rule-no-deprecated": [
+      true,
+    ],
+    "at-rule-no-unknown": [
       true,
     ],
     "at-rule-prelude-no-invalid": [
@@ -182,6 +182,9 @@
           /\^font-icon-/,
         ],
       },
+    ],
+    "function-no-unknown": [
+      true,
     ],
     "function-url-quotes": [
       "always",

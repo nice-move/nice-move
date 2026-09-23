@@ -1,8 +1,6 @@
-'use strict';
+import { FUNCTION_NO_UNKNOWN, AT_RULE_NO_UNKNOWN } from './utils.mjs';
 
-const { FUNCTION_NO_UNKNOWN, AT_RULE_NO_UNKNOWN } = require('./utils.cjs');
-
-module.exports = {
+export default {
   rules: {
     'selector-disallowed-list': [/,\s*,/, /^\s*,\s*/],
     'declaration-block-no-redundant-longhand-properties': [

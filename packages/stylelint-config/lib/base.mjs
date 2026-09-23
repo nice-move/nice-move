@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export default {
   rules: {
     'alpha-value-notation': null,
     'at-rule-empty-line-before': null,

@@ -1,14 +1,12 @@
-'use strict';
+import { isMiniApp, tailwind } from './lib/utils.mjs';
 
-const { isMiniApp, tailwind } = require('./lib/utils.cjs');
-
-module.exports = {
+export default {
   reportNeedlessDisables: true,
   reportInvalidScopeDisables: true,
   extends: [
-    require.resolve('stylelint-config-standard'),
-    require.resolve('./lib/ignore.cjs'),
-    require.resolve('./lib/base.cjs'),
+    import.meta.resolve('stylelint-config-standard'),
+    import.meta.resolve('./lib/ignore.mjs'),
+    import.meta.resolve('./lib/base.mjs'),
   ],
   plugins: ['stylelint-declaration-block-no-ignored-properties'],
   rules: {
@@ -34,9 +32,9 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.scss'],
-      customSyntax: require('postcss-scss'),
+      customSyntax: import.meta.resolve('postcss-scss'),
       plugins: ['stylelint-scss'],
-      extends: [require.resolve('./lib/scss.cjs')],
+      extends: [import.meta.resolve('./lib/scss.mjs')],
     },
     {
       files: ['**/*.less'],
@@ -80,8 +78,8 @@ module.exports = {
     {
       files: ['**/*.*'],
       extends: [
-        require.resolve('./lib/prettier.cjs'),
-        require.resolve('./lib/garou.cjs'),
+        import.meta.resolve('./lib/prettier.mjs'),
+        import.meta.resolve('./lib/garou.mjs'),
       ],
       rules:
         isMiniApp({

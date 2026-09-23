@@ -24,14 +24,14 @@
   },
   "type": "module",
   "dependencies": {
-    "@types/node": "^24.13.3",
+    "@types/node": "^24.13.6",
     "@types/whatwg-url": "^13.0.0"
   },
   "peerDependencies": {
     "typescript": "catalog:"
   },
   "engines": {
-    "node": ">=24.0.0 || ^22.18.0"
+    "node": "^24.0.0"
   },
   "publishConfig": {
     "access": "public",

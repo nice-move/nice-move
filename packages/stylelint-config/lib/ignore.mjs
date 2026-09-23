@@ -1,7 +1,6 @@
-'use strict';
+import { join } from 'node:path';
 
-const { join } = require('node:path');
-const { readJson, getPkg } = require('settingz');
+import { readJson, getPkg } from 'settingz';
 
 function ignoreList() {
   const { ignore: { all = [], stylelint = [] } = {} } = getPkg('nice-move');
@@ -17,7 +16,7 @@ function BestShot() {
   return stylelint;
 }
 
-module.exports = {
+export default {
   ignoreFiles: [
     '**/*.min.*',
     '**/dist/**',

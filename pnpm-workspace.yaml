@@ -10,7 +10,7 @@ catalog:
   '@eslint/markdown': ^8.0.3
   chalk: ^6.0.0
   deepmerge-ts: ^8.0.2
-  eslint-plugin-vue: ^10.10.0
+  eslint-plugin-vue: ^10.11.0
   execa: ^10.0.1
   fs-chain: ^10.0.0
   garou: ^0.9.22
@@ -19,7 +19,7 @@ catalog:
   sort-keys: ^6.0.1
   stylelint: ^17.15.0
   typescript: ~6.0.3
-  typescript-eslint: ^8.68.0
+  typescript-eslint: ^8.70.1
   yaml: ^2.9.1
 
 catalogs:
@@ -29,8 +29,8 @@ catalogs:
     globals: ^17.11.0
     prettier: ~3.9.8
   vitest:
-    '@vitest/ui': ^4.1.11
-    vitest: ^4.1.11
+    '@vitest/ui': ^5.0.1
+    vitest: ^5.0.1
 
 configDependencies:
   pnpm-plugin-nice-move: 0.3.7+sha512-XmvMlOA/Zd26tv69MyOSC90isG1+APVs8k6D0hGxV/FFYipyKtToR4eYo+ueptlEGce3nDegg7kWnjDF6aXHUQ==

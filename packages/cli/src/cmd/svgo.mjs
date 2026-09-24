@@ -1,4 +1,4 @@
-import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
 
 import { execa } from 'execa';
 import { isReachable } from 'settingz';
@@ -13,7 +13,6 @@ export function svgoCaller() {
       describe: 'Run `svgo` to optimize `*.svg`',
       async handler(options) {
         const [path = './'] = options._;
-        const require = createRequire(import.meta.url);
 
         try {
           await execa('svgo', [
@@ -23,7 +22,7 @@ export function svgoCaller() {
             '--indent',
             '2',
             '--config',
-            require.resolve('svgo-config'),
+            fileURLToPath(import.meta.resolve('svgo-config')),
             '-f',
             path,
           ]);

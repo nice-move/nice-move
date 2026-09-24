@@ -107,6 +107,9 @@ dist
 # vuepress v2.x temp and cache directory
 .temp
 
+# vitest HTML report preview
+.vitest
+
 # Docusaurus cache and generated files
 .docusaurus
 

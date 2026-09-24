@@ -2425,7 +2425,7 @@
   "processor": {
     "meta": {
       "name": "eslint-plugin-vue",
-      "version": "10.10.0",
+      "version": "10.11.0",
     },
     "postprocess": [Function],
     "preprocess": [Function],
@@ -4986,21 +4986,21 @@
     ],
     "import-x/ignore": false,
     "import-x/parsers": {
-      "root:/@typescript-eslint/parser": [
+      "/<:root>/package****b/jsx-parser.cjs": [
+        ".jsx",
+      ],
+      "@typescript-eslint/parser": [
         ".ts",
         ".cts",
         ".mts",
         ".tsx",
       ],
-      "root:/packages/eslint-config-base/lib/jsx-parser.cjs": [
-        ".jsx",
-      ],
-      "root:/vue-eslint-parser": [
+      "vue-eslint-parser": [
         ".vue",
       ],
     },
     "import-x/resolver": {
-      "root:/node": {
+      "node": {
         "extensions": [
           ".mjs",
           ".js",

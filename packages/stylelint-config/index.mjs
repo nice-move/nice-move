@@ -1,3 +1,5 @@
+import postcssScss from 'postcss-scss';
+
 import { isMiniApp, tailwind } from './lib/utils.mjs';
 
 export default {
@@ -32,7 +34,7 @@ export default {
   overrides: [
     {
       files: ['**/*.scss'],
-      customSyntax: import.meta.resolve('postcss-scss'),
+      customSyntax: postcssScss,
       plugins: ['stylelint-scss'],
       extends: [import.meta.resolve('./lib/scss.mjs')],
     },

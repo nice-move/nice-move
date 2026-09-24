@@ -1,9 +1,8 @@
-import { createRequire } from 'node:module';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
 import globals from 'globals';
 import { getPkg } from 'settingz';
-
-export const require = createRequire(import.meta.url);
 
 export function pkgHas(checker, getResult) {
   const pkg = getPkg();
@@ -19,8 +18,10 @@ export function pkgHas(checker, getResult) {
 
 function getConfig(name) {
   try {
-    // eslint-disable-next-line import-x/no-unresolved
-    return require('@nice-move/config/package.json')[name];
+    const url = import.meta.resolve('@nice-move/config/package.json');
+    const config = JSON.parse(readFileSync(fileURLToPath(url), 'utf8'));
+
+    return config[name];
   } catch {
     return null;
   }

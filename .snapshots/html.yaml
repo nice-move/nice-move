@@ -4699,7 +4699,7 @@
       "\.(coffee|scss|css|less|hbs|svg|json)$",
     ],
     "import-x/resolver": {
-      "root:/node": {
+      "node": {
         "extensions": [
           ".mjs",
           ".js",

@@ -1,13 +1,19 @@
 #!/usr/bin/env node
 import { readFileSync } from 'node:fs';
-import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 import { deepmerge } from 'deepmerge-ts';
 
 import { JsonToText } from 'fs-chain';
 import { parse } from 'yaml';
 
-const require = createRequire(import.meta.url);
+import ownPkg from './package.json' with { type: 'json' };
+
+function readPackageJson(name) {
+  const url = import.meta.resolve(`${name}/package.json`);
+
+  return JSON.parse(readFileSync(fileURLToPath(url), 'utf8'));
+}
 
 function readYaml() {
   try {
@@ -36,7 +42,7 @@ function readYaml() {
 function getLocalVersion(...names) {
   return Object.fromEntries(
     names.map((name) => {
-      const pkg = require(`@nice-move/${name}/package.json`);
+      const pkg = readPackageJson(`@nice-move/${name}`);
 
       return [`@nice-move/${name}`, `^${pkg.version}`];
     }),
@@ -52,7 +58,7 @@ new JsonToText()
       engines,
     }) => ({
       ...rest,
-      ...require('./package.json').peerDependencies,
+      ...ownPkg.peerDependencies,
       ...getLocalVersion(
         'eslint-config-base',
         'stylelint-config',

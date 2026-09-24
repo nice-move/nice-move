@@ -1,6 +1,6 @@
 {
   "name": "@nice-move/eslint-config-base",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "description": "A `eslint` config for best practice",
   "license": "MIT",
   "author": {
@@ -34,7 +34,7 @@
   "main": "index.mjs",
   "type": "module",
   "dependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.7.2",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.8.1",
     "@eslint/eslintrc": "catalog:",
     "@eslint/js": "catalog:",
     "@eslint/markdown": "catalog:",
@@ -44,7 +44,7 @@
     "eslint-plugin-import-x": "^4.17.1",
     "eslint-plugin-n": "^18.3.0",
     "eslint-plugin-promise": "^7.3.0",
-    "eslint-plugin-regexp": "^3.2.0",
+    "eslint-plugin-regexp": "^3.3.1",
     "eslint-plugin-unicorn": "^74.0.0",
     "espree": "^11.2.0",
     "globals": "catalog:overrides",

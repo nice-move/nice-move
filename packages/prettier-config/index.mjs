@@ -1,4 +1,6 @@
-import { loadOrderPreset, loadPlugin, require } from './utils.mjs';
+import { fileURLToPath } from 'node:url';
+
+import { loadOrderPreset, loadPlugin } from './utils.mjs';
 
 const tailwind = loadPlugin('prettier-plugin-tailwindcss');
 
@@ -75,11 +77,13 @@ export default {
     String.raw`^\./`,
   ].flat(),
   plugins: [
-    require.resolve('@nice-move/prettier-plugin-package-json'),
-    require.resolve('@prettier/plugin-xml'),
-    require.resolve('prettier-plugin-ini'),
-    require.resolve('prettier-plugin-css-order'),
-    require.resolve('./extra.mjs'),
+    fileURLToPath(
+      import.meta.resolve('@nice-move/prettier-plugin-package-json'),
+    ),
+    fileURLToPath(import.meta.resolve('@prettier/plugin-xml')),
+    fileURLToPath(import.meta.resolve('prettier-plugin-ini')),
+    fileURLToPath(import.meta.resolve('prettier-plugin-css-order')),
+    fileURLToPath(import.meta.resolve('./extra.mjs')),
     loadPlugin('@ianvs/prettier-plugin-sort-imports'),
     loadPlugin('prettier-plugin-diy'),
     loadPlugin('prettier-plugin-groovy'),

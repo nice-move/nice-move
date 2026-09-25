@@ -814,7 +814,7 @@ importers:
         specifier: ^0.9.6
         version: 0.9.6(@bring-it/cli@0.11.3)
       '@bring-it/sftp':
-        specifier: ^0.7.1
+        specifier: ^0.7.4
         version: 0.7.4(@bring-it/cli@0.11.3)
       '@nice-move/init':
         specifier: workspace:^

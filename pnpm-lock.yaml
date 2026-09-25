@@ -303,7 +303,7 @@ importers:
         specifier: ^24.13.6
         version: 24.13.6
       svgo:
-        specifier: ^4.0.2
+        specifier: ^4.1.0
         version: 4.1.0
       svgo-config:
         specifier: ^0.10.0

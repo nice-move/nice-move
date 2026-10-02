@@ -29,8 +29,8 @@ catalogs:
     globals: ^17.11.0
     prettier: ~3.9.8
   vitest:
-    '@vitest/ui': ^5.0.1
-    vitest: ^5.0.1
+    '@vitest/ui': ^5.0.2
+    vitest: ^5.0.2
 
 configDependencies:
   pnpm-plugin-nice-move: 0.3.7+sha512-XmvMlOA/Zd26tv69MyOSC90isG1+APVs8k6D0hGxV/FFYipyKtToR4eYo+ueptlEGce3nDegg7kWnjDF6aXHUQ==

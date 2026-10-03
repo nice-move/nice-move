@@ -10,7 +10,7 @@ catalog:
   '@eslint/markdown': ^8.0.3
   chalk: ^6.0.0
   deepmerge-ts: ^8.0.2
-  eslint-plugin-vue: ^10.11.0
+  eslint-plugin-vue: ^10.11.1
   execa: ^10.0.1
   fs-chain: ^10.0.0
   garou: ^0.9.22
@@ -24,10 +24,10 @@ catalog:
 
 catalogs:
   overrides:
-    eslint: ^10.9.1
+    eslint: ^10.11.0
     eslint-plugin-react-hooks: ^7.1.1
     globals: ^17.11.0
-    prettier: ~3.9.8
+    prettier: ~3.9.9
   vitest:
     '@vitest/ui': ^5.0.1
     vitest: ^5.0.1

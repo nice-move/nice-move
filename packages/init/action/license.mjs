@@ -10,21 +10,23 @@ export async function License() {
 
   const isMIT = license === 'MIT';
 
-  if (isMIT || license === 'Unlicense') {
-    const holder = await getAuthorName(author);
-
-    const year = String(new Date().getFullYear());
-
-    return new Text()
-      .onDone(() =>
-        isMIT
-          ? mit
-              .replace('{{year}}', () => year)
-              .replace('{{holder}}', () => holder)
-          : unlicense,
-      )
-      .output('LICENSE')
-      .logger('Create/Overwrite', cyan('LICENSE'))
-      .catch(console.warn);
+  if (!(isMIT || license === 'Unlicense')) {
+    return;
   }
+
+  const holder = await getAuthorName(author);
+
+  const year = String(new Date().getFullYear());
+
+  return new Text()
+    .onDone(() =>
+      isMIT
+        ? mit
+            .replace('{{year}}', () => year)
+            .replace('{{holder}}', () => holder)
+        : unlicense,
+    )
+    .output('LICENSE')
+    .logger('Create/Overwrite', cyan('LICENSE'))
+    .catch(console.warn);
 }

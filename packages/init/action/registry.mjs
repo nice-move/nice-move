@@ -10,16 +10,12 @@ export async function Registry() {
       .source('.npmrc')
       .onFail()
       .onDone((text = '') => {
-        if (
-          text.trim() &&
+        return text.trim() &&
           /registry\s*=\s*["']?https:\/\/mirrors\.tencent\.com\/npm\/["']?/i.test(
             text,
           )
-        ) {
-          return text;
-        }
-
-        return `registry = https://mirrors.tencent.com/npm/\r${text}`;
+          ? text
+          : `registry = https://mirrors.tencent.com/npm/\r${text}`;
       })
       .output()
       .logger('Set registry to China mirror in', cyan('.npmrc'))

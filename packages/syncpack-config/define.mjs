@@ -5,9 +5,9 @@ import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 
 /**
- * 从 pnpm-workspace.yaml 文件中读取目录配置
- * @returns {{ catalog: object, catalogs: object }} 包含目录配置的对象
- */
+从 pnpm-workspace.yaml 文件中读取目录配置
+@returns {{ catalog: object, catalogs: object }} 包含目录配置的对象
+*/
 function readYaml() {
   try {
     const path = join(process.cwd(), 'pnpm-workspace.yaml');
@@ -33,10 +33,10 @@ function readYaml() {
 }
 
 /**
- * 读取 package.json 文件
- * @param {string} url - 文件 URL 或 '~' 表示当前目录
- * @returns {object} package.json 内容
- */
+读取 package.json 文件
+@param {string} url - 文件 URL 或 '~' 表示当前目录
+@returns {object} package.json 内容
+*/
 function readPackageJson(url) {
   try {
     const path =
@@ -53,9 +53,9 @@ function readPackageJson(url) {
 }
 
 /**
- * 默认的自定义类型配置
- * @type {object}
- */
+默认的自定义类型配置
+@type {object}
+*/
 const DEFAULT_CUSTOM_TYPES = {
   engines: {
     path: 'engines',
@@ -72,9 +72,9 @@ const DEFAULT_CUSTOM_TYPES = {
 };
 
 /**
- * 默认的 semver 组配置
- * @type {object[]}
- */
+默认的 semver 组配置
+@type {object[]}
+*/
 const DEFAULT_SEMVER_GROUPS = [
   {
     dependencies: [
@@ -108,9 +108,9 @@ const DEFAULT_SEMVER_GROUPS = [
 ];
 
 /**
- * 创建工作区版本组配置
- * @returns {object|undefined} 版本组配置
- */
+创建工作区版本组配置
+@returns {object|undefined} 版本组配置
+*/
 function createWorkspaceVersionGroup() {
   return {
     dependencies: ['$LOCAL'],
@@ -121,12 +121,12 @@ function createWorkspaceVersionGroup() {
 }
 
 /**
- * 创建目录版本组配置
- * @param {object} packagesMap - 包名到版本的映射对象
- * @param {object} options - 配置选项
- * @param {string} [prefix] - 版本前缀
- * @returns {object|undefined} 版本组配置
- */
+创建目录版本组配置
+@param {object} packagesMap - 包名到版本的映射对象
+@param {object} options - 配置选项
+@param {string} [prefix] - 版本前缀
+@returns {object|undefined} 版本组配置
+*/
 function createCatalogVersionGroup(packagesMap, prefix = '') {
   const packageNames =
     packagesMap && typeof packagesMap === 'object'
@@ -154,12 +154,12 @@ function createCatalogVersionGroup(packagesMap, prefix = '') {
 }
 
 /**
- * 从 catalog 和 catalogs 字段创建所有目录版本组配置
- * @param {object} options - 包含 catalog 和 catalogs 的对象
- * @param {object} [options.catalog={}] - 主目录包版本映射
- * @param {object} [options.catalogs={}] - 目录组映射，键为组名，值为包版本映射
- * @returns {object[]} 版本组配置列表
- */
+从 catalog 和 catalogs 字段创建所有目录版本组配置
+@param {object} options - 包含 catalog 和 catalogs 的对象
+@param {object} [options.catalog={}] - 主目录包版本映射
+@param {object} [options.catalogs={}] - 目录组映射，键为组名，值为包版本映射
+@returns {object[]} 版本组配置列表
+*/
 function createCatalogGroups({ catalog = {}, catalogs = {} }) {
   const groups = [];
 
@@ -183,10 +183,10 @@ function createCatalogGroups({ catalog = {}, catalogs = {} }) {
 }
 
 /**
- * 创建 Node.js 引擎版本组配置
- * @param {object} pkg - package.json 内容
- * @returns {object} 版本组配置
- */
+创建 Node.js 引擎版本组配置
+@param {object} pkg - package.json 内容
+@returns {object} 版本组配置
+*/
 function createNodeEngineVersionGroup(pkg = {}) {
   return {
     dependencies: ['node'],
@@ -204,8 +204,8 @@ const DEFAULT_DEPENDENCY_GROUPS = [
 ];
 
 /**
- * 默认的其他依赖版本组配置
- */
+默认的其他依赖版本组配置
+*/
 const DEFAULT_OTHERS_VERSION_GROUP = [
   {
     dependencyTypes: ['!local'],
@@ -220,11 +220,11 @@ const DEFAULT_OTHERS_VERSION_GROUP = [
 ];
 
 /**
- * 定义 syncpack 配置
- * @param {string} url - 配置文件 URL
- * @param {object} config - 初始配置
- * @returns {object} 最终配置
- */
+定义 syncpack 配置
+@param {string} url - 配置文件 URL
+@param {object} config - 初始配置
+@returns {object} 最终配置
+*/
 export function defineConfig(url, config = {}) {
   // 读取 package.json
   const pkg = readPackageJson(url);

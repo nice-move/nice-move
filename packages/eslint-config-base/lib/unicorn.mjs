@@ -32,6 +32,13 @@ export default [
       'unicorn/relative-url-style': ['error', 'always'],
       'unicorn/require-post-message-target-origin': 'off',
       'unicorn/template-indent': 'off',
+      'unicorn/prefer-default-parameters': 'off',
+    },
+  },
+  {
+    files: ['**/*.mjs', '**/*.cjs', '**/*.mts', '**/*.cts'],
+    rules: {
+      'unicorn/no-top-level-side-effects': 'off',
     },
   },
 ];

@@ -75,7 +75,7 @@ export function getPkg() {
   try {
     const filePath = join(process.cwd(), 'package.json');
 
-    return JSON.parse(readFileSync(filePath));
+    return JSON.parse(readFileSync(filePath, 'utf8'));
   } catch {
     return {};
   }

@@ -29,7 +29,7 @@
   "main": "index.mjs",
   "type": "module",
   "dependencies": {
-    "postcss": "^8.5.28",
+    "postcss": "^8.5.29",
     "postcss-html": "^2.0.0",
     "postcss-less": "^6.0.0",
     "postcss-markdown": "^2.0.0",

@@ -1,17 +1,17 @@
 // @ts-check
 
 /**
- * @param {unknown} v
- * @returns {v is Record<string, unknown>}
- */
+@param {unknown} v
+@returns {v is Record<string, unknown>}
+*/
 const isObject = (v) =>
   v !== null && typeof v === 'object' && !Array.isArray(v);
 
 /**
- * @param {Record<string, unknown>} [target={}]
- * @param {Record<string, unknown>} [source={}]
- * @returns {Record<string, unknown>}
- */
+@param {Record<string, unknown>} [target={}]
+@param {Record<string, unknown>} [source={}]
+@returns {Record<string, unknown>}
+*/
 function deepMerge(target = {}, source = {}) {
   return Object.entries(source).reduce(
     (out, [key, srcVal]) => {

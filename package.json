@@ -37,13 +37,13 @@
     "@cospaia/prettier-plugin-clojure": "^0.0.2",
     "@pnpm/config": "^1004.11.0",
     "@pnpm/pnpmfile": "^1002.1.13",
-    "@pnpm/types": "^1102.1.0",
+    "@pnpm/types": "^1102.1.1",
     "@vitest/ui": "catalog:vitest",
     "eslint": "catalog:overrides",
     "find-workspaces": "^0.3.1",
     "garou": "catalog:",
     "nodemon": "^3.1.14",
-    "postcss": "^8.5.28",
+    "postcss": "^8.5.29",
     "prettier": "catalog:overrides",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "stylelint": "catalog:",
@@ -70,7 +70,7 @@
     "@nice-move/stylelint-config": "workspace:^",
     "@nice-move/syncpack-config": "workspace:^",
     "@nice-move/tsconfig": "workspace:^",
-    "@types/node": "^24.13.6"
+    "@types/node": "^24.19.1"
   },
   "packageManager": "pnpm@12.6.0",
   "engines": {

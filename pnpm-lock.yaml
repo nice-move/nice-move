@@ -496,8 +496,8 @@ importers:
   packages/cli:
     dependencies:
       cheetor:
-        specifier: ^0.13.0
-        version: 0.13.0
+        specifier: ^0.15.0
+        version: 0.15.0
     devDependencies:
       '@commitlint/format':
         specifier: ^21.2.3
@@ -656,8 +656,8 @@ importers:
         specifier: 'catalog:'
         version: 6.0.1
       cheetor:
-        specifier: ^0.13.0
-        version: 0.13.0
+        specifier: ^0.15.0
+        version: 0.15.0
       deepmerge-ts:
         specifier: 'catalog:'
         version: 8.0.2
@@ -2663,6 +2663,10 @@ packages:
     resolution: {integrity: sha512-1QADgHQtO2oZksh/y6MK8yth40dpeWtlg0qSKMkvdpsWT2UHCT5uAw/yCDgi4vCFChMsmhgOlUsZ+O3kjKhDgg==}
     engines: {node: ^14.17.0 || >=16.13.0}
 
+  cheetor@0.15.0:
+    resolution: {integrity: sha512-g/1QyDv39ruRc4s2DSKRI0DqEnLBr3UFfaGSbmGzfFHq7BTNufmtfL/MqsB1YZr3FazOYAWLNnb8sfP/ngq/Bw==}
+    engines: {node: '>=24.0.0', pnpm: ^10.34.5}
+
   chevrotain@7.1.1:
     resolution: {integrity: sha512-wy3mC1x4ye+O+QkEinVJkPf5u2vsrDIYW9G7ZuwFl6v/Yu0LwUuT2POsb+NUWApebyxfkQq6+yDfRExbnI5rcw==}
 
@@ -2718,6 +2722,10 @@ packages:
   commander@13.1.0:
     resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
     engines: {node: '>=18'}
+
+  commander@15.0.0:
+    resolution: {integrity: sha512-z67u4ZhzCL/Tydu1lJARtEZYWbWaN7oYLHbsuzocr6y4N6WZAagG3RQ4FW61V1/0+jImpj293XfrcYnd1qxtPg==}
+    engines: {node: '>=22.12.0'}
 
   commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
@@ -7432,6 +7440,10 @@ snapshots:
     dependencies:
       yargs: 17.7.3
 
+  cheetor@0.15.0:
+    dependencies:
+      commander: 15.0.0
+
   chevrotain@7.1.1:
     dependencies:
       regexp-to-ast: 0.5.0
@@ -7488,6 +7500,8 @@ snapshots:
   commander@11.1.0: {}
 
   commander@13.1.0: {}
+
+  commander@15.0.0: {}
 
   commander@4.1.1: {}
 

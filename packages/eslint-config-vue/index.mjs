@@ -3,11 +3,13 @@ import base from '@nice-move/eslint-config-base';
 import { getGlobals } from '@nice-move/eslint-config-base/lib/utils.mjs';
 import prettier from 'eslint-config-prettier';
 import pluginVue from 'eslint-plugin-vue';
-import { getPkg } from 'settingz';
+import { getPkg, haveDependencies } from 'settingz';
 
 const version = '3.5.26';
 
 const { isMiniApp } = getPkg('nice-move');
+
+const hasVueRouter = haveDependencies('vue-router');
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.__dirname,
@@ -20,6 +22,14 @@ export default [
     ...rule,
     files: ['**/*.vue'],
   })),
+  hasVueRouter
+    ? {
+        files: ['**/*.ts,js'],
+        settings: {
+          'import-x/core-modules': ['vue-router/auto-routes'],
+        },
+      }
+    : undefined,
   {
     files: ['**/*.vue'],
     languageOptions: {
@@ -34,6 +44,9 @@ export default [
       },
       globals: {
         ...getGlobals({ es2025: true, browser: true }),
+        ...(hasVueRouter && {
+          definePage: 'readonly',
+        }),
       },
     },
     rules: {
@@ -78,4 +91,4 @@ export default [
   {
     ignores: ['auto-imports.d.ts', 'components.d.ts'],
   },
-];
+].filter((rule) => rule !== undefined);

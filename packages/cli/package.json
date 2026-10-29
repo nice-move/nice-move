@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@commitlint/format": "^21.2.3",
-    "@commitlint/lint": "^21.2.3",
+    "@commitlint/lint": "^21.2.4",
     "execa": "catalog:",
     "lint-staged": "^15.5.2",
     "settingz": "catalog:"

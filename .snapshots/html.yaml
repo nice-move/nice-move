@@ -4360,13 +4360,6 @@
         "checkMultiStatementBodies": false,
       },
     ],
-    "unicorn/prefer-continue": [
-      "error",
-      {
-        "checkShortBodies": false,
-        "maximumStatements": 1,
-      },
-    ],
     "unicorn/prefer-date-now": [
       "error",
     ],

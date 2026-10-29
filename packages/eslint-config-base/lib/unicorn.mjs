@@ -33,6 +33,7 @@ export default [
       'unicorn/require-post-message-target-origin': 'off',
       'unicorn/template-indent': 'off',
       'unicorn/prefer-default-parameters': 'off',
+      'unicorn/prefer-continue': 'off',
     },
   },
   {

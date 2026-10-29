@@ -2028,7 +2028,7 @@
     "parser": {
       "meta": {
         "name": "typescript-eslint/parser",
-        "version": "8.71.1",
+        "version": "8.72.1",
       },
       "parseForESLint": [Function],
     },
@@ -3910,13 +3910,6 @@
       {
         "checkCompoundConditions": false,
         "checkMultiStatementBodies": false,
-      },
-    ],
-    "unicorn/prefer-continue": [
-      "error",
-      {
-        "checkShortBodies": false,
-        "maximumStatements": 1,
       },
     ],
     "unicorn/prefer-date-now": [

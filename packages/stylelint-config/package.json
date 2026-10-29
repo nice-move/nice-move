@@ -29,7 +29,7 @@
   "main": "index.mjs",
   "type": "module",
   "dependencies": {
-    "postcss": "^8.5.29",
+    "postcss": "^8.5.32",
     "postcss-html": "^2.0.0",
     "postcss-less": "^6.0.0",
     "postcss-markdown": "^2.0.0",
@@ -37,7 +37,7 @@
     "settingz": "catalog:",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^3.0.0",
-    "stylelint-scss": "^7.3.0"
+    "stylelint-scss": "^7.4.0"
   },
   "peerDependencies": {
     "stylelint": "catalog:"

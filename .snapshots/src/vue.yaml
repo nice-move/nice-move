@@ -2433,7 +2433,7 @@
   "processor": {
     "meta": {
       "name": "eslint-plugin-vue",
-      "version": "10.11.1",
+      "version": "10.12.0",
     },
     "postprocess": [Function],
     "preprocess": [Function],
@@ -4285,13 +4285,6 @@
       {
         "checkCompoundConditions": false,
         "checkMultiStatementBodies": false,
-      },
-    ],
-    "unicorn/prefer-continue": [
-      "error",
-      {
-        "checkShortBodies": false,
-        "maximumStatements": 1,
       },
     ],
     "unicorn/prefer-date-now": [

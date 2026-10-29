@@ -33,7 +33,6 @@ async function linter() {
     debug: false,
     quiet: false,
     relative: false,
-    shell: false,
     stash: true,
   });
 }

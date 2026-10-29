@@ -31,7 +31,7 @@ export default {
   '@nice-move/stylelint-config': '^0.11.2',
   '@nice-move/prettier-config': '^0.15.11',
   '@nice-move/tsconfig': '^0.5.0',
-  '@nice-move/cli': '^0.11.34',
+  '@nice-move/cli': '^0.12.0',
   '@eslint/compat': '^2.1.1',
   '@eslint/eslintrc': '^3.3.7',
   '@eslint/js': '^10.0.1',

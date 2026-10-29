@@ -42,7 +42,6 @@ overrides:
 
 patchedDependencies:
   '@commitlint/rules': .patches/@commitlint__rules.patch
-  lint-staged: .patches/lint-staged.patch
 
 trustPolicyExclude:
   - '@pnpm/config'

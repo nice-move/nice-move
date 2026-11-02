@@ -6,7 +6,7 @@ export default defineConfig(import.meta.url, {
     {
       dependencies: ['@nice-move/eslint-config-*'],
       dependencyTypes: ['local'],
-      pinVersion: '0.16.3',
+      pinVersion: '0.16.4',
       severity: {
         RefuseToPinLocal: 'fix',
       },
@@ -14,7 +14,7 @@ export default defineConfig(import.meta.url, {
     {
       dependencies: ['@nice-move/all-in-*'],
       dependencyTypes: ['local'],
-      pinVersion: '0.9.6',
+      pinVersion: '0.9.7',
       severity: {
         RefuseToPinLocal: 'fix',
       },

@@ -34,6 +34,8 @@ export default [
       'unicorn/template-indent': 'off',
       'unicorn/prefer-default-parameters': 'off',
       'unicorn/prefer-continue': 'off',
+      'unicorn/no-asterisk-prefix-in-documentation-comments': 'off',
+      'unicorn/single-line-block-comment-style': 'off',
     },
   },
   {

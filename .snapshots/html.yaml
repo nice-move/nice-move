@@ -3779,9 +3779,6 @@
     "unicorn/no-array-splice": [
       "error",
     ],
-    "unicorn/no-asterisk-prefix-in-documentation-comments": [
-      "error",
-    ],
     "unicorn/no-async-iterator-callback": [
       "error",
     ],
@@ -4739,13 +4736,6 @@
     ],
     "unicorn/require-text-decoder-streaming": [
       "error",
-    ],
-    "unicorn/single-line-block-comment-style": [
-      "error",
-      "multiline",
-      {
-        "ignore": [],
-      },
     ],
     "unicorn/switch-case-braces": [
       "error",

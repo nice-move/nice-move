@@ -40,6 +40,8 @@ Use [commitlint](https://commitlint.js.org/) to enforcing [conventional commits]
 npm exec nice-move lint commit
 ```
 
+The commit message file is located with `git rev-parse --git-path COMMIT_EDITMSG`, so it works in the main worktree and in linked worktrees, and from any subdirectory.
+
 ### `lint staged`
 
 Lint and format git staged files.

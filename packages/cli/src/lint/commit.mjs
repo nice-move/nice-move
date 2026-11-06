@@ -1,5 +1,9 @@
+import { execFile } from 'node:child_process';
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
+import { promisify } from 'node:util';
+
+const execFileAsync = promisify(execFile);
 
 const rules = {
   'body-leading-blank': [1, 'always'],
@@ -34,12 +38,18 @@ const rules = {
   'header-case': [0],
 };
 
-function getFilename() {
-  return resolve(process.cwd(), '.git/COMMIT_EDITMSG');
+export async function getCommitMessagePath(cwd = process.cwd()) {
+  const { stdout } = await execFileAsync(
+    'git',
+    ['rev-parse', '--git-path', 'COMMIT_EDITMSG'],
+    { cwd, encoding: 'utf8' },
+  );
+
+  return resolve(cwd, stdout.trim());
 }
 
-function readCommitMessage() {
-  return readFile(getFilename(), 'utf8');
+async function readCommitMessage() {
+  return readFile(await getCommitMessagePath(), 'utf8');
 }
 
 async function linter() {

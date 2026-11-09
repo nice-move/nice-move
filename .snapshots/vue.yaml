@@ -2401,7 +2401,7 @@
       },
       "meta": {
         "name": "vue-eslint-parser",
-        "version": "10.4.1",
+        "version": "10.4.2",
       },
       "parse": [Function],
       "parseForESLint": [Function],

@@ -4,10 +4,7 @@ lockfileVersion: '9.0'
 importers:
 
   .:
-    configDependencies:
-      pnpm-plugin-nice-move:
-        specifier: 0.3.7
-        version: 0.3.7
+    configDependencies: {}
     packageManagerDependencies:
       pnpm:
         specifier: 12.16.1
@@ -92,9 +89,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  pnpm-plugin-nice-move@0.3.7:
-    resolution: {integrity: sha512-XmvMlOA/Zd26tv69MyOSC90isG1+APVs8k6D0hGxV/FFYipyKtToR4eYo+ueptlEGce3nDegg7kWnjDF6aXHUQ==}
-
   pnpm@12.16.1:
     resolution: {integrity: sha512-CR0d7nknV1Zhsl2rPCrjHK/BxU1rce1qZgDPDByxBDSkR+rhQBXxsj4ua+3u1535SpMuIWTSgyKA3OP7MvZW0Q==}
     engines: {node: '>=18'}
@@ -143,8 +137,6 @@ snapshots:
 
   '@pnpm/exe.win32-x64@12.16.1':
     optional: true
-
-  pnpm-plugin-nice-move@0.3.7: {}
 
   pnpm@12.16.1:
     optionalDependencies:
@@ -240,7 +232,7 @@ overrides:
   eslint-plugin-react-hooks: ^7.1.1
   globals: ^17.11.0
 
-pnpmfileChecksum: sha256-s14HpfCLNltM+8qHl2jx4s+gssDS3uV99bz8cvsJF5Q=
+pnpmfileChecksum: sha256-805Ie4ChlCqVlUAWUFKu6HJjIFGAdIYtJhNFOQmmNYE=
 
 patchedDependencies:
   '@commitlint/rules': deb5aa421ffc0025f72ff79944be145cb0e050cc304a43038b4a523eb031fba0

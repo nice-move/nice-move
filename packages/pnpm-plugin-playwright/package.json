@@ -1,12 +1,25 @@
 {
   "name": "@nice-move/pnpm-plugin-playwright",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Align playwright packages to the globally installed browser revision via pnpmfile",
   "license": "MIT",
   "author": {
     "name": "Eric Chen"
   },
-  "keywords": [],
+  "keywords": [
+    "playwright",
+    "plugin",
+    "pnpm"
+  ],
+  "homepage": "https://github.com/nice-move/nice-move/tree/master/packages/pnpm-plugin-playwright",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nice-move/nice-move.git",
+    "directory": "packages/pnpm-plugin-playwright"
+  },
+  "bugs": {
+    "url": "https://github.com/nice-move/nice-move/issues"
+  },
   "main": "pnpmfile.mjs",
   "files": [
     "pnpmfile.d.mts"

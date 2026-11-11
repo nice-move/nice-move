@@ -1,0 +1,29 @@
+{
+  "name": "@nice-move/pnpm-plugin-playwright",
+  "version": "0.1.0",
+  "description": "Align playwright packages to the globally installed browser revision via pnpmfile",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen"
+  },
+  "keywords": [],
+  "main": "pnpmfile.mjs",
+  "files": [
+    "pnpmfile.d.mts"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
+  },
+  "engines": {
+    "node": "^24.0.0 || ^26.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

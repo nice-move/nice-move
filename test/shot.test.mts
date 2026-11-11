@@ -6,7 +6,7 @@ import { expect, it } from 'vitest';
 
 const cwd = process.cwd();
 
-async function makeSnapshot(instance, name) {
+async function makeSnapshot(instance: Promise<unknown>, name: string) {
   return expect(instance).resolves.toMatchFileSnapshot(
     join(cwd, '.snapshots', `${name}.yaml`),
   );

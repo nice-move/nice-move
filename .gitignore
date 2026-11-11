@@ -171,3 +171,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://gitignore.io/api/node,windows
+packages/pnpm-plugin-playwright/pnpmfile.mjs
+packages/pnpm-plugin-playwright/pnpmfile.d.mts

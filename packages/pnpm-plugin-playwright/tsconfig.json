@@ -1,0 +1,9 @@
+{
+  "extends": "@nice-move/tsconfig/node-bundle.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": ".",
+  },
+  "include": ["src/pnpmfile.mts"],
+  "exclude": ["pnpmfile.mjs"],
+}

@@ -14,7 +14,7 @@ export default {
   'prettier-plugin-tailwindcss': '^0.8.1',
   stylelint: '^17.16.0',
   syncpack: '^15.3.3',
-  tsdown: '^0.23.5',
+  tsdown: '^0.23.7',
   typescript: '~6.0.3',
   vitest: '^5.1.0',
   '@bring-it/sftp': '^0.7.1',
@@ -48,5 +48,5 @@ export default {
   'eslint-plugin-react-hooks': '^7.1.1',
   globals: '^17.11.0',
   packageManager: 'pnpm@12.16.1',
-  engines: { node: '^24.0.0', pnpm: '^12.16.1' },
+  engines: { node: '^24.0.0 || ^26.0.0', pnpm: '^12.16.1' },
 };

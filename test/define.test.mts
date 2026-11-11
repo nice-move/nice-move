@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 
 import { defineConfig } from '@nice-move/syncpack-config/define.mjs';
 import { findWorkspaces } from 'find-workspaces';
+import type { RcFile } from 'syncpack';
 import { expect, test, vi } from 'vitest';
 
 // Mock node:fs
@@ -14,9 +15,12 @@ vi.mock('find-workspaces', () => ({
   findWorkspaces: vi.fn(),
 }));
 
+const mockedReadFileSync = vi.mocked(readFileSync);
+const mockedFindWorkspaces = vi.mocked(findWorkspaces);
+
 test('should generate config for pnpm project', () => {
   // Mock package.json
-  readFileSync.mockReturnValueOnce(
+  mockedReadFileSync.mockReturnValueOnce(
     JSON.stringify({
       packageManager: 'pnpm@8.0.0',
       engines: {
@@ -26,7 +30,7 @@ test('should generate config for pnpm project', () => {
   );
 
   // Mock pnpm-workspace.yaml
-  readFileSync.mockReturnValueOnce(`
+  mockedReadFileSync.mockReturnValueOnce(`
 packages:
   - packages/*
   - modules/*
@@ -41,9 +45,9 @@ catalogs:
     `);
 
   // Mock workspaces
-  findWorkspaces.mockReturnValue([
-    { package: { name: '@scope/package-a' } },
-    { package: { name: '@scope/package-b' } },
+  mockedFindWorkspaces.mockReturnValue([
+    { location: 'packages/package-a', package: { name: '@scope/package-a' } },
+    { location: 'packages/package-b', package: { name: '@scope/package-b' } },
   ]);
 
   const config = defineConfig('~', {
@@ -60,7 +64,7 @@ catalogs:
 
 test('should generate config for non-pnpm project', () => {
   // Mock package.json
-  readFileSync.mockReturnValueOnce(
+  mockedReadFileSync.mockReturnValueOnce(
     JSON.stringify({
       packageManager: 'npm@9.0.0',
       engines: {
@@ -83,7 +87,7 @@ test('should generate config for non-pnpm project', () => {
 
 test('should handle file read errors', () => {
   // Mock package.json read error
-  readFileSync.mockImplementationOnce(() => {
+  mockedReadFileSync.mockImplementationOnce(() => {
     throw new Error('File not found');
   });
 
@@ -101,14 +105,14 @@ test('should handle file read errors', () => {
 
 test('should merge custom config', () => {
   // Mock package.json
-  readFileSync.mockReturnValueOnce(
+  mockedReadFileSync.mockReturnValueOnce(
     JSON.stringify({
       packageManager: 'pnpm@8.0.0',
     }),
   );
 
   // Mock pnpm-workspace.yaml
-  readFileSync.mockReturnValueOnce(`
+  mockedReadFileSync.mockReturnValueOnce(`
 packages:
   - packages/*
     `);
@@ -119,7 +123,7 @@ packages:
         path: 'customPath',
         strategy: 'customStrategy',
       },
-    },
+    } as unknown as RcFile['customTypes'],
     semverGroups: [
       {
         dependencies: ['custom-dep'],
@@ -139,17 +143,17 @@ packages:
 
 test('should handle empty workspace and catalog', () => {
   // Mock package.json
-  readFileSync.mockReturnValueOnce(
+  mockedReadFileSync.mockReturnValueOnce(
     JSON.stringify({
       packageManager: 'pnpm@8.0.0',
     }),
   );
 
   // Mock empty pnpm-workspace.yaml
-  readFileSync.mockReturnValueOnce('{}');
+  mockedReadFileSync.mockReturnValueOnce('{}');
 
   // Mock empty workspaces
-  findWorkspaces.mockReturnValue([]);
+  mockedFindWorkspaces.mockReturnValue([]);
 
   const config = defineConfig('~', {
     versionGroups: [

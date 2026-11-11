@@ -9,7 +9,7 @@ import { getCommitMessagePath } from '../packages/cli/src/lint/commit.mjs';
 
 // git hooks export GIT_INDEX_FILE=.git/index, which breaks git inside a linked
 // worktree, so the inherited git environment is dropped
-function git(args, cwd) {
+function git(args: string[], cwd: string) {
   const env = Object.fromEntries(
     Object.entries(process.env).filter(([key]) => !key.startsWith('GIT_')),
   );
@@ -22,7 +22,7 @@ function git(args, cwd) {
   });
 }
 
-function toPosix(path) {
+function toPosix(path: string) {
   return path.replaceAll('\\', '/');
 }
 

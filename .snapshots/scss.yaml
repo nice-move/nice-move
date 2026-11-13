@@ -96,6 +96,9 @@
   "reportInvalidScopeDisables": true,
   "reportNeedlessDisables": true,
   "rules": {
+    "at-charset-rule-no-invalid": [
+      true,
+    ],
     "at-rule-descriptor-no-unknown": [
       true,
     ],
@@ -153,9 +156,6 @@
     ],
     "declaration-block-no-shorthand-property-overrides": [
       true,
-    ],
-    "declaration-block-single-line-max-declarations": [
-      1,
     ],
     "declaration-property-value-keyword-no-deprecated": [
       true,
@@ -374,7 +374,16 @@
     "selector-max-universal": [
       1,
     ],
+    "selector-no-deprecated": [
+      true,
+    ],
+    "selector-no-invalid": [
+      true,
+    ],
     "selector-no-qualifying-type": [
+      true,
+    ],
+    "selector-no-unmatchable": [
       true,
     ],
     "selector-not-notation": [
@@ -417,6 +426,9 @@
           "rpx",
         ],
       },
+    ],
+    "value-no-invalid": [
+      true,
     ],
   },
 }

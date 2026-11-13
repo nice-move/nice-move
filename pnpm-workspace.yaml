@@ -17,13 +17,14 @@ catalog:
   lodash: ^4.18.1
   settingz: ^0.2.0
   sort-keys: ^6.0.1
-  stylelint: ^17.16.0
+  stylelint: ^18.0.0
   typescript: ~6.0.3
   typescript-eslint: ^8.72.1
   yaml: ^2.9.1
 
 catalogs:
   overrides:
+    '@stylistic/stylelint-plugin': ^6.0.1
     eslint: ^10.9.1
     eslint-plugin-react-hooks: ^7.1.1
     globals: ^17.11.0
@@ -33,9 +34,16 @@ catalogs:
     vitest: ^5.1.0
 
 overrides:
+  '@stylistic/stylelint-plugin': catalog:overrides
   eslint: catalog:overrides
   eslint-plugin-react-hooks: catalog:overrides
   globals: catalog:overrides
+
+minimumReleaseAgeExclude:
+  - postcss-selector-parser@7.2.1
+  - stylelint-declaration-block-no-ignored-properties@3.1.0
+  - stylelint-scss@7.5.0
+  - postcss-less@7.1.0
 
 patchedDependencies:
   '@commitlint/rules': .patches/@commitlint__rules.patch

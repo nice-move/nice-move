@@ -3802,9 +3802,6 @@
     "unicorn/no-async-iterator-callback": [
       "error",
     ],
-    "unicorn/no-async-promise-finally": [
-      "error",
-    ],
     "unicorn/no-await-expression-member": [
       "error",
     ],
@@ -3892,6 +3889,7 @@
     "unicorn/no-immediate-mutation": [
       "error",
       {
+        "checkCollections": true,
         "checkConditionals": false,
       },
     ],
@@ -4558,6 +4556,12 @@
     "unicorn/prefer-optional-catch-binding": [
       "error",
     ],
+    "unicorn/prefer-options-parameter": [
+      "error",
+      {
+        "checkWithoutOptionsObject": false,
+      },
+    ],
     "unicorn/prefer-path2d": [
       "error",
     ],
@@ -4587,6 +4591,9 @@
       },
     ],
     "unicorn/prefer-reflect-apply": [
+      "error",
+    ],
+    "unicorn/prefer-regexp-exec": [
       "error",
     ],
     "unicorn/prefer-regexp-test": [
@@ -4636,6 +4643,9 @@
     ],
     "unicorn/prefer-smaller-scope": [
       "error",
+      {
+        "checkTypeAliases": true,
+      },
     ],
     "unicorn/prefer-split-limit": [
       "error",
@@ -4689,6 +4699,11 @@
     "unicorn/prefer-ternary": [
       "error",
       "always",
+      {
+        "checkComputedMemberAccess": false,
+        "checkNestedTernaries": false,
+        "checkVaryingBase": false,
+      },
     ],
     "unicorn/prefer-then-catch": [
       "error",
@@ -4749,6 +4764,9 @@
       "error",
     ],
     "unicorn/require-proxy-trap-boolean-return": [
+      "error",
+    ],
+    "unicorn/require-spread-parentheses": [
       "error",
     ],
     "unicorn/require-text-decoder-streaming": [
